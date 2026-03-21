@@ -185,7 +185,7 @@ const Conditions = () => {
 
                 {/* Bottom decorative icon */}
                 <div className="absolute bottom-8 right-8 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-500 -rotate-12 group-hover:rotate-0 transform transition-transform duration-700">
-                  {React.cloneElement(group.icon as React.ReactElement, { className: 'w-32 h-32' })}
+                  {React.cloneElement(group.icon as React.ReactElement<{ className?: string }>, { className: 'w-32 h-32' })}
                 </div>
               </motion.div>
             ))}
