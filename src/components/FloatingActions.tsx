@@ -1,10 +1,10 @@
 import { Phone } from 'lucide-react';
 import { motion } from 'framer-motion';
-import { CONTACT_PHONE, CONTACT_WHATSAPP_LINK } from '../constants';
+import { CONTACT_PHONE, CONTACT_WHATSAPP_LINK, BRAND_NAME } from '../constants';
 
 const FloatingActions = () => {
   const phoneNumber = CONTACT_PHONE;
-  const whatsappUrl = `${CONTACT_WHATSAPP_LINK}?text=${encodeURIComponent('Hi Flexo Physio, I would like to book a physiotherapy session at home.')}`;
+  const whatsappUrl = `${CONTACT_WHATSAPP_LINK}?text=${encodeURIComponent(`Hi ${BRAND_NAME}, I would like to book a physiotherapy session at home.`)}`;
   const phoneUrl = `tel:+91${phoneNumber}`;
 
   return (

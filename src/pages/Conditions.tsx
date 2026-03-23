@@ -1,88 +1,72 @@
 import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { 
-  CheckCircle2, 
-  ArrowRight, 
-  Activity, 
-  Brain, 
-  Stethoscope, 
-  Zap, 
-  Heart,
-  ShieldCheck
+import { Link } from 'react-router-dom';
+import {
+  CheckCircle2,
+  ArrowRight,
+  Dumbbell,
+  Brain,
+  Bone,
+  Zap,
+  ShieldCheck,
 } from 'lucide-react';
+import { BRAND_NAME } from '../constants';
 import Button from '../components/Button';
 
 const conditionsList = [
-  {
-    category: 'Cardio-Respiratory',
-    icon: <Heart className="w-8 h-8" />,
-    color: 'bg-red-500/10 text-red-600',
-    items: [
-      'Cardiac Post-Op Rehab',
-      'COPD Management',
-      'Asthma Care',
-      'Breathing Exercises',
-      'Post-Heart Attack Recovery',
-      'Endurance Building'
-    ]
-  },
   {
     category: 'Neurological',
     icon: <Brain className="w-8 h-8" />,
     color: 'bg-purple-500/10 text-purple-600',
     items: [
-      'Stroke Rehabilitation',
-      'Parkinson’s Disease',
-      'Spinal Cord Injury',
-      'Paralysis Care',
-      'Balance & Gait Training',
-      'Coordination Therapy'
+      { title: 'Stroke rehabilitation', slug: 'stroke-rehabilitation' },
+      { title: 'Parkinson’s disease', slug: 'parkinsons-disease' },
+      { title: 'Spinal cord injury', slug: 'spinal-cord-injury' },
+      { title: 'Cerebral Palsy', slug: 'cerebral-palsy' },
+      { title: 'Facial Palsy', slug: 'facial-palsy' }
     ]
   },
   {
     category: 'Orthopedic',
-    icon: <Stethoscope className="w-8 h-8" />,
+    icon: <Bone className="w-8 h-8" />,
     color: 'bg-blue-500/10 text-blue-600',
     items: [
-      'Back & Sciatica Pain',
-      'Neck & Shoulder Issues',
-      'Knee & Joint Arthritis',
-      'Post-Fracture Recovery',
-      'Lumbar Spondylosis',
-      'Cervical Spondylosis'
+      { title: 'Back pain', slug: 'back-pain' },
+      { title: 'Neck pain', slug: 'neck-pain' },
+      { title: 'Shoulder pain', slug: 'shoulder-pain' },
+      { title: 'Hip & Knee Arthritis', slug: 'hip-knee-arthritis' },
+      { title: 'Plantar Fasciitis', slug: 'plantar-fasciitis' }
     ]
   },
   {
-    category: 'Sports & Recovery',
-    icon: <Activity className="w-8 h-8" />,
+    category: 'Sports & recovery',
+    icon: <Dumbbell className="w-8 h-8" />,
     color: 'bg-emerald-500/10 text-emerald-600',
     items: [
-      'ACL/MCL Reconstruction',
-      'Frozen Shoulder',
-      'Tennis Elbow',
-      'Ligament Injuries',
-      'Strength & Flexibility',
-      'Injury Prevention'
+      { title: 'ACL Rehabilitation', slug: 'acl-rehabilitation' },
+      { title: 'Ankle Sprain', slug: 'ankle-sprain' },
+      { title: 'Tennis Elbow', slug: 'tennis-elbow' },
+      { title: 'Rotator Cuff Injury', slug: 'rotator-cuff-injury' },
+      { title: "Runner's Knee", slug: 'runners-knee' }
     ]
   },
   {
-    category: 'Specialized Care',
+    category: 'Specialized care',
     icon: <Zap className="w-8 h-8" />,
     color: 'bg-amber-500/10 text-amber-600',
     items: [
-      'Spinal Mobilization',
-      'Posture Correction',
-      'Joint Stiffness',
-      'Cupping Therapy',
-      'Dry Needling',
-      'Geriatric Care'
+      { title: 'Dry needling', slug: 'dry-needling' },
+      { title: 'Cupping therapy', slug: 'cupping-therapy' },
+      { title: 'IASTM', slug: 'iastm' },
+      { title: 'Chiropractic Care', slug: 'chiropractic-care' },
+      { title: 'Geriatric Physiotherapy', slug: 'geriatric-physiotherapy' }
     ]
   }
 ];
 
 const Conditions = () => {
   const { scrollY } = useScroll();
-  
+
   // Parallax transforms
   const heroBgY = useTransform(scrollY, [0, 500], [0, 150]);
   const watermarkY = useTransform(scrollY, [0, 2000], [0, 300]);
@@ -92,13 +76,13 @@ const Conditions = () => {
       {/* 1. CLINICAL HEADER */}
       <section className="pt-24 pb-12 lg:pt-32 lg:pb-16 relative overflow-hidden text-center h-[60vh] lg:h-[70vh] flex items-center">
         {/* Background Image with Parallax Overlay */}
-        <motion.div 
+        <motion.div
           style={{ y: heroBgY }}
           className="absolute inset-0 -z-10 h-[120%]"
         >
-          <img 
-            src="https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=80&w=2000" 
-            alt="Flexo Physio Conditions Background"
+          <img
+            src="https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=80&w=2000"
+            alt={`${BRAND_NAME} Conditions Background`}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-primary/10" />
@@ -138,31 +122,31 @@ const Conditions = () => {
       <section className="py-12 lg:py-16 bg-white relative overflow-hidden">
         {/* Background decorative elements */}
         <div className="absolute top-0 right-0 w-1/2 h-full bg-surface/30 -skew-x-12 translate-x-1/4 -z-10" />
-        
+
         {/* Watermark with Parallax */}
-        <motion.div 
+        <motion.div
           style={{ y: watermarkY }}
           className="absolute top-40 left-1/2 -translate-x-1/2 text-[15vw] font-serif font-bold text-primary/5 select-none pointer-events-none whitespace-nowrap uppercase"
         >
-          FLEXO PHYSIO
+          {BRAND_NAME.toUpperCase()}
         </motion.div>
 
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-            {conditionsList.map((group, idx) => (
+            {conditionsList.map((group, groupIdx) => (
               <motion.div
                 key={group.category}
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ delay: idx * 0.1, duration: 0.8 }}
+                transition={{ delay: groupIdx * 0.1, duration: 0.8 }}
                 className="relative bg-white p-10 lg:p-12 rounded-[3rem] shadow-xl hover:shadow-2xl transition-all duration-500 group border border-primary/5"
               >
                 {/* Accent Border */}
                 <div className="absolute top-0 left-0 w-full h-2 bg-gradient-to-r from-transparent via-accent/20 to-transparent rounded-t-[3rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
 
                 <div className="flex items-center gap-6 mb-8">
-                  <div className={`w-16 h-16 rounded-2xl ${group.color} flex items-center justify-center shrink-0 shadow-sm group-hover:scale-110 transition-transform duration-500`}>
+                  <div className={`w-16 h-16 rounded-2xl ${group.color} flex items-center justify-center shrink-0 shadow-sm group-hover:scale-110 transition-transform duration-500 text-2xl`}>
                     {group.icon}
                   </div>
                   <h3 className="text-3xl lg:text-4xl font-serif font-bold text-primary group-hover:text-accent transition-colors">
@@ -172,19 +156,22 @@ const Conditions = () => {
 
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
                   {group.items.map((item) => (
-                    <li key={item} className="flex items-center gap-4 group/item">
-                      <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center shrink-0 group-hover/item:bg-accent transition-colors duration-300">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-accent group-hover/item:text-white transition-colors duration-300" />
-                      </div>
-                      <span className="text-primary font-bold uppercase tracking-tight text-[11px] leading-relaxed opacity-70 group-hover/item:opacity-100 transition-all">
-                        {item}
-                      </span>
+                    <li key={item.slug} className="group/item">
+                      <Link to={`/condition/${item.slug}`} className="flex items-center gap-4 py-1">
+                        <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center shrink-0 group-hover/item:bg-accent transition-colors duration-300">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-accent group-hover/item:text-white transition-colors duration-300" />
+                        </div>
+                        <span className="text-primary font-bold uppercase tracking-tight text-[11px] leading-relaxed opacity-70 group-hover/item:opacity-100 transition-all group-hover/item:text-accent">
+                          {item.title}
+                        </span>
+                        <ArrowRight className="w-3 h-3 text-accent opacity-0 group-hover/item:opacity-100 -translate-x-2 group-hover/item:translate-x-0 transition-all duration-300" />
+                      </Link>
                     </li>
                   ))}
                 </ul>
 
                 {/* Bottom decorative icon */}
-                <div className="absolute bottom-8 right-8 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-500 -rotate-12 group-hover:rotate-0 transform transition-transform duration-700">
+                <div className="absolute bottom-8 right-8 opacity-[0.03] group-hover:opacity-[0.08] transition-opacity duration-500 -rotate-12 group-hover:rotate-0 transform transition-transform duration-700 pointer-events-none">
                   {React.cloneElement(group.icon as React.ReactElement<{ className?: string }>, { className: 'w-32 h-32' })}
                 </div>
               </motion.div>
@@ -200,7 +187,7 @@ const Conditions = () => {
             >
               <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
               <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
-              
+
               <div className="relative z-10 space-y-8 max-w-3xl mx-auto">
                 <div className="inline-flex items-center gap-3 px-6 py-2 bg-white/10 rounded-full border border-white/10 backdrop-blur-sm">
                   <ShieldCheck className="w-5 h-5 text-accent" />
@@ -213,8 +200,8 @@ const Conditions = () => {
                   Every treatment plan is built on verified clinical protocols and adjusted in real-time based on your recovery progress. We don't just treat symptoms; we restore function.
                 </p>
                 <div className="pt-6">
-                  <a 
-                    href={`https://wa.me/919502808581?text=${encodeURIComponent('Hi Flexo Physio, I would like to consult a specialist about my condition.')}`}
+                  <a
+                    href={`https://wa.me/919502808581?text=${encodeURIComponent(`Hi ${BRAND_NAME}, I would like to consult a specialist about my condition.`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                   >
@@ -240,8 +227,8 @@ const Conditions = () => {
             Our specialists handle complex clinical cases beyond this list. Contact us for a free clinical consultation over the phone.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-8 pt-8">
-            <a 
-              href={`https://wa.me/919502808581?text=${encodeURIComponent('Hi Flexo Physio, I have a condition not listed on your website. Can I get a consultation?')}`}
+            <a
+              href={`https://wa.me/919502808581?text=${encodeURIComponent(`Hi ${BRAND_NAME}, I have a condition not listed on your website. Can I get a consultation?`)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto"

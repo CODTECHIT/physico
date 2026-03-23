@@ -1,25 +1,41 @@
-import { useScroll, useTransform, motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
+import { useScroll, useTransform, motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
-import { 
+import {
   ClipboardCheck,
-  Zap,
-  ArrowRight, 
-  ShieldCheck, 
-  Stethoscope, 
-  Brain, 
-  Users, 
+  ArrowRight,
+  ShieldCheck,
+  Users,
   PhoneCall,
   ChevronRight,
   MapPin,
   Home as HomeIcon,
   UserCheck,
+  Quote,
+  Star,
+  Bone,
+  Brain,
+  Dumbbell,
+  Activity,
+  Target,
+  Calendar,
+  FileCheck,
 } from 'lucide-react';
 import Button from '../components/Button';
-import { CONTACT_PHONE_DISPLAY, CONTACT_WHATSAPP_LINK, SERVICE_AREAS } from '../constants';
+import { CONTACT_PHONE_DISPLAY, CONTACT_WHATSAPP_LINK, SERVICE_AREAS, BRAND_NAME } from '../constants';
 
 const Home = () => {
   const { scrollY } = useScroll();
-  
+  const [treatmentIndex, setTreatmentIndex] = useState(0);
+  const treatments = ['Orthopedic', 'Neuro', 'Sports', 'Cardio'];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setTreatmentIndex((prev) => (prev + 1) % treatments.length);
+    }, 3000);
+    return () => clearInterval(timer);
+  }, [treatments.length]);
+
   // Parallax transforms
   const heroBgY = useTransform(scrollY, [0, 500], [0, 150]);
   const heroContentY = useTransform(scrollY, [0, 500], [0, -50]);
@@ -32,7 +48,7 @@ const Home = () => {
       slug: 'orthopedic',
       title: 'Orthopedic Physiotherapy',
       desc: 'Back pain, neck pain, joint issues, arthritis, fracture recovery',
-      icon: <Stethoscope className="w-6 h-6" />,
+      icon: <Bone className="w-6 h-6" />,
       img: '/Orthopedic Rehab.avif'
     },
     {
@@ -45,11 +61,11 @@ const Home = () => {
     },
     {
       id: '03',
-      slug: 'cardio',
-      title: 'Cardio & Respiratory Care',
-      desc: 'Breathing exercises, COPD care, post-cardiac recovery',
-      icon: <Zap className="w-6 h-6" />,
-      img: '/Cardio-Respiratory Care.avif'
+      slug: 'sports',
+      title: 'Sports Rehabilitation',
+      desc: 'Injury recovery, athletic performance, return-to-sport protocols',
+      icon: <Dumbbell className="w-6 h-6" />,
+      img: '/Sports Rehabilitation.avif'
     }
   ];
 
@@ -66,29 +82,88 @@ const Home = () => {
     }
   ];
 
+  const testimonials = [
+    {
+      id: 1,
+      name: 'Sumanth Choudhary',
+      treatment: 'Joint Pain Treatment',
+      content: "Dr. Bhanu is extremely professional in his job. I'm very happy with the depth of his knowledge, skills and punctuality. He is very flexible in terms of patient needs. Really appreciate his work."
+    },
+    {
+      id: 2,
+      name: 'Jaya Karthik',
+      content: "Very very nice and professional person. Dr. Bhanu will analyze the condition correctly and then he will create a custom plan based on the condition rather than fixed sets. I would definitely recommend him for others. please do try. 😁"
+    },
+    {
+      id: 3,
+      name: 'K Deepthi',
+      content: "I had gotten my prenatal exercise program done by Dr. Bhanu and he was so professional and humble. He would take adequate amount of time to wait between exercises rather than rushing for the time. These exercises for sure helped me in normal delivery. Professional and patient, would definitely recommend him."
+    },
+    {
+      id: 4,
+      name: 'Lavanya Ponigeti',
+      content: "Dr. Bhanu is giving us service to our family over last few years. He has got great experience towards the physiotherapy. He is so dedicated and committed doctor. I have been suffering from many years with my ankle pain, and in the recent days with neck stiffness as well. I made a short trip to India and got treatment from him, I'm feeling better now and he advised me to continue with exercises and need to dedicate time to take care of my health properly. Thank you Dr. Bhanu for your kindness"
+    },
+    {
+      id: 5,
+      name: 'Krity Sondhi',
+      content: "Services are really good and I got it little healed in just 2 sessions but I had to stop it in between because they are little overpriced and they suggested to have 10 sessions. But I stopped in 2 sessions only because of overpricing only. If it would have been cheaper than I would have been taken at least 5 sessions. Apart from this issue, services are good and well behaved staff. They have a lot of patience also and understands where is the pain and where needs more pressure. 😊"
+    },
+    {
+      id: 6,
+      name: 'Revathi Devi Ganta',
+      content: "I thank Dr. Bhanu for the incredible care and support you provided during my recovery from rotator cuff repair surgery. Your expertise and dedication have been instrumental in my healing process. From the initial stages of immobilization and gentle passive exercises to the more advanced strengthening and mobility phases, your guidance has been invaluable. Your encouragement and personalized approach made a significant difference in my wife's recovery journey. Thank you for your patience, professionalism, and unbelievable support."
+    },
+    {
+      id: 7,
+      name: 'Suneeta Chandra',
+      content: "After suffering from debilitating sciatica pain for nearly four years and undergoing two microdiscectomy surgeries and numerous physiotherapy sessions in the USA, I found myself seeking further treatment during a recent visit to Hyderabad. I had the pleasure of being treated by Dr. Bhanu, and I am incredibly grateful for the relief I experienced in just a few sessions. Dr. Bhanu's knowledge and experience in treating complex spinal conditions like sciatica are exemplary. He approached my case with sincerity and a deep understanding of my condition, which was evident in his thorough assessment and personalized treatment plan. What impressed me most was his approachability and willingness to explain every aspect of the treatment process, ensuring I felt informed and involved in my own recovery. One of the standout qualities of Dr. Bhanu is his punctuality and professionalism. Unlike my previous experiences, I never had to wait beyond my scheduled appointment time, which added to the overall efficiency and convenience of my treatment. I noticed significant improvement in my condition after each session with Dr. Bhanu. His treatments were not only effective but also sustainable, providing me with exercises and strategies to manage my condition long-term. Also, the best part is his home visits which helped not waste time in Hyderabad traffic and had a comfortable and focused atmosphere at my own space. In conclusion, Dr. Bhanu's expertise and compassionate care have made a profound difference in my life. I wholeheartedly recommend him to anyone seeking relief from persistent sciatica pain or any other musculoskeletal issues. Thank you, Dr. Bhanu, for your exceptional service and dedication to your patients' well-being."
+    },
+    {
+      id: 8,
+      name: 'SRK Bharath Dev',
+      content: "Very very nice and professional person. Dr. Bhanu sir has done tremendous job in treating my cervical problem. To be In- Detail: I was having dizziness and Light headedness from last 3 Years and visited more than 20 doctors, (Nothing worked out in my favour) last month - One of the doctor suggested that root cause for his might be cervical issue and suggested me to meet Dr. Bhanu. I feel very relaxed now as the pain has been completely gone and I don't feel any dizziness / Nausea. Dr. Bhanu has few qualities to make him stand out of other physiotherapists: 1. always on Time. 2. Focuses much on stretches and exercises not on machines. 3. very well behaving. 4. Ground to earth and polite attitude. I asked him for guest lecture in my office as I found many colleagues having similar issues and he guided everyone in office in 5 hrs. session with lot of patience."
+    },
+    {
+      id: 9,
+      name: 'Nageshwar Rao',
+      content: "I have been getting treatment for long term from Dr. Bhanu. I have whole body weakness and he has been helping me greatly to be active and walk. He is very kind and patient with old people like me. I would highly suggest him for physiotherapy for old people as he listens patiently and provides care during treatment."
+    },
+    {
+      id: 10,
+      name: 'Kalyan Kumar S',
+      content: "I had been suffering from severe neck pain for quite some time, and after trying various treatments without much relief, I finally consulted Bhanu—and I'm so glad I did! From the very first session, Bhanu's professionalism, knowledge, and caring approach stood out. He took the time to understand the root cause of my pain and designed a treatment plan that was both effective and easy to follow. Within just a few sessions, I noticed a remarkable improvement in my mobility and a significant reduction in pain. Bhanu's techniques, combined with his patient explanations and attention to detail, made a world of difference. I'm now almost completely pain-free and feeling so much better. Highly recommend Bhanu to anyone struggling with neck or spine issues—he's truly exceptional!"
+    },
+    {
+      id: 11,
+      name: 'Sravya Chinnu',
+      content: "I recently received treatment from Dr. Bhanu Kumar Vemula for treatment of a shoulder injury. Dr. Bhanu conducted a thorough initial assessment and created a tailored treatment plan that included a mix of manual therapy and exercises. He was very attentive and made sure I understood each step of the process. After several sessions, I noticed significant improvement in my mobility and a substantial reduction in pain. His guidance on home exercises was particularly beneficial. Dr. Bhanu was always professional, punctual, and approachable. He patiently answered all my questions and provided clear instructions. One thing that really impressed me was how Dr. Bhanu remembered small details about my daily activities and adjusted my treatment accordingly. Overall, I highly recommend Dr. Bhanu to anyone seeking a knowledgeable and caring physiotherapist. His expertise and dedication truly made a difference in my recovery. Thank you"
+    }
+  ];
+
   const conditions = [
-    { title: 'Cervical Spondylosis', img: 'https://images.unsplash.com/photo-1597452485669-2c7bb5fef90d?auto=format&fit=crop&q=60&w=300' },
-    { title: 'Frozen Shoulder', img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=60&w=300' },
-    { title: 'ACL/MCL Injuries', img: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=60&w=300' },
-    { title: 'Stroke Recovery', img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=60&w=300' },
-    { title: 'Parkinson’s Care', img: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&q=60&w=300' },
-    { title: 'COPD & Cardiac', img: 'https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&q=60&w=300' },
-    { title: 'Lumbar Spondylosis', img: 'https://images.unsplash.com/photo-1519824145371-296894a0daa9?auto=format&fit=crop&q=60&w=300' },
-    { title: 'Tennis Elbow', img: 'https://images.unsplash.com/photo-1612277795421-9bc7706a4a34?auto=format&fit=crop&q=60&w=300' },
+    { title: 'Back Pain', slug: 'back-pain', img: 'https://images.unsplash.com/photo-1597452485669-2c7bb5fef90d?auto=format&fit=crop&q=60&w=300' },
+    { title: 'Neck Pain', slug: 'neck-pain', img: 'https://images.unsplash.com/photo-1574672280600-4accfa5b6f98?auto=format&fit=crop&q=60&w=300' },
+    { title: 'Shoulder Pain', slug: 'shoulder-pain', img: 'https://images.unsplash.com/photo-1579389083046-e3df9c2b3325?auto=format&fit=crop&q=60&w=300' },
+    { title: 'Stroke Recovery', slug: 'stroke-rehabilitation', img: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=60&w=300' },
+    { title: 'Parkinson’s Care', slug: 'parkinsons-disease', img: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&q=60&w=300' },
+    { title: 'ACL Rehabilitation', slug: 'acl-rehabilitation', img: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=60&w=300' },
+    { title: 'Tennis Elbow', slug: 'tennis-elbow', img: 'https://images.unsplash.com/photo-1612277795421-9bc7706a4a34?auto=format&fit=crop&q=60&w=300' },
+    { title: 'Chiropractic Care', slug: 'chiropractic-care', img: 'https://images.unsplash.com/photo-1533333534177-34200889c20a?auto=format&fit=crop&q=60&w=300' },
   ];
 
   return (
     <div className="overflow-x-hidden">
-      
+
       {/* 1. CLINICAL AUTHORITY HERO */}
       <section className="relative min-h-[85vh] lg:min-h-[90vh] flex flex-col justify-center overflow-hidden">
         {/* Primary Background Image Layer with Parallax */}
-        <motion.div 
+        <motion.div
           style={{ y: heroBgY }}
           className="absolute inset-0 -z-10 h-[120%]"
         >
-          <img 
-            src="/bg.webp" 
+          <img
+            src="/bg.webp"
             alt="Physiotherapy Clinical Background"
             className="w-full h-full object-cover"
             loading="eager"
@@ -98,9 +173,9 @@ const Home = () => {
         </motion.div>
 
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center pt-24 lg:pt-0 flex-grow">
-          
+
           {/* Content Column - Structured & Professional with Parallax */}
-          <motion.div 
+          <motion.div
             style={{ y: heroContentY }}
             className="space-y-4 lg:space-y-8 relative z-20"
           >
@@ -115,7 +190,7 @@ const Home = () => {
                   Expert Physiotherapy at Home in Hyderabad
                 </span>
               </div>
-              
+
               <h1 className="text-3xl md:text-5xl lg:text-7xl font-serif font-bold text-primary leading-tight lg:leading-[1.1]">
                 Personalized care for pain relief, <span className="text-accent italic font-normal">recovery</span>, and mobility.
               </h1>
@@ -124,10 +199,10 @@ const Home = () => {
                 <p className="text-sm lg:text-xl text-dark font-medium leading-relaxed opacity-90">
                   Delivered to your doorstep. Professional treatment in the comfort of your home.
                 </p>
-                
+
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 lg:gap-6 mt-6 lg:mt-10">
-                  <a 
-                    href={`${CONTACT_WHATSAPP_LINK}?text=${encodeURIComponent('Hi Flexo Physio, I would like to book a physiotherapy session at home.')}`} 
+                  <a
+                    href={`${CONTACT_WHATSAPP_LINK}?text=${encodeURIComponent(`Hi ${BRAND_NAME}, I would like to book a physiotherapy session at home.`)}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="w-full sm:w-auto"
@@ -136,7 +211,7 @@ const Home = () => {
                       Book Home Visit
                     </Button>
                   </a>
-                  
+
                   {/* Location Info */}
                   <div className="flex flex-col space-y-0.5">
                     <div className="flex items-center space-x-2">
@@ -151,7 +226,7 @@ const Home = () => {
           </motion.div>
 
           {/* Image Column - Realistic & Professional with Parallax */}
-          <motion.div 
+          <motion.div
             style={{ y: interactionImgY }}
             className="relative mt-4 lg:mt-0"
           >
@@ -161,15 +236,15 @@ const Home = () => {
               transition={{ duration: 1, ease: "easeOut" }}
               className="relative z-10 overflow-hidden shadow-2xl rounded-2xl lg:rounded-3xl"
             >
-              <img 
-                src="/hero-interaction.webp" 
+              <img
+                src="/hero-interaction.webp"
                 alt="Personalized Home Physiotherapy Session"
                 className="w-full h-full object-cover aspect-[4/3] lg:aspect-auto"
               />
               {/* Subtle frame element for medical feel */}
               <div className="absolute inset-0 border-[1px] border-white/20 pointer-events-none" />
             </motion.div>
-            
+
             {/* Location Anchor */}
             <div className="absolute -bottom-4 lg:-bottom-6 -left-4 lg:-left-6 bg-white p-4 lg:p-6 shadow-xl z-20 border-l-4 border-accent hidden sm:block rounded-xl">
               <div className="flex items-center space-x-3">
@@ -186,25 +261,25 @@ const Home = () => {
           <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
             <div className="grid grid-cols-2 lg:flex lg:flex-row items-stretch lg:items-center justify-between gap-4 lg:gap-0">
               {[
-                { 
-                  title: 'Certified Pros', 
+                {
+                  title: 'Certified Pros',
                   desc: 'BPT/MPT experts',
-                  icon: <UserCheck className="w-5 h-5 lg:w-6 lg:h-6" /> 
+                  icon: <UserCheck className="w-5 h-5 lg:w-6 lg:h-6" />
                 },
-                { 
-                  title: '1-on-1 Care', 
+                {
+                  title: '1-on-1 Care',
                   desc: 'Focused attention',
-                  icon: <Users className="w-5 h-5 lg:w-6 lg:h-6" /> 
+                  icon: <Users className="w-5 h-5 lg:w-6 lg:h-6" />
                 },
-                { 
-                  title: 'Home Visits', 
+                {
+                  title: 'Home Visits',
                   desc: 'Safe & comfortable',
-                  icon: <HomeIcon className="w-5 h-5 lg:w-6 lg:h-6" /> 
+                  icon: <HomeIcon className="w-5 h-5 lg:w-6 lg:h-6" />
                 },
-                { 
-                  title: 'Trusted Care', 
+                {
+                  title: 'Trusted Care',
                   desc: 'Honest pricing',
-                  icon: <ShieldCheck className="w-5 h-5 lg:w-6 lg:h-6" /> 
+                  icon: <ShieldCheck className="w-5 h-5 lg:w-6 lg:h-6" />
                 }
               ].map((item, idx) => (
                 <div key={idx} className="flex-1 flex items-center group">
@@ -213,7 +288,7 @@ const Home = () => {
                     <div className="w-10 h-10 lg:w-14 lg:h-14 rounded-lg bg-white/10 flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-white transition-all duration-300">
                       {item.icon}
                     </div>
-                    
+
                     <div className="flex flex-col">
                       <h4 className="text-white font-serif font-bold text-[10px] lg:text-base leading-tight">
                         {item.title}
@@ -223,7 +298,7 @@ const Home = () => {
                       </p>
                     </div>
                   </div>
-                  
+
                   {/* Vertical Divider (Desktop Only) */}
                   {idx < 3 && (
                     <div className="hidden lg:block w-[1px] h-12 bg-white/10" />
@@ -239,14 +314,14 @@ const Home = () => {
       <section className="py-10 lg:py-16 bg-white overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
-            
+
             {/* Left Content Column */}
             <div className="space-y-6 lg:space-y-8">
               <div className="space-y-3 lg:space-y-4">
                 <div className="flex items-center space-x-3">
                   <span className="w-8 h-[2px] bg-accent" />
                   <span className="text-accent font-sans font-bold uppercase tracking-[0.2em] text-[10px]">
-                    Welcome to Flexo Physio
+                    Welcome to {BRAND_NAME}
                   </span>
                 </div>
                 <h2 className="text-3xl lg:text-6xl font-serif font-bold text-primary leading-tight">
@@ -259,7 +334,7 @@ const Home = () => {
                 <p className="text-base lg:text-xl text-dark font-medium leading-relaxed opacity-90">
                   We provide professional physiotherapy services at home to help you recover faster and live pain-free.
                 </p>
-                
+
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                   <div className="space-y-1 p-4 lg:p-5 bg-surface border-l-4 border-accent shadow-sm">
                     <h4 className="font-serif font-bold text-primary text-base lg:text-lg">Post-Surgery Rehab</h4>
@@ -291,7 +366,7 @@ const Home = () => {
               {/* Decorative Elements */}
               <div className="absolute -top-12 -right-12 w-64 h-64 bg-accent/5 rounded-full blur-3xl -z-10" />
               <div className="absolute -bottom-12 -left-12 w-64 h-64 bg-primary/5 rounded-full blur-3xl -z-10" />
-              
+
               <motion.div
                 initial={{ opacity: 0, scale: 0.95 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -301,10 +376,10 @@ const Home = () => {
               >
                 {/* Main Image with Clinical Border - Reduced Size */}
                 <div className="aspect-[4/5] rounded-[2.5rem] lg:rounded-[4rem] overflow-hidden shadow-2xl border-4 lg:border-8 border-white bg-surface">
-                  <img 
-                    src="/founder.avif" 
+                  <img
+                    src="/founder.avif"
                     alt="Dr. Bhanu Kumar Vemula - Chief Physiotherapist"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-[center_30%]"
                   />
                 </div>
 
@@ -358,12 +433,12 @@ const Home = () => {
                 transition={{ delay: idx * 0.1, duration: 0.5 }}
                 className={`group ${idx % 2 !== 0 ? 'md:mt-12' : ''}`}
               >
-                <Link 
+                <Link
                   to={item.slug ? `/service/${item.slug}` : "/contact"}
                   className="relative overflow-hidden aspect-[3/2] mb-6 shadow-lg rounded-2xl lg:rounded-3xl border-2 border-white group-hover:shadow-xl transition-all duration-700 w-full block"
                 >
-                  <img 
-                    src={item.img} 
+                  <img
+                    src={item.img}
                     alt={item.title}
                     className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110"
                     loading="lazy"
@@ -409,36 +484,52 @@ const Home = () => {
               Specialized Treatments
             </span>
           </div>
-          <h2 className="text-3xl lg:text-5xl font-serif font-bold text-primary leading-tight">
-            Conditions We <span className="text-accent italic font-normal">Treat</span>
+          <h2 className="text-3xl lg:text-5xl font-serif font-bold text-primary leading-tight flex flex-wrap justify-center lg:justify-start items-center gap-x-3">
+            <span>Conditions We</span>
+            <span className="text-accent italic font-normal">Treat</span>
+            <span className="inline-block min-w-[120px] text-left">
+              <AnimatePresence mode="wait">
+                <motion.span
+                  key={treatments[treatmentIndex]}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.3 }}
+                  className="text-primary italic font-normal"
+                >
+                  {treatments[treatmentIndex]}
+                </motion.span>
+              </AnimatePresence>
+            </span>
           </h2>
         </div>
-        
+
         {/* Infinite Marquee Container */}
         <div className="relative flex overflow-x-hidden">
-          <motion.div 
+          <motion.div
             className="flex whitespace-nowrap gap-4 lg:gap-6 py-2"
             animate={{ x: ["0%", "-50%"] }}
-            transition={{ 
-              duration: 25, 
-              repeat: Infinity, 
-              ease: "linear" 
+            transition={{
+              duration: 25,
+              repeat: Infinity,
+              ease: "linear"
             }}
           >
             {/* Double the array for seamless loop */}
             {[...conditions, ...conditions].map((condition, idx) => (
-              <div 
-                key={idx} 
+              <Link
+                key={idx}
+                to={`/condition/${condition.slug}`}
                 className="relative group w-[180px] lg:w-[240px] flex-shrink-0"
               >
                 {/* Shining Card Container */}
                 <div className="relative overflow-hidden rounded-xl lg:rounded-2xl aspect-square shadow-lg bg-white border border-primary/5 transition-all duration-500 group-hover:scale-105 group-hover:shadow-2xl">
-                  <img 
-                    src={condition.img} 
+                  <img
+                    src={condition.img}
                     alt={condition.title}
                     className="w-full h-full object-cover transition-all duration-700"
                   />
-                  
+
                   {/* Shining Effect Overlay */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
                     <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
@@ -451,14 +542,14 @@ const Home = () => {
                     </p>
                   </div>
                 </div>
-                
+
                 {/* Caption below card */}
                 <div className="mt-2 text-center">
                   <span className="text-[8px] lg:text-xs font-bold text-primary/60 uppercase tracking-widest group-hover:text-accent transition-colors">
                     {condition.title}
                   </span>
                 </div>
-              </div>
+              </Link>
             ))}
           </motion.div>
         </div>
@@ -476,57 +567,128 @@ const Home = () => {
       {/* WHY CHOOSE US (IMPORTANT FOR CONVERSION) */}
       <section className="py-10 lg:py-16 bg-surface relative overflow-hidden">
         {/* Large background text with Parallax */}
-        <motion.div 
+        <motion.div
           style={{ y: watermarkY }}
           className="absolute top-20 left-1/2 -translate-x-1/2 text-[20vw] font-serif font-bold text-primary/5 select-none pointer-events-none whitespace-nowrap uppercase"
         >
-          FLEXO PHYSIO
+          {BRAND_NAME.toUpperCase()}
         </motion.div>
 
-        <div className="max-w-[1600px] mx-auto px-6 lg:px-20 grid grid-cols-1 lg:grid-cols-2 lg:items-center gap-10 lg:gap-16 relative z-10">
-          
-          <div className="space-y-8 lg:space-y-10">
-            <span className="text-accent font-sans font-bold uppercase tracking-[0.3em] text-[10px] block">The Advantage</span>
-            <h2 className="text-3xl lg:text-6xl font-serif font-bold text-primary leading-tight">
-              Why Choose <br />
-              <span className="italic font-normal text-accent">Flexo Physio?</span>
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-20 relative z-10">
+
+          <div className="text-center mb-10 lg:mb-14">
+            <span className="text-accent font-sans font-bold uppercase tracking-[0.3em] text-[10px] block mb-3">The Advantage</span>
+            <h2 className="text-3xl lg:text-5xl font-serif font-bold text-primary leading-tight">
+              Why Choose <span className="italic font-normal text-accent">{BRAND_NAME}?</span>
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-1 gap-4 lg:gap-8">
-              {[
-                { title: 'Home visits for comfort & safety', text: 'Avoid travel stress and recover in your safest environment.' },
-                { title: 'Dedicated one-on-one care', text: '100% focus on your personalized recovery.' },
-                { title: 'Clinical expertise', text: 'BPT/MPT experts with years of clinical experience.' },
-                { title: 'Affordable pricing', text: 'Premium care at honest rates, delivered to your home.' }
-              ].map((feature, i) => (
-                <div key={i} className="flex gap-4 lg:gap-6 group bg-white/50 p-4 rounded-2xl hover:bg-white transition-all">
-                  <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-lg lg:rounded-xl bg-accent/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all shrink-0">
-                    <ShieldCheck className="w-4 h-4 lg:w-5 lg:h-5" />
-                  </div>
-                  <div className="space-y-1">
-                    <h4 className="text-base lg:text-lg font-serif font-bold text-primary">{feature.title}</h4>
-                    <p className="text-dark text-xs lg:text-sm font-medium leading-relaxed max-w-sm opacity-80">{feature.text}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
           </div>
 
-          <div className="relative">
-            <div className="aspect-square bg-primary/5 absolute -top-10 -right-10 w-full h-full rounded-full -z-10" />
-            <motion.div
-              initial={{ opacity: 0, scale: 0.95 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 1 }}
-              className="rounded-[2rem] lg:rounded-[5rem] overflow-hidden aspect-square shadow-2xl"
-            >
-              <img 
-                src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1200" 
-                alt="Expert care at home"
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
+            {[
+              { title: 'Faster Results with Regular Monitoring', text: 'We track your progress session-by-session and modify treatment plans to ensure faster and safer recovery.', icon: <Activity className="w-5 h-5" /> },
+              { title: 'Focus on Long-Term Recovery', text: "We don't just reduce pain – we work on: strength, mobility, function, prevention of recurrence.", icon: <Target className="w-5 h-5" /> },
+              { title: 'One-on-One Dedicated Sessions', text: 'Complete attention with no rushed treatments or multiple patients at once.', icon: <UserCheck className="w-5 h-5" /> },
+              { title: 'Easy Booking & Support', text: 'Simple appointment process with quick response and flexible scheduling.', icon: <Calendar className="w-5 h-5" /> },
+              { title: 'Personalized Treatment Plans', text: 'No generic exercises. Every patient receives a customized rehab program based on their condition, lifestyle, and recovery goals.', icon: <FileCheck className="w-5 h-5" /> }
+            ].map((feature, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ duration: 0.5, delay: i * 0.15, type: "spring", stiffness: 100 }}
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="bg-white p-5 lg:p-6 rounded-2xl lg:rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-primary/5 hover:border-accent/20 group cursor-pointer"
+              >
+                <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl lg:rounded-2xl bg-accent/10 flex items-center justify-center text-accent mb-4 group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                  {feature.icon}
+                </div>
+                <h4 className="text-base lg:text-lg font-serif font-bold text-primary mb-2 group-hover:text-accent transition-colors">{feature.title}</h4>
+                <p className="text-dark text-xs lg:text-sm font-medium leading-relaxed opacity-80">{feature.text}</p>
+              </motion.div>
+            ))}
           </div>
+        </div>
+      </section>
+
+      {/* TESTIMONIALS MARQUEE (New Position - Social Proof) */}
+      <section className="py-12 lg:py-20 bg-white overflow-hidden">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 mb-10 lg:mb-16">
+          <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
+            <div className="space-y-4">
+              <div className="flex items-center space-x-3">
+                <span className="w-8 h-[2px] bg-accent" />
+                <span className="text-accent font-sans font-bold uppercase tracking-[0.2em] text-[10px]">
+                  Patient Success Stories
+                </span>
+              </div>
+              <h2 className="text-3xl lg:text-6xl font-serif font-bold text-primary leading-tight">
+                What Our <span className="text-accent italic font-normal">Patients</span> Say
+              </h2>
+            </div>
+            <div className="hidden lg:flex items-center space-x-2 pb-2">
+              {[1, 2, 3, 4, 5].map((star) => (
+                <Star key={star} className="w-5 h-5 fill-accent text-accent" />
+              ))}
+              <span className="text-primary font-bold ml-2">5.0 Overall Rating</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Infinite Marquee Wrapper */}
+        <div className="relative flex overflow-x-hidden pb-12">
+          <motion.div
+            className="flex whitespace-normal gap-6 lg:gap-10 py-4 px-6"
+            animate={{ x: ["0%", "-50%"] }}
+            transition={{
+              duration: 40,
+              repeat: Infinity,
+              ease: "linear"
+            }}
+          >
+            {[...testimonials, ...testimonials].map((testimonial, idx) => (
+              <div
+                key={`${testimonial.id}-${idx}`}
+                className="relative group bg-surface h-full rounded-[2rem] lg:rounded-[2.5rem] p-8 lg:p-10 shadow-xl border border-primary/5 hover:border-accent/20 transition-all duration-500 w-[320px] lg:w-[480px] shrink-0 flex flex-col justify-between"
+              >
+                <div>
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 bg-accent rounded-full flex items-center justify-center shadow-lg -mt-12 lg:-mt-14 mb-6 group-hover:scale-110 transition-transform">
+                    <Quote className="w-5 h-5 lg:w-6 lg:h-6 text-white" />
+                  </div>
+
+                  <div className="flex items-center space-x-1 mb-4">
+                    {[1, 2, 3, 4, 5].map((star) => (
+                      <Star key={star} className="w-3.5 h-3.5 lg:w-4 lg:h-4 fill-accent text-accent" />
+                    ))}
+                  </div>
+
+                  <p className="text-dark font-medium leading-relaxed text-sm lg:text-base italic mb-6 line-clamp-6 opacity-90 group-hover:opacity-100 transition-opacity">
+                    "{testimonial.content}"
+                  </p>
+                </div>
+
+                <div className="pt-6 border-t border-primary/5 flex items-center space-x-4">
+                  <div className="w-12 h-12 lg:w-14 lg:h-14 rounded-full bg-gradient-to-br from-primary to-accent flex items-center justify-center text-white font-bold text-lg lg:text-xl shadow-inner">
+                    {testimonial.name.charAt(0)}
+                  </div>
+                  <div>
+                    <h4 className="text-primary font-serif font-bold text-sm lg:text-base">{testimonial.name}</h4>
+                    <div className="flex items-center space-x-1 text-muted">
+                      <MapPin className="w-3 h-3" />
+                      <span className="text-[10px] uppercase tracking-wider font-semibold">Verified Patient</span>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Bottom Accent Decorator */}
+                <div className="absolute bottom-0 left-0 right-0 h-1.5 bg-gradient-to-r from-primary to-accent rounded-b-[2rem] lg:rounded-b-[2.5rem] opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+              </div>
+            ))}
+          </motion.div>
+
+          {/* Mask for smooth fade-off */}
+          <div className="absolute inset-y-0 left-0 w-24 lg:w-64 bg-gradient-to-r from-white to-transparent z-10" />
+          <div className="absolute inset-y-0 right-0 w-24 lg:w-64 bg-gradient-to-l from-white to-transparent z-10" />
         </div>
       </section>
 
@@ -556,8 +718,8 @@ const Home = () => {
             Get expert physiotherapy care at home with flexible appointments. Your journey to pain-free living starts here.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 lg:gap-8 pt-4">
-            <a 
-              href={`${CONTACT_WHATSAPP_LINK}?text=${encodeURIComponent('Hi Flexo Physio, I would like to book an appointment now.')}`} 
+            <a
+              href={`${CONTACT_WHATSAPP_LINK}?text=${encodeURIComponent(`Hi ${BRAND_NAME}, I would like to book an appointment now.`)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="w-full sm:w-auto"

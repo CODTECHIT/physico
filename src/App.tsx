@@ -9,7 +9,7 @@ const Services = lazy(() => import('./pages/Services'));
 const Contact = lazy(() => import('./pages/Contact'));
 const ServiceDetail = lazy(() => import('./pages/ServiceDetail'));
 const Conditions = lazy(() => import('./pages/Conditions'));
-const Testimonials = lazy(() => import('./pages/Testimonials'));
+const ConditionDetail = lazy(() => import('./pages/ConditionDetail'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Initial Loading State
@@ -30,8 +30,8 @@ function App() {
             <Route path="/services" element={<Services />} />
             <Route path="/service/:id" element={<ServiceDetail />} />
             <Route path="/conditions" element={<Conditions />} />
+            <Route path="/condition/:slug" element={<ConditionDetail />} />
             <Route path="/contact" element={<Contact />} />
-            <Route path="/testimonials" element={<Testimonials />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

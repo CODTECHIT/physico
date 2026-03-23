@@ -1,11 +1,12 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Heart, Stethoscope, Brain, Activity, Target, Zap, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Bone, Brain, Dumbbell, Target, Zap, ArrowRight, CheckCircle2 } from 'lucide-react';
 import Button from '../components/Button';
 import { Link } from 'react-router-dom';
+import { BRAND_NAME } from '../constants';
 
 const Services = () => {
   const { scrollY } = useScroll();
-  
+
   // Parallax transforms
   const heroBgY = useTransform(scrollY, [0, 500], [0, 150]);
   const watermarkY = useTransform(scrollY, [0, 2000], [0, 300]);
@@ -13,89 +14,74 @@ const Services = () => {
   const allServices = [
     {
       id: '01',
-      slug: 'cardio',
-      title: 'Cardio-Respiratory Care',
-      desc: 'Expert heart and lung rehabilitation at home in Kukatpally and Miyapur. Personalized care for post-surgery recovery and chronic cardiac support.',
-      features: [
-        'Post-Surgery Cardiac Rehab',
-        'Chronic Heart Condition Support',
-        'Heart Attack Rehabilitation',
-        'Breathing & Cardiovascular Fitness'
-      ],
-      focus: 'Improve heart function & overall endurance',
-      icon: <Heart className="w-8 h-8" />,
-      img: '/Cardio-Respiratory Care.avif'
-    },
-    {
-      id: '02',
       slug: 'neurological',
       title: 'Neuro Rehabilitation',
       desc: 'Expert neuro physiotherapy at home in Kukatpally and Miyapur. Personalized stroke recovery, Parkinson’s care, and pediatric neuro-rehabilitation.',
       features: [
-        'Stroke Recovery & Rehab',
-        'Parkinson’s Support',
-        'Pediatric Neuro Therapy',
-        'Spinal Injury Rehabilitation'
+        'Stroke recovery & rehab',
+        'Parkinson’s support',
+        'Pediatric neuro therapy',
+        'Spinal injury rehabilitation'
       ],
       focus: 'Restore function & improve quality of life',
       icon: <Brain className="w-8 h-8" />,
       img: '/Neuro-Rehabilitation.avif'
     },
     {
-      id: '03',
+      id: '02',
       slug: 'orthopedic',
       title: 'Orthopedic Rehabilitation',
       desc: 'Professional orthopedic physiotherapy at home in Kukatpally and Miyapur. Expert recovery for joint pain, post-surgery, and musculoskeletal injuries.',
       features: [
-        'Post-Surgery Joint Recovery',
-        'Muscle & Joint Pain Relief',
-        'Improved Flexibility & Strength',
-        'Customized Treatment Plans'
+        'Post-surgery joint recovery',
+        'Muscle & joint pain relief',
+        'Improved flexibility & strength',
+        'Customized treatment plans'
       ],
       focus: 'Reduce pain & restore movement',
-      icon: <Stethoscope className="w-8 h-8" />,
+      icon: <Bone className="w-8 h-8" />,
       img: '/Orthopedic Rehab.avif'
     },
     {
-      id: '04',
+      id: '03',
       slug: 'sports',
       title: 'Sports Rehabilitation',
       desc: 'Specialized sports physiotherapy at home in Kukatpally and Miyapur. Expert injury recovery, post-surgical rehab, and athletic performance programs.',
       features: [
-        'Injury Recovery & Pain Management',
-        'Post-Surgical Sports Rehab',
-        'Performance Enhancement',
-        'Return-to-Sport Guidance'
+        'Injury recovery & pain management',
+        'Post-surgical sports rehab',
+        'Performance enhancement',
+        'Return-to-sport guidance'
       ],
       focus: 'Faster recovery & injury prevention',
-      icon: <Activity className="w-8 h-8" />,
+      icon: <Dumbbell className="w-8 h-8" />,
       img: '/Sports Rehabilitation.avif'
     },
     {
-      id: '05',
+      id: '04',
       slug: 'chiropractic',
       title: 'Chiropractic Care',
       desc: 'Expert chiropractic care at home in Hyderabad, Kukatpally, and Miyapur. Natural pain relief for back, neck, and joint stiffness.',
       features: [
-        'Spinal & Joint Adjustments',
-        'Posture Correction & Ergonomics',
-        'Sports Injury Chiropractic',
-        'Headache & Stiffness Relief'
+        'Spinal & joint adjustments',
+        'Posture correction & ergonomics',
+        'Sports injury chiropractic',
+        'Headache & stiffness relief'
       ],
       focus: 'Improve alignment & reduce discomfort',
       icon: <Target className="w-8 h-8" />,
       img: '/Chiropractic.avif'
     },
     {
-      id: '06',
+      id: '05',
       slug: 'cupping',
       title: 'Cupping & Dry Needling',
       desc: 'Expert Dry Needling and Cupping therapy at home in Kukatpally and Miyapur. Natural relief for deep muscle tension and faster sports recovery.',
       features: [
-        'Deep Muscle Tension Relief',
-        'Trigger Point Dry Needling',
-        'Advanced Cupping Therapy',
-        'Enhanced Healing Speed'
+        'Deep muscle tension relief',
+        'Trigger point dry needling',
+        'Advanced cupping therapy',
+        'Enhanced healing speed'
       ],
       focus: 'Deep muscle relief & faster healing',
       icon: <Zap className="w-8 h-8" />,
@@ -105,17 +91,17 @@ const Services = () => {
 
   return (
     <div className="bg-white">
-      
+
       {/* 1. HERO HEADER */}
       <section className="pt-20 pb-8 lg:pt-32 lg:pb-16 relative overflow-hidden min-h-[45vh] lg:h-[70vh] flex items-center">
         {/* Background Image with Parallax Overlay */}
-        <motion.div 
+        <motion.div
           style={{ y: heroBgY }}
           className="absolute inset-0 -z-10 h-[120%]"
         >
-          <img 
-            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2000" 
-            alt="Flexo Physio Services Background"
+          <img
+            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2000"
+            alt={`${BRAND_NAME} Services Background`}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-white/90 lg:bg-white/85" />
@@ -148,11 +134,11 @@ const Services = () => {
       {/* 2. SERVICES GRID */}
       <section className="py-12 lg:py-16 bg-white relative overflow-hidden">
         {/* Large background text with Parallax */}
-        <motion.div 
+        <motion.div
           style={{ y: watermarkY }}
           className="absolute top-20 left-1/2 -translate-x-1/2 text-[20vw] font-serif font-bold text-primary/5 select-none pointer-events-none whitespace-nowrap uppercase"
         >
-          FLEXO PHYSIO
+          {BRAND_NAME.toUpperCase()}
         </motion.div>
 
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
@@ -167,16 +153,16 @@ const Services = () => {
                 className="group flex flex-col"
               >
                 {/* Image Container with Rounded Corners & Shine Effect */}
-                <Link 
+                <Link
                   to={service.slug ? `/service/${service.slug}` : "/contact"}
                   className="relative mb-8 overflow-hidden aspect-[3/2] rounded-3xl lg:rounded-[2.5rem] shadow-lg border-2 border-white group-hover:shadow-xl transition-all duration-700 max-w-sm mx-auto w-full block"
                 >
-                  <img 
-                    src={service.img} 
+                  <img
+                    src={service.img}
                     alt={service.title}
                     className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110"
                   />
-                  
+
                   {/* Shining Effect Overlay */}
                   <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-700 pointer-events-none">
                     <div className="absolute inset-0 bg-gradient-to-tr from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-in-out" />
@@ -200,11 +186,11 @@ const Services = () => {
                         </h3>
                       </Link>
                     </div>
-                    
+
                     <p className="text-dark font-medium leading-relaxed opacity-80 text-base">
                       {service.desc}
                     </p>
-                    
+
                     <div className="pt-6 border-t border-primary/5">
                       <ul className="space-y-4">
                         {service.features.map((feat) => (
@@ -228,7 +214,7 @@ const Services = () => {
                       <div className="bg-accent/5 p-5 rounded-2xl border-l-4 border-accent relative overflow-hidden group/focus">
                         {/* Subtle background icon */}
                         <Target className="absolute -right-4 -bottom-4 w-16 h-16 text-accent/10 -rotate-12 group-hover/focus:rotate-0 transition-transform duration-700" />
-                        
+
                         <div className="relative z-10">
                           <span className="text-[9px] font-bold text-accent uppercase tracking-[0.3em] block mb-2">Clinical Focus</span>
                           <p className="text-sm font-serif font-bold text-primary leading-snug">
@@ -239,8 +225,8 @@ const Services = () => {
                     </div>
 
                     <div className="pt-2">
-                      <Link 
-                        to={service.slug ? `/service/${service.slug}` : "/contact"} 
+                      <Link
+                        to={service.slug ? `/service/${service.slug}` : "/contact"}
                         className="inline-flex items-center gap-4 text-[10px] font-bold uppercase tracking-[0.3em] text-primary/40 hover:text-accent transition-all group/link"
                       >
                         <span className="w-10 h-[1px] bg-primary/10 group-hover/link:w-16 group-hover/link:bg-accent transition-all duration-500" />
@@ -302,8 +288,8 @@ const Services = () => {
               transition={{ duration: 1 }}
               className="aspect-square rounded-[3rem] lg:rounded-[5rem] overflow-hidden shadow-2xl border-8 border-white/10"
             >
-              <img 
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200" 
+              <img
+                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200"
                 alt="Expert clinical treatment"
                 className="w-full h-full object-cover"
               />

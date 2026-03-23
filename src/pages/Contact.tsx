@@ -12,7 +12,7 @@ import {
   ChevronDown
 } from 'lucide-react';
 import Button from '../components/Button';
-import { CONTACT_PHONE_DISPLAY, CONTACT_WHATSAPP_LINK, SERVICE_AREAS, INSTAGRAM_LINK, FACEBOOK_LINK } from '../constants';
+import { CONTACT_PHONE_DISPLAY, CONTACT_WHATSAPP_LINK, SERVICE_AREAS, INSTAGRAM_LINK, FACEBOOK_LINK, BRAND_NAME } from '../constants';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -21,7 +21,7 @@ const Contact = () => {
     location: '',
     gender: 'Male',
     age: '',
-    service: 'Orthopedic Physiotherapy',
+    service: 'Orthopedic physiotherapy',
     condition: ''
   });
 
@@ -60,7 +60,7 @@ const Contact = () => {
         >
           <img
             src="https://images.unsplash.com/photo-1516549655169-df83a0774514?auto=format&fit=crop&q=80&w=2000"
-            alt="Flexo Physio Contact Background"
+            alt={`${BRAND_NAME} Contact Background`}
             className="w-full h-full object-cover"
           />
           <div className="absolute inset-0 bg-white/90 lg:bg-white/85" />
@@ -98,7 +98,7 @@ const Contact = () => {
           style={{ y: watermarkY }}
           className="absolute top-10 lg:top-20 left-1/2 -translate-x-1/2 text-[15vw] lg:text-[20vw] font-serif font-bold text-primary/5 select-none pointer-events-none whitespace-nowrap uppercase"
         >
-          FLEXO PHYSIO
+          {BRAND_NAME.toUpperCase()}
         </motion.div>
 
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
@@ -241,12 +241,12 @@ const Contact = () => {
                             onChange={handleInputChange}
                             className="w-full bg-surface/50 border border-primary/5 rounded-xl lg:rounded-2xl px-5 py-3 lg:py-3.5 focus:outline-none focus:border-accent focus:bg-white transition-all font-medium text-primary appearance-none cursor-pointer text-sm"
                           >
-                            <option>Orthopedic Physiotherapy</option>
-                            <option>Neurological Rehab</option>
-                            <option>Post-Surgical Recovery</option>
-                            <option>Geriatric Care</option>
-                            <option>Chiropractic Care</option>
-                            <option>Cupping & Dry Needling</option>
+                            <option>Orthopedic physiotherapy</option>
+                            <option>Neurological rehab</option>
+                            <option>Post-surgical recovery</option>
+                            <option>Geriatric care</option>
+                            <option>Chiropractic care</option>
+                            <option>Cupping & dry needling</option>
                           </select>
                           <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-accent">
                             <ChevronDown className="w-3.5 h-3.5 lg:w-4 lg:h-4" />
