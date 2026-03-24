@@ -58,10 +58,10 @@ const Navbar = () => {
             />
           </div>
           <div className="flex flex-col border-l border-primary/10 pl-3 xl:pl-4 py-1">
-            <span className="text-xs lg:text-lg xl:text-xl font-serif font-bold text-primary tracking-tighter leading-none group-hover:opacity-80 transition-opacity whitespace-nowrap">
+            <span className="text-lg lg:text-2xl xl:text-3xl font-serif font-bold text-primary tracking-tighter leading-none group-hover:opacity-80 transition-opacity whitespace-nowrap">
               FLEXO <span className="text-accent italic">PHYSIOTHERAPY</span>
             </span>
-            <span className="text-[7px] lg:text-[9px] xl:text-[10px] uppercase tracking-[0.2em] lg:tracking-[0.22em] text-accent font-sans font-bold mt-1 lg:mt-1.5">
+            <span className="text-[8px] lg:text-[9px] xl:text-[10px] uppercase tracking-[0.2em] lg:tracking-[0.22em] text-accent font-sans font-bold mt-1 lg:mt-1.5">
               Mobility flexibility stability
             </span>
           </div>
@@ -149,7 +149,7 @@ const Navbar = () => {
         <div className="flex items-center justify-between px-6 py-6 border-b border-primary/5 shadow-sm bg-white shrink-0">
           <div className="flex items-center gap-2">
             <img src="/logo-square.jpeg" className="h-9 w-auto rounded-lg" alt="Logo" />
-            <span className="font-serif font-bold text-primary tracking-tighter text-lg underline decoration-accent/30 decoration-2 underline-offset-4">{BRAND_NAME.toUpperCase()}</span>
+            <span className="font-serif font-bold text-primary tracking-tighter text-xl lg:text-2xl underline decoration-accent/30 decoration-2 underline-offset-4">{BRAND_NAME.toUpperCase()}</span>
           </div>
           <button
             className="text-primary p-2.5 focus:outline-none active:scale-90 bg-primary/5 rounded-full hover:bg-accent/10 hover:text-accent transition-all"
