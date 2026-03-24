@@ -159,9 +159,9 @@ const Contact = () => {
 
                 <div className="space-y-6 relative z-10">
                   <div className="space-y-2">
-                    <h3 className="text-2xl lg:text-3xl font-serif font-bold text-primary">Request an <span className="text-accent italic font-normal">Assessment</span></h3>
+                    <h3 className="text-2xl lg:text-3xl font-serif font-bold text-primary">Request an <span className="text-accent italic font-normal">Initial Assessment</span></h3>
                     <p className="text-dark text-xs lg:text-sm font-medium leading-relaxed opacity-80">
-                      Fill in your details below. A clinical coordinator will contact you to confirm your home visit schedule.
+                      Our experts visit your home to diagnose your condition and create a personalized treatment plan. Fill in your details below and a clinical coordinator will contact you to confirm your home visit schedule.
                     </p>
                   </div>
 

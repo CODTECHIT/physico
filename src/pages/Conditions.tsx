@@ -224,7 +224,7 @@ const Conditions = () => {
             <span className="text-accent italic font-normal">condition listed?</span>
           </h2>
           <p className="text-dark text-xl font-medium leading-relaxed opacity-80">
-            Our specialists handle complex clinical cases beyond this list. Contact us for a free clinical consultation over the phone.
+            Our physiotherapist handle complex clinical cases beyond this list. Contact us for a free clinical consultation over the phone.
           </p>
           <div className="flex flex-col sm:flex-row justify-center items-center gap-8 pt-8">
             <a
@@ -234,7 +234,7 @@ const Conditions = () => {
               className="w-full sm:w-auto"
             >
               <Button variant="primary" size="lg" className="w-full rounded-none px-12 group bg-accent hover:bg-accent/90 border-none text-white">
-                Speak to a Specialist <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                Meet your physiotherapist <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>
             <a href="tel:+919502808581" className="text-primary font-bold uppercase tracking-widest text-sm hover:text-accent transition-colors">

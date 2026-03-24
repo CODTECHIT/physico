@@ -20,6 +20,8 @@ import {
   Target,
   Calendar,
   FileCheck,
+  ThumbsUp,
+  Award,
 } from 'lucide-react';
 import Button from '../components/Button';
 import { CONTACT_PHONE_DISPLAY, CONTACT_WHATSAPP_LINK, SERVICE_AREAS, BRAND_NAME } from '../constants';
@@ -28,6 +30,7 @@ const Home = () => {
   const { scrollY } = useScroll();
   const [treatmentIndex, setTreatmentIndex] = useState(0);
   const treatments = ['Orthopedic', 'Neuro', 'Sports', 'Cardio'];
+  const treatmentColors = ['text-primary', 'text-green-600', 'text-green-800', 'text-black'];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -35,6 +38,21 @@ const Home = () => {
     }, 3000);
     return () => clearInterval(timer);
   }, [treatments.length]);
+
+  // Location rotation state
+  const [locationIndex, setLocationIndex] = useState(0);
+  const locationGroups = [
+    ['Miyapur', 'Hydernagar', 'Nizampet', 'Hafeezpet', 'Allwyn Colony', 'Madinaguda'],
+    ['Chandanagar', 'Deepthisri Nagar', 'KPHB nearby', 'Vasanth Nagar', 'Gopal Nagar', 'Vivekananda Nagar'],
+    ['Bhagyanagar Colony', 'HMT Colony (near Miyapur)', 'Kondapur', 'Gachibowli', 'Bachupally', 'Lingampally'],
+  ];
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setLocationIndex((prev) => (prev + 1) % locationGroups.length);
+    }, 2000);
+    return () => clearInterval(timer);
+  }, [locationGroups.length]);
 
   // Parallax transforms
   const heroBgY = useTransform(scrollY, [0, 500], [0, 150]);
@@ -49,7 +67,8 @@ const Home = () => {
       title: 'Orthopedic Physiotherapy',
       desc: 'Back pain, neck pain, joint issues, arthritis, fracture recovery',
       icon: <Bone className="w-6 h-6" />,
-      img: '/Orthopedic Rehab.avif'
+      img: '/Orthopedic Rehab.avif',
+      color: 'primary'
     },
     {
       id: '02',
@@ -57,7 +76,8 @@ const Home = () => {
       title: 'Neurological Rehabilitation',
       desc: 'Stroke recovery, Parkinson’s care, balance & mobility training',
       icon: <Brain className="w-6 h-6" />,
-      img: '/Neuro-Rehabilitation.avif'
+      img: '/Neuro-Rehabilitation.avif',
+      color: 'dark'
     },
     {
       id: '03',
@@ -65,7 +85,8 @@ const Home = () => {
       title: 'Sports Rehabilitation',
       desc: 'Injury recovery, athletic performance, return-to-sport protocols',
       icon: <Dumbbell className="w-6 h-6" />,
-      img: '/Sports Rehabilitation.avif'
+      img: '/Sports Rehabilitation.avif',
+      color: 'accent'
     }
   ];
 
@@ -280,6 +301,16 @@ const Home = () => {
                   title: 'Trusted Care',
                   desc: 'Honest pricing',
                   icon: <ShieldCheck className="w-5 h-5 lg:w-6 lg:h-6" />
+                },
+                {
+                  title: '1000+ Recoveries',
+                  desc: 'Happy patients',
+                  icon: <ThumbsUp className="w-5 h-5 lg:w-6 lg:h-6" />
+                },
+                {
+                  title: '6+ Years Experience',
+                  desc: 'Proven expertise',
+                  icon: <Award className="w-5 h-5 lg:w-6 lg:h-6" />
                 }
               ].map((item, idx) => (
                 <div key={idx} className="flex-1 flex items-center group">
@@ -300,7 +331,7 @@ const Home = () => {
                   </div>
 
                   {/* Vertical Divider (Desktop Only) */}
-                  {idx < 3 && (
+                  {idx < 4 && (
                     <div className="hidden lg:block w-[1px] h-12 bg-white/10" />
                   )}
                 </div>
@@ -435,7 +466,7 @@ const Home = () => {
               >
                 <Link
                   to={item.slug ? `/service/${item.slug}` : "/contact"}
-                  className="relative overflow-hidden aspect-[3/2] mb-6 shadow-lg rounded-2xl lg:rounded-3xl border-2 border-white group-hover:shadow-xl transition-all duration-700 w-full block"
+                  className={`relative overflow-hidden aspect-[3/2] mb-6 shadow-lg rounded-2xl lg:rounded-3xl border-2 ${item.color === 'primary' ? 'border-primary' : item.color === 'dark' ? 'border-dark' : 'border-accent'} group-hover:shadow-xl transition-all duration-700 w-full block`}
                 >
                   <img
                     src={item.img}
@@ -448,9 +479,9 @@ const Home = () => {
                   </div>
                 </Link>
                 <div className="space-y-2 lg:space-y-3">
-                  <div className="text-accent mb-2">{item.icon}</div>
+                  <div className={`mb-2 ${item.color === 'primary' ? 'text-primary' : item.color === 'dark' ? 'text-dark' : 'text-accent'}`}>{item.icon}</div>
                   <Link to={item.slug ? `/service/${item.slug}` : "/contact"}>
-                    <h3 className="text-xl lg:text-2xl font-serif font-bold text-primary group-hover:text-accent transition-colors leading-tight">{item.title}</h3>
+                    <h3 className={`text-xl lg:text-2xl font-serif font-bold ${item.color === 'primary' ? 'text-primary' : item.color === 'dark' ? 'text-dark' : 'text-accent'} ${item.color === 'primary' ? 'group-hover:text-primary' : item.color === 'dark' ? 'group-hover:text-dark' : 'group-hover:text-accent'} transition-colors leading-tight`}>{item.title}</h3>
                   </Link>
                   <p className="text-dark text-xs lg:text-sm font-medium leading-relaxed opacity-80">{item.desc}</p>
                 </div>
@@ -495,7 +526,7 @@ const Home = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.3 }}
-                  className="text-primary italic font-normal"
+                  className={`${treatmentColors[treatmentIndex]} italic font-normal`}
                 >
                   {treatments[treatmentIndex]}
                 </motion.span>
@@ -589,7 +620,8 @@ const Home = () => {
               { title: 'Focus on Long-Term Recovery', text: "We don't just reduce pain – we work on: strength, mobility, function, prevention of recurrence.", icon: <Target className="w-5 h-5" /> },
               { title: 'One-on-One Dedicated Sessions', text: 'Complete attention with no rushed treatments or multiple patients at once.', icon: <UserCheck className="w-5 h-5" /> },
               { title: 'Easy Booking & Support', text: 'Simple appointment process with quick response and flexible scheduling.', icon: <Calendar className="w-5 h-5" /> },
-              { title: 'Personalized Treatment Plans', text: 'No generic exercises. Every patient receives a customized rehab program based on their condition, lifestyle, and recovery goals.', icon: <FileCheck className="w-5 h-5" /> }
+              { title: 'Personalized Treatment Plans', text: 'No generic exercises. Every patient receives a customized rehab program based on their condition, lifestyle, and recovery goals.', icon: <FileCheck className="w-5 h-5" /> },
+              { title: 'Home Visit Convenience & Safety', text: 'Receive expert physiotherapy in the comfort of your home. No travel, no waiting. Ideal for post-surgery, elderly patients and those with limited mobility.', icon: <HomeIcon className="w-5 h-5" /> }
             ].map((feature, i) => (
               <motion.div
                 key={i}
@@ -598,7 +630,7 @@ const Home = () => {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: i * 0.15, type: "spring", stiffness: 100 }}
                 whileHover={{ y: -5, scale: 1.02 }}
-                className="bg-white p-5 lg:p-6 rounded-2xl lg:rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-primary/5 hover:border-accent/20 group cursor-pointer"
+                className="bg-white p-5 lg:p-6 rounded-2xl lg:rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-accent group cursor-pointer"
               >
                 <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl lg:rounded-2xl bg-accent/10 flex items-center justify-center text-accent mb-4 group-hover:bg-accent group-hover:text-white transition-all duration-300">
                   {feature.icon}
@@ -641,7 +673,7 @@ const Home = () => {
             className="flex whitespace-normal gap-6 lg:gap-10 py-4 px-6"
             animate={{ x: ["0%", "-50%"] }}
             transition={{
-              duration: 40,
+              duration: 80,
               repeat: Infinity,
               ease: "linear"
             }}
@@ -699,9 +731,30 @@ const Home = () => {
             <MapPin className="w-7 h-7" />
           </div>
           <h2 className="text-3xl font-serif font-bold text-primary">We Serve</h2>
-          <p className="text-2xl font-serif font-medium text-dark italic">
-            Kukatpally, Miyapur, Kondapur, Gachibowli
+          <p className="text-xl font-medium text-dark leading-relaxed max-w-2xl mx-auto">
+            We offer fast and reliable home physiotherapy services across Miyapur and surrounding areas within 5 km.
           </p>
+          <div className="h-32 flex flex-col justify-center items-center gap-1">
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={locationIndex}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                transition={{ duration: 0.3 }}
+                className="flex flex-wrap justify-center gap-x-3 gap-y-1"
+              >
+                {locationGroups[locationIndex].map((location, idx) => (
+                  <span key={idx} className="text-base font-bold text-primary flex items-center">
+                    {location}
+                    {idx < locationGroups[locationIndex].length - 1 && (
+                      <span className="ml-3 text-primary/30">|</span>
+                    )}
+                  </span>
+                ))}
+              </motion.div>
+            </AnimatePresence>
+          </div>
           <span className="block text-sm font-bold uppercase tracking-[0.2em] text-muted">(Within 5 KM radius)</span>
         </div>
       </section>

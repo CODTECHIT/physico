@@ -247,13 +247,13 @@ const Services = () => {
         <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-10 relative z-10">
             <div className="space-y-4">
-              <span className="text-accent font-sans font-bold uppercase tracking-[0.3em] text-[10px] block">The Standard</span>
-              <h2 className="text-4xl lg:text-6xl font-serif font-bold leading-tight">
+              <span className="text-white/80 font-sans font-bold uppercase tracking-[0.3em] text-[10px] block">The Standard</span>
+              <h2 className="text-4xl lg:text-5xl font-serif font-bold leading-tight">
                 Uncompromising <br />
-                <span className="text-accent italic font-normal">Clinical</span> Excellence.
+                <span className="text-secondary italic font-normal">Clinical</span> Excellence.
               </h2>
             </div>
-            <p className="text-white/70 font-medium leading-relaxed text-lg lg:text-xl">
+            <p className="text-white/90 font-medium leading-relaxed text-lg lg:text-xl">
               Our therapists follow rigorous evidence-based protocols to ensure your recovery is measurable and sustainable. We bring hospital-grade clinical outcomes directly to your home.
             </p>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 pt-4">
@@ -261,18 +261,18 @@ const Services = () => {
                 { title: 'Home Ready', text: 'Specialized portable equipment for clinical grade treatment.' },
                 { title: 'Data Driven', text: 'Regular progress audits and recovery tracking reports.' }
               ].map((item, idx) => (
-                <div key={idx} className="space-y-3 p-8 bg-white/5 rounded-[2rem] border border-white/10 hover:bg-white/10 transition-colors duration-500">
-                  <h4 className="text-lg font-serif font-bold text-accent flex items-center gap-3">
-                    <CheckCircle2 className="w-5 h-5" />
+                <div key={idx} className="space-y-4 p-8 bg-white/10 rounded-[2rem] border border-white hover:bg-white/15 hover:border-white/40 transition-all duration-500">
+                  <h4 className="text-xl font-serif font-bold text-white flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-accent" />
                     {item.title}
                   </h4>
-                  <p className="text-white/60 text-sm font-medium leading-relaxed">{item.text}</p>
+                  <p className="text-white/80 text-sm font-medium leading-relaxed">{item.text}</p>
                 </div>
               ))}
             </div>
             <div className="pt-6">
               <Link to="/contact">
-                <Button variant="outline" className="border-white/20 text-white hover:bg-white hover:text-primary px-12 rounded-none group">
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-primary px-12 rounded-none group">
                   Book a Clinical Specialist
                   <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                 </Button>
