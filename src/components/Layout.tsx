@@ -24,7 +24,7 @@ const Layout = ({ children }: LayoutProps) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.4, ease: 'linear' }}
-          className="flex-grow pt-24"
+          className="flex-grow pt-24 pb-24 md:pb-0"
         >
           {children}
         </motion.main>

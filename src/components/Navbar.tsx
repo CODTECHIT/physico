@@ -39,10 +39,10 @@ const Navbar = () => {
       )}
     >
       <div className={cn(
-        "max-w-[1600px] mx-auto px-4 md:px-8 xl:px-12 flex items-center justify-between transition-opacity duration-300",
+        "max-w-[1600px] mx-auto px-4 md:px-8 xl:px-12 flex items-center justify-between gap-3 transition-opacity duration-300",
         isOpen ? "opacity-0 pointer-events-none" : "opacity-100"
       )}>
-        <Link to="/" className="group flex items-center gap-2 xl:gap-3 shrink-0">
+        <Link to="/" className="group flex min-w-0 flex-1 items-center gap-2 xl:gap-3 lg:flex-none">
           <div className="relative shrink-0">
             {/* Desktop: Horizontal Logo */}
             <img
@@ -57,11 +57,11 @@ const Navbar = () => {
               className="lg:hidden h-10 w-auto object-contain group-hover:opacity-80 transition-opacity rounded-lg"
             />
           </div>
-          <div className="flex flex-col border-l border-primary/10 pl-3 xl:pl-4 py-1">
-            <span className="text-lg lg:text-2xl xl:text-3xl font-serif font-bold text-primary tracking-tighter leading-none group-hover:opacity-80 transition-opacity whitespace-nowrap">
+          <div className="min-w-0 overflow-hidden border-l border-primary/10 pl-2.5 py-1 xl:pl-4">
+            <span className="block text-[clamp(0.8rem,3.4vw,1rem)] font-serif font-bold leading-[1.05] tracking-[-0.04em] text-primary transition-opacity group-hover:opacity-80 min-[390px]:text-[clamp(0.88rem,3.6vw,1.05rem)] lg:text-2xl xl:text-3xl">
               FLEXO <span className="text-accent italic">PHYSIOTHERAPY</span>
             </span>
-            <span className="text-[8px] lg:text-[9px] xl:text-[10px] uppercase tracking-[0.2em] lg:tracking-[0.22em] text-accent font-sans font-bold mt-1 lg:mt-1.5">
+            <span className="mt-1 block font-sans text-[6px] font-bold uppercase tracking-[0.14em] text-accent min-[360px]:text-[7px] lg:mt-1.5 lg:text-[9px] lg:tracking-[0.22em] xl:text-[10px]">
               Mobility flexibility stability
             </span>
           </div>
@@ -124,16 +124,16 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Toggle */}
-        <div className="lg:hidden flex items-center gap-3">
-          <a href="tel:+919502808581" className="p-2 text-accent hover:bg-accent/5 rounded-full transition-all active:scale-90 border border-accent/10">
-            <PhoneCall size={18} />
+        <div className="flex shrink-0 items-center gap-1.5 lg:hidden">
+          <a href="tel:+919502808581" className="rounded-full border border-accent/10 p-1.5 text-accent transition-all hover:bg-accent/5 active:scale-90 min-[360px]:p-2">
+            <PhoneCall size={16} />
           </a>
           <button
-            className="text-primary p-2 hover:bg-primary/5 rounded-full transition-all focus:outline-none active:scale-90 border border-primary/10"
+            className="rounded-full border border-primary/10 p-1.5 text-primary transition-all hover:bg-primary/5 focus:outline-none active:scale-90 min-[360px]:p-2"
             onClick={() => setIsOpen(true)}
             aria-label="Open Menu"
           >
-            <Menu size={24} />
+            <Menu size={22} />
           </button>
         </div>
       </div>
@@ -146,10 +146,10 @@ const Navbar = () => {
         )}
       >
         {/* Mobile Menu Header */}
-        <div className="flex items-center justify-between px-6 py-6 border-b border-primary/5 shadow-sm bg-white shrink-0">
-          <div className="flex items-center gap-2">
+        <div className="flex items-center justify-between gap-3 px-5 py-5 border-b border-primary/5 bg-white shadow-sm shrink-0 sm:px-6 sm:py-6">
+          <div className="flex min-w-0 items-center gap-2">
             <img src="/logo-square.jpeg" className="h-9 w-auto rounded-lg" alt="Logo" />
-            <span className="font-serif font-bold text-primary tracking-tighter text-xl lg:text-2xl underline decoration-accent/30 decoration-2 underline-offset-4">{BRAND_NAME.toUpperCase()}</span>
+            <span className="truncate font-serif text-lg font-bold tracking-tighter text-primary underline decoration-accent/30 decoration-2 underline-offset-4 sm:text-xl lg:text-2xl">{BRAND_NAME.toUpperCase()}</span>
           </div>
           <button
             className="text-primary p-2.5 focus:outline-none active:scale-90 bg-primary/5 rounded-full hover:bg-accent/10 hover:text-accent transition-all"
@@ -168,7 +168,7 @@ const Navbar = () => {
                 <Link
                   to={link.path}
                   className={cn(
-                    "text-4xl font-serif font-bold tracking-tight transition-all active:scale-95",
+                    "text-3xl sm:text-4xl font-serif font-bold tracking-tight transition-all active:scale-95",
                     location.pathname === link.path || (link.dropdown && location.pathname.startsWith('/service/'))
                       ? "text-accent border-b-2 border-accent/20 pb-1"
                       : "text-primary hover:text-accent/70"

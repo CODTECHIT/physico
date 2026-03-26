@@ -42,9 +42,9 @@ const Home = () => {
   // Location rotation state
   const [locationIndex, setLocationIndex] = useState(0);
   const locationGroups = [
-    ['Miyapur', 'Hydernagar', 'Nizampet', 'Hafeezpet', 'Allwyn Colony', 'Madinaguda'],
-    ['Chandanagar', 'Deepthisri Nagar', 'KPHB nearby', 'Vasanth Nagar', 'Gopal Nagar', 'Vivekananda Nagar'],
-    ['Bhagyanagar Colony', 'HMT Colony (near Miyapur)', 'Kondapur', 'Gachibowli', 'Bachupally', 'Lingampally'],
+    ['Miyapur', 'Hydernagar', 'Nizampet', 'Bachupally', 'Pragati Nagar', 'Gopal Nagar'],
+    ['Kukatpally', 'KPHB', 'JNTU', 'Vivekananda Colony', 'Vasantha Nagar'],
+    ['Hafeezpet', 'Alwin Colony', 'Madinaguda', 'Kondapur', 'Chandanagar', 'Lingampally'],
   ];
 
   useEffect(() => {
@@ -193,7 +193,7 @@ const Home = () => {
           <div className="absolute inset-0 bg-white/85" />
         </motion.div>
 
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center pt-24 lg:pt-0 flex-grow">
+        <div className="max-w-[1400px] mx-auto px-5 sm:px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center pt-20 sm:pt-24 lg:pt-0 flex-grow">
 
           {/* Content Column - Structured & Professional with Parallax */}
           <motion.div
@@ -205,14 +205,14 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
             >
-              <div className="flex items-center space-x-3 mb-4 lg:mb-6">
+              <div className="mb-4 flex items-center gap-3 lg:mb-6">
                 <span className="w-8 lg:w-10 h-1 bg-accent" />
-                <span className="text-accent font-sans font-bold uppercase tracking-wider text-[10px] lg:text-xs">
+                <span className="text-accent font-sans font-bold uppercase tracking-[0.18em] text-[9px] leading-relaxed sm:text-[10px] lg:text-xs">
                   Expert Physiotherapy at Home in Hyderabad
                 </span>
               </div>
 
-              <h1 className="text-3xl md:text-5xl lg:text-7xl font-serif font-bold text-primary leading-tight lg:leading-[1.1]">
+              <h1 className="text-[clamp(2.35rem,11vw,3.9rem)] md:text-5xl lg:text-7xl font-serif font-bold text-primary leading-[1.05] lg:leading-[1.1]">
                 Personalized care for pain relief, <span className="text-accent italic font-normal">recovery</span>, and mobility.
               </h1>
 
@@ -234,10 +234,10 @@ const Home = () => {
                   </a>
 
                   {/* Location Info */}
-                  <div className="flex flex-col space-y-0.5">
-                    <div className="flex items-center space-x-2">
+                  <div className="flex flex-col space-y-1">
+                    <div className="flex items-start gap-2">
                       <MapPin className="text-accent w-3.5 h-3.5 lg:w-5 lg:h-5" />
-                      <span className="text-[10px] lg:text-sm font-bold text-primary uppercase tracking-tight">{SERVICE_AREAS.split(',').slice(0, 2).join(' | ')} | Nearby</span>
+                      <span className="text-[10px] font-bold uppercase tracking-tight leading-relaxed text-primary lg:text-sm">{SERVICE_AREAS.split(',').slice(0, 2).join(' | ')} | Nearby</span>
                     </div>
                     <p className="text-[9px] lg:text-xs text-muted font-medium ml-5 lg:ml-7 uppercase tracking-tighter">📞 {CONTACT_PHONE_DISPLAY}</p>
                   </div>
@@ -742,13 +742,20 @@ const Home = () => {
                 animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
                 transition={{ duration: 0.3 }}
-                className="flex flex-wrap justify-center gap-x-3 gap-y-1"
+                className="grid grid-cols-2 gap-x-4 gap-y-2 sm:flex sm:flex-wrap sm:justify-center sm:gap-x-3 sm:gap-y-1"
               >
                 {locationGroups[locationIndex].map((location, idx) => (
-                  <span key={idx} className="text-base font-bold text-primary flex items-center">
+                  <span
+                    key={idx}
+                    className={`relative flex min-h-8 items-center justify-center px-2 text-center text-[15px] font-bold text-primary sm:min-h-0 sm:px-0 sm:text-base ${
+                      idx % 2 === 0
+                        ? 'after:absolute after:right-[-0.5rem] after:top-1/2 after:h-5 after:w-px after:-translate-y-1/2 after:bg-primary/30 sm:after:hidden'
+                        : ''
+                    }`}
+                  >
                     {location}
                     {idx < locationGroups[locationIndex].length - 1 && (
-                      <span className="ml-3 text-primary/30">|</span>
+                      <span className="ml-3 hidden text-primary/30 sm:inline">|</span>
                     )}
                   </span>
                 ))}

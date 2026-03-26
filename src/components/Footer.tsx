@@ -8,11 +8,11 @@ const Footer = () => {
       {/* Decorative background element */}
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-accent/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
 
-      <div className="max-w-7xl mx-auto px-6 md:px-12 relative z-10">
-        <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-8">
+      <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12 relative z-10">
+        <div className="grid grid-cols-2 gap-5 sm:gap-6 lg:grid-cols-4 lg:gap-8">
 
           {/* Brand Column */}
-          <div className="space-y-6 lg:space-y-8">
+          <div className="col-span-2 space-y-5 rounded-3xl border border-white/10 bg-white/[0.03] p-5 lg:col-span-1 lg:space-y-8 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0">
             <Link to="/" className="inline-block group">
               <img
                 src="/logo-square.jpeg"
@@ -26,7 +26,7 @@ const Footer = () => {
             <p className="text-secondary/70 text-xs lg:text-sm leading-relaxed max-w-xs">
               Bringing expert, personalized physiotherapy care to your doorstep in Hyderabad. Professional recovery in the comfort of your home.
             </p>
-            <div className="flex space-x-3 sm:space-x-4">
+            <div className="flex flex-wrap gap-3 sm:gap-4">
               {[
                 { icon: <Instagram className="w-5 h-5" />, link: INSTAGRAM_LINK, hover: 'hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888]', label: 'Instagram' },
                 { icon: <Facebook className="w-5 h-5" />, link: FACEBOOK_LINK, hover: 'hover:bg-[#1877F2]', label: 'Facebook' },
@@ -50,7 +50,7 @@ const Footer = () => {
           </div>
 
           {/* Quick Links */}
-          <div className="space-y-6 lg:space-y-8">
+          <div className="space-y-5 rounded-3xl border border-white/10 bg-white/[0.03] p-5 lg:space-y-8 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0">
             <h4 className="text-base lg:text-lg font-serif font-bold tracking-tight border-b border-secondary/20 pb-2 inline-block pr-8">
               Quick Links
             </h4>
@@ -73,7 +73,7 @@ const Footer = () => {
           </div>
 
           {/* Services */}
-          <div className="space-y-6 lg:space-y-8">
+          <div className="space-y-5 rounded-3xl border border-white/10 bg-white/[0.03] p-5 lg:space-y-8 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0">
             <h4 className="text-base lg:text-lg font-serif font-bold tracking-tight border-b border-secondary/20 pb-2 inline-block pr-8">
               Specialties
             </h4>
@@ -96,7 +96,7 @@ const Footer = () => {
           </div>
 
           {/* Contact Info */}
-          <div className="space-y-6 lg:space-y-8">
+          <div className="col-span-2 space-y-5 rounded-3xl border border-white/10 bg-white/[0.03] p-5 lg:col-span-1 lg:space-y-8 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0">
             <h4 className="text-base lg:text-lg font-serif font-bold tracking-tight border-b border-secondary/20 pb-2 inline-block pr-8">
               Get in Touch
             </h4>
@@ -121,7 +121,7 @@ const Footer = () => {
                 <Clock className="w-4 h-4 lg:w-5 lg:h-5 text-accent shrink-0" />
                 <p className="text-secondary/70 text-[10px] lg:text-xs">Mon - Sat: 8:00 AM - 8:00 PM</p>
               </div>
-              <div className="flex space-x-4 mt-4">
+              <div className="mt-4 grid grid-cols-2 gap-4 sm:flex sm:space-x-4">
                 <img src="/qr.jpeg" alt="QR Code" className="w-20 h-20 lg:w-24 lg:h-24 rounded-lg border border-white/10" />
                 <img src="/lo.jpeg" alt="Logo" className="w-20 h-20 lg:w-24 lg:h-24 rounded-lg border border-white/10" />
               </div>
