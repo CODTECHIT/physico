@@ -159,6 +159,36 @@ const Home = () => {
       id: 11,
       name: 'Sravya Chinnu',
       content: "I recently received treatment from Dr. Bhanu Kumar Vemula for treatment of a shoulder injury. Dr. Bhanu conducted a thorough initial assessment and created a tailored treatment plan that included a mix of manual therapy and exercises. He was very attentive and made sure I understood each step of the process. After several sessions, I noticed significant improvement in my mobility and a substantial reduction in pain. His guidance on home exercises was particularly beneficial. Dr. Bhanu was always professional, punctual, and approachable. He patiently answered all my questions and provided clear instructions. One thing that really impressed me was how Dr. Bhanu remembered small details about my daily activities and adjusted my treatment accordingly. Overall, I highly recommend Dr. Bhanu to anyone seeking a knowledgeable and caring physiotherapist. His expertise and dedication truly made a difference in my recovery. Thank you"
+    },
+    {
+      id: 12,
+      name: 'Sai Pranitha',
+      content: "We received physiotherapy treatment for 10 days for my mother-in-law, my mother, and myself, and the experience was truly excellent. The therapist was professional, patient, and extremely knowledgeable. He understood each of our individual needs and provided personalized care that made a big difference in our recovery. We are very happy with the improvement we've seen, especially in pain relief and mobility. His dedication, punctuality, and gentle approach made the sessions comfortable and effective. Highly recommended for anyone looking for quality physiotherapy at home. Thank you for the wonderful service!"
+    },
+    {
+      id: 13,
+      name: 'Ekkirala Sree Lakshmi',
+      content: "Highly recommend Dr. Bhanu. He doesn't just focus on instant pain relief but takes time to find the root cause, target it, and instruct proper exercises. Anyone looking for relief from chronic issues should look no further."
+    },
+    {
+      id: 14,
+      name: 'Praveen Kumar',
+      content: "Hi Bhanu, thank you for the excellent service. I highly recommend it to anyone seeking reliable, personalized care. The therapist was punctual, professional, and attentive throughout each session. I appreciated the personalized approach and clear guidance during every visit. By the end of the treatment, my discomfort had significantly reduced and I felt far more relaxed. Each session was carried out with professionalism, care, and genuine attention to my comfort."
+    },
+    {
+      id: 15,
+      name: 'Rajeswari Chitikela',
+      content: "I have taken treatment from Dr. Bhanu for my ligament problem. Orthopedic suggestions did not help much, but within 4–5 sessions and following his exercise routines, my pain reduced significantly. Highly recommended for this type of professional support at home."
+    },
+    {
+      id: 16,
+      name: 'Meghana Devabakthuni',
+      content: "Thank you for treating my back pain condition (lumbar lordosis), which gave me huge relief. Bhanu garu is very professional and humble, and makes patients comfortable during treatment. He is well trained, punctual, and understands every concern. I strongly recommend their home physiotherapy services for those looking for real improvement. Thank you once again."
+    },
+    {
+      id: 17,
+      name: 'Sri Saikanth Reddy G',
+      content: "I was experiencing severe upper back and neck muscle pain affecting my daily routine. Bhanu garu explained the root cause clearly and provided highly effective treatment that completely relieved my stiffness. I truly appreciate his expertise, care, and professional approach. Thank you."
     }
   ];
 
@@ -463,7 +493,7 @@ const Home = () => {
               >
                 <Link
                   to={item.slug ? `/service/${item.slug}` : "/contact"}
-                  className={`relative overflow-hidden aspect-[3/2] mb-6 shadow-lg rounded-2xl lg:rounded-3xl border-2 border-white group-hover:shadow-xl transition-all duration-700 w-full block`}
+                  className={`relative overflow-hidden aspect-[3/2] mb-6 shadow-lg rounded-2xl lg:rounded-3xl border-2 border-white group-hover:border-[#1E3A8A] group-hover:shadow-xl transition-all duration-700 w-full block`}
                 >
                   <img
                     src={item.img}
@@ -471,14 +501,15 @@ const Home = () => {
                     className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110"
                     loading="lazy"
                   />
+                  <div className="absolute inset-0 bg-[#1E3A8A]/0 group-hover:bg-[#1E3A8A]/20 transition-all duration-500 rounded-2xl lg:rounded-3xl" />
                   <div className="absolute top-4 left-4 lg:top-6 lg:left-6 bg-white/95 backdrop-blur-sm px-2.5 py-1 text-[8px] font-bold tracking-[0.2em] uppercase rounded-full shadow-sm text-primary">
                     {item.id}
                   </div>
                 </Link>
                 <div className="space-y-2 lg:space-y-3">
-                  <div className="mb-2 text-accent">{item.icon}</div>
+                  <div className="mb-2 text-accent group-hover:text-[#1E3A8A] transition-colors duration-300">{item.icon}</div>
                   <Link to={item.slug ? `/service/${item.slug}` : "/contact"}>
-                    <h3 className="text-xl lg:text-2xl font-serif font-bold text-accent group-hover:text-accent transition-colors leading-tight">{item.title}</h3>
+                    <h3 className="text-xl lg:text-2xl font-serif font-bold text-accent group-hover:text-[#1E3A8A] transition-colors duration-300 leading-tight">{item.title}</h3>
                   </Link>
                   <p className="text-dark text-xs lg:text-sm font-medium leading-relaxed opacity-80">{item.desc}</p>
                 </div>
@@ -670,7 +701,7 @@ const Home = () => {
             className="flex whitespace-normal gap-6 lg:gap-10 py-4 px-6"
             animate={{ x: ["0%", "-50%"] }}
             transition={{
-              duration: 80,
+              duration: 150,
               repeat: Infinity,
               ease: "linear"
             }}
@@ -692,7 +723,7 @@ const Home = () => {
                   </div>
 
                   <p className="text-dark font-medium leading-relaxed text-sm lg:text-base italic mb-6 line-clamp-6 opacity-90 group-hover:opacity-100 transition-opacity">
-                    "{testimonial.content}"
+                    {testimonial.content}
                   </p>
                 </div>
 
