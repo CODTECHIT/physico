@@ -8,12 +8,12 @@ const FloatingActions = () => {
   const phoneUrl = `tel:+91${phoneNumber}`;
 
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-4 z-[9999] flex justify-center px-4 md:inset-x-auto md:right-0 md:top-1/2 md:bottom-auto md:block md:-translate-y-1/2 md:px-0">
+    <div className="pointer-events-none fixed right-0 bottom-24 z-[9999] flex justify-end px-0 md:top-1/2 md:bottom-auto md:-translate-y-1/2">
       <motion.div 
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}
         transition={{ delay: 1, duration: 0.8 }}
-        className="pointer-events-auto flex items-center gap-3 rounded-full border border-primary/10 bg-white/95 p-2.5 shadow-2xl backdrop-blur-sm md:flex-col md:gap-4 md:rounded-l-3xl md:rounded-r-none md:border-r-0 md:border-l md:border-y md:p-3"
+        className="pointer-events-auto flex flex-col items-center gap-4 rounded-l-3xl border-l border-y border-primary/10 bg-white/95 p-3 shadow-2xl backdrop-blur-sm md:gap-4 md:rounded-l-3xl md:rounded-r-none md:border-r-0 md:border-l md:border-y md:p-3"
       >
         {/* Phone Button */}
         <a 

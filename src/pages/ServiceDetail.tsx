@@ -153,7 +153,7 @@ const ServiceDetail = () => {
           className="absolute inset-0 -z-10 h-[120%]"
         >
           <img
-            src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=2000"
+            src={service.img}
             alt={`${BRAND_NAME} Service Detail Background`}
             className="w-full h-full object-cover opacity-20 lg:opacity-30"
           />

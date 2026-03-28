@@ -81,7 +81,7 @@ const Conditions = () => {
           className="absolute inset-0 -z-10 h-[120%]"
         >
           <img
-            src="https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=80&w=2000"
+            src="/bg.webp"
             alt={`${BRAND_NAME} Conditions Background`}
             className="w-full h-full object-cover"
           />

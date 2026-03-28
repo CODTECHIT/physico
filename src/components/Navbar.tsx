@@ -54,15 +54,15 @@ const Navbar = () => {
             <img
               src="/logo-square.jpeg"
               alt={BRAND_NAME}
-              className="lg:hidden h-10 w-auto object-contain group-hover:opacity-80 transition-opacity rounded-lg"
+              className="lg:hidden h-16 w-auto object-contain group-hover:opacity-80 transition-opacity rounded-lg"
             />
           </div>
           <div className="min-w-0 overflow-hidden border-l border-primary/10 pl-2.5 py-1 xl:pl-4">
-            <span className="block text-[clamp(0.8rem,3.4vw,1rem)] font-serif font-bold leading-[1.05] tracking-[-0.04em] text-primary transition-opacity group-hover:opacity-80 min-[390px]:text-[clamp(0.88rem,3.6vw,1.05rem)] lg:text-2xl xl:text-3xl">
+            <span className="block whitespace-nowrap text-[clamp(0.85rem,4vw,1.1rem)] font-serif font-bold leading-[1.05] tracking-[-0.04em] text-primary transition-opacity group-hover:opacity-80 min-[390px]:text-[clamp(1rem,4.4vw,1.2rem)] lg:text-2xl xl:text-3xl">
               FLEXO <span className="text-accent italic">PHYSIOTHERAPY</span>
             </span>
-            <span className="mt-1 block font-sans text-[6px] font-bold uppercase tracking-[0.14em] text-accent min-[360px]:text-[7px] lg:mt-1.5 lg:text-[9px] lg:tracking-[0.22em] xl:text-[10px]">
-              Mobility flexibility stability
+            <span className="mt-1 block font-sans text-[6px] font-bold tracking-[0.14em] text-accent min-[360px]:text-[7px] lg:mt-1.5 lg:text-[9px] lg:tracking-[0.22em] xl:text-[10px]">
+              Mobility Flexibility Stability
             </span>
           </div>
         </Link>
@@ -148,8 +148,15 @@ const Navbar = () => {
         {/* Mobile Menu Header */}
         <div className="flex items-center justify-between gap-3 px-5 py-5 border-b border-primary/5 bg-white shadow-sm shrink-0 sm:px-6 sm:py-6">
           <div className="flex min-w-0 items-center gap-2">
-            <img src="/logo-square.jpeg" className="h-9 w-auto rounded-lg" alt="Logo" />
-            <span className="truncate font-serif text-lg font-bold tracking-tighter text-primary underline decoration-accent/30 decoration-2 underline-offset-4 sm:text-xl lg:text-2xl">{BRAND_NAME.toUpperCase()}</span>
+            <img src="/logo-square.jpeg" className="h-12 w-auto rounded-lg" alt="Logo" />
+            <div className="min-w-0 overflow-hidden border-l border-primary/10 pl-2 py-0.5">
+              <span className="block whitespace-nowrap font-serif text-lg font-bold tracking-tighter text-primary sm:text-2xl">
+                FLEXO <span className="text-accent italic">PHYSIOTHERAPY</span>
+              </span>
+              <span className="block font-sans text-[6px] font-bold text-accent">
+                Mobility Flexibility Stability
+              </span>
+            </div>
           </div>
           <button
             className="text-primary p-2.5 focus:outline-none active:scale-90 bg-primary/5 rounded-full hover:bg-accent/10 hover:text-accent transition-all"
@@ -216,8 +223,8 @@ const Navbar = () => {
           </Button>
           <div className="flex items-center justify-center space-x-4 mt-8 opacity-40">
             <span className="w-8 h-[1px] bg-primary" />
-            <p className="font-bold tracking-[0.3em] text-[9px] uppercase text-accent">
-              Mobility flexibility stability
+            <p className="font-bold tracking-[0.3em] text-[7px] text-accent">
+              Mobility Flexibility Stability
             </p>
             <span className="w-8 h-[1px] bg-primary" />
           </div>

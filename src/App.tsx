@@ -10,6 +10,9 @@ const Contact = lazy(() => import('./pages/Contact'));
 const ServiceDetail = lazy(() => import('./pages/ServiceDetail'));
 const Conditions = lazy(() => import('./pages/Conditions'));
 const ConditionDetail = lazy(() => import('./pages/ConditionDetail'));
+const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
+const TermsAndConditions = lazy(() => import('./pages/TermsAndConditions'));
+const RefundPolicy = lazy(() => import('./pages/RefundPolicy'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Initial Loading State
@@ -32,6 +35,9 @@ function App() {
             <Route path="/conditions" element={<Conditions />} />
             <Route path="/condition/:slug" element={<ConditionDetail />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+            <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
+            <Route path="/refund-policy" element={<RefundPolicy />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

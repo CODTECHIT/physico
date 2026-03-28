@@ -23,6 +23,13 @@ export interface Condition {
   img: string;
 }
 
+const ORTHOPEDIC_IMAGE = '/Orthopedic Rehab.avif';
+const SPORTS_IMAGE = '/Sports Rehabilitation.avif';
+const NEURO_IMAGE = '/Neuro-Rehabilitation.avif';
+const CUPPING_IMAGE = '/Cupping & Dry Needling.avif';
+const CHIROPRACTIC_IMAGE = '/Chiropractic.avif';
+const GERIATRIC_IMAGE = '/hero-interaction.webp';
+
 export const conditionsData: Record<string, Condition> = {
   'back-pain': {
     id: 'back-pain',
@@ -47,7 +54,7 @@ export const conditionsData: Record<string, Condition> = {
     goal: 'Our goal is simple: reduce pain, restore movement, and prevent recurrence—all from the comfort of your home.',
     serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas',
     icon: React.createElement(Bone, { className: "w-8 h-8" }),
-    img: 'https://images.unsplash.com/photo-1597452485669-2c7bb5fef90d?auto=format&fit=crop&q=80&w=1200'
+    img: ORTHOPEDIC_IMAGE
   },
   'neck-pain': {
     id: 'neck-pain',
@@ -72,7 +79,7 @@ export const conditionsData: Record<string, Condition> = {
     goal: 'Our goal is to not only relieve pain but also correct the underlying dysfunction to prevent future episodes.',
     serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas',
     icon: React.createElement(Bone, { className: "w-8 h-8" }),
-    img: 'https://images.unsplash.com/photo-1574672280600-4accfa5b6f98?auto=format&fit=crop&q=80&w=1200'
+    img: ORTHOPEDIC_IMAGE
   },
   'shoulder-pain': {
     id: 'shoulder-pain',
@@ -97,7 +104,7 @@ export const conditionsData: Record<string, Condition> = {
     goal: 'Our aim is to restore pain-free movement, improve strength, and regain full shoulder function without unnecessary interventions.',
     serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas',
     icon: React.createElement(Bone, { className: "w-8 h-8" }),
-    img: 'https://images.unsplash.com/photo-1579389083046-e3df9c2b3325?auto=format&fit=crop&q=80&w=1200'
+    img: ORTHOPEDIC_IMAGE
   },
   'hip-knee-arthritis': {
     id: 'hip-knee-arthritis',
@@ -122,7 +129,7 @@ export const conditionsData: Record<string, Condition> = {
     goal: 'Our goal is to reduce pain, improve joint function, and delay or even avoid surgical intervention whenever possible.',
     serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas',
     icon: React.createElement(Bone, { className: "w-8 h-8" }),
-    img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1200'
+    img: ORTHOPEDIC_IMAGE
   },
   'plantar-fasciitis': {
     id: 'plantar-fasciitis',
@@ -148,7 +155,7 @@ export const conditionsData: Record<string, Condition> = {
     goal: 'Our goal is to reduce heel pain, improve foot support, and help you walk comfortably without recurring symptoms.',
     serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas',
     icon: React.createElement(Bone, { className: "w-8 h-8" }),
-    img: 'https://images.unsplash.com/photo-1563220556-9bb2b95188f6?auto=format&fit=crop&q=80&w=1200'
+    img: ORTHOPEDIC_IMAGE
   },
   'tennis-elbow': {
     id: 'tennis-elbow',
@@ -173,7 +180,7 @@ export const conditionsData: Record<string, Condition> = {
     goal: 'Our goal is to reduce pain, restore strength, and help you return to daily activities without discomfort.',
     serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas',
     icon: React.createElement(Dumbbell, { className: "w-8 h-8" }),
-    img: 'https://images.unsplash.com/photo-1581516088204-61cda791334c?auto=format&fit=crop&q=80&w=1200'
+    img: SPORTS_IMAGE
   },
   'acl-rehabilitation': {
     id: 'acl-rehabilitation',
@@ -198,7 +205,7 @@ export const conditionsData: Record<string, Condition> = {
     goal: 'Optimal recovery of knee stability and return to normal activity levels.',
     serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas',
     icon: React.createElement(Dumbbell, { className: "w-8 h-8" }),
-    img: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=80&w=1200'
+    img: SPORTS_IMAGE
   },
   'ankle-sprain': {
     id: 'ankle-sprain',
@@ -223,7 +230,7 @@ export const conditionsData: Record<string, Condition> = {
     goal: 'Don’t just heal, rebuild stability and confidence in movement.',
     serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas',
     icon: React.createElement(Dumbbell, { className: "w-8 h-8" }),
-    img: 'https://images.unsplash.com/photo-1596733430284-f7437764b1a9?auto=format&fit=crop&q=80&w=1200'
+    img: SPORTS_IMAGE
   },
   'rotator-cuff-injury': {
     id: 'rotator-cuff-injury',
@@ -248,7 +255,7 @@ export const conditionsData: Record<string, Condition> = {
     goal: 'Restore control, not just movement, for a fully functional shoulder.',
     serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & surrounding areas',
     icon: React.createElement(Dumbbell, { className: "w-8 h-8" }),
-    img: 'https://images.unsplash.com/photo-1574672280600-4accfa5b6f98?auto=format&fit=crop&q=80&w=1200'
+    img: SPORTS_IMAGE
   },
   'runners-knee': {
     id: 'runners-knee',
@@ -273,7 +280,7 @@ export const conditionsData: Record<string, Condition> = {
     goal: 'Fix the movement, fix the pain for long-term sustainable recovery.',
     serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas',
     icon: React.createElement(Dumbbell, { className: "w-8 h-8" }),
-    img: 'https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=1200'
+    img: SPORTS_IMAGE
   },
   'stroke-rehabilitation': {
     id: 'stroke-rehabilitation',
@@ -298,7 +305,7 @@ export const conditionsData: Record<string, Condition> = {
     goal: 'Restore independence and confidence through neuroplasticity-driven recovery.',
     serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas',
     icon: React.createElement(Brain, { className: "w-8 h-8" }),
-    img: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=80&w=1200'
+    img: NEURO_IMAGE
   },
   'parkinsons-disease': {
     id: 'parkinsons-disease',
@@ -323,7 +330,7 @@ export const conditionsData: Record<string, Condition> = {
     goal: 'Support long-term mobility, confidence, and quality of life within the daily environment.',
     serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & surrounding areas',
     icon: React.createElement(Brain, { className: "w-8 h-8" }),
-    img: 'https://images.unsplash.com/photo-1576091160611-259df917e81b?auto=format&fit=crop&q=80&w=1200'
+    img: NEURO_IMAGE
   },
   'spinal-cord-injury': {
     id: 'spinal-cord-injury',
@@ -348,7 +355,7 @@ export const conditionsData: Record<string, Condition> = {
     goal: 'Maximize independence and functional capacity for a better quality of life.',
     serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas',
     icon: React.createElement(Brain, { className: "w-8 h-8" }),
-    img: 'https://images.unsplash.com/photo-1579389083395-4507e9f4c171?auto=format&fit=crop&q=80&w=1200'
+    img: NEURO_IMAGE
   },
   'cerebral-palsy': {
     id: 'cerebral-palsy',
@@ -373,7 +380,7 @@ export const conditionsData: Record<string, Condition> = {
     goal: 'Enhance each child’s independence, motor skills, and overall development.',
     serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas',
     icon: React.createElement(Brain, { className: "w-8 h-8" }),
-    img: 'https://images.unsplash.com/photo-1536640719397-f136f77a83d9?auto=format&fit=crop&q=80&w=1200'
+    img: NEURO_IMAGE
   },
   'facial-palsy': {
     id: 'facial-palsy',
@@ -398,7 +405,7 @@ export const conditionsData: Record<string, Condition> = {
     goal: 'Restore natural facial expressions, symmetry, and patient confidence.',
     serviceArea: 'Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas',
     icon: React.createElement(Brain, { className: "w-8 h-8" }),
-    img: 'https://images.unsplash.com/photo-1559757117-57421118fa43?auto=format&fit=crop&q=80&w=1200'
+    img: NEURO_IMAGE
   },
   'dry-needling': {
     id: 'dry-needling',
@@ -422,7 +429,7 @@ export const conditionsData: Record<string, Condition> = {
     goal: 'Release the source of pain and restore normal muscle tissue health.',
     serviceArea: 'Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas',
     icon: React.createElement(Zap, { className: "w-8 h-8" }),
-    img: 'https://images.unsplash.com/photo-1512678080530-7760d61f8637?auto=format&fit=crop&q=80&w=1200'
+    img: CUPPING_IMAGE
   },
   'cupping-therapy': {
     id: 'cupping-therapy',
@@ -446,7 +453,7 @@ export const conditionsData: Record<string, Condition> = {
     goal: 'Enhance recovery by improving tissue mobility and local circulation.',
     serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & surrounding areas',
     icon: React.createElement(Zap, { className: "w-8 h-8" }),
-    img: 'https://images.unsplash.com/photo-1512678080530-7760d61f8637?auto=format&fit=crop&q=80&w=1200'
+    img: CUPPING_IMAGE
   },
   'iastm': {
     id: 'iastm',
@@ -470,7 +477,7 @@ export const conditionsData: Record<string, Condition> = {
     goal: 'Restore tissue health and quality of movement through precision mobilization.',
     serviceArea: 'Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas',
     icon: React.createElement(Target, { className: "w-8 h-8" }),
-    img: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200'
+    img: CHIROPRACTIC_IMAGE
   },
   'chiropractic-care': {
     id: 'chiropractic-care',
@@ -495,7 +502,7 @@ export const conditionsData: Record<string, Condition> = {
     goal: 'Realign, restore, and move better through a combined clinical approach.',
     serviceArea: 'Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas',
     icon: React.createElement(Target, { className: "w-8 h-8" }),
-    img: 'https://images.unsplash.com/photo-1533333534177-34200889c20a?auto=format&fit=crop&q=80&w=1200'
+    img: CHIROPRACTIC_IMAGE
   },
   'geriatric-physiotherapy': {
     id: 'geriatric-physiotherapy',
@@ -520,6 +527,6 @@ export const conditionsData: Record<string, Condition> = {
     goal: 'Stay active and independent, aging with strength and confidence.',
     serviceArea: 'Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas',
     icon: React.createElement(Users, { className: "w-8 h-8" }),
-    img: 'https://images.unsplash.com/photo-1581578731522-aa79e6584224?auto=format&fit=crop&q=80&w=1200'
+    img: GERIATRIC_IMAGE
   }
 };

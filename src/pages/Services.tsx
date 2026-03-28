@@ -100,7 +100,7 @@ const Services = () => {
           className="absolute inset-0 -z-10 h-[120%]"
         >
           <img
-            src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=2000"
+            src="/bg.webp"
             alt={`${BRAND_NAME} Services Background`}
             className="w-full h-full object-cover"
           />
@@ -289,7 +289,7 @@ const Services = () => {
               className="aspect-square rounded-[3rem] lg:rounded-[5rem] overflow-hidden shadow-2xl border-8 border-white/10"
             >
               <img
-                src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1200"
+                src="/hero-interaction.webp"
                 alt="Expert clinical treatment"
                 className="w-full h-full object-cover"
               />

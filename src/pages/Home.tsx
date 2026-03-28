@@ -30,7 +30,7 @@ const Home = () => {
   const { scrollY } = useScroll();
   const [treatmentIndex, setTreatmentIndex] = useState(0);
   const treatments = ['Orthopedic', 'Neuro', 'Sports', 'Cardio'];
-  const treatmentColors = ['text-primary', 'text-green-600', 'text-green-800', 'text-black'];
+  const treatmentColors = ['text-[#0B3D36]', 'text-[#0B3D36]', 'text-[#0B3D36]', 'text-[#0B3D36]'];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -163,14 +163,14 @@ const Home = () => {
   ];
 
   const conditions = [
-    { title: 'Back Pain', slug: 'back-pain', img: 'https://images.unsplash.com/photo-1597452485669-2c7bb5fef90d?auto=format&fit=crop&q=60&w=300' },
-    { title: 'Neck Pain', slug: 'neck-pain', img: 'https://images.unsplash.com/photo-1574672280600-4accfa5b6f98?auto=format&fit=crop&q=60&w=300' },
-    { title: 'Shoulder Pain', slug: 'shoulder-pain', img: 'https://images.unsplash.com/photo-1579389083046-e3df9c2b3325?auto=format&fit=crop&q=60&w=300' },
-    { title: 'Stroke Recovery', slug: 'stroke-rehabilitation', img: 'https://images.unsplash.com/photo-1559757175-5700dde675bc?auto=format&fit=crop&q=60&w=300' },
-    { title: 'Parkinson’s Care', slug: 'parkinsons-disease', img: 'https://images.unsplash.com/photo-1576765608535-5f04d1e3f289?auto=format&fit=crop&q=60&w=300' },
-    { title: 'ACL Rehabilitation', slug: 'acl-rehabilitation', img: 'https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&q=60&w=300' },
-    { title: 'Tennis Elbow', slug: 'tennis-elbow', img: 'https://images.unsplash.com/photo-1612277795421-9bc7706a4a34?auto=format&fit=crop&q=60&w=300' },
-    { title: 'Chiropractic Care', slug: 'chiropractic-care', img: 'https://images.unsplash.com/photo-1533333534177-34200889c20a?auto=format&fit=crop&q=60&w=300' },
+    { title: 'Back Pain', slug: 'back-pain', img: '/Orthopedic Rehab.avif' },
+    { title: 'Neck Pain', slug: 'neck-pain', img: '/Orthopedic Rehab.avif' },
+    { title: 'Shoulder Pain', slug: 'shoulder-pain', img: '/Orthopedic Rehab.avif' },
+    { title: 'Stroke Recovery', slug: 'stroke-rehabilitation', img: '/Neuro-Rehabilitation.avif' },
+    { title: 'Parkinson’s Care', slug: 'parkinsons-disease', img: '/Neuro-Rehabilitation.avif' },
+    { title: 'ACL Rehabilitation', slug: 'acl-rehabilitation', img: '/Sports Rehabilitation.avif' },
+    { title: 'Tennis Elbow', slug: 'tennis-elbow', img: '/Sports Rehabilitation.avif' },
+    { title: 'Chiropractic Care', slug: 'chiropractic-care', img: '/Chiropractic.avif' },
   ];
 
   return (
@@ -277,13 +277,13 @@ const Home = () => {
           </motion.div>
         </div>
 
-        {/* TRUST BAR (New Design based on Image) */}
+        {/* TRUST BAR */}
         <div className="bg-[#0B3D36] py-6 lg:py-10 mt-8 lg:mt-0 relative z-30">
           <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-            <div className="grid grid-cols-2 lg:flex lg:flex-row items-stretch lg:items-center justify-between gap-4 lg:gap-0">
+            <div className="grid grid-cols-3 lg:grid-cols-6 gap-y-5 lg:gap-0 items-center">
               {[
                 {
-                  title: 'Certified Pros',
+                  title: 'Certified Doctors',
                   desc: 'BPT/MPT experts',
                   icon: <UserCheck className="w-5 h-5 lg:w-6 lg:h-6" />
                 },
@@ -308,31 +308,28 @@ const Home = () => {
                   icon: <ThumbsUp className="w-5 h-5 lg:w-6 lg:h-6" />
                 },
                 {
-                  title: '6+ Years Experience',
+                  title: '6+ Years',
                   desc: 'Proven expertise',
                   icon: <Award className="w-5 h-5 lg:w-6 lg:h-6" />
                 }
               ].map((item, idx) => (
-                <div key={idx} className="flex-1 flex items-center group">
-                  <div className="flex items-center space-x-3 lg:space-x-5 px-0 lg:px-8 w-full">
-                    {/* Icon Container with Rounded Square Box */}
-                    <div className="w-10 h-10 lg:w-14 lg:h-14 rounded-lg bg-white/10 flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                <div key={idx} className="flex items-center justify-center group">
+                  <div className="flex items-center gap-3 lg:gap-4">
+                    <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-white/10 flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-white transition-all duration-300">
                       {item.icon}
                     </div>
-
-                    <div className="flex flex-col">
-                      <h4 className="text-white font-serif font-bold text-[10px] lg:text-base leading-tight">
+                    <div className="flex flex-col text-left">
+                      <h4 className="text-white font-serif font-bold text-[10px] lg:text-sm leading-tight">
                         {item.title}
                       </h4>
-                      <p className="text-white/60 text-[8px] lg:text-xs font-medium leading-relaxed hidden sm:block">
+                      <p className="text-white/60 text-[8px] lg:text-[11px] font-medium leading-relaxed">
                         {item.desc}
                       </p>
                     </div>
                   </div>
-
-                  {/* Vertical Divider (Desktop Only) */}
-                  {idx < 4 && (
-                    <div className="hidden lg:block w-[1px] h-12 bg-white/10" />
+                  {/* Vertical Divider on Desktop */}
+                  {idx < 5 && (
+                    <div className="hidden lg:block w-[1px] h-10 bg-white/10 ml-6" />
                   )}
                 </div>
               ))}
@@ -466,7 +463,7 @@ const Home = () => {
               >
                 <Link
                   to={item.slug ? `/service/${item.slug}` : "/contact"}
-                  className={`relative overflow-hidden aspect-[3/2] mb-6 shadow-lg rounded-2xl lg:rounded-3xl border-2 ${item.color === 'primary' ? 'border-primary' : item.color === 'dark' ? 'border-dark' : 'border-accent'} group-hover:shadow-xl transition-all duration-700 w-full block`}
+                  className={`relative overflow-hidden aspect-[3/2] mb-6 shadow-lg rounded-2xl lg:rounded-3xl border-2 border-white group-hover:shadow-xl transition-all duration-700 w-full block`}
                 >
                   <img
                     src={item.img}
@@ -479,9 +476,9 @@ const Home = () => {
                   </div>
                 </Link>
                 <div className="space-y-2 lg:space-y-3">
-                  <div className={`mb-2 ${item.color === 'primary' ? 'text-primary' : item.color === 'dark' ? 'text-dark' : 'text-accent'}`}>{item.icon}</div>
+                  <div className="mb-2 text-accent">{item.icon}</div>
                   <Link to={item.slug ? `/service/${item.slug}` : "/contact"}>
-                    <h3 className={`text-xl lg:text-2xl font-serif font-bold ${item.color === 'primary' ? 'text-primary' : item.color === 'dark' ? 'text-dark' : 'text-accent'} ${item.color === 'primary' ? 'group-hover:text-primary' : item.color === 'dark' ? 'group-hover:text-dark' : 'group-hover:text-accent'} transition-colors leading-tight`}>{item.title}</h3>
+                    <h3 className="text-xl lg:text-2xl font-serif font-bold text-accent group-hover:text-accent transition-colors leading-tight">{item.title}</h3>
                   </Link>
                   <p className="text-dark text-xs lg:text-sm font-medium leading-relaxed opacity-80">{item.desc}</p>
                 </div>
@@ -732,7 +729,7 @@ const Home = () => {
           </div>
           <h2 className="text-3xl font-serif font-bold text-primary">We Serve</h2>
           <p className="text-xl font-medium text-dark leading-relaxed max-w-2xl mx-auto">
-            We offer fast and reliable home physiotherapy services across Miyapur and surrounding areas within 5 km.
+            Looking for a physiotherapist near you? Flexo Physiotherapy offers fast, reliable home visit services in Miyapur with expert care delivered to your doorstep.
           </p>
           <div className="h-32 flex flex-col justify-center items-center gap-1">
             <AnimatePresence mode="wait">
@@ -747,11 +744,10 @@ const Home = () => {
                 {locationGroups[locationIndex].map((location, idx) => (
                   <span
                     key={idx}
-                    className={`relative flex min-h-8 items-center justify-center px-2 text-center text-[15px] font-bold text-primary sm:min-h-0 sm:px-0 sm:text-base ${
-                      idx % 2 === 0
-                        ? 'after:absolute after:right-[-0.5rem] after:top-1/2 after:h-5 after:w-px after:-translate-y-1/2 after:bg-primary/30 sm:after:hidden'
-                        : ''
-                    }`}
+                    className={`relative flex min-h-8 items-center justify-center px-2 text-center text-[15px] font-bold text-primary sm:min-h-0 sm:px-0 sm:text-base ${idx % 2 === 0
+                      ? 'after:absolute after:right-[-0.5rem] after:top-1/2 after:h-5 after:w-px after:-translate-y-1/2 after:bg-primary/30 sm:after:hidden'
+                      : ''
+                      }`}
                   >
                     {location}
                     {idx < locationGroups[locationIndex].length - 1 && (
@@ -775,7 +771,7 @@ const Home = () => {
             <span className="text-accent italic font-normal">Recovery Today.</span>
           </h2>
           <p className="text-dark max-w-xl mx-auto font-medium text-base lg:text-lg opacity-90">
-            Get expert physiotherapy care at home with flexible appointments. Your journey to pain-free living starts here.
+            Physiotherapy at home in Miyapur for back pain, stroke recovery, and post-surgery rehabilitation. Get expert care at your doorstep with fast response and personalized treatment.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 lg:gap-8 pt-4">
             <a

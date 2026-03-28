@@ -135,9 +135,9 @@ const Footer = () => {
             © 2026 {BRAND_NAME.toUpperCase()}. ALL RIGHTS RESERVED.
           </p>
           <div className="flex space-x-6 lg:space-x-8">
-            <Link to="/" className="text-secondary/40 text-[8px] lg:text-[10px] uppercase tracking-widest hover:text-white transition-colors">Privacy</Link>
-            <Link to="/" className="text-secondary/40 text-[8px] lg:text-[10px] uppercase tracking-widest hover:text-white transition-colors">Terms</Link>
-            <Link to="/" className="text-secondary/40 text-[8px] lg:text-[10px] uppercase tracking-widest hover:text-white transition-colors">Refund</Link>
+            <Link to="/privacy-policy" className="text-secondary/40 text-[8px] lg:text-[10px] uppercase tracking-widest hover:text-white transition-colors">Privacy</Link>
+            <Link to="/terms-and-conditions" className="text-secondary/40 text-[8px] lg:text-[10px] uppercase tracking-widest hover:text-white transition-colors">Terms</Link>
+            <Link to="/refund-policy" className="text-secondary/40 text-[8px] lg:text-[10px] uppercase tracking-widest hover:text-white transition-colors">Refund</Link>
           </div>
         </div>
       </div>
