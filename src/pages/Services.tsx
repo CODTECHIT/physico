@@ -117,7 +117,7 @@ const Services = () => {
             <div className="flex items-center justify-center space-x-3 mb-2">
               <span className="w-6 h-[2px] bg-accent" />
               <span className="text-accent font-sans font-bold uppercase tracking-[0.2em] text-[9px] lg:text-[10px]">
-                Our Services
+                Our Treatment
               </span>
               <span className="w-6 h-[2px] bg-accent" />
             </div>

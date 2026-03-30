@@ -6,13 +6,15 @@ import {
   MapPin,
   Instagram,
   Facebook,
+  Youtube,
+  Linkedin,
   ArrowRight,
   User,
   Calendar,
   ChevronDown
 } from 'lucide-react';
 import Button from '../components/Button';
-import { CONTACT_PHONE_DISPLAY, CONTACT_WHATSAPP_LINK, SERVICE_AREAS, INSTAGRAM_LINK, FACEBOOK_LINK, BRAND_NAME } from '../constants';
+import { CONTACT_PHONE_DISPLAY, CONTACT_WHATSAPP_LINK, SERVICE_AREAS, INSTAGRAM_LINK, FACEBOOK_LINK, YOUTUBE_LINK, LINKEDIN_LINK, BRAND_NAME } from '../constants';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -92,7 +94,7 @@ const Contact = () => {
       </section>
 
       {/* 2. CONTACT CONTENT */}
-      <section className="py-10 lg:py-16 relative overflow-hidden">
+      <section className="py-6 lg:py-10 relative overflow-hidden">
         {/* Large background text with Parallax */}
         <motion.div
           style={{ y: watermarkY }}
@@ -102,16 +104,16 @@ const Contact = () => {
         </motion.div>
 
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-start">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start">
 
             {/* Contact Details */}
-            <div className="lg:col-span-5 space-y-8 lg:space-y-12">
-              <div className="space-y-4 lg:space-y-6">
+            <div className="lg:col-span-5 space-y-5 lg:space-y-8">
+              <div className="space-y-2 lg:space-y-3">
                 <span className="text-accent font-sans font-bold uppercase tracking-[0.3em] text-[9px] lg:text-[10px] block">Our Reach</span>
                 <h2 className="text-3xl lg:text-5xl font-serif font-bold text-primary">Get in <span className="text-accent italic font-normal">Touch</span></h2>
               </div>
 
-              <div className="space-y-4 lg:space-y-6">
+              <div className="space-y-3 lg:space-y-4">
                 {[
                   { icon: <PhoneCall className="w-5 h-5 lg:w-6 lg:h-6" />, label: 'Direct Support', value: CONTACT_PHONE_DISPLAY, sub: 'Available Mon-Sat, 8am - 8pm' },
                   { icon: <Mail className="w-5 h-5 lg:w-6 lg:h-6" />, label: 'Clinical Inquiries', value: 'care@flexophysio.com', sub: 'Expect a reply within 12 hours' },
@@ -132,14 +134,20 @@ const Contact = () => {
                 ))}
               </div>
 
-              <div className="pt-8 lg:pt-12 border-t border-primary/5 space-y-6 lg:space-y-8 text-center lg:text-left">
+              <div className="pt-5 lg:pt-8 border-t border-primary/5 space-y-4 lg:space-y-5 text-center lg:text-left">
                 <span className="block text-[9px] lg:text-[10px] uppercase tracking-[0.2em] font-bold text-primary/40">Follow Our Updates</span>
                 <div className="flex justify-center lg:justify-start gap-4 lg:gap-6">
-                  <a href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer" className="w-12 h-12 lg:w-14 lg:h-14 border border-primary/5 rounded-xl lg:rounded-2xl flex items-center justify-center text-primary hover:bg-accent hover:text-white hover:border-accent transition-all duration-500">
+                  <a href={INSTAGRAM_LINK} target="_blank" rel="noopener noreferrer" className="w-12 h-12 lg:w-14 lg:h-14 border border-primary/5 rounded-xl lg:rounded-2xl flex items-center justify-center text-primary hover:bg-gradient-to-tr hover:from-[#f09433] hover:via-[#dc2743] hover:to-[#bc1888] hover:text-white hover:border-accent transition-all duration-500">
                     <Instagram className="w-5 h-5 lg:w-6 lg:h-6" />
                   </a>
-                  <a href={FACEBOOK_LINK} target="_blank" rel="noopener noreferrer" className="w-12 h-12 lg:w-14 lg:h-14 border border-primary/5 rounded-xl lg:rounded-2xl flex items-center justify-center text-primary hover:bg-accent hover:text-white hover:border-accent transition-all duration-500">
+                  <a href={FACEBOOK_LINK} target="_blank" rel="noopener noreferrer" className="w-12 h-12 lg:w-14 lg:h-14 border border-primary/5 rounded-xl lg:rounded-2xl flex items-center justify-center text-primary hover:bg-[#1877F2] hover:text-white hover:border-accent transition-all duration-500">
                     <Facebook className="w-5 h-5 lg:w-6 lg:h-6" />
+                  </a>
+                  <a href={YOUTUBE_LINK} target="_blank" rel="noopener noreferrer" className="w-12 h-12 lg:w-14 lg:h-14 border border-primary/5 rounded-xl lg:rounded-2xl flex items-center justify-center text-primary hover:bg-[#FF0000] hover:text-white hover:border-accent transition-all duration-500">
+                    <Youtube className="w-5 h-5 lg:w-6 lg:h-6" />
+                  </a>
+                  <a href={LINKEDIN_LINK} target="_blank" rel="noopener noreferrer" className="w-12 h-12 lg:w-14 lg:h-14 border border-primary/5 rounded-xl lg:rounded-2xl flex items-center justify-center text-primary hover:bg-[#0A66C2] hover:text-white hover:border-accent transition-all duration-500">
+                    <Linkedin className="w-5 h-5 lg:w-6 lg:h-6" />
                   </a>
                 </div>
               </div>

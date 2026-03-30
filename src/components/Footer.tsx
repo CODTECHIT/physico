@@ -15,7 +15,7 @@ const Footer = () => {
           <div className="col-span-2 space-y-5 rounded-3xl border border-white/10 bg-white/[0.03] p-5 lg:col-span-1 lg:space-y-8 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0">
             <Link to="/" className="inline-block group">
               <img
-                src="/logo-square.jpeg"
+                src="/footerpng.png"
                 alt={BRAND_NAME}
                 className="h-14 lg:h-16 w-auto object-contain group-hover:opacity-80 transition-opacity mb-2 rounded-lg"
               />
@@ -58,7 +58,7 @@ const Footer = () => {
               {[
                 { name: 'Home', path: '/' },
                 { name: 'About Us', path: '/about' },
-                { name: 'Our Services', path: '/services' },
+                { name: 'Our Treatment', path: '/services' },
                 { name: 'Conditions', path: '/conditions' },
                 { name: 'Contact', path: '/contact' }
               ].map((link) => (
@@ -105,7 +105,7 @@ const Footer = () => {
                 <MapPin className="w-4 h-4 lg:w-5 lg:h-5 text-accent mt-1 shrink-0" />
                 <div className="space-y-1.5 lg:space-y-2">
                   <p className="text-secondary/70 text-xs lg:text-sm leading-relaxed">
-                    G-1 1st Floor, Rangam Nilayam, Laxminagar, Miyapur, HYD-500049
+                    Flat No:G-1 1st Floor, Rangam Nilayam, Laxminagar, Miyapur, HYDERABAD-500049
                   </p>
 
                   <p className="text-[10px] lg:text-[11px] text-accent font-bold uppercase tracking-wider mt-1 lg:mt-2 opacity-80">
@@ -121,9 +121,11 @@ const Footer = () => {
                 <Clock className="w-4 h-4 lg:w-5 lg:h-5 text-accent shrink-0" />
                 <p className="text-secondary/70 text-[10px] lg:text-xs">Mon - Sat: 8:00 AM - 8:00 PM</p>
               </div>
-              <div className="mt-4 grid grid-cols-2 gap-4 sm:flex sm:space-x-4">
+              <div className="mt-4 grid grid-cols-2 gap-4 place-items-center sm:flex sm:justify-center sm:space-x-4">
                 <img src="/qr.jpeg" alt="QR Code" className="w-20 h-20 lg:w-24 lg:h-24 rounded-lg border border-white/10" />
-                <img src="/lo.jpeg" alt="Logo" className="w-20 h-20 lg:w-24 lg:h-24 rounded-lg border border-white/10" />
+                <div className="w-20 h-20 lg:w-24 lg:h-24 rounded-lg border border-white/10 bg-white p-0.5 flex items-center justify-center">
+                  <img src="/lo.jpeg" alt="Logo" className="w-full h-full object-contain rounded" />
+                </div>
               </div>
             </div>
           </div>

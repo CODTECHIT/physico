@@ -109,8 +109,9 @@ const RefundPolicy = () => {
                 transition={{ delay: 0.05, duration: 0.5 }}
                 className="space-y-3 lg:space-y-4"
               >
-                <h2 className="text-xl lg:text-2xl font-serif font-bold text-primary border-l-4 border-accent pl-4">
-                  {section.title}
+                <h2 className="text-2xl lg:text-3xl font-bold text-primary border-l-4 border-accent pl-4">
+                  <span className="font-sans">{section.title.split(' ')[0]}</span>{' '}
+                  <span className="font-serif">{section.title.split(' ').slice(1).join(' ')}</span>
                 </h2>
                 {section.text && (
                   <p className="text-dark font-medium leading-relaxed text-sm lg:text-base opacity-80 pl-4">

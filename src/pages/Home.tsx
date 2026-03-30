@@ -30,7 +30,7 @@ const Home = () => {
   const { scrollY } = useScroll();
   const [treatmentIndex, setTreatmentIndex] = useState(0);
   const treatments = ['Orthopedic', 'Neuro', 'Sports', 'Cardio'];
-  const treatmentColors = ['text-[#0B3D36]', 'text-[#0B3D36]', 'text-[#0B3D36]', 'text-[#0B3D36]'];
+  const treatmentColors = ['text-[#237227]', 'text-[#237227]', 'text-[#237227]', 'text-[#237227]'];
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -264,12 +264,11 @@ const Home = () => {
                   </a>
 
                   {/* Location Info */}
-                  <div className="flex flex-col space-y-1">
-                    <div className="flex items-start gap-2">
-                      <MapPin className="text-accent w-3.5 h-3.5 lg:w-5 lg:h-5" />
-                      <span className="text-[10px] font-bold uppercase tracking-tight leading-relaxed text-primary lg:text-sm">{SERVICE_AREAS.split(',').slice(0, 2).join(' | ')} | Nearby</span>
-                    </div>
-                    <p className="text-[9px] lg:text-xs text-muted font-medium ml-5 lg:ml-7 uppercase tracking-tighter">📞 {CONTACT_PHONE_DISPLAY}</p>
+                  <div className="flex items-center gap-2 flex-wrap">
+                    <MapPin className="text-accent w-4 h-4 lg:w-5 lg:h-5 shrink-0" />
+                    <span className="text-xs lg:text-sm font-bold uppercase tracking-tight text-primary">{SERVICE_AREAS.split(',').slice(0, 2).join(' | ')} | Nearby</span>
+                    <span className="text-primary/30">|</span>
+                    <a href={`tel:${CONTACT_PHONE_DISPLAY?.replace(/\s/g, '')}`} className="text-xs lg:text-sm text-accent font-bold tracking-wide flex items-center gap-1 hover:opacity-80 transition-opacity">📞 {CONTACT_PHONE_DISPLAY}</a>
                   </div>
                 </div>
               </div>
@@ -302,50 +301,50 @@ const Home = () => {
                 <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
                 <span className="text-[9px] lg:text-[10px] font-bold text-primary uppercase tracking-[0.2em]">Serving Hyderabad</span>
               </div>
-              <p className="text-[10px] lg:text-xs text-muted font-medium mt-2 max-w-[150px] lg:max-w-[180px]">Kukatpally, Miyapur, Kondapur, & Gachibowli</p>
+              <p className="text-xs lg:text-sm text-muted font-medium mt-2 max-w-[150px] lg:max-w-[180px]">Kukatpally, Miyapur, Kondapur, & Gachibowli</p>
             </div>
           </motion.div>
         </div>
 
         {/* TRUST BAR */}
-        <div className="bg-[#0B3D36] py-6 lg:py-10 mt-8 lg:mt-0 relative z-30">
-          <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-            <div className="grid grid-cols-3 lg:grid-cols-6 gap-y-5 lg:gap-0 items-center">
+        <div className="bg-[#0B3D36] py-5 lg:py-10 mt-6 lg:mt-0 relative z-30">
+          <div className="max-w-[1400px] mx-auto px-4 lg:px-12">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-0 items-center">
               {[
                 {
                   title: 'Certified Doctors',
                   desc: 'BPT/MPT experts',
-                  icon: <UserCheck className="w-5 h-5 lg:w-6 lg:h-6" />
+                  icon: <UserCheck className="w-4 h-4 lg:w-6 lg:h-6" />
                 },
                 {
                   title: '1-on-1 Care',
                   desc: 'Focused attention',
-                  icon: <Users className="w-5 h-5 lg:w-6 lg:h-6" />
+                  icon: <Users className="w-4 h-4 lg:w-6 lg:h-6" />
                 },
                 {
                   title: 'Home Visits',
                   desc: 'Safe & comfortable',
-                  icon: <HomeIcon className="w-5 h-5 lg:w-6 lg:h-6" />
+                  icon: <HomeIcon className="w-4 h-4 lg:w-6 lg:h-6" />
                 },
                 {
                   title: 'Trusted Care',
                   desc: 'Honest pricing',
-                  icon: <ShieldCheck className="w-5 h-5 lg:w-6 lg:h-6" />
+                  icon: <ShieldCheck className="w-4 h-4 lg:w-6 lg:h-6" />
                 },
                 {
                   title: '1000+ Recoveries',
                   desc: 'Happy patients',
-                  icon: <ThumbsUp className="w-5 h-5 lg:w-6 lg:h-6" />
+                  icon: <ThumbsUp className="w-4 h-4 lg:w-6 lg:h-6" />
                 },
                 {
                   title: '6+ Years',
                   desc: 'Proven expertise',
-                  icon: <Award className="w-5 h-5 lg:w-6 lg:h-6" />
+                  icon: <Award className="w-4 h-4 lg:w-6 lg:h-6" />
                 }
               ].map((item, idx) => (
-                <div key={idx} className="flex items-center justify-center group">
-                  <div className="flex items-center gap-3 lg:gap-4">
-                    <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-lg bg-white/10 flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                <div key={idx} className="flex items-center justify-center group py-1">
+                  <div className="flex items-center gap-2.5 lg:gap-4">
+                    <div className="w-9 h-9 lg:w-12 lg:h-12 rounded-lg bg-white/10 flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-white transition-all duration-300">
                       {item.icon}
                     </div>
                     <div className="flex flex-col text-left">
@@ -412,7 +411,7 @@ const Home = () => {
               <div className="pt-2">
                 <Link to="/about">
                   <Button variant="outline" className="group rounded-full px-8">
-                    Learn Our Philosophy
+                    Our Philosophy
                     <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </Link>
@@ -432,28 +431,28 @@ const Home = () => {
                 transition={{ duration: 1 }}
                 className="relative z-10"
               >
-                {/* Main Image with Clinical Border - Reduced Size */}
-                <div className="aspect-[4/5] rounded-[2.5rem] lg:rounded-[4rem] overflow-hidden shadow-2xl border-4 lg:border-8 border-white bg-surface">
+                {/* Main Image with Clinical Border - No Cropping */}
+                <div className="aspect-[4/5] rounded-[2.5rem] lg:rounded-[4rem] overflow-hidden shadow-2xl border-4 lg:border-8 border-white bg-white">
                   <img
-                    src="/founder.avif"
+                    src="/founder.png"
                     alt="Dr. Bhanu Kumar Vemula - Chief Physiotherapist"
-                    className="w-full h-full object-cover object-[center_30%]"
+                    className="w-full h-full object-contain"
                   />
-                </div>
-
-                {/* Floating Experience Badge - More Compact */}
-                <div className="absolute -bottom-4 lg:-bottom-6 -left-4 lg:-left-6 bg-primary p-4 lg:p-6 shadow-xl border-t-4 border-accent hidden md:block rounded-xl">
-                  <div className="text-center">
-                    <span className="block text-2xl lg:text-3xl font-serif font-bold text-white mb-0.5">6+</span>
-                    <span className="block text-[8px] uppercase tracking-[0.2em] font-bold text-accent">Years Experience</span>
+                  
+                  {/* Floating Specialist Badge - Always Visible */}
+                  <div className="absolute top-6 right-6 bg-white/95 backdrop-blur-md px-4 py-2 shadow-lg border-l-4 border-accent z-20 rounded-r-lg">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
+                      <span className="text-[9px] font-bold text-primary uppercase tracking-widest">Chief Specialist</span>
+                    </div>
                   </div>
                 </div>
 
-                {/* Subtle Text Overlay on Image Container */}
-                <div className="absolute top-6 right-6 bg-white/90 backdrop-blur-md px-4 py-2 shadow-lg border-l-4 border-accent hidden lg:block rounded-r-lg">
-                  <div className="flex items-center space-x-3">
-                    <div className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
-                    <span className="text-[9px] font-bold text-primary uppercase tracking-widest">Chief Specialist</span>
+                {/* Floating Experience Badge - Always Visible */}
+                <div className="absolute -bottom-4 lg:-bottom-6 -left-4 lg:-left-6 bg-primary p-4 lg:p-6 shadow-xl border-t-4 border-accent z-30 rounded-xl">
+                  <div className="text-center">
+                    <span className="block text-2xl lg:text-3xl font-serif font-bold text-white mb-0.5">6+</span>
+                    <span className="block text-[8px] uppercase tracking-[0.2em] font-bold text-accent">Years Experience</span>
                   </div>
                 </div>
               </motion.div>
@@ -471,12 +470,12 @@ const Home = () => {
               <span className="text-accent font-sans font-bold uppercase tracking-[0.3em] text-[10px] mb-2 block">Our Expertise</span>
               <h2 className="text-3xl lg:text-6xl font-serif font-bold text-primary leading-tight">
                 Comprehensive <br />
-                <span className="italic text-accent">Home</span> Services.
+                <span className="italic text-accent">Home</span> Treatment.
               </h2>
             </div>
             <div className="lg:col-span-4 lg:text-right">
               <Link to="/services" className="inline-flex items-center text-[10px] font-bold uppercase tracking-widest text-primary hover:text-accent transition-colors">
-                View All Services <ArrowRight className="ml-2 w-4 h-4" />
+                View All Treatment <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>
           </div>
@@ -493,7 +492,7 @@ const Home = () => {
               >
                 <Link
                   to={item.slug ? `/service/${item.slug}` : "/contact"}
-                  className={`relative overflow-hidden aspect-[3/2] mb-6 shadow-lg rounded-2xl lg:rounded-3xl border-2 border-white group-hover:border-[#1E3A8A] group-hover:shadow-xl transition-all duration-700 w-full block`}
+                  className={`relative overflow-hidden aspect-[3/2] mb-6 shadow-lg rounded-2xl lg:rounded-3xl border-2 border-white group-hover:border-[#5182EF] group-hover:shadow-xl transition-all duration-700 w-full block`}
                 >
                   <img
                     src={item.img}
@@ -501,15 +500,15 @@ const Home = () => {
                     className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110"
                     loading="lazy"
                   />
-                  <div className="absolute inset-0 bg-[#1E3A8A]/0 group-hover:bg-[#1E3A8A]/20 transition-all duration-500 rounded-2xl lg:rounded-3xl" />
+                  <div className="absolute inset-0 bg-[#5182EF]/0 group-hover:bg-[#5182EF]/20 transition-all duration-500 rounded-2xl lg:rounded-3xl" />
                   <div className="absolute top-4 left-4 lg:top-6 lg:left-6 bg-white/95 backdrop-blur-sm px-2.5 py-1 text-[8px] font-bold tracking-[0.2em] uppercase rounded-full shadow-sm text-primary">
                     {item.id}
                   </div>
                 </Link>
                 <div className="space-y-2 lg:space-y-3">
-                  <div className="mb-2 text-accent group-hover:text-[#1E3A8A] transition-colors duration-300">{item.icon}</div>
+                  <div className="mb-2 text-accent group-hover:text-[#5182EF] transition-colors duration-300">{item.icon}</div>
                   <Link to={item.slug ? `/service/${item.slug}` : "/contact"}>
-                    <h3 className="text-xl lg:text-2xl font-serif font-bold text-accent group-hover:text-[#1E3A8A] transition-colors duration-300 leading-tight">{item.title}</h3>
+                    <h3 className="text-xl lg:text-2xl font-serif font-bold text-accent group-hover:text-[#5182EF] transition-colors duration-300 leading-tight">{item.title}</h3>
                   </Link>
                   <p className="text-dark text-xs lg:text-sm font-medium leading-relaxed opacity-80">{item.desc}</p>
                 </div>
@@ -658,7 +657,7 @@ const Home = () => {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: i * 0.15, type: "spring", stiffness: 100 }}
                 whileHover={{ y: -5, scale: 1.02 }}
-                className="bg-white p-5 lg:p-6 rounded-2xl lg:rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-accent group cursor-pointer"
+                className="bg-white p-5 lg:p-6 rounded-2xl lg:rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-accent lg:border-transparent group cursor-pointer"
               >
                 <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl lg:rounded-2xl bg-accent/10 flex items-center justify-center text-accent mb-4 group-hover:bg-accent group-hover:text-white transition-all duration-300">
                   {feature.icon}

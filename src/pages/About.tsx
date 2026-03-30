@@ -195,19 +195,28 @@ const About = () => {
               {/* Premium border effect */}
               <div className="absolute -inset-4 bg-gradient-to-br from-accent via-accent/50 to-primary rounded-[3rem] opacity-30 blur-lg" />
               <div className="relative bg-gradient-to-br from-primary to-primary/80 p-2 rounded-[3rem] lg:rounded-[5rem]">
-                <div className="aspect-[4/5] rounded-[2.5rem] lg:rounded-[4.5rem] overflow-hidden shadow-2xl border-2 border-white/20">
+                <div className="aspect-[4/5] rounded-[2.5rem] lg:rounded-[4.5rem] overflow-hidden shadow-2xl border-2 border-white/20 bg-white">
                   <img
-                    src="/founder.avif"
+                    src="/founder.png"
                     alt="Dr. Bhanu Vemula - Founder & Consultant Physiotherapist"
-                    className="w-full h-full object-cover object-[center_30%]"
+                    className="w-full h-full object-contain"
                   />
+                  
+                  {/* Floating Specialist Badge - Always Visible */}
+                  <div className="absolute top-6 right-6 bg-white/95 backdrop-blur-md px-4 py-2 shadow-lg border-l-4 border-accent z-20 rounded-r-lg">
+                    <div className="flex items-center space-x-3">
+                      <div className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
+                      <span className="text-[9px] font-bold text-primary uppercase tracking-widest">Chief Specialist</span>
+                    </div>
+                  </div>
                 </div>
               </div>
-              {/* Floating badge */}
-              <div className="absolute -bottom-4 -right-4 bg-white shadow-2xl rounded-2xl p-4 border-2 border-accent/20">
+              
+              {/* Floating Experience Badge (Always Visible) */}
+              <div className="absolute -bottom-4 lg:-bottom-6 -left-4 lg:-left-6 bg-primary p-4 lg:p-6 shadow-xl border-t-4 border-accent z-30 rounded-xl">
                 <div className="text-center">
-                  <span className="block text-2xl lg:text-3xl font-serif font-bold text-accent">6+</span>
-                  <span className="block text-[8px] uppercase tracking-wider font-bold text-muted">Years Experience</span>
+                  <span className="block text-2xl lg:text-3xl font-serif font-bold text-white mb-0.5">6+</span>
+                  <span className="block text-[8px] uppercase tracking-[0.2em] font-bold text-accent">Years Experience</span>
                 </div>
               </div>
             </motion.div>
@@ -222,7 +231,7 @@ const About = () => {
                 </div>
                 <h2 className="text-4xl lg:text-6xl font-serif font-bold text-primary leading-tight">Dr. Bhanu <span className="text-accent italic font-normal">Vemula</span></h2>
                 <div className="flex flex-col space-y-2">
-                  <span className="text-lg lg:text-xl font-serif font-bold text-primary/90">Founder & Consultant Physiotherapist</span>
+                  <span className="text-lg lg:text-xl font-serif font-bold text-primary/90">Founder & Senior. Consultant Physiotherapist</span>
                   <div className="flex items-center gap-3 flex-wrap">
                     <span className="bg-gradient-to-r from-accent to-accent/80 text-white text-[10px] font-bold px-3 py-1 rounded-full">MPT (Orthopedics) - Pursuing</span>
                     <span className="text-muted text-[10px] font-bold uppercase tracking-widest">| BPT</span>

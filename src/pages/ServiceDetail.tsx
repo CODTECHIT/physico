@@ -133,6 +133,18 @@ const servicesData = {
   }
 };
 
+const conditionSlugMap: Record<string, string> = {
+  'Stroke recovery & rehab': 'stroke-rehabilitation',
+  'Parkinson\'s disease care': 'parkinsons-disease',
+  'Cerebral palsy therapy': 'cerebral-palsy',
+  'Post-spinal injury rehab': 'spinal-cord-injury',
+  'ACL & meniscus recovery': 'acl-rehabilitation',
+  'Shoulder & ligament injuries': 'rotator-cuff-injury',
+  'Back & neck pain relief': 'back-pain',
+  'Spinal misalignment': 'chiropractic-care',
+  'Shoulder & joint stiffness': 'shoulder-pain',
+};
+
 const ServiceDetail = () => {
   const { id } = useParams();
   const service = servicesData[id as keyof typeof servicesData] || servicesData['orthopedic'];
@@ -205,14 +217,24 @@ const ServiceDetail = () => {
                   <h2 className="text-2xl lg:text-4xl font-serif font-bold text-primary">Conditions <span className="text-accent italic font-normal">Treated</span></h2>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
-                  {service.conditions.map((item, i) => (
-                    <div key={i} className="flex items-center gap-3 lg:gap-4 group/item bg-white p-4 lg:p-5 rounded-2xl border border-primary/5 hover:border-accent/20 hover:shadow-lg transition-all duration-500">
-                      <div className="w-6 h-6 lg:w-8 lg:h-8 rounded-full bg-accent/10 flex items-center justify-center shrink-0 group-hover/item:bg-accent transition-colors duration-300">
-                        <CheckCircle2 className="w-3 h-3 lg:w-4 lg:h-4 text-accent group-hover/item:text-white transition-colors duration-300" />
+                  {service.conditions.map((item, i) => {
+                    const slug = conditionSlugMap[item];
+                    const content = (
+                      <div className="flex items-center gap-3 lg:gap-4 group/item bg-white p-4 lg:p-5 rounded-2xl border border-primary/5 hover:border-accent/20 hover:shadow-lg transition-all duration-500">
+                        <div className="w-6 h-6 lg:w-8 lg:h-8 rounded-full bg-accent/10 flex items-center justify-center shrink-0 group-hover/item:bg-accent transition-colors duration-300">
+                          <CheckCircle2 className="w-3 h-3 lg:w-4 lg:h-4 text-accent group-hover/item:text-white transition-colors duration-300" />
+                        </div>
+                        <span className="text-primary font-bold uppercase tracking-tight text-[10px] lg:text-[11px] group-hover/item:text-accent transition-colors">{item}</span>
                       </div>
-                      <span className="text-primary font-bold uppercase tracking-tight text-[10px] lg:text-[11px] group-hover/item:text-primary transition-colors">{item}</span>
-                    </div>
-                  ))}
+                    );
+                    return slug ? (
+                      <Link key={i} to={`/condition/${slug}`}>
+                        {content}
+                      </Link>
+                    ) : (
+                      <div key={i}>{content}</div>
+                    );
+                  })}
                 </div>
               </div>
 
@@ -301,7 +323,7 @@ const ServiceDetail = () => {
               </Button>
             </a>
             <Link to="/services" className="text-primary font-bold uppercase tracking-widest text-sm hover:text-accent transition-colors">
-              View All Services
+              View All Treatment
             </Link>
           </div>
         </div>

@@ -15,27 +15,18 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     {
-      name: 'Services',
+      name: 'Treatment',
       path: '/services',
       dropdown: [
-        { name: 'Neuro rehabilitation', path: '/service/neurological' },
-        { name: 'Orthopedic rehabilitation', path: '/service/orthopedic' },
-        { name: 'Sports rehabilitation', path: '/service/sports' },
         { name: 'Chiropractic care', path: '/service/chiropractic' },
         { name: 'Cupping & dry needling', path: '/service/cupping' },
       ]
     },
     { name: 'Conditions', path: '/conditions',
       dropdown: [
-        { name: 'Back pain', path: '/condition/back-pain' },
-        { name: 'Neck pain', path: '/condition/neck-pain' },
-        { name: 'Shoulder pain', path: '/condition/shoulder-pain' },
-        { name: 'Knee arthritis', path: '/condition/hip-knee-arthritis' },
-        { name: 'Stroke rehabilitation', path: '/condition/stroke-rehabilitation' },
-        { name: "Parkinson's disease", path: '/condition/parkinsons-disease' },
-        { name: 'ACL rehabilitation', path: '/condition/acl-rehabilitation' },
-        { name: 'Tennis elbow', path: '/condition/tennis-elbow' },
-        { name: 'Chiropractic care', path: '/condition/chiropractic-care' },
+        { name: 'Neuro rehabilitation', path: '/service/neurological' },
+        { name: 'Orthopedic rehabilitation', path: '/service/orthopedic' },
+        { name: 'Sports rehabilitation', path: '/service/sports' },
       ]
     },
     { name: 'Contact', path: '/contact' },
@@ -58,15 +49,15 @@ const Navbar = () => {
           <div className="relative shrink-0">
             {/* Desktop: Horizontal Logo */}
             <img
-              src="/logo-horizontal.jpeg"
+              src="/logo-square.png"
               alt={BRAND_NAME}
               className="hidden lg:block h-10 xl:h-12 w-auto object-contain group-hover:opacity-80 transition-opacity"
             />
             {/* Mobile: Square Logo */}
             <img
-              src="/logo-square.jpeg"
+              src="/logo-square.png"
               alt={BRAND_NAME}
-              className="lg:hidden h-16 w-auto object-contain group-hover:opacity-80 transition-opacity rounded-lg"
+              className="lg:hidden h-12 w-auto object-contain group-hover:opacity-80 transition-opacity rounded-lg"
             />
           </div>
           <div className="min-w-0 overflow-hidden border-l border-primary/10 pl-2.5 py-1 xl:pl-4">
@@ -160,7 +151,7 @@ const Navbar = () => {
         {/* Mobile Menu Header */}
         <div className="flex items-center justify-between gap-3 px-5 py-5 border-b border-primary/5 bg-white shadow-sm shrink-0 sm:px-6 sm:py-6">
           <div className="flex min-w-0 items-center gap-2">
-            <img src="/logo-square.jpeg" className="h-12 w-auto rounded-lg" alt="Logo" />
+            <img src="/logo-square.png" className="h-12 w-auto rounded-lg" alt="Logo" />
             <div className="min-w-0 overflow-hidden border-l border-primary/10 pl-2 py-0.5">
               <span className="block whitespace-nowrap font-serif text-lg font-bold tracking-tighter text-primary sm:text-2xl">
                 FLEXO <span className="text-accent italic">PHYSIOTHERAPY</span>
