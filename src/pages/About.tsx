@@ -192,31 +192,22 @@ const About = () => {
               style={{ y: founderImgY }}
               className="lg:col-span-5 relative"
             >
-              {/* Premium border effect */}
-              <div className="absolute -inset-4 bg-gradient-to-br from-accent via-accent/50 to-primary rounded-[3rem] opacity-30 blur-lg" />
-              <div className="relative bg-gradient-to-br from-primary to-primary/80 p-2 rounded-[3rem] lg:rounded-[5rem]">
-                <div className="aspect-[4/5] rounded-[2.5rem] lg:rounded-[4.5rem] overflow-hidden shadow-2xl border-2 border-white/20 bg-white">
+              {/* Founder Design with Blue Border */}
+              <div className="relative p-3 lg:p-4 border-[6px] lg:border-[10px] border-primary rounded-[3rem] lg:rounded-[5rem] shadow-xl overflow-visible">
+                <div className="aspect-[4/5] rounded-[2rem] lg:rounded-[4rem] overflow-hidden bg-white">
                   <img
                     src="/founder.png"
                     alt="Dr. Bhanu Vemula - Founder & Consultant Physiotherapist"
                     className="w-full h-full object-contain"
                   />
-                  
-                  {/* Floating Specialist Badge - Always Visible */}
-                  <div className="absolute top-6 right-6 bg-white/95 backdrop-blur-md px-4 py-2 shadow-lg border-l-4 border-accent z-20 rounded-r-lg">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
-                      <span className="text-[9px] font-bold text-primary uppercase tracking-widest">Chief Specialist</span>
-                    </div>
-                  </div>
                 </div>
-              </div>
-              
-              {/* Floating Experience Badge (Always Visible) */}
-              <div className="absolute -bottom-4 lg:-bottom-6 -left-4 lg:-left-6 bg-primary p-4 lg:p-6 shadow-xl border-t-4 border-accent z-30 rounded-xl">
-                <div className="text-center">
-                  <span className="block text-2xl lg:text-3xl font-serif font-bold text-white mb-0.5">6+</span>
-                  <span className="block text-[8px] uppercase tracking-[0.2em] font-bold text-accent">Years Experience</span>
+
+                {/* New Experience Badge: Horizontal, Bottom-Right */}
+                <div className="absolute -bottom-6 -right-4 lg:-right-8 bg-white shadow-2xl rounded-2xl p-4 lg:p-5 border border-primary/10 z-30 min-w-[140px] lg:min-w-[160px]">
+                  <div className="flex flex-col items-center justify-center">
+                    <span className="text-3xl lg:text-4xl font-serif font-bold text-accent leading-none">6+</span>
+                    <span className="text-[8px] lg:text-[9px] uppercase tracking-[0.2em] font-bold text-primary mt-1">Years Experience</span>
+                  </div>
                 </div>
               </div>
             </motion.div>
