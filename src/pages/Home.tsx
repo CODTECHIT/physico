@@ -38,21 +38,6 @@ const Home = () => {
     return () => clearInterval(timer);
   }, [treatments.length]);
 
-  // Location rotation state
-  const [locationIndex, setLocationIndex] = useState(0);
-  const locationGroups = [
-    ['Miyapur', 'Hydernagar', 'Nizampet', 'Bachupally', 'Pragati Nagar', 'Gopal Nagar'],
-    ['Kukatpally', 'KPHB', 'JNTU', 'Vivekananda Colony', 'Vasantha Nagar'],
-    ['Hafeezpet', 'Alwin Colony', 'Madinaguda', 'Kondapur', 'Chandanagar', 'Lingampally'],
-  ];
-
-  useEffect(() => {
-    const timer = setInterval(() => {
-      setLocationIndex((prev) => (prev + 1) % locationGroups.length);
-    }, 2000);
-    return () => clearInterval(timer);
-  }, [locationGroups.length]);
-
   // Parallax transforms
   const heroBgY = useTransform(scrollY, [0, 500], [0, 150]);
   const heroContentY = useTransform(scrollY, [0, 500], [0, -50]);
