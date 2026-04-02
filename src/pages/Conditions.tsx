@@ -91,7 +91,7 @@ const Conditions = () => {
 
         {/* Large background text for editorial feel */}
         <div className="absolute top-20 left-1/2 -translate-x-1/2 text-[20vw] font-serif font-bold text-primary/5 select-none pointer-events-none whitespace-nowrap uppercase">
-          TREATMENT
+          CONDITIONS
         </div>
 
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
@@ -109,7 +109,7 @@ const Conditions = () => {
               <span className="w-8 h-[2px] bg-accent" />
             </div>
             <h1 className="text-5xl lg:text-7xl font-serif font-bold text-primary leading-tight">
-              Conditions We <span className="text-accent italic font-normal">Treat</span>
+              Treatments We <span className="text-accent italic font-normal">Offer</span>
             </h1>
             <p className="text-lg lg:text-xl text-dark font-medium leading-relaxed max-w-3xl mx-auto opacity-90">
               Expert physical therapy for complex conditions, delivered by certified specialists in the comfort of your home.

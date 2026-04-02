@@ -15,14 +15,14 @@ const Navbar = () => {
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     {
-      name: 'Treatment',
+      name: 'Conditions',
       path: '/services',
       dropdown: [
         { name: 'Chiropractic care', path: '/service/chiropractic' },
         { name: 'Cupping & dry needling', path: '/service/cupping' },
       ]
     },
-    { name: 'Conditions', path: '/conditions',
+    { name: 'Treatment', path: '/conditions',
       dropdown: [
         { name: 'Neuro rehabilitation', path: '/service/neurological' },
         { name: 'Orthopedic rehabilitation', path: '/service/orthopedic' },

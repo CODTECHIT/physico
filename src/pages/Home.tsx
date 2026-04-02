@@ -475,7 +475,7 @@ const Home = () => {
             </div>
             <div className="lg:col-span-4 lg:text-right">
               <Link to="/services" className="inline-flex items-center text-[10px] font-bold uppercase tracking-widest text-primary hover:text-accent transition-colors">
-                View All Treatment <ArrowRight className="ml-2 w-4 h-4" />
+                View All Conditions <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>
           </div>
@@ -539,12 +539,12 @@ const Home = () => {
           <div className="flex items-center space-x-3 mb-3 lg:mb-4 justify-center lg:justify-start">
             <span className="w-8 h-[2px] bg-accent" />
             <span className="text-accent font-sans font-bold uppercase tracking-[0.2em] text-[10px]">
-              Specialized Treatments
+              Specialized Conditions
             </span>
           </div>
           <h2 className="text-3xl lg:text-5xl font-serif font-bold text-primary leading-tight flex flex-wrap justify-center lg:justify-start items-center gap-x-3">
-            <span>Conditions We</span>
-            <span className="text-accent italic font-normal">Treat</span>
+            <span>Treatments We</span>
+            <span className="text-accent italic font-normal">Offer</span>
             <span className="inline-block min-w-[120px] text-left">
               <AnimatePresence mode="wait">
                 <motion.span
@@ -615,7 +615,7 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-6 mt-8 lg:mt-12 text-center">
           <Link to="/conditions">
             <Button variant="outline" className="group rounded-full px-8">
-              View All Conditions
+              View All Treatment
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Button>
           </Link>

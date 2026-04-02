@@ -214,7 +214,7 @@ const ServiceDetail = () => {
               <div className="space-y-6 lg:space-y-8">
                 <div className="space-y-3 lg:space-y-4">
                   <span className="text-accent font-sans font-bold uppercase tracking-[0.3em] text-[9px] lg:text-[10px] block">Scope of Care</span>
-                  <h2 className="text-2xl lg:text-4xl font-serif font-bold text-primary">Conditions <span className="text-accent italic font-normal">Treated</span></h2>
+                  <h2 className="text-2xl lg:text-4xl font-serif font-bold text-primary">Treatments <span className="text-accent italic font-normal">Offered</span></h2>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
                   {service.conditions.map((item, i) => {
@@ -323,7 +323,7 @@ const ServiceDetail = () => {
               </Button>
             </a>
             <Link to="/services" className="text-primary font-bold uppercase tracking-widest text-sm hover:text-accent transition-colors">
-              View All Treatment
+              View All Conditions
             </Link>
           </div>
         </div>
