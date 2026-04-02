@@ -302,7 +302,7 @@ const Home = () => {
                 <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
                 <span className="text-[9px] lg:text-[10px] font-bold text-primary uppercase tracking-[0.2em]">Serving Hyderabad</span>
               </div>
-              <p className="text-xs lg:text-sm text-muted font-medium mt-2 max-w-[150px] lg:max-w-[180px]">Kukatpally, Miyapur, Kondapur, & Gachibowli</p>
+              <p className="text-xs lg:text-sm text-muted font-medium mt-2 max-w-[150px] lg:max-w-[180px]">Nizampet, Kondapur, Madinaguda & Gachibowli</p>
             </div>
           </motion.div>
         </div>
@@ -459,6 +459,70 @@ const Home = () => {
               </motion.div>
             </div>
 
+          </div>
+        </div>
+      </section>
+
+      {/* PATIENT EDUCATION & GUIDED RECOVERY APPROACH */}
+      <section className="py-10 lg:py-16 bg-white overflow-hidden">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div className="space-y-5 lg:space-y-6">
+              <div className="flex items-center space-x-3">
+                <span className="w-8 h-[2px] bg-accent" />
+                <span className="text-accent font-sans font-bold uppercase tracking-[0.2em] text-[10px]">
+                  Patient Education & Guided Recovery Approach
+                </span>
+              </div>
+              <h2 className="text-3xl lg:text-5xl font-serif font-bold text-primary leading-tight">
+                We Don't Just Treat Your Pain —<br />
+                <span className="text-accent italic font-normal">We Help You Understand It.</span>
+              </h2>
+              <p className="text-base lg:text-lg text-dark font-medium leading-relaxed opacity-90">
+                At {BRAND_NAME}, we follow a guided recovery approach where patients are educated about their condition, movement patterns, and home exercise program to ensure better understanding and faster recovery.
+              </p>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
+                <div className="p-4 bg-surface rounded-xl border-l-4 border-accent">
+                  <h4 className="font-serif font-bold text-primary text-sm lg:text-base mb-1">Understand</h4>
+                  <p className="text-xs text-muted font-medium leading-relaxed">Learn about your condition and what's causing your pain.</p>
+                </div>
+                <div className="p-4 bg-surface rounded-xl border-l-4 border-accent">
+                  <h4 className="font-serif font-bold text-primary text-sm lg:text-base mb-1">Treat</h4>
+                  <p className="text-xs text-muted font-medium leading-relaxed">Receive personalized, evidence-based treatment sessions.</p>
+                </div>
+                <div className="p-4 bg-surface rounded-xl border-l-4 border-accent">
+                  <h4 className="font-serif font-bold text-primary text-sm lg:text-base mb-1">Maintain</h4>
+                  <p className="text-xs text-muted font-medium leading-relaxed">Follow guided home exercises for long-term recovery.</p>
+                </div>
+              </div>
+            </div>
+            <div className="relative flex justify-center lg:justify-end">
+              <div className="relative bg-surface rounded-2xl lg:rounded-3xl p-8 lg:p-10 max-w-md w-full shadow-lg border border-primary/5">
+                <div className="flex items-center gap-3 mb-6">
+                  <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent">
+                    <ClipboardCheck className="w-5 h-5" />
+                  </div>
+                  <h4 className="font-serif font-bold text-primary text-lg">Recovery Checklist</h4>
+                </div>
+                <ul className="space-y-4">
+                  {[
+                    'Condition diagnosis & assessment',
+                    'Personalized treatment plan',
+                    'Guided in-session exercises',
+                    'Home exercise program',
+                    'Progress tracking & adjustments',
+                    'Long-term prevention strategies',
+                  ].map((item, idx) => (
+                    <li key={idx} className="flex items-start gap-3">
+                      <div className="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center mt-0.5 shrink-0">
+                        <div className="w-2 h-2 rounded-full bg-accent" />
+                      </div>
+                      <span className="text-sm text-dark font-medium">{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </section>
