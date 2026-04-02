@@ -390,7 +390,7 @@ const Home = () => {
               <p className="text-base lg:text-lg text-dark font-medium leading-relaxed opacity-90">
                 At {BRAND_NAME}, we follow a guided recovery approach where patients are educated about their condition, movement patterns, and home exercise program to ensure better understanding and faster recovery.
               </p>
-              
+
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4">
                 {[
                   {
@@ -418,19 +418,10 @@ const Home = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: idx * 0.1 }}
-                    className="relative p-6 bg-white rounded-2xl shadow-xl shadow-primary/5 border border-primary/5 group overflow-hidden"
+                    className="p-5 lg:p-6 bg-surface rounded-xl border-l-4 border-accent shadow-sm hover:shadow-md transition-all duration-300"
                   >
-                    <div className="absolute top-4 right-4 w-7 h-7 bg-accent/10 rounded-full flex items-center justify-center text-accent text-[9px] font-bold">
-                      {item.number}
-                    </div>
-                    <div className="w-10 h-10 rounded-xl bg-accent/5 flex items-center justify-center text-accent mb-4 group-hover:scale-110 transition-transform duration-500">
-                      {item.icon}
-                    </div>
-                    <h4 className="font-serif font-bold text-primary text-sm lg:text-base mb-2 group-hover:text-accent transition-colors duration-300">{item.title}</h4>
-                    <p className="text-[11px] text-muted font-medium leading-relaxed opacity-80">{item.desc}</p>
-                    
-                    {/* Subtle bottom border accent */}
-                    <div className="absolute bottom-0 left-0 w-full h-[3px] bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                    <h4 className="font-serif font-bold text-primary text-base lg:text-lg mb-2">{item.title}</h4>
+                    <p className="text-xs lg:text-sm text-muted font-medium leading-relaxed opacity-90">{item.desc}</p>
                   </motion.div>
                 ))}
               </div>
@@ -767,44 +758,102 @@ const Home = () => {
         </div>
       </section>
 
-      {/* SERVICE AREA */}
-      <section className="py-8 bg-white border-y border-primary/5">
-        <div className="max-w-4xl mx-auto px-6 text-center space-y-6">
-          <div className="inline-flex items-center justify-center w-14 h-14 rounded-full bg-accent/10 text-accent mb-2">
-            <MapPin className="w-7 h-7" />
-          </div>
-          <h2 className="text-3xl font-serif font-bold text-primary">We Serve</h2>
-          <p className="text-xl font-medium text-dark leading-relaxed max-w-2xl mx-auto">
-            Looking for a physiotherapist near you? Flexo Physiotherapy offers fast, reliable home visit services in Miyapur with expert care delivered to your doorstep.
-          </p>
-          <div className="h-32 flex flex-col justify-center items-center gap-1">
-            <AnimatePresence mode="wait">
+      {/* SERVICE AREA - Redesigned with Map Cards */}
+      <section className="py-12 lg:py-20 bg-primary relative overflow-hidden">
+        {/* Map Background Pattern */}
+        <div className="absolute inset-0 opacity-5">
+          <svg className="w-full h-full" patternUnits="userSpaceOnUse" width="60" height="60">
+            <path d="M0 0h60v60H0z" fill="none" />
+            <path d="M30 0v60M0 30h60" stroke="#fff" strokeWidth="1" />
+            <circle cx="30" cy="30" r="3" fill="#fff" />
+          </svg>
+        </div>
+
+        <div className="max-w-6xl mx-auto px-6 relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="text-center mb-10 lg:mb-14"
+          >
+            <span className="inline-block px-4 py-1.5 bg-white/10 rounded-full text-white font-bold uppercase tracking-[0.2em] text-[10px] mb-4">
+              Service Areas
+            </span>
+            <h2 className="text-3xl lg:text-5xl font-serif font-bold text-white">
+              We <span className="text-accent italic font-normal">Serve</span> These Locations
+            </h2>
+          </motion.div>
+
+          {/* Location Cards with Pulse Effect */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6 mb-8">
+            {[
+              { name: 'Miyapur', radius: '3 KM', highlight: true },
+              { name: 'Kukatpally', radius: '4 KM', highlight: false },
+              { name: 'KPHB', radius: '2 KM', highlight: true },
+              { name: 'JNTU', radius: '3 KM', highlight: false },
+              { name: 'Nizampet', radius: '5 KM', highlight: false },
+              { name: 'Vivekananda Colony', radius: '4 KM', highlight: false },
+              { name: 'Vasantha Nagar', radius: '3 KM', highlight: true },
+              { name: 'Bachupally', radius: '5 KM', highlight: false },
+              { name: 'Madinaguda', radius: '4 KM', highlight: false },
+              { name: 'Kondapur', radius: '5 KM', highlight: false },
+            ].map((area, idx) => (
               <motion.div
-                key={locationIndex}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                className="grid grid-cols-2 gap-x-4 gap-y-2 sm:flex sm:flex-wrap sm:justify-center sm:gap-x-3 sm:gap-y-1"
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.05 }}
+                className={`relative p-5 lg:p-6 rounded-2xl transition-all duration-300 group ${
+                  area.highlight 
+                    ? 'bg-accent text-white shadow-lg shadow-accent/30' 
+                    : 'bg-white/10 text-white hover:bg-white/20'
+                }`}
               >
-                {locationGroups[locationIndex].map((location, idx) => (
-                  <span
-                    key={idx}
-                    className={`relative flex min-h-8 items-center justify-center px-2 text-center text-[15px] font-bold text-primary sm:min-h-0 sm:px-0 sm:text-base ${idx % 2 === 0
-                      ? 'after:absolute after:right-[-0.5rem] after:top-1/2 after:h-5 after:w-px after:-translate-y-1/2 after:bg-primary/30 sm:after:hidden'
-                      : ''
-                      }`}
-                  >
-                    {location}
-                    {idx < locationGroups[locationIndex].length - 1 && (
-                      <span className="ml-3 hidden text-primary/30 sm:inline">|</span>
-                    )}
-                  </span>
-                ))}
+                {area.highlight && (
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-accent rounded-full flex items-center justify-center animate-pulse">
+                    <MapPin className="w-3 h-3 text-white" />
+                  </div>
+                )}
+                <h3 className="text-base lg:text-lg font-serif font-bold mb-1">{area.name}</h3>
+                <p className={`text-xs font-medium ${area.highlight ? 'text-white/80' : 'text-white/60'}`}>
+                  ~{area.radius} from center
+                </p>
               </motion.div>
-            </AnimatePresence>
+            ))}
           </div>
-          <span className="block text-sm font-bold uppercase tracking-[0.2em] text-muted">(Within 5 KM radius)</span>
+
+          {/* Info Bar */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.3 }}
+            className="bg-white rounded-2xl p-6 lg:p-8 flex flex-col lg:flex-row items-center justify-between gap-6 shadow-2xl"
+          >
+            <div className="flex items-center gap-4">
+              <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0">
+                <HomeIcon className="w-7 h-7" />
+              </div>
+              <div>
+                <h3 className="text-xl font-serif font-bold text-primary">Home Visit Service</h3>
+                <p className="text-sm text-muted font-medium">We bring expert physiotherapy to your doorstep</p>
+              </div>
+            </div>
+            <div className="flex flex-col sm:flex-row items-center gap-4 lg:gap-6">
+              <div className="flex items-center gap-2 text-primary">
+                <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
+                <span className="text-sm font-bold">Within 5 KM radius</span>
+              </div>
+              <a
+                href={`tel:+91${CONTACT_PHONE_DISPLAY?.replace(/\s/g, '')}`}
+                className="flex items-center gap-2 px-5 py-3 bg-accent text-white font-bold rounded-full hover:bg-accent/90 transition-colors"
+              >
+                <PhoneCall className="w-4 h-4" />
+                {CONTACT_PHONE_DISPLAY}
+              </a>
+            </div>
+          </motion.div>
         </div>
       </section>
 
