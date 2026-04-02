@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { useScroll, useTransform, motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import {
-  ClipboardCheck,
   ArrowRight,
   ShieldCheck,
   Users,
@@ -92,16 +91,20 @@ const Home = () => {
 
   const additionalServices = [
     {
-      title: 'Mobility & Balance Training',
-      desc: 'Personalized physiotherapy to improve walking, balance, and coordination reducing fall risk and restoring confidence.',
-      icon: <ClipboardCheck className="w-5 h-5" />
+      title: 'Post-Surgery Rehabilitation',
+      desc: 'Recovery-focused physiotherapy after knee replacement, spine surgery, and fractures delivered safely at home.',
+      icon: <Activity className="w-5 h-5" />
+    },
+    {
+      title: 'Chronic Pain Management',
+      desc: 'Targeted physiotherapy for long-term back pain, neck pain, and joint issues with evidence-based treatment.',
+      icon: <Target className="w-5 h-5" />
     },
     {
       title: 'Geriatric Physiotherapy',
       desc: 'Specialized care for elderly patients to improve mobility, balance, and prevent falls at home.',
       icon: <Users className="w-5 h-5" />
     }
-
   ];
 
   const testimonials = [
@@ -530,7 +533,7 @@ const Home = () => {
           </div>
 
           {/* Secondary Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 lg:gap-8 max-w-5xl mx-auto border-t border-primary/10 pt-10 lg:pt-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-[1400px] mx-auto border-t border-primary/10 pt-10 lg:pt-16">
             {additionalServices.map((service, idx) => (
               <div key={idx} className="flex gap-4 lg:gap-6 items-start p-5 lg:p-6 bg-white shadow-sm border border-primary/5 hover:border-accent/20 transition-all rounded-2xl lg:rounded-3xl">
                 <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl lg:rounded-2xl bg-accent/10 flex items-center justify-center text-accent shrink-0">
