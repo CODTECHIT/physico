@@ -11,24 +11,25 @@ const Navbar = () => {
 
 
 
-  const navLinks = [
+  interface DropdownItem {
+    name: string;
+    path: string;
+  }
+
+  interface NavLink {
+    name: string;
+    path: string;
+    dropdown?: DropdownItem[];
+  }
+
+  const navLinks: NavLink[] = [
     { name: 'Home', path: '/' },
     { name: 'About', path: '/about' },
     {
       name: 'Conditions',
       path: '/conditions',
-      dropdown: [
-        { name: 'Chiropractic care', path: '/condition/chiropractic' },
-        { name: 'Cupping & dry needling', path: '/condition/cupping' },
-      ]
     },
-    { name: 'Treatment', path: '/treatment',
-      dropdown: [
-        { name: 'Neuro rehabilitation', path: '/condition/neurological' },
-        { name: 'Orthopedic rehabilitation', path: '/condition/orthopedic' },
-        { name: 'Sports rehabilitation', path: '/condition/sports' },
-      ]
-    },
+    { name: 'Treatment', path: '/treatment' },
     { name: 'Contact', path: '/contact' },
   ];
 

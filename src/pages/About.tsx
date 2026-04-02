@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Award, Heart, ShieldCheck, Users, MapPin, ArrowRight, PhoneCall, CheckCircle2, Bone, Dumbbell, Zap, Home } from 'lucide-react';
+import { Award, Heart, ShieldCheck, Users, MapPin, ArrowRight, PhoneCall, CheckCircle2, Bone, Zap, Home } from 'lucide-react';
 import Button from '../components/Button';
 import { CONTACT_PHONE_DISPLAY, CONTACT_WHATSAPP_LINK, SERVICE_AREAS, BRAND_NAME } from '../constants';
 
@@ -112,73 +112,7 @@ const About = () => {
         </div>
       </section>
 
-      {/* 3. TREATMENT APPROACH */}
-      <section className="py-10 lg:py-16 bg-gradient-to-br from-primary/5 to-accent/5 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
-          <div className="text-center mb-10 lg:mb-12">
-            <div className="inline-flex items-center justify-center space-x-3 mb-4 lg:mb-6">
-              <span className="w-8 h-[2px] bg-accent" />
-              <span className="text-accent font-bold uppercase tracking-[0.3em] text-[10px]">Our Methodology</span>
-              <span className="w-8 h-[2px] bg-accent" />
-            </div>
-            <h2 className="text-3xl lg:text-5xl font-serif font-bold text-primary mb-4 lg:mb-6">Our Treatment <span className="text-accent italic font-normal">Approach</span></h2>
-            <p className="text-dark font-medium leading-relaxed max-w-2xl mx-auto text-sm lg:text-lg opacity-80">
-              We combine advanced physiotherapy techniques to ensure effective results, customized to each patient's condition, lifestyle, and recovery goals.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
-            {[
-              {
-                title: 'Exercise Therapy',
-                desc: 'Customized exercise programs focusing on strength, flexibility, and mobility improvement. We design targeted routines that accelerate recovery and prevent future injuries.',
-                icon: <Dumbbell className="w-6 h-6 lg:w-8 lg:h-8" />,
-                number: '01'
-              },
-              {
-                title: 'Manual Therapy',
-                desc: 'Expert hands-on techniques including joint mobilization, soft tissue manipulation, and myofascial release for immediate pain relief and improved joint mobility.',
-                icon: <Zap className="w-6 h-6 lg:w-8 lg:h-8" />,
-                number: '02'
-              },
-              {
-                title: 'Electrotherapy',
-                desc: 'Advanced clinical modalities including TENS, Ultrasound, and Shockwave therapy for effective tissue healing, pain management, and muscle stimulation.',
-                icon: <Bone className="w-6 h-6 lg:w-8 lg:h-8" />,
-                number: '03'
-              },
-              {
-                title: 'Advanced Methods',
-                desc: 'Specialized techniques including Dry Needling, Kinesio Taping, and Spinal Mobilization for complex cases and faster rehabilitation outcomes.',
-                icon: <Award className="w-6 h-6 lg:w-8 lg:h-8" />,
-                number: '04'
-              }
-            ].map((item, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.1, duration: 0.5 }}
-                className={`relative bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-500 group ${idx % 2 === 1 ? 'md:mt-0 lg:translate-y-8' : ''}`}
-              >
-                <div className="absolute top-4 right-4 lg:-top-4 lg:right-6 w-8 h-8 lg:w-12 lg:h-12 bg-accent rounded-full flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-[10px] lg:text-sm">{item.number}</span>
-                </div>
-
-                <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-xl lg:rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center text-primary mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
-                  {item.icon}
-                </div>
-
-                <h4 className="text-xl lg:text-2xl font-serif font-bold text-primary mb-2 lg:mb-4 group-hover:text-accent transition-colors">{item.title}</h4>
-                <p className="text-dark font-medium leading-relaxed text-xs lg:text-base opacity-70 group-hover:opacity-100">{item.desc}</p>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* 4. MEET THE SPECIALIST */}
+      {/* 3. MEET THE SPECIALIST */}
       <section className="py-16 lg:py-24 overflow-hidden bg-gradient-to-br from-white via-surface/30 to-white relative">
         {/* Premium decorative elements */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
