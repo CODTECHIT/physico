@@ -759,47 +759,47 @@ const Home = () => {
       </section>
 
       {/* SERVICE AREA - Redesigned with Map Cards */}
-      <section className="py-12 lg:py-20 bg-primary relative overflow-hidden">
+      <section className="py-12 lg:py-20 bg-white relative overflow-hidden border-t border-primary/5">
         {/* Map Background Pattern */}
-        <div className="absolute inset-0 opacity-5">
+        <div className="absolute inset-0 opacity-[0.03]">
           <svg className="w-full h-full" patternUnits="userSpaceOnUse" width="60" height="60">
             <path d="M0 0h60v60H0z" fill="none" />
-            <path d="M30 0v60M0 30h60" stroke="#fff" strokeWidth="1" />
-            <circle cx="30" cy="30" r="3" fill="#fff" />
+            <path d="M30 0v60M0 30h60" stroke="currentColor" className="text-primary" strokeWidth="1" />
+            <circle cx="30" cy="30" r="3" fill="currentColor" className="text-primary" />
           </svg>
         </div>
 
-        <div className="max-w-6xl mx-auto px-6 relative z-10">
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             className="text-center mb-10 lg:mb-14"
           >
-            <span className="inline-block px-4 py-1.5 bg-white/10 rounded-full text-white font-bold uppercase tracking-[0.2em] text-[10px] mb-4">
+            <span className="inline-block px-4 py-1.5 bg-accent/10 rounded-full text-accent font-bold uppercase tracking-[0.2em] text-[10px] mb-4">
               Service Areas
             </span>
-            <h2 className="text-3xl lg:text-5xl font-serif font-bold text-white">
-              We <span className="text-accent italic font-normal">Serve</span> These Locations
+            <h2 className="text-3xl lg:text-5xl font-serif font-bold text-primary">
+              Areas <span className="text-accent italic font-normal">We</span> Cover
             </h2>
-            <p className="text-white/80 text-base lg:text-lg font-medium mt-4 max-w-2xl mx-auto">
-              Looking for a physiotherapist near you? {BRAND_NAME} offers fast, reliable home visit services in Miyapur with expert care delivered to your doorstep.
+            <p className="text-dark/70 text-base lg:text-lg font-medium mt-4 max-w-2xl mx-auto">
+              Looking for a physiotherapist near you? {BRAND_NAME}  delivers expert rehabilitation across Miyapur and nearby areas, offering convenient, personalized treatment tailored to your recovery needs.
             </p>
           </motion.div>
 
           {/* Location Cards with Pulse Effect */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6 mb-12">
             {[
-              { name: 'Miyapur', radius: '3 KM', highlight: true },
-              { name: 'Kukatpally', radius: '4 KM', highlight: false },
-              { name: 'KPHB', radius: '2 KM', highlight: true },
-              { name: 'JNTU', radius: '3 KM', highlight: false },
-              { name: 'Nizampet', radius: '5 KM', highlight: false },
-              { name: 'Vivekananda Colony', radius: '4 KM', highlight: false },
+              { name: 'Madhapur', radius: '5 KM', highlight: true },
+              { name: 'KPHB', radius: '4 KM', highlight: false },
+              { name: 'Nanakramguda', radius: '2 KM', highlight: true },
+              { name: 'Limgampally', radius: '3 KM', highlight: false },
+              { name: 'Hydernagar', radius: '5 KM', highlight: true },
+              { name: 'Vivekananda Nagar', radius: '4 KM', highlight: false },
               { name: 'Vasantha Nagar', radius: '3 KM', highlight: true },
               { name: 'Bachupally', radius: '5 KM', highlight: false },
-              { name: 'Madinaguda', radius: '4 KM', highlight: false },
-              { name: 'Kondapur', radius: '5 KM', highlight: false },
+              { name: 'Hafeezpet', radius: '4 KM', highlight: true },
+              { name: 'Pragathi Nagar', radius: '5 KM', highlight: false },
             ].map((area, idx) => (
               <motion.div
                 key={idx}
@@ -807,19 +807,18 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
-                className={`relative p-5 lg:p-6 rounded-2xl transition-all duration-300 group ${
-                  area.highlight 
-                    ? 'bg-accent text-white shadow-lg shadow-accent/30' 
-                    : 'bg-white/10 text-white hover:bg-white/20'
-                }`}
+                className={`relative p-5 lg:p-6 rounded-2xl transition-all duration-310 group ${area.highlight
+                  ? 'bg-accent text-white shadow-xl shadow-accent/20'
+                  : 'bg-surface text-primary hover:bg-primary/5 border border-primary/5'
+                  }`}
               >
                 {area.highlight && (
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-accent rounded-full flex items-center justify-center animate-pulse">
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-accent rounded-full flex items-center justify-center animate-pulse border-2 border-white">
                     <MapPin className="w-3 h-3 text-white" />
                   </div>
                 )}
                 <h3 className="text-base lg:text-lg font-serif font-bold mb-1">{area.name}</h3>
-                <p className={`text-xs font-medium ${area.highlight ? 'text-white/80' : 'text-white/60'}`}>
+                <p className={`text-xs font-bold ${area.highlight ? 'text-white/80' : 'text-primary/60'}`}>
                   ~{area.radius} from center
                 </p>
               </motion.div>
@@ -832,28 +831,28 @@ const Home = () => {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ delay: 0.3 }}
-            className="bg-white rounded-2xl p-6 lg:p-8 flex flex-col lg:flex-row items-center justify-between gap-6 shadow-2xl"
+            className="bg-surface rounded-3xl p-6 lg:p-10 flex flex-col lg:flex-row items-center justify-between gap-8 shadow-sm border border-primary/5"
           >
-            <div className="flex items-center gap-4">
-              <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0">
-                <HomeIcon className="w-7 h-7" />
+            <div className="flex items-center gap-5">
+              <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center text-accent shrink-0">
+                <HomeIcon className="w-8 h-8" />
               </div>
               <div>
-                <h3 className="text-xl font-serif font-bold text-primary">Home Visit Service</h3>
-                <p className="text-sm text-muted font-medium">We bring expert physiotherapy to your doorstep</p>
+                <h3 className="text-xl lg:text-2xl font-serif font-bold text-primary">Home-Based Physiotherapy</h3>
+                <p className="text-sm lg:text-base text-muted font-medium">Professional treatment delivered in the comfort of your home.</p>
               </div>
             </div>
-            <div className="flex flex-col sm:flex-row items-center gap-4 lg:gap-6">
-              <div className="flex items-center gap-2 text-primary">
+            <div className="flex flex-col sm:flex-row items-center gap-6 lg:gap-8">
+              <div className="flex items-center gap-3 py-2 px-4 bg-primary/5 rounded-full text-primary">
                 <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-                <span className="text-sm font-bold">Within 5 KM radius</span>
+                <span className="text-sm font-bold uppercase tracking-wider">Within 5 KM radius</span>
               </div>
               <a
                 href={`tel:+91${CONTACT_PHONE_DISPLAY?.replace(/\s/g, '')}`}
-                className="flex items-center gap-2 px-5 py-3 bg-accent text-white font-bold rounded-full hover:bg-accent/90 transition-colors"
+                className="flex items-center gap-3 px-8 py-4 bg-accent text-white font-bold rounded-full hover:bg-accent/90 transition-all shadow-lg shadow-accent/20 hover:scale-105 active:scale-95"
               >
-                <PhoneCall className="w-4 h-4" />
-                {CONTACT_PHONE_DISPLAY}
+                <PhoneCall className="w-5 h-5" />
+                <span className="text-lg">{CONTACT_PHONE_DISPLAY}</span>
               </a>
             </div>
           </motion.div>
