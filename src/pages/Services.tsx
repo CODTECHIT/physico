@@ -154,7 +154,7 @@ const Services = () => {
               >
                 {/* Image Container with Rounded Corners & Shine Effect */}
                 <Link
-                  to={service.slug ? `/service/${service.slug}` : "/contact"}
+                  to={service.slug ? `/condition/${service.slug}` : "/contact"}
                   className="relative mb-8 overflow-hidden aspect-[3/2] rounded-3xl lg:rounded-[2.5rem] shadow-lg border-2 border-white group-hover:shadow-xl transition-all duration-700 max-w-sm mx-auto w-full block"
                 >
                   <img
@@ -180,7 +180,7 @@ const Services = () => {
                       <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-500 shadow-sm shrink-0">
                         {service.icon}
                       </div>
-                      <Link to={service.slug ? `/service/${service.slug}` : "/contact"}>
+                      <Link to={service.slug ? `/condition/${service.slug}` : "/contact"}>
                         <h3 className="text-2xl lg:text-3xl font-serif font-bold text-primary leading-tight group-hover:text-accent transition-colors duration-500">
                           {service.title}
                         </h3>
@@ -226,7 +226,7 @@ const Services = () => {
 
                     <div className="pt-2">
                       <Link
-                        to={service.slug ? `/service/${service.slug}` : "/contact"}
+                        to={service.slug ? `/condition/${service.slug}` : "/contact"}
                         className="inline-flex items-center gap-4 text-[10px] font-bold uppercase tracking-[0.3em] text-primary/40 hover:text-accent transition-all group/link"
                       >
                         <span className="w-10 h-[1px] bg-primary/10 group-hover/link:w-16 group-hover/link:bg-accent transition-all duration-500" />

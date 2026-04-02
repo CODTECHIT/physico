@@ -30,10 +30,10 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/services" element={<Services />} />
-            <Route path="/service/:id" element={<ServiceDetail />} />
-            <Route path="/conditions" element={<Conditions />} />
-            <Route path="/condition/:slug" element={<ConditionDetail />} />
+            <Route path="/conditions" element={<Services />} />
+            <Route path="/condition/:id" element={<ServiceDetail />} />
+            <Route path="/treatment" element={<Conditions />} />
+            <Route path="/treatment/:slug" element={<ConditionDetail />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-and-conditions" element={<TermsAndConditions />} />

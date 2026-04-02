@@ -228,7 +228,7 @@ const ServiceDetail = () => {
                       </div>
                     );
                     return slug ? (
-                      <Link key={i} to={`/condition/${slug}`}>
+                      <Link key={i} to={`/treatment/${slug}`}>
                         {content}
                       </Link>
                     ) : (
@@ -322,7 +322,7 @@ const ServiceDetail = () => {
                 Speak to a Specialist <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>
-            <Link to="/services" className="text-primary font-bold uppercase tracking-widest text-sm hover:text-accent transition-colors">
+            <Link to="/conditions" className="text-primary font-bold uppercase tracking-widest text-sm hover:text-accent transition-colors">
               View All Conditions
             </Link>
           </div>

@@ -91,7 +91,7 @@ const Conditions = () => {
 
         {/* Large background text for editorial feel */}
         <div className="absolute top-20 left-1/2 -translate-x-1/2 text-[20vw] font-serif font-bold text-primary/5 select-none pointer-events-none whitespace-nowrap uppercase">
-          CONDITIONS
+          TREATMENTS
         </div>
 
         <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
@@ -157,7 +157,7 @@ const Conditions = () => {
                 <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-6">
                   {group.items.map((item) => (
                     <li key={item.slug} className="group/item">
-                      <Link to={`/condition/${item.slug}`} className="flex items-center gap-4 py-1">
+                      <Link to={`/treatment/${item.slug}`} className="flex items-center gap-4 py-1">
                         <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center shrink-0 group-hover/item:bg-accent transition-colors duration-300">
                           <CheckCircle2 className="w-3.5 h-3.5 text-accent group-hover/item:text-white transition-colors duration-300" />
                         </div>

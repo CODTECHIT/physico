@@ -26,7 +26,7 @@ const ConditionDetail = () => {
   }, [slug]);
 
   if (!condition) {
-    return <Navigate to="/conditions" replace />;
+    return <Navigate to="/treatment" replace />;
   }
 
   return (
@@ -50,11 +50,11 @@ const ConditionDetail = () => {
             className="mb-8"
           >
             <Link 
-              to="/conditions" 
+              to="/treatment" 
               className="inline-flex items-center text-primary/60 hover:text-accent font-bold uppercase tracking-widest text-[10px] transition-colors group"
             >
               <ArrowLeft className="w-4 h-4 mr-2 group-hover:-translate-x-1 transition-transform" />
-              All Conditions
+              All Treatment
             </Link>
           </motion.div>
 

@@ -474,7 +474,7 @@ const Home = () => {
               </h2>
             </div>
             <div className="lg:col-span-4 lg:text-right">
-              <Link to="/services" className="inline-flex items-center text-[10px] font-bold uppercase tracking-widest text-primary hover:text-accent transition-colors">
+              <Link to="/conditions" className="inline-flex items-center text-[10px] font-bold uppercase tracking-widest text-primary hover:text-accent transition-colors">
                 View All Conditions <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>
@@ -491,7 +491,7 @@ const Home = () => {
                 className={`group ${idx % 2 !== 0 ? 'md:mt-12' : ''}`}
               >
                 <Link
-                  to={item.slug ? `/service/${item.slug}` : "/contact"}
+                  to={item.slug ? `/condition/${item.slug}` : "/contact"}
                   className={`relative overflow-hidden aspect-[3/2] mb-6 shadow-lg rounded-2xl lg:rounded-3xl border-2 border-white group-hover:border-[#5182EF] group-hover:shadow-xl transition-all duration-700 w-full block`}
                 >
                   <img
@@ -507,7 +507,7 @@ const Home = () => {
                 </Link>
                 <div className="space-y-2 lg:space-y-3">
                   <div className="mb-2 text-accent group-hover:text-[#5182EF] transition-colors duration-300">{item.icon}</div>
-                  <Link to={item.slug ? `/service/${item.slug}` : "/contact"}>
+                  <Link to={item.slug ? `/condition/${item.slug}` : "/contact"}>
                     <h3 className="text-xl lg:text-2xl font-serif font-bold text-accent group-hover:text-[#5182EF] transition-colors duration-300 leading-tight">{item.title}</h3>
                   </Link>
                   <p className="text-dark text-xs lg:text-sm font-medium leading-relaxed opacity-80">{item.desc}</p>
@@ -577,7 +577,7 @@ const Home = () => {
             {[...conditions, ...conditions].map((condition, idx) => (
               <Link
                 key={idx}
-                to={`/condition/${condition.slug}`}
+                to={`/treatment/${condition.slug}`}
                 className="relative group w-[180px] lg:w-[240px] flex-shrink-0"
               >
                 {/* Shining Card Container */}
@@ -613,7 +613,7 @@ const Home = () => {
         </div>
 
         <div className="max-w-7xl mx-auto px-6 mt-8 lg:mt-12 text-center">
-          <Link to="/conditions">
+          <Link to="/treatment">
             <Button variant="outline" className="group rounded-full px-8">
               View All Treatment
               <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />

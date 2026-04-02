@@ -16,17 +16,17 @@ const Navbar = () => {
     { name: 'About', path: '/about' },
     {
       name: 'Conditions',
-      path: '/services',
+      path: '/conditions',
       dropdown: [
-        { name: 'Chiropractic care', path: '/service/chiropractic' },
-        { name: 'Cupping & dry needling', path: '/service/cupping' },
+        { name: 'Chiropractic care', path: '/condition/chiropractic' },
+        { name: 'Cupping & dry needling', path: '/condition/cupping' },
       ]
     },
-    { name: 'Treatment', path: '/conditions',
+    { name: 'Treatment', path: '/treatment',
       dropdown: [
-        { name: 'Neuro rehabilitation', path: '/service/neurological' },
-        { name: 'Orthopedic rehabilitation', path: '/service/orthopedic' },
-        { name: 'Sports rehabilitation', path: '/service/sports' },
+        { name: 'Neuro rehabilitation', path: '/condition/neurological' },
+        { name: 'Orthopedic rehabilitation', path: '/condition/orthopedic' },
+        { name: 'Sports rehabilitation', path: '/condition/sports' },
       ]
     },
     { name: 'Contact', path: '/contact' },
@@ -78,14 +78,14 @@ const Navbar = () => {
                 to={link.path}
                 className={cn(
                   'text-[10px] lg:text-[11px] xl:text-[13px] uppercase tracking-[0.1em] font-semibold transition-all duration-300 hover:text-accent flex items-center gap-1 xl:gap-1.5',
-                  location.pathname === link.path || (link.dropdown && (location.pathname.startsWith('/service/') || location.pathname.startsWith('/condition/'))) ? 'text-accent' : 'text-primary'
+                  location.pathname === link.path || (link.dropdown && (location.pathname.startsWith('/condition/') || location.pathname.startsWith('/treatment/'))) ? 'text-accent' : 'text-primary'
                 )}
               >
                 {link.name}
                 {link.dropdown && <ChevronDown className="w-3 h-3 xl:w-3.5 xl:h-3.5 opacity-40 group-hover/nav-item:rotate-180 transition-transform duration-500" />}
                 <span className={cn(
                   "absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent transition-all duration-500 group-hover/nav-item:w-full",
-                  location.pathname === link.path || (link.dropdown && (location.pathname.startsWith('/service/') || location.pathname.startsWith('/condition/'))) ? "w-full" : "w-0"
+                  location.pathname === link.path || (link.dropdown && (location.pathname.startsWith('/condition/') || location.pathname.startsWith('/treatment/'))) ? "w-full" : "w-0"
                 )} />
               </Link>
 
@@ -179,7 +179,7 @@ const Navbar = () => {
                   to={link.path}
                   className={cn(
                     "text-3xl sm:text-4xl font-serif font-bold tracking-tight transition-all active:scale-95",
-                    location.pathname === link.path || (link.dropdown && (location.pathname.startsWith('/service/') || location.pathname.startsWith('/condition/')))
+                    location.pathname === link.path || (link.dropdown && (location.pathname.startsWith('/condition/') || location.pathname.startsWith('/treatment/')))
                       ? "text-accent border-b-2 border-accent/20 pb-1"
                       : "text-primary hover:text-accent/70"
                   )}
