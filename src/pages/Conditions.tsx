@@ -1,3 +1,4 @@
+import React from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import {
   ArrowRight,
@@ -112,16 +113,30 @@ const Conditions = () => {
                 transition={{ delay: idx * 0.1, duration: 0.5 }}
                 className={`relative bg-white rounded-2xl lg:rounded-3xl p-6 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-500 group ${idx % 2 === 1 ? 'md:mt-0 lg:translate-y-8' : ''}`}
               >
-                <div className="absolute top-4 right-4 lg:-top-4 lg:right-6 w-8 h-8 lg:w-12 lg:h-12 bg-accent rounded-full flex items-center justify-center shadow-lg">
+                {/* Number Indicator - positioned to hang slightly over but safely within clipping if necessary, or we remove overflow-hidden from parent and add it to a wrapper for the icon */}
+                <div className="absolute -top-3 -right-3 w-8 h-8 lg:w-12 lg:h-12 bg-accent rounded-full flex items-center justify-center shadow-lg z-20">
                   <span className="text-white font-bold text-[10px] lg:text-sm">{item.number}</span>
                 </div>
 
-                <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-xl lg:rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center text-primary mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
-                  {item.icon}
-                </div>
+                <div className="relative z-10">
+                  <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-xl lg:rounded-2xl bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center text-primary mb-4 lg:mb-6 group-hover:scale-110 transition-transform duration-300">
+                    {item.icon}
+                  </div>
 
-                <h4 className="text-xl lg:text-2xl font-serif font-bold text-primary mb-2 lg:mb-4 group-hover:text-accent transition-colors">{item.title}</h4>
-                <p className="text-dark font-medium leading-relaxed text-xs lg:text-base opacity-70 group-hover:opacity-100">{item.desc}</p>
+                  <h4 className="text-xl lg:text-2xl font-serif font-bold text-primary mb-2 lg:mb-4 group-hover:text-accent transition-all duration-300 group-hover:translate-x-1 outline-none">
+                    {item.title}
+                  </h4>
+                  <p className="text-dark font-medium leading-relaxed text-xs lg:text-base opacity-70 group-hover:opacity-100 transition-opacity">
+                    {item.desc}
+                  </p>
+                </div>
+                
+                {/* Background Decorative Icon (Watermark) - Wrapped in an overflow-hidden container */}
+                <div className="absolute inset-0 rounded-2xl lg:rounded-3xl overflow-hidden pointer-events-none">
+                  <div className="absolute bottom-4 right-4 text-primary/5 group-hover:text-accent/10 transition-all duration-700 -rotate-12 group-hover:rotate-0 transform translate-x-4 translate-y-4">
+                    {React.cloneElement(item.icon as React.ReactElement<{ className?: string }>, { className: 'w-24 h-24 lg:w-32 lg:h-32' })}
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>

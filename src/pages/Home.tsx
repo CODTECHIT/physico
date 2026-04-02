@@ -92,15 +92,16 @@ const Home = () => {
 
   const additionalServices = [
     {
-      title: 'Post-Surgical Rehabilitation',
-      desc: 'Knee/hip replacement, spine recovery',
+      title: 'Mobility & Balance Training',
+      desc: 'Personalized physiotherapy to improve walking, balance, and coordination reducing fall risk and restoring confidence.',
       icon: <ClipboardCheck className="w-5 h-5" />
     },
     {
       title: 'Geriatric Physiotherapy',
-      desc: 'Elderly care, fall prevention, strength improvement',
+      desc: 'Specialized care for elderly patients to improve mobility, balance, and prevent falls at home.',
       icon: <Users className="w-5 h-5" />
     }
+
   ];
 
   const testimonials = [
@@ -243,12 +244,12 @@ const Home = () => {
               </div>
 
               <h1 className="text-[clamp(2.35rem,11vw,3.9rem)] md:text-5xl lg:text-7xl font-serif font-bold text-primary leading-[1.05] lg:leading-[1.1]">
-                Personalized care for pain relief, <span className="text-accent italic font-normal">recovery</span>, and mobility.
+                Physiotherapy at Home for Pain Relief, <span className="text-accent italic font-normal">Recovery,</span> and Mobility.
               </h1>
 
               <div className="mt-4 lg:mt-8 max-w-xl">
                 <p className="text-sm lg:text-xl text-dark font-medium leading-relaxed opacity-90">
-                  Delivered to your doorstep. Professional treatment in the comfort of your home.
+                  Expert physiotherapy at home for pain relief, injury recovery, and post-surgery rehab delivered with personalized care.
                 </p>
 
                 <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 lg:gap-6 mt-6 lg:mt-10">
@@ -258,7 +259,7 @@ const Home = () => {
                     rel="noopener noreferrer"
                     className="w-full sm:w-auto"
                   >
-                    <Button variant="secondary" size="lg" className="w-full rounded-full px-8 lg:px-10 py-4 border-none text-white font-bold tracking-wide transition-all shadow-xl shadow-accent/20">
+                    <Button variant="secondary" size="lg" className="w-full rounded-full px-8 lg:px-10 py-4 border-none text-white font-bold tracking-wide transition-all shadow-xl shadow-accent/20 whitespace-nowrap">
                       Book Home Visit
                     </Button>
                   </a>
@@ -394,12 +395,12 @@ const Home = () => {
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                   <div className="space-y-1 p-4 lg:p-5 bg-surface border-l-4 border-accent shadow-sm">
-                    <h4 className="font-serif font-bold text-primary text-base lg:text-lg">Post-Surgery Rehab</h4>
-                    <p className="text-xs text-muted font-medium leading-relaxed">Expert recovery protocols for surgical cases in your home.</p>
+                    <h4 className="font-serif font-bold text-primary text-base lg:text-lg">Post-Surgery Rehabilitation</h4>
+                    <p className="text-xs text-muted font-medium leading-relaxed">Recovery-focused physiotherapy after knee replacement, spine surgery, and fractures delivered safely at home.</p>
                   </div>
                   <div className="space-y-1 p-4 lg:p-5 bg-surface border-l-4 border-accent shadow-sm">
-                    <h4 className="font-serif font-bold text-primary text-base lg:text-lg">Chronic Pain</h4>
-                    <p className="text-xs text-muted font-medium leading-relaxed">Evidence-based management for long-term pain relief.</p>
+                    <h4 className="font-serif font-bold text-primary text-base lg:text-lg">Chronic Pain Management</h4>
+                    <p className="text-xs text-muted font-medium leading-relaxed">Targeted physiotherapy for long-term back pain, neck pain, and joint issues with evidence-based treatment.</p>
                   </div>
                 </div>
 
@@ -438,7 +439,7 @@ const Home = () => {
                     alt="Dr. Bhanu Kumar Vemula - Chief Physiotherapist"
                     className="w-full h-full object-contain"
                   />
-                  
+
                   {/* Floating Specialist Badge - Always Visible */}
                   <div className="absolute top-6 right-6 bg-white/95 backdrop-blur-md px-4 py-2 shadow-lg border-l-4 border-accent z-20 rounded-r-lg">
                     <div className="flex items-center space-x-3">
