@@ -368,58 +368,71 @@ const Home = () => {
         </div>
       </section>
 
-      {/* ABOUT SECTION (SHORT – NOT LONG STORY) */}
+
+      {/* PATIENT EDUCATION & GUIDED RECOVERY APPROACH */}
       <section className="py-10 lg:py-16 bg-white overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-20 items-center">
-
-            {/* Left Content Column */}
-            <div className="space-y-6 lg:space-y-8">
-              <div className="space-y-3 lg:space-y-4">
-                <div className="flex items-center space-x-3">
-                  <span className="w-8 h-[2px] bg-accent" />
-                  <span className="text-accent font-sans font-bold uppercase tracking-[0.2em] text-[10px]">
-                    Welcome to {BRAND_NAME}
-                  </span>
-                </div>
-                <h2 className="text-3xl lg:text-6xl font-serif font-bold text-primary leading-tight">
-                  Expert Care. <br />
-                  <span className="text-accent italic font-normal">Pain-Free</span> Living.
-                </h2>
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+            <div className="space-y-5 lg:space-y-6">
+              <div className="flex items-center space-x-3">
+                <span className="w-8 h-[2px] bg-accent" />
+                <span className="text-accent font-sans font-bold uppercase tracking-[0.2em] text-[10px]">
+                  Patient Education & Guided Recovery Approach
+                </span>
               </div>
-
-              <div className="space-y-6">
-                <p className="text-base lg:text-xl text-dark font-medium leading-relaxed opacity-90">
-                  We provide professional physiotherapy services at home to help you recover faster and live pain-free.
-                </p>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                  <div className="space-y-1 p-4 lg:p-5 bg-surface border-l-4 border-accent shadow-sm">
-                    <h4 className="font-serif font-bold text-primary text-base lg:text-lg">Post-Surgery Rehabilitation</h4>
-                    <p className="text-xs text-muted font-medium leading-relaxed">Recovery-focused physiotherapy after knee replacement, spine surgery, and fractures delivered safely at home.</p>
-                  </div>
-                  <div className="space-y-1 p-4 lg:p-5 bg-surface border-l-4 border-accent shadow-sm">
-                    <h4 className="font-serif font-bold text-primary text-base lg:text-lg">Chronic Pain Management</h4>
-                    <p className="text-xs text-muted font-medium leading-relaxed">Targeted physiotherapy for long-term back pain, neck pain, and joint issues with evidence-based treatment.</p>
-                  </div>
-                </div>
-
-                <p className="text-dark text-sm lg:text-base font-medium leading-relaxed opacity-80 border-t border-primary/5 pt-4">
-                  From post-surgery rehab to chronic pain management, our team ensures safe, effective, and personalized treatment in the comfort of your home.
-                </p>
-              </div>
-
-              <div className="pt-2">
-                <Link to="/about">
-                  <Button variant="outline" className="group rounded-full px-8">
-                    Our Philosophy
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
+              <h2 className="text-3xl lg:text-5xl font-serif font-bold text-primary leading-tight">
+                We Don't Just Treat Your Pain —<br />
+                <span className="text-accent italic font-normal">We Help You Understand It.</span>
+              </h2>
+              <p className="text-base lg:text-lg text-dark font-medium leading-relaxed opacity-90">
+                At {BRAND_NAME}, we follow a guided recovery approach where patients are educated about their condition, movement patterns, and home exercise program to ensure better understanding and faster recovery.
+              </p>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4">
+                {[
+                  {
+                    title: 'Identify the Root Cause',
+                    desc: 'Clear understanding of your condition and movement patterns for targeted recovery.',
+                    icon: <Target className="w-5 h-5" />,
+                    number: '01'
+                  },
+                  {
+                    title: 'Structured Rehabilitation',
+                    desc: 'Focused sessions designed to improve mobility, reduce discomfort, and accelerate healing.',
+                    icon: <Activity className="w-5 h-5" />,
+                    number: '02'
+                  },
+                  {
+                    title: 'Sustain the Results',
+                    desc: 'Practical routines that help you stay pain-free and prevent future issues.',
+                    icon: <ShieldCheck className="w-5 h-5" />,
+                    number: '03'
+                  }
+                ].map((item, idx) => (
+                  <motion.div
+                    key={idx}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: idx * 0.1 }}
+                    className="relative p-6 bg-white rounded-2xl shadow-xl shadow-primary/5 border border-primary/5 group overflow-hidden"
+                  >
+                    <div className="absolute top-4 right-4 w-7 h-7 bg-accent/10 rounded-full flex items-center justify-center text-accent text-[9px] font-bold">
+                      {item.number}
+                    </div>
+                    <div className="w-10 h-10 rounded-xl bg-accent/5 flex items-center justify-center text-accent mb-4 group-hover:scale-110 transition-transform duration-500">
+                      {item.icon}
+                    </div>
+                    <h4 className="font-serif font-bold text-primary text-sm lg:text-base mb-2 group-hover:text-accent transition-colors duration-300">{item.title}</h4>
+                    <p className="text-[11px] text-muted font-medium leading-relaxed opacity-80">{item.desc}</p>
+                    
+                    {/* Subtle bottom border accent */}
+                    <div className="absolute bottom-0 left-0 w-full h-[3px] bg-accent transform scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left" />
+                  </motion.div>
+                ))}
               </div>
             </div>
 
-            {/* Right Image/Visual Column */}
             <div className="relative max-w-sm mx-auto lg:ml-auto lg:mr-0">
               {/* Decorative Elements */}
               <div className="absolute -top-12 -right-12 w-64 h-64 bg-accent/5 rounded-full blur-3xl -z-10" />
@@ -457,85 +470,6 @@ const Home = () => {
                   </div>
                 </div>
               </motion.div>
-            </div>
-
-          </div>
-        </div>
-      </section>
-
-      {/* PATIENT EDUCATION & GUIDED RECOVERY APPROACH */}
-      <section className="py-10 lg:py-16 bg-surface overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-            <div className="space-y-6 lg:space-y-8">
-              <div className="space-y-3 lg:space-y-4">
-                <div className="flex items-center space-x-3">
-                  <span className="w-8 h-[2px] bg-accent" />
-                  <span className="text-accent font-sans font-bold uppercase tracking-[0.2em] text-[10px]">
-                    Welcome to {BRAND_NAME}
-                  </span>
-                </div>
-                <h2 className="text-3xl lg:text-5xl font-serif font-bold text-primary leading-tight">
-                  Expert Care.<br />
-                  <span className="text-accent italic font-normal">Pain-Free Living.</span>
-                </h2>
-              </div>
-
-              <p className="text-base lg:text-xl text-dark font-medium leading-relaxed opacity-90">
-                We provide professional physiotherapy services at home to help you recover faster and live pain-free.
-              </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-                <div className="space-y-1 p-4 lg:p-5 bg-white border-l-4 border-accent shadow-sm">
-                  <h4 className="font-serif font-bold text-primary text-base lg:text-lg">Post-Surgery Rehabilitation</h4>
-                  <p className="text-xs text-muted font-medium leading-relaxed">Recovery-focused physiotherapy after knee replacement, spine surgery, and fractures delivered safely at home.</p>
-                </div>
-                <div className="space-y-1 p-4 lg:p-5 bg-white border-l-4 border-accent shadow-sm">
-                  <h4 className="font-serif font-bold text-primary text-base lg:text-lg">Chronic Pain Management</h4>
-                  <p className="text-xs text-muted font-medium leading-relaxed">Targeted physiotherapy for long-term back pain, neck pain, and joint issues with evidence-based treatment.</p>
-                </div>
-              </div>
-
-              <p className="text-dark text-sm lg:text-base font-medium leading-relaxed opacity-80 border-t border-primary/5 pt-4">
-                From post-surgery rehab to chronic pain management, our team ensures safe, effective, and personalized treatment in the comfort of your home.
-              </p>
-
-              <div className="pt-2">
-                <Link to="/about">
-                  <Button variant="outline" className="group rounded-full px-8">
-                    Our Philosophy
-                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                  </Button>
-                </Link>
-              </div>
-            </div>
-
-            <div className="relative flex justify-center lg:justify-end">
-              <div className="relative bg-white rounded-2xl lg:rounded-3xl p-8 lg:p-10 max-w-md w-full shadow-lg border border-primary/5">
-                <div className="flex items-center gap-3 mb-6">
-                  <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent">
-                    <ClipboardCheck className="w-5 h-5" />
-                  </div>
-                  <h4 className="font-serif font-bold text-primary text-lg">Our Approach</h4>
-                </div>
-                <ul className="space-y-4">
-                  {[
-                    'Condition diagnosis & assessment',
-                    'Personalized treatment plan',
-                    'Guided in-session exercises',
-                    'Home exercise program',
-                    'Progress tracking & adjustments',
-                    'Long-term prevention strategies',
-                  ].map((item, idx) => (
-                    <li key={idx} className="flex items-start gap-3">
-                      <div className="w-5 h-5 rounded-full bg-accent/20 flex items-center justify-center mt-0.5 shrink-0">
-                        <div className="w-2 h-2 rounded-full bg-accent" />
-                      </div>
-                      <span className="text-sm text-dark font-medium">{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
             </div>
           </div>
         </div>
