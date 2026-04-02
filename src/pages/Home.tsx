@@ -464,45 +464,59 @@ const Home = () => {
       </section>
 
       {/* PATIENT EDUCATION & GUIDED RECOVERY APPROACH */}
-      <section className="py-10 lg:py-16 bg-white overflow-hidden">
+      <section className="py-10 lg:py-16 bg-surface overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-            <div className="space-y-5 lg:space-y-6">
-              <div className="flex items-center space-x-3">
-                <span className="w-8 h-[2px] bg-accent" />
-                <span className="text-accent font-sans font-bold uppercase tracking-[0.2em] text-[10px]">
-                  Patient Education & Guided Recovery Approach
-                </span>
+            <div className="space-y-6 lg:space-y-8">
+              <div className="space-y-3 lg:space-y-4">
+                <div className="flex items-center space-x-3">
+                  <span className="w-8 h-[2px] bg-accent" />
+                  <span className="text-accent font-sans font-bold uppercase tracking-[0.2em] text-[10px]">
+                    Welcome to {BRAND_NAME}
+                  </span>
+                </div>
+                <h2 className="text-3xl lg:text-5xl font-serif font-bold text-primary leading-tight">
+                  Expert Care.<br />
+                  <span className="text-accent italic font-normal">Pain-Free Living.</span>
+                </h2>
               </div>
-              <h2 className="text-3xl lg:text-5xl font-serif font-bold text-primary leading-tight">
-                We Don't Just Treat Your Pain —<br />
-                <span className="text-accent italic font-normal">We Help You Understand It.</span>
-              </h2>
-              <p className="text-base lg:text-lg text-dark font-medium leading-relaxed opacity-90">
-                At {BRAND_NAME}, we follow a guided recovery approach where patients are educated about their condition, movement patterns, and home exercise program to ensure better understanding and faster recovery.
+
+              <p className="text-base lg:text-xl text-dark font-medium leading-relaxed opacity-90">
+                We provide professional physiotherapy services at home to help you recover faster and live pain-free.
               </p>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 pt-2">
-                <div className="p-4 bg-surface rounded-xl border-l-4 border-accent">
-                  <h4 className="font-serif font-bold text-primary text-sm lg:text-base mb-1">Understand</h4>
-                  <p className="text-xs text-muted font-medium leading-relaxed">Learn about your condition and what's causing your pain.</p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
+                <div className="space-y-1 p-4 lg:p-5 bg-white border-l-4 border-accent shadow-sm">
+                  <h4 className="font-serif font-bold text-primary text-base lg:text-lg">Post-Surgery Rehabilitation</h4>
+                  <p className="text-xs text-muted font-medium leading-relaxed">Recovery-focused physiotherapy after knee replacement, spine surgery, and fractures delivered safely at home.</p>
                 </div>
-                <div className="p-4 bg-surface rounded-xl border-l-4 border-accent">
-                  <h4 className="font-serif font-bold text-primary text-sm lg:text-base mb-1">Treat</h4>
-                  <p className="text-xs text-muted font-medium leading-relaxed">Receive personalized, evidence-based treatment sessions.</p>
+                <div className="space-y-1 p-4 lg:p-5 bg-white border-l-4 border-accent shadow-sm">
+                  <h4 className="font-serif font-bold text-primary text-base lg:text-lg">Chronic Pain Management</h4>
+                  <p className="text-xs text-muted font-medium leading-relaxed">Targeted physiotherapy for long-term back pain, neck pain, and joint issues with evidence-based treatment.</p>
                 </div>
-                <div className="p-4 bg-surface rounded-xl border-l-4 border-accent">
-                  <h4 className="font-serif font-bold text-primary text-sm lg:text-base mb-1">Maintain</h4>
-                  <p className="text-xs text-muted font-medium leading-relaxed">Follow guided home exercises for long-term recovery.</p>
-                </div>
+              </div>
+
+              <p className="text-dark text-sm lg:text-base font-medium leading-relaxed opacity-80 border-t border-primary/5 pt-4">
+                From post-surgery rehab to chronic pain management, our team ensures safe, effective, and personalized treatment in the comfort of your home.
+              </p>
+
+              <div className="pt-2">
+                <Link to="/about">
+                  <Button variant="outline" className="group rounded-full px-8">
+                    Our Philosophy
+                    <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </Link>
               </div>
             </div>
+
             <div className="relative flex justify-center lg:justify-end">
-              <div className="relative bg-surface rounded-2xl lg:rounded-3xl p-8 lg:p-10 max-w-md w-full shadow-lg border border-primary/5">
+              <div className="relative bg-white rounded-2xl lg:rounded-3xl p-8 lg:p-10 max-w-md w-full shadow-lg border border-primary/5">
                 <div className="flex items-center gap-3 mb-6">
                   <div className="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent">
                     <ClipboardCheck className="w-5 h-5" />
                   </div>
-                  <h4 className="font-serif font-bold text-primary text-lg">Recovery Checklist</h4>
+                  <h4 className="font-serif font-bold text-primary text-lg">Our Approach</h4>
                 </div>
                 <ul className="space-y-4">
                   {[
