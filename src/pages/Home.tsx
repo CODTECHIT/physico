@@ -782,6 +782,9 @@ const Home = () => {
             <h2 className="text-3xl lg:text-5xl font-serif font-bold text-white">
               We <span className="text-accent italic font-normal">Serve</span> These Locations
             </h2>
+            <p className="text-white/80 text-base lg:text-lg font-medium mt-4 max-w-2xl mx-auto">
+              Looking for a physiotherapist near you? {BRAND_NAME} offers fast, reliable home visit services in Miyapur with expert care delivered to your doorstep.
+            </p>
           </motion.div>
 
           {/* Location Cards with Pulse Effect */}
