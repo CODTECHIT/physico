@@ -83,7 +83,7 @@ const Contact = () => {
               <span className="w-6 h-[2px] bg-accent" />
             </div>
             <h1 className="text-4xl lg:text-7xl font-serif font-bold text-primary leading-tight">
-              Let’s Start Your <br />
+              Let’s Start Your <br className="hidden md:block" />
               <span className="text-accent italic font-normal">Recovery</span> Journey
             </h1>
             <p className="text-sm lg:text-xl text-dark font-medium leading-relaxed max-w-3xl mx-auto opacity-90">

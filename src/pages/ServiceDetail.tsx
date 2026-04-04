@@ -464,24 +464,23 @@ const ServiceDetail = () => {
           {service.title.split(' ')[0]}
         </motion.div>
 
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10 text-center">
+        <div className="max-w-[1650px] mx-auto px-6 lg:px-12 relative z-10 text-left">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="space-y-4 lg:space-y-6"
           >
-            <div className="flex items-center justify-center space-x-3 mb-2">
-              <span className="w-6 h-[2px] bg-accent" />
+            <div className="flex items-center space-x-3 mb-2">
+              <span className="w-8 h-[2px] bg-accent" />
               <span className="text-accent font-sans font-bold uppercase tracking-[0.2em] text-[9px] lg:text-[10px]">
-                Specialized Service
+                Specialized Clinical Service
               </span>
-              <span className="w-6 h-[2px] bg-accent" />
             </div>
-            <h1 className="text-4xl lg:text-7xl font-serif font-bold text-primary leading-tight">
-              {service.title.split(' ')[0]} <span className="text-accent italic font-normal">{service.title.split(' ').slice(1).join(' ')}</span>
+            <h1 className="text-4xl lg:text-8xl font-serif font-bold text-primary leading-tight">
+              {service.title.split(' ')[0]} <br className="hidden lg:block" /> <span className="text-accent italic font-normal">{service.title.split(' ').slice(1).join(' ')}</span>
             </h1>
-            <p className="text-sm lg:text-xl text-dark font-medium leading-relaxed max-w-5xl mx-auto opacity-90">
+            <p className="text-sm lg:text-2xl text-dark font-medium leading-relaxed max-w-5xl opacity-90">
               {service.desc}
             </p>
           </motion.div>
@@ -490,7 +489,7 @@ const ServiceDetail = () => {
 
       {/* 2. DETAILED CONTENT */}
       <section className="py-12 lg:py-16 overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+        <div className="max-w-[1650px] mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
 
             <div className="space-y-12 lg:space-y-16">
@@ -589,7 +588,7 @@ const ServiceDetail = () => {
       <section className="py-12 lg:py-16 bg-surface/50 relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-10 relative z-10">
           <h2 className="text-4xl lg:text-6xl font-serif font-bold text-primary leading-tight">
-            Not sure which <br />
+            Not sure which <br className="hidden md:block" />
             <span className="text-accent italic font-normal">service you need?</span>
           </h2>
           <p className="text-dark text-xl font-medium leading-relaxed opacity-80">

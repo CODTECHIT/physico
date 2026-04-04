@@ -369,7 +369,7 @@ const Home = () => {
                 </span>
               </div>
               <h2 className="text-3xl lg:text-5xl font-serif font-bold text-primary leading-tight">
-                We Don't Just Treat Your Pain —<br />
+                We Don't Just Treat Your Pain —<br className="hidden md:block" />
                 <span className="text-accent italic font-normal">We Help You Understand It.</span>
               </h2>
               <p className="text-base lg:text-lg text-dark font-medium leading-relaxed opacity-90">
@@ -461,7 +461,7 @@ const Home = () => {
             <div className="lg:col-span-8">
               <span className="text-accent font-sans font-bold uppercase tracking-[0.3em] text-[10px] mb-2 block">Our Expertise</span>
               <h2 className="text-3xl lg:text-6xl font-serif font-bold text-primary leading-tight">
-                Comprehensive <br />
+                Comprehensive <br className="hidden md:block" />
                 <span className="italic text-accent">Home</span> Treatment.
               </h2>
             </div>

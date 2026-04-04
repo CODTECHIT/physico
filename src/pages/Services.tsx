@@ -152,24 +152,23 @@ const Services = () => {
           <div className="absolute inset-0 bg-white/90 lg:bg-white/85" />
         </motion.div>
 
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 text-center relative z-10">
+        <div className="max-w-[1650px] mx-auto px-6 lg:px-12 text-left relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
             className="space-y-4 lg:space-y-6"
           >
-            <div className="flex items-center justify-center space-x-3 mb-2">
-              <span className="w-6 h-[2px] bg-accent" />
-              <span className="text-accent font-sans font-bold uppercase tracking-[0.2em] text-[10px] lg:text-[10px]">
-                Our Conditions
+            <div className="flex items-center space-x-3 mb-2">
+              <span className="w-8 h-[2px] bg-accent" />
+              <span className="text-accent font-sans font-bold uppercase tracking-[0.2em] text-[10px] lg:text-xs">
+                Our Specialized Services
               </span>
-              <span className="w-6 h-[2px] bg-accent" />
             </div>
-            <h1 className="text-4xl lg:text-7xl font-serif font-bold text-primary leading-tight">
-              Comprehensive <span className="text-accent italic font-normal">Physiotherapy</span> <br /> Care at Home
+            <h1 className="text-4xl lg:text-8xl font-serif font-bold text-primary leading-tight">
+              Comprehensive <span className="text-accent italic font-normal">Physiotherapy</span> <br className="hidden lg:block" /> Care at Home
             </h1>
-            <p className="text-sm lg:text-xl text-dark font-medium leading-relaxed max-w-5xl mx-auto opacity-90">
+            <p className="text-sm lg:text-2xl text-dark font-medium leading-relaxed max-w-5xl opacity-90">
               We offer specialized physiotherapy services designed to help you recover faster, reduce pain, and regain mobility — all from the comfort of your home.
             </p>
           </motion.div>
@@ -186,7 +185,7 @@ const Services = () => {
           {BRAND_NAME.toUpperCase()}
         </motion.div>
 
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+        <div className="max-w-[1650px] mx-auto px-6 lg:px-12 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
             {allServices.map((service, idx) => (
               <motion.div
@@ -294,7 +293,7 @@ const Services = () => {
             <div className="space-y-4">
               <span className="text-white/80 font-sans font-bold uppercase tracking-[0.3em] text-[10px] block">The Standard</span>
               <h2 className="text-4xl lg:text-5xl font-serif font-bold leading-tight">
-                Uncompromising <br />
+                Uncompromising <br className="hidden md:block" />
                 <span className="text-secondary italic font-normal">Clinical</span> Excellence.
               </h2>
             </div>
