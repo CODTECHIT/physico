@@ -43,7 +43,7 @@ const ConditionDetail = () => {
           <div className="absolute inset-0 bg-gradient-to-b from-white via-white/80 to-transparent" />
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}
@@ -118,7 +118,7 @@ const ConditionDetail = () => {
 
       {/* 2. CLINICAL APPROACH */}
       <section className="py-20 lg:py-32 bg-surface/30">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
             {/* Assessment Section */}
             <motion.div
@@ -207,7 +207,7 @@ const ConditionDetail = () => {
 
       {/* 3. GOAL & COMMITMENT */}
       <section className="py-20 lg:py-32">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="bg-primary p-12 lg:p-24 rounded-[4rem] relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
@@ -237,7 +237,7 @@ const ConditionDetail = () => {
 
       {/* 4. CLINICAL PHILOSOPHY STATS */}
       <section className="py-20 lg:py-32 border-t border-primary/5">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-12 lg:gap-24">
             <div className="space-y-4">
               <Clock className="w-8 h-8 text-accent" />

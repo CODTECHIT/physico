@@ -29,7 +29,7 @@ const About = () => {
           <div className="absolute inset-0 bg-white/90 lg:bg-white/85" />
         </motion.div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center relative z-10">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -46,7 +46,7 @@ const About = () => {
             <h1 className="text-4xl lg:text-7xl font-serif font-bold text-primary leading-tight">
               Trusted Home <span className="text-accent italic font-normal">Physiotherapy</span> <br className="hidden md:block" /> in Hyderabad
             </h1>
-            <p className="text-sm lg:text-xl text-dark font-medium leading-relaxed max-w-3xl mx-auto opacity-90">
+            <p className="text-sm lg:text-xl text-dark font-medium leading-relaxed max-w-5xl mx-auto opacity-90">
               {BRAND_NAME} is a leading provider of home-based physiotherapy services in Hyderabad, delivering expert care directly to patients in the comfort of their homes.
             </p>
             <div className="flex items-center justify-center space-x-3 pt-2 text-primary font-bold">
@@ -59,7 +59,7 @@ const About = () => {
 
       {/* 2. MISSION & SPECIALIZATION */}
       <section className="py-10 lg:py-16 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-center">
             <div className="space-y-8 lg:space-y-10 focus-ring">
               <div className="space-y-4 lg:space-y-6">
@@ -118,7 +118,7 @@ const About = () => {
         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
 
             {/* Left side - Image with premium frame */}
@@ -217,7 +217,7 @@ const About = () => {
 
       {/* 5. WHY CHOOSE US */}
       <section className="py-10 lg:py-16 bg-white shrink-0 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
           <div className="text-center mb-10 lg:mb-12">
             <div className="inline-flex items-center justify-center space-x-3 mb-4 lg:mb-6">
               <span className="w-8 h-[2px] bg-accent" />

@@ -1,12 +1,5 @@
-import { 
-  Bone, 
-  Brain, 
-  Dumbbell, 
-  Zap, 
-  Target,
-  Users,
-} from 'lucide-react';
-import React from 'react';
+import { Bone, Brain, Dumbbell, Zap, Target, Users } from "lucide-react";
+import React from "react";
 
 export interface Condition {
   id: string;
@@ -23,510 +16,531 @@ export interface Condition {
   img: string;
 }
 
-const ORTHOPEDIC_IMAGE = '/Orthopedic Rehab.avif';
-const SPORTS_IMAGE = '/Sports Rehabilitation.avif';
-const NEURO_IMAGE = '/Neuro-Rehabilitation.avif';
-const CUPPING_IMAGE = '/Cupping & Dry Needling.avif';
-const CHIROPRACTIC_IMAGE = '/Chiropractic.avif';
-const GERIATRIC_IMAGE = '/hero-interaction.webp';
+const ORTHOPEDIC_IMAGE = "/Orthopedic Rehab.avif";
+const SPORTS_IMAGE = "/Sports Rehabilitation.avif";
+const NEURO_IMAGE = "/Neuro-Rehabilitation.avif";
+const CUPPING_IMAGE = "/Cupping & Dry Needling.avif";
+const CHIROPRACTIC_IMAGE = "/Chiropractic.avif";
+const GERIATRIC_IMAGE = "/hero-interaction.webp";
 
 export const conditionsData: Record<string, Condition> = {
-  'back-pain': {
-    id: 'back-pain',
-    slug: 'back-pain',
-    category: 'Orthopedic',
-    title: 'Back Pain',
-    fullTitle: 'Back Pain Treatment at Flexo Physiotherapy',
-    description: 'Back pain is one of the most common complaints today—but not all back pain is serious, and most cases do not require surgery. While conditions like spondylitis or disc issues are often blamed, the reality is that many people experience back pain due to muscle weakness, poor posture, limited hip mobility, pelvic imbalance, or sedentary lifestyle habits.',
+  "back-pain": {
+    id: "back-pain",
+    slug: "back-pain",
+    category: "Orthopedic",
+    title: "Back Pain",
+    fullTitle: "Back Pain Treatment at Flexo Physiotherapy",
+    description:
+      "Back pain is one of the most common complaints today—but not all back pain is serious, and most cases do not require surgery. While conditions like spondylitis or disc issues are often blamed, the reality is that many people experience back pain due to muscle weakness, poor posture, limited hip mobility, pelvic imbalance, or sedentary lifestyle habits.",
     assessmentPoints: [
-      'Core and back muscle strength',
-      'Hip joint mobility and flexibility',
-      'Pelvic alignment and SI joint stability',
-      'Posture, movement patterns, and daily habits'
+      "Core and back muscle strength",
+      "Hip joint mobility and flexibility",
+      "Pelvic alignment and SI joint stability",
+      "Posture, movement patterns, and daily habits",
     ],
     rehabProgram: [
-      'Targeted strengthening exercises',
-      'Stretching and mobility training',
-      'Postural correction techniques',
-      'Manual therapy and pain relief modalities',
-      'Functional training for daily activities'
+      "Targeted strengthening exercises",
+      "Stretching and mobility training",
+      "Postural correction techniques",
+      "Manual therapy and pain relief modalities",
+      "Functional training for daily activities",
     ],
-    goal: 'Our goal is simple: reduce pain, restore movement, and prevent recurrence—all from the comfort of your home.',
-    serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas',
+    goal: "Our goal is simple: reduce pain, restore movement, and prevent recurrence—all from the comfort of your home.",
+    serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Bone, { className: "w-8 h-8" }),
-    img: ORTHOPEDIC_IMAGE
+    img: ORTHOPEDIC_IMAGE,
   },
-  'neck-pain': {
-    id: 'neck-pain',
-    slug: 'neck-pain',
-    category: 'Orthopedic',
-    title: 'Neck Pain',
-    fullTitle: 'Neck Pain Treatment at Flexo Physiotherapy',
-    description: 'Neck pain often starts subtly—stiffness while turning your head, discomfort after long phone use, or a dull ache by the end of the day. Over time, it can progress into persistent pain, headaches, or even radiating symptoms into the shoulders and arms.',
+  "neck-pain": {
+    id: "neck-pain",
+    slug: "neck-pain",
+    category: "Orthopedic",
+    title: "Neck Pain",
+    fullTitle: "Neck Pain Treatment at Flexo Physiotherapy",
+    description:
+      "Neck pain often starts subtly—stiffness while turning your head, discomfort after long phone use, or a dull ache by the end of the day. Over time, it can progress into persistent pain, headaches, or even radiating symptoms into the shoulders and arms.",
     assessmentPoints: [
-      'Deep neck muscle strength and control',
-      'Upper back (thoracic spine) mobility',
-      'Postural alignment and screen habits',
-      'Muscle tightness and movement coordination'
+      "Deep neck muscle strength and control",
+      "Upper back (thoracic spine) mobility",
+      "Postural alignment and screen habits",
+      "Muscle tightness and movement coordination",
     ],
     rehabProgram: [
-      'Deep cervical strengthening and stability training',
-      'Targeted stretching for tight muscle groups',
-      'Postural correction and ergonomic modifications',
-      'Manual therapy for pain relief and muscle relaxation',
-      'Functional retraining for daily activities'
+      "Deep cervical strengthening and stability training",
+      "Targeted stretching for tight muscle groups",
+      "Postural correction and ergonomic modifications",
+      "Manual therapy for pain relief and muscle relaxation",
+      "Functional retraining for daily activities",
     ],
-    goal: 'Our goal is to not only relieve pain but also correct the underlying dysfunction to prevent future episodes.',
-    serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas',
+    goal: "Our goal is to not only relieve pain but also correct the underlying dysfunction to prevent future episodes.",
+    serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Bone, { className: "w-8 h-8" }),
-    img: ORTHOPEDIC_IMAGE
+    img: ORTHOPEDIC_IMAGE,
   },
-  'shoulder-pain': {
-    id: 'shoulder-pain',
-    slug: 'shoulder-pain',
-    category: 'Orthopedic',
-    title: 'Shoulder Pain',
-    fullTitle: 'Shoulder Pain Treatment at Flexo Physiotherapy',
-    description: 'Shoulder pain can make even simple movements like reaching overhead, combing your hair, or lifting objects difficult and painful. It often develops gradually and, if ignored, can significantly restrict daily activities.',
+  "shoulder-pain": {
+    id: "shoulder-pain",
+    slug: "shoulder-pain",
+    category: "Orthopedic",
+    title: "Shoulder Pain",
+    fullTitle: "Shoulder Pain Treatment at Flexo Physiotherapy",
+    description:
+      "Shoulder pain can make even simple movements like reaching overhead, combing your hair, or lifting objects difficult and painful. It often develops gradually and, if ignored, can significantly restrict daily activities.",
     assessmentPoints: [
-      'Shoulder joint mobility and capsular tightness',
-      'Rotator cuff strength and activation',
-      'Scapular stability and movement control',
-      'Functional limitations in daily activities'
+      "Shoulder joint mobility and capsular tightness",
+      "Rotator cuff strength and activation",
+      "Scapular stability and movement control",
+      "Functional limitations in daily activities",
     ],
     rehabProgram: [
-      'Progressive mobility and stretching exercises',
-      'Rotator cuff and scapular strengthening',
-      'Pain-relieving manual therapy techniques',
-      'Movement correction and functional retraining',
-      'Guidance to safely return to daily activities'
+      "Progressive mobility and stretching exercises",
+      "Rotator cuff and scapular strengthening",
+      "Pain-relieving manual therapy techniques",
+      "Movement correction and functional retraining",
+      "Guidance to safely return to daily activities",
     ],
-    goal: 'Our aim is to restore pain-free movement, improve strength, and regain full shoulder function without unnecessary interventions.',
-    serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas',
+    goal: "Our aim is to restore pain-free movement, improve strength, and regain full shoulder function without unnecessary interventions.",
+    serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Bone, { className: "w-8 h-8" }),
-    img: ORTHOPEDIC_IMAGE
+    img: ORTHOPEDIC_IMAGE,
   },
-  'hip-knee-arthritis': {
-    id: 'hip-knee-arthritis',
-    slug: 'hip-knee-arthritis',
-    category: 'Orthopedic',
-    title: 'Hip & Knee Arthritis',
-    fullTitle: 'Hip & Knee Arthritis Treatment at Flexo Physiotherapy',
-    description: 'Conditions like osteoarthritis of the knee or hip develop over time due to joint wear and tear, reduced cartilage health, muscle weakness, stiffness, and altered movement patterns.',
+  "hip-knee-arthritis": {
+    id: "hip-knee-arthritis",
+    slug: "hip-knee-arthritis",
+    category: "Orthopedic",
+    title: "Hip & Knee Arthritis",
+    fullTitle: "Hip & Knee Arthritis Treatment at Flexo Physiotherapy",
+    description:
+      "Conditions like osteoarthritis of the knee or hip develop over time due to joint wear and tear, reduced cartilage health, muscle weakness, stiffness, and altered movement patterns.",
     assessmentPoints: [
-      'Joint mobility and stiffness',
-      'Muscle strength around the hip and knee',
-      'Walking pattern (gait) and weight-bearing mechanics',
-      'Functional limitations in daily activities'
+      "Joint mobility and stiffness",
+      "Muscle strength around the hip and knee",
+      "Walking pattern (gait) and weight-bearing mechanics",
+      "Functional limitations in daily activities",
     ],
     rehabProgram: [
-      'Strengthening exercises for joint support',
-      'Mobility and flexibility training to reduce stiffness',
-      'Pain-relief techniques and manual therapy',
-      'Gait training and balance improvement',
-      'Lifestyle and activity modification guidance'
+      "Strengthening exercises for joint support",
+      "Mobility and flexibility training to reduce stiffness",
+      "Pain-relief techniques and manual therapy",
+      "Gait training and balance improvement",
+      "Lifestyle and activity modification guidance",
     ],
-    goal: 'Our goal is to reduce pain, improve joint function, and delay or even avoid surgical intervention whenever possible.',
-    serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas',
+    goal: "Our goal is to reduce pain, improve joint function, and delay or even avoid surgical intervention whenever possible.",
+    serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Bone, { className: "w-8 h-8" }),
-    img: ORTHOPEDIC_IMAGE
+    img: ORTHOPEDIC_IMAGE,
   },
-  'plantar-fasciitis': {
-    id: 'plantar-fasciitis',
-    slug: 'plantar-fasciitis',
-    category: 'Orthopedic',
-    title: 'Plantar Fasciitis',
-    fullTitle: 'Plantar Fasciitis Treatment at Flexo Physiotherapy',
-    description: 'Sharp heel pain when you take your first steps in the morning? Discomfort after standing for long hours? These are classic signs of plantar fasciitis—a condition caused by irritation of the thick band of tissue (plantar fascia) that supports your foot arch.',
+  "plantar-fasciitis": {
+    id: "plantar-fasciitis",
+    slug: "plantar-fasciitis",
+    category: "Orthopedic",
+    title: "Plantar Fasciitis",
+    fullTitle: "Plantar Fasciitis Treatment at Flexo Physiotherapy",
+    description:
+      "Sharp heel pain when you take your first steps in the morning? Discomfort after standing for long hours? These are classic signs of plantar fasciitis—a condition caused by irritation of the thick band of tissue (plantar fascia) that supports your foot arch.",
     assessmentPoints: [
-      'Foot arch mechanics and weight distribution',
-      'Tightness in calf muscles and Achilles tendon',
-      'Walking pattern and load through the heel',
-      'Footwear habits and daily activity levels'
+      "Foot arch mechanics and weight distribution",
+      "Tightness in calf muscles and Achilles tendon",
+      "Walking pattern and load through the heel",
+      "Footwear habits and daily activity levels",
     ],
     rehabProgram: [
-      'Plantar fascia–specific stretching techniques',
-      'Calf and Achilles flexibility exercises',
-      'Foot intrinsic muscle strengthening',
-      'Taping techniques to support the arch',
-      'Manual therapy for pain relief and tissue recovery',
-      'Guidance on proper footwear and activity modification'
+      "Plantar fascia–specific stretching techniques",
+      "Calf and Achilles flexibility exercises",
+      "Foot intrinsic muscle strengthening",
+      "Taping techniques to support the arch",
+      "Manual therapy for pain relief and tissue recovery",
+      "Guidance on proper footwear and activity modification",
     ],
-    goal: 'Our goal is to reduce heel pain, improve foot support, and help you walk comfortably without recurring symptoms.',
-    serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas',
+    goal: "Our goal is to reduce heel pain, improve foot support, and help you walk comfortably without recurring symptoms.",
+    serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Bone, { className: "w-8 h-8" }),
-    img: ORTHOPEDIC_IMAGE
+    img: ORTHOPEDIC_IMAGE,
   },
-  'tennis-elbow': {
-    id: 'tennis-elbow',
-    slug: 'tennis-elbow',
-    category: 'Sports',
-    title: 'Tennis Elbow',
-    fullTitle: 'Tennis Elbow Treatment at Flexo Physiotherapy',
-    description: 'Tennis elbow (Lateral Epicondylitis) occurs due to overuse and strain of the forearm extensor muscles, leading to small micro-tears near the elbow. It affects both athletes and those involved in repetitive arm activities.',
+  "tennis-elbow": {
+    id: "tennis-elbow",
+    slug: "tennis-elbow",
+    category: "Sports",
+    title: "Tennis Elbow",
+    fullTitle: "Tennis Elbow Treatment at Flexo Physiotherapy",
+    description: `Pain on the outer side of your elbow while lifting objects, gripping, or even shaking hands? This is commonly known as Tennis Elbow (Lateral Epicondylitis) and it’s not limited to athletes. It frequently affects people involved in repetitive arm activities like typing, lifting, or using tools.
+Tennis elbow occurs due to overuse and strain of the forearm extensor muscles, leading to small micro- tears near the elbow.Continuing the same activities without proper treatment can worsen the condition and reduce grip strength over time.
+At Flexo Physiotherapy, we focus on load management and tendon healing, rather than just temporary pain relief.`,
     assessmentPoints: [
-      'Pain severity during gripping activities',
-      'Forearm muscle strength and endurance',
-      'Repetitive movement patterns contributing to strain',
-      'Wrist and elbow mechanics during functional tasks'
+      "Pain severity during gripping activities",
+      "Forearm muscle strength and endurance",
+      "Repetitive movement patterns contributing to strain",
+      "Wrist and elbow mechanics during functional tasks",
     ],
     rehabProgram: [
-      'Controlled loading exercises for tendon recovery',
-      'Eccentric strengthening of forearm muscles',
-      'Grip strength training and functional retraining',
-      'Manual therapy to reduce muscle tension',
-      'Activity modification to prevent further strain'
+      "Controlled loading exercises for tendon recovery",
+      "Eccentric strengthening of forearm muscles",
+      "Grip strength training and functional retraining",
+      "Manual therapy to reduce muscle tension",
+      "Activity modification to prevent further strain",
     ],
-    goal: 'Our goal is to reduce pain, restore strength, and help you return to daily activities without discomfort.',
-    serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas',
+    goal: "Our goal is to reduce pain, restore strength, and help you return to daily activities without discomfort.",
+    serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Dumbbell, { className: "w-8 h-8" }),
-    img: SPORTS_IMAGE
+    img: SPORTS_IMAGE,
   },
-  'acl-rehabilitation': {
-    id: 'acl-rehabilitation',
-    slug: 'acl-rehabilitation',
-    category: 'Sports',
-    title: 'ACL Rehabilitation',
-    fullTitle: 'ACL Reconstruction Rehabilitation at Flexo Physiotherapy',
-    description: 'Recovering from an ACL reconstruction is about restoring confidence, stability, and controlled movement in your knee through goal-oriented and progressive phases.',
+  "acl-rehabilitation": {
+    id: "acl-rehabilitation",
+    slug: "acl-rehabilitation",
+    category: "Sports",
+    title: "ACL Rehabilitation",
+    fullTitle: "ACL Reconstruction Rehabilitation at Flexo Physiotherapy",
+    description: `Recovering from an ACL reconstruction is not just about healing the ligament, it’s about restoring confidence, stability, and controlled movement in your knee. Without structured rehabilitation, patients often experience stiffness, muscle loss, or instability that can delay full recovery.
+An ACL injury and subsequent surgery impact multiple components including quadriceps strength, knee stability, proprioception(joint awareness), and movement control.Simply resting the knee is not enough guided, phase- wise rehabilitation is essential for optimal results.
+At Flexo Physiotherapy, we deliver a goal- oriented and progressive rehabilitation program designed to match each stage of your recovery.`,
     assessmentPoints: [
-      'Knee range of motion safety',
-      'Quadriceps and hamstrings activation',
-      'Balance, coordination, and joint control',
-      'Walking patterns and functional movements'
+      "Knee range of motion safety",
+      "Quadriceps and hamstrings activation",
+      "Balance, coordination, and joint control",
+      "Walking patterns and functional movements",
     ],
     rehabProgram: [
-      'Early-stage mobility and swelling management',
-      'Progressive strength training for knee support',
-      'Neuromuscular and proprioceptive training',
-      'Functional exercises tailored to daily activities',
-      'Gradual return-to-activity guidance'
+      "Early-stage mobility and swelling management",
+      "Progressive strength training for knee support",
+      "Neuromuscular and proprioceptive training",
+      "Functional exercises tailored to daily activities",
+      "Gradual return-to-activity guidance",
     ],
-    goal: 'Optimal recovery of knee stability and return to normal activity levels.',
-    serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas',
+    goal: "Optimal recovery of knee stability and return to normal activity levels.",
+    serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Dumbbell, { className: "w-8 h-8" }),
-    img: SPORTS_IMAGE
+    img: SPORTS_IMAGE,
   },
-  'ankle-sprain': {
-    id: 'ankle-sprain',
-    slug: 'ankle-sprain',
-    category: 'Sports',
-    title: 'Ankle Sprain',
-    fullTitle: 'Ankle Sprain / Ligament Injury Rehabilitation',
-    description: 'Ankle sprains require focused restoration of ligament healing, neuromuscular control, and joint stability to prevent chronic instability.',
+  "ankle-sprain": {
+    id: "ankle-sprain",
+    slug: "ankle-sprain",
+    category: "Sports",
+    title: "Ankle Sprain",
+    fullTitle: "Ankle Sprain / Ligament Injury Rehabilitation",
+    description:
+      "Ankle sprains require focused restoration of ligament healing, neuromuscular control, and joint stability to prevent chronic instability.",
     assessmentPoints: [
-      'Ligament integrity and swelling status',
-      'Range of motion and joint stiffness',
-      'Balance deficits and proprioceptive control',
-      'Gait pattern and load tolerance'
+      "Ligament integrity and swelling status",
+      "Range of motion and joint stiffness",
+      "Balance deficits and proprioceptive control",
+      "Gait pattern and load tolerance",
     ],
     rehabProgram: [
-      'Early-stage swelling control and protected mobility',
-      'Progressive loading to restore ligament strength',
-      'Advanced balance and proprioception training',
-      'Dynamic stability drills to prevent re-injury',
-      'Sport or activity-specific retraining'
+      "Early-stage swelling control and protected mobility",
+      "Progressive loading to restore ligament strength",
+      "Advanced balance and proprioception training",
+      "Dynamic stability drills to prevent re-injury",
+      "Sport or activity-specific retraining",
     ],
-    goal: 'Don’t just heal, rebuild stability and confidence in movement.',
-    serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas',
+    goal: "Don’t just heal, rebuild stability and confidence in movement.",
+    serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Dumbbell, { className: "w-8 h-8" }),
-    img: SPORTS_IMAGE
+    img: SPORTS_IMAGE,
   },
-  'rotator-cuff-injury': {
-    id: 'rotator-cuff-injury',
-    slug: 'rotator-cuff-injury',
-    category: 'Sports',
-    title: 'Rotator Cuff Injury',
-    fullTitle: 'Rotator Cuff Injury Rehabilitation at Flexo Physiotherapy',
-    description: 'Rotator cuff rehabilitation focuses on the entire shoulder complex, including scapular control and movement coordination, using a progressive loading strategy.',
+  "rotator-cuff-injury": {
+    id: "rotator-cuff-injury",
+    slug: "rotator-cuff-injury",
+    category: "Sports",
+    title: "Rotator Cuff Injury",
+    fullTitle: "Rotator Cuff Injury Rehabilitation at Flexo Physiotherapy",
+    description:
+      "Rotator cuff rehabilitation focuses on the entire shoulder complex, including scapular control and movement coordination, using a progressive loading strategy.",
     assessmentPoints: [
-      'Rotator cuff strength and activation patterns',
-      'Scapular positioning and control',
-      'Painful movement arcs and functional limitations',
-      'Shoulder biomechanics during daily tasks'
+      "Rotator cuff strength and activation patterns",
+      "Scapular positioning and control",
+      "Painful movement arcs and functional limitations",
+      "Shoulder biomechanics during daily tasks",
     ],
     rehabProgram: [
-      'Isolated rotator cuff activation and strengthening',
-      'Scapular stabilization and coordination training',
-      'Controlled loading of the tendon to promote healing',
-      'Movement correction to avoid impingement',
-      'Gradual return to overhead and functional activities'
+      "Isolated rotator cuff activation and strengthening",
+      "Scapular stabilization and coordination training",
+      "Controlled loading of the tendon to promote healing",
+      "Movement correction to avoid impingement",
+      "Gradual return to overhead and functional activities",
     ],
-    goal: 'Restore control, not just movement, for a fully functional shoulder.',
-    serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & surrounding areas',
+    goal: "Restore control, not just movement, for a fully functional shoulder.",
+    serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & surrounding areas",
     icon: React.createElement(Dumbbell, { className: "w-8 h-8" }),
-    img: SPORTS_IMAGE
+    img: SPORTS_IMAGE,
   },
-  'runners-knee': {
-    id: 'runners-knee',
-    slug: 'runners-knee',
-    category: 'Sports',
+  "runners-knee": {
+    id: "runners-knee",
+    slug: "runners-knee",
+    category: "Sports",
     title: "Runner's Knee",
     fullTitle: "Runner's Knee (Patellofemoral Pain Syndrome) Rehab",
-    description: "Patellofemoral pain syndrome is a load-related knee condition that reflects improper force distribution across the knee joint, often requiring biomechanical correction.",
+    description: `Patellofemoral pain syndrome is a load-related knee condition, often experienced as pain around or behind the kneecap during activities like climbing stairs, squatting, or prolonged sitting. It is rarely due to a single structure instead; it reflects improper force distribution across the knee joint.`,
     assessmentPoints: [
-      'Knee tracking and movement analysis',
-      'Quadriceps and hip muscle strength',
-      'Functional activities like squatting and stair climbing',
-      'Load tolerance and activity patterns'
+      "Knee tracking and movement analysis",
+      "Quadriceps and hip muscle strength",
+      "Functional activities like squatting and stair climbing",
+      "Load tolerance and activity patterns",
     ],
     rehabProgram: [
-      'Targeted strengthening of quadriceps and hip muscles',
-      'Movement retraining to improve knee alignment',
-      'Gradual load progression to build tolerance',
-      'Stretching of tight muscle groups',
-      'Activity modification without complete rest'
+      "Targeted strengthening of quadriceps and hip muscles",
+      "Movement retraining to improve knee alignment",
+      "Gradual load progression to build tolerance",
+      "Stretching of tight muscle groups",
+      "Activity modification without complete rest",
     ],
-    goal: 'Fix the movement, fix the pain for long-term sustainable recovery.',
-    serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas',
+    goal: "Fix the movement, fix the pain for long-term sustainable recovery.",
+    serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Dumbbell, { className: "w-8 h-8" }),
-    img: SPORTS_IMAGE
+    img: SPORTS_IMAGE,
   },
-  'stroke-rehabilitation': {
-    id: 'stroke-rehabilitation',
-    slug: 'stroke-rehabilitation',
-    category: 'Neuro',
-    title: 'Stroke Rehabilitation',
-    fullTitle: 'Stroke Rehabilitation (Hemiplegia) at Flexo Physiotherapy',
-    description: 'Recovery from a stroke is a gradual process focused on neuroplasticity, retraining the brain and body to work together again through evidence-based protocols.',
+  "stroke-rehabilitation": {
+    id: "stroke-rehabilitation",
+    slug: "stroke-rehabilitation",
+    category: "Neuro",
+    title: "Stroke Rehabilitation",
+    fullTitle: "Stroke Rehabilitation (Hemiplegia) at Flexo Physiotherapy",
+    description: `A stroke can significantly disrupt movement, coordination, and independence, often affecting one side of the body. Recovery is a gradual process that requires structured neurorehabilitation focused on retraining the brain and body to work together again.
+At Flexo Physiotherapy, we deliver evidence- based stroke rehabilitation tailored to each patient’s stage of recovery.Our detailed assessment includes analysis of muscle tone, voluntary control, postural alignment, balance, gait pattern, and functional independence in daily activities.`,
     assessmentPoints: [
-      'Muscle tone and voluntary control',
-      'Postural alignment and balance',
-      'Gait pattern and walking efficiency',
-      'Functional independence in daily activities'
+      "Muscle tone and voluntary control",
+      "Postural alignment and balance",
+      "Gait pattern and walking efficiency",
+      "Functional independence in daily activities",
     ],
     rehabProgram: [
-      'Task-specific training (sitting, standing, walking)',
-      'Gait training with assisted techniques',
-      'Balance and coordination exercises',
-      'Spasticity management strategies',
-      'Functional retraining for transitions and self-care'
+      "Task-specific training (sitting, standing, walking)",
+      "Gait training with assisted techniques",
+      "Balance and coordination exercises",
+      "Spasticity management strategies",
+      "Functional retraining for transitions and self-care",
     ],
-    goal: 'Restore independence and confidence through neuroplasticity-driven recovery.',
-    serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas',
+    goal: "Restore independence and confidence through neuroplasticity-driven recovery.",
+    serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Brain, { className: "w-8 h-8" }),
-    img: NEURO_IMAGE
+    img: NEURO_IMAGE,
   },
-  'parkinsons-disease': {
-    id: 'parkinsons-disease',
-    slug: 'parkinsons-disease',
-    category: 'Neuro',
+  "parkinsons-disease": {
+    id: "parkinsons-disease",
+    slug: "parkinsons-disease",
+    category: "Neuro",
     title: "Parkinson's Disease",
     fullTitle: "Parkinson's Disease Rehabilitation at Flexo Physiotherapy",
-    description: 'Consistent physiotherapy improves movement efficiency and functional independence for patients with Parkinson’s through research-backed protocols.',
+    description: `Parkinson’s Disease is a progressive neurological condition that affects movement quality, leading to slowness (bradykinesia), rigidity, tremors, and postural instability. Early and consistent physiotherapy plays a key role in maintaining mobility and preventing decline.
+At Flexo Physiotherapy, we follow research- backed rehabilitation protocols designed to improve movement efficiency and functional independence.Our assessment focuses on gait analysis, step length, posture, balance control, flexibility, and movement initiation.`,
     assessmentPoints: [
-      'Gait analysis and step length',
-      'Posture and balance control',
-      'Flexibility and movement initiation',
-      'Bradykinesia and rigidity levels'
+      "Gait analysis and step length",
+      "Posture and balance control",
+      "Flexibility and movement initiation",
+      "Bradykinesia and rigidity levels",
     ],
     rehabProgram: [
-      'Amplitude-based training (BIG movements)',
-      'Cueing techniques (visual and auditory)',
-      'Postural correction and flexibility exercises',
-      'Balance and fall-prevention training',
-      'Functional mobility drills for daily tasks'
+      "Amplitude-based training (BIG movements)",
+      "Cueing techniques (visual and auditory)",
+      "Postural correction and flexibility exercises",
+      "Balance and fall-prevention training",
+      "Functional mobility drills for daily tasks",
     ],
-    goal: 'Support long-term mobility, confidence, and quality of life within the daily environment.',
-    serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & surrounding areas',
+    goal: "Support long-term mobility, confidence, and quality of life within the daily environment.",
+    serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & surrounding areas",
     icon: React.createElement(Brain, { className: "w-8 h-8" }),
-    img: NEURO_IMAGE
+    img: NEURO_IMAGE,
   },
-  'spinal-cord-injury': {
-    id: 'spinal-cord-injury',
-    slug: 'spinal-cord-injury',
-    category: 'Neuro',
-    title: 'Spinal Cord Injury',
-    fullTitle: 'Spinal Cord Injury (SCI) Rehabilitation',
-    description: 'Maximizing independence and preventing secondary complications through highly individualized and goal-oriented neurorehabilitation.',
+  "spinal-cord-injury": {
+    id: "spinal-cord-injury",
+    slug: "spinal-cord-injury",
+    category: "Neuro",
+    title: "Spinal Cord Injury",
+    fullTitle: "Spinal Cord Injury (SCI) Rehabilitation",
+    description: `Spinal cord injuries can lead to partial or complete loss of movement and sensation, requiring a highly individualized and goal-oriented rehabilitation approach. Recovery focuses on maximizing independence and preventing secondary complications.
+At Flexo Physiotherapy, we conduct comprehensive assessments including muscle strength grading, sensory evaluation, trunk control, postural stability, and functional abilities such as transfers and mobility.`,
     assessmentPoints: [
-      'Muscle strength grading and sensory evaluation',
-      'Trunk control and postural stability',
-      'Functional abilities (transfers, mobility)',
-      'Wheelchair mobility assessment'
+      "Muscle strength grading and sensory evaluation",
+      "Trunk control and postural stability",
+      "Functional abilities (transfers, mobility)",
+      "Wheelchair mobility assessment",
     ],
     rehabProgram: [
-      'Bed mobility and transfer training',
-      'Strengthening of preserved muscle groups',
-      'Trunk stability and postural control',
-      'Wheelchair mobility and independence training',
-      'Education for complication prevention'
+      "Bed mobility and transfer training",
+      "Strengthening of preserved muscle groups",
+      "Trunk stability and postural control",
+      "Wheelchair mobility and independence training",
+      "Education for complication prevention",
     ],
-    goal: 'Maximize independence and functional capacity for a better quality of life.',
-    serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas',
+    goal: "Maximize independence and functional capacity for a better quality of life.",
+    serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Brain, { className: "w-8 h-8" }),
-    img: NEURO_IMAGE
+    img: NEURO_IMAGE,
   },
-  'cerebral-palsy': {
-    id: 'cerebral-palsy',
-    slug: 'cerebral-palsy',
-    category: 'Neuro',
-    title: 'Cerebral Palsy',
-    fullTitle: 'Cerebral Palsy Rehabilitation (Pediatric Neuro)',
-    description: 'Evidence-based, child-centered neurodevelopmental therapy to support motor development and enhance independence in children.',
+  "cerebral-palsy": {
+    id: "cerebral-palsy",
+    slug: "cerebral-palsy",
+    category: "Neuro",
+    title: "Cerebral Palsy",
+    fullTitle: "Cerebral Palsy Rehabilitation (Pediatric Neuro)",
+    description: `Cerebral palsy affects a child’s ability to control movement, posture, and coordination. Early and structured intervention is essential to support motor development and improve functional abilities.
+At Flexo Physiotherapy, we provide evidence- based, child- centered neurodevelopmental therapy tailored to each child’s specific needs.Our assessment includes evaluation of motor milestones, muscle tone, posture, balance, coordination, and functional skills.`,
     assessmentPoints: [
-      'Motor milestones and posture',
-      'Muscle tone and balance',
-      'Coordination and functional skills',
-      'Play-based mobility assessment'
+      "Motor milestones and posture",
+      "Muscle tone and balance",
+      "Coordination and functional skills",
+      "Play-based mobility assessment",
     ],
     rehabProgram: [
-      'Facilitation of normal movement patterns',
-      'Postural control and balance training',
-      'Stretching for muscle tightness management',
-      'Play-based functional training',
-      'Parent education and home-exercise integration'
+      "Facilitation of normal movement patterns",
+      "Postural control and balance training",
+      "Stretching for muscle tightness management",
+      "Play-based functional training",
+      "Parent education and home-exercise integration",
     ],
-    goal: 'Enhance each child’s independence, motor skills, and overall development.',
-    serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas',
+    goal: "Enhance each child’s independence, motor skills, and overall development.",
+    serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Brain, { className: "w-8 h-8" }),
-    img: NEURO_IMAGE
+    img: NEURO_IMAGE,
   },
-  'facial-palsy': {
-    id: 'facial-palsy',
-    slug: 'facial-palsy',
-    category: 'Neuro',
-    title: 'Facial Palsy',
-    fullTitle: 'Facial Palsy (Bell’s Palsy) Treatment',
-    description: 'Timely physiotherapy intervention restores natural facial expressions and symmetry while preventing long-term complications.',
+  "facial-palsy": {
+    id: "facial-palsy",
+    slug: "facial-palsy",
+    category: "Neuro",
+    title: "Facial Palsy",
+    fullTitle: "Facial Palsy (Bell’s Palsy) Treatment",
+    description: `Facial palsy results in weakness or paralysis of facial muscles, affecting expressions, speech, and symmetry. Timely physiotherapy intervention is essential for optimal recovery and prevention of long-term complications.
+At Flexo Physiotherapy, we use a precise, evidence- based facial rehabilitation approach.Assessment includes evaluation of muscle activation, symmetry, voluntary control, and presence of abnormal movement patterns.`,
     assessmentPoints: [
-      'Muscle activation and symmetry',
-      'Voluntary control and movement speed',
-      'Presence of abnormal movement patterns',
-      'Circulation and tissue stiffness'
+      "Muscle activation and symmetry",
+      "Voluntary control and movement speed",
+      "Presence of abnormal movement patterns",
+      "Circulation and tissue stiffness",
     ],
     rehabProgram: [
-      'Facial muscle re-education and activation',
-      'Neuromuscular facilitation techniques',
-      'Mirror therapy for visual feedback',
-      'Soft tissue techniques for stiffness',
-      'Guidance to prevent synkinesis'
+      "Facial muscle re-education and activation",
+      "Neuromuscular facilitation techniques",
+      "Mirror therapy for visual feedback",
+      "Soft tissue techniques for stiffness",
+      "Guidance to prevent synkinesis",
     ],
-    goal: 'Restore natural facial expressions, symmetry, and patient confidence.',
-    serviceArea: 'Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas',
+    goal: "Restore natural facial expressions, symmetry, and patient confidence.",
+    serviceArea: "Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas",
     icon: React.createElement(Brain, { className: "w-8 h-8" }),
-    img: NEURO_IMAGE
+    img: NEURO_IMAGE,
   },
-  'dry-needling': {
-    id: 'dry-needling',
-    slug: 'dry-needling',
-    category: 'Specialized',
-    title: 'Dry Needling',
-    fullTitle: 'Dry Needling Therapy at Flexo Physiotherapy',
-    description: 'Precise intervention to deactivate myofascial trigger points, release deep muscle tension, and restore normal muscle function.',
+  "dry-needling": {
+    id: "dry-needling",
+    slug: "dry-needling",
+    category: "Specialized",
+    title: "Dry Needling",
+    fullTitle: "Dry Needling Therapy at Flexo Physiotherapy",
+    description:
+      "Precise intervention to deactivate myofascial trigger points, release deep muscle tension, and restore normal muscle function.",
     assessmentPoints: [
-      'Palpation for hyper-irritable spots',
-      'Movement restriction assessment',
-      'Pain referral pattern analysis',
-      'Muscle imbalance evaluation'
+      "Palpation for hyper-irritable spots",
+      "Movement restriction assessment",
+      "Pain referral pattern analysis",
+      "Muscle imbalance evaluation",
     ],
     rehabProgram: [
-      'Targeted needle insertion for trigger point release',
-      'Corrective exercises for lasting results',
-      'Post-procedure mobility integration',
-      'Load management strategies'
+      "Targeted needle insertion for trigger point release",
+      "Corrective exercises for lasting results",
+      "Post-procedure mobility integration",
+      "Load management strategies",
     ],
-    goal: 'Release the source of pain and restore normal muscle tissue health.',
-    serviceArea: 'Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas',
+    goal: "Release the source of pain and restore normal muscle tissue health.",
+    serviceArea: "Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas",
     icon: React.createElement(Zap, { className: "w-8 h-8" }),
-    img: CUPPING_IMAGE
+    img: CUPPING_IMAGE,
   },
-  'cupping-therapy': {
-    id: 'cupping-therapy',
-    slug: 'cupping-therapy',
-    category: 'Specialized',
-    title: 'Cupping Therapy',
-    fullTitle: 'Cupping Therapy at Flexo Physiotherapy',
-    description: 'Clinical application of negative pressure to improve blood flow, tissue mobility, and muscle relaxation for chronic tightness.',
+  "cupping-therapy": {
+    id: "cupping-therapy",
+    slug: "cupping-therapy",
+    category: "Specialized",
+    title: "Cupping Therapy",
+    fullTitle: "Cupping Therapy at Flexo Physiotherapy",
+    description:
+      "Clinical application of negative pressure to improve blood flow, tissue mobility, and muscle relaxation for chronic tightness.",
     assessmentPoints: [
-      'Tissue restriction and congestion',
-      'Movement limitations and stiffness',
-      'Fascial tightness and muscle tension',
-      'Recovery speed from muscle fatigue'
+      "Tissue restriction and congestion",
+      "Movement limitations and stiffness",
+      "Fascial tightness and muscle tension",
+      "Recovery speed from muscle fatigue",
     ],
     rehabProgram: [
-      'Dynamic or static cupping application',
-      'Movement-based techniques during cupping',
-      'Exercise therapy integration',
-      'Soft tissue mobilization post-cupping'
+      "Dynamic or static cupping application",
+      "Movement-based techniques during cupping",
+      "Exercise therapy integration",
+      "Soft tissue mobilization post-cupping",
     ],
-    goal: 'Enhance recovery by improving tissue mobility and local circulation.',
-    serviceArea: 'Hyderabad, Kukatpally, Miyapur, Kondapur & surrounding areas',
+    goal: "Enhance recovery by improving tissue mobility and local circulation.",
+    serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & surrounding areas",
     icon: React.createElement(Zap, { className: "w-8 h-8" }),
-    img: CUPPING_IMAGE
+    img: CUPPING_IMAGE,
   },
-  'iastm': {
-    id: 'iastm',
-    slug: 'iastm',
-    category: 'Specialized',
-    title: 'IASTM',
-    fullTitle: 'Instrument Assisted Soft Tissue Mobilization',
-    description: 'Breaking down adhesions and scar tissue within muscles and fascia using specialized tools to restore movement quality.',
+  iastm: {
+    id: "iastm",
+    slug: "iastm",
+    category: "Specialized",
+    title: "IASTM",
+    fullTitle: "Instrument Assisted Soft Tissue Mobilization",
+    description:
+      "Breaking down adhesions and scar tissue within muscles and fascia using specialized tools to restore movement quality.",
     assessmentPoints: [
-      'Detection of tissue stiffness and fibrosis',
-      'Movement limitations via tissue restriction',
-      'Functional deficits from reduced mobility',
-      'Chronic stiffness and scar tissue levels'
+      "Detection of tissue stiffness and fibrosis",
+      "Movement limitations via tissue restriction",
+      "Functional deficits from reduced mobility",
+      "Chronic stiffness and scar tissue levels",
     ],
     rehabProgram: [
-      'Specialized instrument mobilization',
-      'Improving tissue glide and circulation',
-      'Corrective strengthening post-treatment',
-      'Range-of-motion integration'
+      "Specialized instrument mobilization",
+      "Improving tissue glide and circulation",
+      "Corrective strengthening post-treatment",
+      "Range-of-motion integration",
     ],
-    goal: 'Restore tissue health and quality of movement through precision mobilization.',
-    serviceArea: 'Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas',
+    goal: "Restore tissue health and quality of movement through precision mobilization.",
+    serviceArea: "Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas",
     icon: React.createElement(Target, { className: "w-8 h-8" }),
-    img: CHIROPRACTIC_IMAGE
+    img: CHIROPRACTIC_IMAGE,
   },
-  'chiropractic-care': {
-    id: 'chiropractic-care',
-    slug: 'chiropractic-care',
-    category: 'Specialized',
-    title: 'Chiropractic Care',
-    fullTitle: 'Chiropractic Care at Flexo Physiotherapy',
-    description: 'Precise spinal adjustments to improve joint mobility, correct misalignment, and optimize spinal function.',
+  "chiropractic-care": {
+    id: "chiropractic-care",
+    slug: "chiropractic-care",
+    category: "Specialized",
+    title: "Chiropractic Care",
+    fullTitle: "Chiropractic Care at Flexo Physiotherapy",
+    description:
+      "Precise spinal adjustments to improve joint mobility, correct misalignment, and optimize spinal function.",
     assessmentPoints: [
-      'Spinal alignment and segmental mobility',
-      'Postural analysis and biomechanics',
-      'Joint restrictions contributing to discomfort',
-      'Functional limitations in daily activities'
+      "Spinal alignment and segmental mobility",
+      "Postural analysis and biomechanics",
+      "Joint restrictions contributing to discomfort",
+      "Functional limitations in daily activities",
     ],
     rehabProgram: [
-      'Targeted spinal adjustments and mobility',
-      'Manual mobilization for restricted segments',
-      'Soft tissue release for muscle tension',
-      'Postural correction and stability exercises',
-      'Integration with clinical strength protocols'
+      "Targeted spinal adjustments and mobility",
+      "Manual mobilization for restricted segments",
+      "Soft tissue release for muscle tension",
+      "Postural correction and stability exercises",
+      "Integration with clinical strength protocols",
     ],
-    goal: 'Realign, restore, and move better through a combined clinical approach.',
-    serviceArea: 'Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas',
+    goal: "Realign, restore, and move better through a combined clinical approach.",
+    serviceArea: "Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas",
     icon: React.createElement(Target, { className: "w-8 h-8" }),
-    img: CHIROPRACTIC_IMAGE
+    img: CHIROPRACTIC_IMAGE,
   },
-  'geriatric-physiotherapy': {
-    id: 'geriatric-physiotherapy',
-    slug: 'geriatric-physiotherapy',
-    category: 'Specialized',
-    title: 'Geriatric Physiotherapy',
-    fullTitle: 'Geriatric Physiotherapy at Flexo Physiotherapy',
-    description: 'Patient-centered programs specifically for older adults to improve strength, balance, and independence at home.',
+  "geriatric-physiotherapy": {
+    id: "geriatric-physiotherapy",
+    slug: "geriatric-physiotherapy",
+    category: "Specialized",
+    title: "Geriatric Physiotherapy",
+    fullTitle: "Geriatric Physiotherapy at Flexo Physiotherapy",
+    description:
+      "Patient-centered programs specifically for older adults to improve strength, balance, and independence at home.",
     assessmentPoints: [
-      'Muscle strength and joint flexibility',
-      'Balance and fall risk evaluation',
-      'Walking pattern and functional mobility',
-      'Safe performance of daily activities'
+      "Muscle strength and joint flexibility",
+      "Balance and fall risk evaluation",
+      "Walking pattern and functional mobility",
+      "Safe performance of daily activities",
     ],
     rehabProgram: [
-      'Strength training for stability and support',
-      'Balance and coordination exercises',
-      'Mobility training for daily transfers',
-      'Pain management for chronic conditions',
-      'Breathing and endurance exercises'
+      "Strength training for stability and support",
+      "Balance and coordination exercises",
+      "Mobility training for daily transfers",
+      "Pain management for chronic conditions",
+      "Breathing and endurance exercises",
     ],
-    goal: 'Stay active and independent, aging with strength and confidence.',
-    serviceArea: 'Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas',
+    goal: "Stay active and independent, aging with strength and confidence.",
+    serviceArea: "Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas",
     icon: React.createElement(Users, { className: "w-8 h-8" }),
-    img: GERIATRIC_IMAGE
-  }
+    img: GERIATRIC_IMAGE,
+  },
 };

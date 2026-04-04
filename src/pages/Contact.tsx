@@ -68,7 +68,7 @@ const Contact = () => {
           <div className="absolute inset-0 bg-white/90 lg:bg-white/85" />
         </motion.div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 text-center">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -103,7 +103,7 @@ const Contact = () => {
           {BRAND_NAME.toUpperCase()}
         </motion.div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start">
 
             {/* Contact Details */}

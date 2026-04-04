@@ -39,7 +39,7 @@ const Conditions = () => {
           TREATMENTS
         </div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -56,7 +56,7 @@ const Conditions = () => {
             <h1 className="text-5xl lg:text-7xl font-serif font-bold text-primary leading-tight">
               Treatments We <span className="text-accent italic font-normal">Offer</span>
             </h1>
-            <p className="text-lg lg:text-xl text-dark font-medium leading-relaxed max-w-3xl mx-auto opacity-90">
+            <p className="text-lg lg:text-xl text-dark font-medium leading-relaxed max-w-5xl mx-auto opacity-90">
               Expert physical therapy for complex conditions, delivered by certified specialists in the comfort of your home.
             </p>
           </motion.div>
@@ -65,7 +65,7 @@ const Conditions = () => {
 
       {/* 3. TREATMENT APPROACH */}
       <section className="py-10 lg:py-16 bg-gradient-to-br from-primary/5 to-accent/5 relative overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="text-center mb-10 lg:mb-12">
             <div className="inline-flex items-center justify-center space-x-3 mb-4 lg:mb-6">
               <span className="w-8 h-[2px] bg-accent" />

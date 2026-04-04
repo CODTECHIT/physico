@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Bone, Brain, Dumbbell, Target, Zap, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Bone, Brain, Dumbbell, Target, Zap, ArrowRight, CheckCircle2, Users } from 'lucide-react';
 import Button from '../components/Button';
 import { Link } from 'react-router-dom';
 import { BRAND_NAME } from '../constants';
@@ -59,31 +59,76 @@ const Services = () => {
     },
     {
       id: '04',
-      slug: 'chiropractic',
+      slug: 'chiropactic',
       title: 'Chiropractic Care',
-      desc: 'Expert chiropractic care at home in Hyderabad, Kukatpally, and Miyapur. Natural pain relief for back, neck, and joint stiffness.',
+      desc: 'Expert chiropractic care at home in Hyderabad, Kukatpally, and Miyapur. Restore joint mobility and optimize spinal function through precise, evidence-informed techniques.',
       features: [
-        'Spinal & joint adjustments',
-        'Posture correction & ergonomics',
-        'Sports injury chiropractic',
-        'Headache & stiffness relief'
+        'Spinal adjustments & mobilization',
+        'Postural correction',
+        'Combined rehabilitation approach',
+        'Long-term stability'
       ],
-      focus: 'Improve alignment & reduce discomfort',
+      focus: 'Restore joint mobility & optimize spinal function',
       icon: <Target className="w-8 h-8" />,
       img: '/Chiropractic.avif'
     },
     {
-      id: '05',
-      slug: 'cupping',
-      title: 'Cupping & Dry Needling',
-      desc: 'Expert Dry Needling and Cupping therapy at home in Kukatpally and Miyapur. Natural relief for deep muscle tension and faster sports recovery.',
+      id: '08',
+      slug: 'geriatric',
+      title: 'Geriatric Physiotherapy',
+      desc: 'Specialized physiotherapy for older adults at home in Kukatpally and Miyapur. Evidence-based care to improve mobility, balance, and independence.',
       features: [
-        'Deep muscle tension relief',
-        'Trigger point dry needling',
-        'Advanced cupping therapy',
-        'Enhanced healing speed'
+        'Balance & fall prevention',
+        'Strength training',
+        'Mobility & gait training',
+        'Pain management'
       ],
-      focus: 'Deep muscle relief & faster healing',
+      focus: 'Stay active & independent',
+      icon: <Users className="w-8 h-8" />,
+      img: '/Orthopedic Rehab.avif'
+    },
+    {
+      id: '05',
+      slug: 'dry-needling',
+      title: 'Dry Needling Therapy',
+      desc: 'Evidence-based dry needling therapy at home in Kukatpally and Miyapur. Precise intervention to deactivate myofascial trigger points and restore normal muscle function.',
+      features: [
+        'Myofascial trigger point release',
+        'Targeted needle insertion',
+        'Combined with corrective exercises',
+        'Root cause rehabilitation'
+      ],
+      focus: 'Release trigger points & restore muscle function',
+      icon: <Zap className="w-8 h-8" />,
+      img: '/Cupping & Dry Needling.avif'
+    },
+    {
+      id: '06',
+      slug: 'cupping',
+      title: 'Cupping Therapy',
+      desc: 'Professional cupping therapy at home in Kukatpally and Miyapur. Controlled negative pressure to improve blood flow, tissue mobility, and muscle relaxation.',
+      features: [
+        'Dynamic & static cupping',
+        'Tissue mobility improvement',
+        'Enhanced blood circulation',
+        'Combined with exercise therapy'
+      ],
+      focus: 'Improve tissue mobility & muscle relaxation',
+      icon: <Zap className="w-8 h-8" />,
+      img: '/Cupping & Dry Needling.avif'
+    },
+    {
+      id: '07',
+      slug: 'iastm',
+      title: 'IASTM',
+      desc: 'Instrument Assisted Soft Tissue Mobilization at home in Kukatpally and Miyapur. Advanced technique to detect and treat soft tissue restrictions, adhesions, and scar tissue.',
+      features: [
+        'Soft tissue adhesion release',
+        'Scar tissue management',
+        'Improved tissue glide',
+        'Combined with active rehabilitation'
+      ],
+      focus: 'Restore tissue health & movement quality',
       icon: <Zap className="w-8 h-8" />,
       img: '/Cupping & Dry Needling.avif'
     }
@@ -107,7 +152,7 @@ const Services = () => {
           <div className="absolute inset-0 bg-white/90 lg:bg-white/85" />
         </motion.div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center relative z-10">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -124,7 +169,7 @@ const Services = () => {
             <h1 className="text-4xl lg:text-7xl font-serif font-bold text-primary leading-tight">
               Comprehensive <span className="text-accent italic font-normal">Physiotherapy</span> <br /> Care at Home
             </h1>
-            <p className="text-sm lg:text-xl text-dark font-medium leading-relaxed max-w-3xl mx-auto opacity-90">
+            <p className="text-sm lg:text-xl text-dark font-medium leading-relaxed max-w-5xl mx-auto opacity-90">
               We offer specialized physiotherapy services designed to help you recover faster, reduce pain, and regain mobility — all from the comfort of your home.
             </p>
           </motion.div>
@@ -141,7 +186,7 @@ const Services = () => {
           {BRAND_NAME.toUpperCase()}
         </motion.div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
             {allServices.map((service, idx) => (
               <motion.div

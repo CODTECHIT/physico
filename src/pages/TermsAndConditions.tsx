@@ -82,7 +82,7 @@ const TermsAndConditions = () => {
           <div className="absolute inset-0 bg-white/90 lg:bg-white/85" />
         </motion.div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 text-center relative z-10">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -105,7 +105,7 @@ const TermsAndConditions = () => {
 
       {/* CONTENT */}
       <section className="pt-4 pb-10 lg:pt-8 lg:pb-16 relative overflow-hidden">
-        <div className="max-w-4xl mx-auto px-6 lg:px-12">
+        <div className="max-w-5xl mx-auto px-6 lg:px-12">
           <div className="bg-white p-6 lg:p-12 rounded-[2rem] lg:rounded-[2.5rem] shadow-xl border border-primary/5 space-y-8 lg:space-y-12">
             {/* Intro */}
             <div className="flex items-start gap-4 lg:gap-6 bg-accent/5 p-5 lg:p-6 rounded-xl lg:rounded-2xl">

@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { CheckCircle2, ArrowRight, Dumbbell, Bone, Brain, Heart, Target, Zap } from 'lucide-react';
+import { CheckCircle2, ArrowRight, Dumbbell, Bone, Brain, Heart, Target, Zap, Users } from 'lucide-react';
 import Button from '../components/Button';
 import { CONTACT_WHATSAPP_LINK, BRAND_NAME } from '../constants';
 
@@ -26,24 +26,26 @@ const servicesData = {
     ],
     focus: 'Improve heart function & overall endurance'
   },
-  'neurological': {
+'neurological': {
     title: 'Neuro Rehabilitation',
-    desc: 'Specialized Neuro-Rehabilitation at Home in Kukatpally & Miyapur. Our expert neuro physiotherapy brings advanced care directly to your doorstep in Hyderabad. We work with patients affected by stroke, Parkinson’s, and cerebral palsy, offering tailored home-based therapy that improves balance, strength, and motor control.',
+    desc: `Specialized Neuro-Rehabilitation at Home in Kukatpally & Miyapur. Our expert neuro physiotherapy brings advanced care directly to your doorstep in Hyderabad. We work with patients affected by stroke, Parkinson's, and cerebral palsy, offering tailored home-based therapy that improves balance, strength, and motor control. At ${BRAND_NAME}, we follow research-backed rehabilitation protocols designed to improve movement efficiency and functional independence. Move better, live better, begin your rehab journey now.`,
     icon: <Brain className="w-12 h-12" />,
     img: '/Neuro-Rehabilitation.avif',
     conditions: [
-      'Stroke recovery & rehab',
-      'Parkinson’s disease care',
-      'Cerebral palsy therapy',
-      'Post-spinal injury rehab',
-      'Motor control training',
+      'Stroke Rehabilitation',
+      'Parkinson\'s Disease Rehabilitation',
+      'Cerebral Palsy Therapy',
+      'Spinal Cord Injury Rehabilitation',
+      'Facial Palsy (Bell\'s Palsy)',
       'Balance & gait improvement'
     ],
     features: [
-      'Stroke recovery made easy: Regain mobility, coordination, and independence through targeted strength and gait training in your own environment.',
-      'Parkinson’s & movement support: Boost balance, refine walking patterns, and reduce stiffness with customized motor control exercises.',
-      'Cerebral palsy & pediatric neuro: Gentle, child-friendly rehabilitation focusing on motor skills, flexibility, and daily function at home.',
-      'Post-spinal injury rehabilitation: Manual therapy, neuromuscular reeducation, and adaptive advice to enhance safety and ease of movement.'
+      'Stroke Rehabilitation: Comprehensive stroke recovery with mobility, coordination, and independence through targeted strength and gait training.',
+      'Parkinson\'s Disease Rehabilitation: Research-backed protocols for movement efficiency including amplitude-based training, cueing techniques, and postural correction.',
+      'Cerebral Palsy Therapy: Gentle, child-friendly rehabilitation focusing on motor skills, flexibility, and daily function at home.',
+      'Spinal Cord Injury Rehabilitation: Comprehensive SCI rehab including bed mobility, transfer training, trunk stability, and wheelchair mobility for maximum independence.',
+      'Facial Palsy (Bell\'s Palsy): Evidence-based facial rehabilitation with muscle re-education, mirror therapy, and techniques to restore natural facial expressions.',
+      'Balance and fall-prevention training: Comprehensive balance training to reduce fall risks and improve stability.'
     ],
     focus: 'Restore function & improve quality of life'
   },
@@ -53,96 +55,378 @@ const servicesData = {
     icon: <Bone className="w-12 h-12" />,
     img: '/Orthopedic Rehab.avif',
     conditions: [
+      'Back Pain Treatment',
+      'Neck Pain Treatment',
+      'Shoulder Pain Treatment',
+      'Plantar Fasciitis Treatment',
       'Post-surgery joint recovery',
-      'Muscle & joint pain relief',
-      'Chronic musculoskeletal pain',
-      'Fracture & injury rehab',
-      'Flexibility & strength building',
-      'Home-based treatment plans'
+      'Muscle & joint pain relief'
     ],
     features: [
+      'Back Pain Treatment: Comprehensive evaluation and personalized rehab for back pain including core strengthening, posture correction, and manual therapy.',
+      'Neck Pain Treatment: Targeted approach for neck pain focusing on deep cervical strength, thoracic mobility, and ergonomic corrections.',
+      'Shoulder Pain Treatment: Evidence-based rehabilitation for frozen shoulder, rotator cuff injuries, and scapular stability.',
+      'Plantar Fasciitis Treatment: Specialized care for heel pain with fascia stretching, calf flexibility, and foot mechanics correction.',
       'Post-surgery joint recovery: Safe and effective healing at home following knee, hip, or shoulder surgery with tailored exercises and mobility techniques.',
-      'Muscle & joint pain relief: Targeted relief from pain, stiffness, and inflammation through soft tissue therapy and joint mobilization.',
-      'Improved flexibility & strength: Guided routines designed to enhance overall mobility and support pain-free movement in daily activities.',
-      'Personalized home-based plans: Customized strategies including ergonomic advice, rehab exercises, and self-care instruction in your own space.'
+      'Muscle & joint pain relief: Targeted relief from pain, stiffness, and inflammation through soft tissue therapy and joint mobilization.'
     ],
     focus: 'Reduce pain & restore movement'
   },
-  'sports': {
+'sports': {
     title: 'Sports Rehabilitation',
-    desc: `Specialized Sports Rehabilitation at Home in Kukatpally & Miyapur. At ${BRAND_NAME}, we bring expert sports physiotherapy and injury recovery right to your doorstep in Hyderabad. Whether you’re recovering from an injury, managing joint pain, or aiming to get back to peak performance, our expert physiotherapists design customized rehab programs to help you heal safely and quickly.`,
+    desc: `Specialized Sports Rehabilitation at Home in Kukatpally & Miyapur. At ${BRAND_NAME}, we bring expert sports physiotherapy and injury recovery right to your doorstep in Hyderabad. Whether you're recovering from an injury, managing joint pain, or aiming to get back to peak performance, our expert physiotherapists design customized rehab programs to help you heal safely and quickly.`,
     icon: <Dumbbell className="w-12 h-12" />,
     img: '/Sports Rehabilitation.avif',
     conditions: [
-      'Injury recovery & pain relief',
-      'Post-surgical sports rehab',
-      'ACL & meniscus recovery',
-      'Shoulder & ligament injuries',
-      'Performance enhancement',
-      'Return-to-sport planning'
+      'Tennis Elbow Treatment',
+      'Golfer\'s Elbow Treatment',
+      'ACL Reconstruction Rehabilitation',
+      'Rotator Cuff Injury Rehabilitation',
+      'Patellofemoral Pain Syndrome',
+      'Injury recovery & pain relief'
     ],
     features: [
-      'Injury recovery & pain management: Expert care for sports injuries like sprains, strains, ligament tears, and joint pain in the comfort of your home.',
-      'Post-surgical sports rehab: Safe and progressive programs for athletes recovering from ACL, meniscus, or shoulder surgeries.',
-      'Performance enhancement: Customized strengthening, flexibility, and conditioning exercises to prevent future injuries and boost athletic performance.',
-      'Return-to-sport guidance: Step-by-step recovery planning to help you safely return to training or competition without risking re-injury.'
+      'Tennis Elbow Treatment: Focused rehabilitation for lateral epicondylitis including controlled loading exercises, eccentric strengthening, and grip training.',
+      'Golfer\'s Elbow Treatment: Medial epicondylitis care with forearm muscle strengthening and activity modification.',
+      'ACL Reconstruction Rehabilitation: Post-surgical rehabilitation for ACL injuries with progressive strengthening and return-to-sport planning.',
+      'Rotator Cuff Injury Rehabilitation: Comprehensive care for rotator cuff, shoulder impingement, and ligament injuries.',
+      'Patellofemoral Pain Syndrome: Biomechanical correction for runner\'s knee with quadriceps and hip strengthening.',
+      'Injury recovery & pain management: Expert care for sports injuries like sprains, strains, ligament tears, and joint pain.'
     ],
     focus: 'Faster recovery & injury prevention'
   },
-  'chiropractic': {
+  'tennis-elbow': {
+    title: 'Tennis Elbow Treatment',
+    desc: `Pain on the outer side of your elbow while lifting objects, gripping, or even shaking hands? This is commonly known as Tennis Elbow (Lateral Epicondylitis) and it's not limited to athletes. It frequently affects people involved in repetitive arm activities like typing, lifting, or using tools. Tennis elbow occurs due to overuse and strain of the forearm extensor muscles, leading to small micro-tears near the elbow. Continuing the same activities without proper treatment can worsen the condition and reduce grip strength over time. At ${BRAND_NAME}, we focus on load management and tendon healing, rather than just temporary pain relief. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you receive focused, one-on-one care. Treat the cause of strain—don't let elbow pain limit your strength. Book your session today for effective, home-based recovery.`,
+    icon: <Dumbbell className="w-12 h-12" />,
+    img: '/Sports Rehabilitation.avif',
+    conditions: [
+      'Lateral epicondylitis',
+      'Forearm extensor strain',
+      'Grip weakness & pain',
+      'Repetitive strain injury',
+      'Micro-tears in tendons',
+      'Elbow discomfort'
+    ],
+    features: [
+      'Pain location and severity during gripping activities: Detailed assessment of pain patterns and functional limitations.',
+      'Forearm muscle strength and endurance: Evaluation of forearm extensor muscles health.',
+      'Repetitive movement patterns contributing to strain: Analysis of work and daily activities causing overuse.',
+      'Wrist and elbow mechanics during functional tasks: Assessment of movement patterns affecting the elbow.',
+      'Controlled loading exercises for tendon recovery: Gradual tendon loading to promote healing.',
+      'Eccentric strengthening of forearm muscles: Progressive eccentric exercises for tendon strength.'
+],
+    focus: 'Reduce pain, restore strength, and return to daily activities without discomfort'
+  },
+  'patellofemoral-pain': {
+    title: 'Patellofemoral Pain Syndrome (Runner\'s Knee)',
+    desc: `Patellofemoral pain syndrome is a load-related knee condition, often experienced as pain around or behind the kneecap during activities like climbing stairs, squatting, or prolonged sitting. It is rarely due to a single structure—instead, it reflects improper force distribution across the knee joint. Contributing factors commonly include weak quadriceps (especially VMO), poor hip strength and control, altered knee alignment during movement, and overuse from running or repetitive loading. At ${BRAND_NAME}, we take a biomechanical correction approach, focusing on how the entire lower limb functions together. Serving Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, we help you move pain-free with better control and efficiency. Fix the movement, fix the pain.`,
+    icon: <Dumbbell className="w-12 h-12" />,
+    img: '/Sports Rehabilitation.avif',
+    conditions: [
+      'Knee pain around kneecap',
+      'Quadriceps weakness (VMO)',
+      'Hip weakness & control',
+      'Altered knee alignment',
+      'Overuse from running',
+      'Squatting & stair pain'
+    ],
+    features: [
+      'Knee tracking and movement analysis: Assessment of how the kneecap tracks during movement.',
+      'Quadriceps and hip muscle strength: Evaluation of VMO and hip muscle function.',
+      'Functional activities like squatting and stair climbing: Analysis of pain-provoking activities.',
+      'Load tolerance and activity patterns: Assessment of activity-related stress on the knee.',
+      'Targeted strengthening of quadriceps and hip muscles: Exercises to improve lower limb strength.',
+      'Movement retraining to improve knee alignment: Correction of movement patterns for proper force distribution.'
+    ],
+    focus: 'Correct the root cause for sustainable, pain-free movement'
+  },
+  'chiropactic': {
     title: 'Chiropractic Care',
-    desc: `Expert Chiropractic Care at Home in Hyderabad. At ${BRAND_NAME}, we bring professional chiropractic treatment directly to your doorstep, eliminating the need for clinic travel. Our approach focuses on spinal alignment, joint health, and muscle function to relieve pain and improve mobility naturally in the comfort of your home.`,
+    desc: `Pain and stiffness in the spine are often not just due to muscle strain—they can be linked to joint restrictions, spinal misalignment, and altered biomechanics. These issues may develop from prolonged sitting, poor posture, repetitive stress, or previous injuries, leading to reduced mobility and persistent discomfort. At ${BRAND_NAME}, chiropractic care focuses on restoring joint mobility and optimizing spinal function through precise, controlled techniques. We emphasize a combined approach, where chiropractic techniques are supported with physiotherapy-based rehabilitation to ensure lasting results—not just temporary relief. Home-based sessions offer added comfort and safety. Serving Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas, we provide personalized, evidence-informed chiropractic care. Realign, restore, and move better—start your recovery today.`,
     icon: <Target className="w-12 h-12" />,
     img: '/Chiropractic.avif',
     conditions: [
-      'Back & neck pain relief',
+      'Spinal joint restrictions',
       'Spinal misalignment',
-      'Shoulder & joint stiffness',
-      'Postural headaches',
-      'Repetitive strain injuries',
-      'Sports injury chiropractic'
+      'Postural dysfunction',
+      'Back & neck stiffness',
+      'Reduced mobility',
+      'Biomechanical dysfunction'
     ],
     features: [
-      'Spinal & joint adjustments: Expert manual techniques performed at your home in Hyderabad to restore alignment and ease discomfort.',
-      'Posture & ergonomic guidance: Specialized assessments and advice to correct poor posture and prevent future strain or injury.',
-      'Comprehensive home assessment: Detailed checks of spinal alignment, joint movement, and muscle strength for a tailored recovery plan.',
-      'One-on-one personalized care: Dedicated attention from qualified physiotherapists and chiropractors in your own familiar environment.'
+      'Spinal alignment and segmental mobility evaluation: Detailed assessment of joint restrictions.',
+      'Postural analysis and movement patterns: Evaluation of biomechanical issues.',
+      'Targeted spinal adjustments to improve joint mobility: Precise techniques for spinal function.',
+      'Soft tissue releases to reduce surrounding muscle tension: Comprehensive treatment approach.',
+      'Postural correction strategies: Long-term stability through combined approach.',
+      'Integration with corrective exercises for long-term stability: Ensuring lasting results, not temporary relief.'
     ],
-    focus: 'Improve alignment & reduce discomfort'
+    focus: 'Restore joint mobility & optimize spinal function for lasting results'
   },
-  'cupping': {
-    title: 'Cupping & Dry Needling',
-    desc: `Expert Dry Needling & Cupping Therapy at Home in Kukatpally & Miyapur. At ${BRAND_NAME}, our certified physiotherapists deliver personalized treatments designed to relieve deep muscle tension, accelerate recovery, and restore mobility through safe, effective, and modern clinical techniques.`,
+  'geriatric': {
+    title: 'Geriatric Physiotherapy',
+    desc: `With advancing age, the body naturally undergoes changes such as reduced muscle strength, joint stiffness, balance decline, and slower mobility. These changes can increase the risk of falls, limit independence, and affect overall quality of life. However, aging does not have to mean loss of function—targeted physiotherapy can significantly improve mobility and confidence. At ${BRAND_NAME}, we provide evidence-based geriatric rehabilitation designed specifically for the needs of older adults. Home physiotherapy is especially beneficial for elderly patients, as it eliminates the need for travel, reduces fall risk, and allows therapy to be integrated directly into their daily environment. Serving Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas, we deliver compassionate, one-on-one care. Stay active, stay independent—age with strength and confidence.`,
+    icon: <Users className="w-12 h-12" />,
+    img: '/Orthopedic Rehab.avif',
+    conditions: [
+      'Age-related strength decline',
+      'Balance & fall risk',
+      'Joint stiffness',
+      'Reduced mobility',
+      'Walking difficulties',
+      'Arthritis & joint pain'
+    ],
+    features: [
+      'Strength, joint mobility, and flexibility assessment: Comprehensive evaluation of physical capacity.',
+      'Balance and fall risk evaluation: Identifying and addressing fall risks.',
+      'Walking pattern and functional mobility assessment: Evaluating gait and daily activities.',
+      'Strength training to improve joint support and stability: Building physical capacity.',
+      'Balance and coordination exercises to reduce fall risk: Preventing falls.',
+      'Mobility training for walking, transfers, and daily tasks: Maintaining independence.'
+    ],
+    focus: 'Maintain independence & enhance quality of life in older adults'
+  },
+  'dry-needling': {
+    title: 'Dry Needling Therapy',
+    desc: `Muscle pain is often not just "tightness"—it is frequently driven by myofascial trigger points, which are hyper-irritable spots within muscles that cause localized pain, referred pain, and movement restriction. These trigger points develop due to overuse, poor posture, muscle imbalance, or prolonged static positions. At ${BRAND_NAME}, dry needling is used as a precise, evidence-based intervention to deactivate these trigger points and restore normal muscle function. This is not a standalone quick fix—we integrate it within a comprehensive rehabilitation plan that addresses the root cause of dysfunction. Home-based sessions ensure patients remain relaxed and comfortable, enhancing treatment effectiveness and avoiding unnecessary travel post-procedure. Serving Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas, we deliver safe, skilled dry needling as part of a complete recovery strategy. Release the source of pain, not just the symptoms.`,
     icon: <Zap className="w-12 h-12" />,
     img: '/Cupping & Dry Needling.avif',
     conditions: [
-      'Deep muscle tension & spasms',
-      'Chronic muscular pain',
-      'Sports injury recovery',
-      'Back, shoulder & neck stiffness',
-      'Trigger point release',
-      'Inflammation & swelling'
+      'Myofascial trigger points',
+      'Referred pain patterns',
+      'Muscle overuse & strain',
+      'Poor posture & imbalance',
+      'Chronic muscle tension',
+      'Movement restriction'
     ],
     features: [
-      'Relieves deep muscle tension: Fine needles target tight bands and muscular trigger points to reduce pain from overuse or chronic strain.',
-      'Enhances recovery speed: Increases blood flow and promotes faster healing after sports injuries or repetitive stress.',
-      'Advanced cupping techniques: Gentle suction increases local blood flow and reduces inflammation in the back, shoulders, and neck.',
-      'Highly personalized sessions: Precise, safe application tailored specifically to your muscle knots and therapeutic needs.'
+      'Identifying trigger points through detailed palpation and movement assessment: Precise location of hyper-irritable spots causing pain.',
+      'Targeted needle insertion to release muscle tension and improve blood flow: Dry needling to deactivate trigger points effectively.',
+      'Combining dry needling with corrective exercises for lasting results: Integrated approach for sustained recovery.',
+      'Comprehensive rehabilitation plan addressing root cause: Not a standalone fix, but part of complete recovery.',
+      'Relaxed home environment for enhanced treatment effectiveness: Comfortable sessions without post-treatment travel discomfort.',
+      'Safe, skilled application as part of complete recovery strategy: Evidence-based and precise technique.'
     ],
-    focus: 'Deep muscle relief & faster healing'
+    focus: 'Deactivate trigger points and restore normal muscle function'
+  },
+  'cupping': {
+    title: 'Cupping Therapy',
+    desc: `Persistent muscle stiffness and restricted movement are often linked to poor circulation, fascial tightness, and tissue congestion. Cupping therapy works by creating controlled negative pressure to improve blood flow, tissue mobility, and muscle relaxation. At ${BRAND_NAME}, cupping is applied with clinical precision, not as a standalone alternative therapy but as a supportive tool within structured rehabilitation. This is particularly beneficial for patients with chronic tightness, postural strain, and delayed recovery from muscle fatigue. By offering this therapy at home, we ensure a more relaxed environment, allowing better tissue response and eliminating the discomfort of traveling immediately after treatment. Across Hyderabad, Kukatpally, Miyapur, Kondapur & surrounding areas, we use cupping as part of a holistic, evidence-informed treatment plan. Enhance recovery by improving tissue mobility.`,
+    icon: <Zap className="w-12 h-12" />,
+    img: '/Cupping & Dry Needling.avif',
+    conditions: [
+      'Poor circulation & tissue congestion',
+      'Fascial tightness',
+      'Persistent muscle stiffness',
+      'Chronic postural strain',
+      'Delayed muscle recovery',
+      'Restricted movement'
+    ],
+    features: [
+      'Assessing tissue restriction and movement limitations: Detailed evaluation before treatment.',
+      'Applying dynamic or static cupping to targeted areas: Clinical precision for optimal results.',
+      'Integrating movement-based techniques during cupping when required: Active rehabilitation combined with therapy.',
+      'Combining with exercise therapy for sustained improvement: Holistic approach for lasting recovery.',
+      'Relaxed home environment for better tissue response: Comfortable setting without post-treatment travel discomfort.',
+      'Evidence-informed treatment plan: Cupping as supportive tool within structured rehabilitation.'
+    ],
+    focus: 'Improve blood flow, tissue mobility, and muscle relaxation'
+  },
+  'iastm': {
+    title: 'IASTM (Instrument Assisted Soft Tissue Mobilization)',
+    desc: `Soft tissue restrictions often develop following injury, repetitive strain, or prolonged inactivity, leading to adhesions within muscles and fascia. These adhesions can limit movement, reduce flexibility, and contribute to persistent pain. At ${BRAND_NAME}, we use IASTM as a targeted technique to detect and treat these restrictions with precision. We ensure that this technique is applied progressively and combined with active rehabilitation to achieve long-term outcomes. Home physiotherapy allows controlled application and immediate integration with corrective exercises, improving effectiveness. Serving Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas, we provide advanced soft tissue care. Restore tissue health, restore movement.`,
+    icon: <Zap className="w-12 h-12" />,
+    img: '/Cupping & Dry Needling.avif',
+    conditions: [
+      'Post-injury scar tissue',
+      'Soft tissue adhesions',
+      'Chronic stiffness',
+      'Movement restrictions',
+      'Reduced flexibility',
+      'Fascial restrictions'
+    ],
+    features: [
+      'Areas of tissue stiffness and fibrosis: Detailed assessment identifying problem areas.',
+      'Movement limitations linked to soft tissue restriction: Evaluation of functional deficits.',
+      'Using specialized instruments to mobilize affected tissues: Precision technique to detect and treat restrictions.',
+      'Breaking down adhesions and improving tissue glide: Effective mobilization of soft tissues.',
+      'Stimulating local circulation to promote healing: Enhanced blood flow for recovery.',
+      'Integrating mobility and strengthening exercises post-treatment: Active rehabilitation for long-term outcomes.'
+    ],
+    focus: 'Detect and treat soft tissue restrictions to restore movement quality'
+  },
+  'back-pain': {
+    title: 'Back Pain Treatment',
+    desc: `Back pain is one of the most common complaints today—but not all back pain is serious, and most cases do not require surgery. While conditions like spondylitis or disc issues are often blamed, the reality is that many people experience back pain due to muscle weakness, poor posture, limited hip mobility, pelvic imbalance, or sedentary lifestyle habits. At ${BRAND_NAME}, we believe in identifying the true root cause of your pain rather than just treating symptoms. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you receive professional, one-on-one care tailored to your condition and lifestyle. Don't rush into medications or surgery. The right physiotherapy can make all the difference. Call now to book your home physiotherapy session.`,
+    icon: <Bone className="w-12 h-12" />,
+    img: '/Orthopedic Rehab.avif',
+    conditions: [
+      'Muscle weakness & core instability',
+      'Poor posture & movement patterns',
+      'Limited hip mobility & pelvic imbalance',
+      'Sedentary lifestyle & daily habits',
+      'Spondylitis & disc issues',
+      'Sciatica & nerve pain'
+    ],
+    features: [
+      'Detailed home assessment: Our expert physiotherapists perform a comprehensive evaluation during home visits, assessing core and back muscle strength, hip joint mobility and flexibility, pelvic alignment and SI joint stability, posture, movement patterns, and daily habits.',
+      'Targeted strengthening exercises: Customized exercise programs designed to strengthen core muscles and support the spine.',
+      'Stretching and mobility training: Focused stretching routines to improve flexibility and reduce stiffness.',
+      'Postural correction techniques: Ergonomic advice and exercises to correct poor posture that contributes to back pain.',
+      'Manual therapy and pain relief modalities: Hands-on techniques and therapeutic modalities for effective pain management.',
+      'Functional training for daily activities: Training designed to help you move safely and efficiently in your everyday life.'
+    ],
+    focus: 'Reduce pain, restore movement, and prevent recurrence—all from the comfort of your home'
+  },
+  'neck-pain': {
+    title: 'Neck Pain Treatment',
+    desc: `Neck pain often starts subtly—stiffness while turning your head, discomfort after long phone use, or a dull ache by the end of the day. Over time, it can progress into persistent pain, headaches, or even radiating symptoms into the shoulders and arms. While many assume it's due to cervical spondylosis or disc issues, a large number of cases are actually linked to forward head posture, tight neck and shoulder muscles, weak deep cervical stabilizers, and reduced mobility in the upper spine. Daily habits like prolonged screen time and poor sleeping positions further aggravate the problem. At ${BRAND_NAME}, we take an evidence-based and individualized approach to neck pain management. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you receive focused, one-on-one care in the comfort of your home. Address the cause, not just the symptoms. Book your session today and restore comfortable, pain-free movement.`,
+    icon: <Bone className="w-12 h-12" />,
+    img: '/Orthopedic Rehab.avif',
+    conditions: [
+      'Forward head posture & tech neck',
+      'Tight neck & shoulder muscles',
+      'Weak deep cervical stabilizers',
+      'Reduced thoracic mobility',
+      'Cervical spondylosis & disc issues',
+      'Radiating arm pain & headaches'
+    ],
+    features: [
+      'Deep neck muscle strength and control: Assessment and training for deep cervical stabilizers to support the neck properly.',
+      'Upper back (thoracic spine) mobility: Focused mobility work to improve thoracic extension and rotation.',
+      'Postural alignment and screen habits: Ergonomic advice and corrections for daily screen use and sleeping positions.',
+      'Muscle tightness and movement coordination: Release techniques and coordination training for tight neck and shoulder muscles.',
+      'Deep cervical strengthening and stability training: Customized exercises to build lasting neck support.',
+      'Targeted stretching for tight muscle groups: Specific stretches to relieve tension and improve flexibility.'
+    ],
+    focus: 'Relieve pain and correct underlying dysfunction to prevent future episodes'
+  },
+  'shoulder-pain': {
+    title: 'Shoulder Pain Treatment',
+    desc: `Shoulder pain can make even simple movements like reaching overhead, combing your hair, or lifting objects difficult and painful. It often develops gradually and, if ignored, can significantly restrict daily activities. Common shoulder conditions include adhesive capsulitis (frozen shoulder), rotator cuff injuries, tendonitis, and scapular instability. While these may sound serious, many cases are effectively managed with the right physiotherapy approach—without the need for injections or surgery. In most individuals, shoulder pain is influenced by joint stiffness, muscle imbalance, poor scapular control, repetitive strain, or improper movement patterns. Addressing these factors early is key to preventing long-term restriction. At ${BRAND_NAME}, we follow a structured and evidence-based rehabilitation approach tailored to your specific condition. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you receive expert care at your convenience. Don't let shoulder pain limit your movement—early physiotherapy makes recovery faster and easier. Call now to book your home physiotherapy session.`,
+    icon: <Bone className="w-12 h-12" />,
+    img: '/Orthopedic Rehab.avif',
+    conditions: [
+      'Frozen shoulder & adhesive capsulitis',
+      'Rotator cuff injuries & tendonitis',
+      'Scapular instability & control',
+      'Joint stiffness & capsular tightness',
+      'Muscle imbalance & weakness',
+      'Functional limitations'
+    ],
+    features: [
+      'Shoulder joint mobility and capsular tightness: Assessment and mobilization to restore proper joint movement.',
+      'Rotator cuff strength and activation: Targeted exercises to strengthen and activate rotator cuff muscles.',
+      'Scapular stability and movement control: Training for proper scapular movement and control.',
+      'Functional limitations in daily activities: Assessment of how shoulder pain affects daily tasks.',
+      'Progressive mobility and stretching exercises: Customized stretching to improve range of motion.',
+      'Rotator cuff and scapular strengthening: Progressive strengthening for lasting shoulder support.'
+    ],
+    focus: 'Restore pain-free movement, improve strength, and regain full shoulder function'
+  },
+  'plantar-fasciitis': {
+    title: 'Plantar Fasciitis Treatment',
+    desc: `Sharp heel pain when you take your first steps in the morning? Discomfort after standing for long hours? These are classic signs of plantar fasciitis—a condition caused by irritation of the thick band of tissue (plantar fascia) that supports your foot arch. Unlike general foot pain, plantar fasciitis is often linked to increased stress on the heel due to poor foot mechanics, tight calf muscles, prolonged standing, improper footwear, or sudden changes in activity levels. Ignoring these factors can lead to persistent pain with every step. At ${BRAND_NAME}, we approach plantar fasciitis with a targeted and progressive rehabilitation strategy focused on relieving stress from the plantar fascia. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you get expert care right at your home. Take the pressure off your heel—the right treatment makes every step easier. Book your session today and get back to pain-free walking.`,
+    icon: <Bone className="w-12 h-12" />,
+    img: '/Orthopedic Rehab.avif',
+    conditions: [
+      'Heel pain & morning stiffness',
+      'Plantar fascia irritation',
+      'Tight calf muscles & Achilles',
+      'Poor foot mechanics',
+      'Improper footwear',
+      'Prolonged standing'
+    ],
+    features: [
+      'Foot arch mechanics and weight distribution: Assessment of how your foot bears weight and arch support.',
+      'Tightness in calf muscles and Achilles tendon: Evaluation of lower leg flexibility affecting the heel.',
+      'Walking pattern and load through the heel: Analysis of gait and pressure points.',
+      'Footwear habits and daily activity levels: Review of shoes and daily activities contributing to strain.',
+      'Plantar fascia–specific stretching techniques: Targeted stretches to relieve fascia tension.',
+      'Calf and Achilles flexibility exercises: Progressive stretching for lower leg flexibility.'
+    ],
+    focus: 'Reduce heel pain, improve foot support, and walk comfortably without recurring symptoms'
   }
 };
 
 const conditionSlugMap: Record<string, string> = {
   'Stroke recovery & rehab': 'stroke-rehabilitation',
+  'Stroke Rehabilitation': 'stroke-rehabilitation',
   'Parkinson\'s disease care': 'parkinsons-disease',
+  'Parkinson\'s Disease Rehabilitation': 'parkinsons-disease',
   'Cerebral palsy therapy': 'cerebral-palsy',
+  'Cerebral Palsy Therapy': 'cerebral-palsy',
   'Post-spinal injury rehab': 'spinal-cord-injury',
+  'Spinal Cord Injury Rehabilitation': 'spinal-cord-injury',
+  'Facial Palsy (Bell\'s Palsy)': 'facial-palsy',
   'ACL & meniscus recovery': 'acl-rehabilitation',
   'Shoulder & ligament injuries': 'rotator-cuff-injury',
   'Back & neck pain relief': 'back-pain',
-  'Spinal misalignment': 'chiropractic-care',
+  'Spinal misalignment': 'chiropactic-care',
+  'Spinal joint restrictions': 'chiropactic-care',
+  'Spinal alignment and segmental mobility evaluation': 'chiropactic-care',
+  'Postural dysfunction': 'chiropactic-care',
+  'Biomechanical dysfunction': 'chiropactic-care',
   'Shoulder & joint stiffness': 'shoulder-pain',
+  'Age-related strength decline': 'geriatric',
+  'Balance & fall risk': 'geriatric',
+  'Joint stiffness': 'geriatric',
+  'Reduced mobility': 'geriatric',
+  'Walking difficulties': 'geriatric',
+  'Arthritis & joint pain': 'geriatric',
+  'Back Pain Treatment': 'back-pain',
+  'Neck Pain Treatment': 'neck-pain',
+  'Shoulder Pain Treatment': 'shoulder-pain',
+  'Plantar Fasciitis Treatment': 'plantar-fasciitis',
+  'Post-surgery joint recovery': 'post-surgery-rehab',
+  'Muscle & joint pain relief': 'orthopedic',
+  'Muscle weakness & core instability': 'back-pain',
+  'Poor posture & movement patterns': 'back-pain',
+  'Limited hip mobility & pelvic imbalance': 'back-pain',
+  'Sedentary lifestyle & daily habits': 'back-pain',
+  'Spondylitis & disc issues': 'back-pain',
+  'Sciatica & nerve pain': 'sciatica',
+  'Forward head posture & tech neck': 'neck-pain',
+  'Tight neck & shoulder muscles': 'neck-pain',
+  'Weak deep cervical stabilizers': 'neck-pain',
+  'Reduced thoracic mobility': 'neck-pain',
+  'Cervical spondylosis & disc issues': 'neck-pain',
+  'Radiating arm pain & headaches': 'neck-pain',
+  'Frozen shoulder & adhesive capsulitis': 'shoulder-pain',
+  'Rotator cuff injuries & tendonitis': 'rotator-cuff-injury',
+  'Rotator Cuff Injury Rehabilitation': 'rotator-cuff-injury',
+  'Scapular instability & control': 'shoulder-pain',
+  'Joint stiffness & capsular tightness': 'shoulder-pain',
+  'Muscle imbalance & weakness': 'shoulder-pain',
+  'Functional limitations': 'shoulder-pain',
+  'Heel pain & morning stiffness': 'plantar-fasciitis',
+  'Plantar fascia irritation': 'plantar-fasciitis',
+  'Tight calf muscles & Achilles': 'plantar-fasciitis',
+  'Poor foot mechanics': 'plantar-fasciitis',
+  'Improper footwear': 'plantar-fasciitis',
+  'Prolonged standing': 'plantar-fasciitis',
+  'Tennis Elbow Treatment': 'tennis-elbow',
+  'Golfer\'s Elbow Treatment': 'golfers-elbow',
+  'Lateral epicondylitis': 'tennis-elbow',
+  'Forearm extensor strain': 'tennis-elbow',
+  'Grip weakness & pain': 'tennis-elbow',
+  'Repetitive strain injury': 'tennis-elbow',
+  'Micro-tears in tendons': 'tennis-elbow',
+  'Elbow discomfort': 'tennis-elbow',
+  'ACL Reconstruction Rehabilitation': 'acl-rehabilitation',
+  'Injury recovery & pain relief': 'sports',
+  'Post-surgical sports rehab': 'sports',
+  'Performance enhancement': 'sports',
+  'Return-to-sport planning': 'sports',
+  'Patellofemoral Pain Syndrome': 'runners-knee',
+  'Runner\'s Knee': 'runners-knee',
+  'Knee pain around kneecap': 'runners-knee',
+  'Quadriceps weakness (VMO)': 'runners-knee',
+  'Hip weakness & control': 'runners-knee',
+  'Altered knee alignment': 'runners-knee',
+  'Overuse from running': 'runners-knee',
+  'Squatting & stair pain': 'runners-knee',
 };
 
 const ServiceDetail = () => {
@@ -180,7 +464,7 @@ const ServiceDetail = () => {
           {service.title.split(' ')[0]}
         </motion.div>
 
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 text-center">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -197,7 +481,7 @@ const ServiceDetail = () => {
             <h1 className="text-4xl lg:text-7xl font-serif font-bold text-primary leading-tight">
               {service.title.split(' ')[0]} <span className="text-accent italic font-normal">{service.title.split(' ').slice(1).join(' ')}</span>
             </h1>
-            <p className="text-sm lg:text-xl text-dark font-medium leading-relaxed max-w-3xl mx-auto opacity-90">
+            <p className="text-sm lg:text-xl text-dark font-medium leading-relaxed max-w-5xl mx-auto opacity-90">
               {service.desc}
             </p>
           </motion.div>
@@ -206,7 +490,7 @@ const ServiceDetail = () => {
 
       {/* 2. DETAILED CONTENT */}
       <section className="py-12 lg:py-16 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 lg:px-12">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
 
             <div className="space-y-12 lg:space-y-16">
