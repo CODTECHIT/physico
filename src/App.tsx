@@ -13,6 +13,7 @@ const ConditionDetail = lazy(() => import('./pages/ConditionDetail'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const TermsAndConditions = lazy(() => import('./pages/TermsAndConditions'));
 const RefundPolicy = lazy(() => import('./pages/RefundPolicy'));
+const FAQ = lazy(() => import('./pages/FAQ'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Initial Loading State
@@ -30,14 +31,15 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
-            <Route path="/conditions" element={<Services />} />
-            <Route path="/condition/:id" element={<ServiceDetail />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/service/:id" element={<ServiceDetail />} />
             <Route path="/treatment" element={<Conditions />} />
             <Route path="/treatment/:slug" element={<ConditionDetail />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
             <Route path="/refund-policy" element={<RefundPolicy />} />
+            <Route path="/faq" element={<FAQ />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

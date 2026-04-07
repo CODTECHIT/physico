@@ -466,8 +466,8 @@ const Home = () => {
               </h2>
             </div>
             <div className="lg:col-span-4 lg:text-right">
-              <Link to="/conditions" className="inline-flex items-center text-[10px] font-bold uppercase tracking-widest text-primary hover:text-accent transition-colors">
-                View All Conditions <ArrowRight className="ml-2 w-4 h-4" />
+              <Link to="/services" className="inline-flex items-center text-[10px] font-bold uppercase tracking-widest text-primary hover:text-accent transition-colors">
+                View All Services <ArrowRight className="ml-2 w-4 h-4" />
               </Link>
             </div>
           </div>
@@ -482,26 +482,26 @@ const Home = () => {
                 transition={{ delay: idx * 0.1, duration: 0.5 }}
                 className={`group ${idx % 2 !== 0 ? 'md:mt-12' : ''}`}
               >
-                <Link
-                  to={item.slug ? `/condition/${item.slug}` : "/contact"}
-                  className={`relative overflow-hidden aspect-[3/2] mb-6 shadow-lg rounded-2xl lg:rounded-3xl border-2 border-white group-hover:border-[#5182EF] group-hover:shadow-xl transition-all duration-700 w-full block`}
-                >
-                  <img
-                    src={item.img}
-                    alt={item.title}
-                    className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-[#5182EF]/0 group-hover:bg-[#5182EF]/20 transition-all duration-500 rounded-2xl lg:rounded-3xl" />
-                  <div className="absolute top-4 left-4 lg:top-6 lg:left-6 bg-white/95 backdrop-blur-sm px-2.5 py-1 text-[8px] font-bold tracking-[0.2em] uppercase rounded-full shadow-sm text-primary">
-                    {item.id}
-                  </div>
-                </Link>
-                <div className="space-y-2 lg:space-y-3">
-                  <div className="mb-2 text-accent group-hover:text-[#5182EF] transition-colors duration-300">{item.icon}</div>
-                  <Link to={item.slug ? `/condition/${item.slug}` : "/contact"}>
-                    <h3 className="text-xl lg:text-2xl font-serif font-bold text-accent group-hover:text-[#5182EF] transition-colors duration-300 leading-tight">{item.title}</h3>
+                  <Link
+                    to={item.slug ? `/service/${item.slug}` : "/contact"}
+                    className={`relative overflow-hidden aspect-[3/2] mb-6 shadow-lg rounded-2xl lg:rounded-3xl border-2 border-white group-hover:border-[#5182EF] group-hover:shadow-xl transition-all duration-700 w-full block`}
+                  >
+                    <img
+                      src={item.img}
+                      alt={item.title}
+                      className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110"
+                      loading="lazy"
+                    />
+                    <div className="absolute inset-0 bg-[#5182EF]/0 group-hover:bg-[#5182EF]/20 transition-all duration-500 rounded-2xl lg:rounded-3xl" />
+                    <div className="absolute top-4 left-4 lg:top-6 lg:left-6 bg-white/95 backdrop-blur-sm px-2.5 py-1 text-[8px] font-bold tracking-[0.2em] uppercase rounded-full shadow-sm text-primary">
+                      {item.id}
+                    </div>
                   </Link>
+                  <div className="space-y-2 lg:space-y-3">
+                    <div className="mb-2 text-accent group-hover:text-[#5182EF] transition-colors duration-300">{item.icon}</div>
+                    <Link to={item.slug ? `/service/${item.slug}` : "/contact"}>
+                      <h3 className="text-xl lg:text-2xl font-serif font-bold text-accent group-hover:text-[#5182EF] transition-colors duration-300 leading-tight">{item.title}</h3>
+                    </Link>
                   <p className="text-dark text-xs lg:text-sm font-medium leading-relaxed opacity-80">{item.desc}</p>
                 </div>
               </motion.div>

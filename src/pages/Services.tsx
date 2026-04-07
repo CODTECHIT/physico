@@ -270,7 +270,7 @@ const Services = () => {
 
                     <div className="pt-2">
                       <Link
-                        to={service.slug ? `/condition/${service.slug}` : "/contact"}
+                        to={service.slug ? `/service/${service.slug}` : "/contact"}
                         className="inline-flex items-center gap-4 text-[10px] font-bold uppercase tracking-[0.3em] text-primary/40 hover:text-accent transition-all group/link"
                       >
                         <span className="w-10 h-[1px] bg-primary/10 group-hover/link:w-16 group-hover/link:bg-accent transition-all duration-500" />
