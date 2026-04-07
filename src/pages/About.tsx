@@ -136,11 +136,11 @@ const About = () => {
                   />
                 </div>
 
-                {/* New Experience Badge: Horizontal, Bottom-Right */}
-                <div className="absolute -bottom-6 -right-4 lg:-right-8 bg-white shadow-2xl rounded-2xl p-4 lg:p-5 border border-primary/10 z-30 min-w-[140px] lg:min-w-[160px]">
+                {/* Experience Badge: Optimized for mobile */}
+                <div className="absolute -bottom-4 -right-2 sm:-bottom-6 sm:-right-4 lg:-right-8 bg-white shadow-2xl rounded-2xl p-3 lg:p-5 border border-primary/10 z-30 min-w-[120px] lg:min-w-[160px]">
                   <div className="flex flex-col items-center justify-center">
-                    <span className="text-3xl lg:text-4xl font-serif font-bold text-accent leading-none">6+</span>
-                    <span className="text-[8px] lg:text-[9px] uppercase tracking-[0.2em] font-bold text-primary mt-1">Years Experience</span>
+                    <span className="text-2xl lg:text-4xl font-serif font-bold text-accent leading-none">6+</span>
+                    <span className="text-[7px] lg:text-[9px] uppercase tracking-[0.2em] font-bold text-primary mt-1">Years Experience</span>
                   </div>
                 </div>
               </div>

@@ -567,8 +567,8 @@ const ServiceDetail = () => {
                 />
               </motion.div>
 
-              {/* Floating Badge */}
-              <div className="absolute -bottom-8 -left-8 bg-primary text-white p-10 shadow-2xl border-t-4 border-accent max-w-xs rounded-2xl">
+              {/* Floating Badge - Mobile Optimized */}
+              <div className="relative mt-8 sm:absolute sm:-bottom-8 sm:-left-8 bg-primary text-white p-8 lg:p-10 shadow-2xl border-t-4 border-accent max-w-xs rounded-2xl sm:translate-y-0">
                 <div className="flex items-center space-x-3 mb-4">
                   <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
                   <span className="text-[10px] font-bold uppercase tracking-widest text-accent">Clinical Assurance</span>
