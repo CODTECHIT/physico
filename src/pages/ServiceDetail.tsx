@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { CheckCircle2, ArrowRight, Dumbbell, Bone, Brain, HeartPulse, Target, Zap, Users, Activity } from 'lucide-react';
+import { CheckCircle2, ArrowRight, Dumbbell, Bone, Brain, HeartPulse, Zap, Activity } from 'lucide-react';
 import Button from '../components/Button';
 import { CONTACT_WHATSAPP_LINK, BRAND_NAME } from '../constants';
 
