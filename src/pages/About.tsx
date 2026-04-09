@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Award, Heart, ShieldCheck, Users, MapPin, ArrowRight, PhoneCall, CheckCircle2, Bone, Zap, Home } from 'lucide-react';
+import { Award, Heart, ShieldCheck, Users, MapPin, ArrowRight, PhoneCall, CheckCircle2, Bone, Zap, Home, Activity } from 'lucide-react';
 import Button from '../components/Button';
 import { CONTACT_PHONE_DISPLAY, CONTACT_WHATSAPP_LINK, SERVICE_AREAS, BRAND_NAME } from '../constants';
 
@@ -14,7 +14,7 @@ const About = () => {
     <div className="bg-white">
 
       {/* 1. HERO HEADER */}
-      <section className="pt-20 pb-8 lg:pt-32 lg:pb-16 relative overflow-hidden min-h-[45vh] lg:h-[60vh] flex items-center">
+      <section className="pt-32 pb-8 lg:pt-48 lg:pb-16 relative overflow-hidden min-h-[45vh] lg:h-[60vh] flex items-center">
         {/* Background Image with Parallax Overlay */}
         <motion.div
           style={{ y: heroBgY }}
@@ -29,7 +29,7 @@ const About = () => {
           <div className="absolute inset-0 bg-white/90 lg:bg-white/85" />
         </motion.div>
 
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 text-center relative z-10">
+        <div className="max-w-[1400px] mx-auto responsive-padding text-center relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -43,7 +43,7 @@ const About = () => {
               </span>
               <span className="w-6 h-[2px] bg-accent" />
             </div>
-            <h1 className="text-4xl lg:text-7xl font-serif font-bold text-primary leading-tight">
+            <h1 className="editorial-display text-primary">
               Trusted Home <span className="text-accent italic font-normal">Physiotherapy</span> <br className="hidden md:block" /> in Hyderabad
             </h1>
             <p className="text-sm lg:text-xl text-dark font-medium leading-relaxed max-w-5xl mx-auto opacity-90">
@@ -59,12 +59,12 @@ const About = () => {
 
       {/* 2. MISSION & SPECIALIZATION */}
       <section className="py-10 lg:py-16 overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+        <div className="max-w-[1400px] mx-auto responsive-padding">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-center">
             <div className="space-y-8 lg:space-y-10 focus-ring">
               <div className="space-y-4 lg:space-y-6">
-                <h2 className="text-3xl lg:text-5xl font-serif font-bold text-primary">Our <span className="text-accent italic font-normal">Mission</span></h2>
-                <p className="text-base lg:text-lg text-dark font-medium leading-relaxed">
+                <h2 className="editorial-heading text-primary leading-tight">Our <span className="text-accent italic font-normal">Mission</span></h2>
+                <p className="editorial-body text-dark">
                   To provide accessible, personalized, and high-quality physiotherapy care at home, enabling patients to recover faster, regain mobility, and live pain-free without the stress of travel.
                 </p>
               </div>
@@ -113,7 +113,7 @@ const About = () => {
       </section>
 
       {/* 3. MEET THE SPECIALIST */}
-      <section className="py-16 lg:py-24 overflow-hidden bg-gradient-to-br from-white via-surface/30 to-white relative">
+      <section className="py-12 lg:py-16 overflow-hidden bg-gradient-to-br from-white via-surface/30 to-white relative">
         {/* Premium decorative elements */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
@@ -127,7 +127,7 @@ const About = () => {
               className="lg:col-span-5 relative"
             >
               {/* Founder Design with Blue Border */}
-              <div className="relative p-3 lg:p-4 border-[6px] lg:border-[10px] border-primary rounded-[3rem] lg:rounded-[5rem] shadow-xl overflow-visible">
+              <div className="relative p-2 lg:p-4 border-[4px] lg:border-[10px] border-primary rounded-[2.5rem] lg:rounded-[5rem] shadow-xl overflow-visible max-w-sm mx-auto">
                 <div className="aspect-[4/5] rounded-[2rem] lg:rounded-[4rem] overflow-hidden bg-white">
                   <img
                     src="/founder.png"
@@ -137,10 +137,10 @@ const About = () => {
                 </div>
 
                 {/* Experience Badge: Optimized for mobile */}
-                <div className="absolute -bottom-4 -right-2 sm:-bottom-6 sm:-right-4 lg:-right-8 bg-white shadow-2xl rounded-2xl p-3 lg:p-5 border border-primary/10 z-30 min-w-[120px] lg:min-w-[160px]">
+                <div className="absolute -bottom-4 -right-2 sm:-bottom-6 sm:-right-4 lg:-right-8 bg-white shadow-2xl rounded-2xl p-3 lg:p-5 border border-primary/10 z-30 min-w-[100px] lg:min-w-[160px]">
                   <div className="flex flex-col items-center justify-center">
-                    <span className="text-2xl lg:text-4xl font-serif font-bold text-accent leading-none">6+</span>
-                    <span className="text-[7px] lg:text-[9px] uppercase tracking-[0.2em] font-bold text-primary mt-1">Years Experience</span>
+                    <span className="text-xl lg:text-4xl font-serif font-bold text-accent leading-none">6+</span>
+                    <span className="text-[6px] lg:text-[9px] uppercase tracking-[0.2em] font-bold text-primary mt-1">Years Excellence</span>
                   </div>
                 </div>
               </div>
@@ -154,7 +154,7 @@ const About = () => {
                   <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
                   <span className="text-accent font-bold uppercase tracking-[0.2em] text-[10px]">Meet Our Specialist</span>
                 </div>
-                <h2 className="text-4xl lg:text-6xl font-serif font-bold text-primary leading-tight">Dr. Bhanu <span className="text-accent italic font-normal">Vemula</span></h2>
+                <h2 className="editorial-heading text-primary leading-tight">Dr. Bhanu <span className="text-accent italic font-normal">Vemula</span></h2>
                 <div className="flex flex-col space-y-2">
                   <span className="text-lg lg:text-xl font-serif font-bold text-primary/90">Founder & Senior. Consultant Physiotherapist</span>
                   <div className="flex items-center gap-3 flex-wrap">
@@ -179,7 +179,7 @@ const About = () => {
                   { icon: <Heart className="w-4 h-4" />, text: 'Cupping Therapy' },
                   { icon: <ShieldCheck className="w-4 h-4" />, text: 'Kinesio Taping' },
                   { icon: <Bone className="w-4 h-4" />, text: 'IASTM' },
-                  { icon: <Users className="w-4 h-4" />, text: 'Manual Therapy' },
+                  { icon: <Activity className="w-4 h-4" />, text: 'Manual Therapy' },
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-center gap-2 bg-gradient-to-r from-primary/5 to-accent/5 px-3 py-2 rounded-lg border border-primary/10">
                     <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center text-accent">
@@ -196,8 +196,8 @@ const About = () => {
                   { value: '1000+', label: 'Patients Treated' },
                   { value: 'Kukatpally', label: 'Area' },
                   { value: 'Miyapur', label: 'Area' },
-                ].map((stat) => (
-                  <div key={stat.label} className="flex items-center gap-2 bg-white border border-primary/10 px-4 py-2 rounded-xl shadow-sm">
+                ].map((stat, idx) => (
+                  <div key={idx} className="flex items-center gap-2 bg-white border border-primary/10 px-4 py-2 rounded-xl shadow-sm">
                     <span className="text-lg lg:text-xl font-serif font-bold text-primary">{stat.value}</span>
                     <span className="text-[9px] uppercase tracking-wider text-muted">{stat.label}</span>
                   </div>
@@ -224,7 +224,7 @@ const About = () => {
               <span className="text-accent font-sans font-bold uppercase tracking-[0.3em] text-[10px]">The Advantage</span>
               <span className="w-8 h-[2px] bg-accent" />
             </div>
-            <h2 className="text-3xl lg:text-6xl font-serif font-bold text-primary mb-4 lg:mb-6">
+            <h2 className="editorial-heading text-primary leading-tight">
               Why Choose <span className="text-accent italic font-normal">{BRAND_NAME}?</span>
             </h2>
           </div>
@@ -287,9 +287,9 @@ const About = () => {
       </section >
 
       {/* 6. CTA & LOCATIONS */}
-      < section className="py-12 lg:py-20 bg-white text-center relative overflow-hidden" >
+      <section className="py-8 lg:py-12 bg-white text-center relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 space-y-8 lg:space-y-12 relative z-10">
-          <h2 className="text-4xl lg:text-7xl font-serif font-bold text-primary leading-tight">
+          <h2 className="editorial-heading text-primary leading-tight">
             Start Your <br />
             <span className="text-accent italic font-normal">Recovery Journey</span>
           </h2>

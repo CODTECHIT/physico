@@ -54,7 +54,7 @@ const Contact = () => {
     <div className="bg-white">
 
       {/* 1. HERO HEADER */}
-      <section className="pt-20 pb-8 lg:pt-32 lg:pb-16 relative overflow-hidden min-h-[45vh] lg:h-[60vh] flex items-center">
+      <section className="pt-40 pb-8 lg:pt-56 lg:pb-16 relative overflow-hidden min-h-[50vh] lg:h-[70vh] flex items-center">
         {/* Background Image with Parallax Overlay */}
         <motion.div
           style={{ y: heroBgY }}
@@ -68,7 +68,7 @@ const Contact = () => {
           <div className="absolute inset-0 bg-white/90 lg:bg-white/85" />
         </motion.div>
 
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10 text-center">
+        <div className="max-w-[1400px] mx-auto responsive-padding relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -82,7 +82,7 @@ const Contact = () => {
               </span>
               <span className="w-6 h-[2px] bg-accent" />
             </div>
-            <h1 className="text-4xl lg:text-7xl font-serif font-bold text-primary leading-tight">
+            <h1 className="editorial-display text-primary">
               Let’s Start Your <br className="hidden md:block" />
               <span className="text-accent italic font-normal">Recovery</span> Journey
             </h1>
@@ -103,14 +103,14 @@ const Contact = () => {
           {BRAND_NAME.toUpperCase()}
         </motion.div>
 
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+        <div className="max-w-[1400px] mx-auto responsive-padding relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-10 items-start">
 
             {/* Contact Details */}
             <div className="lg:col-span-5 space-y-5 lg:space-y-8">
               <div className="space-y-2 lg:space-y-3">
                 <span className="text-accent font-sans font-bold uppercase tracking-[0.3em] text-[9px] lg:text-[10px] block">Our Reach</span>
-                <h2 className="text-3xl lg:text-5xl font-serif font-bold text-primary">Get in <span className="text-accent italic font-normal">Touch</span></h2>
+                <h2 className="editorial-heading text-primary leading-tight">Get in <span className="text-accent italic font-normal">Touch</span></h2>
               </div>
 
               <div className="space-y-3 lg:space-y-4">

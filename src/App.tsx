@@ -14,6 +14,7 @@ const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const TermsAndConditions = lazy(() => import('./pages/TermsAndConditions'));
 const RefundPolicy = lazy(() => import('./pages/RefundPolicy'));
 const FAQ = lazy(() => import('./pages/FAQ'));
+const Packages = lazy(() => import('./pages/Packages'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 
 // Initial Loading State
@@ -40,6 +41,7 @@ function App() {
             <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
             <Route path="/refund-policy" element={<RefundPolicy />} />
             <Route path="/faq" element={<FAQ />} />
+            <Route path="/packages" element={<Packages />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

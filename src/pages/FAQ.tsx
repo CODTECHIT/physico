@@ -28,53 +28,70 @@ const faqCategories = [
         a: 'A referral is not mandatory. However, if you have medical reports or previous consultations, they can help us plan your treatment more effectively.'
       },
       {
-        q: 'How many sessions will I need?',
-        a: 'The number of sessions depends on your condition, severity, and recovery goals. A personalized plan will be discussed after the initial assessment.'
-      },
-      {
-        q: 'What should I prepare before the session?',
-        a: 'You only need a small open space for movement. Any previous medical reports or scans can be helpful but are not compulsory.'
+        q: 'Is the first consultation really free?',
+        a: 'Yes. The initial phone/video call to understand your condition and recommend a plan is completely free. You only pay when you confirm and book a home visit.'
       },
       {
         q: 'Is home physiotherapy as effective as clinic treatment?',
         a: 'Yes. With personalized attention and a structured approach, home physiotherapy can be equally effective, especially for recovery and long-term results.'
       },
       {
-        q: 'Do you provide treatment in my area?',
-        a: 'We offer home physiotherapy services in Miyapur and nearby areas within a 5 km radius.'
-      },
-      {
-        q: 'How can I book a session?',
-        a: 'You can call us directly at +91 95028 08581 or use the booking option on our website.'
-      },
-      {
-        q: 'Why choose Flexo Physiotherapy?',
+        q: `Why choose ${BRAND_NAME}?`,
         a: 'We focus on identifying the root cause, providing personalized treatment, and guiding patients through every stage of recovery to achieve long-term results.'
       }
     ]
   },
   {
-    title: 'Location-Specific Questions',
+    title: 'Booking & Session Details',
     questions: [
       {
-        q: 'Do you provide physiotherapy at home in Miyapur?',
-        a: 'Yes, we provide expert home physiotherapy services in Miyapur with personalized treatment and flexible scheduling.'
+        q: 'How do I book a session?',
+        a: "You can book by calling us, WhatsApp-ing us, or filling the booking form on this page. We'll confirm your slot within a few hours."
       },
       {
-        q: 'Is home physiotherapy available in Kukatpally and nearby areas?',
-        a: 'Yes, our services are available in Kukatpally, Nizampet, Bachupally, and surrounding locations within a 5 km radius.'
+        q: 'How long is each session?',
+        a: 'A typical session is 40–60 minutes. The first session may take slightly longer as the therapist will do a full assessment.'
+      },
+      {
+        q: 'What does the therapist bring to the session?',
+        a: 'Our therapists carry all necessary equipment — portable ultrasound, TENS machine, resistance bands, and any other tools required for your treatment. You don\'t need to arrange anything.'
+      },
+      {
+        q: 'How many sessions will I need?',
+        a: 'The number of sessions depends on your condition, severity, and recovery goals. A personalized plan will be discussed after the initial assessment.'
+      },
+      {
+        q: 'Can I request the same therapist for all my sessions?',
+        a: 'Absolutely. For ongoing packages, we assign you a dedicated therapist for continuity of care.'
+      },
+      {
+        q: 'What is your cancellation policy?',
+        a: 'You can reschedule or cancel up to 40 to 60 minutes before your session at no charge. Late cancellations may incur a ₹300 fee.'
+      },
+      {
+        q: 'Do you accept insurance?',
+        a: 'We currently work on a cash/UPI payment basis. We can provide receipts and session summaries for you to submit to your insurance provider.'
+      },
+      {
+        q: 'Do you offer sessions for elderly patients?',
+        a: 'Yes — a significant portion of our patients are elderly. Our therapists are trained in geriatric care and are experienced with home environments.'
+      }
+    ]
+  },
+  {
+    title: 'Coverage & Team',
+    questions: [
+      {
+        q: 'Which areas in Hyderabad do you cover?',
+        a: 'We cover 20+ neighbourhoods including Banjara Hills, Gachibowli, Kondapur, Jubilee Hills, Kukatpally, and more. Call us to check if we cover your area.'
+      },
+      {
+        q: 'Are your therapists qualified?',
+        a: 'All our therapists hold a BPT (Bachelor of Physiotherapy) or MPT (Master of Physiotherapy) degree from recognised universities and are registered with the IAP (Indian Association of Physiotherapists).'
       },
       {
         q: 'How quickly can I get a home physiotherapy session near me?',
         a: 'We offer quick scheduling, and in many cases, same-day home visits are available based on appointment availability.'
-      },
-      {
-        q: 'Which areas do you cover for home visits?',
-        a: 'We serve Miyapur, Hydernagar, KPHB, Nizampet, Bachupally, and nearby areas.'
-      },
-      {
-        q: 'Why choose home physiotherapy in Miyapur?',
-        a: 'Home physiotherapy provides convenience, personalized care, and faster recovery without the need for travel.'
       }
     ]
   }
@@ -95,7 +112,7 @@ const FAQ = () => {
   return (
     <div className="bg-white">
       {/* HERO HEADER */}
-      <section className="pt-24 pb-12 lg:pt-32 lg:pb-16 relative overflow-hidden min-h-[60vh] lg:min-h-[70vh] flex items-center">
+      <section className="pt-20 pb-10 lg:pt-32 lg:pb-12 relative overflow-hidden min-h-[40vh] lg:min-h-[50vh] flex items-center">
         <motion.div
           style={{ y: heroBgY }}
           className="absolute inset-0 -z-10 h-[120%]"
@@ -127,7 +144,7 @@ const FAQ = () => {
               </span>
               <span className="w-8 lg:w-12 h-[2px] bg-accent" />
             </div>
-            <h1 className="text-4xl lg:text-7xl font-serif font-bold text-primary leading-tight">
+            <h1 className="text-3xl lg:text-5xl font-serif font-bold text-primary leading-tight">
               Frequently Asked <span className="text-accent italic font-normal">Questions</span>
             </h1>
             <p className="text-dark font-medium leading-relaxed text-sm lg:text-lg max-w-2xl mx-auto opacity-80">
@@ -138,7 +155,7 @@ const FAQ = () => {
       </section>
 
       {/* FAQ CONTENT */}
-      <section className="py-12 lg:py-20 bg-white relative overflow-hidden">
+      <section className="py-8 lg:py-12 bg-white relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 lg:px-12">
           {faqCategories.map((category, categoryIdx) => (
             <motion.div
@@ -150,7 +167,7 @@ const FAQ = () => {
               className="mb-10 lg:mb-16"
             >
               <div className="text-center mb-8 lg:mb-12">
-                <h2 className="text-2xl lg:text-4xl font-serif font-bold text-primary">
+                <h2 className="text-xl lg:text-3xl font-serif font-bold text-primary">
                   {category.title}
                 </h2>
                 <div className="w-16 h-1 bg-accent mx-auto mt-4 rounded-full" />
@@ -177,9 +194,8 @@ const FAQ = () => {
                         </span>
                       </div>
                       <ChevronDown
-                        className={`w-5 h-5 lg:w-6 lg:h-6 text-accent shrink-0 transition-transform duration-300 ${
-                          openIndex[categoryIdx] === questionIdx ? 'rotate-180' : ''
-                        }`}
+                        className={`w-5 h-5 lg:w-6 lg:h-6 text-accent shrink-0 transition-transform duration-300 ${openIndex[categoryIdx] === questionIdx ? 'rotate-180' : ''
+                          }`}
                       />
                     </button>
                     <motion.div
@@ -206,11 +222,11 @@ const FAQ = () => {
       </section>
 
       {/* CONTACT CTA */}
-      <section className="py-12 lg:py-16 bg-primary/[0.02] relative overflow-hidden">
+      <section className="py-8 lg:py-10 bg-primary/[0.02] relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] -z-10 pointer-events-none">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,186,155,0.03)_0,transparent_70%)]" />
         </div>
-        
+
         <div className="max-w-3xl mx-auto px-6 lg:px-12 text-center">
           <h2 className="text-2xl lg:text-4xl font-serif font-bold text-primary mb-4 lg:mb-6">
             Still have questions?

@@ -51,7 +51,7 @@ const Home = () => {
       title: 'Orthopedic Physiotherapy',
       desc: 'Back pain, neck pain, joint issues, arthritis, fracture recovery',
       icon: <Bone className="w-6 h-6" />,
-      img: '/Orthopedic Rehab.avif',
+      img: '/images/treatments/back_pain_treatment.png',
       color: 'primary'
     },
     {
@@ -60,7 +60,7 @@ const Home = () => {
       title: 'Neurological Rehabilitation',
       desc: 'Stroke recovery, Parkinson’s care, balance & mobility training',
       icon: <Brain className="w-6 h-6" />,
-      img: '/Neuro-Rehabilitation.avif',
+      img: '/images/treatments/stroke_rehab_session.png',
       color: 'dark'
     },
     {
@@ -69,7 +69,7 @@ const Home = () => {
       title: 'Sports Rehabilitation',
       desc: 'Injury recovery, athletic performance, return-to-sport protocols',
       icon: <Dumbbell className="w-6 h-6" />,
-      img: '/Sports Rehabilitation.avif',
+      img: '/images/treatments/acl_rehab_exercise.png',
       color: 'accent'
     }
   ];
@@ -88,7 +88,7 @@ const Home = () => {
     {
       title: 'Geriatric Physiotherapy',
       desc: 'Specialized care for elderly patients to improve mobility, balance, and prevent falls at home.',
-      icon: <Users className="w-5 h-5" />
+      icon: <Activity className="w-5 h-5" />
     }
   ];
 
@@ -182,14 +182,14 @@ const Home = () => {
   ];
 
   const conditions = [
-    { title: 'Back Pain', slug: 'back-pain', img: '/Orthopedic Rehab.avif' },
-    { title: 'Neck Pain', slug: 'neck-pain', img: '/Orthopedic Rehab.avif' },
-    { title: 'Shoulder Pain', slug: 'shoulder-pain', img: '/Orthopedic Rehab.avif' },
-    { title: 'Stroke Recovery', slug: 'stroke-rehabilitation', img: '/Neuro-Rehabilitation.avif' },
-    { title: 'Parkinson’s Care', slug: 'parkinsons-disease', img: '/Neuro-Rehabilitation.avif' },
-    { title: 'ACL Rehabilitation', slug: 'acl-rehabilitation', img: '/Sports Rehabilitation.avif' },
-    { title: 'Tennis Elbow', slug: 'tennis-elbow', img: '/Sports Rehabilitation.avif' },
-    { title: 'Chiropractic Care', slug: 'chiropractic-care', img: '/Chiropractic.avif' },
+    { title: 'Back Pain', slug: 'back-pain', img: '/images/treatments/back_pain_treatment.png' },
+    { title: 'Neck Pain', slug: 'neck-pain', img: '/images/treatments/neck_pain_treatment.png' },
+    { title: 'Shoulder Pain', slug: 'shoulder-pain', img: '/images/treatments/shoulder_pain_rehab.png' },
+    { title: 'Stroke Recovery', slug: 'stroke-rehabilitation', img: '/images/treatments/stroke_rehab_session.png' },
+    { title: 'Parkinson’s Care', slug: 'parkinsons-disease', img: '/images/treatments/parkinsons_care_physio.png' },
+    { title: 'ACL Rehabilitation', slug: 'acl-rehabilitation', img: '/images/treatments/acl_rehab_exercise.png' },
+    { title: 'Tennis Elbow', slug: 'tennis-elbow', img: '/images/treatments/tennis_elbow_therapy.png' },
+    { title: 'Chiropractic Care', slug: 'chiropractic-care', img: '/images/treatments/chiropractic_adjustment.png' },
   ];
 
   return (
@@ -212,7 +212,7 @@ const Home = () => {
           <div className="absolute inset-0 bg-white/85" />
         </motion.div>
 
-        <div className="max-w-[1400px] mx-auto px-5 sm:px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center pt-20 sm:pt-24 lg:pt-0 flex-grow">
+        <div className="max-w-[1400px] mx-auto responsive-padding grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center pt-32 sm:pt-40 lg:pt-0 flex-grow">
 
           {/* Content Column - Structured & Professional with Parallax */}
           <motion.div
@@ -231,7 +231,7 @@ const Home = () => {
                 </span>
               </div>
 
-              <h1 className="text-[clamp(2.35rem,11vw,3.9rem)] md:text-5xl lg:text-7xl font-serif font-bold text-primary leading-[1.05] lg:leading-[1.1]">
+              <h1 className="editorial-display text-primary">
                 Physiotherapy at Home for Pain Relief, <span className="text-accent italic font-normal">Recovery,</span> and Mobility.
               </h1>
 
@@ -247,7 +247,7 @@ const Home = () => {
                     rel="noopener noreferrer"
                     className="w-full sm:w-auto"
                   >
-                    <Button variant="secondary" size="lg" className="w-full rounded-full px-8 lg:px-10 py-4 border-none text-white font-bold tracking-wide transition-all shadow-xl shadow-accent/20 whitespace-nowrap">
+                    <Button variant="secondary" size="lg" className="w-full sm:w-auto rounded-full px-6 lg:px-10 py-4 border-none text-white font-bold tracking-wide transition-all shadow-xl shadow-accent/20 whitespace-nowrap text-xs sm:text-sm lg:text-base">
                       Book Home Visit
                     </Button>
                   </a>
@@ -276,7 +276,7 @@ const Home = () => {
               className="relative z-10 overflow-hidden shadow-2xl rounded-2xl lg:rounded-3xl"
             >
               <img
-                src="/hero-interaction.webp"
+                src="/images/treatments/hero_physio_interaction_retry.png"
                 alt="Personalized Home Physiotherapy Session"
                 className="w-full h-full object-cover aspect-[4/3] lg:aspect-auto"
               />
@@ -297,8 +297,8 @@ const Home = () => {
 
         {/* TRUST BAR */}
         <div className="bg-[#0B3D36] py-5 lg:py-10 mt-6 lg:mt-0 relative z-30">
-          <div className="max-w-[1400px] mx-auto px-4 lg:px-12">
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-0 items-center">
+          <div className="max-w-[1400px] mx-auto responsive-padding">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 lg:gap-0 items-center">
               {[
                 {
                   title: 'Certified Doctors',
@@ -358,8 +358,8 @@ const Home = () => {
 
 
       {/* PATIENT EDUCATION & GUIDED RECOVERY APPROACH */}
-      <section className="py-10 lg:py-16 bg-white overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12">
+      <section className="section-spacing bg-white overflow-hidden">
+        <div className="max-w-[1400px] mx-auto responsive-padding">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="space-y-5 lg:space-y-6">
               <div className="flex items-center space-x-3">
@@ -368,7 +368,7 @@ const Home = () => {
                   Patient Education & Guided Recovery Approach
                 </span>
               </div>
-              <h2 className="text-3xl lg:text-5xl font-serif font-bold text-primary leading-tight">
+              <h2 className="editorial-heading text-primary leading-tight">
                 We Don't Just Treat Your Pain —<br className="hidden md:block" />
                 <span className="text-accent italic font-normal">We Help You Understand It.</span>
               </h2>
@@ -403,7 +403,7 @@ const Home = () => {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: idx * 0.1 }}
-                    className="p-5 lg:p-6 bg-surface rounded-xl border-l-4 border-accent shadow-sm hover:shadow-md transition-all duration-300"
+                    className="p-5 lg:p-6 bg-surface rounded-xl border-l-4 border-accent shadow-sm hover:shadow-md transition-all duration-300 h-full"
                   >
                     <h4 className="font-serif font-bold text-primary text-base lg:text-lg mb-2">{item.title}</h4>
                     <p className="text-xs lg:text-sm text-muted font-medium leading-relaxed opacity-90">{item.desc}</p>
@@ -455,12 +455,12 @@ const Home = () => {
       </section>
 
       {/* OUR SERVICES (KEEP IT SCANNABLE) */}
-      <section className="py-10 lg:py-16 bg-surface overflow-hidden">
-        <div className="max-w-[1600px] mx-auto px-6 lg:px-20">
+      <section className="section-spacing bg-surface overflow-hidden">
+        <div className="max-w-[1600px] mx-auto responsive-padding">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end mb-10 lg:mb-12">
             <div className="lg:col-span-8">
               <span className="text-accent font-sans font-bold uppercase tracking-[0.3em] text-[10px] mb-2 block">Our Expertise</span>
-              <h2 className="text-3xl lg:text-6xl font-serif font-bold text-primary leading-tight">
+              <h2 className="editorial-heading text-primary leading-tight">
                 Comprehensive <br className="hidden md:block" />
                 <span className="italic text-accent">Home</span> Treatment.
               </h2>
@@ -482,26 +482,26 @@ const Home = () => {
                 transition={{ delay: idx * 0.1, duration: 0.5 }}
                 className={`group ${idx % 2 !== 0 ? 'md:mt-12' : ''}`}
               >
-                  <Link
-                    to={item.slug ? `/service/${item.slug}` : "/contact"}
-                    className={`relative overflow-hidden aspect-[3/2] mb-6 shadow-lg rounded-2xl lg:rounded-3xl border-2 border-white group-hover:border-[#5182EF] group-hover:shadow-xl transition-all duration-700 w-full block`}
-                  >
-                    <img
-                      src={item.img}
-                      alt={item.title}
-                      className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-[#5182EF]/0 group-hover:bg-[#5182EF]/20 transition-all duration-500 rounded-2xl lg:rounded-3xl" />
-                    <div className="absolute top-4 left-4 lg:top-6 lg:left-6 bg-white/95 backdrop-blur-sm px-2.5 py-1 text-[8px] font-bold tracking-[0.2em] uppercase rounded-full shadow-sm text-primary">
-                      {item.id}
-                    </div>
+                <Link
+                  to={item.slug ? `/service/${item.slug}` : "/contact"}
+                  className={`relative overflow-hidden aspect-[3/2] mb-6 shadow-lg rounded-2xl lg:rounded-3xl border-2 border-white group-hover:border-[#5182EF] group-hover:shadow-xl transition-all duration-700 w-full block`}
+                >
+                  <img
+                    src={item.img}
+                    alt={item.title}
+                    className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110"
+                    loading="lazy"
+                  />
+                  <div className="absolute inset-0 bg-[#5182EF]/0 group-hover:bg-[#5182EF]/20 transition-all duration-500 rounded-2xl lg:rounded-3xl" />
+                  <div className="absolute top-4 left-4 lg:top-6 lg:left-6 bg-white/95 backdrop-blur-sm px-2.5 py-1 text-[8px] font-bold tracking-[0.2em] uppercase rounded-full shadow-sm text-primary">
+                    {item.id}
+                  </div>
+                </Link>
+                <div className="space-y-2 lg:space-y-3">
+                  <div className="mb-2 text-accent group-hover:text-[#5182EF] transition-colors duration-300">{item.icon}</div>
+                  <Link to={item.slug ? `/service/${item.slug}` : "/contact"}>
+                    <h3 className="text-xl lg:text-2xl font-serif font-bold text-accent group-hover:text-[#5182EF] transition-colors duration-300 leading-tight">{item.title}</h3>
                   </Link>
-                  <div className="space-y-2 lg:space-y-3">
-                    <div className="mb-2 text-accent group-hover:text-[#5182EF] transition-colors duration-300">{item.icon}</div>
-                    <Link to={item.slug ? `/service/${item.slug}` : "/contact"}>
-                      <h3 className="text-xl lg:text-2xl font-serif font-bold text-accent group-hover:text-[#5182EF] transition-colors duration-300 leading-tight">{item.title}</h3>
-                    </Link>
                   <p className="text-dark text-xs lg:text-sm font-medium leading-relaxed opacity-80">{item.desc}</p>
                 </div>
               </motion.div>
@@ -526,15 +526,15 @@ const Home = () => {
       </section>
 
       {/* SPECIALIZED TREATMENTS (Conditions We Treat) - Redesigned as Marquee */}
-      <section className="py-10 lg:py-16 bg-surface/50 overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 mb-6 lg:mb-8 text-center lg:text-left">
+      <section className="section-spacing bg-surface/50 overflow-hidden">
+        <div className="max-w-7xl mx-auto responsive-padding mb-8 lg:mb-12 text-center lg:text-left">
           <div className="flex items-center space-x-3 mb-3 lg:mb-4 justify-center lg:justify-start">
             <span className="w-8 h-[2px] bg-accent" />
             <span className="text-accent font-sans font-bold uppercase tracking-[0.2em] text-[10px]">
               Specialized Conditions
             </span>
           </div>
-          <h2 className="text-3xl lg:text-5xl font-serif font-bold text-primary leading-tight flex flex-wrap justify-center lg:justify-start items-center gap-x-3">
+          <h2 className="editorial-heading text-primary leading-tight flex flex-wrap justify-center lg:justify-start items-center gap-x-3">
             <span>Treatments We</span>
             <span className="text-accent italic font-normal">Offer</span>
             <span className="inline-block min-w-[120px] text-left">
@@ -628,7 +628,7 @@ const Home = () => {
 
           <div className="text-center mb-10 lg:mb-14">
             <span className="text-accent font-sans font-bold uppercase tracking-[0.3em] text-[10px] block mb-3">The Advantage</span>
-            <h2 className="text-3xl lg:text-5xl font-serif font-bold text-primary leading-tight">
+            <h2 className="editorial-heading text-primary leading-tight">
               Why Choose <span className="italic font-normal text-accent">{BRAND_NAME}?</span>
             </h2>
           </div>
@@ -649,7 +649,7 @@ const Home = () => {
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: i * 0.15, type: "spring", stiffness: 100 }}
                 whileHover={{ y: -5, scale: 1.02 }}
-                className="bg-white p-5 lg:p-6 rounded-2xl lg:rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-accent lg:border-transparent group cursor-pointer"
+                className="bg-white p-5 lg:p-6 rounded-2xl lg:rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-accent lg:border-transparent group cursor-pointer h-full flex flex-col"
               >
                 <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl lg:rounded-2xl bg-accent/10 flex items-center justify-center text-accent mb-4 group-hover:bg-accent group-hover:text-white transition-all duration-300">
                   {feature.icon}
@@ -663,7 +663,7 @@ const Home = () => {
       </section>
 
       {/* TESTIMONIALS MARQUEE (New Position - Social Proof) */}
-      <section className="py-12 lg:py-20 bg-white overflow-hidden">
+      <section className="py-10 lg:py-16 bg-white overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 mb-10 lg:mb-16">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
             <div className="space-y-4">
@@ -673,7 +673,7 @@ const Home = () => {
                   Patient Success Stories
                 </span>
               </div>
-              <h2 className="text-3xl lg:text-6xl font-serif font-bold text-primary leading-tight">
+              <h2 className="editorial-heading text-primary leading-tight">
                 What Our <span className="text-accent italic font-normal">Patients</span> Say
               </h2>
             </div>
@@ -744,7 +744,7 @@ const Home = () => {
       </section>
 
       {/* SERVICE AREA - Redesigned with Map Cards */}
-      <section className="py-12 lg:py-20 bg-white relative overflow-hidden border-t border-primary/5">
+      <section className="py-10 lg:py-16 bg-white relative overflow-hidden border-t border-primary/5">
         {/* Map Background Pattern */}
         <div className="absolute inset-0 opacity-[0.03]">
           <svg className="w-full h-full" patternUnits="userSpaceOnUse" width="60" height="60">
@@ -778,7 +778,7 @@ const Home = () => {
               { name: 'Madhapur', radius: '5 KM', highlight: true },
               { name: 'KPHB', radius: '4 KM', highlight: false },
               { name: 'Nanakramguda', radius: '2 KM', highlight: true },
-              { name: 'Limgampally', radius: '3 KM', highlight: false },
+              { name: 'Lingampally', radius: '3 KM', highlight: false },
               { name: 'Hydernagar', radius: '5 KM', highlight: true },
               { name: 'Vivekananda Nagar', radius: '4 KM', highlight: false },
               { name: 'Vasantha Nagar', radius: '3 KM', highlight: true },
@@ -845,7 +845,7 @@ const Home = () => {
       </section>
 
       {/* STRONG CTA (DON’T BE WEAK HERE) */}
-      <section className="py-12 lg:py-20 bg-secondary relative overflow-hidden">
+      <section className="py-10 lg:py-16 bg-secondary relative overflow-hidden">
         <div className="absolute inset-0 bg-accent/5 mask-editorial-1 -z-10" />
         <div className="max-w-7xl mx-auto px-6 text-center space-y-8 lg:space-y-10">
           <h2 className="text-3xl lg:text-7xl font-serif font-bold text-primary leading-tight">

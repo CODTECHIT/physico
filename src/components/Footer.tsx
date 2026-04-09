@@ -58,8 +58,9 @@ const Footer = () => {
               {[
                 { name: 'Home', path: '/' },
                 { name: 'About Us', path: '/about' },
-                { name: 'Conditions', path: '/conditions' },
+                { name: 'services', path: '/services' },
                 { name: 'Treatment', path: '/treatment' },
+                { name: 'Packages', path: '/packages' },
                 { name: 'Contact', path: '/contact' }
               ].map((link) => (
                 <li key={link.name}>
@@ -79,11 +80,11 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3 lg:space-y-4">
               {[
-                { name: 'Orthopedic', path: '/condition/orthopedic' },
-                { name: 'Neurological', path: '/condition/neurological' },
-                { name: 'Sports rehab', path: '/condition/sports' },
-                { name: 'Geriatric', path: '/conditions' },
-                { name: 'Post-surgical', path: '/conditions' }
+                { name: 'Orthopedic', path: '/service/orthopedic' },
+                { name: 'Neurological', path: '/service/neurological' },
+                { name: 'Sports rehab', path: '/service/sports' },
+                { name: 'Geriatric', path: '/service/geriatric' },
+                { name: 'Post-surgical', path: '/service/orthopedic' }
               ].map((service) => (
                 <li key={service.name}>
                   <Link to={service.path} className="text-secondary/60 hover:text-accent text-[10px] lg:text-xs uppercase tracking-widest transition-colors flex items-center group">

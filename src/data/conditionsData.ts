@@ -16,12 +16,28 @@ export interface Condition {
   img: string;
 }
 
-const ORTHOPEDIC_IMAGE = "/Orthopedic Rehab.avif";
-const SPORTS_IMAGE = "/Sports Rehabilitation.avif";
-const NEURO_IMAGE = "/Neuro-Rehabilitation.avif";
-const CUPPING_IMAGE = "/Cupping & Dry Needling.avif";
-const CHIROPRACTIC_IMAGE = "/Chiropractic.avif";
-const GERIATRIC_IMAGE = "/hero-interaction.webp";
+const GERIATRIC_IMAGE = "/images/treatments/geriatric_physiotherapy_home.png";
+
+// New Treatment Images
+const IMAGES = {
+  back_pain: "/images/treatments/back_pain_treatment.png",
+  neck_pain: "/images/treatments/neck_pain_treatment.png",
+  shoulder_pain: "/images/treatments/shoulder_pain_rehab.png",
+  tennis_elbow: "/images/treatments/tennis_elbow_therapy.png",
+  acl_rehab: "/images/treatments/acl_rehab_exercise.png",
+  stroke_rehab: "/images/treatments/stroke_rehab_session.png",
+  parkinsons: "/images/treatments/parkinsons_care_physio.png",
+  chiropractic: "/images/treatments/chiropractic_adjustment.png",
+  dry_needling: "/images/treatments/dry_needling_therapy.png",
+  cupping: "/images/treatments/cupping_therapy_session.png",
+  iastm: "/images/treatments/iastm_therapy_tool.png",
+  ankle_sprain: "/images/treatments/ankle_sprain_rehab.png",
+  rotator_cuff: "/images/treatments/rotator_cuff_rehab.png",
+  runners_knee: "/images/treatments/runners_knee_physio.png",
+  facial_palsy: "/images/treatments/facial_palsy_rehab.png",
+  spinal_cord: "/images/treatments/spinal_cord_injury_rehab.png",
+  geriatric: "/images/treatments/geriatric_physiotherapy_home.png"
+};
 
 export const conditionsData: Record<string, Condition> = {
   "back-pain": {
@@ -48,7 +64,7 @@ export const conditionsData: Record<string, Condition> = {
     goal: "Our goal is simple: reduce pain, restore movement, and prevent recurrence—all from the comfort of your home.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Bone, { className: "w-8 h-8" }),
-    img: ORTHOPEDIC_IMAGE,
+    img: IMAGES.back_pain,
   },
   "neck-pain": {
     id: "neck-pain",
@@ -74,7 +90,7 @@ export const conditionsData: Record<string, Condition> = {
     goal: "Our goal is to not only relieve pain but also correct the underlying dysfunction to prevent future episodes.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Bone, { className: "w-8 h-8" }),
-    img: ORTHOPEDIC_IMAGE,
+    img: IMAGES.neck_pain,
   },
   "shoulder-pain": {
     id: "shoulder-pain",
@@ -100,7 +116,7 @@ export const conditionsData: Record<string, Condition> = {
     goal: "Our aim is to restore pain-free movement, improve strength, and regain full shoulder function without unnecessary interventions.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Bone, { className: "w-8 h-8" }),
-    img: ORTHOPEDIC_IMAGE,
+    img: IMAGES.shoulder_pain,
   },
   "hip-knee-arthritis": {
     id: "hip-knee-arthritis",
@@ -126,7 +142,7 @@ export const conditionsData: Record<string, Condition> = {
     goal: "Our goal is to reduce pain, improve joint function, and delay or even avoid surgical intervention whenever possible.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Bone, { className: "w-8 h-8" }),
-    img: ORTHOPEDIC_IMAGE,
+    img: IMAGES.back_pain, // Hip & Knee Arthritis fallback to back pain or generic ortho
   },
   "plantar-fasciitis": {
     id: "plantar-fasciitis",
@@ -153,7 +169,7 @@ export const conditionsData: Record<string, Condition> = {
     goal: "Our goal is to reduce heel pain, improve foot support, and help you walk comfortably without recurring symptoms.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Bone, { className: "w-8 h-8" }),
-    img: ORTHOPEDIC_IMAGE,
+    img: IMAGES.back_pain, // Plantar Fasciitis fallback
   },
   "tennis-elbow": {
     id: "tennis-elbow",
@@ -180,7 +196,7 @@ At Flexo Physiotherapy, we focus on load management and tendon healing, rather t
     goal: "Our goal is to reduce pain, restore strength, and help you return to daily activities without discomfort.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Dumbbell, { className: "w-8 h-8" }),
-    img: SPORTS_IMAGE,
+    img: IMAGES.tennis_elbow,
   },
   "acl-rehabilitation": {
     id: "acl-rehabilitation",
@@ -207,7 +223,7 @@ At Flexo Physiotherapy, we deliver a goal- oriented and progressive rehabilitati
     goal: "Optimal recovery of knee stability and return to normal activity levels.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Dumbbell, { className: "w-8 h-8" }),
-    img: SPORTS_IMAGE,
+    img: IMAGES.acl_rehab,
   },
   "ankle-sprain": {
     id: "ankle-sprain",
@@ -233,7 +249,7 @@ At Flexo Physiotherapy, we deliver a goal- oriented and progressive rehabilitati
     goal: "Don’t just heal, rebuild stability and confidence in movement.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Dumbbell, { className: "w-8 h-8" }),
-    img: SPORTS_IMAGE,
+    img: IMAGES.ankle_sprain,
   },
   "rotator-cuff-injury": {
     id: "rotator-cuff-injury",
@@ -259,7 +275,7 @@ At Flexo Physiotherapy, we deliver a goal- oriented and progressive rehabilitati
     goal: "Restore control, not just movement, for a fully functional shoulder.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & surrounding areas",
     icon: React.createElement(Dumbbell, { className: "w-8 h-8" }),
-    img: SPORTS_IMAGE,
+    img: IMAGES.rotator_cuff,
   },
   "runners-knee": {
     id: "runners-knee",
@@ -284,7 +300,7 @@ At Flexo Physiotherapy, we deliver a goal- oriented and progressive rehabilitati
     goal: "Fix the movement, fix the pain for long-term sustainable recovery.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Dumbbell, { className: "w-8 h-8" }),
-    img: SPORTS_IMAGE,
+    img: IMAGES.runners_knee,
   },
   "stroke-rehabilitation": {
     id: "stroke-rehabilitation",
@@ -310,7 +326,7 @@ At Flexo Physiotherapy, we deliver evidence- based stroke rehabilitation tailore
     goal: "Restore independence and confidence through neuroplasticity-driven recovery.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Brain, { className: "w-8 h-8" }),
-    img: NEURO_IMAGE,
+    img: IMAGES.stroke_rehab,
   },
   "parkinsons-disease": {
     id: "parkinsons-disease",
@@ -336,7 +352,7 @@ At Flexo Physiotherapy, we follow research- backed rehabilitation protocols desi
     goal: "Support long-term mobility, confidence, and quality of life within the daily environment.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & surrounding areas",
     icon: React.createElement(Brain, { className: "w-8 h-8" }),
-    img: NEURO_IMAGE,
+    img: IMAGES.parkinsons,
   },
   "spinal-cord-injury": {
     id: "spinal-cord-injury",
@@ -362,7 +378,7 @@ At Flexo Physiotherapy, we conduct comprehensive assessments including muscle st
     goal: "Maximize independence and functional capacity for a better quality of life.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Brain, { className: "w-8 h-8" }),
-    img: NEURO_IMAGE,
+    img: IMAGES.spinal_cord,
   },
   "cerebral-palsy": {
     id: "cerebral-palsy",
@@ -388,7 +404,7 @@ At Flexo Physiotherapy, we provide evidence- based, child- centered neurodevelop
     goal: "Enhance each child’s independence, motor skills, and overall development.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Brain, { className: "w-8 h-8" }),
-    img: NEURO_IMAGE,
+    img: IMAGES.stroke_rehab, // Cerebral Palsy fallback
   },
   "facial-palsy": {
     id: "facial-palsy",
@@ -414,7 +430,7 @@ At Flexo Physiotherapy, we use a precise, evidence- based facial rehabilitation 
     goal: "Restore natural facial expressions, symmetry, and patient confidence.",
     serviceArea: "Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas",
     icon: React.createElement(Brain, { className: "w-8 h-8" }),
-    img: NEURO_IMAGE,
+    img: IMAGES.facial_palsy,
   },
   "dry-needling": {
     id: "dry-needling",
@@ -439,7 +455,7 @@ At Flexo Physiotherapy, we use a precise, evidence- based facial rehabilitation 
     goal: "Release the source of pain and restore normal muscle tissue health.",
     serviceArea: "Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas",
     icon: React.createElement(Zap, { className: "w-8 h-8" }),
-    img: CUPPING_IMAGE,
+    img: IMAGES.dry_needling,
   },
   "cupping-therapy": {
     id: "cupping-therapy",
@@ -464,7 +480,7 @@ At Flexo Physiotherapy, we use a precise, evidence- based facial rehabilitation 
     goal: "Enhance recovery by improving tissue mobility and local circulation.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & surrounding areas",
     icon: React.createElement(Zap, { className: "w-8 h-8" }),
-    img: CUPPING_IMAGE,
+    img: IMAGES.cupping,
   },
   iastm: {
     id: "iastm",
@@ -489,7 +505,7 @@ At Flexo Physiotherapy, we use a precise, evidence- based facial rehabilitation 
     goal: "Restore tissue health and quality of movement through precision mobilization.",
     serviceArea: "Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas",
     icon: React.createElement(Target, { className: "w-8 h-8" }),
-    img: CHIROPRACTIC_IMAGE,
+    img: IMAGES.iastm,
   },
   "chiropractic-care": {
     id: "chiropractic-care",
@@ -515,7 +531,7 @@ At Flexo Physiotherapy, we use a precise, evidence- based facial rehabilitation 
     goal: "Realign, restore, and move better through a combined clinical approach.",
     serviceArea: "Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas",
     icon: React.createElement(Target, { className: "w-8 h-8" }),
-    img: CHIROPRACTIC_IMAGE,
+    img: IMAGES.chiropractic,
   },
   "geriatric-physiotherapy": {
     id: "geriatric-physiotherapy",

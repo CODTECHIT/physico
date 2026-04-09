@@ -1,15 +1,15 @@
 import { useParams, Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { CheckCircle2, ArrowRight, Dumbbell, Bone, Brain, Heart, Target, Zap, Users } from 'lucide-react';
+import { CheckCircle2, ArrowRight, Dumbbell, Bone, Brain, HeartPulse, Target, Zap, Users, Activity } from 'lucide-react';
 import Button from '../components/Button';
 import { CONTACT_WHATSAPP_LINK, BRAND_NAME } from '../constants';
 
-const servicesData = {
+    const servicesData = {
   'cardio': {
     title: 'Cardio-Respiratory Care',
     desc: 'Professional Cardio-Respiratory Physiotherapy at Home in Kukatpally & Miyapur. Our team brings specialized heart and lung rehabilitation to your doorstep across Hyderabad’s leading neighborhoods. Whether you\'re recovering from surgery or managing chronic conditions, our certified physiotherapists deliver personalized care for optimal recovery and comfort.',
-    icon: <Heart className="w-12 h-12" />,
-    img: '/Cardio-Respiratory Care.avif',
+    icon: <HeartPulse className="w-12 h-12" />,
+    img: '/images/treatments/runners_knee_physio.png',
     conditions: [
       'Post-surgery cardiac rehab',
       'Chronic heart support',
@@ -30,7 +30,7 @@ const servicesData = {
     title: 'Neuro Rehabilitation',
     desc: `Specialized Neuro-Rehabilitation at Home in Kukatpally & Miyapur. Our expert neuro physiotherapy brings advanced care directly to your doorstep in Hyderabad. We work with patients affected by stroke, Parkinson's, and cerebral palsy, offering tailored home-based therapy that improves balance, strength, and motor control. At ${BRAND_NAME}, we follow research-backed rehabilitation protocols designed to improve movement efficiency and functional independence. Move better, live better, begin your rehab journey now.`,
     icon: <Brain className="w-12 h-12" />,
-    img: '/Neuro-Rehabilitation.avif',
+    img: '/images/treatments/stroke_rehab_session.png',
     conditions: [
       'Stroke Rehabilitation',
       'Parkinson\'s Disease Rehabilitation',
@@ -53,7 +53,7 @@ const servicesData = {
     title: 'Orthopedic Rehabilitation',
     desc: `Expert Orthopedic Physiotherapy at Home in Kukatpally & Miyapur. At ${BRAND_NAME}, we specialize in delivering professional orthopedic care directly to your doorstep in Hyderabad. Whether you're recovering from surgery, easing chronic musculoskeletal pain, or regaining mobility after an injury, our certified physiotherapists craft personalized plans to help you heal comfortably at home.`,
     icon: <Bone className="w-12 h-12" />,
-    img: '/Orthopedic Rehab.avif',
+    img: '/images/treatments/back_pain_treatment.png',
     conditions: [
       'Back Pain Treatment',
       'Neck Pain Treatment',
@@ -76,7 +76,7 @@ const servicesData = {
     title: 'Sports Rehabilitation',
     desc: `Specialized Sports Rehabilitation at Home in Kukatpally & Miyapur. At ${BRAND_NAME}, we bring expert sports physiotherapy and injury recovery right to your doorstep in Hyderabad. Whether you're recovering from an injury, managing joint pain, or aiming to get back to peak performance, our expert physiotherapists design customized rehab programs to help you heal safely and quickly.`,
     icon: <Dumbbell className="w-12 h-12" />,
-    img: '/Sports Rehabilitation.avif',
+    img: '/images/treatments/acl_rehab_exercise.png',
     conditions: [
       'Tennis Elbow Treatment',
       'Golfer\'s Elbow Treatment',
@@ -99,7 +99,7 @@ const servicesData = {
     title: 'Tennis Elbow Treatment',
     desc: `Pain on the outer side of your elbow while lifting objects, gripping, or even shaking hands? This is commonly known as Tennis Elbow (Lateral Epicondylitis) and it's not limited to athletes. It frequently affects people involved in repetitive arm activities like typing, lifting, or using tools. Tennis elbow occurs due to overuse and strain of the forearm extensor muscles, leading to small micro-tears near the elbow. Continuing the same activities without proper treatment can worsen the condition and reduce grip strength over time. At ${BRAND_NAME}, we focus on load management and tendon healing, rather than just temporary pain relief. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you receive focused, one-on-one care. Treat the cause of strain—don't let elbow pain limit your strength. Book your session today for effective, home-based recovery.`,
     icon: <Dumbbell className="w-12 h-12" />,
-    img: '/Sports Rehabilitation.avif',
+    img: '/images/treatments/tennis_elbow_therapy.png',
     conditions: [
       'Lateral epicondylitis',
       'Forearm extensor strain',
@@ -122,7 +122,7 @@ const servicesData = {
     title: 'Patellofemoral Pain Syndrome (Runner\'s Knee)',
     desc: `Patellofemoral pain syndrome is a load-related knee condition, often experienced as pain around or behind the kneecap during activities like climbing stairs, squatting, or prolonged sitting. It is rarely due to a single structure—instead, it reflects improper force distribution across the knee joint. Contributing factors commonly include weak quadriceps (especially VMO), poor hip strength and control, altered knee alignment during movement, and overuse from running or repetitive loading. At ${BRAND_NAME}, we take a biomechanical correction approach, focusing on how the entire lower limb functions together. Serving Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, we help you move pain-free with better control and efficiency. Fix the movement, fix the pain.`,
     icon: <Dumbbell className="w-12 h-12" />,
-    img: '/Sports Rehabilitation.avif',
+    img: '/images/treatments/runners_knee_physio.png',
     conditions: [
       'Knee pain around kneecap',
       'Quadriceps weakness (VMO)',
@@ -141,11 +141,11 @@ const servicesData = {
     ],
     focus: 'Correct the root cause for sustainable, pain-free movement'
   },
-  'chiropactic': {
+  'chiropractic': {
     title: 'Chiropractic Care',
     desc: `Pain and stiffness in the spine are often not just due to muscle strain—they can be linked to joint restrictions, spinal misalignment, and altered biomechanics. These issues may develop from prolonged sitting, poor posture, repetitive stress, or previous injuries, leading to reduced mobility and persistent discomfort. At ${BRAND_NAME}, chiropractic care focuses on restoring joint mobility and optimizing spinal function through precise, controlled techniques. We emphasize a combined approach, where chiropractic techniques are supported with physiotherapy-based rehabilitation to ensure lasting results—not just temporary relief. Home-based sessions offer added comfort and safety. Serving Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas, we provide personalized, evidence-informed chiropractic care. Realign, restore, and move better—start your recovery today.`,
-    icon: <Target className="w-12 h-12" />,
-    img: '/Chiropractic.avif',
+    icon: <Activity className="w-12 h-12" />,
+    img: '/images/treatments/chiropractic_adjustment.png',
     conditions: [
       'Spinal joint restrictions',
       'Spinal misalignment',
@@ -167,8 +167,8 @@ const servicesData = {
   'geriatric': {
     title: 'Geriatric Physiotherapy',
     desc: `With advancing age, the body naturally undergoes changes such as reduced muscle strength, joint stiffness, balance decline, and slower mobility. These changes can increase the risk of falls, limit independence, and affect overall quality of life. However, aging does not have to mean loss of function—targeted physiotherapy can significantly improve mobility and confidence. At ${BRAND_NAME}, we provide evidence-based geriatric rehabilitation designed specifically for the needs of older adults. Home physiotherapy is especially beneficial for elderly patients, as it eliminates the need for travel, reduces fall risk, and allows therapy to be integrated directly into their daily environment. Serving Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas, we deliver compassionate, one-on-one care. Stay active, stay independent—age with strength and confidence.`,
-    icon: <Users className="w-12 h-12" />,
-    img: '/Orthopedic Rehab.avif',
+    icon: <Activity className="w-12 h-12" />,
+    img: '/images/treatments/geriatric_physiotherapy_home.png',
     conditions: [
       'Age-related strength decline',
       'Balance & fall risk',
@@ -191,7 +191,7 @@ const servicesData = {
     title: 'Dry Needling Therapy',
     desc: `Muscle pain is often not just "tightness"—it is frequently driven by myofascial trigger points, which are hyper-irritable spots within muscles that cause localized pain, referred pain, and movement restriction. These trigger points develop due to overuse, poor posture, muscle imbalance, or prolonged static positions. At ${BRAND_NAME}, dry needling is used as a precise, evidence-based intervention to deactivate these trigger points and restore normal muscle function. This is not a standalone quick fix—we integrate it within a comprehensive rehabilitation plan that addresses the root cause of dysfunction. Home-based sessions ensure patients remain relaxed and comfortable, enhancing treatment effectiveness and avoiding unnecessary travel post-procedure. Serving Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas, we deliver safe, skilled dry needling as part of a complete recovery strategy. Release the source of pain, not just the symptoms.`,
     icon: <Zap className="w-12 h-12" />,
-    img: '/Cupping & Dry Needling.avif',
+    img: '/images/treatments/dry_needling_therapy.png',
     conditions: [
       'Myofascial trigger points',
       'Referred pain patterns',
@@ -214,7 +214,7 @@ const servicesData = {
     title: 'Cupping Therapy',
     desc: `Persistent muscle stiffness and restricted movement are often linked to poor circulation, fascial tightness, and tissue congestion. Cupping therapy works by creating controlled negative pressure to improve blood flow, tissue mobility, and muscle relaxation. At ${BRAND_NAME}, cupping is applied with clinical precision, not as a standalone alternative therapy but as a supportive tool within structured rehabilitation. This is particularly beneficial for patients with chronic tightness, postural strain, and delayed recovery from muscle fatigue. By offering this therapy at home, we ensure a more relaxed environment, allowing better tissue response and eliminating the discomfort of traveling immediately after treatment. Across Hyderabad, Kukatpally, Miyapur, Kondapur & surrounding areas, we use cupping as part of a holistic, evidence-informed treatment plan. Enhance recovery by improving tissue mobility.`,
     icon: <Zap className="w-12 h-12" />,
-    img: '/Cupping & Dry Needling.avif',
+    img: '/images/treatments/cupping_therapy_session.png',
     conditions: [
       'Poor circulation & tissue congestion',
       'Fascial tightness',
@@ -237,7 +237,7 @@ const servicesData = {
     title: 'IASTM (Instrument Assisted Soft Tissue Mobilization)',
     desc: `Soft tissue restrictions often develop following injury, repetitive strain, or prolonged inactivity, leading to adhesions within muscles and fascia. These adhesions can limit movement, reduce flexibility, and contribute to persistent pain. At ${BRAND_NAME}, we use IASTM as a targeted technique to detect and treat these restrictions with precision. We ensure that this technique is applied progressively and combined with active rehabilitation to achieve long-term outcomes. Home physiotherapy allows controlled application and immediate integration with corrective exercises, improving effectiveness. Serving Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas, we provide advanced soft tissue care. Restore tissue health, restore movement.`,
     icon: <Zap className="w-12 h-12" />,
-    img: '/Cupping & Dry Needling.avif',
+    img: '/images/treatments/iastm_therapy_tool.png',
     conditions: [
       'Post-injury scar tissue',
       'Soft tissue adhesions',
@@ -260,7 +260,7 @@ const servicesData = {
     title: 'Back Pain Treatment',
     desc: `Back pain is one of the most common complaints today—but not all back pain is serious, and most cases do not require surgery. While conditions like spondylitis or disc issues are often blamed, the reality is that many people experience back pain due to muscle weakness, poor posture, limited hip mobility, pelvic imbalance, or sedentary lifestyle habits. At ${BRAND_NAME}, we believe in identifying the true root cause of your pain rather than just treating symptoms. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you receive professional, one-on-one care tailored to your condition and lifestyle. Don't rush into medications or surgery. The right physiotherapy can make all the difference. Call now to book your home physiotherapy session.`,
     icon: <Bone className="w-12 h-12" />,
-    img: '/Orthopedic Rehab.avif',
+    img: '/images/treatments/back_pain_treatment.png',
     conditions: [
       'Muscle weakness & core instability',
       'Poor posture & movement patterns',
@@ -283,7 +283,7 @@ const servicesData = {
     title: 'Neck Pain Treatment',
     desc: `Neck pain often starts subtly—stiffness while turning your head, discomfort after long phone use, or a dull ache by the end of the day. Over time, it can progress into persistent pain, headaches, or even radiating symptoms into the shoulders and arms. While many assume it's due to cervical spondylosis or disc issues, a large number of cases are actually linked to forward head posture, tight neck and shoulder muscles, weak deep cervical stabilizers, and reduced mobility in the upper spine. Daily habits like prolonged screen time and poor sleeping positions further aggravate the problem. At ${BRAND_NAME}, we take an evidence-based and individualized approach to neck pain management. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you receive focused, one-on-one care in the comfort of your home. Address the cause, not just the symptoms. Book your session today and restore comfortable, pain-free movement.`,
     icon: <Bone className="w-12 h-12" />,
-    img: '/Orthopedic Rehab.avif',
+    img: '/images/treatments/neck_pain_treatment.png',
     conditions: [
       'Forward head posture & tech neck',
       'Tight neck & shoulder muscles',
@@ -306,7 +306,7 @@ const servicesData = {
     title: 'Shoulder Pain Treatment',
     desc: `Shoulder pain can make even simple movements like reaching overhead, combing your hair, or lifting objects difficult and painful. It often develops gradually and, if ignored, can significantly restrict daily activities. Common shoulder conditions include adhesive capsulitis (frozen shoulder), rotator cuff injuries, tendonitis, and scapular instability. While these may sound serious, many cases are effectively managed with the right physiotherapy approach—without the need for injections or surgery. In most individuals, shoulder pain is influenced by joint stiffness, muscle imbalance, poor scapular control, repetitive strain, or improper movement patterns. Addressing these factors early is key to preventing long-term restriction. At ${BRAND_NAME}, we follow a structured and evidence-based rehabilitation approach tailored to your specific condition. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you receive expert care at your convenience. Don't let shoulder pain limit your movement—early physiotherapy makes recovery faster and easier. Call now to book your home physiotherapy session.`,
     icon: <Bone className="w-12 h-12" />,
-    img: '/Orthopedic Rehab.avif',
+    img: '/images/treatments/shoulder_pain_rehab.png',
     conditions: [
       'Frozen shoulder & adhesive capsulitis',
       'Rotator cuff injuries & tendonitis',
@@ -329,7 +329,7 @@ const servicesData = {
     title: 'Plantar Fasciitis Treatment',
     desc: `Sharp heel pain when you take your first steps in the morning? Discomfort after standing for long hours? These are classic signs of plantar fasciitis—a condition caused by irritation of the thick band of tissue (plantar fascia) that supports your foot arch. Unlike general foot pain, plantar fasciitis is often linked to increased stress on the heel due to poor foot mechanics, tight calf muscles, prolonged standing, improper footwear, or sudden changes in activity levels. Ignoring these factors can lead to persistent pain with every step. At ${BRAND_NAME}, we approach plantar fasciitis with a targeted and progressive rehabilitation strategy focused on relieving stress from the plantar fascia. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you get expert care right at your home. Take the pressure off your heel—the right treatment makes every step easier. Book your session today and get back to pain-free walking.`,
     icon: <Bone className="w-12 h-12" />,
-    img: '/Orthopedic Rehab.avif',
+    img: '/images/treatments/back_pain_treatment.png',
     conditions: [
       'Heel pain & morning stiffness',
       'Plantar fascia irritation',
@@ -363,11 +363,11 @@ const conditionSlugMap: Record<string, string> = {
   'ACL & meniscus recovery': 'acl-rehabilitation',
   'Shoulder & ligament injuries': 'rotator-cuff-injury',
   'Back & neck pain relief': 'back-pain',
-  'Spinal misalignment': 'chiropactic-care',
-  'Spinal joint restrictions': 'chiropactic-care',
-  'Spinal alignment and segmental mobility evaluation': 'chiropactic-care',
-  'Postural dysfunction': 'chiropactic-care',
-  'Biomechanical dysfunction': 'chiropactic-care',
+  'Spinal misalignment': 'chiropractic',
+  'Spinal joint restrictions': 'chiropractic',
+  'Spinal alignment and segmental mobility evaluation': 'chiropractic',
+  'Postural dysfunction': 'chiropractic',
+  'Biomechanical dysfunction': 'chiropractic',
   'Shoulder & joint stiffness': 'shoulder-pain',
   'Age-related strength decline': 'geriatric',
   'Balance & fall risk': 'geriatric',
@@ -442,7 +442,7 @@ const ServiceDetail = () => {
     <div className="bg-white">
 
       {/* 1. CLINICAL HEADER */}
-      <section className="pt-20 pb-8 lg:pt-32 lg:pb-16 relative overflow-hidden min-h-[45vh] lg:h-[60vh] flex items-center">
+      <section className="pt-36 pb-8 lg:pt-56 lg:pb-16 relative overflow-hidden min-h-[50vh] lg:h-[70vh] flex items-center">
         {/* Background Image with Parallax Overlay */}
         <motion.div
           style={{ y: heroBgY }}
@@ -459,28 +459,35 @@ const ServiceDetail = () => {
         {/* Large background text with Parallax */}
         <motion.div
           style={{ y: watermarkY }}
-          className="absolute top-20 left-1/2 -translate-x-1/2 text-[20vw] font-serif font-bold text-primary/5 select-none pointer-events-none whitespace-nowrap uppercase"
+          className="absolute top-24 lg:top-32 left-1/2 -translate-x-1/2 text-[20vw] font-serif font-bold text-primary/5 select-none pointer-events-none whitespace-nowrap uppercase"
         >
           {service.title.split(' ')[0]}
         </motion.div>
 
-        <div className="max-w-[1650px] mx-auto px-6 lg:px-12 relative z-10 text-left">
+        <div className="max-w-[1650px] mx-auto responsive-padding relative z-10 text-left">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="space-y-4 lg:space-y-6"
+            className="space-y-6 lg:space-y-8"
           >
-            <div className="flex items-center space-x-3 mb-2">
-              <span className="w-8 h-[2px] bg-accent" />
-              <span className="text-accent font-sans font-bold uppercase tracking-[0.2em] text-[9px] lg:text-[10px]">
+            <div className="flex items-center space-x-3">
+              <span className="w-10 h-[2px] bg-accent" />
+              <span className="text-accent font-sans font-bold uppercase tracking-[0.3em] text-[9px] lg:text-[11px]">
                 Specialized Clinical Service
               </span>
             </div>
-            <h1 className="text-4xl lg:text-8xl font-serif font-bold text-primary leading-tight">
-              {service.title.split(' ')[0]} <br className="hidden lg:block" /> <span className="text-accent italic font-normal">{service.title.split(' ').slice(1).join(' ')}</span>
+            
+            <h1 className="flex flex-col items-start gap-1 lg:gap-2">
+              <span className="editorial-display text-primary block leading-[1]">
+                {service.title.split(' ')[0]}
+              </span>
+              <span className="editorial-heading text-accent italic font-normal block leading-tight">
+                {service.title.split(' ').slice(1).join(' ')}
+              </span>
             </h1>
-            <p className="text-sm lg:text-2xl text-dark font-medium leading-relaxed max-w-5xl opacity-90">
+
+            <p className="text-base lg:text-2xl text-dark font-medium leading-relaxed max-w-5xl opacity-90">
               {service.desc}
             </p>
           </motion.div>
@@ -488,8 +495,8 @@ const ServiceDetail = () => {
       </section>
 
       {/* 2. DETAILED CONTENT */}
-      <section className="py-12 lg:py-16 overflow-hidden">
-        <div className="max-w-[1650px] mx-auto px-6 lg:px-12">
+      <section className="section-spacing overflow-hidden">
+        <div className="max-w-[1650px] mx-auto responsive-padding">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24 items-start">
 
             <div className="space-y-12 lg:space-y-16">
@@ -497,7 +504,7 @@ const ServiceDetail = () => {
               <div className="space-y-6 lg:space-y-8">
                 <div className="space-y-3 lg:space-y-4">
                   <span className="text-accent font-sans font-bold uppercase tracking-[0.3em] text-[9px] lg:text-[10px] block">Scope of Care</span>
-                  <h2 className="text-2xl lg:text-4xl font-serif font-bold text-primary">Treatments <span className="text-accent italic font-normal">Offered</span></h2>
+                  <h2 className="editorial-heading text-primary leading-tight">Treatments <span className="text-accent italic font-normal">Offered</span></h2>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
                   {service.conditions.map((item, i) => {
@@ -525,7 +532,7 @@ const ServiceDetail = () => {
               <div className="space-y-8 pt-8 border-t border-primary/10">
                 <div className="space-y-4">
                   <span className="text-accent font-sans font-bold uppercase tracking-[0.3em] text-[10px] block">Clinical Methodology</span>
-                  <h2 className="text-3xl lg:text-4xl font-serif font-bold text-primary">Our <span className="text-accent italic font-normal">Approach</span></h2>
+                  <h2 className="editorial-heading text-primary leading-tight">Our <span className="text-accent italic font-normal">Approach</span></h2>
                 </div>
                 <div className="space-y-6">
                   {service.features.map((feat, i) => (
@@ -587,7 +594,7 @@ const ServiceDetail = () => {
       {/* 3. RELATED SERVICES / CTA */}
       <section className="py-12 lg:py-16 bg-surface/50 relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-10 relative z-10">
-          <h2 className="text-4xl lg:text-6xl font-serif font-bold text-primary leading-tight">
+          <h2 className="editorial-heading text-primary leading-tight">
             Not sure which <br className="hidden md:block" />
             <span className="text-accent italic font-normal">service you need?</span>
           </h2>

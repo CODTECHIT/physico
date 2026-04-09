@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Bone, Brain, Dumbbell, Target, Zap, ArrowRight, CheckCircle2, Users } from 'lucide-react';
+import { Bone, Brain, Dumbbell, Target, Zap, ArrowRight, CheckCircle2, Users, Activity } from 'lucide-react';
 import Button from '../components/Button';
 import { Link } from 'react-router-dom';
 import { BRAND_NAME } from '../constants';
@@ -25,7 +25,7 @@ const Services = () => {
       ],
       focus: 'Restore function & improve quality of life',
       icon: <Brain className="w-8 h-8" />,
-      img: '/Neuro-Rehabilitation.avif'
+      img: '/images/treatments/stroke_rehab_session.png'
     },
     {
       id: '02',
@@ -40,7 +40,7 @@ const Services = () => {
       ],
       focus: 'Reduce pain & restore movement',
       icon: <Bone className="w-8 h-8" />,
-      img: '/Orthopedic Rehab.avif'
+      img: '/images/treatments/back_pain_treatment.png'
     },
     {
       id: '03',
@@ -55,11 +55,11 @@ const Services = () => {
       ],
       focus: 'Faster recovery & injury prevention',
       icon: <Dumbbell className="w-8 h-8" />,
-      img: '/Sports Rehabilitation.avif'
+      img: '/images/treatments/acl_rehab_exercise.png'
     },
     {
       id: '04',
-      slug: 'chiropactic',
+      slug: 'chiropractic',
       title: 'Chiropractic Care',
       desc: 'Expert chiropractic care at home in Hyderabad, Kukatpally, and Miyapur. Restore joint mobility and optimize spinal function through precise, evidence-informed techniques.',
       features: [
@@ -69,8 +69,8 @@ const Services = () => {
         'Long-term stability'
       ],
       focus: 'Restore joint mobility & optimize spinal function',
-      icon: <Target className="w-8 h-8" />,
-      img: '/Chiropractic.avif'
+      icon: <Activity className="w-8 h-8" />,
+      img: '/images/treatments/chiropractic_adjustment.png'
     },
     {
       id: '08',
@@ -84,8 +84,8 @@ const Services = () => {
         'Pain management'
       ],
       focus: 'Stay active & independent',
-      icon: <Users className="w-8 h-8" />,
-      img: '/Orthopedic Rehab.avif'
+      icon: <Activity className="w-8 h-8" />,
+      img: '/images/treatments/geriatric_physiotherapy_home.png'
     },
     {
       id: '05',
@@ -100,7 +100,7 @@ const Services = () => {
       ],
       focus: 'Release trigger points & restore muscle function',
       icon: <Zap className="w-8 h-8" />,
-      img: '/Cupping & Dry Needling.avif'
+      img: '/images/treatments/dry_needling_therapy.png'
     },
     {
       id: '06',
@@ -115,7 +115,7 @@ const Services = () => {
       ],
       focus: 'Improve tissue mobility & muscle relaxation',
       icon: <Zap className="w-8 h-8" />,
-      img: '/Cupping & Dry Needling.avif'
+      img: '/images/treatments/cupping_therapy_session.png'
     },
     {
       id: '07',
@@ -130,7 +130,7 @@ const Services = () => {
       ],
       focus: 'Restore tissue health & movement quality',
       icon: <Zap className="w-8 h-8" />,
-      img: '/Cupping & Dry Needling.avif'
+      img: '/images/treatments/iastm_therapy_tool.png'
     }
   ];
 
@@ -138,7 +138,7 @@ const Services = () => {
     <div className="bg-white">
 
       {/* 1. HERO HEADER */}
-      <section className="pt-20 pb-8 lg:pt-32 lg:pb-16 relative overflow-hidden min-h-[45vh] lg:h-[70vh] flex items-center">
+      <section className="pt-40 pb-12 lg:pt-56 lg:pb-16 relative overflow-hidden min-h-[55vh] lg:h-[75vh] flex items-center">
         {/* Background Image with Parallax Overlay */}
         <motion.div
           style={{ y: heroBgY }}
@@ -152,7 +152,7 @@ const Services = () => {
           <div className="absolute inset-0 bg-white/90 lg:bg-white/85" />
         </motion.div>
 
-        <div className="max-w-[1650px] mx-auto px-6 lg:px-12 text-left relative z-10">
+        <div className="max-w-[1650px] mx-auto responsive-padding text-left relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
@@ -165,7 +165,7 @@ const Services = () => {
                 Our Specialized Services
               </span>
             </div>
-            <h1 className="text-4xl lg:text-8xl font-serif font-bold text-primary leading-tight">
+            <h1 className="editorial-display text-primary">
               Comprehensive <span className="text-accent italic font-normal">Physiotherapy</span> <br className="hidden lg:block" /> Care at Home
             </h1>
             <p className="text-sm lg:text-2xl text-dark font-medium leading-relaxed max-w-5xl opacity-90">
@@ -185,7 +185,7 @@ const Services = () => {
           {BRAND_NAME.toUpperCase()}
         </motion.div>
 
-        <div className="max-w-[1650px] mx-auto px-6 lg:px-12 relative z-10">
+        <div className="max-w-[1650px] mx-auto responsive-padding relative z-10">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
             {allServices.map((service, idx) => (
               <motion.div
@@ -198,7 +198,7 @@ const Services = () => {
               >
                 {/* Image Container with Rounded Corners & Shine Effect */}
                 <Link
-                  to={service.slug ? `/condition/${service.slug}` : "/contact"}
+                  to={service.slug ? `/service/${service.slug}` : "/contact"}
                   className="relative mb-8 overflow-hidden aspect-[3/2] rounded-3xl lg:rounded-[2.5rem] shadow-lg border-2 border-white group-hover:shadow-xl transition-all duration-700 max-w-sm mx-auto w-full block"
                 >
                   <img
@@ -224,7 +224,7 @@ const Services = () => {
                       <div className="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center text-accent group-hover:bg-accent group-hover:text-white transition-all duration-500 shadow-sm shrink-0">
                         {service.icon}
                       </div>
-                      <Link to={service.slug ? `/condition/${service.slug}` : "/contact"}>
+                      <Link to={service.slug ? `/service/${service.slug}` : "/contact"}>
                         <h3 className="text-2xl lg:text-3xl font-serif font-bold text-primary leading-tight group-hover:text-accent transition-colors duration-500">
                           {service.title}
                         </h3>
@@ -286,13 +286,13 @@ const Services = () => {
       </section>
 
       {/* 3. QUALITY ASSURANCE SECTION */}
-      <section className="py-12 lg:py-16 bg-primary text-white overflow-hidden relative">
+      <section className="section-spacing bg-primary text-white overflow-hidden relative">
         <div className="absolute top-0 right-0 w-1/3 h-full bg-white/5 -skew-x-12 translate-x-20" />
-        <div className="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+        <div className="max-w-7xl mx-auto responsive-padding grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <div className="space-y-10 relative z-10">
             <div className="space-y-4">
               <span className="text-white/80 font-sans font-bold uppercase tracking-[0.3em] text-[10px] block">The Standard</span>
-              <h2 className="text-4xl lg:text-5xl font-serif font-bold leading-tight">
+              <h2 className="editorial-heading text-white leading-tight">
                 Uncompromising <br className="hidden md:block" />
                 <span className="text-secondary italic font-normal">Clinical</span> Excellence.
               </h2>
@@ -333,7 +333,7 @@ const Services = () => {
               className="aspect-square rounded-[3rem] lg:rounded-[5rem] overflow-hidden shadow-2xl border-8 border-white/10"
             >
               <img
-                src="/hero-interaction.webp"
+                src="/images/treatments/hero_physio_interaction_retry.png"
                 alt="Expert clinical treatment"
                 className="w-full h-full object-cover"
               />
