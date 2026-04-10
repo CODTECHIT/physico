@@ -448,45 +448,6 @@ const Home = () => {
                 and home exercise program to ensure better understanding and
                 faster recovery.
               </p>
-
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4">
-                {[
-                  {
-                    title: "Identify the Root Cause",
-                    desc: "Clear understanding of your condition and movement patterns for targeted recovery.",
-                    icon: <Target className="w-5 h-5" />,
-                    number: "01",
-                  },
-                  {
-                    title: "Structured Rehabilitation",
-                    desc: "Focused sessions designed to improve mobility, reduce discomfort, and accelerate healing.",
-                    icon: <Activity className="w-5 h-5" />,
-                    number: "02",
-                  },
-                  {
-                    title: "Sustain the Results",
-                    desc: "Practical routines that help you stay pain-free and prevent future issues.",
-                    icon: <ShieldCheck className="w-5 h-5" />,
-                    number: "03",
-                  },
-                ].map((item, idx) => (
-                  <motion.div
-                    key={idx}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: idx * 0.1 }}
-                    className="p-5 lg:p-6 bg-surface rounded-xl border-l-4 border-accent shadow-sm hover:shadow-md transition-all duration-300 h-full"
-                  >
-                    <h4 className="font-serif font-bold text-primary text-base lg:text-lg mb-2">
-                      {item.title}
-                    </h4>
-                    <p className="text-xs lg:text-sm text-muted font-medium leading-relaxed opacity-90">
-                      {item.desc}
-                    </p>
-                  </motion.div>
-                ))}
-              </div>
             </div>
 
             <div className="relative max-w-sm mx-auto lg:ml-auto lg:mr-0">
@@ -535,6 +496,57 @@ const Home = () => {
                 </div>
               </motion.div>
             </div>
+          </div>
+
+          <div className="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3 lg:mt-12">
+            {[
+              {
+                title: "Identify the Root Cause",
+                desc: "Clear understanding of your condition and movement patterns for targeted recovery.",
+                icon: <Target className="w-5 h-5" />,
+                number: "01",
+              },
+              {
+                title: "Structured Rehabilitation",
+                desc: "Focused sessions designed to improve mobility, reduce discomfort, and accelerate healing.",
+                icon: <Activity className="w-5 h-5" />,
+                number: "02",
+              },
+              {
+                title: "Sustain the Results",
+                desc: "Practical routines that help you stay pain-free and prevent future issues.",
+                icon: <ShieldCheck className="w-5 h-5" />,
+                number: "03",
+              },
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.1 }}
+                whileHover={{ y: -4 }}
+                className="group relative h-full overflow-hidden rounded-2xl border border-primary/10 bg-white p-5 shadow-sm transition-all duration-300 hover:border-accent/30 hover:shadow-xl lg:p-6"
+              >
+                <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-accent to-primary opacity-70" />
+
+                <div className="mb-4 flex items-start justify-between gap-3">
+                  <span className="inline-flex h-8 min-w-8 items-center justify-center rounded-full border border-accent/20 bg-accent/10 px-2 text-[10px] font-bold tracking-[0.2em] text-accent">
+                    {item.number}
+                  </span>
+                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-white transition-colors duration-300 group-hover:bg-accent">
+                    {item.icon}
+                  </span>
+                </div>
+
+                <h4 className="mb-2.5 font-serif text-base font-bold leading-snug text-primary lg:text-lg">
+                  {item.title}
+                </h4>
+                <p className="text-xs font-medium leading-relaxed text-muted/90 lg:text-sm">
+                  {item.desc}
+                </p>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
