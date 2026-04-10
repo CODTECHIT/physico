@@ -169,7 +169,7 @@ const Services = () => {
               Comprehensive <span className="text-accent italic font-normal">Physiotherapy</span> <br className="hidden lg:block" /> Care at Home
             </h1>
             <p className="text-sm lg:text-2xl text-dark font-medium leading-relaxed max-w-5xl opacity-90">
-              We offer specialized physiotherapy services designed to help you recover faster, reduce pain, and regain mobility — all from the comfort of your home.
+              We offer specialized physiotherapy services designed to help you recover faster, reduce pain, and regain mobility   all from the comfort of your home.
             </p>
           </motion.div>
         </div>

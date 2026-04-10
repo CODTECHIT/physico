@@ -47,7 +47,7 @@ export const conditionsData: Record<string, Condition> = {
     title: "Back Pain",
     fullTitle: "Back Pain Treatment at Flexo Physiotherapy",
     description:
-      "Back pain is one of the most common complaints today—but not all back pain is serious, and most cases do not require surgery. While conditions like spondylitis or disc issues are often blamed, the reality is that many people experience back pain due to muscle weakness, poor posture, limited hip mobility, pelvic imbalance, or sedentary lifestyle habits.",
+      "Back pain is one of the most common complaints today but not all back pain is serious, and most cases do not require surgery. While conditions like spondylitis or disc issues are often blamed, the reality is that many people experience back pain due to muscle weakness, poor posture, limited hip mobility, pelvic imbalance, or sedentary lifestyle habits.",
     assessmentPoints: [
       "Core and back muscle strength",
       "Hip joint mobility and flexibility",
@@ -61,7 +61,7 @@ export const conditionsData: Record<string, Condition> = {
       "Manual therapy and pain relief modalities",
       "Functional training for daily activities",
     ],
-    goal: "Our goal is simple: reduce pain, restore movement, and prevent recurrence—all from the comfort of your home.",
+    goal: "Our goal is simple: reduce pain, restore movement, and prevent recurrence all from the comfort of your home.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Bone, { className: "w-8 h-8" }),
     img: IMAGES.back_pain,
@@ -73,7 +73,7 @@ export const conditionsData: Record<string, Condition> = {
     title: "Neck Pain",
     fullTitle: "Neck Pain Treatment at Flexo Physiotherapy",
     description:
-      "Neck pain often starts subtly—stiffness while turning your head, discomfort after long phone use, or a dull ache by the end of the day. Over time, it can progress into persistent pain, headaches, or even radiating symptoms into the shoulders and arms.",
+      "Neck pain often starts subtly stiffness while turning your head, discomfort after long phone use, or a dull ache by the end of the day. Over time, it can progress into persistent pain, headaches, or even radiating symptoms into the shoulders and arms.",
     assessmentPoints: [
       "Deep neck muscle strength and control",
       "Upper back (thoracic spine) mobility",
@@ -151,7 +151,7 @@ export const conditionsData: Record<string, Condition> = {
     title: "Plantar Fasciitis",
     fullTitle: "Plantar Fasciitis Treatment at Flexo Physiotherapy",
     description:
-      "Sharp heel pain when you take your first steps in the morning? Discomfort after standing for long hours? These are classic signs of plantar fasciitis—a condition caused by irritation of the thick band of tissue (plantar fascia) that supports your foot arch.",
+      "Sharp heel pain when you take your first steps in the morning? Discomfort after standing for long hours? These are classic signs of plantar fasciitis a condition caused by irritation of the thick band of tissue (plantar fascia) that supports your foot arch.",
     assessmentPoints: [
       "Foot arch mechanics and weight distribution",
       "Tightness in calf muscles and Achilles tendon",

@@ -142,7 +142,7 @@ const Home = () => {
     {
       id: 10,
       name: 'Kalyan Kumar S',
-      content: "I had been suffering from severe neck pain for quite some time, and after trying various treatments without much relief, I finally consulted Bhanu—and I'm so glad I did! From the very first session, Bhanu's professionalism, knowledge, and caring approach stood out. He took the time to understand the root cause of my pain and designed a treatment plan that was both effective and easy to follow. Within just a few sessions, I noticed a remarkable improvement in my mobility and a significant reduction in pain. Bhanu's techniques, combined with his patient explanations and attention to detail, made a world of difference. I'm now almost completely pain-free and feeling so much better. Highly recommend Bhanu to anyone struggling with neck or spine issues—he's truly exceptional!"
+      content: "I had been suffering from severe neck pain for quite some time, and after trying various treatments without much relief, I finally consulted Bhanu and I'm so glad I did! From the very first session, Bhanu's professionalism, knowledge, and caring approach stood out. He took the time to understand the root cause of my pain and designed a treatment plan that was both effective and easy to follow. Within just a few sessions, I noticed a remarkable improvement in my mobility and a significant reduction in pain. Bhanu's techniques, combined with his patient explanations and attention to detail, made a world of difference. I'm now almost completely pain-free and feeling so much better. Highly recommend Bhanu to anyone struggling with neck or spine issues he's truly exceptional!"
     },
     {
       id: 11,
@@ -369,7 +369,7 @@ const Home = () => {
                 </span>
               </div>
               <h2 className="editorial-heading text-primary leading-tight">
-                We Don't Just Treat Your Pain —<br className="hidden md:block" />
+                We Don't Just Treat Your Pain  <br className="hidden md:block" />
                 <span className="text-accent italic font-normal">We Help You Understand It.</span>
               </h2>
               <p className="text-base lg:text-lg text-dark font-medium leading-relaxed opacity-90">
@@ -829,8 +829,6 @@ const Home = () => {
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-6 lg:gap-8">
               <div className="flex items-center gap-3 py-2 px-4 bg-primary/5 rounded-full text-primary">
-                <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-                <span className="text-sm font-bold uppercase tracking-wider">Within 5 KM radius</span>
               </div>
               <a
                 href={`tel:+91${CONTACT_PHONE_DISPLAY?.replace(/\s/g, '')}`}

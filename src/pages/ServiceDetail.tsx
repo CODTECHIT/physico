@@ -4,7 +4,7 @@ import { CheckCircle2, ArrowRight, Dumbbell, Bone, Brain, HeartPulse, Zap, Activ
 import Button from '../components/Button';
 import { CONTACT_WHATSAPP_LINK, BRAND_NAME } from '../constants';
 
-    const servicesData = {
+const servicesData = {
   'cardio': {
     title: 'Cardio-Respiratory Care',
     desc: 'Professional Cardio-Respiratory Physiotherapy at Home in Kukatpally & Miyapur. Our team brings specialized heart and lung rehabilitation to your doorstep across Hyderabad’s leading neighborhoods. Whether you\'re recovering from surgery or managing chronic conditions, our certified physiotherapists deliver personalized care for optimal recovery and comfort.',
@@ -26,7 +26,7 @@ import { CONTACT_WHATSAPP_LINK, BRAND_NAME } from '../constants';
     ],
     focus: 'Improve heart function & overall endurance'
   },
-'neurological': {
+  'neurological': {
     title: 'Neuro Rehabilitation',
     desc: `Specialized Neuro-Rehabilitation at Home in Kukatpally & Miyapur. Our expert neuro physiotherapy brings advanced care directly to your doorstep in Hyderabad. We work with patients affected by stroke, Parkinson's, and cerebral palsy, offering tailored home-based therapy that improves balance, strength, and motor control. At ${BRAND_NAME}, we follow research-backed rehabilitation protocols designed to improve movement efficiency and functional independence. Move better, live better, begin your rehab journey now.`,
     icon: <Brain className="w-12 h-12" />,
@@ -72,7 +72,7 @@ import { CONTACT_WHATSAPP_LINK, BRAND_NAME } from '../constants';
     ],
     focus: 'Reduce pain & restore movement'
   },
-'sports': {
+  'sports': {
     title: 'Sports Rehabilitation',
     desc: `Specialized Sports Rehabilitation at Home in Kukatpally & Miyapur. At ${BRAND_NAME}, we bring expert sports physiotherapy and injury recovery right to your doorstep in Hyderabad. Whether you're recovering from an injury, managing joint pain, or aiming to get back to peak performance, our expert physiotherapists design customized rehab programs to help you heal safely and quickly.`,
     icon: <Dumbbell className="w-12 h-12" />,
@@ -97,7 +97,7 @@ import { CONTACT_WHATSAPP_LINK, BRAND_NAME } from '../constants';
   },
   'tennis-elbow': {
     title: 'Tennis Elbow Treatment',
-    desc: `Pain on the outer side of your elbow while lifting objects, gripping, or even shaking hands? This is commonly known as Tennis Elbow (Lateral Epicondylitis) and it's not limited to athletes. It frequently affects people involved in repetitive arm activities like typing, lifting, or using tools. Tennis elbow occurs due to overuse and strain of the forearm extensor muscles, leading to small micro-tears near the elbow. Continuing the same activities without proper treatment can worsen the condition and reduce grip strength over time. At ${BRAND_NAME}, we focus on load management and tendon healing, rather than just temporary pain relief. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you receive focused, one-on-one care. Treat the cause of strain—don't let elbow pain limit your strength. Book your session today for effective, home-based recovery.`,
+    desc: `Pain on the outer side of your elbow while lifting objects, gripping, or even shaking hands? This is commonly known as Tennis Elbow (Lateral Epicondylitis) and it's not limited to athletes. It frequently affects people involved in repetitive arm activities like typing, lifting, or using tools. Tennis elbow occurs due to overuse and strain of the forearm extensor muscles, leading to small micro-tears near the elbow. Continuing the same activities without proper treatment can worsen the condition and reduce grip strength over time. At ${BRAND_NAME}, we focus on load management and tendon healing, rather than just temporary pain relief. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you receive focused, one-on-one care. Treat the cause of strain don't let elbow pain limit your strength. Book your session today for effective, home-based recovery.`,
     icon: <Dumbbell className="w-12 h-12" />,
     img: '/images/treatments/tennis_elbow_therapy.png',
     conditions: [
@@ -115,12 +115,12 @@ import { CONTACT_WHATSAPP_LINK, BRAND_NAME } from '../constants';
       'Wrist and elbow mechanics during functional tasks: Assessment of movement patterns affecting the elbow.',
       'Controlled loading exercises for tendon recovery: Gradual tendon loading to promote healing.',
       'Eccentric strengthening of forearm muscles: Progressive eccentric exercises for tendon strength.'
-],
+    ],
     focus: 'Reduce pain, restore strength, and return to daily activities without discomfort'
   },
   'patellofemoral-pain': {
     title: 'Patellofemoral Pain Syndrome (Runner\'s Knee)',
-    desc: `Patellofemoral pain syndrome is a load-related knee condition, often experienced as pain around or behind the kneecap during activities like climbing stairs, squatting, or prolonged sitting. It is rarely due to a single structure—instead, it reflects improper force distribution across the knee joint. Contributing factors commonly include weak quadriceps (especially VMO), poor hip strength and control, altered knee alignment during movement, and overuse from running or repetitive loading. At ${BRAND_NAME}, we take a biomechanical correction approach, focusing on how the entire lower limb functions together. Serving Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, we help you move pain-free with better control and efficiency. Fix the movement, fix the pain.`,
+    desc: `Patellofemoral pain syndrome is a load-related knee condition, often experienced as pain around or behind the kneecap during activities like climbing stairs, squatting, or prolonged sitting. It is rarely due to a single structure instead, it reflects improper force distribution across the knee joint. Contributing factors commonly include weak quadriceps (especially VMO), poor hip strength and control, altered knee alignment during movement, and overuse from running or repetitive loading. At ${BRAND_NAME}, we take a biomechanical correction approach, focusing on how the entire lower limb functions together. Serving Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, we help you move pain-free with better control and efficiency. Fix the movement, fix the pain.`,
     icon: <Dumbbell className="w-12 h-12" />,
     img: '/images/treatments/runners_knee_physio.png',
     conditions: [
@@ -143,7 +143,7 @@ import { CONTACT_WHATSAPP_LINK, BRAND_NAME } from '../constants';
   },
   'chiropractic': {
     title: 'Chiropractic Care',
-    desc: `Pain and stiffness in the spine are often not just due to muscle strain—they can be linked to joint restrictions, spinal misalignment, and altered biomechanics. These issues may develop from prolonged sitting, poor posture, repetitive stress, or previous injuries, leading to reduced mobility and persistent discomfort. At ${BRAND_NAME}, chiropractic care focuses on restoring joint mobility and optimizing spinal function through precise, controlled techniques. We emphasize a combined approach, where chiropractic techniques are supported with physiotherapy-based rehabilitation to ensure lasting results—not just temporary relief. Home-based sessions offer added comfort and safety. Serving Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas, we provide personalized, evidence-informed chiropractic care. Realign, restore, and move better—start your recovery today.`,
+    desc: `Pain and stiffness in the spine are often not just due to muscle strain they can be linked to joint restrictions, spinal misalignment, and altered biomechanics. These issues may develop from prolonged sitting, poor posture, repetitive stress, or previous injuries, leading to reduced mobility and persistent discomfort. At ${BRAND_NAME}, chiropractic care focuses on restoring joint mobility and optimizing spinal function through precise, controlled techniques. We emphasize a combined approach, where chiropractic techniques are supported with physiotherapy-based rehabilitation to ensure lasting results not just temporary relief. Home-based sessions offer added comfort and safety. Serving Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas, we provide personalized, evidence-informed chiropractic care. Realign, restore, and move better start your recovery today.`,
     icon: <Activity className="w-12 h-12" />,
     img: '/images/treatments/chiropractic_adjustment.png',
     conditions: [
@@ -166,7 +166,7 @@ import { CONTACT_WHATSAPP_LINK, BRAND_NAME } from '../constants';
   },
   'geriatric': {
     title: 'Geriatric Physiotherapy',
-    desc: `With advancing age, the body naturally undergoes changes such as reduced muscle strength, joint stiffness, balance decline, and slower mobility. These changes can increase the risk of falls, limit independence, and affect overall quality of life. However, aging does not have to mean loss of function—targeted physiotherapy can significantly improve mobility and confidence. At ${BRAND_NAME}, we provide evidence-based geriatric rehabilitation designed specifically for the needs of older adults. Home physiotherapy is especially beneficial for elderly patients, as it eliminates the need for travel, reduces fall risk, and allows therapy to be integrated directly into their daily environment. Serving Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas, we deliver compassionate, one-on-one care. Stay active, stay independent—age with strength and confidence.`,
+    desc: `With advancing age, the body naturally undergoes changes such as reduced muscle strength, joint stiffness, balance decline, and slower mobility. These changes can increase the risk of falls, limit independence, and affect overall quality of life. However, aging does not have to mean loss of function targeted physiotherapy can significantly improve mobility and confidence. At ${BRAND_NAME}, we provide evidence-based geriatric rehabilitation designed specifically for the needs of older adults. Home physiotherapy is especially beneficial for elderly patients, as it eliminates the need for travel, reduces fall risk, and allows therapy to be integrated directly into their daily environment. Serving Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas, we deliver compassionate, one-on-one care. Stay active, stay independent age with strength and confidence.`,
     icon: <Activity className="w-12 h-12" />,
     img: '/images/treatments/geriatric_physiotherapy_home.png',
     conditions: [
@@ -189,7 +189,7 @@ import { CONTACT_WHATSAPP_LINK, BRAND_NAME } from '../constants';
   },
   'dry-needling': {
     title: 'Dry Needling Therapy',
-    desc: `Muscle pain is often not just "tightness"—it is frequently driven by myofascial trigger points, which are hyper-irritable spots within muscles that cause localized pain, referred pain, and movement restriction. These trigger points develop due to overuse, poor posture, muscle imbalance, or prolonged static positions. At ${BRAND_NAME}, dry needling is used as a precise, evidence-based intervention to deactivate these trigger points and restore normal muscle function. This is not a standalone quick fix—we integrate it within a comprehensive rehabilitation plan that addresses the root cause of dysfunction. Home-based sessions ensure patients remain relaxed and comfortable, enhancing treatment effectiveness and avoiding unnecessary travel post-procedure. Serving Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas, we deliver safe, skilled dry needling as part of a complete recovery strategy. Release the source of pain, not just the symptoms.`,
+    desc: `Muscle pain is often not just "tightness" it is frequently driven by myofascial trigger points, which are hyper-irritable spots within muscles that cause localized pain, referred pain, and movement restriction. These trigger points develop due to overuse, poor posture, muscle imbalance, or prolonged static positions. At ${BRAND_NAME}, dry needling is used as a precise, evidence-based intervention to deactivate these trigger points and restore normal muscle function. This is not a standalone quick fix we integrate it within a comprehensive rehabilitation plan that addresses the root cause of dysfunction. Home-based sessions ensure patients remain relaxed and comfortable, enhancing treatment effectiveness and avoiding unnecessary travel post-procedure. Serving Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas, we deliver safe, skilled dry needling as part of a complete recovery strategy. Release the source of pain, not just the symptoms.`,
     icon: <Zap className="w-12 h-12" />,
     img: '/images/treatments/dry_needling_therapy.png',
     conditions: [
@@ -258,7 +258,7 @@ import { CONTACT_WHATSAPP_LINK, BRAND_NAME } from '../constants';
   },
   'back-pain': {
     title: 'Back Pain Treatment',
-    desc: `Back pain is one of the most common complaints today—but not all back pain is serious, and most cases do not require surgery. While conditions like spondylitis or disc issues are often blamed, the reality is that many people experience back pain due to muscle weakness, poor posture, limited hip mobility, pelvic imbalance, or sedentary lifestyle habits. At ${BRAND_NAME}, we believe in identifying the true root cause of your pain rather than just treating symptoms. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you receive professional, one-on-one care tailored to your condition and lifestyle. Don't rush into medications or surgery. The right physiotherapy can make all the difference. Call now to book your home physiotherapy session.`,
+    desc: `Back pain is one of the most common complaints today but not all back pain is serious, and most cases do not require surgery. While conditions like spondylitis or disc issues are often blamed, the reality is that many people experience back pain due to muscle weakness, poor posture, limited hip mobility, pelvic imbalance, or sedentary lifestyle habits. At ${BRAND_NAME}, we believe in identifying the true root cause of your pain rather than just treating symptoms. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you receive professional, one-on-one care tailored to your condition and lifestyle. Don't rush into medications or surgery. The right physiotherapy can make all the difference. Call now to book your home physiotherapy session.`,
     icon: <Bone className="w-12 h-12" />,
     img: '/images/treatments/back_pain_treatment.png',
     conditions: [
@@ -277,11 +277,11 @@ import { CONTACT_WHATSAPP_LINK, BRAND_NAME } from '../constants';
       'Manual therapy and pain relief modalities: Hands-on techniques and therapeutic modalities for effective pain management.',
       'Functional training for daily activities: Training designed to help you move safely and efficiently in your everyday life.'
     ],
-    focus: 'Reduce pain, restore movement, and prevent recurrence—all from the comfort of your home'
+    focus: 'Reduce pain, restore movement, and prevent recurrence all from the comfort of your home'
   },
   'neck-pain': {
     title: 'Neck Pain Treatment',
-    desc: `Neck pain often starts subtly—stiffness while turning your head, discomfort after long phone use, or a dull ache by the end of the day. Over time, it can progress into persistent pain, headaches, or even radiating symptoms into the shoulders and arms. While many assume it's due to cervical spondylosis or disc issues, a large number of cases are actually linked to forward head posture, tight neck and shoulder muscles, weak deep cervical stabilizers, and reduced mobility in the upper spine. Daily habits like prolonged screen time and poor sleeping positions further aggravate the problem. At ${BRAND_NAME}, we take an evidence-based and individualized approach to neck pain management. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you receive focused, one-on-one care in the comfort of your home. Address the cause, not just the symptoms. Book your session today and restore comfortable, pain-free movement.`,
+    desc: `Neck pain often starts subtly stiffness while turning your head, discomfort after long phone use, or a dull ache by the end of the day. Over time, it can progress into persistent pain, headaches, or even radiating symptoms into the shoulders and arms. While many assume it's due to cervical spondylosis or disc issues, a large number of cases are actually linked to forward head posture, tight neck and shoulder muscles, weak deep cervical stabilizers, and reduced mobility in the upper spine. Daily habits like prolonged screen time and poor sleeping positions further aggravate the problem. At ${BRAND_NAME}, we take an evidence-based and individualized approach to neck pain management. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you receive focused, one-on-one care in the comfort of your home. Address the cause, not just the symptoms. Book your session today and restore comfortable, pain-free movement.`,
     icon: <Bone className="w-12 h-12" />,
     img: '/images/treatments/neck_pain_treatment.png',
     conditions: [
@@ -304,7 +304,7 @@ import { CONTACT_WHATSAPP_LINK, BRAND_NAME } from '../constants';
   },
   'shoulder-pain': {
     title: 'Shoulder Pain Treatment',
-    desc: `Shoulder pain can make even simple movements like reaching overhead, combing your hair, or lifting objects difficult and painful. It often develops gradually and, if ignored, can significantly restrict daily activities. Common shoulder conditions include adhesive capsulitis (frozen shoulder), rotator cuff injuries, tendonitis, and scapular instability. While these may sound serious, many cases are effectively managed with the right physiotherapy approach—without the need for injections or surgery. In most individuals, shoulder pain is influenced by joint stiffness, muscle imbalance, poor scapular control, repetitive strain, or improper movement patterns. Addressing these factors early is key to preventing long-term restriction. At ${BRAND_NAME}, we follow a structured and evidence-based rehabilitation approach tailored to your specific condition. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you receive expert care at your convenience. Don't let shoulder pain limit your movement—early physiotherapy makes recovery faster and easier. Call now to book your home physiotherapy session.`,
+    desc: `Shoulder pain can make even simple movements like reaching overhead, combing your hair, or lifting objects difficult and painful. It often develops gradually and, if ignored, can significantly restrict daily activities. Common shoulder conditions include adhesive capsulitis (frozen shoulder), rotator cuff injuries, tendonitis, and scapular instability. While these may sound serious, many cases are effectively managed with the right physiotherapy approach without the need for injections or surgery. In most individuals, shoulder pain is influenced by joint stiffness, muscle imbalance, poor scapular control, repetitive strain, or improper movement patterns. Addressing these factors early is key to preventing long-term restriction. At ${BRAND_NAME}, we follow a structured and evidence-based rehabilitation approach tailored to your specific condition. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you receive expert care at your convenience. Don't let shoulder pain limit your movement early physiotherapy makes recovery faster and easier. Call now to book your home physiotherapy session.`,
     icon: <Bone className="w-12 h-12" />,
     img: '/images/treatments/shoulder_pain_rehab.png',
     conditions: [
@@ -327,7 +327,7 @@ import { CONTACT_WHATSAPP_LINK, BRAND_NAME } from '../constants';
   },
   'plantar-fasciitis': {
     title: 'Plantar Fasciitis Treatment',
-    desc: `Sharp heel pain when you take your first steps in the morning? Discomfort after standing for long hours? These are classic signs of plantar fasciitis—a condition caused by irritation of the thick band of tissue (plantar fascia) that supports your foot arch. Unlike general foot pain, plantar fasciitis is often linked to increased stress on the heel due to poor foot mechanics, tight calf muscles, prolonged standing, improper footwear, or sudden changes in activity levels. Ignoring these factors can lead to persistent pain with every step. At ${BRAND_NAME}, we approach plantar fasciitis with a targeted and progressive rehabilitation strategy focused on relieving stress from the plantar fascia. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you get expert care right at your home. Take the pressure off your heel—the right treatment makes every step easier. Book your session today and get back to pain-free walking.`,
+    desc: `Sharp heel pain when you take your first steps in the morning? Discomfort after standing for long hours? These are classic signs of plantar fasciitis a condition caused by irritation of the thick band of tissue (plantar fascia) that supports your foot arch. Unlike general foot pain, plantar fasciitis is often linked to increased stress on the heel due to poor foot mechanics, tight calf muscles, prolonged standing, improper footwear, or sudden changes in activity levels. Ignoring these factors can lead to persistent pain with every step. At ${BRAND_NAME}, we approach plantar fasciitis with a targeted and progressive rehabilitation strategy focused on relieving stress from the plantar fascia. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you get expert care right at your home. Take the pressure off your heel the right treatment makes every step easier. Book your session today and get back to pain-free walking.`,
     icon: <Bone className="w-12 h-12" />,
     img: '/images/treatments/back_pain_treatment.png',
     conditions: [
@@ -477,7 +477,7 @@ const ServiceDetail = () => {
                 Specialized Clinical Service
               </span>
             </div>
-            
+
             <h1 className="flex flex-col items-start gap-1 lg:gap-2">
               <span className="editorial-display text-primary block leading-[1]">
                 {service.title.split(' ')[0]}

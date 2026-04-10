@@ -54,7 +54,7 @@ const faqCategories = [
       },
       {
         q: 'What does the therapist bring to the session?',
-        a: 'Our therapists carry all necessary equipment — portable ultrasound, TENS machine, resistance bands, and any other tools required for your treatment. You don\'t need to arrange anything.'
+        a: 'Our therapists carry all necessary equipment   portable ultrasound, TENS machine, resistance bands, and any other tools required for your treatment. You don\'t need to arrange anything.'
       },
       {
         q: 'How many sessions will I need?',
@@ -74,7 +74,7 @@ const faqCategories = [
       },
       {
         q: 'Do you offer sessions for elderly patients?',
-        a: 'Yes — a significant portion of our patients are elderly. Our therapists are trained in geriatric care and are experienced with home environments.'
+        a: 'Yes   a significant portion of our patients are elderly. Our therapists are trained in geriatric care and are experienced with home environments.'
       }
     ]
   },
