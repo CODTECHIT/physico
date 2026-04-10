@@ -73,17 +73,14 @@ const Home = () => {
     {
       title: "Post-Surgery Rehabilitation",
       desc: "Recovery-focused physiotherapy after knee replacement, spine surgery, and fractures delivered safely at home.",
-      icon: <Activity className="w-5 h-5" />,
     },
     {
       title: "Chronic Pain Management",
       desc: "Targeted physiotherapy for long-term back pain, neck pain, and joint issues with evidence-based treatment.",
-      icon: <Target className="w-5 h-5" />,
     },
     {
       title: "Geriatric Physiotherapy",
       desc: "Specialized care for elderly patients to improve mobility, balance, and prevent falls at home.",
-      icon: <Activity className="w-5 h-5" />,
     },
   ];
 
@@ -503,20 +500,14 @@ const Home = () => {
               {
                 title: "Identify the Root Cause",
                 desc: "Clear understanding of your condition and movement patterns for targeted recovery.",
-                icon: <Target className="w-5 h-5" />,
-                number: "01",
               },
               {
                 title: "Structured Rehabilitation",
                 desc: "Focused sessions designed to improve mobility, reduce discomfort, and accelerate healing.",
-                icon: <Activity className="w-5 h-5" />,
-                number: "02",
               },
               {
                 title: "Sustain the Results",
                 desc: "Practical routines that help you stay pain-free and prevent future issues.",
-                icon: <ShieldCheck className="w-5 h-5" />,
-                number: "03",
               },
             ].map((item, idx) => (
               <motion.div
@@ -525,20 +516,8 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.1 }}
-                whileHover={{ y: -4 }}
-                className="group relative h-full overflow-hidden rounded-2xl border border-primary/10 bg-white p-5 shadow-sm transition-all duration-300 hover:border-accent/30 hover:shadow-xl lg:p-6"
+                className="h-full rounded-xl border-l-4 border-accent bg-white p-5 shadow-sm lg:p-6"
               >
-                <div className="pointer-events-none absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-primary via-accent to-primary opacity-70" />
-
-                <div className="mb-4 flex items-start justify-between gap-3">
-                  <span className="inline-flex h-8 min-w-8 items-center justify-center rounded-full border border-accent/20 bg-accent/10 px-2 text-[10px] font-bold tracking-[0.2em] text-accent">
-                    {item.number}
-                  </span>
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-xl bg-primary text-white transition-colors duration-300 group-hover:bg-accent">
-                    {item.icon}
-                  </span>
-                </div>
-
                 <h4 className="mb-2.5 font-serif text-base font-bold leading-snug text-primary lg:text-lg">
                   {item.title}
                 </h4>
@@ -622,11 +601,8 @@ const Home = () => {
             {additionalServices.map((service, idx) => (
               <div
                 key={idx}
-                className="flex gap-4 lg:gap-6 items-start p-5 lg:p-6 bg-white shadow-sm border border-primary/5 hover:border-accent/20 transition-all rounded-2xl lg:rounded-3xl"
+                className="flex items-start gap-4 rounded-xl border-l-4 border-accent bg-white p-5 shadow-sm lg:gap-6 lg:p-6"
               >
-                <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl lg:rounded-2xl bg-accent/10 flex items-center justify-center text-accent shrink-0">
-                  {service.icon}
-                </div>
                 <div>
                   <h4 className="text-lg lg:text-xl font-serif font-bold text-primary mb-1">
                     {service.title}
@@ -812,6 +788,18 @@ const Home = () => {
                 <span className="text-accent italic font-normal">Patients</span>{" "}
                 Say
               </h2>
+              <p
+                className="text-sm font-bold tracking-[0.12em] uppercase"
+                aria-label="Google Reviews"
+              >
+                <span style={{ color: "#4285F4" }}>G</span>
+                <span style={{ color: "#DB4437" }}>o</span>
+                <span style={{ color: "#F4B400" }}>o</span>
+                <span style={{ color: "#4285F4" }}>g</span>
+                <span style={{ color: "#0F9D58" }}>l</span>
+                <span style={{ color: "#DB4437" }}>e</span>
+                <span className="text-primary"> Reviews</span>
+              </p>
             </div>
             <div className="hidden lg:flex items-center space-x-2 pb-2">
               {[1, 2, 3, 4, 5].map((star) => (

@@ -256,6 +256,29 @@ const servicesData = {
     ],
     focus: 'Detect and treat soft tissue restrictions to restore movement quality'
   },
+  'kinesio-taping': {
+    title: 'Kinesio Taping',
+    desc: `Kinesio Taping is a specialized therapeutic technique that uses elastic therapeutic tape to support muscles, reduce pain, and enhance recovery. Unlike traditional athletic tape, Kinesio tape provides dynamic support while allowing full range of motion. At ${BRAND_NAME}, we use Kinesio taping as part of a comprehensive treatment approach to address various musculoskeletal conditions. Whether you're an athlete recovering from injury or someone dealing with chronic pain, our certified therapists apply Kinesio tape with precision to promote healing. Serving Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas, we bring this effective therapy to your home. Support your muscles, reduce pain, recover faster with professional Kinesio taping.`,
+    icon: <Zap className="w-12 h-12" />,
+    img: '/images/treatments/Flexophysio New Website Images (3).jpg.jpeg',
+    conditions: [
+      'Sports injuries',
+      'Muscle strain & sprain',
+      'Joint pain & instability',
+      'Postural support',
+      'Swelling & bruising',
+      'Performance enhancement'
+    ],
+    features: [
+      'Pain reduction through sensory stimulation: Tape provides gentle support to reduce pain signals.',
+      'Muscle support without restricting movement: Dynamic support that works with your body.',
+      'Improved circulation and lymphatic drainage: Enhanced blood flow for faster healing.',
+      'Joint stability and proprioceptive feedback: Better awareness of joint position.',
+      'Support during physical activity and rehabilitation: Continue therapy during daily activities.',
+      'Combined with comprehensive physiotherapy treatment: Integrated approach for optimal results.'
+    ],
+    focus: 'Support muscles, reduce pain, and accelerate recovery'
+  },
   'back-pain': {
     title: 'Back Pain Treatment',
     desc: `Back pain is one of the most common complaints today but not all back pain is serious, and most cases do not require surgery. While conditions like spondylitis or disc issues are often blamed, the reality is that many people experience back pain due to muscle weakness, poor posture, limited hip mobility, pelvic imbalance, or sedentary lifestyle habits. At ${BRAND_NAME}, we believe in identifying the true root cause of your pain rather than just treating symptoms. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you receive professional, one-on-one care tailored to your condition and lifestyle. Don't rush into medications or surgery. The right physiotherapy can make all the difference. Call now to book your home physiotherapy session.`,

@@ -131,6 +131,21 @@ const Services = () => {
       focus: 'Restore tissue health & movement quality',
       icon: <Zap className="w-8 h-8" />,
       img: '/images/treatments/iastm_therapy_tool.png'
+    },
+    {
+      id: '09',
+      slug: 'kinesio-taping',
+      title: 'Kinesio Taping',
+      desc: 'Professional Kinesio taping therapy at home in Kukatpally and Miyapur. Specialized elastic therapeutic tape to support muscles, reduce pain, and enhance recovery.',
+      features: [
+        'Pain reduction & management',
+        'Muscle support & stabilization',
+        'Improved circulation & healing',
+        'Enhanced performance & recovery'
+      ],
+      focus: 'Support muscles & accelerate recovery',
+      icon: <Zap className="w-8 h-8" />,
+      img: '/images/treatments/Flexophysio New Website Images (3).jpg.jpeg'
     }
   ];
 

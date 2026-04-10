@@ -23,7 +23,7 @@ const IMAGES = {
   back_pain: "/images/treatments/back_pain_treatment.png",
   neck_pain: "/images/treatments/neck_pain_treatment.png",
   shoulder_pain: "/images/treatments/shoulder_pain_rehab.png",
-  tennis_elbow: "/images/treatments/tennis_elbow_therapy.png",
+  tennis_elbow: "/images/treatments/tennis_elbow_therapy-opt.webp",
   acl_rehab: "/images/treatments/acl_rehab_exercise.png",
   stroke_rehab: "/images/treatments/stroke_rehab_session.png",
   parkinsons: "/images/treatments/parkinsons_care_physio.png",

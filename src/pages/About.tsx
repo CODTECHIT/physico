@@ -1,7 +1,25 @@
-import { motion, useScroll, useTransform } from 'framer-motion';
-import { Award, Heart, ShieldCheck, Users, MapPin, ArrowRight, PhoneCall, CheckCircle2, Bone, Zap, Home, Activity } from 'lucide-react';
-import Button from '../components/Button';
-import { CONTACT_PHONE_DISPLAY, CONTACT_WHATSAPP_LINK, SERVICE_AREAS, BRAND_NAME } from '../constants';
+import { motion, useScroll, useTransform } from "framer-motion";
+import {
+  Award,
+  Heart,
+  ShieldCheck,
+  Users,
+  MapPin,
+  ArrowRight,
+  PhoneCall,
+  CheckCircle2,
+  Bone,
+  Zap,
+  Home,
+  Activity,
+} from "lucide-react";
+import Button from "../components/Button";
+import {
+  CONTACT_PHONE_DISPLAY,
+  CONTACT_WHATSAPP_LINK,
+  SERVICE_AREAS,
+  BRAND_NAME,
+} from "../constants";
 
 const About = () => {
   const { scrollY } = useScroll();
@@ -12,7 +30,6 @@ const About = () => {
 
   return (
     <div className="bg-white">
-
       {/* 1. HERO HEADER */}
       <section className="pt-32 pb-8 lg:pt-48 lg:pb-16 relative overflow-hidden min-h-[45vh] lg:h-[60vh] flex items-center">
         {/* Background Image with Parallax Overlay */}
@@ -44,14 +61,23 @@ const About = () => {
               <span className="w-6 h-[2px] bg-accent" />
             </div>
             <h1 className="editorial-display text-primary">
-              Trusted Home <span className="text-accent italic font-normal">Physiotherapy</span> <br className="hidden md:block" /> in Hyderabad
+              Trusted Home{" "}
+              <span className="text-accent italic font-normal">
+                Physiotherapy
+              </span>{" "}
+              <br className="hidden md:block" /> in Hyderabad
             </h1>
             <p className="text-sm lg:text-xl text-dark font-medium leading-relaxed max-w-5xl mx-auto opacity-90">
-              {BRAND_NAME} is a leading provider of home-based physiotherapy services in Hyderabad, delivering expert care directly to patients in the comfort of their homes.
+              {BRAND_NAME} is a leading provider of home-based physiotherapy
+              services in Hyderabad, delivering expert care directly to patients
+              in the comfort of their homes.
             </p>
             <div className="flex items-center justify-center space-x-3 pt-2 text-primary font-bold">
               <MapPin className="text-accent w-4 h-4 lg:w-5 lg:h-5" />
-              <span className="text-[10px] lg:text-sm uppercase tracking-widest text-center">Serving : {SERVICE_AREAS.split(',').slice(0, 3).join(', ')} & Nearby</span>
+              <span className="text-[10px] lg:text-sm uppercase tracking-widest text-center">
+                Serving : {SERVICE_AREAS.split(",").slice(0, 3).join(", ")} &
+                Nearby
+              </span>
             </div>
           </motion.div>
         </div>
@@ -63,48 +89,56 @@ const About = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-center">
             <div className="space-y-8 lg:space-y-10 focus-ring">
               <div className="space-y-4 lg:space-y-6">
-                <h2 className="editorial-heading text-primary leading-tight">Our <span className="text-accent italic font-normal">Mission</span></h2>
-                <p className="editorial-body text-dark">
-                  To provide accessible, personalized, and high-quality physiotherapy care at home, enabling patients to recover faster, regain mobility, and live pain-free without the stress of travel.
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                <h3 className="text-xl lg:text-2xl font-serif font-bold text-primary border-l-4 border-accent pl-5">What We Do</h3>
-                <p className="text-sm lg:text-base text-dark font-medium leading-relaxed opacity-80">
-                  We offer comprehensive physiotherapy solutions for a wide range of conditions. Our approach focuses on long-term recovery, not just temporary relief.
-                </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 lg:gap-4">
-                  {[
-                    'Back & neck pain',
-                    'Knee pain & arthritis',
-                    'Stroke & paralysis',
-                    'Sports injuries',
-                    'Post-surgical recovery',
-                    'Joint disorders'
-                  ].map((item) => (
-                    <div key={item} className="flex items-center space-x-3 group bg-surface/30 p-2 rounded-lg lg:bg-transparent lg:p-0">
-                      <CheckCircle2 className="w-4 h-4 text-accent group-hover:scale-110 transition-transform" />
-                      <span className="text-[10px] lg:text-xs font-bold text-primary/80 uppercase tracking-wide">{item}</span>
-                    </div>
-                  ))}
+                <h2 className="editorial-heading text-primary leading-tight">
+                  Our{" "}
+                  <span className="text-accent italic font-normal">
+                    Mission
+                  </span>
+                </h2>
+                <div className="space-y-5 lg:space-y-6">
+                  <p className="editorial-body text-dark/80 leading-relaxed text-justify">
+                    Flexo Physiotherapy was born from one simple belief: every
+                    patient deserves expert care without the burden of travel.
+                    Dr. Bhanu Vemula founded Flexo with a deep passion for
+                    physiotherapy and an unwavering commitment to patient
+                    convenience.
+                  </p>
+                  <div className="border-l-4 border-accent bg-accent/5 px-5 py-4 lg:px-6 lg:py-5 rounded-r-2xl">
+                    <p className="editorial-body text-primary font-semibold italic leading-relaxed">
+                      “We don’t just treat pain, we restore confidence,
+                      mobility, and quality of life. At your home, on your
+                      terms.”
+                    </p>
+                  </div>
+                  <p className="editorial-body text-dark/80 leading-relaxed text-justify">
+                    From day one, his approach has been personal: understand
+                    each patient's unique condition, design a treatment plan
+                    built around their life, and deliver 100% effort every
+                    session, every home visit, without exception. That passion,
+                    reflected in hundreds of five-star Google reviews, is what
+                    drives every therapist at Flexo to keep raising the standard
+                    of home physiotherapy in Hyderabad.
+                  </p>
                 </div>
               </div>
             </div>
 
             <div className="relative">
-              <div className="aspect-[4/3] lg:aspect-[4/5] rounded-3xl lg:rounded-[5rem] overflow-hidden shadow-2xl border-4 lg:border-8 border-white">
+              <div className="aspect-square max-w-sm mx-auto flex items-center justify-center bg-surface/50 rounded-3xl lg:rounded-[5rem] overflow-hidden shadow-xl border-4 lg:border-8 border-white p-8 lg:p-12">
                 <img
-                  src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?auto=format&fit=crop&q=80&w=1200"
-                  alt="Specialist during consultation"
-                  className="w-full h-full object-cover grayscale-[20%] group-hover:grayscale-0 transition-all duration-700"
-                  loading="lazy"
+                  src="/logo-square.png"
+                  alt="Flexo Physio Logo"
+                  className="w-full h-full object-contain"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-primary p-5 shadow-xl border-t-4 border-accent hidden sm:block rounded-xl">
                 <div className="text-center">
-                  <span className="block text-2xl lg:text-4xl font-serif font-bold text-white mb-0.5">6+</span>
-                  <span className="block text-[8px] uppercase tracking-[0.2em] font-bold text-accent">Years Excellence</span>
+                  <span className="block text-2xl lg:text-4xl font-serif font-bold text-white mb-0.5">
+                    6+
+                  </span>
+                  <span className="block text-[8px] uppercase tracking-[0.2em] font-bold text-accent">
+                    Years Excellence
+                  </span>
                 </div>
               </div>
             </div>
@@ -120,7 +154,6 @@ const About = () => {
 
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center">
-
             {/* Left side - Image with premium frame */}
             <motion.div
               style={{ y: founderImgY }}
@@ -139,8 +172,12 @@ const About = () => {
                 {/* Experience Badge: Optimized for mobile */}
                 <div className="absolute -bottom-4 -right-2 sm:-bottom-6 sm:-right-4 lg:-right-8 bg-white shadow-2xl rounded-2xl p-3 lg:p-5 border border-primary/10 z-30 min-w-[100px] lg:min-w-[160px]">
                   <div className="flex flex-col items-center justify-center">
-                    <span className="text-xl lg:text-4xl font-serif font-bold text-accent leading-none">6+</span>
-                    <span className="text-[6px] lg:text-[9px] uppercase tracking-[0.2em] font-bold text-primary mt-1">Years Excellence</span>
+                    <span className="text-xl lg:text-4xl font-serif font-bold text-accent leading-none">
+                      6+
+                    </span>
+                    <span className="text-[6px] lg:text-[9px] uppercase tracking-[0.2em] font-bold text-primary mt-1">
+                      Years Excellence
+                    </span>
                   </div>
                 </div>
               </div>
@@ -152,14 +189,25 @@ const About = () => {
               <div className="space-y-4 lg:space-y-5">
                 <div className="inline-flex items-center space-x-2 bg-accent/10 px-4 py-2 rounded-full">
                   <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-                  <span className="text-accent font-bold uppercase tracking-[0.2em] text-[10px]">Meet Our Specialist</span>
+                  <span className="text-accent font-bold uppercase tracking-[0.2em] text-[10px]">
+                    Meet Our Specialist
+                  </span>
                 </div>
-                <h2 className="editorial-heading text-primary leading-tight">Dr. Bhanu <span className="text-accent italic font-normal">Vemula</span></h2>
+                <h2 className="editorial-heading text-primary leading-tight">
+                  Dr. Bhanu{" "}
+                  <span className="text-accent italic font-normal">Vemula</span>
+                </h2>
                 <div className="flex flex-col space-y-2">
-                  <span className="text-lg lg:text-xl font-serif font-bold text-primary/90">Founder & Senior. Consultant Physiotherapist</span>
+                  <span className="text-lg lg:text-xl font-serif font-bold text-primary/90">
+                    Founder & Senior. Consultant Physiotherapist
+                  </span>
                   <div className="flex items-center gap-3 flex-wrap">
-                    <span className="bg-gradient-to-r from-accent to-accent/80 text-white text-[10px] font-bold px-3 py-1 rounded-full">MPT (Orthopedics) - Pursuing</span>
-                    <span className="text-muted text-[10px] font-bold uppercase tracking-widest">| BPT</span>
+                    <span className="bg-gradient-to-r from-accent to-accent/80 text-white text-[10px] font-bold px-3 py-1 rounded-full">
+                      MPT (Orthopedics) - Pursuing
+                    </span>
+                    <span className="text-muted text-[10px] font-bold uppercase tracking-widest">
+                      | BPT
+                    </span>
                   </div>
                 </div>
               </div>
@@ -167,25 +215,49 @@ const About = () => {
               {/* Premium Bio */}
               <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-primary/5 shadow-lg">
                 <p className="text-dark font-medium leading-relaxed text-base lg:text-lg">
-                  <span className="text-accent font-bold">Dr. Bhanu Vemula</span> is a leading home-visit physiotherapist in Hyderabad, known for delivering exceptional results in <span className="text-primary font-semibold">pain relief, rehabilitation, and functional recovery</span>. Currently pursuing his Master's in Orthopedics, he combines advanced clinical knowledge with hands-on expertise to provide highly personalized treatment.
+                  <span className="text-accent font-bold">
+                    Dr. Bhanu Vemula
+                  </span>{" "}
+                  is a leading home-visit physiotherapist in Hyderabad, known
+                  for delivering exceptional results in{" "}
+                  <span className="text-primary font-semibold">
+                    pain relief, rehabilitation, and functional recovery
+                  </span>
+                  . Currently pursuing his Master's in Orthopedics, he combines
+                  advanced clinical knowledge with hands-on expertise to provide
+                  highly personalized treatment.
                 </p>
               </div>
 
               {/* Expertise Cards */}
               <div className="grid grid-cols-2 md:grid-cols-3 gap-3 lg:gap-4">
                 {[
-                  { icon: <Award className="w-4 h-4" />, text: 'Chiropractic' },
-                  { icon: <Zap className="w-4 h-4" />, text: 'Dry Needling' },
-                  { icon: <Heart className="w-4 h-4" />, text: 'Cupping Therapy' },
-                  { icon: <ShieldCheck className="w-4 h-4" />, text: 'Kinesio Taping' },
-                  { icon: <Bone className="w-4 h-4" />, text: 'IASTM' },
-                  { icon: <Activity className="w-4 h-4" />, text: 'Manual Therapy' },
+                  { icon: <Award className="w-4 h-4" />, text: "Chiropractic" },
+                  { icon: <Zap className="w-4 h-4" />, text: "Dry Needling" },
+                  {
+                    icon: <Heart className="w-4 h-4" />,
+                    text: "Cupping Therapy",
+                  },
+                  {
+                    icon: <ShieldCheck className="w-4 h-4" />,
+                    text: "Kinesio Taping",
+                  },
+                  { icon: <Bone className="w-4 h-4" />, text: "IASTM" },
+                  {
+                    icon: <Activity className="w-4 h-4" />,
+                    text: "Manual Therapy",
+                  },
                 ].map((item, idx) => (
-                  <div key={idx} className="flex items-center gap-2 bg-gradient-to-r from-primary/5 to-accent/5 px-3 py-2 rounded-lg border border-primary/10">
+                  <div
+                    key={idx}
+                    className="flex items-center gap-2 bg-gradient-to-r from-primary/5 to-accent/5 px-3 py-2 rounded-lg border border-primary/10"
+                  >
                     <div className="w-6 h-6 rounded-full bg-accent/20 flex items-center justify-center text-accent">
                       {item.icon}
                     </div>
-                    <span className="text-[10px] lg:text-xs font-bold text-primary/80 uppercase tracking-wide">{item.text}</span>
+                    <span className="text-[10px] lg:text-xs font-bold text-primary/80 uppercase tracking-wide">
+                      {item.text}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -193,13 +265,20 @@ const About = () => {
               {/* Achievements */}
               <div className="flex flex-wrap gap-4 pt-4">
                 {[
-                  { value: '1000+', label: 'Patients Treated' },
-                  { value: 'Kukatpally', label: 'Area' },
-                  { value: 'Miyapur', label: 'Area' },
+                  { value: "1000+", label: "Patients Treated" },
+                  { value: "3600", label: "Sessions" },
+                  { value: "4.9★", label: "Google Reviews" },
                 ].map((stat, idx) => (
-                  <div key={idx} className="flex items-center gap-2 bg-white border border-primary/10 px-4 py-2 rounded-xl shadow-sm">
-                    <span className="text-lg lg:text-xl font-serif font-bold text-primary">{stat.value}</span>
-                    <span className="text-[9px] uppercase tracking-wider text-muted">{stat.label}</span>
+                  <div
+                    key={idx}
+                    className="flex items-center gap-2 bg-white border border-primary/10 px-4 py-2 rounded-xl shadow-sm"
+                  >
+                    <span className="text-lg lg:text-xl font-serif font-bold text-primary">
+                      {stat.value}
+                    </span>
+                    <span className="text-[9px] uppercase tracking-wider text-muted">
+                      {stat.label}
+                    </span>
                   </div>
                 ))}
               </div>
@@ -207,7 +286,10 @@ const About = () => {
               {/* Mission Statement */}
               <div className="bg-gradient-to-r from-primary to-primary/90 p-5 rounded-2xl text-white">
                 <p className="text-sm lg:text-base font-medium italic">
-                  "With a mission to make quality physiotherapy accessible at home, Dr. Bhanu continues to transform lives by restoring movement, reducing pain, and improving overall quality of life."
+                  "With a mission to make quality physiotherapy accessible at
+                  home, Dr. Bhanu continues to transform lives by restoring
+                  movement, reducing pain, and improving overall quality of
+                  life."
                 </p>
               </div>
             </div>
@@ -221,46 +303,51 @@ const About = () => {
           <div className="text-center mb-10 lg:mb-12">
             <div className="inline-flex items-center justify-center space-x-3 mb-4 lg:mb-6">
               <span className="w-8 h-[2px] bg-accent" />
-              <span className="text-accent font-sans font-bold uppercase tracking-[0.3em] text-[10px]">The Advantage</span>
+              <span className="text-accent font-sans font-bold uppercase tracking-[0.3em] text-[10px]">
+                The Advantage
+              </span>
               <span className="w-8 h-[2px] bg-accent" />
             </div>
             <h2 className="editorial-heading text-primary leading-tight">
-              Why Choose <span className="text-accent italic font-normal">{BRAND_NAME}?</span>
+              Why Choose{" "}
+              <span className="text-accent italic font-normal">
+                {BRAND_NAME}?
+              </span>
             </h2>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {[
               {
-                title: 'Home-Based Care',
-                desc: 'Professional treatment without traveling. We bring expert care right to your doorstep.',
-                icon: <Home className="w-5 h-5 lg:w-6 lg:h-6" />
+                title: "Home-Based Care",
+                desc: "Professional treatment without traveling. We bring expert care right to your doorstep.",
+                icon: <Home className="w-5 h-5 lg:w-6 lg:h-6" />,
               },
               {
-                title: 'Personalized Plans',
-                desc: 'Tailored treatments designed specifically for your unique condition and lifestyle.',
-                icon: <Users className="w-5 h-5 lg:w-6 lg:h-6" />
+                title: "Personalized Plans",
+                desc: "Tailored treatments designed specifically for your unique condition and lifestyle.",
+                icon: <Users className="w-5 h-5 lg:w-6 lg:h-6" />,
               },
               {
-                title: 'Certified Experts',
-                desc: 'Skilled professionals trained in advanced clinical rehabilitation with 6+ years experience.',
-                icon: <ShieldCheck className="w-5 h-5 lg:w-6 lg:h-6" />
+                title: "Certified Experts",
+                desc: "Skilled professionals trained in advanced clinical rehabilitation with 6+ years experience.",
+                icon: <ShieldCheck className="w-5 h-5 lg:w-6 lg:h-6" />,
               },
               {
-                title: 'Advanced Methods',
-                desc: 'Using modern methods like dry needling and mobilization for faster results.',
-                icon: <Zap className="w-5 h-5 lg:w-6 lg:h-6" />
+                title: "Advanced Methods",
+                desc: "Using modern methods like dry needling and mobilization for faster results.",
+                icon: <Zap className="w-5 h-5 lg:w-6 lg:h-6" />,
               },
               {
-                title: 'Affordable Rates',
-                desc: 'Cost-effective clinical plans designed for every patient. No hidden charges.',
-                icon: <Award className="w-5 h-5 lg:w-6 lg:h-6" />
+                title: "Affordable Rates",
+                desc: "Cost-effective clinical plans designed for every patient. No hidden charges.",
+                icon: <Award className="w-5 h-5 lg:w-6 lg:h-6" />,
               },
               {
-                title: 'Patient-Centered',
-                desc: 'One-on-one sessions with 100% attention for your complete recovery.',
-                icon: <Heart className="w-5 h-5 lg:w-6 lg:h-6" />
-              }
+                title: "Patient-Centered",
+                desc: "One-on-one sessions with 100% attention for your complete recovery.",
+                icon: <Heart className="w-5 h-5 lg:w-6 lg:h-6" />,
+              },
             ].map((item, idx) => (
               <motion.div
                 key={idx}
@@ -284,14 +371,16 @@ const About = () => {
             ))}
           </div>
         </div>
-      </section >
+      </section>
 
       {/* 6. CTA & LOCATIONS */}
       <section className="py-8 lg:py-12 bg-white text-center relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 space-y-8 lg:space-y-12 relative z-10">
           <h2 className="editorial-heading text-primary leading-tight">
             Start Your <br />
-            <span className="text-accent italic font-normal">Recovery Journey</span>
+            <span className="text-accent italic font-normal">
+              Recovery Journey
+            </span>
           </h2>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-6 lg:gap-8 pt-4">
@@ -301,14 +390,23 @@ const About = () => {
               rel="noopener noreferrer"
               className="w-full sm:w-auto"
             >
-              <Button variant="secondary" size="lg" className="w-full rounded-full px-10 group border-none text-white hover:bg-accent/90 shadow-xl shadow-accent/20">
+              <Button
+                variant="secondary"
+                size="lg"
+                className="w-full rounded-full px-10 group border-none text-white hover:bg-accent/90 shadow-xl shadow-accent/20"
+              >
                 Book Visit Now
                 <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Button>
             </a>
             <div className="flex flex-col items-center sm:items-start text-left">
-              <span className="text-[9px] uppercase tracking-[0.2em] font-bold text-muted mb-1">Speak to a Specialist</span>
-              <a href={`tel:+91${CONTACT_PHONE_DISPLAY.replace(/\s+/g, '')}`} className="flex items-center gap-2 text-primary font-bold uppercase tracking-widest text-base lg:text-lg hover:text-accent transition-colors">
+              <span className="text-[9px] uppercase tracking-[0.2em] font-bold text-muted mb-1">
+                Speak to a Specialist
+              </span>
+              <a
+                href={`tel:+91${CONTACT_PHONE_DISPLAY.replace(/\s+/g, "")}`}
+                className="flex items-center gap-2 text-primary font-bold uppercase tracking-widest text-base lg:text-lg hover:text-accent transition-colors"
+              >
                 <PhoneCall className="w-4 h-4 text-accent" />
                 {CONTACT_PHONE_DISPLAY}
               </a>
@@ -316,22 +414,27 @@ const About = () => {
           </div>
 
           <div className="pt-10 border-t border-primary/10">
-            <h4 className="text-[9px] uppercase tracking-[0.4em] font-bold text-muted mb-6">Our Principal Locations</h4>
+            <h4 className="text-[9px] uppercase tracking-[0.4em] font-bold text-muted mb-6">
+              Our Principal Locations
+            </h4>
             <div className="flex flex-col md:flex-row justify-center gap-6 lg:gap-12">
               <div className="flex items-center space-x-3 bg-surface/50 p-4 rounded-xl border border-primary/5">
                 <MapPin className="text-accent w-5 h-5" />
-                <span className="text-primary font-bold tracking-wider uppercase text-[10px] lg:text-xs">Miyapur, Hyderabad - 500049</span>
+                <span className="text-primary font-bold tracking-wider uppercase text-[10px] lg:text-xs">
+                  Miyapur, Hyderabad - 500049
+                </span>
               </div>
               <div className="flex items-center space-x-3 bg-surface/50 p-4 rounded-xl border border-primary/5">
                 <MapPin className="text-accent w-5 h-5" />
-                <span className="text-primary font-bold tracking-wider uppercase text-[10px] lg:text-xs">Kukatpally, Hyderabad - 500085</span>
+                <span className="text-primary font-bold tracking-wider uppercase text-[10px] lg:text-xs">
+                  Kukatpally, Hyderabad - 500085
+                </span>
               </div>
             </div>
           </div>
         </div>
-      </section >
-
-    </div >
+      </section>
+    </div>
   );
 };
 
