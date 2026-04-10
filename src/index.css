@@ -5,17 +5,17 @@
   --font-sans: "Inter", sans-serif;
 
   /* New Brand Palette - High Contrast #76BFEA (Light Blue) & #37FB44 (Bright Green) */
-  --color-primary: #2563EB;    /* Vibrant Blue - More saturated */
-  --color-secondary: #FFFFFF; /* Pure White */
-  --color-accent: #16A34A;    /* Strong Green - Better contrast than bright green */
-  --color-dark: #000000;       /* Pure Black */
-  --color-muted: #1F2937;      /* Dark Gray for strong contrast */
-  --color-surface: #E5E7EB;    /* Light Gray for better contrast */
-  
+  --color-primary: #2563eb; /* Vibrant Blue - More saturated */
+  --color-secondary: #ffffff; /* Pure White */
+  --color-accent: #16a34a; /* Strong Green - Better contrast than bright green */
+  --color-dark: #000000; /* Pure Black */
+  --color-muted: #1f2937; /* Dark Gray for strong contrast */
+  --color-surface: #e5e7eb; /* Light Gray for better contrast */
+
   /* Original colors for specific uses */
-  --color-light-blue: #76BFEA;  /* Original light blue */
-  --color-bright-green: #37FB44; /* Original bright green */
-  
+  --color-light-blue: #76bfea; /* Original light blue */
+  --color-bright-green: #37fb44; /* Original bright green */
+
   --spacing-section: clamp(60px, 8vw, 120px);
   --spacing-section-mobile: 40px;
 
@@ -23,8 +23,9 @@
   --editorial-heading: clamp(1.5rem, 4vw, 3rem);
   --editorial-body: clamp(0.9rem, 1.2vw, 1.125rem);
 
-  --shadow-editorial: 0 30px 60px -12px rgba(37, 99, 235, 0.35),
-                       0 18px 36px -18px rgba(22, 163, 74, 0.3);
+  --shadow-editorial:
+    0 30px 60px -12px rgba(37, 99, 235, 0.35),
+    0 18px 36px -18px rgba(22, 163, 74, 0.3);
 }
 
 @layer base {
@@ -32,7 +33,12 @@
     @apply font-sans text-black bg-white antialiased overflow-x-hidden;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-serif leading-tight tracking-tight;
   }
 }
@@ -93,10 +99,47 @@
     animation: floating 6s ease-in-out infinite;
   }
 
+  .marquee-track {
+    will-change: transform;
+    transform: translate3d(0, 0, 0);
+    animation: marquee 24s linear infinite;
+  }
+
+  .marquee-track:hover {
+    animation-play-state: paused;
+  }
+
+  @media (max-width: 768px) {
+    .marquee-track {
+      animation-duration: 32s;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-track {
+      animation: none;
+    }
+  }
+
   @keyframes floating {
-    0% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-    100% { transform: translateY(0px); }
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes marquee {
+    0% {
+      transform: translate3d(0, 0, 0);
+    }
+    100% {
+      transform: translate3d(-50%, 0, 0);
+    }
   }
 }
 

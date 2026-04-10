@@ -46,7 +46,7 @@ const Home = () => {
       title: "Orthopedic Physiotherapy",
       desc: "Back pain, neck pain, joint issues, arthritis, fracture recovery",
       icon: <Bone className="w-6 h-6" />,
-      img: "/images/treatments/back_pain_treatment.png",
+      img: "/images/treatments/back_pain_treatment-opt.webp",
       color: "primary",
     },
     {
@@ -55,7 +55,7 @@ const Home = () => {
       title: "Neurological Rehabilitation",
       desc: "Stroke recovery, Parkinson’s care, balance & mobility training",
       icon: <Brain className="w-6 h-6" />,
-      img: "/images/treatments/stroke_rehab_session.png",
+      img: "/images/treatments/stroke_rehab_session-opt.webp",
       color: "dark",
     },
     {
@@ -64,7 +64,7 @@ const Home = () => {
       title: "Sports Rehabilitation",
       desc: "Injury recovery, athletic performance, return-to-sport protocols",
       icon: <Dumbbell className="w-6 h-6" />,
-      img: "/images/treatments/acl_rehab_exercise.png",
+      img: "/images/treatments/acl_rehab_exercise-opt.webp",
       color: "accent",
     },
   ];
@@ -197,42 +197,42 @@ const Home = () => {
     {
       title: "Back Pain",
       slug: "back-pain",
-      img: "/images/treatments/back_pain_treatment.png",
+      img: "/images/treatments/back_pain_treatment-opt.webp",
     },
     {
       title: "Neck Pain",
       slug: "neck-pain",
-      img: "/images/treatments/neck_pain_treatment.png",
+      img: "/images/treatments/neck_pain_treatment-opt.webp",
     },
     {
       title: "Shoulder Pain",
       slug: "shoulder-pain",
-      img: "/images/treatments/shoulder_pain_rehab.png",
+      img: "/images/treatments/shoulder_pain_rehab-opt.webp",
     },
     {
       title: "Stroke Recovery",
       slug: "stroke-rehabilitation",
-      img: "/images/treatments/stroke_rehab_session.png",
+      img: "/images/treatments/stroke_rehab_session-opt.webp",
     },
     {
       title: "Parkinson’s Care",
       slug: "parkinsons-disease",
-      img: "/images/treatments/parkinsons_care_physio.png",
+      img: "/images/treatments/parkinsons_care_physio-opt.webp",
     },
     {
       title: "ACL Rehabilitation",
       slug: "acl-rehabilitation",
-      img: "/images/treatments/acl_rehab_exercise.png",
+      img: "/images/treatments/acl_rehab_exercise-opt.webp",
     },
     {
       title: "Tennis Elbow",
       slug: "tennis-elbow",
-      img: "/images/treatments/tennis_elbow_therapy.png",
+      img: "/images/treatments/tennis_elbow_therapy-opt.webp",
     },
     {
       title: "Chiropractic Care",
       slug: "chiropractic-care",
-      img: "/images/treatments/chiropractic_adjustment.png",
+      img: "/images/treatments/chiropractic_adjustment-opt.webp",
     },
   ];
 
@@ -336,7 +336,7 @@ const Home = () => {
               className="relative z-10 overflow-hidden shadow-2xl rounded-2xl lg:rounded-3xl"
             >
               <img
-                src="/images/treatments/hero_physio_interaction_retry.png"
+                src="/images/treatments/hero_physio_interaction_retry-opt.webp"
                 alt="Personalized Home Physiotherapy Session"
                 className="w-full h-full object-cover aspect-[4/3] lg:aspect-auto"
                 loading="eager"
@@ -659,15 +659,7 @@ const Home = () => {
 
         {/* Infinite Marquee Container */}
         <div className="relative flex overflow-x-hidden">
-          <motion.div
-            className="flex whitespace-nowrap gap-4 lg:gap-6 py-2"
-            animate={{ x: ["0%", "-50%"] }}
-            transition={{
-              duration: 25,
-              repeat: Infinity,
-              ease: "linear",
-            }}
-          >
+          <div className="marquee-track flex whitespace-nowrap gap-4 py-2 lg:gap-6">
             {/* Double the array for seamless loop */}
             {[...conditions, ...conditions].map((condition, idx) => (
               <Link
@@ -706,7 +698,7 @@ const Home = () => {
                 </div>
               </Link>
             ))}
-          </motion.div>
+          </div>
         </div>
 
         <div className="max-w-7xl mx-auto px-6 mt-8 lg:mt-12 text-center">
