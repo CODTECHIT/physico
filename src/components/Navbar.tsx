@@ -1,15 +1,13 @@
-import { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Menu, X, PhoneCall, ChevronDown, MessageCircle } from 'lucide-react';
-import Button from './Button';
-import { cn } from '../lib/utils';
-import { CONTACT_WHATSAPP_LINK, BRAND_NAME } from '../constants';
+import { useState } from "react";
+import { Link, useLocation } from "react-router-dom";
+import { Menu, X, PhoneCall, ChevronDown, MessageCircle } from "lucide-react";
+import Button from "./Button";
+import { cn } from "../lib/utils";
+import { CONTACT_WHATSAPP_LINK, BRAND_NAME } from "../constants";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
-
-
 
   interface DropdownItem {
     name: string;
@@ -23,44 +21,53 @@ const Navbar = () => {
   }
 
   const navLinks: NavLink[] = [
-    { name: 'Home', path: '/' },
-    { name: 'About', path: '/about' },
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
     {
-      name: 'Services',
-      path: '/services',
+      name: "Services",
+      path: "/services",
     },
-    { name: 'Treatment', path: '/treatment' },
-    { name: 'Packages', path: '/packages' },
-    { name: 'FAQ', path: '/faq' },
-    { name: 'Contact', path: '/contact' },
+    { name: "Treatment", path: "/treatment" },
+    { name: "Packages", path: "/packages" },
+    { name: "FAQ", path: "/faq" },
+    { name: "Contact", path: "/contact" },
   ];
 
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 transition-all duration-500',
+        "fixed top-0 left-0 right-0 transition-all duration-500",
         isOpen
-          ? 'z-[99999] bg-white h-screen'
-          : 'z-50 bg-secondary/95 backdrop-blur-md py-6 lg:py-8 shadow-lg border-b border-primary/5'
+          ? "z-[99999] bg-white h-screen"
+          : "z-50 bg-secondary/95 backdrop-blur-md py-6 lg:py-8 shadow-lg border-b border-primary/5",
       )}
     >
-      <div className={cn(
-        "max-w-[1600px] mx-auto px-4 md:px-8 xl:px-12 flex items-center justify-between gap-3 transition-opacity duration-300",
-        isOpen ? "opacity-0 pointer-events-none" : "opacity-100"
-      )}>
-        <Link to="/" className="group flex min-w-0 flex-1 items-center gap-2 xl:gap-3 lg:flex-none">
+      <div
+        className={cn(
+          "max-w-[1600px] mx-auto px-4 md:px-8 xl:px-12 flex items-center justify-between gap-3 transition-opacity duration-300",
+          isOpen ? "opacity-0 pointer-events-none" : "opacity-100",
+        )}
+      >
+        <Link
+          to="/"
+          className="group flex min-w-0 flex-1 items-center gap-2 xl:gap-3 lg:flex-none"
+        >
           <div className="relative shrink-0">
             {/* Desktop: Horizontal Logo */}
             <img
               src="/logo-square.png"
               alt={BRAND_NAME}
               className="hidden lg:block h-10 xl:h-12 w-auto object-contain group-hover:opacity-80 transition-opacity"
+              loading="eager"
+              decoding="async"
             />
             {/* Mobile: Square Logo */}
             <img
               src="/logo-square.png"
               alt={BRAND_NAME}
               className="lg:hidden h-12 w-auto object-contain group-hover:opacity-80 transition-opacity rounded-lg"
+              loading="eager"
+              decoding="async"
             />
           </div>
           <div className="min-w-0 overflow-hidden border-l border-primary/10 pl-2.5 py-1 xl:pl-4">
@@ -80,16 +87,30 @@ const Navbar = () => {
               <Link
                 to={link.path}
                 className={cn(
-                  'text-[10px] lg:text-[11px] xl:text-[13px] uppercase tracking-[0.1em] font-semibold transition-all duration-300 hover:text-accent flex items-center gap-1 xl:gap-1.5',
-                  location.pathname === link.path || (link.dropdown && (location.pathname.startsWith('/service/') || location.pathname.startsWith('/treatment/'))) ? 'text-accent' : 'text-primary'
+                  "text-[10px] lg:text-[11px] xl:text-[13px] uppercase tracking-[0.1em] font-semibold transition-all duration-300 hover:text-accent flex items-center gap-1 xl:gap-1.5",
+                  location.pathname === link.path ||
+                    (link.dropdown &&
+                      (location.pathname.startsWith("/service/") ||
+                        location.pathname.startsWith("/treatment/")))
+                    ? "text-accent"
+                    : "text-primary",
                 )}
               >
                 {link.name}
-                {link.dropdown && <ChevronDown className="w-3 h-3 xl:w-3.5 xl:h-3.5 opacity-40 group-hover/nav-item:rotate-180 transition-transform duration-500" />}
-                <span className={cn(
-                  "absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent transition-all duration-500 group-hover/nav-item:w-full",
-                  location.pathname === link.path || (link.dropdown && (location.pathname.startsWith('/service/') || location.pathname.startsWith('/treatment/'))) ? "w-full" : "w-0"
-                )} />
+                {link.dropdown && (
+                  <ChevronDown className="w-3 h-3 xl:w-3.5 xl:h-3.5 opacity-40 group-hover/nav-item:rotate-180 transition-transform duration-500" />
+                )}
+                <span
+                  className={cn(
+                    "absolute -bottom-1 left-0 w-0 h-[1.5px] bg-accent transition-all duration-500 group-hover/nav-item:w-full",
+                    location.pathname === link.path ||
+                      (link.dropdown &&
+                        (location.pathname.startsWith("/service/") ||
+                          location.pathname.startsWith("/treatment/")))
+                      ? "w-full"
+                      : "w-0",
+                  )}
+                />
               </Link>
 
               {/* Dropdown Menu */}
@@ -106,7 +127,9 @@ const Navbar = () => {
                           to={item.path}
                           className={cn(
                             "px-4 py-2.5 rounded-xl text-[10px] font-bold uppercase tracking-wider transition-all duration-300 flex items-center justify-between group/link hover:bg-accent/5",
-                            location.pathname === item.path ? "text-accent bg-accent/10" : "text-primary/70 hover:text-accent"
+                            location.pathname === item.path
+                              ? "text-accent bg-accent/10"
+                              : "text-primary/70 hover:text-accent",
                           )}
                         >
                           {item.name}
@@ -122,7 +145,12 @@ const Navbar = () => {
           <Button
             variant="secondary"
             className="ml-2 xl:ml-4 rounded-full px-5 lg:px-6 xl:px-8 py-3 xl:py-3.5 bg-accent hover:bg-accent/90 border-none shadow-lg shadow-accent/20 transition-all duration-500 transform hover:-translate-y-0.5 hover:scale-[1.02] active:scale-[0.98] text-[10px] xl:text-[11px] font-bold tracking-[0.12em] uppercase whitespace-nowrap"
-            onClick={() => window.open(`${CONTACT_WHATSAPP_LINK}?text=${encodeURIComponent(`Hi ${BRAND_NAME}, I would like to book an appointment.`)}`, '_blank')}
+            onClick={() =>
+              window.open(
+                `${CONTACT_WHATSAPP_LINK}?text=${encodeURIComponent(`Hi ${BRAND_NAME}, I would like to book an appointment.`)}`,
+                "_blank",
+              )
+            }
           >
             <MessageCircle className="w-3.5 h-3.5 xl:w-4 h-4 mr-2" />
             Book Now
@@ -131,7 +159,10 @@ const Navbar = () => {
 
         {/* Mobile Toggle */}
         <div className="flex shrink-0 items-center gap-1.5 lg:hidden">
-          <a href="tel:+919502808581" className="rounded-full border border-accent/10 p-1.5 text-accent transition-all hover:bg-accent/5 active:scale-90 min-[360px]:p-2">
+          <a
+            href="tel:+919502808581"
+            className="rounded-full border border-accent/10 p-1.5 text-accent transition-all hover:bg-accent/5 active:scale-90 min-[360px]:p-2"
+          >
             <PhoneCall size={16} />
           </a>
           <button
@@ -147,14 +178,22 @@ const Navbar = () => {
       {/* Mobile Menu Overlay */}
       <div
         className={cn(
-          'fixed inset-0 bg-white z-[99999] lg:hidden flex flex-col transition-all duration-500 ease-in-out',
-          isOpen ? 'translate-x-0 opacity-100' : 'translate-x-full opacity-0 pointer-events-none'
+          "fixed inset-0 bg-white z-[99999] lg:hidden flex flex-col transition-all duration-500 ease-in-out",
+          isOpen
+            ? "translate-x-0 opacity-100"
+            : "translate-x-full opacity-0 pointer-events-none",
         )}
       >
         {/* Mobile Menu Header */}
         <div className="flex items-center justify-between gap-3 px-5 py-5 border-b border-primary/5 bg-white shadow-sm shrink-0 sm:px-6 sm:py-6">
           <div className="flex min-w-0 items-center gap-2">
-            <img src="/logo-square.png" className="h-12 w-auto rounded-lg" alt="Logo" />
+            <img
+              src="/logo-square.png"
+              className="h-12 w-auto rounded-lg"
+              alt="Logo"
+              loading="eager"
+              decoding="async"
+            />
             <div className="min-w-0 overflow-hidden border-l border-primary/10 pl-2 py-0.5">
               <span className="block whitespace-nowrap font-serif text-lg font-bold tracking-tighter text-primary sm:text-2xl">
                 FLEXO <span className="text-accent italic">PHYSIOTHERAPY</span>
@@ -177,14 +216,20 @@ const Navbar = () => {
         <div className="flex-grow overflow-y-auto scrollbar-hide">
           <div className="px-6 py-10 flex flex-col items-center space-y-12">
             {navLinks.map((link) => (
-              <div key={link.name} className="flex flex-col items-center w-full">
+              <div
+                key={link.name}
+                className="flex flex-col items-center w-full"
+              >
                 <Link
                   to={link.path}
                   className={cn(
                     "text-3xl sm:text-4xl font-serif font-bold tracking-tight transition-all active:scale-95",
-                    location.pathname === link.path || (link.dropdown && (location.pathname.startsWith('/service/') || location.pathname.startsWith('/treatment/')))
+                    location.pathname === link.path ||
+                      (link.dropdown &&
+                        (location.pathname.startsWith("/service/") ||
+                          location.pathname.startsWith("/treatment/")))
                       ? "text-accent border-b-2 border-accent/20 pb-1"
-                      : "text-primary hover:text-accent/70"
+                      : "text-primary hover:text-accent/70",
                   )}
                   onClick={() => setIsOpen(false)}
                 >
@@ -201,11 +246,14 @@ const Navbar = () => {
                           "text-[10px] uppercase tracking-wider font-bold text-center py-4 px-3 border border-primary/5 bg-primary/[0.01] rounded-2xl transition-all shadow-sm active:bg-accent/10 active:scale-95",
                           location.pathname === item.path
                             ? "bg-accent/10 text-accent border-accent/20 shadow-none font-black"
-                            : "text-primary/60"
+                            : "text-primary/60",
                         )}
                         onClick={() => setIsOpen(false)}
                       >
-                        {item.name.replace(' Rehabilitation', '').replace(' Care', '').replace(' Therapy', '')}
+                        {item.name
+                          .replace(" Rehabilitation", "")
+                          .replace(" Care", "")
+                          .replace(" Therapy", "")}
                       </Link>
                     ))}
                   </div>
@@ -222,7 +270,10 @@ const Navbar = () => {
             className="w-full rounded-2xl h-14 text-sm font-bold uppercase tracking-[0.15em] bg-accent hover:bg-accent/90 border-none shadow-2xl shadow-accent/20 text-white transition-all duration-300 active:scale-95"
             onClick={() => {
               setIsOpen(false);
-              window.open(`${CONTACT_WHATSAPP_LINK}?text=${encodeURIComponent(`Hi ${BRAND_NAME}, I would like to book an appointment.`)}`, '_blank');
+              window.open(
+                `${CONTACT_WHATSAPP_LINK}?text=${encodeURIComponent(`Hi ${BRAND_NAME}, I would like to book an appointment.`)}`,
+                "_blank",
+              );
             }}
           >
             Check Availability

@@ -1,10 +1,10 @@
-import type { ReactNode } from 'react';
-import Navbar from './Navbar';
-import Footer from './Footer';
-import ScrollToTop from './ScrollToTop';
-import FloatingActions from './FloatingActions';
-import { motion, AnimatePresence } from 'framer-motion';
-import { useLocation } from 'react-router-dom';
+import type { ReactNode } from "react";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import ScrollToTop from "./ScrollToTop";
+import FloatingActions from "./FloatingActions";
+import { motion } from "framer-motion";
+import { useLocation } from "react-router-dom";
 
 interface LayoutProps {
   children: ReactNode;
@@ -18,17 +18,15 @@ const Layout = ({ children }: LayoutProps) => {
       <ScrollToTop />
       <Navbar />
       <FloatingActions />
-      <AnimatePresence mode="wait">
-        <motion.main
-          key={location.pathname}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.4, ease: 'linear' }}
-          className="flex-grow pt-24 pb-24 md:pb-0"
-        >
-          {children}
-        </motion.main>
-      </AnimatePresence>
+      <motion.main
+        key={location.pathname}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.18, ease: "linear" }}
+        className="flex-grow pt-24 pb-24 md:pb-0"
+      >
+        {children}
+      </motion.main>
       <Footer />
     </div>
   );
