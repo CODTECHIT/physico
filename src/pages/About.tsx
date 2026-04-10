@@ -7,7 +7,6 @@ import {
   MapPin,
   ArrowRight,
   PhoneCall,
-  CheckCircle2,
   Bone,
   Zap,
   Home,
