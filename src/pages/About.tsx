@@ -41,6 +41,7 @@ const About = () => {
             alt="Clinical Excellence Background"
             className="w-full h-full object-cover"
             loading="eager"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-white/90 lg:bg-white/85" />
         </motion.div>
@@ -128,6 +129,8 @@ const About = () => {
                   src="/logo-square.png"
                   alt="Flexo Physio Logo"
                   className="w-full h-full object-contain"
+                  loading="lazy"
+                  decoding="async"
                 />
               </div>
               <div className="absolute -bottom-6 -left-6 bg-primary p-5 shadow-xl border-t-4 border-accent hidden sm:block rounded-xl">
@@ -162,9 +165,11 @@ const About = () => {
               <div className="relative p-2 lg:p-4 border-[4px] lg:border-[10px] border-primary rounded-[2.5rem] lg:rounded-[5rem] shadow-xl overflow-visible max-w-sm mx-auto">
                 <div className="aspect-[4/5] rounded-[2rem] lg:rounded-[4rem] overflow-hidden bg-white">
                   <img
-                    src="/founder.png"
+                    src="/founder.avif"
                     alt="Dr. Bhanu Vemula - Founder & Consultant Physiotherapist"
                     className="w-full h-full object-contain"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
 

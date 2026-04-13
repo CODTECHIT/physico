@@ -27,9 +27,11 @@ const Conditions = () => {
           className="absolute inset-0 -z-10 h-[120%]"
         >
           <img
-            src="/images/treatments/back_pain_treatment.png"
+            src="/images/treatments/back_pain_treatment-opt.webp"
             alt={`${BRAND_NAME} Conditions Background`}
             className="w-full h-full object-cover"
+            loading="lazy"
+            decoding="async"
           />
           <div className="absolute inset-0 bg-primary/10" />
           <div className="absolute inset-0 bg-gradient-to-b from-white/90 via-white/80 to-white" />

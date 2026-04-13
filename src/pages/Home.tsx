@@ -43,8 +43,8 @@ const Home = () => {
     {
       id: "01",
       slug: "orthopedic",
-      title: "Orthopedic Physiotherapy",
-      desc: "Back pain, neck pain, joint issues, arthritis, fracture recovery",
+      title: "Orthopedic Rehabilitation",
+      desc: "Recovery for joint pain, post-surgery stiffness, and musculoskeletal injuries delivered at your home.",
       icon: <Bone className="w-6 h-6" />,
       img: "/images/treatments/back_pain_treatment-opt.webp",
       color: "primary",
@@ -52,8 +52,8 @@ const Home = () => {
     {
       id: "02",
       slug: "neurological",
-      title: "Neurological Rehabilitation",
-      desc: "Stroke recovery, Parkinson’s care, balance & mobility training",
+      title: "Neuro Rehabilitation",
+      desc: "Specialist hands-on care for stroke recovery, paralysis, and neurological conditions in Kukatpally and Miyapur.",
       icon: <Brain className="w-6 h-6" />,
       img: "/images/treatments/stroke_rehab_session-opt.webp",
       color: "dark",
@@ -62,7 +62,7 @@ const Home = () => {
       id: "03",
       slug: "sports",
       title: "Sports Rehabilitation",
-      desc: "Injury recovery, athletic performance, return-to-sport protocols",
+      desc: "Fast, precise recovery from ligament tears and muscle strains to return you to peak performance.",
       icon: <Dumbbell className="w-6 h-6" />,
       img: "/images/treatments/acl_rehab_exercise-opt.webp",
       color: "accent",
@@ -71,18 +71,19 @@ const Home = () => {
 
   const additionalServices = [
     {
-      title: "Post-Surgery Rehabilitation",
-      desc: "Recovery-focused physiotherapy after knee replacement, spine surgery, and fractures delivered safely at home.",
+      title: "Chiropractic Care",
+      desc: "Precise spinal and joint corrections at home for lasting relief from misalignment and dysfunction.",
     },
     {
-      title: "Chronic Pain Management",
-      desc: "Targeted physiotherapy for long-term back pain, neck pain, and joint issues with evidence-based treatment.",
+      title: "Dry Needling & Cupping",
+      desc: "Advanced clinical techniques to release muscle trigger points and improve tissue mobility.",
     },
     {
       title: "Geriatric Physiotherapy",
-      desc: "Specialized care for elderly patients to improve mobility, balance, and prevent falls at home.",
+      desc: "Gentle, evidence-based care to improve balance, prevent falls, and build strength for elderly patients.",
     },
   ];
+
 
   const testimonials = [
     {

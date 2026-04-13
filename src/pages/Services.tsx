@@ -16,74 +16,85 @@ const Services = () => {
       id: '01',
       slug: 'neurological',
       title: 'Neuro Rehabilitation',
-      desc: 'Expert neuro physiotherapy at home in Kukatpally and Miyapur. Personalized stroke recovery, Parkinson’s care, and pediatric neuro-rehabilitation.',
+      popular: true,
+      desc: 'Stroke, paralysis, and neurological conditions require specialist hands-on care — not just exercises. Dr. Bhanu delivers evidence-based neuro rehab directly at your home in Kukatpally, Miyapur, Kondapur and nearby areas, helping patients regain movement, balance, and daily independence.',
       features: [
-        'Stroke recovery & rehab',
-        'Parkinson’s support',
-        'Pediatric neuro therapy',
-        'Spinal injury rehabilitation'
+        'Stroke Recovery & Rehab',
+        "Parkinson's Support",
+        'Pediatric Neuro Therapy',
+        'Spinal Injury Rehabilitation'
       ],
       focus: 'Restore function & improve quality of life',
+      idealFor: "Stroke survivors, paralysis patients, Parkinson's patients, children with neuro conditions.",
       icon: <Brain className="w-8 h-8" />,
-      img: '/images/treatments/stroke_rehab_session.png'
+      img: '/images/treatments/stroke_rehab_session-opt.webp'
     },
     {
       id: '02',
       slug: 'orthopedic',
       title: 'Orthopedic Rehabilitation',
-      desc: 'Professional orthopedic physiotherapy at home in Kukatpally and Miyapur. Expert recovery for joint pain, post-surgery, and musculoskeletal injuries.',
+      popular: true,
+      desc: 'Whether it\'s joint pain, post-surgery stiffness, or a musculoskeletal injury, recovery should happen at your pace — in your own home. Our orthopedic physiotherapy combines manual therapy, targeted exercises, and advanced modalities to eliminate pain at the root cause, not just the symptoms.',
       features: [
-        'Post-surgery joint recovery',
-        'Muscle & joint pain relief',
-        'Improved flexibility & strength',
-        'Customized treatment plans'
+        'Post-Surgery Joint Recovery',
+        'Muscle & Joint Pain Relief',
+        'Improved Flexibility & Strength',
+        'Customised Treatment Plans'
       ],
       focus: 'Reduce pain & restore movement',
+      outcome: 'Patients with knee pain, frozen shoulder & post-surgical stiffness typically recover full function in 6–10 sessions.',
+      idealFor: 'Post-surgery patients, knee & hip pain, office workers with chronic back or neck pain.',
       icon: <Bone className="w-8 h-8" />,
-      img: '/images/treatments/back_pain_treatment.png'
+      img: '/images/treatments/back_pain_treatment-opt.webp'
     },
     {
       id: '03',
       slug: 'sports',
       title: 'Sports Rehabilitation',
-      desc: 'Specialized sports physiotherapy at home in Kukatpally and Miyapur. Expert injury recovery, post-surgical rehab, and athletic performance programs.',
+      desc: 'Sports injuries demand fast, precise recovery so you can return to peak performance without re-injury. From ligament tears to muscle strains, our sports physio program combines injury-specific treatment with functional training — designed around your sport and your body.',
       features: [
-        'Injury recovery & pain management',
-        'Post-surgical sports rehab',
+        'Injury Recovery & Pain Management',
+        'Post-Surgical Sports Rehab',
         'Performance enhancement',
-        'Return-to-sport guidance'
+        'Return-to-sport Guidance'
       ],
       focus: 'Faster recovery & injury prevention',
+      outcome: 'Athletes return to training significantly faster with structured home-based sports rehab compared to rest alone.',
+      idealFor: 'Athletes, gym-goers, runners, cricket & football players, and anyone with a sports-related injury.',
       icon: <Dumbbell className="w-8 h-8" />,
-      img: '/images/treatments/acl_rehab_exercise.png'
+      img: '/images/treatments/acl_rehab_exercise-opt.webp'
     },
     {
       id: '04',
       slug: 'chiropractic',
       title: 'Chiropractic Care',
-      desc: 'Expert chiropractic care at home in Hyderabad, Kukatpally, and Miyapur. Restore joint mobility and optimize spinal function through precise, evidence-informed techniques.',
+      desc: 'Most pain originates from spinal misalignment and joint dysfunction — not just muscle tightness. Dr. Bhanu\'s chiropractic expertise, combined with physiotherapy, delivers precise spinal and joint corrections at your home for lasting relief without dependency on medication.',
       features: [
-        'Spinal adjustments & mobilization',
-        'Postural correction',
+        'Spinal Adjustments & Mobilization',
+        'Postural Correction',
         'Combined rehabilitation approach',
         'Long-term stability'
       ],
-      focus: 'Restore joint mobility & optimize spinal function',
+      focus: 'Restore joint mobility & optimise spinal function',
+      outcome: 'Patients with chronic back and neck pain report significant relief after just 3–5 chiropractic sessions.',
+      idealFor: 'Chronic back & neck pain, poor posture, desk workers, spinal stiffness patients.',
       icon: <Activity className="w-8 h-8" />,
-      img: '/images/treatments/chiropractic_adjustment.png'
+      img: '/images/treatments/chiropractic_adjustment-opt.webp'
     },
     {
       id: '08',
       slug: 'geriatric',
       title: 'Geriatric Physiotherapy',
-      desc: 'Specialized physiotherapy for older adults at home in Kukatpally and Miyapur. Evidence-based care to improve mobility, balance, and independence.',
+      desc: 'Ageing should not mean losing independence. Our geriatric physiotherapy brings gentle, evidence-based care to elderly patients at home — improving balance, preventing falls, building strength, and supporting a healthy, active lifestyle in the comfort of familiar surroundings.',
       features: [
-        'Balance & fall prevention',
-        'Strength training',
+        'Balance & Fall Prevention',
+        'Strength Training',
         'Mobility & gait training',
         'Pain management'
       ],
       focus: 'Stay active & independent',
+      outcome: 'Regular geriatric physio significantly reduces fall risk and helps elderly patients maintain independence longer.',
+      idealFor: 'Elderly adults (60+), post-fall recovery, age-related joint pain, mobility decline.',
       icon: <Activity className="w-8 h-8" />,
       img: '/images/treatments/geriatric_physiotherapy_home.png'
     },
@@ -91,7 +102,7 @@ const Services = () => {
       id: '05',
       slug: 'dry-needling',
       title: 'Dry Needling Therapy',
-      desc: 'Evidence-based dry needling therapy at home in Kukatpally and Miyapur. Precise intervention to deactivate myofascial trigger points and restore normal muscle function.',
+      desc: 'Stubborn muscle pain that doesn\'t respond to massage or rest is often caused by myofascial trigger points. Dr. Bhanu\'s certified dry needling precisely targets these knots to deactivate them, restore normal muscle function, and provide fast, lasting relief — all at your home.',
       features: [
         'Myofascial trigger point release',
         'Targeted needle insertion',
@@ -99,6 +110,8 @@ const Services = () => {
         'Root cause rehabilitation'
       ],
       focus: 'Release trigger points & restore muscle function',
+      outcome: 'Patients with chronic muscle pain and tightness often experience significant relief within 2–4 sessions.',
+      idealFor: 'Chronic muscle pain, neck & shoulder tightness, trigger points, headache from muscle tension.',
       icon: <Zap className="w-8 h-8" />,
       img: '/images/treatments/dry_needling_therapy.png'
     },
@@ -106,7 +119,7 @@ const Services = () => {
       id: '06',
       slug: 'cupping',
       title: 'Cupping Therapy',
-      desc: 'Professional cupping therapy at home in Kukatpally and Miyapur. Controlled negative pressure to improve blood flow, tissue mobility, and muscle relaxation.',
+      desc: 'Cupping therapy uses controlled negative pressure to lift and release tight fascia, improve blood circulation, and accelerate tissue healing — an ancient technique now backed by modern clinical evidence. Ideal as a standalone treatment or combined with physiotherapy for faster recovery.',
       features: [
         'Dynamic & static cupping',
         'Tissue mobility improvement',
@@ -114,14 +127,16 @@ const Services = () => {
         'Combined with exercise therapy'
       ],
       focus: 'Improve tissue mobility & muscle relaxation',
+      outcome: 'Best results seen when combined with manual therapy — most patients report reduced stiffness and improved range of motion within 3–5 sessions.',
+      idealFor: 'Muscle tightness, back stiffness, sports recovery, chronic pain with poor circulation.',
       icon: <Zap className="w-8 h-8" />,
       img: '/images/treatments/cupping_therapy_session.png'
     },
     {
       id: '07',
       slug: 'iastm',
-      title: 'IASTM',
-      desc: 'Instrument Assisted Soft Tissue Mobilization at home in Kukatpally and Miyapur. Advanced technique to detect and treat soft tissue restrictions, adhesions, and scar tissue.',
+      title: 'IASTM Therapy',
+      desc: 'IASTM (Instrument Assisted Soft Tissue Mobilisation) uses specially designed tools to detect and break down scar tissue, adhesions, and fascial restrictions that limit movement and cause pain — restoring smooth, pain-free function in ways that hands alone cannot achieve.',
       features: [
         'Soft tissue adhesion release',
         'Scar tissue management',
@@ -129,6 +144,8 @@ const Services = () => {
         'Combined with active rehabilitation'
       ],
       focus: 'Restore tissue health & movement quality',
+      outcome: 'Particularly effective for post-surgical scar tissue and chronic tendon issues — results visible within 4–6 sessions.',
+      idealFor: 'Post-surgery scar tissue, tendon pain, restricted movement, chronic soft tissue injuries.',
       icon: <Zap className="w-8 h-8" />,
       img: '/images/treatments/iastm_therapy_tool.png'
     },
@@ -136,7 +153,7 @@ const Services = () => {
       id: '09',
       slug: 'kinesio-taping',
       title: 'Kinesio Taping',
-      desc: 'Professional Kinesio taping therapy at home in Kukatpally and Miyapur. Specialized elastic therapeutic tape to support muscles, reduce pain, and enhance recovery.',
+      desc: 'Kinesio taping provides continuous therapeutic support between sessions — reducing pain, stabilising joints, and enhancing circulation 24 hours a day without restricting natural movement. A powerful complement to physiotherapy that keeps your recovery progressing even when the therapist isn\'t there.',
       features: [
         'Pain reduction & management',
         'Muscle support & stabilization',
@@ -144,10 +161,15 @@ const Services = () => {
         'Enhanced performance & recovery'
       ],
       focus: 'Support muscles & accelerate recovery',
+      outcome: 'When combined with physiotherapy, Kinesio taping reduces recovery time and helps maintain treatment gains between sessions.',
+      idealFor: 'Sports injuries, muscle strains, joint instability, swelling management, post-exercise recovery.',
       icon: <Zap className="w-8 h-8" />,
       img: '/images/treatments/Flexophysio New Website Images (3).jpg.jpeg'
     }
+Website Images (3).jpg.jpeg'
+    }
   ];
+
 
   return (
     <div className="bg-white">
@@ -220,6 +242,8 @@ const Services = () => {
                     src={service.img}
                     alt={service.title}
                     className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110"
+                    loading="lazy"
+                    decoding="async"
                   />
 
                   {/* Shining Effect Overlay */}
@@ -240,8 +264,13 @@ const Services = () => {
                         {service.icon}
                       </div>
                       <Link to={service.slug ? `/service/${service.slug}` : "/contact"}>
-                        <h3 className="text-2xl lg:text-3xl font-serif font-bold text-primary leading-tight group-hover:text-accent transition-colors duration-500">
+                        <h3 className="text-2xl lg:text-3xl font-serif font-bold text-primary leading-tight group-hover:text-accent transition-colors duration-500 flex items-center gap-3">
                           {service.title}
+                          {service.popular && (
+                            <span className="bg-[#FAEEDA] text-[#633806] text-[10px] font-bold px-2.5 py-1 rounded-full whitespace-nowrap">
+                              Most Popular
+                            </span>
+                          )}
                         </h3>
                       </Link>
                     </div>
@@ -251,13 +280,13 @@ const Services = () => {
                     </p>
 
                     <div className="pt-6 border-t border-primary/5">
-                      <ul className="space-y-4">
+                      <ul className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
                         {service.features.map((feat) => (
-                          <li key={feat} className="flex items-center gap-4 group/item">
+                          <li key={feat} className="flex items-start gap-4 group/item">
                             <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center shrink-0 group-hover/item:bg-accent transition-colors duration-300">
                               <CheckCircle2 className="w-3.5 h-3.5 text-accent group-hover/item:text-white transition-colors duration-300" />
                             </div>
-                            <span className="text-[11px] font-bold text-primary/80 uppercase tracking-tight group-hover/item:text-primary transition-colors">
+                            <span className="text-[11px] font-bold text-primary/80 uppercase tracking-tight group-hover/item:text-primary transition-colors leading-relaxed">
                               {feat}
                             </span>
                           </li>
@@ -269,7 +298,8 @@ const Services = () => {
                   {/* Bottom Footer Section - Pushed to bottom and aligned */}
                   <div className="mt-auto pt-8 space-y-6">
                     {/* Focus Point Redesign - Premium Clinical Highlight */}
-                    <div className="pt-4 border-t border-primary/5">
+                    <div className="pt-4 border-t border-primary/5 space-y-4">
+                      {/* Clinical Focus Bar */}
                       <div className="bg-accent/5 p-5 rounded-2xl border-l-4 border-accent relative overflow-hidden group/focus">
                         {/* Subtle background icon */}
                         <Target className="absolute -right-4 -bottom-4 w-16 h-16 text-accent/10 -rotate-12 group-hover/focus:rotate-0 transition-transform duration-700" />
@@ -281,6 +311,24 @@ const Services = () => {
                           </p>
                         </div>
                       </div>
+
+                      {/* Outcome Line */}
+                      {service.outcome && (
+                        <div className="bg-[#FAEEDA]/50 p-4 rounded-xl border-l-4 border-[#633806]/30">
+                          <p className="text-xs italic text-[#633806] font-medium leading-relaxed">
+                            {service.outcome}
+                          </p>
+                        </div>
+                      )}
+
+                      {/* Ideal For / Who Section */}
+                      {service.idealFor && (
+                        <div className="px-1">
+                          <p className="text-xs text-dark/70 leading-relaxed">
+                            <strong className="text-primary font-bold">Ideal for:</strong> {service.idealFor}
+                          </p>
+                        </div>
+                      )}
                     </div>
 
                     <div className="pt-2">
@@ -289,7 +337,7 @@ const Services = () => {
                         className="inline-flex items-center gap-4 text-[10px] font-bold uppercase tracking-[0.3em] text-primary/40 hover:text-accent transition-all group/link"
                       >
                         <span className="w-10 h-[1px] bg-primary/10 group-hover/link:w-16 group-hover/link:bg-accent transition-all duration-500" />
-                        Read More
+                        Explore Service
                       </Link>
                     </div>
                   </div>
