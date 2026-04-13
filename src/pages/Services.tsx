@@ -166,8 +166,6 @@ const Services = () => {
       icon: <Zap className="w-8 h-8" />,
       img: '/images/treatments/Flexophysio New Website Images (3).jpg.jpeg'
     }
-Website Images (3).jpg.jpeg'
-    }
   ];
 
 
