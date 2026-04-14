@@ -716,6 +716,7 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
             {[
+              {
                 title: "Treatment in your own environment",
                 text: "Recovery happens faster when you're comfortable. We treat you where you actually live: your bed, your chair, your stairs, so rehab exercises translate directly to your daily life.",
                 icon: <HomeIcon className="w-5 h-5" />,
