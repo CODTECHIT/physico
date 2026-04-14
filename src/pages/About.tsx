@@ -350,7 +350,7 @@ const About = () => {
                 icon: <PhoneCall className="w-5 h-5 lg:w-6 lg:h-6" />,
               },
               {
-                title: "Serving Hyderabad for 4+ years",
+                title: "Serving Hyderabad for 6+ years",
                 desc: "Kukatpally, Miyapur, Kondapur, Nizampet, KPHB, Madhapur and nearby, 1,000+ patients trust Flexo as Hyderabad's most recommended home physiotherapy service.",
                 icon: <MapPin className="w-5 h-5 lg:w-6 lg:h-6" />,
               },

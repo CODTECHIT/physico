@@ -356,54 +356,54 @@ const Home = () => {
         </div>
 
         {/* TRUST BAR */}
-        <div className="bg-[#0B3D36] py-4 lg:py-10 mt-6 lg:mt-0 relative z-30">
+        <div className="bg-[#0B3D36] py-5 lg:py-10 mt-6 lg:mt-0 relative z-30">
           <div className="max-w-[1400px] mx-auto responsive-padding">
-            <div className="grid grid-cols-3 lg:grid-cols-6 gap-x-1 gap-y-2 lg:gap-0 lg:divide-x lg:divide-white/10">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-3 gap-y-4 lg:gap-0 lg:divide-x lg:divide-white/10">
               {[
                 {
                   title: "Certified Doctors",
                   desc: "BPT/MPT",
-                  icon: <UserCheck className="w-3 h-3 lg:w-6 lg:h-6" />,
+                  icon: <UserCheck className="w-4 h-4 lg:w-6 lg:h-6" />,
                 },
                 {
                   title: "3600+ Sessions",
                   desc: "Hyderabad",
-                  icon: <Activity className="w-3 h-3 lg:w-6 lg:h-6" />,
+                  icon: <Activity className="w-4 h-4 lg:w-6 lg:h-6" />,
                 },
                 {
                   title: "1000+ Patients",
                   desc: "Treated",
-                  icon: <HomeIcon className="w-3 h-3 lg:w-6 lg:h-6" />,
+                  icon: <HomeIcon className="w-4 h-4 lg:w-6 lg:h-6" />,
                 },
                 {
                   title: "120+ Surgeries",
                   desc: "Avoided",
-                  icon: <ShieldCheck className="w-3 h-3 lg:w-6 lg:h-6" />,
+                  icon: <ShieldCheck className="w-4 h-4 lg:w-6 lg:h-6" />,
                 },
                 {
                   title: "4.9⭐ Rating",
                   desc: "160+ reviews",
-                  icon: <Star className="w-3 h-3 lg:w-6 lg:h-6 fill-accent text-accent" />,
+                  icon: <Star className="w-4 h-4 lg:w-6 lg:h-6 fill-accent text-accent" />,
                 },
                 {
-                  title: "4+ Years",
+                  title: "6+ Years",
                   desc: "Expertise",
-                  icon: <Award className="w-3 h-3 lg:w-6 lg:h-6" />,
+                  icon: <Award className="w-4 h-4 lg:w-6 lg:h-6" />,
                 },
               ].map((item, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center justify-center group py-1.5 lg:py-0 px-0.5"
+                  className="flex items-center justify-center group py-2 lg:py-0 px-1"
                 >
-                  <div className="flex flex-col items-center text-center lg:flex-row lg:text-left lg:items-start gap-1 lg:gap-3">
-                    <div className="w-6 h-6 lg:w-11 lg:h-11 rounded-lg lg:rounded-xl bg-white/10 flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-white transition-all duration-500">
+                  <div className="flex flex-col items-center text-center lg:flex-row lg:text-left lg:items-start gap-1.5 lg:gap-3">
+                    <div className="w-8 h-8 lg:w-11 lg:h-11 rounded-lg lg:rounded-xl bg-white/10 flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-white transition-all duration-500">
                       {item.icon}
                     </div>
                     <div className="flex flex-col">
-                      <h4 className="text-white font-serif font-bold text-[8px] lg:text-[12px] leading-tight whitespace-nowrap">
+                      <h4 className="text-white font-serif font-bold text-[10px] lg:text-[12px] leading-tight whitespace-nowrap">
                         {item.title}
                       </h4>
-                      <p className="text-white/60 text-[6px] lg:text-[10px] font-medium leading-relaxed mt-0.5 whitespace-nowrap">
+                      <p className="text-white/60 text-[8px] lg:text-[10px] font-medium leading-relaxed mt-0.5 whitespace-nowrap">
                         {item.desc}
                       </p>
                     </div>
