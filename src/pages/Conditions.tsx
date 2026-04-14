@@ -58,55 +58,42 @@ const Conditions = () => {
               </div>
 
               <div className="space-y-6 lg:space-y-10">
-                <h1 className="editorial-heading text-primary max-w-6xl mx-auto leading-[1.2]">
-                  At Flexo Physiotherapy, every treatment begins with a{" "}
-                  <br className="hidden lg:block" />
+                <h1 className="editorial-heading text-primary max-w-3xl mx-auto leading-[1.2]">
+                  At Flexo Physiotherapy Every treatment begins with a{" "}
                   <span className="text-accent italic font-normal">
-                    detailed clinical assessment
+                    detailed clinical assessment,
                   </span>{" "}
                   not just symptom relief.
                 </h1>
 
-                <p className="text-base lg:text-2xl text-dark font-medium leading-relaxed max-w-6xl mx-auto opacity-80">
-                  We evaluate the{" "}
-                  <span className="text-[#185FA5] font-bold">exact cause</span>{" "}
+                <p className="text-base lg:text-xl text-dark font-medium leading-relaxed max-w-2xl mx-auto opacity-80">
+                  We evaluate the exact cause
                   of your condition before designing a treatment plan. Your
-                  medical history,{" "}
-                  <br className="hidden lg:block" />
-                  movement patterns, joint mobility, and past surgeries are all
-                  reviewed to ensure safe, accurate, and <br className="hidden lg:block" />
+                  medical history, movement patterns, joint mobility, and past
+                  surgeries are all reviewed to ensure safe, accurate, and
                   personalised care.
                 </p>
               </div>
             </div>
 
             {/* Side-by-side assessment deep-dive boxes */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 pt-10">
-              <div className="bg-surface/30 p-8 lg:p-10 rounded-3xl border-l-4 border-accent text-left hover:bg-white hover:shadow-xl transition-all duration-500">
-                <p className="text-sm lg:text-lg text-dark/70 font-medium leading-relaxed">
-                  We evaluate joint range of motion, muscle strength, and
-                  movement patterns to identify restrictions, imbalances, and
-                  functional limitations—reviewing your medical reports,
-                  orthopedic consultations, and surgical history for a complete
-                  picture.
+            <div className="grid grid-cols-2 gap-4 lg:gap-6 pt-10">
+              <div className="bg-surface/30 px-5 py-4 lg:px-7 lg:py-5 rounded-2xl border-l-4 border-accent text-left hover:bg-white hover:shadow-xl transition-all duration-500">
+                <p className="text-xs lg:text-sm text-dark/70 font-medium leading-snug">
+                  We evaluate joint range of motion, muscle strength, and movement patterns reviewing your medical reports and surgical history for a complete picture.
                 </p>
               </div>
 
-              <div className="bg-surface/30 p-8 lg:p-10 rounded-3xl border-l-4 border-accent text-left hover:bg-white hover:shadow-xl transition-all duration-500">
-                <p className="text-sm lg:text-lg text-dark/70 font-medium leading-relaxed">
-                  Based on this assessment, we perform guided movements and
-                  initial exercises to identify where mobility is restricted.
-                  This helps design a personalised rehabilitation program
-                  tailored to your condition, lifestyle, and recovery goals.
+              <div className="bg-surface/30 px-5 py-4 lg:px-7 lg:py-5 rounded-2xl border-l-4 border-accent text-left hover:bg-white hover:shadow-xl transition-all duration-500">
+                <p className="text-xs lg:text-sm text-dark/70 font-medium leading-snug">
+                  We perform guided movements to identify mobility restrictions, then design a personalised rehabilitation program tailored to your condition and recovery goals.
                 </p>
               </div>
 
-              <div className="md:col-span-2">
-                <div className="bg-[#FAEEDA]/30 p-6 lg:p-8 rounded-2xl border-l-4 border-[#633806]/30 text-center">
-                  <p className="text-sm lg:text-xl text-[#633806] font-bold leading-relaxed italic">
-                    Our focus is not only on improving your current condition
-                    but restoring function, enhancing movement quality, and
-                    guiding you toward long-term physical health.
+              <div className="col-span-2">
+                <div className="bg-primary/5 px-5 py-4 lg:px-7 lg:py-5 rounded-2xl border-l-4 border-primary text-center">
+                  <p className="text-sm lg:text-base text-primary font-bold leading-snug italic">
+                    Our focus is not only on improving your current condition but restoring function, enhancing movement quality, and guiding you toward long-term physical health.
                   </p>
                 </div>
               </div>

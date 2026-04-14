@@ -10,6 +10,9 @@ import {
   TrendingUp,
   ArrowRight,
   Zap,
+  Phone,
+  MessageCircle,
+  AlertCircle,
 } from "lucide-react";
 import { BRAND_NAME, CONTACT_WHATSAPP_LINK } from "../constants";
 import Button from "../components/Button";
@@ -17,16 +20,18 @@ import Button from "../components/Button";
 const packages = [
   {
     name: "Single Home Visit",
-    price: "₹ 800 to 1200",
-    unit: "per session",
-    desc: "Perfect for immediate relief or initial consultation.",
+    price: "₹ 800 – 1,200",
+    unit: "per session (indicative)",
+    desc: "Perfect for initial consultation or immediate pain relief",
     features: [
-      "45–60 minute one-on-one session",
-      "Full assessment + treatment",
+      "45–60 min one-on-one session",
+      "Full clinical assessment included",
       "Personalised home exercise plan",
       "All equipment carried by therapist",
+      "WhatsApp support after session",
     ],
     cta: "Book a Session",
+    note: "Final price confirmed after assessment",
     popular: false,
     gradient: "from-blue-50 to-white",
     icon: <User className="w-6 h-6" />,
@@ -35,39 +40,128 @@ const packages = [
   },
   {
     name: "Recovery Package",
-    price: "₹ 12000",
-    unit: "for 15 sessions",
-    desc: "Deeply focused rehabilitation for long-term health.",
+    price: "₹ 8,000 – 15,000",
+    unit: "for 10–15 sessions (indicative)",
+    desc: "Deeply focused rehabilitation for post-surgery or chronic conditions",
     features: [
-      "Best for post-surgery or chronic conditions",
-      "Priority scheduling",
-      "Progress tracking across sessions",
+      "Best for post-surgery & chronic conditions",
+      "Priority scheduling guaranteed",
+      "Progress tracked across every session",
+      "Treatment plan updated as you improve",
       "WhatsApp support between sessions",
+      "Home exercise program included",
     ],
     cta: "Get This Package",
+    note: "Sessions & price finalised after assessment",
     popular: true,
-    gradient: "from-primary to-[#1e40af]",
+    gradient: "from-primary to-[#124d85]",
     icon: <TrendingUp className="w-6 h-6" />,
     iconBg: "bg-white/20",
     iconColor: "text-white",
   },
   {
     name: "Monthly Wellness Plan",
-    price: "₹ 24000/-",
-    unit: "month",
-    desc: "Comprehensive daily care for seniors and chronic needs.",
+    price: "₹ 18,000 – 28,000",
+    unit: "per month / 20–30 sessions (indicative)",
+    desc: "Comprehensive ongoing care for elderly, seniors, and chronic conditions",
     features: [
-      "30 sessions per month",
-      "Ideal for ongoing conditions or elderly care",
+      "Ideal for elderly & ongoing conditions",
       "Dedicated assigned therapist",
-      "Monthly progress report",
+      "Monthly progress report shared",
+      "Family briefed on home care routine",
+      "Priority booking every month",
     ],
     cta: "Enquire Now",
+    note: "Sessions per month decided after assessment",
     popular: false,
     gradient: "from-emerald-50 to-white",
     icon: <Heart className="w-6 h-6" />,
     iconBg: "bg-accent/10",
     iconColor: "text-accent",
+  },
+];
+
+const pricingSteps = [
+  {
+    num: 1,
+    title: "You contact us",
+    body: "WhatsApp or call to describe your condition briefly. We'll suggest the right package type.",
+  },
+  {
+    num: 2,
+    title: "Home assessment visit",
+    body: "Dr. Bhanu visits your home and clinically assesses your condition, severity, and treatment needs.",
+  },
+  {
+    num: 3,
+    title: "Transparent quote given",
+    body: "After assessment, Dr. Bhanu gives you the exact session cost or package price. No pressure, no surprises.",
+  },
+  {
+    num: 4,
+    title: "Treatment begins",
+    body: "Once you're comfortable with the plan and price, treatment starts — at your pace, in your home.",
+  },
+];
+
+const faqs = [
+  {
+    q: "Why isn't there a fixed price per session?",
+    a: (
+      <>
+        A back pain patient needing 2 techniques and a stroke patient needing
+        neurological rehab for 90 minutes require very different clinical
+        effort.{" "}
+        <strong>
+          Charging both the same rate would either overcharge one patient or
+          undervalue expert care for another.
+        </strong>{" "}
+        Our pricing is honest and condition-specific.
+      </>
+    ),
+  },
+  {
+    q: "Can I negotiate the price after assessment?",
+    a: (
+      <>
+        The price Dr. Bhanu quotes after your assessment is based on the
+        clinical requirements of your condition — not a starting point for
+        bargaining. <strong>We don't inflate prices expecting negotiation.</strong>{" "}
+        What is quoted is the fair, final price for the care your condition needs.
+      </>
+    ),
+  },
+  {
+    q: "What if I only want a few sessions to \"try it\"?",
+    a: (
+      <>
+        You can absolutely start with a Single Home Visit. After your
+        assessment, Dr. Bhanu will recommend the right number of sessions for
+        your condition. <strong>Starting a package gives better results</strong>{" "}
+        because physiotherapy works progressively — single sessions help but
+        consistent treatment heals.
+      </>
+    ),
+  },
+  {
+    q: "Are there any hidden charges?",
+    a: (
+      <>
+        <strong>No.</strong> The price quoted after your assessment is
+        all-inclusive — therapist travel, equipment, exercise plan, and WhatsApp
+        support are all included. You will never receive an unexpected bill.
+      </>
+    ),
+  },
+  {
+    q: "Do prices change if I live far from Kukatpally or Miyapur?",
+    a: (
+      <>
+        Travel distance may be a factor for areas beyond our primary service
+        zones. Dr. Bhanu will be transparent about this during your initial
+        consultation — <strong>before any commitment is made.</strong>
+      </>
+    ),
   },
 ];
 
@@ -84,7 +178,7 @@ const Packages = () => {
 
   return (
     <div className="bg-white selection:bg-accent selection:text-white">
-      {/* HERO SECTION - REDESIGNED FOR IMPACT */}
+      {/* HERO SECTION */}
       <section className="pt-24 pb-12 lg:pt-40 lg:pb-16 relative overflow-hidden flex items-center">
         <motion.div
           style={{ y: heroBgY }}
@@ -97,10 +191,6 @@ const Packages = () => {
           />
           <div className="absolute inset-0 bg-white/70 backdrop-blur-[2px]" />
           <div className="absolute inset-0 bg-gradient-to-b from-white/10 via-white/40 to-white" />
-
-          {/* Decorative mesh gradients */}
-          <div className="absolute top-1/4 -right-1/4 w-[60%] h-[60%] bg-accent/5 rounded-full blur-[120px] animate-pulse" />
-          <div className="absolute bottom-1/4 -left-1/4 w-[60%] h-[60%] bg-primary/5 rounded-full blur-[120px]" />
         </motion.div>
 
         <div className="max-w-6xl mx-auto px-6 lg:px-12 text-center relative z-10">
@@ -112,7 +202,7 @@ const Packages = () => {
           >
             <div className="inline-flex items-center space-x-3 px-4 py-2 bg-surface rounded-full border border-primary/5">
               <Zap className="w-3.5 h-3.5 text-accent fill-accent" />
-              <span className="text-primary font-sans font-bold uppercase tracking-[0.25em] text-[9px] lg:text-[10px]">
+              <span className="text-secondary font-sans font-bold uppercase tracking-[0.25em] text-[9px] lg:text-[10px]">
                 Transparent Value-Based Pricing
               </span>
             </div>
@@ -126,16 +216,67 @@ const Packages = () => {
             </h1>
 
             <p className="text-dark/70 font-medium leading-relaxed text-base lg:text-xl max-w-3xl mx-auto">
-              Our plans are designed to provide maximum therapeutic value. No
-              hidden costs, just professional physiotherapy delivered at your
-              convenience.
+              Every patient and every condition is different. Our pricing is
+              guided by your assessment — not a fixed rate card. Below are
+              indicative ranges to help you plan.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* PACKAGES GRID - ENHANCED CARDS */}
-      <section className="pb-24 lg:pb-40 bg-white relative">
+      {/* IMPORTANT NOTICE */}
+      <section className="pb-12 lg:pb-16">
+        <div className="max-w-3xl mx-auto px-6">
+          <motion.div
+            initial={{ opacity: 0, scale: 0.95 }}
+            whileInView={{ opacity: 1, scale: 1 }}
+            viewport={{ once: true }}
+            className="bg-[#FAEEDA] border-[1.5px] border-[#EF9F27] rounded-3xl p-6 lg:p-8"
+          >
+            <div className="flex items-center gap-3 mb-4">
+              <div className="w-6 h-6 bg-[#EF9F27] rounded-full flex items-center justify-center flex-shrink-0">
+                <AlertCircle className="w-4 h-4 text-white" />
+              </div>
+              <h3 className="text-[#633806] font-bold text-sm lg:text-base">
+                Important — Please read before comparing prices
+              </h3>
+            </div>
+            <div className="space-y-4 text-[#854F0B] text-sm lg:text-[15px] leading-relaxed">
+              <p>
+                The prices shown below are{" "}
+                <strong className="text-[#633806]">
+                  indicative starting ranges only.
+                </strong>{" "}
+                Your actual session cost or package price will be confirmed by
+                Dr. Bhanu{" "}
+                <strong className="text-[#633806]">
+                  after a detailed home assessment
+                </strong>{" "}
+                of your condition, severity, location, and treatment
+                requirements.
+              </p>
+              <p>
+                <strong className="text-[#633806]">Why do prices vary?</strong>{" "}
+                A mild muscle strain and a post-stroke paralysis case require
+                very different clinical time, techniques, and equipment.
+                Charging both the same price would not be fair or accurate.
+              </p>
+              <p>
+                We do not negotiate prices after assessment — our pricing
+                reflects the clinical effort required for your specific
+                condition, not a general market rate.{" "}
+                <strong className="text-[#633806]">
+                  What Dr. Bhanu quotes after assessment is the final, honest
+                  price.
+                </strong>
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* PACKAGES GRID */}
+      <section className="pb-24 lg:pb-32 bg-white relative">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
             {packages.map((pkg, idx) => (
@@ -151,7 +292,7 @@ const Packages = () => {
                 }}
                 className={`relative group flex flex-col rounded-[2.5rem] lg:rounded-[3rem] overflow-hidden ${
                   pkg.popular
-                    ? "shadow-[0_40px_100px_-20px_rgba(37,99,235,0.3)] z-10 scale-[1.02] border-primary/10"
+                    ? "shadow-[0_40px_100px_-20px_rgba(24,95,165,0.3)] z-10 scale-[1.02] border-primary/10"
                     : "bg-white border border-primary/5 shadow-xl hover:shadow-2xl hover:border-accent/20"
                 } transition-all duration-700`}
               >
@@ -163,14 +304,14 @@ const Packages = () => {
                 {pkg.popular && (
                   <div className="absolute top-0 right-0 p-8">
                     <div className="bg-accent text-white text-[9px] font-black uppercase tracking-[0.3em] px-4 py-1.5 rounded-full shadow-lg shadow-accent/20">
-                      Popular Choice
+                      Most Popular
                     </div>
                   </div>
                 )}
 
                 <div className="p-8 lg:p-12 h-full flex flex-col">
                   {/* Icon & Title */}
-                  <div className="mb-10 lg:mb-12">
+                  <div className="mb-10">
                     <div
                       className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-8 shadow-inner ${pkg.iconBg} ${pkg.iconColor}`}
                     >
@@ -178,7 +319,7 @@ const Packages = () => {
                     </div>
                     <h3
                       className={`text-2xl lg:text-3xl font-serif font-bold mb-3 ${
-                        pkg.popular ? "text-white" : "text-primary"
+                        pkg.popular ? "text-white" : "text-[#185FA5]"
                       }`}
                     >
                       {pkg.name}
@@ -193,12 +334,12 @@ const Packages = () => {
                   </div>
 
                   {/* Pricing */}
-                  <div className="mb-10 lg:mb-12">
+                  <div className="mb-6">
                     <div className="flex flex-col">
                       <div className="flex items-baseline gap-2">
                         <span
-                          className={`text-4xl lg:text-5xl font-serif font-bold tracking-tighter ${
-                            pkg.popular ? "text-white" : "text-primary"
+                          className={`text-3xl lg:text-4xl font-serif font-bold tracking-tighter ${
+                            pkg.popular ? "text-white" : "text-[#185FA5]"
                           }`}
                         >
                           {pkg.price}
@@ -206,12 +347,22 @@ const Packages = () => {
                       </div>
                       <span
                         className={`text-[10px] lg:text-[11px] font-black uppercase tracking-[0.2em] mt-2 ${
-                          pkg.popular ? "text-accent" : "text-accent"
+                          pkg.popular ? "text-white/70" : "text-dark/60"
                         }`}
                       >
                         {pkg.unit}
                       </span>
                     </div>
+                  </div>
+
+                  <div
+                    className={`mb-10 text-[10px] lg:text-[11px] font-bold px-3 py-1.5 rounded-lg inline-block self-start ${
+                      pkg.popular
+                        ? "bg-white/10 text-white"
+                        : "bg-[#FAEEDA] text-[#854F0B]"
+                    }`}
+                  >
+                    {pkg.note}
                   </div>
 
                   {/* Features List */}
@@ -227,7 +378,7 @@ const Packages = () => {
                         <div
                           className={`mt-1 h-5 w-5 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 group-hover/item:scale-110 ${
                             pkg.popular
-                              ? "bg-white/10 text-accent"
+                              ? "bg-white/10 text-white"
                               : "bg-accent/10 text-accent"
                           }`}
                         >
@@ -244,7 +395,7 @@ const Packages = () => {
                     ))}
                   </div>
 
-                  {/* Button Wrapper to push to bottom */}
+                  {/* Button Wrapper */}
                   <div className="mt-auto">
                     <Button
                       onClick={() => onBook(pkg.name)}
@@ -252,7 +403,7 @@ const Packages = () => {
                       className={`w-full rounded-2xl py-5 lg:py-6 group shadow-2xl transition-all duration-500 transform hover:scale-[1.03] active:scale-[0.98] border-none font-black tracking-[0.15em] text-[11px] lg:text-xs ${
                         pkg.popular
                           ? "bg-accent text-white hover:bg-white hover:text-primary shadow-accent/20"
-                          : "bg-primary text-white hover:bg-accent ring-1 ring-primary/5"
+                          : "bg-white text-[#185FA5] hover:bg-[#185FA5] hover:text-white ring-1 ring-[#185FA5] shadow-none"
                       }`}
                     >
                       {pkg.cta.toUpperCase()}
@@ -260,141 +411,118 @@ const Packages = () => {
                     </Button>
                   </div>
                 </div>
-
-                {/* Aesthetic Glossy Overlays */}
-                {pkg.popular && (
-                  <>
-                    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-white/30 to-transparent" />
-                    <div className="absolute inset-0 bg-gradient-to-tr from-white/5 via-transparent to-transparent pointer-events-none" />
-                  </>
-                )}
               </motion.div>
             ))}
           </div>
-
-          {/* ADDITIONAL FOOTNOTE - REDESIGNED */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.98 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            className="mt-20 lg:mt-32 relative group"
-          >
-            <div className="absolute inset-0 bg-surface rounded-[3rem] lg:rounded-[4.5rem] -z-10 group-hover:shadow-[0_50px_100px_-30px_rgba(0,0,0,0.05)] transition-all duration-1000" />
-
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-16 items-center p-10 lg:p-20">
-              <div className="lg:col-span-5 space-y-6">
-                <div className="w-16 h-16 rounded-3xl bg-white shadow-xl flex items-center justify-center text-accent">
-                  <ShieldCheck className="w-8 h-8" />
-                </div>
-                <h4 className="text-3xl lg:text-4xl font-serif font-bold text-primary leading-tight">
-                  Professional <br />
-                  <span className="text-accent italic font-normal">
-                    Commitment.
-                  </span>
-                </h4>
-                <p className="text-dark/70 text-sm lg:text-lg font-medium leading-relaxed">
-                  All prices include travel within covered areas. Session
-                  frequency recommended by therapist after first visit.
-                </p>
-              </div>
-
-              <div className="lg:col-span-7 grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
-                {[
-                  {
-                    icon: <Clock className="w-5 h-5" />,
-                    title: "Flexible Scheduling",
-                    text: "Morning, afternoon, or evening slots tailored to your lifestyle.",
-                  },
-                  {
-                    icon: <ClipboardList className="w-5 h-5" />,
-                    title: "No Hidden Fees",
-                    text: "What you see is what you pay. No extra travel or equipment charges.",
-                  },
-                  {
-                    icon: <Star className="w-5 h-5" />,
-                    title: "Dedicated Support",
-                    text: "Direct line to your therapist for guidance between regular sessions.",
-                  },
-                  {
-                    icon: <ShieldCheck className="w-5 h-5" />,
-                    title: "Clinical Precision",
-                    text: "Evidence-based protocols designed for your specific medical condition.",
-                  },
-                ].map((item, i) => (
-                  <div
-                    key={i}
-                    className="bg-white p-6 lg:p-8 rounded-[2rem] shadow-sm border border-primary/5 hover:shadow-md transition-all"
-                  >
-                    <div className="text-accent mb-4">{item.icon}</div>
-                    <h5 className="font-serif font-bold text-primary text-base lg:text-lg mb-2">
-                      {item.title}
-                    </h5>
-                    <p className="text-dark/60 text-xs lg:text-sm leading-relaxed">
-                      {item.text}
-                    </p>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </motion.div>
         </div>
       </section>
 
-      {/* FINAL CTA - HIGH IMPACT */}
+      {/* HOW PRICING WORKS */}
+      <section className="pb-24 lg:pb-32 bg-white">
+        <div className="max-w-6xl mx-auto px-6 lg:px-12">
+          <div className="bg-surface rounded-3xl lg:rounded-[3rem] p-10 lg:p-16 border border-primary/5 shadow-sm">
+            <h2 className="text-2xl lg:text-4xl font-serif font-bold text-primary text-center mb-16">
+              How our pricing actually works — 4 simple steps
+            </h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 lg:gap-8">
+              {pricingSteps.map((step) => (
+                <div key={step.num} className="text-center group">
+                  <div className="w-12 h-12 bg-[#185FA5] text-white rounded-full flex items-center justify-center font-bold text-lg mx-auto mb-6 shadow-lg shadow-[#185FA5]/20 group-hover:scale-110 transition-transform">
+                    {step.num}
+                  </div>
+                  <h4 className="font-serif font-bold text-primary text-lg mb-3">
+                    {step.title}
+                  </h4>
+                  <p className="text-dark/60 text-sm leading-relaxed">
+                    {step.body}
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ SECTION */}
+      <section className="pb-24 lg:pb-32 bg-white">
+        <div className="max-w-4xl mx-auto px-6">
+          <h2 className="text-2xl lg:text-4xl font-serif font-bold text-primary mb-12">
+            Common questions about our pricing
+          </h2>
+          <div className="divide-y divide-primary/5">
+            {faqs.map((faq, idx) => (
+              <div key={idx} className="py-8 first:pt-0 group">
+                <h4 className="text-[#185FA5] font-bold text-base lg:text-lg mb-4 flex items-start gap-3">
+                  <span className="shrink-0 w-6 h-6 border border-[#185FA5]/20 rounded-full flex items-center justify-center text-[10px] font-black">
+                    Q
+                  </span>
+                  {faq.q}
+                </h4>
+                <div className="text-dark/70 text-sm lg:text-[15px] leading-relaxed pl-9">
+                  <p>{faq.a}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FINAL CTA */}
       <section className="py-24 lg:py-40 bg-white relative overflow-hidden">
         <div className="absolute inset-0 bg-primary/[0.02] -z-10" />
-        <div className="max-w-4xl mx-auto px-6 text-center space-y-10 lg:space-y-12">
-          <div className="space-y-4">
-            <div className="flex items-center justify-center space-x-3 mb-6">
-              <div className="h-10 w-10 rounded-full border border-primary/10 p-2">
-                <img
-                  src="/logo-square.png"
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <span className="text-[10px] font-black uppercase tracking-[0.4em] text-primary/40">
-                Ready to start?
-              </span>
-            </div>
-            <h2 className="text-4xl lg:text-6xl font-serif font-bold text-primary leading-tight">
-              Let's build your <br />
-              <span className="text-accent italic font-normal">
-                Recovery Roadmap.
-              </span>
-            </h2>
-            <p className="text-dark/70 max-w-2xl mx-auto font-medium text-base lg:text-xl">
-              Schedule a telephone consultation today and we'll help you select
-              the most effective care plan for your condition.
-            </p>
-          </div>
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-[#0F6E56] rounded-[2.5rem] lg:rounded-[4rem] p-10 lg:p-24 relative overflow-hidden shadow-2xl"
+          >
+            {/* Background elements */}
+            <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32 blur-3xl" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-accent/10 rounded-full -ml-32 -mb-32 blur-3xl" />
 
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-6 lg:gap-8 pt-4">
-            <a
-              href={`${CONTACT_WHATSAPP_LINK}?text=${encodeURIComponent(`Hi ${BRAND_NAME}, I'd like to consult about the best package for my recovery.`)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto"
-            >
-              <Button
-                size="lg"
-                className="w-full rounded-full py-5 px-12 group bg-accent text-white hover:bg-primary shadow-[0_20px_40px_-10px_rgba(22,163,74,0.3)] border-none"
-              >
-                WHATSAPP CONSULTATION
-                <ArrowRight className="ml-3 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </a>
-            <div className="flex flex-col items-center sm:items-start group cursor-pointer">
-              <span className="text-[9px] uppercase tracking-[0.3em] font-bold text-primary/40 mb-1 group-hover:text-accent transition-colors">
-                Speak with us
-              </span>
-              <a
-                href="tel:+919502808581"
-                className="text-primary font-bold uppercase tracking-[0.2em] text-sm lg:text-base hover:text-accent transition-all flex items-center"
-              >
-                +91 95028 08581
-              </a>
+            <div className="relative z-10 space-y-8">
+              <h2 className="text-3xl lg:text-5xl font-serif font-bold text-white leading-tight">
+                Not sure which package suits you?
+              </h2>
+              <p className="text-white/80 max-w-2xl mx-auto font-medium text-base lg:text-lg">
+                WhatsApp Dr. Bhanu with your condition — he'll guide you to the
+                right plan before any commitment.
+              </p>
+
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 lg:gap-8 pt-4">
+                <a
+                  href={`${CONTACT_WHATSAPP_LINK}?text=${encodeURIComponent(`Hi ${BRAND_NAME}, I'd like to consult about the best package for my recovery.`)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="w-full sm:w-auto"
+                >
+                  <Button
+                    size="lg"
+                    className="w-full rounded-full py-5 px-12 group bg-white text-[#0F6E56] hover:bg-accent hover:text-white shadow-xl shadow-black/20 border-none font-bold"
+                  >
+                    WHATSAPP US NOW
+                    <MessageCircle className="ml-3 w-4 h-4 group-hover:scale-110 transition-transform" />
+                  </Button>
+                </a>
+                <a
+                  href="tel:+919502808581"
+                  className="group flex flex-col items-center sm:items-start"
+                >
+                  <span className="text-[9px] uppercase tracking-[0.4em] font-black text-white/40 mb-1 group-hover:text-accent transition-colors">
+                    Direct Call
+                  </span>
+                  <div className="text-white font-bold uppercase tracking-[0.2em] text-sm lg:text-base flex items-center gap-2">
+                    <Phone className="w-4 h-4 text-accent" />
+                    +91 95028 08581
+                  </div>
+                </a>
+              </div>
+              <p className="text-white/40 text-[10px] uppercase font-black tracking-[0.2em]">
+                No booking fees • Assessment-based pricing • No hidden charges
+              </p>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
     </div>

@@ -232,13 +232,11 @@ const Home = () => {
 
   return (
     <div className="overflow-x-hidden">
-      {/* 1. CLINICAL AUTHORITY HERO */}
-      <section className="relative min-h-[85vh] lg:min-h-[90vh] flex flex-col justify-center overflow-hidden">
-        {/* Primary Background Image Layer with Parallax */}
-        <motion.div
-          style={{ y: heroBgY }}
-          className="absolute inset-0 -z-10 h-[120%]"
-        >
+      {/* 1. HERO — FULL-BLEED CINEMATIC */}
+      <section className="relative min-h-screen flex flex-col justify-between overflow-hidden">
+
+        {/* ── Background: photo + layered dark gradient ── */}
+        <motion.div style={{ y: heroBgY }} className="absolute inset-0 -z-10 h-[115%]">
           <img
             src="/bg.webp"
             alt="Physiotherapy Clinical Background"
@@ -246,169 +244,212 @@ const Home = () => {
             loading="eager"
             decoding="async"
           />
-          {/* Clinical White Overlay for Readability & Clean Aesthetic */}
-          <div className="absolute inset-0 bg-white/85" />
+          {/* Deep gradient for text legibility — dark at bottom, lighter at top */}
+          <div className="absolute inset-0 bg-gradient-to-b from-[#071a2e]/80 via-[#071a2e]/70 to-[#071a2e]/95" />
+          {/* Accent radial glow — top-right */}
+          <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-accent/15 blur-[120px] rounded-full" />
+          {/* Subtle primary glow — bottom-left */}
+          <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-primary/20 blur-[100px] rounded-full" />
         </motion.div>
 
-        <div className="max-w-[1400px] mx-auto responsive-padding grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-20 items-center pt-32 sm:pt-40 lg:pt-0 flex-grow">
-          {/* Content Column - Structured & Professional with Parallax */}
+        {/* ── Main Content Grid ── */}
+        <motion.div
+          style={{ y: heroContentY }}
+          className="max-w-[1400px] w-full mx-auto responsive-padding flex-1 flex flex-col lg:flex-row items-center gap-10 lg:gap-16 pt-36 sm:pt-44 lg:pt-32 pb-10 lg:pb-16"
+        >
+          {/* LEFT — text column */}
           <motion.div
-            style={{ y: heroContentY }}
-            className="space-y-4 lg:space-y-8 relative z-20"
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.9, ease: "easeOut" }}
+            className="flex-1 space-y-6 lg:space-y-8 relative z-20"
           >
+            {/* Eyebrow badge */}
+            <motion.div
+              initial={{ opacity: 0, y: 16 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.2, duration: 0.6 }}
+              className="inline-flex items-center gap-2.5"
+            >
+              <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse" />
+              <span className="text-accent font-sans font-bold uppercase tracking-[0.22em] text-[9px] sm:text-[10px] lg:text-[11px]">
+                Expert Physiotherapy at Home · Hyderabad
+              </span>
+            </motion.div>
+
+            {/* Headline */}
+            <motion.h1
+              initial={{ opacity: 0, y: 24 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.35, duration: 0.8, ease: "easeOut" }}
+              className="font-serif font-bold text-white leading-[1.05] tracking-[-0.04em]"
+              style={{ fontSize: "clamp(2.4rem, 6.5vw, 5rem)" }}
+            >
+              Physio That Comes{" "}
+              <br className="hidden sm:block" />
+              <span
+                className="italic font-normal"
+                style={{
+                  background: "linear-gradient(135deg, #4ade80 0%, #16a34a 60%)",
+                  WebkitBackgroundClip: "text",
+                  WebkitTextFillColor: "transparent",
+                  backgroundClip: "text",
+                }}
+              >
+                To You.
+              </span>
+            </motion.h1>
+
+            {/* Sub-headline */}
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.5, duration: 0.7 }}
+              className="text-white/70 font-sans font-medium leading-relaxed max-w-[520px]"
+              style={{ fontSize: "clamp(0.9rem, 1.5vw, 1.15rem)" }}
+            >
+              Pain relief, injury recovery & post-surgery rehab — all delivered at
+              your home by Dr. Bhanu Kumar Vemula with 6+ years of clinical
+              expertise.
+            </motion.p>
+
+            {/* CTAs */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: "easeOut" }}
+              transition={{ delay: 0.65, duration: 0.7 }}
+              className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 pt-2"
             >
-              <div className="mb-4 flex items-center gap-3 lg:mb-6">
-                <span className="w-8 lg:w-10 h-1 bg-accent" />
-                <span className="text-accent font-sans font-bold uppercase tracking-[0.18em] text-[9px] leading-relaxed sm:text-[10px] lg:text-xs">
-                  Expert Physiotherapy at Home in Hyderabad
-                </span>
-              </div>
+              <a
+                href={`${CONTACT_WHATSAPP_LINK}?text=${encodeURIComponent(`Hi ${BRAND_NAME}, I would like to book a physiotherapy session at home.`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group relative inline-flex items-center justify-center gap-2.5 overflow-hidden rounded-full bg-accent px-8 py-4 text-white font-bold text-sm tracking-wide shadow-lg shadow-accent/30 transition-all duration-300 hover:shadow-accent/50 hover:shadow-xl hover:scale-[1.03] whitespace-nowrap"
+              >
+                <span className="absolute inset-0 bg-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <PhoneCall className="w-4 h-4 shrink-0" />
+                Book a Home Visit
+              </a>
 
-              <h1 className="editorial-display text-primary">
-                Physiotherapy at Home for Pain Relief,{" "}
-                <span className="text-accent italic font-normal">
-                  Recovery,
-                </span>{" "}
-                and Mobility.
-              </h1>
+              <a
+                href={`tel:${CONTACT_PHONE_DISPLAY?.replace(/\s/g, "")}`}
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm px-7 py-4 text-white font-semibold text-sm tracking-wide hover:bg-white/10 hover:border-white/40 transition-all duration-300 whitespace-nowrap"
+              >
+                📞 {CONTACT_PHONE_DISPLAY}
+              </a>
+            </motion.div>
 
-              <div className="mt-4 lg:mt-8 max-w-xl">
-                <p className="text-sm lg:text-xl text-dark font-medium leading-relaxed opacity-90">
-                  Expert physiotherapy at home for pain relief, injury recovery,
-                  and post-surgery rehab delivered with personalized care.
-                </p>
-
-                <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 lg:gap-6 mt-6 lg:mt-10">
-                  <a
-                    href={`${CONTACT_WHATSAPP_LINK}?text=${encodeURIComponent(`Hi ${BRAND_NAME}, I would like to book a physiotherapy session at home.`)}`}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="w-full sm:w-auto"
-                  >
-                    <Button
-                      variant="secondary"
-                      size="lg"
-                      className="w-full sm:w-auto rounded-full px-6 lg:px-10 py-4 border-none text-white font-bold tracking-wide transition-all shadow-xl shadow-accent/20 whitespace-nowrap text-xs sm:text-sm lg:text-base"
-                    >
-                      Book Home Visit
-                    </Button>
-                  </a>
-
-                  {/* Location Info */}
-                  <div className="flex items-center gap-2 flex-wrap">
-                    <MapPin className="text-accent w-4 h-4 lg:w-5 lg:h-5 shrink-0" />
-                    <span className="text-xs lg:text-sm font-bold uppercase tracking-tight text-primary">
-                      {SERVICE_AREAS.split(",").slice(0, 2).join(" | ")} |
-                      Nearby
-                    </span>
-                    <span className="text-primary/30">|</span>
-                    <a
-                      href={`tel:${CONTACT_PHONE_DISPLAY?.replace(/\s/g, "")}`}
-                      className="text-xs lg:text-sm text-accent font-bold tracking-wide flex items-center gap-1 hover:opacity-80 transition-opacity"
-                    >
-                      📞 {CONTACT_PHONE_DISPLAY}
-                    </a>
-                  </div>
-                </div>
-              </div>
+            {/* Location strip */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ delay: 0.8, duration: 0.6 }}
+              className="flex items-center gap-2 pt-1"
+            >
+              <MapPin className="text-accent/70 w-3.5 h-3.5 shrink-0" />
+              <span className="text-white/50 text-[10px] lg:text-xs font-medium tracking-wide">
+                {SERVICE_AREAS}
+              </span>
             </motion.div>
           </motion.div>
 
-          {/* Image Column - Realistic & Professional with Parallax */}
+          {/* RIGHT — image card */}
           <motion.div
             style={{ y: interactionImgY }}
-            className="relative mt-4 lg:mt-0"
+            initial={{ opacity: 0, x: 40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1, ease: "easeOut" }}
+            className="relative flex-shrink-0 w-full max-w-[460px] lg:max-w-[520px] mt-2 lg:mt-0"
           >
-            <motion.div
-              initial={{ opacity: 0, scale: 0.98 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 1, ease: "easeOut" }}
-              className="relative z-10 overflow-hidden shadow-2xl rounded-2xl lg:rounded-3xl"
-            >
+            {/* Glow ring behind card */}
+            <div className="absolute -inset-4 bg-accent/20 rounded-[2.5rem] blur-2xl" />
+
+            {/* Main image card */}
+            <div className="relative z-10 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem] shadow-2xl border border-white/10">
               <img
                 src="/images/treatments/hero_physio_interaction_retry-opt.webp"
                 alt="Personalized Home Physiotherapy Session"
-                className="w-full h-full object-cover aspect-[4/3] lg:aspect-auto"
+                className="w-full h-full object-cover aspect-[4/5] lg:aspect-[4/5]"
                 loading="eager"
                 decoding="async"
               />
-              {/* Subtle frame element for medical feel */}
-              <div className="absolute inset-0 border-[1px] border-white/20 pointer-events-none" />
-            </motion.div>
+              {/* Bottom gradient scrims for badges */}
+              <div className="absolute inset-0 bg-gradient-to-t from-[#071a2e]/70 via-transparent to-transparent pointer-events-none" />
+              <div className="absolute inset-0 border border-white/10 rounded-[2rem] lg:rounded-[2.5rem] pointer-events-none" />
 
-            {/* Location Anchor */}
-            <div className="absolute -bottom-4 lg:-bottom-6 -left-4 lg:-left-6 bg-white p-4 lg:p-6 shadow-xl z-20 border-l-4 border-accent hidden sm:block rounded-xl">
-              <div className="flex items-center space-x-3">
-                <div className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-                <span className="text-[9px] lg:text-[10px] font-bold text-primary uppercase tracking-[0.2em]">
-                  Serving Hyderabad
-                </span>
+              {/* Live indicator — top-right */}
+              <div className="absolute top-4 right-4 flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-3 py-1.5">
+                <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
+                <span className="text-white text-[9px] font-bold uppercase tracking-widest">Available Now</span>
               </div>
-              <p className="text-xs lg:text-sm text-muted font-medium mt-2 max-w-[150px] lg:max-w-[180px]">
-                Nizampet, Kondapur, Madinaguda & Gachibowli
-              </p>
-            </div>
-          </motion.div>
-        </div>
 
-        {/* TRUST BAR */}
-        <div className="bg-[#0B3D36] py-5 lg:py-10 mt-6 lg:mt-0 relative z-30">
-          <div className="max-w-[1400px] mx-auto responsive-padding">
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-x-3 gap-y-4 lg:gap-0 lg:divide-x lg:divide-white/10">
-              {[
-                {
-                  title: "Certified Doctors",
-                  desc: "BPT/MPT",
-                  icon: <UserCheck className="w-4 h-4 lg:w-6 lg:h-6" />,
-                },
-                {
-                  title: "3600+ Sessions",
-                  desc: "Hyderabad",
-                  icon: <Activity className="w-4 h-4 lg:w-6 lg:h-6" />,
-                },
-                {
-                  title: "1000+ Patients",
-                  desc: "Treated",
-                  icon: <HomeIcon className="w-4 h-4 lg:w-6 lg:h-6" />,
-                },
-                {
-                  title: "120+ Surgeries",
-                  desc: "Avoided",
-                  icon: <ShieldCheck className="w-4 h-4 lg:w-6 lg:h-6" />,
-                },
-                {
-                  title: "4.9 Google Rating",
-                  desc: "160+ reviews",
-                  icon: <Star className="w-4 h-4 lg:w-6 lg:h-6 fill-accent text-accent" />,
-                },
-                {
-                  title: "6+ Years",
-                  desc: "Experience",
-                  icon: <Award className="w-4 h-4 lg:w-6 lg:h-6" />,
-                },
-              ].map((item, idx) => (
-                <div
-                  key={idx}
-                  className="flex items-center justify-center group py-2 lg:py-0 px-1"
-                >
-                  <div className="flex flex-col items-center text-center lg:flex-row lg:text-left lg:items-start gap-1.5 lg:gap-3">
-                    <div className="w-8 h-8 lg:w-11 lg:h-11 rounded-lg lg:rounded-xl bg-white/10 flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-white transition-all duration-500">
-                      {item.icon}
-                    </div>
-                    <div className="flex flex-col">
-                      <h4 className="text-white font-serif font-bold text-[10px] lg:text-[12px] leading-tight whitespace-nowrap numerics">
-                        {item.title}
-                      </h4>
-                      <p className="text-white/60 text-[8px] lg:text-[10px] font-medium leading-relaxed mt-0.5 whitespace-nowrap">
-                        {item.desc}
-                      </p>
-                    </div>
+              {/* Bottom badge — rating */}
+              <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
+                <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-3 py-2">
+                  <Star className="w-3.5 h-3.5 text-amber-400 fill-amber-400 shrink-0" />
+                  <div>
+                    <span className="text-white font-bold text-xs numerics">4.9</span>
+                    <span className="text-white/60 text-[9px] ml-1">· 160+ reviews</span>
                   </div>
                 </div>
+                <div className="flex items-center gap-2 bg-accent/20 backdrop-blur-md border border-accent/30 rounded-xl px-3 py-2">
+                  <HomeIcon className="w-3 h-3 text-accent shrink-0" />
+                  <span className="text-accent font-bold text-[10px] uppercase tracking-wide">Home Visits</span>
+                </div>
+              </div>
+            </div>
+
+            {/* Floating stat pill — sessions */}
+            <motion.div
+              initial={{ opacity: 0, y: 20, x: 20 }}
+              animate={{ opacity: 1, y: 0, x: 0 }}
+              transition={{ delay: 0.9, duration: 0.7, type: "spring" }}
+              className="absolute -bottom-5 -left-5 lg:-bottom-7 lg:-left-7 bg-white rounded-2xl shadow-2xl p-4 lg:p-5 z-20 min-w-[130px]"
+            >
+              <span className="block text-3xl lg:text-4xl font-serif font-bold text-primary leading-none numerics">6+</span>
+              <span className="block text-[9px] uppercase tracking-[0.2em] font-bold text-accent mt-1">Yrs Experience</span>
+            </motion.div>
+
+            {/* Floating stat pill — surgeries */}
+            <motion.div
+              initial={{ opacity: 0, y: -20, x: -20 }}
+              animate={{ opacity: 1, y: 0, x: 0 }}
+              transition={{ delay: 1.0, duration: 0.7, type: "spring" }}
+              className="absolute -top-5 -right-5 lg:-top-7 lg:-right-7 bg-primary rounded-2xl shadow-2xl p-4 lg:p-5 z-20 min-w-[130px]"
+            >
+              <span className="block text-3xl lg:text-4xl font-serif font-bold text-white leading-none numerics">120+</span>
+              <span className="block text-[9px] uppercase tracking-[0.2em] font-bold text-accent/80 mt-1">Surgeries Avoided</span>
+            </motion.div>
+          </motion.div>
+        </motion.div>
+
+        {/* ── TRUST BAR — floating on dark base ── */}
+        <div className="relative z-30 bg-white/5 backdrop-blur-xl border-t border-white/10">
+          <div className="max-w-[1400px] mx-auto responsive-padding py-5 lg:py-7">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-0 lg:divide-x lg:divide-white/10">
+              {[
+                { title: "Certified Doctors", desc: "BPT / MPT", icon: <UserCheck className="w-4 h-4 lg:w-5 lg:h-5" /> },
+                { title: "3600+ Sessions", desc: "Hyderabad", icon: <Activity className="w-4 h-4 lg:w-5 lg:h-5" /> },
+                { title: "1000+ Patients", desc: "Treated", icon: <HomeIcon className="w-4 h-4 lg:w-5 lg:h-5" /> },
+                { title: "120+ Surgeries", desc: "Avoided", icon: <ShieldCheck className="w-4 h-4 lg:w-5 lg:h-5" /> },
+                { title: "4.9 Google Rating", desc: "160+ Reviews", icon: <Star className="w-4 h-4 lg:w-5 lg:h-5 fill-accent text-accent" /> },
+                { title: "6+ Years", desc: "Experience", icon: <Award className="w-4 h-4 lg:w-5 lg:h-5" /> },
+              ].map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.4 + idx * 0.08, duration: 0.5 }}
+                  className="flex items-center justify-center lg:justify-start gap-2.5 px-2 lg:px-5 group"
+                >
+                  <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-white transition-all duration-400">
+                    {item.icon}
+                  </div>
+                  <div className="flex flex-col">
+                    <span className="text-white font-bold text-[10px] lg:text-[11px] leading-tight numerics whitespace-nowrap">{item.title}</span>
+                    <span className="text-white/50 text-[8px] lg:text-[9px] font-medium mt-0.5 whitespace-nowrap">{item.desc}</span>
+                  </div>
+                </motion.div>
               ))}
             </div>
           </div>
