@@ -17,12 +17,12 @@
   --color-light-blue: #76bfea; /* Original light blue */
   --color-bright-green: #37fb44; /* Original bright green */
 
-  --spacing-section: clamp(60px, 8vw, 120px);
-  --spacing-section-mobile: 40px;
+  --spacing-section: clamp(40px, 6vw, 100px);
+  --spacing-section-mobile: 32px;
 
-  --editorial-display: clamp(2rem, 6vw, 4.5rem);
-  --editorial-heading: clamp(1.5rem, 4vw, 3rem);
-  --editorial-body: clamp(0.9rem, 1.2vw, 1.125rem);
+  --editorial-display: clamp(1.8rem, 5vw, 3.8rem);
+  --editorial-heading: clamp(1.4rem, 3.5vw, 2.6rem);
+  --editorial-body: clamp(0.85rem, 1.1vw, 1.05rem);
 
   --shadow-editorial:
     0 30px 60px -12px rgba(37, 99, 235, 0.35),

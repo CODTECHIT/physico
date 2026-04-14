@@ -232,7 +232,7 @@ const Home = () => {
 
   return (
     <div className="overflow-x-hidden">
-      {/* 1. HERO — FULL-BLEED CINEMATIC */}
+      {/* 1. HERO  FULL-BLEED CINEMATIC */}
       <section className="relative min-h-screen flex flex-col justify-between overflow-hidden">
 
         {/* ── Background: photo + layered dark gradient ── */}
@@ -244,11 +244,11 @@ const Home = () => {
             loading="eager"
             decoding="async"
           />
-          {/* Deep gradient for text legibility — dark at bottom, lighter at top */}
+          {/* Deep gradient for text legibility  dark at bottom, lighter at top */}
           <div className="absolute inset-0 bg-gradient-to-b from-[#071a2e]/80 via-[#071a2e]/70 to-[#071a2e]/95" />
-          {/* Accent radial glow — top-right */}
+          {/* Accent radial glow  top-right */}
           <div className="absolute top-0 right-0 w-1/2 h-1/2 bg-accent/15 blur-[120px] rounded-full" />
-          {/* Subtle primary glow — bottom-left */}
+          {/* Subtle primary glow  bottom-left */}
           <div className="absolute bottom-0 left-0 w-1/3 h-1/3 bg-primary/20 blur-[100px] rounded-full" />
         </motion.div>
 
@@ -257,7 +257,7 @@ const Home = () => {
           style={{ y: heroContentY }}
           className="max-w-[1400px] w-full mx-auto responsive-padding flex-1 flex flex-col lg:flex-row items-center gap-10 lg:gap-16 pt-36 sm:pt-44 lg:pt-32 pb-10 lg:pb-16"
         >
-          {/* LEFT — text column */}
+          {/* LEFT  text column */}
           <motion.div
             initial={{ opacity: 0, x: -40 }}
             animate={{ opacity: 1, x: 0 }}
@@ -283,7 +283,7 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.35, duration: 0.8, ease: "easeOut" }}
               className="font-serif font-bold text-white leading-[1.05] tracking-[-0.04em]"
-              style={{ fontSize: "clamp(2.4rem, 6.5vw, 5rem)" }}
+              style={{ fontSize: "clamp(2.2rem, 5.5vw, 4.2rem)" }}
             >
               Physiotherapy at Home for{" "}
               <br className="hidden sm:block" />
@@ -352,7 +352,7 @@ const Home = () => {
             </motion.div>
           </motion.div>
 
-          {/* RIGHT — image card */}
+          {/* RIGHT  image card */}
           <motion.div
             style={{ y: interactionImgY }}
             initial={{ opacity: 0, x: 40 }}
@@ -376,13 +376,13 @@ const Home = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-[#071a2e]/70 via-transparent to-transparent pointer-events-none" />
               <div className="absolute inset-0 border border-white/10 rounded-[2rem] lg:rounded-[2.5rem] pointer-events-none" />
 
-              {/* Live indicator — top-right */}
+              {/* Live indicator  top-right */}
               <div className="absolute top-4 right-4 flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-full px-3 py-1.5">
                 <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse" />
                 <span className="text-white text-[9px] font-bold uppercase tracking-widest">Available Now</span>
               </div>
 
-              {/* Bottom badge — rating */}
+              {/* Bottom badge  rating */}
               <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between">
                 <div className="flex items-center gap-2 bg-white/10 backdrop-blur-md border border-white/20 rounded-xl px-3 py-2">
                   <Star className="w-3.5 h-3.5 text-amber-400 fill-amber-400 shrink-0" />
@@ -398,31 +398,11 @@ const Home = () => {
               </div>
             </div>
 
-            {/* Floating stat pill — sessions */}
-            <motion.div
-              initial={{ opacity: 0, y: 20, x: 20 }}
-              animate={{ opacity: 1, y: 0, x: 0 }}
-              transition={{ delay: 0.9, duration: 0.7, type: "spring" }}
-              className="absolute -bottom-5 -left-5 lg:-bottom-7 lg:-left-7 bg-white rounded-2xl shadow-2xl p-4 lg:p-5 z-20 min-w-[130px]"
-            >
-              <span className="block text-3xl lg:text-4xl font-serif font-bold text-primary leading-none numerics">6+</span>
-              <span className="block text-[9px] uppercase tracking-[0.2em] font-bold text-accent mt-1">Yrs Experience</span>
-            </motion.div>
 
-            {/* Floating stat pill — surgeries */}
-            <motion.div
-              initial={{ opacity: 0, y: -20, x: -20 }}
-              animate={{ opacity: 1, y: 0, x: 0 }}
-              transition={{ delay: 1.0, duration: 0.7, type: "spring" }}
-              className="absolute -top-5 -right-5 lg:-top-7 lg:-right-7 bg-primary rounded-2xl shadow-2xl p-4 lg:p-5 z-20 min-w-[130px]"
-            >
-              <span className="block text-3xl lg:text-4xl font-serif font-bold text-white leading-none numerics">120+</span>
-              <span className="block text-[9px] uppercase tracking-[0.2em] font-bold text-accent/80 mt-1">Surgeries Avoided</span>
-            </motion.div>
           </motion.div>
         </motion.div>
 
-        {/* ── TRUST BAR — floating on dark base ── */}
+        {/* ── TRUST BAR  floating on dark base ── */}
         <div className="relative z-30 bg-white/5 backdrop-blur-xl border-t border-white/10">
           <div className="max-w-[1400px] mx-auto responsive-padding py-5 lg:py-7">
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-0 lg:divide-x lg:divide-white/10">

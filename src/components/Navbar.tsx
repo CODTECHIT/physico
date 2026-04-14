@@ -39,7 +39,7 @@ const Navbar = () => {
         "fixed top-0 left-0 right-0 transition-all duration-500",
         isOpen
           ? "z-[99999] bg-white h-screen"
-          : "z-50 bg-secondary/95 backdrop-blur-md py-6 lg:py-8 shadow-lg border-b border-primary/5",
+          : "z-50 bg-secondary/95 backdrop-blur-md py-4 lg:py-5 shadow-lg border-b border-primary/5",
       )}
     >
       <div
@@ -57,7 +57,7 @@ const Navbar = () => {
             <img
               src="/logo-square.png"
               alt={BRAND_NAME}
-              className="hidden lg:block h-10 xl:h-12 w-auto object-contain group-hover:opacity-80 transition-opacity"
+              className="hidden lg:block h-8 xl:h-10 w-auto object-contain group-hover:opacity-80 transition-opacity"
               loading="eager"
               decoding="async"
             />
@@ -71,7 +71,7 @@ const Navbar = () => {
             />
           </div>
           <div className="min-w-0 overflow-hidden border-l border-primary/10 pl-2.5 py-1 xl:pl-4">
-            <span className="block whitespace-nowrap text-[clamp(0.85rem,4vw,1.1rem)] font-serif font-bold leading-[1.05] tracking-[-0.04em] text-primary transition-opacity group-hover:opacity-80 min-[390px]:text-[clamp(1rem,4.4vw,1.2rem)] lg:text-2xl xl:text-3xl">
+            <span className="block whitespace-nowrap text-[clamp(0.85rem,4vw,1.1rem)] font-serif font-bold leading-[1.05] tracking-[-0.04em] text-primary transition-opacity group-hover:opacity-80 min-[390px]:text-[clamp(1rem,4.4vw,1.2rem)] lg:text-xl xl:text-2xl">
               FLEXO <span className="text-accent italic">PHYSIOTHERAPY</span>
             </span>
             <span className="mt-1 block font-sans text-[6px] font-bold tracking-[0.14em] text-accent min-[360px]:text-[7px] lg:mt-1.5 lg:text-[9px] lg:tracking-[0.22em] xl:text-[10px]">

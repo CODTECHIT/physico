@@ -86,19 +86,19 @@ const faqs = [
   },
   {
     q: "Can I negotiate the price after assessment?",
-    a: "The price Dr. Bhanu quotes after your assessment is based on the clinical requirements of your condition — not a starting point for bargaining. **We don't inflate prices expecting negotiation.** What is quoted is the fair, final price for the care your condition needs.",
+    a: "The price Dr. Bhanu quotes after your assessment is based on the clinical requirements of your condition  not a starting point for bargaining. **We don't inflate prices expecting negotiation.** What is quoted is the fair, final price for the care your condition needs.",
   },
   {
     q: "What if I only want a few sessions to \"try it\"?",
-    a: "You can absolutely start with a Single Home Visit. After your assessment, Dr. Bhanu will recommend the right number of sessions for your condition. **Starting a package gives better results** because physiotherapy works progressively — single sessions help but consistent treatment heals.",
+    a: "You can absolutely start with a Single Home Visit. After your assessment, Dr. Bhanu will recommend the right number of sessions for your condition. **Starting a package gives better results** because physiotherapy works progressively  single sessions help but consistent treatment heals.",
   },
   {
     q: "Are there any hidden charges?",
-    a: "**No.** The price quoted after your assessment is all-inclusive — therapist travel, equipment, exercise plan, and WhatsApp support are all included. You will never receive an unexpected bill.",
+    a: "**No.** The price quoted after your assessment is all-inclusive  therapist travel, equipment, exercise plan, and WhatsApp support are all included. You will never receive an unexpected bill.",
   },
   {
     q: "Do prices change if I live far away?",
-    a: "Travel distance may be a factor for areas beyond our primary service zones. Dr. Bhanu will be transparent about this during your initial consultation — **before any commitment is made.**",
+    a: "Travel distance may be a factor for areas beyond our primary service zones. Dr. Bhanu will be transparent about this during your initial consultation  **before any commitment is made.**",
   },
 ];
 
@@ -124,7 +124,7 @@ const steps = [
   {
     num: 4,
     title: "Treatment begins",
-    desc: "Once you're comfortable with the plan and price, treatment starts — at your pace, in your home.",
+    desc: "Once you're comfortable with the plan and price, treatment starts  at your pace, in your home.",
     icon: <Heart className="w-6 h-6" />,
   },
 ];
@@ -177,43 +177,21 @@ const Packages = () => {
             </h1>
 
             <p className="text-dark/70 font-medium leading-relaxed text-base lg:text-xl max-w-3xl mx-auto">
-              Every patient and every condition is different. Our pricing is guided by your assessment — not a fixed rate card. Below are indicative ranges to help you plan.
+              Every patient and every condition is different. Our pricing is guided by your assessment  not a fixed rate card. Below are indicative ranges to help you plan.
             </p>
           </motion.div>
         </div>
       </section>
 
-      {/* IMPORTANT NOTICE BOX */}
-      <section className="pb-16 bg-white">
-        <div className="max-w-4xl mx-auto px-6">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="bg-[#FAEEDA] border-[1.5px] border-[#EF9F27] rounded-3xl p-6 lg:p-10 shadow-sm"
-          >
-            <div className="flex items-start gap-5">
-              <div className="w-12 h-12 bg-[#EF9F27] rounded-2xl flex items-center justify-center shrink-0 shadow-lg shadow-orange-200">
-                <AlertCircle className="w-6 h-6 text-white" />
-              </div>
-              <div className="space-y-4">
-                <h2 className="text-xl font-serif font-bold text-[#633806]">
-                  Important — Please read before comparing prices
-                </h2>
-                <div className="text-[#854F0B] text-sm lg:text-base leading-relaxed space-y-4">
-                  <p>
-                    The prices shown below are <span className="font-bold underline decoration-orange-300">indicative starting ranges only.</span> Your actual session cost or package price will be confirmed by Dr. Bhanu <span className="font-bold">after a detailed home assessment</span> of your condition, severity, location, and treatment requirements.
-                  </p>
-                  <p>
-                    <span className="font-bold">Why do prices vary?</span> A mild muscle strain and a post-stroke paralysis case require very different clinical time, techniques, and equipment. Charging both the same price would not be fair or accurate.
-                  </p>
-                  <p>
-                    We do not negotiate prices after assessment — our pricing reflects the clinical effort required for your specific condition. <span className="font-bold text-[#633806]">What Dr. Bhanu quotes after assessment is the final, honest price.</span>
-                  </p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
+      {/* PRICING NOTE */}
+      <section className="pb-8 bg-white">
+        <div className="max-w-4xl mx-auto px-6 text-center">
+          <p className="text-dark/50 text-xs lg:text-sm font-medium leading-relaxed max-w-2xl mx-auto">
+            <span className="font-bold text-accent uppercase tracking-wider mr-2">Note:</span>
+            Prices shown are indicative starting ranges. Final costs are confirmed by Dr. Bhanu after a home assessment based on your specific condition and clinical requirements.
+            <br className="hidden sm:block" />
+            Depending on the condition and complexity, we charge for the clinical effort required.
+          </p>
         </div>
       </section>
 
@@ -232,11 +210,10 @@ const Packages = () => {
                   delay: idx * 0.1,
                   ease: [0.21, 0.45, 0.32, 0.9],
                 }}
-                className={`relative group flex flex-col rounded-[2.5rem] overflow-hidden ${
-                  pkg.popular
+                className={`relative group flex flex-col rounded-[2.5rem] overflow-hidden ${pkg.popular
                     ? "shadow-2xl z-10 scale-[1.02] ring-1 ring-primary/20"
                     : "bg-white border border-primary/5 shadow-xl hover:shadow-2xl"
-                } transition-all duration-700`}
+                  } transition-all duration-700`}
               >
                 {/* Background Gradient Layer */}
                 <div
@@ -260,16 +237,14 @@ const Packages = () => {
                       {pkg.icon}
                     </div>
                     <h3
-                      className={`text-2xl font-serif font-bold mb-3 ${
-                        pkg.popular ? "text-white" : "text-primary"
-                      }`}
+                      className={`text-2xl font-serif font-bold mb-3 ${pkg.popular ? "text-white" : "text-primary"
+                        }`}
                     >
                       {pkg.name}
                     </h3>
                     <p
-                      className={`text-sm leading-relaxed opacity-80 ${
-                        pkg.popular ? "text-white/80" : "text-dark/70"
-                      }`}
+                      className={`text-sm leading-relaxed opacity-80 ${pkg.popular ? "text-white/80" : "text-dark/70"
+                        }`}
                     >
                       {pkg.desc}
                     </p>
@@ -280,24 +255,21 @@ const Packages = () => {
                     <div className="flex flex-col gap-1">
                       <div className="flex items-baseline flex-wrap gap-x-2">
                         <span
-                          className={`text-2xl lg:text-3xl font-numeric font-bold tracking-tight ${
-                            pkg.popular ? "text-white" : "text-primary"
-                          }`}
+                          className={`text-2xl lg:text-3xl font-numeric font-bold tracking-tight ${pkg.popular ? "text-white" : "text-primary"
+                            }`}
                         >
                           {pkg.price}
                         </span>
                       </div>
                       <span
-                        className={`text-[10px] lg:text-[11px] font-bold uppercase tracking-widest ${
-                          pkg.popular ? "text-white/70" : "text-accent"
-                        }`}
+                        className={`text-[10px] lg:text-[11px] font-bold uppercase tracking-widest ${pkg.popular ? "text-white/70" : "text-accent"
+                          }`}
                       >
                         {pkg.unit}
                       </span>
                     </div>
-                    <div className={`mt-5 inline-block px-3 py-1.5 rounded-lg text-[10px] lg:text-[11px] font-bold ${
-                      pkg.popular ? "bg-white/15 text-white" : "bg-[#FAEEDA] text-[#854F0B]"
-                    }`}>
+                    <div className={`mt-5 inline-block px-3 py-1.5 rounded-lg text-[10px] lg:text-[11px] font-bold ${pkg.popular ? "bg-white/15 text-white" : "bg-[#FAEEDA] text-[#854F0B]"
+                      }`}>
                       {pkg.note}
                     </div>
                   </div>
@@ -313,18 +285,16 @@ const Packages = () => {
                         className="flex items-start gap-3 group/item text-balance"
                       >
                         <div
-                          className={`mt-1 h-5 w-5 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 group-hover/item:scale-110 ${
-                            pkg.popular
+                          className={`mt-1 h-5 w-5 rounded-full flex items-center justify-center shrink-0 transition-transform duration-300 group-hover/item:scale-110 ${pkg.popular
                               ? "bg-white/10 text-white"
                               : "bg-accent/10 text-accent"
-                          }`}
+                            }`}
                         >
                           <Check className="w-3 h-3" />
                         </div>
                         <span
-                          className={`text-sm font-medium leading-snug ${
-                            pkg.popular ? "text-white/90" : "text-dark/80"
-                          }`}
+                          className={`text-sm font-medium leading-snug ${pkg.popular ? "text-white/90" : "text-dark/80"
+                            }`}
                         >
                           {feature}
                         </span>
@@ -335,11 +305,10 @@ const Packages = () => {
                   <Button
                     onClick={() => onBook(pkg.name)}
                     variant={pkg.popular ? "secondary" : "primary"}
-                    className={`w-full rounded-2xl py-4 group shadow-xl transition-all duration-500 transform hover:scale-[1.03] active:scale-[0.98] font-bold tracking-wider text-xs ${
-                      pkg.popular
+                    className={`w-full rounded-2xl py-4 group shadow-xl transition-all duration-500 transform hover:scale-[1.03] active:scale-[0.98] font-bold tracking-wider text-xs ${pkg.popular
                         ? "bg-accent text-white hover:bg-white hover:text-primary"
                         : "bg-primary text-white hover:bg-accent"
-                    }`}
+                      }`}
                   >
                     {pkg.cta.toUpperCase()}
                     <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -412,8 +381,8 @@ const Packages = () => {
                   {faq.q}
                 </h3>
                 <p className="text-dark/70 leading-relaxed text-sm lg:text-base font-medium">
-                  {faq.a.split("**").map((part, index) => 
-                     index % 2 === 1 ? <strong key={index} className="text-primary">{part}</strong> : part
+                  {faq.a.split("**").map((part, index) =>
+                    index % 2 === 1 ? <strong key={index} className="text-primary">{part}</strong> : part
                   )}
                 </p>
               </motion.div>
@@ -441,7 +410,7 @@ const Packages = () => {
                 <span className="italic font-normal text-white/90">suits you?</span>
               </h2>
               <p className="text-white/80 text-base lg:text-xl font-medium leading-relaxed">
-                WhatsApp Dr. Bhanu with your condition — he'll guide you to the right plan before any commitment.
+                WhatsApp Dr. Bhanu with your condition  he'll guide you to the right plan before any commitment.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4">
@@ -464,7 +433,7 @@ const Packages = () => {
                   </Button>
                 </a>
               </div>
-              
+
               <div className="pt-8 text-white/50 text-[10px] font-bold uppercase tracking-[0.3em]">
                 No booking fees • Assessment-based pricing • No hidden charges
               </div>

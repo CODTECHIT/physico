@@ -77,22 +77,22 @@ const Conditions = () => {
               </div>
             </div>
 
-            {/* Side-by-side assessment deep-dive boxes */}
-            <div className="grid grid-cols-2 gap-4 lg:gap-6 pt-10">
-              <div className="bg-surface/30 px-5 py-4 lg:px-7 lg:py-5 rounded-2xl border-l-4 border-accent text-left hover:bg-white hover:shadow-xl transition-all duration-500">
-                <p className="text-xs lg:text-sm text-dark/70 font-medium leading-snug">
+            {/* Minimal assessment deep-dive boxes */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-16 pt-10">
+              <div className="border-l-2 border-accent pl-6 text-left">
+                <p className="text-sm lg:text-base text-dark/80 font-medium leading-relaxed text-justify">
                   We evaluate joint range of motion, muscle strength, and movement patterns reviewing your medical reports and surgical history for a complete picture.
                 </p>
               </div>
 
-              <div className="bg-surface/30 px-5 py-4 lg:px-7 lg:py-5 rounded-2xl border-l-4 border-accent text-left hover:bg-white hover:shadow-xl transition-all duration-500">
-                <p className="text-xs lg:text-sm text-dark/70 font-medium leading-snug">
+              <div className="border-l-2 border-accent pl-6 text-left">
+                <p className="text-sm lg:text-base text-dark/80 font-medium leading-relaxed text-justify">
                   We perform guided movements to identify mobility restrictions, then design a personalised rehabilitation program tailored to your condition and recovery goals.
                 </p>
               </div>
 
-              <div className="col-span-2">
-                <div className="bg-primary/5 px-5 py-4 lg:px-7 lg:py-5 rounded-2xl border-l-4 border-primary text-center">
+              <div className="md:col-span-2 pt-4">
+                <div className="bg-primary/5 px-6 py-5 rounded-2xl border-l-4 border-primary text-center">
                   <p className="text-sm lg:text-base text-primary font-bold leading-snug italic">
                     Our focus is not only on improving your current condition but restoring function, enhancing movement quality, and guiding you toward long-term physical health.
                   </p>
@@ -372,13 +372,13 @@ const Conditions = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 lg:gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
             {[
               { title: "Back & Neck Pain", slug: "back-pain" },
               { title: "Knee Pain & Arthritis", slug: "hip-knee-arthritis" },
               { title: "Stroke & Paralysis Rehab", slug: "stroke-rehabilitation" },
               { title: "Sports Injuries", slug: "acl-rehabilitation" },
-              { title: "Post-Surgical Recovery", slug: "acl-rehabilitation" }, // Linking to ACL as representative surgical rehab
+              { title: "Post-Surgical Recovery", slug: "acl-rehabilitation" },
               { title: "Joint Disorders", slug: "hip-knee-arthritis" },
               { title: "Frozen Shoulder", slug: "shoulder-pain" },
               { title: "Sciatica & Disc Problems", slug: "back-pain" },
