@@ -25,7 +25,7 @@ const Services = () => {
         'Spinal Injury Rehabilitation'
       ],
       focus: 'Restore function & improve quality of life',
-      outcome: 'Most patients show measurable improvement in mobility and daily function within 8–12 sessions.',
+      outcome: 'Most patients show measurable improvement in mobility and daily function within 10-15 sessions.',
       idealFor: "Stroke survivors, paralysis patients, Parkinson's patients, children with neuro conditions.",
       icon: <Brain className="w-8 h-8" />,
       img: '/images/treatments/stroke_rehab_session-opt.webp'
@@ -43,7 +43,7 @@ const Services = () => {
         'Customised Treatment Plans'
       ],
       focus: 'Reduce pain & restore movement',
-      outcome: 'Patients with knee pain, frozen shoulder & post-surgical stiffness typically recover full function in 6–10 sessions.',
+      outcome: 'Patients with knee pain, frozen shoulder & post-surgical stiffness typically recover full function in 8–12 sessions.',
       idealFor: 'Post-surgery patients, knee & hip pain, office workers with chronic back or neck pain.',
       icon: <Bone className="w-8 h-8" />,
       img: '/images/treatments/back_pain_treatment-opt.webp'
@@ -52,12 +52,13 @@ const Services = () => {
       id: '03',
       slug: 'sports',
       title: 'Sports Rehabilitation',
+      popular: true,
       desc: 'Sports injuries demand fast, precise recovery so you can return to peak performance without re-injury. From ligament tears to muscle strains, our sports physio program combines injury-specific treatment with functional training, designed around your sport and your body.',
       features: [
         'Injury Recovery & Pain Management',
         'Post-Surgical Sports Rehab',
-        'Performance enhancement',
-        'Return-to-sport Guidance'
+        'Performance Enhancement',
+        'Return-to-Sport Guidance'
       ],
       focus: 'Faster recovery & injury prevention',
       outcome: 'Athletes return to training significantly faster with structured home-based sports rehab compared to rest alone.',
@@ -73,8 +74,8 @@ const Services = () => {
       features: [
         'Spinal Adjustments & Mobilization',
         'Postural Correction',
-        'Combined rehabilitation approach',
-        'Long-term stability'
+        'Combined Rehabilitation Approach',
+        'Long-Term Stability'
       ],
       focus: 'Restore joint mobility & optimise spinal function',
       outcome: 'Patients with chronic back and neck pain report significant relief after just 3–5 chiropractic sessions.',
@@ -90,8 +91,8 @@ const Services = () => {
       features: [
         'Balance & Fall Prevention',
         'Strength Training',
-        'Mobility & gait training',
-        'Pain management'
+        'Mobility & Gait Training',
+        'Pain Management'
       ],
       focus: 'Stay active & independent',
       outcome: 'Regular geriatric physio significantly reduces fall risk and helps elderly patients maintain independence longer.',
@@ -105,10 +106,10 @@ const Services = () => {
       title: 'Dry Needling Therapy',
       desc: 'Stubborn muscle pain that doesn\'t respond to massage or rest is often caused by myofascial trigger points. Dr. Bhanu\'s certified dry needling precisely targets these knots to deactivate them, restore normal muscle function, and provide fast, lasting relief, all at your home.',
       features: [
-        'Myofascial trigger point release',
-        'Targeted needle insertion',
-        'Combined with corrective exercises',
-        'Root cause rehabilitation'
+        'Myofascial Trigger Point Release',
+        'Targeted Needle Insertion',
+        'Combined With Corrective Exercises',
+        'Root Cause Rehabilitation'
       ],
       focus: 'Release trigger points & restore muscle function',
       outcome: 'Patients with chronic muscle pain and tightness often experience significant relief within 2–4 sessions.',
@@ -122,10 +123,10 @@ const Services = () => {
       title: 'Cupping Therapy',
       desc: 'Cupping therapy uses controlled negative pressure to lift and release tight fascia, improve blood circulation, and accelerate tissue healing, an ancient technique now backed by modern clinical evidence. Ideal as a standalone treatment or combined with physiotherapy for faster recovery.',
       features: [
-        'Dynamic & static cupping',
-        'Tissue mobility improvement',
-        'Enhanced blood circulation',
-        'Combined with exercise therapy'
+        'Dynamic & Static Cupping',
+        'Tissue Mobility Improvement',
+        'Enhanced Blood Circulation',
+        'Combined With Exercise Therapy'
       ],
       focus: 'Improve tissue mobility & muscle relaxation',
       outcome: 'Best results seen when combined with manual therapy, most patients report reduced stiffness and improved range of motion within 3–5 sessions.',
@@ -137,15 +138,15 @@ const Services = () => {
       id: '07',
       slug: 'iastm',
       title: 'IASTM Therapy',
-      desc: 'IASTM (Instrument Assisted Soft Tissue Mobilisation) uses specially designed tools to detect and break down scar tissue, adhesions, and fascial restrictions that limit movement and cause pain — restoring smooth, pain-free function in ways that hands alone cannot achieve.',
+      desc: 'IASTM (Instrument Assisted Soft Tissue Mobilisation) uses specially designed tools to detect and break down scar tissue, adhesions, and fascial restrictions that limit movement and cause pain  restoring smooth, pain-free function in ways that hands alone cannot achieve.',
       features: [
-        'Soft tissue adhesion release',
-        'Scar tissue management',
-        'Improved tissue glide',
-        'Combined with active rehabilitation'
+        'Soft Tissue Adhesion Release',
+        'Scar Tissue Management',
+        'Improved Tissue Glide',
+        'Combined With Active Rehabilitation'
       ],
       focus: 'Restore tissue health & movement quality',
-      outcome: 'Particularly effective for post-surgical scar tissue and chronic tendon issues — results visible within 4–6 sessions.',
+      outcome: 'Particularly effective for post-surgical scar tissue and chronic tendon issues  results visible within 4–6 sessions.',
       idealFor: 'Post-surgery scar tissue, tendon pain, restricted movement, chronic soft tissue injuries.',
       icon: <Zap className="w-8 h-8" />,
       img: '/images/treatments/iastm_therapy_tool.png'
@@ -154,7 +155,7 @@ const Services = () => {
       id: '09',
       slug: 'kinesio-taping',
       title: 'Kinesio Taping',
-      desc: 'Kinesio taping provides continuous therapeutic support between sessions — reducing pain, stabilising joints, and enhancing circulation 24 hours a day without restricting natural movement. A powerful complement to physiotherapy that keeps your recovery progressing even when the therapist isn\'t there.',
+      desc: 'Kinesio taping provides continuous therapeutic support between sessions  reducing pain, stabilising joints, and enhancing circulation 24 hours a day without restricting natural movement. A powerful complement to physiotherapy that keeps your recovery progressing even when the therapist isn\'t there.',
       features: [
         'Pain reduction & management',
         'Muscle support & stabilization',
@@ -285,7 +286,7 @@ const Services = () => {
                             <div className="w-6 h-6 rounded-full bg-accent/10 flex items-center justify-center shrink-0 group-hover/item:bg-accent transition-colors duration-300">
                               <CheckCircle2 className="w-3.5 h-3.5 text-accent group-hover/item:text-white transition-colors duration-300" />
                             </div>
-                            <span className="text-[11px] font-bold text-primary/80 uppercase tracking-tight group-hover/item:text-primary transition-colors leading-relaxed">
+                            <span className="text-[11px] font-bold text-primary/80 tracking-tight group-hover/item:text-primary transition-colors leading-relaxed">
                               {feat}
                             </span>
                           </li>

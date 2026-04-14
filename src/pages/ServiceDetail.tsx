@@ -11,18 +11,18 @@ const servicesData = {
     icon: <HeartPulse className="w-12 h-12" />,
     img: '/images/treatments/runners_knee_physio.png',
     conditions: [
-      'Post-surgery cardiac rehab',
-      'Chronic heart support',
-      'Heart attack recovery',
-      'Breathing & lung health',
-      'Hypertension management',
-      'Cardiovascular fitness'
+      'Post-Surgery Cardiac Rehab',
+      'Chronic Heart Support',
+      'Heart Attack Recovery',
+      'Breathing & Lung Health',
+      'Hypertension Management',
+      'Cardiovascular Fitness'
     ],
     features: [
-      'Post-surgery cardiac rehabilitation: Recover safely at home after bypass surgery or valve replacement with structured, gentle exercises.',
-      'Chronic heart condition support: Specialized care for heart failure, hypertension, and high cholesterol to improve daily comfort.',
-      'After-heart attack rehabilitation: Build strength and endurance through customized, safe progression and heart-healthy habits.',
-      'Breathing & cardiovascular fitness: Improve lung function and heart health through guided breathing and light cardio training.'
+      'Post-Surgery Cardiac Rehabilitation',
+      'Chronic Heart Condition Support',
+      'After-Heart Attack Rehabilitation',
+      'Breathing & Cardiovascular Fitness'
     ],
     focus: 'Improve heart function & overall endurance'
   },
@@ -37,7 +37,7 @@ const servicesData = {
       'Cerebral Palsy Therapy',
       'Spinal Cord Injury Rehabilitation',
       "Facial Palsy (Bell's Palsy)",
-      'Balance & gait improvement'
+      'Balance & Gait Improvement'
     ],
     features: [
       'Stroke Recovery & Rehab',
@@ -59,8 +59,8 @@ const servicesData = {
       'Neck Pain Treatment',
       'Shoulder Pain Treatment',
       'Plantar Fasciitis Treatment',
-      'Post-surgery joint recovery',
-      'Muscle & joint pain relief'
+      'Post-Surgery Joint Recovery',
+      'Muscle & Joint Pain Relief'
     ],
     features: [
       'Post-Surgery Joint Recovery',
@@ -83,7 +83,7 @@ const servicesData = {
       'ACL Reconstruction Rehabilitation',
       'Rotator Cuff Injury Rehabilitation',
       'Patellofemoral Pain Syndrome',
-      'Injury recovery & pain relief'
+      'Injury Recovery & Pain Relief'
     ],
     features: [
       'Injury Recovery & Pain Management',
@@ -101,18 +101,18 @@ const servicesData = {
     icon: <Activity className="w-12 h-12" />,
     img: '/images/treatments/chiropractic_adjustment-opt.webp',
     conditions: [
-      'Spinal joint restrictions',
-      'Spinal misalignment',
-      'Postural dysfunction',
-      'Back & neck stiffness',
-      'Reduced mobility',
-      'Biomechanical dysfunction'
+      'Spinal Joint Restrictions',
+      'Spinal Misalignment',
+      'Postural Dysfunction',
+      'Back & Neck Stiffness',
+      'Reduced Mobility',
+      'Biomechanical Dysfunction'
     ],
     features: [
       'Spinal Adjustments & Mobilization',
       'Postural Correction',
       'Combined Rehabilitation Approach',
-      'Long-term Stability'
+      'Long-Term Stability'
     ],
     focus: 'Restore joint mobility & optimise spinal function',
     outcome: 'Patients with chronic back and neck pain report significant relief after just 3–5 chiropractic sessions.',
@@ -124,12 +124,12 @@ const servicesData = {
     icon: <Activity className="w-12 h-12" />,
     img: '/images/treatments/geriatric_physiotherapy_home.png',
     conditions: [
-      'Age-related strength decline',
-      'Balance & fall risk',
-      'Joint stiffness',
-      'Reduced mobility',
-      'Walking difficulties',
-      'Arthritis & joint pain'
+      'Age-Related Strength Decline',
+      'Balance & Fall Risk',
+      'Joint Stiffness',
+      'Reduced Mobility',
+      'Walking Difficulties',
+      'Arthritis & Joint Pain'
     ],
     features: [
       'Balance & Fall Prevention',
@@ -147,17 +147,17 @@ const servicesData = {
     icon: <Zap className="w-12 h-12" />,
     img: '/images/treatments/dry_needling_therapy.png',
     conditions: [
-      'Myofascial trigger points',
-      'Referred pain patterns',
-      'Muscle overuse & strain',
-      'Poor posture & imbalance',
-      'Chronic muscle tension',
-      'Movement restriction'
+      'Myofascial Trigger Points',
+      'Referred Pain Patterns',
+      'Muscle Overuse & Strain',
+      'Poor Posture & Imbalance',
+      'Chronic Muscle Tension',
+      'Movement Restriction'
     ],
     features: [
       'Myofascial Trigger Point Release',
       'Targeted Needle Insertion',
-      'Combined with Corrective Exercises',
+      'Combined With Corrective Exercises',
       'Root Cause Rehabilitation'
     ],
     focus: 'Release trigger points & restore muscle function',
@@ -170,21 +170,21 @@ const servicesData = {
     icon: <Zap className="w-12 h-12" />,
     img: '/images/treatments/cupping_therapy_session.png',
     conditions: [
-      'Poor circulation & tissue congestion',
-      'Fascial tightness',
-      'Persistent muscle stiffness',
-      'Chronic postural strain',
-      'Delayed muscle recovery',
-      'Restricted movement'
+      'Poor Circulation & Tissue Congestion',
+      'Fascial Tightness',
+      'Persistent Muscle Stiffness',
+      'Chronic Postural Strain',
+      'Delayed Muscle Recovery',
+      'Restricted Movement'
     ],
     features: [
       'Dynamic & Static Cupping',
       'Tissue Mobility Improvement',
       'Enhanced Blood Circulation',
-      'Combined with Exercise Therapy'
+      'Combined With Exercise Therapy'
     ],
     focus: 'Improve tissue mobility & muscle relaxation',
-    outcome: 'Best results seen when combined with manual therapy — most patients report reduced stiffness and improved range of motion within 3–5 sessions.',
+    outcome: 'Best results seen when combined with manual therapy  most patients report reduced stiffness and improved range of motion within 3–5 sessions.',
     idealFor: 'Muscle tightness, back stiffness, sports recovery, chronic pain with poor circulation.'
   },
   'iastm': {
@@ -193,18 +193,18 @@ const servicesData = {
     icon: <Zap className="w-12 h-12" />,
     img: '/images/treatments/iastm_therapy_tool.png',
     conditions: [
-      'Post-injury scar tissue',
-      'Soft tissue adhesions',
-      'Chronic stiffness',
-      'Movement restrictions',
-      'Reduced flexibility',
-      'Fascial restrictions'
+      'Post-Injury Scar Tissue',
+      'Soft Tissue Adhesions',
+      'Chronic Stiffness',
+      'Movement Restrictions',
+      'Reduced Flexibility',
+      'Fascial Restrictions'
     ],
     features: [
       'Soft Tissue Adhesion Release',
       'Scar Tissue Management',
       'Improved Tissue Glide',
-      'Combined with Active Rehabilitation'
+      'Combined With Active Rehabilitation'
     ],
     focus: 'Restore tissue health & movement quality',
     outcome: 'Particularly effective for post-surgical scar tissue and chronic tendon issues, results visible within 4–6 sessions.',
@@ -212,16 +212,16 @@ const servicesData = {
   },
   'kinesio-taping': {
     title: 'Kinesio Taping',
-    desc: 'Kinesio taping provides continuous therapeutic support between sessions — reducing pain, stabilising joints, and enhancing circulation 24 hours a day without restricting natural movement. A powerful complement to physiotherapy that keeps your recovery progressing even when the therapist isn\'t there.',
+    desc: 'Kinesio taping provides continuous therapeutic support between sessions  reducing pain, stabilising joints, and enhancing circulation 24 hours a day without restricting natural movement. A powerful complement to physiotherapy that keeps your recovery progressing even when the therapist isn\'t there.',
     icon: <Zap className="w-12 h-12" />,
     img: '/images/treatments/Flexophysio New Website Images (3).jpg.jpeg',
     conditions: [
-      'Sports injuries',
-      'Muscle strain & sprain',
-      'Joint pain & instability',
-      'Postural support',
-      'Swelling & bruising',
-      'Performance enhancement'
+      'Sports Injuries',
+      'Muscle Strain & Sprain',
+      'Joint Pain & Instability',
+      'Postural Support',
+      'Swelling & Bruising',
+      'Performance Enhancement'
     ],
     features: [
       'Pain Reduction & Management',
@@ -239,12 +239,12 @@ const servicesData = {
     icon: <Bone className="w-12 h-12" />,
     img: '/images/treatments/back_pain_treatment.png',
     conditions: [
-      'Muscle weakness & core instability',
-      'Poor posture & movement patterns',
-      'Limited hip mobility & pelvic imbalance',
-      'Sedentary lifestyle & daily habits',
-      'Spondylitis & disc issues',
-      'Sciatica & nerve pain'
+      'Muscle Weakness & Core Instability',
+      'Poor Posture & Movement Patterns',
+      'Limited Hip Mobility & Pelvic Imbalance',
+      'Sedentary Lifestyle & Daily Habits',
+      'Spondylitis & Disc Issues',
+      'Sciatica & Nerve Pain'
     ],
     features: [
       'Detailed home assessment: Our expert physiotherapists perform a comprehensive evaluation during home visits, assessing core and back muscle strength, hip joint mobility and flexibility, pelvic alignment and SI joint stability, posture, movement patterns, and daily habits.',

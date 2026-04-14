@@ -1,0 +1,533 @@
+<style>
+  * {
+    box-sizing: border-box;
+  }
+
+  .section-label {
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    color: #1D9E75;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+    margin-bottom: 8px;
+  }
+
+  .section-label::before,
+  .section-label::after {
+    content: '';
+    display: inline-block;
+    height: 1.5px;
+    width: 24px;
+    background: #1D9E75;
+    opacity: 0.5;
+  }
+
+  .hero-title {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.3;
+    text-align: center;
+    color: var(--color-text-primary);
+    margin: 0 0 16px;
+  }
+
+  .hero-title em {
+    font-style: italic;
+    color: #1D9E75;
+  }
+
+  .hero-sub {
+    font-size: 15px;
+    color: var(--color-text-secondary);
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 12px;
+    line-height: 1.7;
+  }
+
+  .hero-sub strong {
+    color: #185FA5;
+    font-weight: 500;
+  }
+
+  .two-quote {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+    max-width: 760px;
+    margin: 20px auto 0;
+  }
+
+  @media(max-width:580px) {
+    .two-quote {
+      grid-template-columns: 1fr;
+    }
+
+    .hero-title {
+      font-size: 22px;
+    }
+  }
+
+  .quote-col {
+    border-left: 3px solid #1D9E75;
+    padding: 10px 14px;
+    background: var(--color-background-secondary);
+    border-radius: 0 8px 8px 0;
+    font-size: 13px;
+    color: var(--color-text-secondary);
+    line-height: 1.7;
+  }
+
+  .highlight-bar {
+    background: var(--color-background-secondary);
+    border-radius: 10px;
+    padding: 14px 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #185FA5;
+    font-weight: 500;
+    margin: 20px auto 0;
+    max-width: 700px;
+    line-height: 1.6;
+  }
+
+  .divider {
+    height: 0.5px;
+    background: var(--color-border-tertiary);
+    margin: 32px 0;
+  }
+
+  .steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+    margin-bottom: 8px;
+  }
+
+  @media(max-width:580px) {
+    .steps-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .step-card {
+    background: var(--color-background-secondary);
+    border-radius: 10px;
+    padding: 14px;
+  }
+
+  .step-num {
+    font-size: 10px;
+    letter-spacing: 0.1em;
+    color: #1D9E75;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+    font-weight: 500;
+  }
+
+  .step-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #185FA5;
+    margin: 0 0 6px;
+  }
+
+  .step-body {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    line-height: 1.6;
+    margin: 0;
+  }
+
+  .techniques-header {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+  }
+
+  @media(max-width:620px) {
+    .tech-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .tech-card {
+    background: var(--color-background-primary);
+    border: 0.5px solid var(--color-border-tertiary);
+    border-radius: 12px;
+    padding: 16px;
+  }
+
+  .tech-category {
+    font-size: 14px;
+    font-weight: 500;
+    color: #185FA5;
+    margin: 0 0 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid #1D9E75;
+    display: inline-block;
+  }
+
+  .tech-item {
+    margin-bottom: 10px;
+  }
+
+  .tech-name {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    margin: 0 0 2px;
+  }
+
+  .tech-desc {
+    font-size: 12px;
+    color: var(--color-text-secondary);
+    margin: 0;
+    line-height: 1.5;
+  }
+
+  .new-badge {
+    display: inline-block;
+    background: #E1F5EE;
+    color: #0F6E56;
+    font-size: 10px;
+    font-weight: 500;
+    border-radius: 10px;
+    padding: 2px 8px;
+    margin-left: 6px;
+    vertical-align: middle;
+  }
+
+  .conditions-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  @media(max-width:580px) {
+    .conditions-grid {
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+
+  .cond-card {
+    background: var(--color-background-secondary);
+    border-radius: 10px;
+    padding: 12px 14px;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .cond-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #1D9E75;
+    flex-shrink: 0;
+    margin-top: 5px;
+  }
+
+  .cond-text {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--color-text-primary);
+    line-height: 1.4;
+  }
+
+  .cta-box {
+    background: #185FA5;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+    margin-top: 8px;
+  }
+
+  .cta-title {
+    font-size: 22px;
+    font-weight: 500;
+    color: #fff;
+    margin: 0 0 8px;
+    font-style: italic;
+  }
+
+  .cta-sub {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.8);
+    margin: 0 0 18px;
+  }
+
+  .cta-btns {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .cta-btn-primary {
+    background: #1D9E75;
+    color: #fff;
+    border: none;
+    border-radius: 24px;
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .cta-btn-secondary {
+    background: transparent;
+    color: #fff;
+    border: 1.5px solid rgba(255, 255, 255, 0.6);
+    border-radius: 24px;
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+
+  .cta-note {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-top: 12px;
+  }
+</style>
+
+<div style="padding: 1.5rem 0.75rem;">
+
+  <div class="section-label">Professional Clinical Expertise</div>
+  <h1 class="hero-title">At Flexo Physiotherapy, every treatment begins with a<br><em>detailed clinical assessment</em>
+    not just symptom relief.</h1>
+  <p class="hero-sub">We evaluate the <strong>exact cause</strong> of your condition before designing a treatment plan.
+    Your medical history, movement patterns, joint mobility, and past surgeries are all reviewed to ensure safe,
+    accurate, and personalised care.</p>
+
+  <div class="two-quote">
+    <div class="quote-col">We evaluate joint range of motion, muscle strength, and movement patterns to identify
+      restrictions, imbalances, and functional limitations reviewing your medical reports, orthopedic consultations, and
+      surgical history for a complete picture.</div>
+    <div class="quote-col">Based on this assessment, we perform guided movements and initial exercises to identify where
+      mobility is restricted. This helps design a personalised rehabilitation program tailored to your condition,
+      lifestyle, and recovery goals.</div>
+  </div>
+
+  <div class="highlight-bar">Our focus is not only on improving your current condition but restoring function, enhancing
+    movement quality, and guiding you toward long-term physical health.</div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">Our 6-Step Treatment Process</div>
+  <div class="steps-grid">
+    <div class="step-card">
+      <div class="step-num">Step 01</div>
+      <div class="step-title">Comprehensive Assessment</div>
+      <p class="step-body">Detailed evaluation of joint mobility, muscle strength, and movement patterns to understand
+        the exact problem.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">Step 02</div>
+      <div class="step-title">Clinical Understanding</div>
+      <p class="step-body">Review of medical history, reports, and previous treatments to ensure safe and accurate care.
+      </p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">Step 03</div>
+      <div class="step-title">Functional Movement Analysis</div>
+      <p class="step-body">Identifying limitations, imbalances, and restrictions affecting daily activities.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">Step 04</div>
+      <div class="step-title">Targeted Intervention</div>
+      <p class="step-body">Application of appropriate techniques and exercises based on your condition and recovery
+        stage.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">Step 05</div>
+      <div class="step-title">Progressive Rehabilitation</div>
+      <p class="step-body">Step-by-step recovery plan focused on improving strength, mobility, and function.</p>
+    </div>
+    <div class="step-card">
+      <div class="step-num">Step 06</div>
+      <div class="step-title">Long-Term Prevention</div>
+      <p class="step-body">Guidance to maintain results, prevent recurrence, and support a healthier lifestyle.</p>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">Precision & Technical Expertise</div>
+  <div class="techniques-header">
+    <h2 style="font-size:22px; font-weight:500; margin:0 0 6px; color:var(--color-text-primary);">Advanced Techniques
+      <em style="color:#1D9E75;">We Use</em></h2>
+    <p style="font-size:13px; color:var(--color-text-secondary); margin:0;">Comprehensive clinical modalities for
+      targeted recovery</p>
+  </div>
+
+  <div class="tech-grid">
+    <div class="tech-card">
+      <div class="tech-category">Manual & Joint-Based</div>
+      <div class="tech-item">
+        <p class="tech-name">Manual Therapy & Joint Mobilization</p>
+        <p class="tech-desc">Specialized hands-on techniques for joint mechanics and movement correction.</p>
+      </div>
+      <div class="tech-item">
+        <p class="tech-name">Manipulation Therapy (HVLA)</p>
+        <p class="tech-desc">Advanced manual intervention applied to restore joint function and mobility.</p>
+      </div>
+      <div class="tech-item">
+        <p class="tech-name">Chiropractic Techniques <span class="new-badge">Specialist</span></p>
+        <p class="tech-desc">Spinal and joint adjustments performed by our certified chiropractor.</p>
+      </div>
+    </div>
+
+    <div class="tech-card">
+      <div class="tech-category">Soft Tissue & Myofascial</div>
+      <div class="tech-item">
+        <p class="tech-name">Myofascial Release (IASTM)</p>
+        <p class="tech-desc">Instrument-assisted method for addressing soft tissue and fascial dysfunction.</p>
+      </div>
+      <div class="tech-item">
+        <p class="tech-name">Cupping Therapy</p>
+        <p class="tech-desc">Therapeutic soft tissue approach using controlled negative pressure.</p>
+      </div>
+      <div class="tech-item">
+        <p class="tech-name">Kinesio Taping <span class="new-badge">Certified</span></p>
+        <p class="tech-desc">Elastic taping to support muscles and joints without restricting movement.</p>
+      </div>
+    </div>
+
+    <div class="tech-card">
+      <div class="tech-category">Neuromuscular & Neural</div>
+      <div class="tech-item">
+        <p class="tech-name">Dry Needling Therapy <span class="new-badge">Certified</span></p>
+        <p class="tech-desc">Advanced neuromuscular intervention for targeted muscle regulation.</p>
+      </div>
+      <div class="tech-item">
+        <p class="tech-name">Neurodynamic Techniques</p>
+        <p class="tech-desc">Nerve Gliding & Nerve Flossing to improve nerve mobility and reduce neural tension.</p>
+      </div>
+      <div class="tech-item">
+        <p class="tech-name">PNF Neuromuscular Facilitation</p>
+        <p class="tech-desc">Technique to enhance coordination, control, and range of motion.</p>
+      </div>
+    </div>
+
+    <div class="tech-card">
+      <div class="tech-category">Movement & Rehabilitation</div>
+      <div class="tech-item">
+        <p class="tech-name">Exercise Therapy & Functional Training</p>
+        <p class="tech-desc">Progressive rehabilitation focused on restoring functional performance.</p>
+      </div>
+      <div class="tech-item">
+        <p class="tech-name">Dynamic Stretching Techniques</p>
+        <p class="tech-desc">Improve flexibility, mobility, and muscle activation.</p>
+      </div>
+      <div class="tech-item">
+        <p class="tech-name">Motor Control & Movement Re-education</p>
+        <p class="tech-desc">Retrain movement patterns and improve functional efficiency.</p>
+      </div>
+    </div>
+
+    <div class="tech-card">
+      <div class="tech-category">Electrotherapy & Modalities</div>
+      <div class="tech-item">
+        <p class="tech-name">EMS Electrical Muscle Stimulation</p>
+        <p class="tech-desc">Muscle activation and neuromuscular stimulation.</p>
+      </div>
+      <div class="tech-item">
+        <p class="tech-name">TENS & IFT Therapy</p>
+        <p class="tech-desc">Pain management using low and medium frequency electrical currents.</p>
+      </div>
+      <div class="tech-item">
+        <p class="tech-name">Ultrasound & Thermotherapy</p>
+        <p class="tech-desc">Deep tissue healing and superficial tissue relaxation modalities.</p>
+      </div>
+      <div class="tech-item">
+        <p class="tech-name">Cryotherapy (Cold Therapy)</p>
+        <p class="tech-desc">Cooling technique applied for acute tissue management.</p>
+      </div>
+    </div>
+
+    <div class="tech-card">
+      <div class="tech-category">Assessment & Analysis</div>
+      <div class="tech-item">
+        <p class="tech-name">MMT Manual Muscle Testing</p>
+        <p class="tech-desc">Clinical method to evaluate muscle strength and functional capacity.</p>
+      </div>
+      <div class="tech-item">
+        <p class="tech-name">FMS-Based Assessment</p>
+        <p class="tech-desc">Movement analysis to identify imbalances and potential risk factors.</p>
+      </div>
+      <div class="tech-item">
+        <p class="tech-name">Postural & Gait Analysis <span class="new-badge">Added</span></p>
+        <p class="tech-desc">Detailed analysis of standing posture and walking patterns to guide treatment planning.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="section-label">Conditions We Treat at Home</div>
+  <p style="text-align:center; font-size:14px; color:var(--color-text-secondary); margin: 0 0 16px;">Expert home-visit
+    physiotherapy for all these conditions across Hyderabad</p>
+  <div class="conditions-grid">
+    <div class="cond-card">
+      <div class="cond-dot"></div>
+      <div class="cond-text">Back & Neck Pain</div>
+    </div>
+    <div class="cond-card">
+      <div class="cond-dot"></div>
+      <div class="cond-text">Knee Pain & Arthritis</div>
+    </div>
+    <div class="cond-card">
+      <div class="cond-dot"></div>
+      <div class="cond-text">Stroke & Paralysis Rehab</div>
+    </div>
+    <div class="cond-card">
+      <div class="cond-dot"></div>
+      <div class="cond-text">Sports Injuries</div>
+    </div>
+    <div class="cond-card">
+      <div class="cond-dot"></div>
+      <div class="cond-text">Post-Surgical Recovery</div>
+    </div>
+    <div class="cond-card">
+      <div class="cond-dot"></div>
+      <div class="cond-text">Joint Disorders</div>
+    </div>
+    <div class="cond-card">
+      <div class="cond-dot"></div>
+      <div class="cond-text">Frozen Shoulder</div>
+    </div>
+    <div class="cond-card">
+      <div class="cond-dot"></div>
+      <div class="cond-text">Sciatica & Disc Problems</div>
+    </div>
+    <div class="cond-card">
+      <div class="cond-dot"></div>
+      <div class="cond-text">Elderly & Geriatric Care</div>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="cta-box">
+    <div class="cta-title">Start Your Recovery Journey</div>
+    <div class="cta-sub">First assessment included. Our therapist comes to your home Kukatpally, Miyapur, Kondapur &
+      nearby areas.</div>
+    <div class="cta-btns">
+      <button class="cta-btn-primary">Book a Home Visit</button>
+      <button class="cta-btn-secondary">WhatsApp Us</button>
+    </div>
+    <div class="cta-note">Call us: +91 95028 08581 · No hidden charges · 1,000+ patients treated</div>
+  </div>
+
+</div>

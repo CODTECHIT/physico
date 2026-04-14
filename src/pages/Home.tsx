@@ -702,7 +702,7 @@ const Home = () => {
               </span>
             </h2>
             <p className="text-dark/70 font-medium leading-relaxed max-w-2xl mx-auto mt-4 text-sm lg:text-base">
-              We're not just convenient — we're clinically better for many
+              We're not just convenient  we're clinically better for many
               conditions. Here's what makes home-based physiotherapy at Flexo
               different from a clinic visit.
             </p>

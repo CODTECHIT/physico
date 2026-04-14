@@ -60,8 +60,7 @@ const Conditions = () => {
 
               <p className="editorial-heading text-primary max-w-4xl mx-auto opacity-95">
                 At Flexo Physiotherapy, every treatment begins with a detailed
-                clinical assessment to understand the exact cause of your
-                condition not just the symptoms.
+                clinical assessment not just symptom relief.
               </p>
             </div>
 
@@ -220,65 +219,73 @@ const Conditions = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {[
               {
-                category: "Manual & Joint-Based Techniques",
+                category: "Manual & Joint-Based",
                 items: [
                   {
                     title: "Manual Therapy & Joint Mobilization",
                     desc: "Specialized hands-on techniques for joint mechanics and movement correction.",
                   },
                   {
-                    title:
-                      "Manipulation Therapy (HVLA – High Velocity Low Amplitude)",
+                    title: "Manipulation Therapy (HVLA)",
                     desc: "Advanced manual intervention applied to restore joint function and mobility.",
+                  },
+                  {
+                    title: "Chiropractic Techniques",
+                    desc: "Spinal and joint adjustments performed by our certified chiropractor.",
+                    badge: "Specialist"
                   },
                 ],
               },
               {
-                category: "Soft Tissue & Myofascial Techniques",
+                category: "Soft Tissue & Myofascial",
                 items: [
                   {
-                    title:
-                      "Myofascial Release (IASTM – Instrument Assisted Soft Tissue Mobilization)",
+                    title: "Myofascial Release (IASTM)",
                     desc: "Instrument-assisted method for addressing soft tissue and fascial dysfunction.",
                   },
                   {
                     title: "Cupping Therapy",
                     desc: "Therapeutic soft tissue approach using controlled negative pressure.",
                   },
+                  {
+                    title: "Kinesio Taping",
+                    desc: "Elastic taping to support muscles and joints without restricting movement.",
+                    badge: "Certified"
+                  },
                 ],
               },
               {
-                category: "Neuromuscular & Neural Techniques",
+                category: "Neuromuscular & Neural",
                 items: [
                   {
                     title: "Dry Needling Therapy",
                     desc: "Advanced neuromuscular intervention for targeted muscle regulation.",
+                    badge: "Certified"
                   },
                   {
-                    title:
-                      "Neurodynamic Techniques (Nerve Gliding / Nerve Flossing)",
-                    desc: "Specialized methods to improve nerve mobility and reduce neural tension.",
+                    title: "Neurodynamic Techniques",
+                    desc: "Nerve Gliding & Nerve Flossing to improve nerve mobility and reduce neural tension.",
+                  },
+                  {
+                    title: "PNF Neuromuscular Facilitation",
+                    desc: "Technique to enhance coordination, control, and range of motion.",
                   },
                 ],
               },
               {
-                category: "Movement & Rehabilitation Approaches",
+                category: "Movement & Rehabilitation",
                 items: [
                   {
                     title: "Exercise Therapy & Functional Training",
-                    desc: "Progressive rehabilitation approach focused on restoring functional performance.",
+                    desc: "Progressive rehabilitation focused on restoring functional performance.",
                   },
                   {
                     title: "Dynamic Stretching Techniques",
-                    desc: "Movement-based stretching methods used to improve flexibility, mobility, and muscle activation.",
-                  },
-                  {
-                    title: "PNF (Proprioceptive Neuromuscular Facilitation)",
-                    desc: "Neuromuscular technique designed to enhance coordination, control, and range of motion.",
+                    desc: "Improve flexibility, mobility, and muscle activation.",
                   },
                   {
                     title: "Motor Control & Movement Re-education",
-                    desc: "Focused approach to retrain movement patterns and improve functional efficiency.",
+                    desc: "Retrain movement patterns and improve functional efficiency.",
                   },
                 ],
               },
@@ -286,24 +293,16 @@ const Conditions = () => {
                 category: "Electrotherapy & Modalities",
                 items: [
                   {
-                    title: "EMS (Electrical Muscle Stimulation)",
-                    desc: "Electrical modality used for muscle activation and neuromuscular stimulation.",
+                    title: "EMS Electrical Muscle Stimulation",
+                    desc: "Muscle activation and neuromuscular stimulation.",
                   },
                   {
-                    title: "TENS (Transcutaneous Electrical Nerve Stimulation)",
-                    desc: "Pain-modulation technique using low-voltage electrical currents.",
+                    title: "TENS & IFT Therapy",
+                    desc: "Pain management using low and medium frequency electrical currents.",
                   },
                   {
-                    title: "IFT (Interferential Therapy)",
-                    desc: "Medium-frequency electrical stimulation used in clinical pain management.",
-                  },
-                  {
-                    title: "Ultrasound Therapy",
-                    desc: "Deep tissue modality utilizing sound waves for therapeutic application.",
-                  },
-                  {
-                    title: "Thermotherapy (Heat Therapy)",
-                    desc: "Superficial heating modality used to support tissue relaxation.",
+                    title: "Ultrasound & Thermotherapy",
+                    desc: "Deep tissue healing and superficial tissue relaxation modalities.",
                   },
                   {
                     title: "Cryotherapy (Cold Therapy)",
@@ -312,16 +311,20 @@ const Conditions = () => {
                 ],
               },
               {
-                category: "Assessment & Movement Analysis",
+                category: "Assessment & Analysis",
                 items: [
                   {
-                    title: "MMT (Manual Muscle Testing)",
+                    title: "MMT Manual Muscle Testing",
                     desc: "Clinical method to evaluate muscle strength and functional capacity.",
                   },
                   {
-                    title:
-                      "Functional Movement Screening (FMS-Based Assessment)",
-                    desc: "Movement analysis system used to identify imbalances and potential risk factors.",
+                    title: "FMS-Based Assessment",
+                    desc: "Movement analysis to identify imbalances and potential risk factors.",
+                  },
+                  {
+                    title: "Postural & Gait Analysis",
+                    desc: "Detailed analysis of standing posture and walking patterns to guide treatment planning.",
+
                   },
                 ],
               },
@@ -344,8 +347,13 @@ const Conditions = () => {
                 <div className="space-y-5">
                   {cat.items.map((item, i) => (
                     <div key={i} className="space-y-2 group/item">
-                      <h4 className="text-sm lg:text-base font-bold text-primary border-l-2 border-accent/20 pl-4 group-hover/item:border-accent transition-colors duration-300">
+                      <h4 className="text-sm lg:text-base font-bold text-primary border-l-2 border-accent/20 pl-4 group-hover/item:border-accent transition-colors duration-300 flex items-center flex-wrap gap-2">
                         {item.title}
+                        {item.badge && (
+                          <span className="bg-accent/10 text-accent text-[9px] font-bold px-2 py-0.5 rounded-full uppercase tracking-wider">
+                            {item.badge}
+                          </span>
+                        )}
                       </h4>
                       <p className="text-xs lg:text-sm text-dark/70 font-medium leading-relaxed pl-4">
                         {item.desc}
@@ -356,63 +364,107 @@ const Conditions = () => {
               </motion.div>
             ))}
           </div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 1 }}
-            className="mt-24 p-10 lg:p-16 bg-primary rounded-[3rem] lg:rounded-[5rem] relative overflow-hidden text-center group"
-          >
-            {/* Background design elements for closing box */}
-            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
-            <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
-
-            <p className="text-xl lg:text-4xl font-serif font-bold text-white relative z-10 leading-snug">
-              "We integrate advanced physiotherapy techniques with precise
-              clinical assessment to deliver targeted treatment, efficient
-              recovery, and long-term functional outcomes."
-            </p>
-          </motion.div>
         </div>
       </section>
 
-      {/* 4. QUALITY COMMITMENT */}
-      <section className="section-spacing bg-white relative overflow-hidden">
-        <div className="max-w-4xl mx-auto responsive-padding space-y-10 relative z-10">
-          <h2 className="editorial-heading text-primary">
-            Don't see your <br className="hidden md:block" />
-            <span className="text-accent italic font-normal">
-              condition listed?
-            </span>
-          </h2>
-          <p className="text-dark text-xl font-medium leading-relaxed opacity-80">
-            Our physiotherapist handle complex clinical cases beyond this list.
-            Contact us for a free clinical consultation over the phone.
-          </p>
-          <div className="flex flex-col sm:flex-row justify-center items-center gap-8 pt-8">
-            <a
-              href={`https://wa.me/919502808581?text=${encodeURIComponent(`Hi ${BRAND_NAME}, I have a condition not listed on your website. Can I get a consultation?`)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-full sm:w-auto"
-            >
-              <Button
-                variant="primary"
-                size="lg"
-                className="w-full rounded-none px-12 group bg-accent hover:bg-accent/90 border-none text-white"
-              >
-                Meet your physiotherapist{" "}
-                <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-            </a>
-            <a
-              href="tel:+919502808581"
-              className="text-primary font-bold uppercase tracking-widest text-sm hover:text-accent transition-colors"
-            >
-              Call Now: +91 95028 08581
-            </a>
+      {/* 4. CONDITIONS WE TREAT AT HOME */}
+      <section className="py-12 lg:py-24 bg-white relative overflow-hidden">
+        <div className="max-w-[1400px] mx-auto responsive-padding relative z-10">
+          <div className="text-center mb-12">
+            <div className="inline-flex items-center justify-center space-x-3 mb-4">
+              <span className="w-8 h-[2px] bg-accent" />
+              <span className="text-accent font-bold uppercase tracking-[0.3em] text-[10px]">Conditions We Treat at Home</span>
+              <span className="w-8 h-[2px] bg-accent" />
+            </div>
+            <p className="text-dark/70 font-medium text-sm lg:text-base">
+              Expert home-visit physiotherapy for all these conditions across Hyderabad
+            </p>
           </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 lg:gap-6">
+            {[
+              "Back & Neck Pain",
+              "Knee Pain & Arthritis",
+              "Stroke & Paralysis Rehab",
+              "Sports Injuries",
+              "Post-Surgical Recovery",
+              "Joint Disorders",
+              "Frozen Shoulder",
+              "Sciatica & Disc Problems",
+              "Elderly & Geriatric Care"
+            ].map((condition, idx) => (
+              <motion.div
+                key={idx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: idx * 0.1 }}
+                className="bg-surface/30 p-4 lg:p-6 rounded-2xl flex items-center gap-4 hover:bg-accent/5 hover:border-accent/20 border border-transparent transition-all duration-300"
+              >
+                <div className="w-2 h-2 rounded-full bg-accent shrink-0" />
+                <span className="text-sm lg:text-lg font-bold text-primary">{condition}</span>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 5. CTA SECTION */}
+      <section className="py-12 lg:py-24 bg-white relative overflow-hidden">
+        <div className="max-w-5xl mx-auto responsive-padding relative z-10">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="bg-primary p-8 lg:p-16 rounded-[2.5rem] lg:rounded-[4rem] text-center space-y-8 lg:space-y-10 shadow-2xl relative overflow-hidden group"
+          >
+            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
+            <div className="absolute bottom-0 left-0 w-64 h-64 bg-white/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
+
+            <div className="space-y-4 relative z-10">
+              <h2 className="text-2xl lg:text-5xl font-serif font-bold text-white leading-tight italic">
+                Start Your Recovery Journey
+              </h2>
+              <p className="text-white/80 font-medium text-sm lg:text-lg max-w-2xl mx-auto">
+                First assessment included. Our therapist comes to your home (Kukatpally, Miyapur, Kondapur & nearby areas).
+              </p>
+            </div>
+
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 lg:gap-6 relative z-10">
+              <a
+                href={`https://wa.me/919502808581?text=${encodeURIComponent(`Hi ${BRAND_NAME}, I would like to book a home visit.`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto"
+              >
+                <Button
+                  variant="primary"
+                  size="lg"
+                  className="w-full rounded-full px-10 group bg-accent hover:bg-accent/90 border-none text-white font-bold"
+                >
+                  Book a Home Visit
+                </Button>
+              </a>
+              <a
+                href={`https://wa.me/919502808581?text=${encodeURIComponent(`Hi ${BRAND_NAME}, I have a query about your treatments.`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full sm:w-auto"
+              >
+                <Button
+                  variant="outline"
+                  size="lg"
+                  className="w-full rounded-full px-10 border-white text-white hover:bg-white hover:text-primary transition-all font-bold"
+                >
+                  WhatsApp Us
+                </Button>
+              </a>
+            </div>
+
+            <p className="text-white/60 text-[10px] lg:text-xs font-bold uppercase tracking-[0.2em] relative z-10">
+              Call us: +91 95028 08581 · No hidden charges · 1,000+ patients treated
+            </p>
+          </motion.div>
         </div>
       </section>
     </div>

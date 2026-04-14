@@ -15,7 +15,6 @@ import Button from "../components/Button";
 import {
   CONTACT_PHONE_DISPLAY,
   CONTACT_WHATSAPP_LINK,
-  SERVICE_AREAS,
   BRAND_NAME,
 } from "../constants";
 
@@ -72,13 +71,7 @@ const About = () => {
               services in Hyderabad, delivering expert care directly to patients
               in the comfort of their homes.
             </p>
-            <div className="flex items-center justify-center space-x-3 pt-2 text-primary font-bold">
-              <MapPin className="text-accent w-4 h-4 lg:w-5 lg:h-5" />
-              <span className="text-[10px] lg:text-sm uppercase tracking-widest text-center">
-                Serving : {SERVICE_AREAS.split(",").slice(0, 3).join(", ")} &
-                Nearby
-              </span>
-            </div>
+
           </motion.div>
         </div>
       </section>
@@ -270,7 +263,7 @@ const About = () => {
               <div className="flex flex-wrap gap-4 pt-4">
                 {[
                   { value: "1000+", label: "Patients Treated" },
-                  { value: "3600", label: "Sessions" },
+                  { value: "3600+", label: "Sessions" },
                   { value: "4.9★", label: "Google Reviews" },
                 ].map((stat, idx) => (
                   <div
@@ -324,7 +317,7 @@ const About = () => {
               <span className="text-accent italic font-normal">Different</span>
             </h2>
             <p className="text-dark/70 font-medium leading-relaxed max-w-2xl mx-auto mt-4 text-sm lg:text-base">
-              Six years ago Dr. Bhanu started Flexo with one belief — patients
+              Six years ago Dr. Bhanu started Flexo with one belief  patients
               deserve better than rushed clinic appointments. Here's how that
               belief shaped everything we do.
             </p>
