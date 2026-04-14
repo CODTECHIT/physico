@@ -135,7 +135,7 @@ const About = () => {
               <div className="absolute -bottom-6 -left-6 bg-primary p-5 shadow-xl border-t-4 border-accent hidden sm:block rounded-xl">
                 <div className="text-center">
                   <span className="block text-2xl lg:text-4xl font-serif font-bold text-white mb-0.5">
-                    6+
+                    4+
                   </span>
                   <span className="block text-[8px] uppercase tracking-[0.2em] font-bold text-accent">
                     Years Excellence
@@ -176,7 +176,7 @@ const About = () => {
                 <div className="absolute -bottom-4 -right-2 sm:-bottom-6 sm:-right-4 lg:-right-8 bg-white shadow-2xl rounded-2xl p-3 lg:p-5 border border-primary/10 z-30 min-w-[100px] lg:min-w-[160px]">
                   <div className="flex flex-col items-center justify-center">
                     <span className="text-xl lg:text-4xl font-serif font-bold text-accent leading-none">
-                      6+
+                      4+
                     </span>
                     <span className="text-[6px] lg:text-[9px] uppercase tracking-[0.2em] font-bold text-primary mt-1">
                       Years Excellence
@@ -350,7 +350,7 @@ const About = () => {
                 icon: <PhoneCall className="w-5 h-5 lg:w-6 lg:h-6" />,
               },
               {
-                title: "Serving Hyderabad for 6+ years",
+                title: "Serving Hyderabad for 4+ years",
                 desc: "Kukatpally, Miyapur, Kondapur, Nizampet, KPHB, Madhapur and nearby, 1,000+ patients trust Flexo as Hyderabad's most recommended home physiotherapy service.",
                 icon: <MapPin className="w-5 h-5 lg:w-6 lg:h-6" />,
               },

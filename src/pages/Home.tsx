@@ -388,7 +388,7 @@ const Home = () => {
                   icon: <ThumbsUp className="w-4 h-4 lg:w-6 lg:h-6" />,
                 },
                 {
-                  title: "6+ Years",
+                  title: "4+ Years",
                   desc: "Proven expertise",
                   icon: <Award className="w-4 h-4 lg:w-6 lg:h-6" />,
                 },
@@ -483,7 +483,7 @@ const Home = () => {
                 <div className="absolute -bottom-4 lg:-bottom-6 -left-4 lg:-left-6 bg-primary p-4 lg:p-6 shadow-xl border-t-4 border-accent z-30 rounded-xl">
                   <div className="text-center">
                     <span className="block text-2xl lg:text-3xl font-serif font-bold text-white mb-0.5">
-                      6+
+                      4+
                     </span>
                     <span className="block text-[8px] uppercase tracking-[0.2em] font-bold text-accent">
                       Years Experience
@@ -962,11 +962,10 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
-                className={`relative p-5 lg:p-6 rounded-2xl transition-all duration-310 group ${
-                  area.highlight
-                    ? "bg-accent text-white shadow-xl shadow-accent/20"
-                    : "bg-surface text-primary hover:bg-primary/5 border border-primary/5"
-                }`}
+                className={`relative p-5 lg:p-6 rounded-2xl transition-all duration-310 group ${area.highlight
+                  ? "bg-accent text-white shadow-xl shadow-accent/20"
+                  : "bg-surface text-primary hover:bg-primary/5 border border-primary/5"
+                  }`}
               >
                 {area.highlight && (
                   <div className="absolute -top-2 -right-2 w-6 h-6 bg-accent rounded-full flex items-center justify-center animate-pulse border-2 border-white">
