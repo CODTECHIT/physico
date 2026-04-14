@@ -67,11 +67,11 @@ const Conditions = () => {
                   not just symptom relief.
                 </h1>
 
-                <p className="text-base lg:text-2xl text-dark font-medium leading-relaxed max-w-5xl mx-auto opacity-80">
+                <p className="text-base lg:text-3xl text-dark font-medium leading-relaxed max-w-5xl mx-auto opacity-80">
                   We evaluate the{" "}
                   <span className="text-[#185FA5] font-bold">exact cause</span>{" "}
-                  of your condition before designing a treatment plan. Your
-                  medical history, movement patterns, joint mobility, and past
+                  of your condition before designing a treatment plan. <br className="hidden lg:block" />
+                  Your medical history, movement patterns, joint mobility, and past <br className="hidden lg:block" />
                   surgeries are all reviewed to ensure safe, accurate, and
                   personalised care.
                 </p>
