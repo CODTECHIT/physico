@@ -6,7 +6,6 @@ import {
   Target,
   TrendingUp,
   Shield,
-  ArrowRight,
 } from "lucide-react";
 import { BRAND_NAME } from "../constants";
 import Button from "../components/Button";
