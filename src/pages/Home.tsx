@@ -15,8 +15,6 @@ import {
   Brain,
   Dumbbell,
   Activity,
-  Target,
-  Calendar,
   FileCheck,
   ThumbsUp,
   Award,
