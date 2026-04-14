@@ -37,8 +37,8 @@ const Conditions = () => {
         </motion.div>
 
         {/* Large background text for editorial feel */}
-        <div className="absolute top-20 left-1/2 -translate-x-1/2 text-[20vw] font-serif font-bold text-primary/5 select-none pointer-events-none whitespace-nowrap uppercase">
-          TREATMENTS
+        <div className="absolute top-20 left-1/2 -translate-x-1/2 text-[18vw] font-serif font-bold text-primary/[0.03] select-none pointer-events-none whitespace-nowrap uppercase tracking-widest">
+          TREATMENT
         </div>
 
         <div className="max-w-5xl mx-auto responsive-padding relative z-10 text-center">
@@ -58,7 +58,7 @@ const Conditions = () => {
               </div>
 
               <div className="space-y-6 lg:space-y-10">
-                <h1 className="editorial-heading text-primary max-w-6xl mx-auto leading-tight">
+                <h1 className="editorial-heading text-primary max-w-5xl mx-auto leading-[1.2]">
                   At Flexo Physiotherapy, every treatment begins with a{" "}
                   <br className="hidden lg:block" />
                   <span className="text-accent italic font-normal">
@@ -67,13 +67,12 @@ const Conditions = () => {
                   not just symptom relief.
                 </h1>
 
-                <p className="text-base lg:text-3xl text-dark font-medium leading-relaxed max-w-5xl mx-auto opacity-80">
+                <p className="text-base lg:text-2xl text-dark font-medium leading-relaxed max-w-4xl mx-auto opacity-80">
                   We evaluate the{" "}
                   <span className="text-[#185FA5] font-bold">exact cause</span>{" "}
                   of your condition before designing a treatment plan. <br className="hidden lg:block" />
-                  Your medical history, movement patterns, joint mobility, and past <br className="hidden lg:block" />
-                  surgeries are all reviewed to ensure safe, accurate, and
-                  personalised care.
+                  Your medical history, movement patterns, joint mobility, and past surgeries <br className="hidden lg:block" />
+                  are all reviewed to ensure safe, accurate, and personalised care.
                 </p>
               </div>
             </div>
