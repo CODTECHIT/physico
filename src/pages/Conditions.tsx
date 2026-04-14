@@ -48,7 +48,7 @@ const Conditions = () => {
             transition={{ duration: 0.8 }}
             className="space-y-10 lg:space-y-16"
           >
-            <div className="space-y-6 lg:space-y-8">
+            <div className="space-y-8 lg:space-y-12">
               <div className="flex items-center justify-center space-x-3 mb-4">
                 <span className="w-8 lg:w-12 h-[2px] bg-accent" />
                 <span className="text-accent font-sans font-bold uppercase tracking-[0.2em] text-[10px] lg:text-xs">
@@ -57,55 +57,57 @@ const Conditions = () => {
                 <span className="w-8 lg:w-12 h-[2px] bg-accent" />
               </div>
 
-              <p className="editorial-heading text-primary max-w-4xl mx-auto opacity-95">
-                At Flexo Physiotherapy, every treatment begins with a detailed
-                clinical assessment not just symptom relief.
-              </p>
+              <div className="space-y-6 lg:space-y-10">
+                <h1 className="editorial-heading text-primary max-w-6xl mx-auto leading-tight">
+                  At Flexo Physiotherapy, every treatment begins with a{" "}
+                  <br className="hidden lg:block" />
+                  <span className="text-accent italic font-normal">
+                    detailed clinical assessment
+                  </span>{" "}
+                  not just symptom relief.
+                </h1>
+
+                <p className="text-base lg:text-2xl text-dark font-medium leading-relaxed max-w-5xl mx-auto opacity-80">
+                  We evaluate the{" "}
+                  <span className="text-[#185FA5] font-bold">exact cause</span>{" "}
+                  of your condition before designing a treatment plan. Your
+                  medical history, movement patterns, joint mobility, and past
+                  surgeries are all reviewed to ensure safe, accurate, and
+                  personalised care.
+                </p>
+              </div>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 text-justify">
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.2 }}
-                className="space-y-6"
-              >
-                <p className="text-sm lg:text-lg text-dark/80 font-medium leading-relaxed border-l-4 border-accent pl-6">
+            {/* Side-by-side assessment deep-dive boxes */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 pt-10">
+              <div className="bg-surface/30 p-8 lg:p-10 rounded-3xl border-l-4 border-accent text-left hover:bg-white hover:shadow-xl transition-all duration-500">
+                <p className="text-sm lg:text-lg text-dark/70 font-medium leading-relaxed">
                   We evaluate joint range of motion, muscle strength, and
                   movement patterns to identify restrictions, imbalances, and
-                  functional limitations. Existing medical reports, orthopedic
-                  consultations, and past surgical history are carefully
-                  reviewed to ensure a safe and accurate treatment plan.
+                  functional limitations—reviewing your medical reports,
+                  orthopedic consultations, and surgical history for a complete
+                  picture.
                 </p>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, delay: 0.4 }}
-                className="space-y-6"
-              >
-                <p className="text-sm lg:text-lg text-dark/80 font-medium leading-relaxed border-l-4 border-accent pl-6">
+              <div className="bg-surface/30 p-8 lg:p-10 rounded-3xl border-l-4 border-accent text-left hover:bg-white hover:shadow-xl transition-all duration-500">
+                <p className="text-sm lg:text-lg text-dark/70 font-medium leading-relaxed">
                   Based on this assessment, we perform guided movements and
-                  initial exercises to identify where mobility is restricted and
-                  what is limiting your recovery. This helps us design a
-                  personalized rehabilitation program tailored to your
-                  condition, lifestyle, and recovery goals.
+                  initial exercises to identify where mobility is restricted.
+                  This helps design a personalised rehabilitation program
+                  tailored to your condition, lifestyle, and recovery goals.
                 </p>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: 0.6 }}
-                className="md:col-span-2"
-              >
-                <p className="text-sm lg:text-xl text-primary font-bold leading-relaxed text-center opacity-90 pt-4 lg:pt-8 border-t border-primary/5">
-                  Our focus is not only on improving your current condition but
-                  also on restoring function, enhancing movement quality, and
-                  guiding you toward long-term physical health.
-                </p>
-              </motion.div>
+              <div className="md:col-span-2">
+                <div className="bg-[#FAEEDA]/30 p-6 lg:p-8 rounded-2xl border-l-4 border-[#633806]/30 text-center">
+                  <p className="text-sm lg:text-xl text-[#633806] font-bold leading-relaxed italic">
+                    Our focus is not only on improving your current condition
+                    but restoring function, enhancing movement quality, and
+                    guiding you toward long-term physical health.
+                  </p>
+                </div>
+              </div>
             </div>
           </motion.div>
         </div>
