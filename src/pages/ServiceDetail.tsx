@@ -28,7 +28,7 @@ const servicesData = {
   },
   'neurological': {
     title: 'Neuro Rehabilitation',
-    desc: 'Stroke, paralysis, and neurological conditions require specialist hands-on care — not just exercises. Dr. Bhanu delivers evidence-based neuro rehab directly at your home in Kukatpally, Miyapur, Kondapur and nearby areas, helping patients regain movement, balance, and daily independence.',
+    desc: 'Stroke, paralysis, and neurological conditions require specialist hands-on care, not just exercises. Dr. Bhanu delivers evidence-based neuro rehab directly at your home in Kukatpally, Miyapur, Kondapur and nearby areas, helping patients regain movement, balance, and daily independence.',
     icon: <Brain className="w-12 h-12" />,
     img: '/images/treatments/stroke_rehab_session-opt.webp',
     conditions: [
@@ -51,7 +51,7 @@ const servicesData = {
   },
   'orthopedic': {
     title: 'Orthopedic Rehabilitation',
-    desc: 'Whether it\'s joint pain, post-surgery stiffness, or a musculoskeletal injury, recovery should happen at your pace — in your own home. Our orthopedic physiotherapy combines manual therapy, targeted exercises, and advanced modalities to eliminate pain at the root cause, not just the symptoms.',
+    desc: 'Whether it\'s joint pain, post-surgery stiffness, or a musculoskeletal injury, recovery should happen at your pace, in your own home. Our orthopedic physiotherapy combines manual therapy, targeted exercises, and advanced modalities to eliminate pain at the root cause, not just the symptoms.',
     icon: <Bone className="w-12 h-12" />,
     img: '/images/treatments/back_pain_treatment-opt.webp',
     conditions: [
@@ -74,7 +74,7 @@ const servicesData = {
   },
   'sports': {
     title: 'Sports Rehabilitation',
-    desc: 'Sports injuries demand fast, precise recovery so you can return to peak performance without re-injury. From ligament tears to muscle strains, our sports physio program combines injury-specific treatment with functional training — designed around your sport and your body.',
+    desc: 'Sports injuries demand fast, precise recovery so you can return to peak performance without re-injury. From ligament tears to muscle strains, our sports physio program combines injury-specific treatment with functional training, designed around your sport and your body.',
     icon: <Dumbbell className="w-12 h-12" />,
     img: '/images/treatments/acl_rehab_exercise-opt.webp',
     conditions: [
@@ -97,7 +97,7 @@ const servicesData = {
   },
   'chiropractic': {
     title: 'Chiropractic Care',
-    desc: 'Most pain originates from spinal misalignment and joint dysfunction — not just muscle tightness. Dr. Bhanu\'s chiropractic expertise, combined with physiotherapy, delivers precise spinal and joint corrections at your home for lasting relief without dependency on medication.',
+    desc: 'Most pain originates from spinal misalignment and joint dysfunction, not just muscle tightness. Dr. Bhanu\'s chiropractic expertise, combined with physiotherapy, delivers precise spinal and joint corrections at your home for lasting relief without dependency on medication.',
     icon: <Activity className="w-12 h-12" />,
     img: '/images/treatments/chiropractic_adjustment-opt.webp',
     conditions: [
@@ -120,7 +120,7 @@ const servicesData = {
   },
   'geriatric': {
     title: 'Geriatric Physiotherapy',
-    desc: 'Ageing should not mean losing independence. Our geriatric physiotherapy brings gentle, evidence-based care to elderly patients at home — improving balance, preventing falls, building strength, and supporting a healthy, active lifestyle in the comfort of familiar surroundings.',
+    desc: 'Ageing should not mean losing independence. Our geriatric physiotherapy brings gentle, evidence-based care to elderly patients at home, improving balance, preventing falls, building strength, and supporting a healthy, active lifestyle in the comfort of familiar surroundings.',
     icon: <Activity className="w-12 h-12" />,
     img: '/images/treatments/geriatric_physiotherapy_home.png',
     conditions: [
@@ -143,7 +143,7 @@ const servicesData = {
   },
   'dry-needling': {
     title: 'Dry Needling Therapy',
-    desc: 'Stubborn muscle pain that doesn\'t respond to massage or rest is often caused by myofascial trigger points. Dr. Bhanu\'s certified dry needling precisely targets these knots to deactivate them, restore normal muscle function, and provide fast, lasting relief — all at your home.',
+    desc: 'Stubborn muscle pain that doesn\'t respond to massage or rest is often caused by myofascial trigger points. Dr. Bhanu\'s certified dry needling precisely targets these knots to deactivate them, restore normal muscle function, and provide fast, lasting relief, all at your home.',
     icon: <Zap className="w-12 h-12" />,
     img: '/images/treatments/dry_needling_therapy.png',
     conditions: [
@@ -166,7 +166,7 @@ const servicesData = {
   },
   'cupping': {
     title: 'Cupping Therapy',
-    desc: 'Cupping therapy uses controlled negative pressure to lift and release tight fascia, improve blood circulation, and accelerate tissue healing — an ancient technique now backed by modern clinical evidence. Ideal as a standalone treatment or combined with physiotherapy for faster recovery.',
+    desc: 'Cupping therapy uses controlled negative pressure to lift and release tight fascia, improve blood circulation, and accelerate tissue healing, an ancient technique now backed by modern clinical evidence. Ideal as a standalone treatment or combined with physiotherapy for faster recovery.',
     icon: <Zap className="w-12 h-12" />,
     img: '/images/treatments/cupping_therapy_session.png',
     conditions: [
@@ -189,7 +189,7 @@ const servicesData = {
   },
   'iastm': {
     title: 'IASTM Therapy',
-    desc: 'IASTM (Instrument Assisted Soft Tissue Mobilisation) uses specially designed tools to detect and break down scar tissue, adhesions, and fascial restrictions that limit movement and cause pain — restoring smooth, pain-free function in ways that hands alone cannot achieve.',
+    desc: 'IASTM (Instrument Assisted Soft Tissue Mobilisation) uses specially designed tools to detect and break down scar tissue, adhesions, and fascial restrictions that limit movement and cause pain, restoring smooth, pain-free function in ways that hands alone cannot achieve.',
     icon: <Zap className="w-12 h-12" />,
     img: '/images/treatments/iastm_therapy_tool.png',
     conditions: [
@@ -207,7 +207,7 @@ const servicesData = {
       'Combined with Active Rehabilitation'
     ],
     focus: 'Restore tissue health & movement quality',
-    outcome: 'Particularly effective for post-surgical scar tissue and chronic tendon issues — results visible within 4–6 sessions.',
+    outcome: 'Particularly effective for post-surgical scar tissue and chronic tendon issues, results visible within 4–6 sessions.',
     idealFor: 'Post-surgery scar tissue, tendon pain, restricted movement, chronic soft tissue injuries.'
   },
   'kinesio-taping': {

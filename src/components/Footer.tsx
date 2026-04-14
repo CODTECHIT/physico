@@ -152,7 +152,7 @@ const Footer = () => {
                 <div className="space-y-1.5 lg:space-y-2">
                   <p className="text-secondary/70 text-xs lg:text-sm leading-relaxed">
                     Flat No:G-1 1st Floor, Rangam Nilayam, Laxminagar, Miyapur,
-                    HYDERABAD-500049
+                    HYDERABAD 500049
                   </p>
 
                   <p className="text-[10px] lg:text-[11px] text-accent font-bold uppercase tracking-wider mt-1 lg:mt-2 opacity-80">
@@ -169,7 +169,7 @@ const Footer = () => {
               <div className="flex items-center space-x-3 lg:space-x-4">
                 <Clock className="w-4 h-4 lg:w-5 lg:h-5 text-accent shrink-0" />
                 <p className="text-secondary/70 text-[10px] lg:text-xs">
-                  Mon - Sat: 8:00 AM - 8:00 PM
+                  Mon to Sat: 8:00 AM to 8:00 PM
                 </p>
               </div>
               <div className="mt-4 grid grid-cols-2 gap-4 place-items-center sm:flex sm:justify-center sm:space-x-4">

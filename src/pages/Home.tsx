@@ -131,7 +131,7 @@ const Home = () => {
       id: 8,
       name: "SRK Bharath Dev",
       content:
-        "Very very nice and professional person. Dr. Bhanu sir has done tremendous job in treating my cervical problem. To be In- Detail: I was having dizziness and Light headedness from last 3 Years and visited more than 20 doctors, (Nothing worked out in my favour) last month - One of the doctor suggested that root cause for his might be cervical issue and suggested me to meet Dr. Bhanu. I feel very relaxed now as the pain has been completely gone and I don't feel any dizziness / Nausea. Dr. Bhanu has few qualities to make him stand out of other physiotherapists: 1. always on Time. 2. Focuses much on stretches and exercises not on machines. 3. very well behaving. 4. Ground to earth and polite attitude. I asked him for guest lecture in my office as I found many colleagues having similar issues and he guided everyone in office in 5 hrs. session with lot of patience.",
+        "Very very nice and professional person. Dr. Bhanu sir has done tremendous job in treating my cervical problem. To be In- Detail: I was having dizziness and Light headedness from last 3 Years and visited more than 20 doctors, (Nothing worked out in my favour) last month: One of the doctor suggested that root cause for his might be cervical issue and suggested me to meet Dr. Bhanu. I feel very relaxed now as the pain has been completely gone and I don't feel any dizziness / Nausea. Dr. Bhanu has few qualities to make him stand out of other physiotherapists: 1. always on Time. 2. Focuses much on stretches and exercises not on machines. 3. very well behaving. 4. Ground to earth and polite attitude. I asked him for guest lecture in my office as I found many colleagues having similar issues and he guided everyone in office in 5 hrs. session with lot of patience.",
     },
     {
       id: 9,
@@ -462,7 +462,7 @@ const Home = () => {
                 <div className="aspect-[4/5] rounded-[2.5rem] lg:rounded-[4rem] overflow-hidden shadow-2xl border-4 lg:border-8 border-white bg-white">
                   <img
                     src="/founder.png"
-                    alt="Dr. Bhanu Kumar Vemula - Chief Physiotherapist"
+                    alt="Dr. Bhanu Kumar Vemula, Chief Physiotherapist"
                     className="w-full h-full object-contain"
                     loading="lazy"
                     decoding="async"
@@ -716,27 +716,26 @@ const Home = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
             {[
-              {
                 title: "Treatment in your own environment",
-                text: "Recovery happens faster when you're comfortable. We treat you where you actually live — your bed, your chair, your stairs — so rehab exercises translate directly to your daily life.",
+                text: "Recovery happens faster when you're comfortable. We treat you where you actually live: your bed, your chair, your stairs, so rehab exercises translate directly to your daily life.",
                 icon: <HomeIcon className="w-5 h-5" />,
                 stat: "No travel · No waiting room",
               },
               {
-                title: "100% of Dr. Bhanu's attention — every session",
-                text: "No junior staff, no shared waiting, no rushed 20-minute slot. Every session is one-on-one with Dr. Bhanu — fully focused on your condition from start to finish.",
+                title: "100% of Dr. Bhanu's attention: every session",
+                text: "No junior staff, no shared waiting, no rushed 20-minute slot. Every session is one-on-one with Dr. Bhanu, fully focused on your condition from start to finish.",
                 icon: <UserCheck className="w-5 h-5" />,
                 stat: "1-on-1 dedicated care",
               },
               {
                 title: "120+ surgeries avoided through physio",
-                text: "Many patients were told they needed surgery. With targeted physiotherapy, they recovered fully — without going under the knife. Physio first, surgery as last resort.",
+                text: "Many patients were told they needed surgery. With targeted physiotherapy, they recovered fully, without going under the knife. Physio first, surgery as last resort.",
                 icon: <ShieldCheck className="w-5 h-5" />,
                 stat: "120+ surgeries avoided",
               },
               {
                 title: "Progress tracked session by session",
-                text: "We don't guess — we monitor. Every session, Dr. Bhanu records your progress, adjusts the treatment plan, and ensures you're moving in the right direction at the right pace.",
+                text: "We don't guess, we monitor. Every session, Dr. Bhanu records your progress, adjusts the treatment plan, and ensures you're moving in the right direction at the right pace.",
                 icon: <Activity className="w-5 h-5" />,
                 stat: "Faster results, proven approach",
               },
@@ -748,7 +747,7 @@ const Home = () => {
               },
               {
                 title: "4.9★ rated by 160+ real patients",
-                text: "Our Google rating isn't from one or two patients — 160+ people across Kukatpally, Miyapur, and Kondapur have rated us highly recommended. Real results, real reviews.",
+                text: "Our Google rating isn't from one or two patients: 160+ people across Kukatpally, Miyapur, and Kondapur have rated us highly recommended. Real results, real reviews.",
                 icon: <Star className="w-5 h-5" />,
                 stat: "4.9★ · 160+ reviews",
               },

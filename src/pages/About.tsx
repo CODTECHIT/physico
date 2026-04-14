@@ -206,7 +206,7 @@ const About = () => {
                   </span>
                   <div className="flex items-center gap-3 flex-wrap">
                     <span className="bg-gradient-to-r from-accent to-accent/80 text-white text-[10px] font-bold px-3 py-1 rounded-full">
-                      MPT (Orthopedics) - Pursuing
+                      MPT (Orthopedics) (Pursuing)
                     </span>
                     <span className="text-muted text-[10px] font-bold uppercase tracking-widest">
                       | BPT
@@ -326,32 +326,32 @@ const About = () => {
             {[
               {
                 title: "Born from a passion for patient convenience",
-                desc: 'Dr. Bhanu didn\'t open a clinic — he came to patients. Flexo was built around one question: "Why should a patient in pain travel to get better?" Every decision since has been guided by that.',
+                desc: 'Dr. Bhanu didn\'t open a clinic, he came to patients. Flexo was built around one question: "Why should a patient in pain travel to get better?" Every decision since has been guided by that.',
                 icon: <Heart className="w-5 h-5 lg:w-6 lg:h-6" />,
               },
               {
                 title: "BPT + MPT qualified with 6 advanced certifications",
-                desc: "Dry Needling, Kinesio Taping, Cupping, IASTM, Chiropractic, Manual Therapy — Dr. Bhanu brings clinic-grade specialist skills directly to your home. No compromise on quality.",
+                desc: "Dry Needling, Kinesio Taping, Cupping, IASTM, Chiropractic, Manual Therapy, Dr. Bhanu brings clinic-grade specialist skills directly to your home. No compromise on quality.",
                 icon: <Award className="w-5 h-5 lg:w-6 lg:h-6" />,
               },
               {
                 title: "Long-term recovery, not just pain relief",
-                desc: "We don't just reduce pain and discharge you. We identify the root cause, fix it structurally, and teach you how to stay pain-free — reducing the chance of the problem ever returning.",
+                desc: "We don't just reduce pain and discharge you. We identify the root cause, fix it structurally, and teach you how to stay pain-free, reducing the chance of the problem ever returning.",
                 icon: <Activity className="w-5 h-5 lg:w-6 lg:h-6" />,
               },
               {
                 title: "Every patient gets a personalised treatment plan",
-                desc: "No generic exercise sheets. Every plan is built around your exact diagnosis, your daily routine, your lifestyle — and reviewed every session so it evolves as you improve.",
+                desc: "No generic exercise sheets. Every plan is built around your exact diagnosis, your daily routine, your lifestyle, and reviewed every session so it evolves as you improve.",
                 icon: <FileCheck className="w-5 h-5 lg:w-6 lg:h-6" />,
               },
               {
                 title: "Quick response, flexible scheduling",
-                desc: "WhatsApp or call — we respond fast. Sessions are scheduled around your life, not our clinic hours. Morning, evening, or weekend — we fit into your routine, not the other way around.",
+                desc: "WhatsApp or call, we respond fast. Sessions are scheduled around your life, not our clinic hours. Morning, evening, or weekend, we fit into your routine, not the other way around.",
                 icon: <PhoneCall className="w-5 h-5 lg:w-6 lg:h-6" />,
               },
               {
                 title: "Serving Hyderabad for 6+ years",
-                desc: "Kukatpally, Miyapur, Kondapur, Nizampet, KPHB, Madhapur and nearby — 1,000+ patients trust Flexo as Hyderabad's most recommended home physiotherapy service.",
+                desc: "Kukatpally, Miyapur, Kondapur, Nizampet, KPHB, Madhapur and nearby, 1,000+ patients trust Flexo as Hyderabad's most recommended home physiotherapy service.",
                 icon: <MapPin className="w-5 h-5 lg:w-6 lg:h-6" />,
               },
             ].map((item, idx) => (
@@ -427,13 +427,13 @@ const About = () => {
               <div className="flex items-center space-x-3 bg-surface/50 p-4 rounded-xl border border-primary/5">
                 <MapPin className="text-accent w-5 h-5" />
                 <span className="text-primary font-bold tracking-wider uppercase text-[10px] lg:text-xs">
-                  Miyapur, Hyderabad - 500049
+                  Miyapur, Hyderabad 500049
                 </span>
               </div>
               <div className="flex items-center space-x-3 bg-surface/50 p-4 rounded-xl border border-primary/5">
                 <MapPin className="text-accent w-5 h-5" />
                 <span className="text-primary font-bold tracking-wider uppercase text-[10px] lg:text-xs">
-                  Kukatpally, Hyderabad - 500085
+                  Kukatpally, Hyderabad 500085
                 </span>
               </div>
             </div>

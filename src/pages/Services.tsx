@@ -17,7 +17,7 @@ const Services = () => {
       slug: 'neurological',
       title: 'Neuro Rehabilitation',
       popular: true,
-      desc: 'Stroke, paralysis, and neurological conditions require specialist hands-on care — not just exercises. Dr. Bhanu delivers evidence-based neuro rehab directly at your home in Kukatpally, Miyapur, Kondapur and nearby areas, helping patients regain movement, balance, and daily independence.',
+      desc: 'Stroke, paralysis, and neurological conditions require specialist hands-on care, not just exercises. Dr. Bhanu delivers evidence-based neuro rehab directly at your home in Kukatpally, Miyapur, Kondapur and nearby areas, helping patients regain movement, balance, and daily independence.',
       features: [
         'Stroke Recovery & Rehab',
         "Parkinson's Support",
@@ -35,7 +35,7 @@ const Services = () => {
       slug: 'orthopedic',
       title: 'Orthopedic Rehabilitation',
       popular: true,
-      desc: 'Whether it\'s joint pain, post-surgery stiffness, or a musculoskeletal injury, recovery should happen at your pace — in your own home. Our orthopedic physiotherapy combines manual therapy, targeted exercises, and advanced modalities to eliminate pain at the root cause, not just the symptoms.',
+      desc: 'Whether it\'s joint pain, post-surgery stiffness, or a musculoskeletal injury, recovery should happen at your pace, in your own home. Our orthopedic physiotherapy combines manual therapy, targeted exercises, and advanced modalities to eliminate pain at the root cause, not just the symptoms.',
       features: [
         'Post-Surgery Joint Recovery',
         'Muscle & Joint Pain Relief',
@@ -52,7 +52,7 @@ const Services = () => {
       id: '03',
       slug: 'sports',
       title: 'Sports Rehabilitation',
-      desc: 'Sports injuries demand fast, precise recovery so you can return to peak performance without re-injury. From ligament tears to muscle strains, our sports physio program combines injury-specific treatment with functional training — designed around your sport and your body.',
+      desc: 'Sports injuries demand fast, precise recovery so you can return to peak performance without re-injury. From ligament tears to muscle strains, our sports physio program combines injury-specific treatment with functional training, designed around your sport and your body.',
       features: [
         'Injury Recovery & Pain Management',
         'Post-Surgical Sports Rehab',
@@ -69,7 +69,7 @@ const Services = () => {
       id: '04',
       slug: 'chiropractic',
       title: 'Chiropractic Care',
-      desc: 'Most pain originates from spinal misalignment and joint dysfunction — not just muscle tightness. Dr. Bhanu\'s chiropractic expertise, combined with physiotherapy, delivers precise spinal and joint corrections at your home for lasting relief without dependency on medication.',
+      desc: 'Most pain originates from spinal misalignment and joint dysfunction, not just muscle tightness. Dr. Bhanu\'s chiropractic expertise, combined with physiotherapy, delivers precise spinal and joint corrections at your home for lasting relief without dependency on medication.',
       features: [
         'Spinal Adjustments & Mobilization',
         'Postural Correction',
@@ -86,7 +86,7 @@ const Services = () => {
       id: '08',
       slug: 'geriatric',
       title: 'Geriatric Physiotherapy',
-      desc: 'Ageing should not mean losing independence. Our geriatric physiotherapy brings gentle, evidence-based care to elderly patients at home — improving balance, preventing falls, building strength, and supporting a healthy, active lifestyle in the comfort of familiar surroundings.',
+      desc: 'Ageing should not mean losing independence. Our geriatric physiotherapy brings gentle, evidence-based care to elderly patients at home, improving balance, preventing falls, building strength, and supporting a healthy, active lifestyle in the comfort of familiar surroundings.',
       features: [
         'Balance & Fall Prevention',
         'Strength Training',
@@ -103,7 +103,7 @@ const Services = () => {
       id: '05',
       slug: 'dry-needling',
       title: 'Dry Needling Therapy',
-      desc: 'Stubborn muscle pain that doesn\'t respond to massage or rest is often caused by myofascial trigger points. Dr. Bhanu\'s certified dry needling precisely targets these knots to deactivate them, restore normal muscle function, and provide fast, lasting relief — all at your home.',
+      desc: 'Stubborn muscle pain that doesn\'t respond to massage or rest is often caused by myofascial trigger points. Dr. Bhanu\'s certified dry needling precisely targets these knots to deactivate them, restore normal muscle function, and provide fast, lasting relief, all at your home.',
       features: [
         'Myofascial trigger point release',
         'Targeted needle insertion',
@@ -120,7 +120,7 @@ const Services = () => {
       id: '06',
       slug: 'cupping',
       title: 'Cupping Therapy',
-      desc: 'Cupping therapy uses controlled negative pressure to lift and release tight fascia, improve blood circulation, and accelerate tissue healing — an ancient technique now backed by modern clinical evidence. Ideal as a standalone treatment or combined with physiotherapy for faster recovery.',
+      desc: 'Cupping therapy uses controlled negative pressure to lift and release tight fascia, improve blood circulation, and accelerate tissue healing, an ancient technique now backed by modern clinical evidence. Ideal as a standalone treatment or combined with physiotherapy for faster recovery.',
       features: [
         'Dynamic & static cupping',
         'Tissue mobility improvement',
@@ -128,7 +128,7 @@ const Services = () => {
         'Combined with exercise therapy'
       ],
       focus: 'Improve tissue mobility & muscle relaxation',
-      outcome: 'Best results seen when combined with manual therapy — most patients report reduced stiffness and improved range of motion within 3–5 sessions.',
+      outcome: 'Best results seen when combined with manual therapy, most patients report reduced stiffness and improved range of motion within 3–5 sessions.',
       idealFor: 'Muscle tightness, back stiffness, sports recovery, chronic pain with poor circulation.',
       icon: <Zap className="w-8 h-8" />,
       img: '/images/treatments/cupping_therapy_session.png'

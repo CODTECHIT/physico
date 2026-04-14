@@ -115,7 +115,7 @@ const Contact = () => {
 
               <div className="space-y-3 lg:space-y-4">
                 {[
-                  { icon: <PhoneCall className="w-5 h-5 lg:w-6 lg:h-6" />, label: 'Direct Support', value: CONTACT_PHONE_DISPLAY, sub: 'Available Mon-Sat, 8am - 8pm' },
+                  { icon: <PhoneCall className="w-5 h-5 lg:w-6 lg:h-6" />, label: 'Direct Support', value: CONTACT_PHONE_DISPLAY, sub: 'Available Mon-Sat, 8am to 8pm' },
                   { icon: <Mail className="w-5 h-5 lg:w-6 lg:h-6" />, label: 'Clinical Inquiries', value: 'care@flexophysio.com', sub: 'Expect a reply within 12 hours' },
                   { icon: <MapPin className="w-5 h-5 lg:w-6 lg:h-6" />, label: 'Service Areas', value: 'Hyderabad, India', sub: SERVICE_AREAS.split(',').slice(0, 4).join(', ') }
                 ].map((item, i) => (
