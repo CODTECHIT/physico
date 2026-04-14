@@ -285,7 +285,7 @@ const Home = () => {
               className="font-serif font-bold text-white leading-[1.05] tracking-[-0.04em]"
               style={{ fontSize: "clamp(2.4rem, 6.5vw, 5rem)" }}
             >
-              Physio That Comes{" "}
+              Physiotherapy at Home for{" "}
               <br className="hidden sm:block" />
               <span
                 className="italic font-normal"
@@ -296,7 +296,7 @@ const Home = () => {
                   backgroundClip: "text",
                 }}
               >
-                To You.
+                Pain Relief, Recovery, and Mobility.
               </span>
             </motion.h1>
 
@@ -305,12 +305,11 @@ const Home = () => {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.5, duration: 0.7 }}
-              className="text-white/70 font-sans font-medium leading-relaxed max-w-[520px]"
+              className="text-white/70 font-sans font-medium leading-relaxed max-w-[550px]"
               style={{ fontSize: "clamp(0.9rem, 1.5vw, 1.15rem)" }}
             >
-              Pain relief, injury recovery & post-surgery rehab — all delivered at
-              your home by Dr. Bhanu Kumar Vemula with 6+ years of clinical
-              expertise.
+              Expert physiotherapy at home for pain relief, injury recovery, and
+              post-surgery rehab delivered with personalized care.
             </motion.p>
 
             {/* CTAs */}
@@ -440,14 +439,14 @@ const Home = () => {
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 + idx * 0.08, duration: 0.5 }}
-                  className="flex items-center justify-center lg:justify-start gap-2.5 px-2 lg:px-5 group"
+                  className="flex items-center justify-start sm:justify-center lg:justify-start gap-3 px-4 sm:px-2 lg:px-5 group"
                 >
-                  <div className="w-8 h-8 lg:w-10 lg:h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-white transition-all duration-400">
+                  <div className="w-9 h-9 lg:w-10 lg:h-10 rounded-xl bg-accent/10 flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-white transition-all duration-400">
                     {item.icon}
                   </div>
                   <div className="flex flex-col">
-                    <span className="text-white font-bold text-[10px] lg:text-[11px] leading-tight numerics whitespace-nowrap">{item.title}</span>
-                    <span className="text-white/50 text-[8px] lg:text-[9px] font-medium mt-0.5 whitespace-nowrap">{item.desc}</span>
+                    <span className="text-white font-bold text-[10px] sm:text-[11px] leading-tight numerics whitespace-nowrap">{item.title}</span>
+                    <span className="text-white/50 text-[8px] sm:text-[9px] font-medium mt-0.5 whitespace-nowrap">{item.desc}</span>
                   </div>
                 </motion.div>
               ))}

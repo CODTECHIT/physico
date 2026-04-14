@@ -1,4 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   ClipboardCheck,
   BookOpen,
@@ -373,26 +374,40 @@ const Conditions = () => {
 
           <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4 lg:gap-6">
             {[
-              "Back & Neck Pain",
-              "Knee Pain & Arthritis",
-              "Stroke & Paralysis Rehab",
-              "Sports Injuries",
-              "Post-Surgical Recovery",
-              "Joint Disorders",
-              "Frozen Shoulder",
-              "Sciatica & Disc Problems",
-              "Elderly & Geriatric Care"
-            ].map((condition, idx) => (
+              { title: "Back & Neck Pain", slug: "back-pain" },
+              { title: "Knee Pain & Arthritis", slug: "hip-knee-arthritis" },
+              { title: "Stroke & Paralysis Rehab", slug: "stroke-rehabilitation" },
+              { title: "Sports Injuries", slug: "acl-rehabilitation" },
+              { title: "Post-Surgical Recovery", slug: "acl-rehabilitation" }, // Linking to ACL as representative surgical rehab
+              { title: "Joint Disorders", slug: "hip-knee-arthritis" },
+              { title: "Frozen Shoulder", slug: "shoulder-pain" },
+              { title: "Sciatica & Disc Problems", slug: "back-pain" },
+              { title: "Elderly & Geriatric Care", slug: "geriatric-physiotherapy" }
+            ].map((item, idx) => (
               <motion.div
                 key={idx}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: idx * 0.1 }}
-                className="bg-surface/30 p-4 lg:p-6 rounded-2xl flex items-center gap-4 hover:bg-accent/5 hover:border-accent/20 border border-transparent transition-all duration-300"
+                className="group"
               >
-                <div className="w-2 h-2 rounded-full bg-accent shrink-0" />
-                <span className="text-sm lg:text-lg font-bold text-primary">{condition}</span>
+                {item.slug ? (
+                  <Link
+                    to={`/treatment/${item.slug}`}
+                    className="bg-surface/30 p-4 lg:p-6 rounded-2xl flex items-center gap-4 hover:bg-accent/10 hover:border-accent/30 border border-transparent transition-all duration-400 group h-full"
+                  >
+                    <div className="w-2 h-2 rounded-full bg-accent shrink-0 group-hover:scale-150 transition-transform duration-400" />
+                    <span className="text-sm lg:text-lg font-bold text-primary group-hover:text-accent transition-colors duration-400">
+                      {item.title}
+                    </span>
+                  </Link>
+                ) : (
+                  <div className="bg-surface/30 p-4 lg:p-6 rounded-2xl flex items-center gap-4 border border-transparent h-full">
+                    <div className="w-2 h-2 rounded-full bg-accent shrink-0" />
+                    <span className="text-sm lg:text-lg font-bold text-primary">{item.title}</span>
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>
