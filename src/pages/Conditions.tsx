@@ -58,7 +58,7 @@ const Conditions = () => {
               </div>
 
               <div className="space-y-6 lg:space-y-10">
-                <h1 className="editorial-heading text-primary max-w-5xl mx-auto leading-[1.2]">
+                <h1 className="editorial-heading text-primary max-w-6xl mx-auto leading-[1.2]">
                   At Flexo Physiotherapy, every treatment begins with a{" "}
                   <br className="hidden lg:block" />
                   <span className="text-accent italic font-normal">
@@ -67,12 +67,15 @@ const Conditions = () => {
                   not just symptom relief.
                 </h1>
 
-                <p className="text-base lg:text-2xl text-dark font-medium leading-relaxed max-w-4xl mx-auto opacity-80">
+                <p className="text-base lg:text-2xl text-dark font-medium leading-relaxed max-w-6xl mx-auto opacity-80">
                   We evaluate the{" "}
                   <span className="text-[#185FA5] font-bold">exact cause</span>{" "}
-                  of your condition before designing a treatment plan. <br className="hidden lg:block" />
-                  Your medical history, movement patterns, joint mobility, and past surgeries <br className="hidden lg:block" />
-                  are all reviewed to ensure safe, accurate, and personalised care.
+                  of your condition before designing a treatment plan. Your
+                  medical history,{" "}
+                  <br className="hidden lg:block" />
+                  movement patterns, joint mobility, and past surgeries are all
+                  reviewed to ensure safe, accurate, and <br className="hidden lg:block" />
+                  personalised care.
                 </p>
               </div>
             </div>
