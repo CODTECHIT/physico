@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import {
   ArrowRight,
   ShieldCheck,
-  Users,
   PhoneCall,
   ChevronRight,
   MapPin,
@@ -16,7 +15,6 @@ import {
   Dumbbell,
   Activity,
   FileCheck,
-  ThumbsUp,
   Award,
 } from "lucide-react";
 import Button from "../components/Button";
@@ -358,62 +356,58 @@ const Home = () => {
         </div>
 
         {/* TRUST BAR */}
-        <div className="bg-[#0B3D36] py-5 lg:py-10 mt-6 lg:mt-0 relative z-30">
+        <div className="bg-[#0B3D36] py-6 lg:py-12 mt-6 lg:mt-0 relative z-30">
           <div className="max-w-[1400px] mx-auto responsive-padding">
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-6 sm:gap-8 lg:gap-0 items-center">
+            <div className="grid grid-cols-2 lg:grid-cols-6 items-center lg:divide-x lg:divide-white/10">
               {[
                 {
                   title: "Certified Doctors",
                   desc: "BPT/MPT experts",
-                  icon: <UserCheck className="w-4 h-4 lg:w-6 lg:h-6" />,
+                  icon: <UserCheck className="w-5 h-5 lg:w-6 lg:h-6" />,
                 },
                 {
-                  title: "1-on-1 Care",
-                  desc: "Focused attention",
-                  icon: <Users className="w-4 h-4 lg:w-6 lg:h-6" />,
+                  title: "3600+ Sessions Delivered",
+                  desc: "Home visits across Hyderabad",
+                  icon: <Activity className="w-5 h-5 lg:w-6 lg:h-6" />,
                 },
                 {
                   title: "Home Visits",
                   desc: "Safe & comfortable",
-                  icon: <HomeIcon className="w-4 h-4 lg:w-6 lg:h-6" />,
+                  icon: <HomeIcon className="w-5 h-5 lg:w-6 lg:h-6" />,
                 },
                 {
-                  title: "Trusted Care",
-                  desc: "Honest pricing",
-                  icon: <ShieldCheck className="w-4 h-4 lg:w-6 lg:h-6" />,
+                  title: "120+ Surgeries Avoided",
+                  desc: "Through expert physio care",
+                  icon: <ShieldCheck className="w-5 h-5 lg:w-6 lg:h-6" />,
                 },
                 {
-                  title: "1000+ Recoveries",
-                  desc: "Happy patients",
-                  icon: <ThumbsUp className="w-4 h-4 lg:w-6 lg:h-6" />,
+                  title: "4.9⭐ Google Rating",
+                  desc: "160+ reviews",
+                  icon: <Star className="w-5 h-5 lg:w-6 lg:h-6 fill-accent text-accent" />,
                 },
                 {
                   title: "4+ Years",
                   desc: "Proven expertise",
-                  icon: <Award className="w-4 h-4 lg:w-6 lg:h-6" />,
+                  icon: <Award className="w-5 h-5 lg:w-6 lg:h-6" />,
                 },
               ].map((item, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center justify-center group py-1"
+                  className="flex items-center justify-center group py-4 lg:py-0 px-2 lg:px-4"
                 >
-                  <div className="flex items-center gap-2.5 lg:gap-4">
-                    <div className="w-9 h-9 lg:w-12 lg:h-12 rounded-lg bg-white/10 flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                  <div className="flex items-center gap-3 lg:gap-4 max-w-full">
+                    <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl bg-white/10 flex items-center justify-center text-accent shrink-0 group-hover:bg-accent group-hover:text-white transition-all duration-500 shadow-lg">
                       {item.icon}
                     </div>
-                    <div className="flex flex-col text-left">
-                      <h4 className="text-white font-serif font-bold text-[10px] lg:text-sm leading-tight">
+                    <div className="flex flex-col text-left overflow-hidden">
+                      <h4 className="text-white font-serif font-bold text-xs lg:text-[13px] leading-tight whitespace-nowrap">
                         {item.title}
                       </h4>
-                      <p className="text-white/60 text-[8px] lg:text-[11px] font-medium leading-relaxed">
+                      <p className="text-white/60 text-[9px] lg:text-[11px] font-medium leading-relaxed mt-0.5">
                         {item.desc}
                       </p>
                     </div>
                   </div>
-                  {/* Vertical Divider on Desktop */}
-                  {idx < 5 && (
-                    <div className="hidden lg:block w-[1px] h-10 bg-white/10 ml-6" />
-                  )}
                 </div>
               ))}
             </div>
