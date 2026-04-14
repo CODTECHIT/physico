@@ -8,7 +8,6 @@ import {
   TrendingUp,
   ArrowRight,
   Zap,
-  AlertCircle,
   MessageCircle,
   HelpCircle,
 } from "lucide-react";
