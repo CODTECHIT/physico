@@ -3,6 +3,7 @@
 @theme {
   --font-serif: "Playfair Display", serif;
   --font-sans: "Inter", sans-serif;
+  --font-numeric: "Outfit", sans-serif;
 
   /* New Brand Palette - High Contrast #76BFEA (Light Blue) & #37FB44 (Bright Green) */
   --color-primary: #2563eb; /* Vibrant Blue - More saturated */
@@ -28,9 +29,19 @@
     0 18px 36px -18px rgba(22, 163, 74, 0.3);
 }
 
+/* Global Numerics font override using unicode-range */
+@font-face {
+  font-family: "Numerics";
+  src: local("Outfit"), url("https://fonts.gstatic.com/s/outfit/v11/QGYsz_o60bbL_atHshfDG3Uo.woff2") format("woff2");
+  font-weight: 100 900;
+  unicode-range: U+30-39, U+2B, U+2D, U+25, U+2E; /* 0-9, +, -, %, . */
+  font-display: swap;
+}
+
 @layer base {
   body {
-    @apply font-sans text-black bg-white antialiased overflow-x-hidden;
+    font-family: "Numerics", "Inter", sans-serif;
+    @apply text-black bg-white antialiased overflow-x-hidden;
   }
 
   h1,
@@ -39,13 +50,20 @@
   h4,
   h5,
   h6 {
-    @apply font-serif leading-tight tracking-tight;
+    font-family: "Numerics", "Playfair Display", serif;
+    @apply leading-tight tracking-tight;
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .numerics {
+    font-family: "Outfit", sans-serif;
+    font-variant-numeric: tabular-nums;
+    letter-spacing: -0.02em;
   }
 
   /* Editorial Layouts */

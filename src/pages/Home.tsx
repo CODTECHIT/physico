@@ -381,13 +381,13 @@ const Home = () => {
                   icon: <ShieldCheck className="w-4 h-4 lg:w-6 lg:h-6" />,
                 },
                 {
-                  title: "4.9⭐ Rating",
+                  title: "4.9 Google Rating",
                   desc: "160+ reviews",
                   icon: <Star className="w-4 h-4 lg:w-6 lg:h-6 fill-accent text-accent" />,
                 },
                 {
                   title: "6+ Years",
-                  desc: "Expertise",
+                  desc: "Experience",
                   icon: <Award className="w-4 h-4 lg:w-6 lg:h-6" />,
                 },
               ].map((item, idx) => (
@@ -400,7 +400,7 @@ const Home = () => {
                       {item.icon}
                     </div>
                     <div className="flex flex-col">
-                      <h4 className="text-white font-serif font-bold text-[10px] lg:text-[12px] leading-tight whitespace-nowrap">
+                      <h4 className="text-white font-serif font-bold text-[10px] lg:text-[12px] leading-tight whitespace-nowrap numerics">
                         {item.title}
                       </h4>
                       <p className="text-white/60 text-[8px] lg:text-[10px] font-medium leading-relaxed mt-0.5 whitespace-nowrap">
@@ -476,8 +476,8 @@ const Home = () => {
                 {/* Floating Experience Badge - Always Visible */}
                 <div className="absolute -bottom-4 lg:-bottom-6 -left-4 lg:-left-6 bg-primary p-4 lg:p-6 shadow-xl border-t-4 border-accent z-30 rounded-xl">
                   <div className="text-center">
-                    <span className="block text-2xl lg:text-3xl font-serif font-bold text-white mb-0.5">
-                      4+
+                    <span className="block text-2xl lg:text-3xl font-serif font-bold text-white mb-0.5 numerics">
+                      6+
                     </span>
                     <span className="block text-[8px] uppercase tracking-[0.2em] font-bold text-accent">
                       Years Experience
@@ -772,7 +772,7 @@ const Home = () => {
                 </p>
                 {feature.stat && (
                   <div className="mt-auto pt-4 border-t border-primary/5">
-                    <span className="inline-block bg-accent/10 text-accent text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                    <span className="inline-block bg-accent/10 text-accent text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider numerics">
                       {feature.stat}
                     </span>
                   </div>

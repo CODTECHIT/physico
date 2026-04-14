@@ -25,6 +25,7 @@ const About = () => {
   // Parallax transforms
   const heroBgY = useTransform(scrollY, [0, 500], [0, 150]);
   const founderImgY = useTransform(scrollY, [1000, 2000], [0, -50]);
+  const watermarkY = useTransform(scrollY, [0, 3000], [0, 400]);
 
   return (
     <div className="bg-white">
@@ -96,9 +97,9 @@ const About = () => {
                 </h2>
                 <div className="space-y-5 lg:space-y-6">
                   <p className="editorial-body text-dark/80 leading-relaxed text-justify">
-                    Flexo Physiotherapy was born from one simple belief: every
+                    Flexo Physiotherapy was born from one simple belief every
                     patient deserves expert care without the burden of travel.
-                    Dr. Bhanu Vemula founded Flexo with a deep passion for
+                    Dr. Bhanu Vemula founded Flexo Physiotherapy Home Services with a deep passion for
                     physiotherapy and an unwavering commitment to patient
                     convenience.
                   </p>
@@ -134,8 +135,8 @@ const About = () => {
               </div>
               <div className="absolute -bottom-6 -left-6 bg-primary p-5 shadow-xl border-t-4 border-accent hidden sm:block rounded-xl">
                 <div className="text-center">
-                  <span className="block text-2xl lg:text-4xl font-serif font-bold text-white mb-0.5">
-                    4+
+                  <span className="block text-2xl lg:text-3xl font-sans font-bold text-white mb-0.5 numerics">
+                    6+
                   </span>
                   <span className="block text-[8px] uppercase tracking-[0.2em] font-bold text-accent">
                     Years Excellence
@@ -175,8 +176,8 @@ const About = () => {
                 {/* Experience Badge: Optimized for mobile */}
                 <div className="absolute -bottom-4 -right-2 sm:-bottom-6 sm:-right-4 lg:-right-8 bg-white shadow-2xl rounded-2xl p-3 lg:p-5 border border-primary/10 z-30 min-w-[100px] lg:min-w-[160px]">
                   <div className="flex flex-col items-center justify-center">
-                    <span className="text-xl lg:text-4xl font-serif font-bold text-accent leading-none">
-                      4+
+                    <span className="text-xl lg:text-3xl font-sans font-bold text-accent leading-none numerics">
+                      6+
                     </span>
                     <span className="text-[6px] lg:text-[9px] uppercase tracking-[0.2em] font-bold text-primary mt-1">
                       Years Excellence
@@ -276,7 +277,7 @@ const About = () => {
                     key={idx}
                     className="flex items-center gap-2 bg-white border border-primary/10 px-4 py-2 rounded-xl shadow-sm"
                   >
-                    <span className="text-lg lg:text-xl font-serif font-bold text-primary">
+                    <span className="text-lg lg:text-xl font-serif font-bold text-primary numerics">
                       {stat.value}
                     </span>
                     <span className="text-[9px] uppercase tracking-wider text-muted">
@@ -301,8 +302,15 @@ const About = () => {
       </section>
 
       {/* 5. WHY CHOOSE US */}
-      <section className="py-10 lg:py-16 bg-white shrink-0 relative overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 relative z-10">
+      <section className="py-10 lg:py-16 bg-surface relative overflow-hidden">
+        <motion.div
+          style={{ y: watermarkY }}
+          className="absolute top-20 left-1/2 -translate-x-1/2 text-[20vw] font-serif font-bold text-primary/5 select-none pointer-events-none whitespace-nowrap uppercase"
+        >
+          {BRAND_NAME.toUpperCase()}
+        </motion.div>
+
+        <div className="max-w-[1600px] mx-auto px-6 lg:px-20 relative z-10">
           <div className="text-center mb-10 lg:mb-12">
             <div className="inline-flex items-center justify-center space-x-3 mb-4 lg:mb-6">
               <span className="w-8 h-[2px] bg-accent" />
@@ -322,7 +330,7 @@ const About = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
             {[
               {
                 title: "Born from a passion for patient convenience",
@@ -354,27 +362,47 @@ const About = () => {
                 desc: "Kukatpally, Miyapur, Kondapur, Nizampet, KPHB, Madhapur and nearby, 1,000+ patients trust Flexo as Hyderabad's most recommended home physiotherapy service.",
                 icon: <MapPin className="w-5 h-5 lg:w-6 lg:h-6" />,
               },
-            ].map((item, idx) => (
-              <motion.div
-                key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.05, duration: 0.5 }}
-                className="group relative bg-surface/30 p-6 lg:p-10 rounded-2xl lg:rounded-[3rem] border border-primary/5 hover:border-accent/20 hover:bg-white hover:shadow-xl transition-all duration-500"
-              >
-                <div className="w-12 h-12 lg:w-16 lg:h-16 rounded-xl lg:rounded-2xl bg-white shadow-sm flex items-center justify-center text-accent mb-6 lg:mb-8 group-hover:bg-accent group-hover:text-white transition-all duration-500">
-                  {item.icon}
-                </div>
-
-                <h4 className="text-lg lg:text-2xl font-serif font-bold text-primary mb-3 group-hover:text-accent transition-colors duration-500">
-                  {item.title}
-                </h4>
-                <p className="text-dark text-xs lg:text-sm font-medium leading-relaxed opacity-70 group-hover:opacity-90 transition-opacity duration-500">
-                  {item.desc}
-                </p>
-              </motion.div>
-            ))}
+            ].map((item, idx) => {
+              const stats = [
+                "Home visit · Comfort",
+                "6+ Certifications",
+                "Long-term results",
+                "Personalized plan",
+                "Flexible hours",
+                "6+ Years trust",
+              ];
+              return (
+                <motion.div
+                  key={idx}
+                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                  whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                  viewport={{ once: true, margin: "-50px" }}
+                  transition={{
+                    duration: 0.5,
+                    delay: idx * 0.15,
+                    type: "spring",
+                    stiffness: 100,
+                  }}
+                  whileHover={{ y: -5, scale: 1.02 }}
+                  className="bg-white p-5 lg:p-6 rounded-2xl lg:rounded-3xl shadow-lg hover:shadow-xl transition-all duration-300 border border-accent lg:border-transparent group cursor-pointer h-full flex flex-col"
+                >
+                  <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-xl lg:rounded-2xl bg-accent/10 flex items-center justify-center text-accent mb-4 group-hover:bg-accent group-hover:text-white transition-all duration-300">
+                    {item.icon}
+                  </div>
+                  <h4 className="text-base lg:text-lg font-serif font-bold text-primary mb-2 group-hover:text-accent transition-colors">
+                    {item.title}
+                  </h4>
+                  <p className="text-dark text-xs lg:text-sm font-medium leading-relaxed opacity-80 mb-4">
+                    {item.desc}
+                  </p>
+                  <div className="mt-auto pt-4 border-t border-primary/5">
+                    <span className="inline-block bg-accent/10 text-accent text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider numerics">
+                      {stats[idx]}
+                    </span>
+                  </div>
+                </motion.div>
+              );
+            })}
           </div>
         </div>
       </section>
