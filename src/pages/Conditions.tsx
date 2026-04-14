@@ -372,7 +372,7 @@ const Conditions = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4 lg:gap-6">
+          <div className="grid grid-cols-3 md:grid-cols-3 gap-2 lg:gap-6">
             {[
               { title: "Back & Neck Pain", slug: "back-pain" },
               { title: "Knee Pain & Arthritis", slug: "hip-knee-arthritis" },
@@ -395,17 +395,17 @@ const Conditions = () => {
                 {item.slug ? (
                   <Link
                     to={`/treatment/${item.slug}`}
-                    className="bg-surface/30 p-4 lg:p-6 rounded-2xl flex items-center gap-4 hover:bg-accent/10 hover:border-accent/30 border border-transparent transition-all duration-400 group h-full"
+                    className="bg-surface/30 p-2 lg:p-6 rounded-xl lg:rounded-2xl flex flex-col md:flex-row items-center justify-center md:justify-start text-center md:text-left gap-2 md:gap-4 hover:bg-accent/10 hover:border-accent/30 border border-transparent transition-all duration-400 group h-full"
                   >
-                    <div className="w-2 h-2 rounded-full bg-accent shrink-0 group-hover:scale-150 transition-transform duration-400" />
-                    <span className="text-sm lg:text-lg font-bold text-primary group-hover:text-accent transition-colors duration-400">
+                    <div className="w-1.5 h-1.5 lg:w-2 lg:h-2 rounded-full bg-accent shrink-0 group-hover:scale-150 transition-transform duration-400" />
+                    <span className="text-[10px] lg:text-lg font-bold text-primary group-hover:text-accent transition-colors duration-400 leading-tight">
                       {item.title}
                     </span>
                   </Link>
                 ) : (
-                  <div className="bg-surface/30 p-4 lg:p-6 rounded-2xl flex items-center gap-4 border border-transparent h-full">
-                    <div className="w-2 h-2 rounded-full bg-accent shrink-0" />
-                    <span className="text-sm lg:text-lg font-bold text-primary">{item.title}</span>
+                  <div className="bg-surface/30 p-2 lg:p-6 rounded-xl lg:rounded-2xl flex flex-col md:flex-row items-center justify-center md:justify-start text-center md:text-left gap-2 md:gap-4 border border-transparent h-full">
+                    <div className="w-1.5 h-1.5 lg:w-2 lg:h-2 rounded-full bg-accent shrink-0" />
+                    <span className="text-[10px] lg:text-lg font-bold text-primary leading-tight">{item.title}</span>
                   </div>
                 )}
               </motion.div>
