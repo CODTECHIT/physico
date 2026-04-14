@@ -112,7 +112,7 @@ const FAQ = () => {
   return (
     <div className="bg-white">
       {/* HERO HEADER */}
-      <section className="pt-20 pb-10 lg:pt-32 lg:pb-12 relative overflow-hidden min-h-[40vh] lg:min-h-[50vh] flex items-center">
+      <section className="pt-24 pb-10 lg:pt-36 lg:pb-12 relative overflow-hidden min-h-[35vh] lg:min-h-[45vh] flex items-center">
         <motion.div
           style={{ y: heroBgY }}
           className="absolute inset-0 -z-10 h-[120%]"

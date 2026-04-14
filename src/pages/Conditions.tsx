@@ -19,7 +19,7 @@ const Conditions = () => {
   return (
     <div className="bg-white">
       {/* 1. CLINICAL HEADER */}
-      <section className="pt-40 pb-12 lg:pt-56 lg:pb-16 relative overflow-hidden text-center min-h-[60vh] lg:min-h-[85vh] flex items-center">
+      <section className="pt-28 pb-10 lg:pt-44 lg:pb-14 relative overflow-hidden text-center min-h-[50vh] lg:min-h-[70vh] flex items-center">
         {/* Background Image with Parallax Overlay */}
         <motion.div
           style={{ y: heroBgY }}

@@ -175,7 +175,7 @@ const Services = () => {
     <div className="bg-white">
 
       {/* 1. HERO HEADER */}
-      <section className="pt-40 pb-12 lg:pt-56 lg:pb-16 relative overflow-hidden min-h-[55vh] lg:h-[75vh] flex items-center">
+      <section className="pt-28 pb-10 lg:pt-44 lg:pb-14 relative overflow-hidden min-h-[45vh] lg:h-[65vh] flex items-center">
         {/* Background Image with Parallax Overlay */}
         <motion.div
           style={{ y: heroBgY }}

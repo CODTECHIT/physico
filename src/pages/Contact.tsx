@@ -54,7 +54,7 @@ const Contact = () => {
     <div className="bg-white">
 
       {/* 1. HERO HEADER */}
-      <section className="pt-40 pb-8 lg:pt-56 lg:pb-16 relative overflow-hidden min-h-[50vh] lg:h-[70vh] flex items-center">
+      <section className="pt-28 pb-8 lg:pt-44 lg:pb-12 relative overflow-hidden min-h-[40vh] lg:h-[60vh] flex items-center">
         {/* Background Image with Parallax Overlay */}
         <motion.div
           style={{ y: heroBgY }}

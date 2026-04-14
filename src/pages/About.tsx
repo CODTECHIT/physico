@@ -29,7 +29,7 @@ const About = () => {
   return (
     <div className="bg-white">
       {/* 1. HERO HEADER */}
-      <section className="pt-32 pb-8 lg:pt-48 lg:pb-16 relative overflow-hidden min-h-[45vh] lg:h-[60vh] flex items-center">
+      <section className="pt-24 pb-8 lg:pt-40 lg:pb-12 relative overflow-hidden min-h-[40vh] lg:h-[55vh] flex items-center">
         {/* Background Image with Parallax Overlay */}
         <motion.div
           style={{ y: heroBgY }}

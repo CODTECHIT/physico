@@ -85,7 +85,7 @@ const Packages = () => {
   return (
     <div className="bg-white selection:bg-accent selection:text-white">
       {/* HERO SECTION - REDESIGNED FOR IMPACT */}
-      <section className="pt-32 pb-16 lg:pt-48 lg:pb-24 relative overflow-hidden flex items-center">
+      <section className="pt-24 pb-12 lg:pt-40 lg:pb-16 relative overflow-hidden flex items-center">
         <motion.div
           style={{ y: heroBgY }}
           className="absolute inset-0 -z-10 h-[120%]"
