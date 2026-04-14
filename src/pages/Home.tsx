@@ -704,44 +704,55 @@ const Home = () => {
               The Advantage
             </span>
             <h2 className="editorial-heading text-primary leading-tight">
-              Why Choose{" "}
+              Why Patients Choose{" "}
               <span className="italic font-normal text-accent">
-                {BRAND_NAME}?
+                Flexo Over a Clinic
               </span>
             </h2>
+            <p className="text-dark/70 font-medium leading-relaxed max-w-2xl mx-auto mt-4 text-sm lg:text-base">
+              We're not just convenient — we're clinically better for many
+              conditions. Here's what makes home-based physiotherapy at Flexo
+              different from a clinic visit.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-6">
             {[
               {
-                title: "Faster Results with Regular Monitoring",
-                text: "We track your progress session-by-session and modify treatment plans to ensure faster and safer recovery.",
-                icon: <Activity className="w-5 h-5" />,
-              },
-              {
-                title: "Focus on Long-Term Recovery",
-                text: "We don't just reduce pain – we work on: strength, mobility, function, prevention of recurrence.",
-                icon: <Target className="w-5 h-5" />,
-              },
-              {
-                title: "One-on-One Dedicated Sessions",
-                text: "Complete attention with no rushed treatments or multiple patients at once.",
-                icon: <UserCheck className="w-5 h-5" />,
-              },
-              {
-                title: "Easy Booking & Support",
-                text: "Simple appointment process with quick response and flexible scheduling.",
-                icon: <Calendar className="w-5 h-5" />,
-              },
-              {
-                title: "Personalized Treatment Plans",
-                text: "No generic exercises. Every patient receives a customized rehab program based on their condition, lifestyle, and recovery goals.",
-                icon: <FileCheck className="w-5 h-5" />,
-              },
-              {
-                title: "Home Visit Convenience & Safety",
-                text: "Receive expert physiotherapy in the comfort of your home. No travel, no waiting. Ideal for post-surgery, elderly patients and those with limited mobility.",
+                title: "Treatment in your own environment",
+                text: "Recovery happens faster when you're comfortable. We treat you where you actually live — your bed, your chair, your stairs — so rehab exercises translate directly to your daily life.",
                 icon: <HomeIcon className="w-5 h-5" />,
+                stat: "No travel · No waiting room",
+              },
+              {
+                title: "100% of Dr. Bhanu's attention — every session",
+                text: "No junior staff, no shared waiting, no rushed 20-minute slot. Every session is one-on-one with Dr. Bhanu — fully focused on your condition from start to finish.",
+                icon: <UserCheck className="w-5 h-5" />,
+                stat: "1-on-1 dedicated care",
+              },
+              {
+                title: "120+ surgeries avoided through physio",
+                text: "Many patients were told they needed surgery. With targeted physiotherapy, they recovered fully — without going under the knife. Physio first, surgery as last resort.",
+                icon: <ShieldCheck className="w-5 h-5" />,
+                stat: "120+ surgeries avoided",
+              },
+              {
+                title: "Progress tracked session by session",
+                text: "We don't guess — we monitor. Every session, Dr. Bhanu records your progress, adjusts the treatment plan, and ensures you're moving in the right direction at the right pace.",
+                icon: <Activity className="w-5 h-5" />,
+                stat: "Faster results, proven approach",
+              },
+              {
+                title: "Transparent pricing, no hidden charges",
+                text: "What we quote is what you pay. No surprise charges, no facility fees, no consumables billed separately. Every package is clearly priced before your first session.",
+                icon: <FileCheck className="w-5 h-5" />,
+                stat: "Affordable · Honest pricing",
+              },
+              {
+                title: "4.9★ rated by 160+ real patients",
+                text: "Our Google rating isn't from one or two patients — 160+ people across Kukatpally, Miyapur, and Kondapur have rated us highly recommended. Real results, real reviews.",
+                icon: <Star className="w-5 h-5" />,
+                stat: "4.9★ · 160+ reviews",
               },
             ].map((feature, i) => (
               <motion.div
@@ -764,9 +775,16 @@ const Home = () => {
                 <h4 className="text-base lg:text-lg font-serif font-bold text-primary mb-2 group-hover:text-accent transition-colors">
                   {feature.title}
                 </h4>
-                <p className="text-dark text-xs lg:text-sm font-medium leading-relaxed opacity-80">
+                <p className="text-dark text-xs lg:text-sm font-medium leading-relaxed opacity-80 mb-4">
                   {feature.text}
                 </p>
+                {feature.stat && (
+                  <div className="mt-auto pt-4 border-t border-primary/5">
+                    <span className="inline-block bg-accent/10 text-accent text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+                      {feature.stat}
+                    </span>
+                  </div>
+                )}
               </motion.div>
             ))}
           </div>

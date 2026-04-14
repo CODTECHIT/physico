@@ -7,10 +7,12 @@ import {
   MapPin,
   ArrowRight,
   PhoneCall,
+  CheckCircle2,
   Bone,
   Zap,
   Home,
   Activity,
+  FileCheck,
 } from "lucide-react";
 import Button from "../components/Button";
 import {
@@ -313,44 +315,47 @@ const About = () => {
               <span className="w-8 h-[2px] bg-accent" />
             </div>
             <h2 className="editorial-heading text-primary leading-tight">
-              Why Choose{" "}
-              <span className="text-accent italic font-normal">
-                {BRAND_NAME}?
-              </span>
+              What Makes Flexo{" "}
+              <span className="text-accent italic font-normal">Different</span>
             </h2>
+            <p className="text-dark/70 font-medium leading-relaxed max-w-2xl mx-auto mt-4 text-sm lg:text-base">
+              Six years ago Dr. Bhanu started Flexo with one belief — patients
+              deserve better than rushed clinic appointments. Here's how that
+              belief shaped everything we do.
+            </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
             {[
               {
-                title: "Home-Based Care",
-                desc: "Professional treatment without traveling. We bring expert care right to your doorstep.",
-                icon: <Home className="w-5 h-5 lg:w-6 lg:h-6" />,
+                title: "Born from a passion for patient convenience",
+                desc: 'Dr. Bhanu didn\'t open a clinic — he came to patients. Flexo was built around one question: "Why should a patient in pain travel to get better?" Every decision since has been guided by that.',
+                icon: <Heart className="w-5 h-5 lg:w-6 lg:h-6" />,
               },
               {
-                title: "Personalized Plans",
-                desc: "Tailored treatments designed specifically for your unique condition and lifestyle.",
-                icon: <Users className="w-5 h-5 lg:w-6 lg:h-6" />,
-              },
-              {
-                title: "Certified Experts",
-                desc: "Skilled professionals trained in advanced clinical rehabilitation with 6+ years experience.",
-                icon: <ShieldCheck className="w-5 h-5 lg:w-6 lg:h-6" />,
-              },
-              {
-                title: "Advanced Methods",
-                desc: "Using modern methods like dry needling and mobilization for faster results.",
-                icon: <Zap className="w-5 h-5 lg:w-6 lg:h-6" />,
-              },
-              {
-                title: "Affordable Rates",
-                desc: "Cost-effective clinical plans designed for every patient. No hidden charges.",
+                title: "BPT + MPT qualified with 6 advanced certifications",
+                desc: "Dry Needling, Kinesio Taping, Cupping, IASTM, Chiropractic, Manual Therapy — Dr. Bhanu brings clinic-grade specialist skills directly to your home. No compromise on quality.",
                 icon: <Award className="w-5 h-5 lg:w-6 lg:h-6" />,
               },
               {
-                title: "Patient-Centered",
-                desc: "One-on-one sessions with 100% attention for your complete recovery.",
-                icon: <Heart className="w-5 h-5 lg:w-6 lg:h-6" />,
+                title: "Long-term recovery, not just pain relief",
+                desc: "We don't just reduce pain and discharge you. We identify the root cause, fix it structurally, and teach you how to stay pain-free — reducing the chance of the problem ever returning.",
+                icon: <Activity className="w-5 h-5 lg:w-6 lg:h-6" />,
+              },
+              {
+                title: "Every patient gets a personalised treatment plan",
+                desc: "No generic exercise sheets. Every plan is built around your exact diagnosis, your daily routine, your lifestyle — and reviewed every session so it evolves as you improve.",
+                icon: <FileCheck className="w-5 h-5 lg:w-6 lg:h-6" />,
+              },
+              {
+                title: "Quick response, flexible scheduling",
+                desc: "WhatsApp or call — we respond fast. Sessions are scheduled around your life, not our clinic hours. Morning, evening, or weekend — we fit into your routine, not the other way around.",
+                icon: <PhoneCall className="w-5 h-5 lg:w-6 lg:h-6" />,
+              },
+              {
+                title: "Serving Hyderabad for 6+ years",
+                desc: "Kukatpally, Miyapur, Kondapur, Nizampet, KPHB, Madhapur and nearby — 1,000+ patients trust Flexo as Hyderabad's most recommended home physiotherapy service.",
+                icon: <MapPin className="w-5 h-5 lg:w-6 lg:h-6" />,
               },
             ].map((item, idx) => (
               <motion.div

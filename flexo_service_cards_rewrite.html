@@ -1,0 +1,238 @@
+
+<style>
+  * { box-sizing: border-box; }
+  .section-label { font-size: 11px; letter-spacing: 0.12em; color: #1D9E75; text-transform: uppercase; display: flex; align-items: center; gap: 8px; margin-bottom: 20px; }
+  .section-label::before,.section-label::after { content:''; display:inline-block; height:1.5px; width:22px; background:#1D9E75; opacity:0.5; }
+  .service-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: 14px; padding: 20px; margin-bottom: 14px; }
+  .card-header { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 14px; }
+  .icon-box { width: 44px; height: 44px; border-radius: 10px; background: #E1F5EE; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+  .icon-box svg { width: 22px; height: 22px; stroke: #1D9E75; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .icon-box.blue { background: #E6F1FB; }
+  .icon-box.blue svg { stroke: #185FA5; }
+  .card-title { font-size: 17px; font-weight: 500; color: #185FA5; margin: 0 0 3px; }
+  .card-subtitle { font-size: 12px; color: #1D9E75; font-weight: 500; }
+  .popular-badge { display: inline-block; background: #FAEEDA; color: #633806; font-size: 11px; font-weight: 500; border-radius: 10px; padding: 2px 9px; margin-left: 8px; vertical-align: middle; }
+  .card-desc { font-size: 14px; color: var(--color-text-secondary); line-height: 1.75; margin: 0 0 14px; }
+  .card-desc strong { color: var(--color-text-primary); font-weight: 500; }
+  .bullet-list { list-style: none; padding: 0; margin: 0 0 14px; display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  @media(max-width:500px){ .bullet-list { grid-template-columns: 1fr; } }
+  .bullet-list li { display: flex; align-items: flex-start; gap: 6px; font-size: 12px; font-weight: 500; color: #185FA5; text-transform: uppercase; letter-spacing: 0.04em; line-height: 1.4; }
+  .bullet-list li::before { content:''; width:16px; height:16px; border-radius:50%; border:1.5px solid #1D9E75; flex-shrink:0; margin-top:1px; background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='none' stroke='%231D9E75' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round' d='M3 8l3.5 3.5L13 5'/%3E%3C/svg%3E") center/12px no-repeat; }
+  .focus-bar { background: #E1F5EE; border-radius: 8px; padding: 10px 14px; display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+  .focus-label { font-size: 10px; font-weight: 500; color: #0F6E56; text-transform: uppercase; letter-spacing: 0.08em; white-space: nowrap; }
+  .focus-text { font-size: 13px; color: #085041; font-weight: 500; }
+  .outcome-line { font-size: 12px; color: #633806; background: #FAEEDA; border-radius: 6px; padding: 7px 12px; font-style: italic; }
+  .who-line { font-size: 12px; color: var(--color-text-secondary); margin-top: 8px; }
+  .who-line strong { color: var(--color-text-primary); font-weight: 500; }
+  .grid-cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 14px; }
+  @media(max-width:700px){ .grid-cards { grid-template-columns: 1fr; } }
+  @media(min-width:560px) and (max-width:700px){ .grid-cards { grid-template-columns: 1fr 1fr; } }
+  .num-badge { display: inline-block; width: 24px; height: 24px; border-radius: 50%; background: #185FA5; color: #fff; font-size: 11px; font-weight: 500; text-align: center; line-height: 24px; margin-right: 6px; flex-shrink: 0; }
+</style>
+
+<div style="padding: 1.5rem 0.5rem 0;">
+
+  <div class="section-label">Rewritten service card descriptions</div>
+
+  <div class="grid-cards">
+
+    <div class="service-card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M8 12h8M12 8v8"/></svg>
+        </div>
+        <div>
+          <div class="card-title">Neuro Rehabilitation <span class="popular-badge">Most Popular</span></div>
+          <div class="card-subtitle">Clinical Focus: Restore function & improve quality of life</div>
+        </div>
+      </div>
+      <p class="card-desc">Stroke, paralysis, and neurological conditions require <strong>specialist hands-on care</strong> — not just exercises. Dr. Bhanu delivers evidence-based neuro rehab directly at your home in Kukatpally, Miyapur, Kondapur and nearby areas, helping patients regain movement, balance, and daily independence.</p>
+      <ul class="bullet-list">
+        <li>Stroke Recovery & Rehab</li>
+        <li>Parkinson's Support</li>
+        <li>Pediatric Neuro Therapy</li>
+        <li>Spinal Injury Rehabilitation</li>
+      </ul>
+      <div class="focus-bar"><span class="focus-label">Clinical Focus</span><span class="focus-text">Restore function & improve quality of life</span></div>
+      <div class="outcome-line">Most patients show measurable improvement in mobility and daily function within 8–12 sessions.</div>
+      <div class="who-line"><strong>Ideal for:</strong> Stroke survivors, paralysis patients, Parkinson's patients, children with neuro conditions.</div>
+    </div>
+
+    <div class="service-card">
+      <div class="card-header">
+        <div class="icon-box blue">
+          <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><path d="M12 2a10 10 0 100 20A10 10 0 0012 2z"/></svg>
+        </div>
+        <div>
+          <div class="card-title">Orthopedic Rehabilitation <span class="popular-badge">Most Popular</span></div>
+          <div class="card-subtitle">Clinical Focus: Reduce pain & restore movement</div>
+        </div>
+      </div>
+      <p class="card-desc">Whether it's joint pain, post-surgery stiffness, or a musculoskeletal injury, <strong>recovery should happen at your pace — in your own home.</strong> Our orthopedic physiotherapy combines manual therapy, targeted exercises, and advanced modalities to eliminate pain at the root cause, not just the symptoms.</p>
+      <ul class="bullet-list">
+        <li>Post-Surgery Joint Recovery</li>
+        <li>Muscle & Joint Pain Relief</li>
+        <li>Improved Flexibility & Strength</li>
+        <li>Customised Treatment Plans</li>
+      </ul>
+      <div class="focus-bar"><span class="focus-label">Clinical Focus</span><span class="focus-text">Reduce pain & restore movement</span></div>
+      <div class="outcome-line">Patients with knee pain, frozen shoulder & post-surgical stiffness typically recover full function in 6–10 sessions.</div>
+      <div class="who-line"><strong>Ideal for:</strong> Post-surgery patients, knee & hip pain, office workers with chronic back or neck pain.</div>
+    </div>
+
+    <div class="service-card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+        </div>
+        <div>
+          <div class="card-title">Sports Rehabilitation</div>
+          <div class="card-subtitle">Clinical Focus: Faster recovery & injury prevention</div>
+        </div>
+      </div>
+      <p class="card-desc">Sports injuries demand <strong>fast, precise recovery</strong> so you can return to peak performance without re-injury. From ligament tears to muscle strains, our sports physio program combines injury-specific treatment with functional training — designed around your sport and your body.</p>
+      <ul class="bullet-list">
+        <li>Injury Recovery & Pain Management</li>
+        <li>Post-Surgical Sports Rehab</li>
+        <li>Performance Enhancement</li>
+        <li>Return-to-Sport Guidance</li>
+      </ul>
+      <div class="focus-bar"><span class="focus-label">Clinical Focus</span><span class="focus-text">Faster recovery & injury prevention</span></div>
+      <div class="outcome-line">Athletes return to training significantly faster with structured home-based sports rehab compared to rest alone.</div>
+      <div class="who-line"><strong>Ideal for:</strong> Athletes, gym-goers, runners, cricket & football players, and anyone with a sports-related injury.</div>
+    </div>
+
+    <div class="service-card">
+      <div class="card-header">
+        <div class="icon-box blue">
+          <svg viewBox="0 0 24 24"><path d="M12 2l2 7h7l-5.5 4 2 7L12 16l-5.5 4 2-7L3 9h7z"/></svg>
+        </div>
+        <div>
+          <div class="card-title">Chiropractic Care</div>
+          <div class="card-subtitle">Clinical Focus: Restore joint mobility & optimise spinal function</div>
+        </div>
+      </div>
+      <p class="card-desc">Most pain originates from spinal misalignment and joint dysfunction — not just muscle tightness. Dr. Bhanu's chiropractic expertise, combined with physiotherapy, delivers <strong>precise spinal and joint corrections at your home</strong> for lasting relief without dependency on medication.</p>
+      <ul class="bullet-list">
+        <li>Spinal Adjustments & Mobilization</li>
+        <li>Postural Correction</li>
+        <li>Combined Rehabilitation Approach</li>
+        <li>Long-Term Stability</li>
+      </ul>
+      <div class="focus-bar"><span class="focus-label">Clinical Focus</span><span class="focus-text">Restore joint mobility & optimise spinal function</span></div>
+      <div class="outcome-line">Patients with chronic back and neck pain report significant relief after just 3–5 chiropractic sessions.</div>
+      <div class="who-line"><strong>Ideal for:</strong> Chronic back & neck pain, poor posture, desk workers, spinal stiffness patients.</div>
+    </div>
+
+    <div class="service-card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 00-4-4H8a4 4 0 00-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        </div>
+        <div>
+          <div class="card-title">Geriatric Physiotherapy</div>
+          <div class="card-subtitle">Clinical Focus: Stay active & independent</div>
+        </div>
+      </div>
+      <p class="card-desc">Ageing should not mean losing independence. Our geriatric physiotherapy brings <strong>gentle, evidence-based care to elderly patients at home</strong> — improving balance, preventing falls, building strength, and supporting a healthy, active lifestyle in the comfort of familiar surroundings.</p>
+      <ul class="bullet-list">
+        <li>Balance & Fall Prevention</li>
+        <li>Strength Training</li>
+        <li>Mobility & Gait Training</li>
+        <li>Pain Management</li>
+      </ul>
+      <div class="focus-bar"><span class="focus-label">Clinical Focus</span><span class="focus-text">Stay active & independent</span></div>
+      <div class="outcome-line">Regular geriatric physio significantly reduces fall risk and helps elderly patients maintain independence longer.</div>
+      <div class="who-line"><strong>Ideal for:</strong> Elderly adults (60+), post-fall recovery, age-related joint pain, mobility decline.</div>
+    </div>
+
+    <div class="service-card">
+      <div class="card-header">
+        <div class="icon-box blue">
+          <svg viewBox="0 0 24 24"><path d="M12 2v20M2 12h20"/></svg>
+        </div>
+        <div>
+          <div class="card-title">Dry Needling Therapy</div>
+          <div class="card-subtitle">Clinical Focus: Release trigger points & restore muscle function</div>
+        </div>
+      </div>
+      <p class="card-desc">Stubborn muscle pain that doesn't respond to massage or rest is often caused by myofascial trigger points. <strong>Dr. Bhanu's certified dry needling</strong> precisely targets these knots to deactivate them, restore normal muscle function, and provide fast, lasting relief — all at your home.</p>
+      <ul class="bullet-list">
+        <li>Myofascial Trigger Point Release</li>
+        <li>Targeted Needle Insertion</li>
+        <li>Combined with Corrective Exercises</li>
+        <li>Root Cause Rehabilitation</li>
+      </ul>
+      <div class="focus-bar"><span class="focus-label">Clinical Focus</span><span class="focus-text">Release trigger points & restore muscle function</span></div>
+      <div class="outcome-line">Patients with chronic muscle pain and tightness often experience significant relief within 2–4 sessions.</div>
+      <div class="who-line"><strong>Ideal for:</strong> Chronic muscle pain, neck & shoulder tightness, trigger points, headache from muscle tension.</div>
+    </div>
+
+    <div class="service-card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8 12s1.5-3 4-3 4 3 4 3-1.5 3-4 3-4-3-4-3z"/></svg>
+        </div>
+        <div>
+          <div class="card-title">Cupping Therapy</div>
+          <div class="card-subtitle">Clinical Focus: Improve tissue mobility & muscle relaxation</div>
+        </div>
+      </div>
+      <p class="card-desc">Cupping therapy uses controlled negative pressure to <strong>lift and release tight fascia, improve blood circulation, and accelerate tissue healing</strong> — an ancient technique now backed by modern clinical evidence. Ideal as a standalone treatment or combined with physiotherapy for faster recovery.</p>
+      <ul class="bullet-list">
+        <li>Dynamic & Static Cupping</li>
+        <li>Tissue Mobility Improvement</li>
+        <li>Enhanced Blood Circulation</li>
+        <li>Combined with Exercise Therapy</li>
+      </ul>
+      <div class="focus-bar"><span class="focus-label">Clinical Focus</span><span class="focus-text">Improve tissue mobility & muscle relaxation</span></div>
+      <div class="outcome-line">Best results seen when combined with manual therapy — most patients report reduced stiffness and improved range of motion within 3–5 sessions.</div>
+      <div class="who-line"><strong>Ideal for:</strong> Muscle tightness, back stiffness, sports recovery, chronic pain with poor circulation.</div>
+    </div>
+
+    <div class="service-card">
+      <div class="card-header">
+        <div class="icon-box blue">
+          <svg viewBox="0 0 24 24"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
+        </div>
+        <div>
+          <div class="card-title">IASTM Therapy</div>
+          <div class="card-subtitle">Clinical Focus: Restore tissue health & movement quality</div>
+        </div>
+      </div>
+      <p class="card-desc">IASTM (Instrument Assisted Soft Tissue Mobilisation) uses specially designed tools to <strong>detect and break down scar tissue, adhesions, and fascial restrictions</strong> that limit movement and cause pain — restoring smooth, pain-free function in ways that hands alone cannot achieve.</p>
+      <ul class="bullet-list">
+        <li>Soft Tissue Adhesion Release</li>
+        <li>Scar Tissue Management</li>
+        <li>Improved Tissue Glide</li>
+        <li>Combined with Active Rehabilitation</li>
+      </ul>
+      <div class="focus-bar"><span class="focus-label">Clinical Focus</span><span class="focus-text">Restore tissue health & movement quality</span></div>
+      <div class="outcome-line">Particularly effective for post-surgical scar tissue and chronic tendon issues — results visible within 4–6 sessions.</div>
+      <div class="who-line"><strong>Ideal for:</strong> Post-surgery scar tissue, tendon pain, restricted movement, chronic soft tissue injuries.</div>
+    </div>
+
+    <div class="service-card">
+      <div class="card-header">
+        <div class="icon-box">
+          <svg viewBox="0 0 24 24"><path d="M12 22V2M5 12H2m20 0h-3M7.05 7.05L4.93 4.93m14.14 14.14l-2.12-2.12M7.05 16.95l-2.12 2.12M19.07 4.93l-2.12 2.12"/></svg>
+        </div>
+        <div>
+          <div class="card-title">Kinesio Taping</div>
+          <div class="card-subtitle">Clinical Focus: Support muscles & accelerate recovery</div>
+        </div>
+      </div>
+      <p class="card-desc">Kinesio taping provides <strong>continuous therapeutic support between sessions</strong> — reducing pain, stabilising joints, and enhancing circulation 24 hours a day without restricting natural movement. A powerful complement to physiotherapy that keeps your recovery progressing even when the therapist isn't there.</p>
+      <ul class="bullet-list">
+        <li>Pain Reduction & Management</li>
+        <li>Muscle Support & Stabilization</li>
+        <li>Improved Circulation & Healing</li>
+        <li>Enhanced Performance & Recovery</li>
+      </ul>
+      <div class="focus-bar"><span class="focus-label">Clinical Focus</span><span class="focus-text">Support muscles & accelerate recovery</span></div>
+      <div class="outcome-line">When combined with physiotherapy, Kinesio taping reduces recovery time and helps maintain treatment gains between sessions.</div>
+      <div class="who-line"><strong>Ideal for:</strong> Sports injuries, muscle strains, joint instability, swelling management, post-exercise recovery.</div>
+    </div>
+
+  </div>
+</div>

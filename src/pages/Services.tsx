@@ -25,6 +25,7 @@ const Services = () => {
         'Spinal Injury Rehabilitation'
       ],
       focus: 'Restore function & improve quality of life',
+      outcome: 'Most patients show measurable improvement in mobility and daily function within 8–12 sessions.',
       idealFor: "Stroke survivors, paralysis patients, Parkinson's patients, children with neuro conditions.",
       icon: <Brain className="w-8 h-8" />,
       img: '/images/treatments/stroke_rehab_session-opt.webp'

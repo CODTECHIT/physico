@@ -1,0 +1,178 @@
+
+<style>
+  * { box-sizing: border-box; }
+  .page-label { font-size: 11px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.1em; padding: 4px 14px; border-radius: 20px; display: inline-block; margin-bottom: 14px; }
+  .home-label { background: #E6F1FB; color: #0C447C; }
+  .about-label { background: #E1F5EE; color: #0F6E56; }
+  .problem-bar { background: #FCEBEB; border-left: 3px solid #E24B4A; border-radius: 0 10px 10px 0; padding: 10px 14px; margin-bottom: 20px; font-size: 13px; color: #791F1F; line-height: 1.6; }
+  .problem-bar strong { font-weight: 500; color: #A32D2D; }
+  .sec-title { font-size: 22px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 4px; }
+  .sec-title em { font-style: italic; color: #1D9E75; }
+  .sec-sub { font-size: 13px; color: var(--color-text-secondary); margin: 0 0 16px; line-height: 1.6; }
+  .grid3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 10px; margin-bottom: 8px; }
+  @media(max-width:620px){ .grid3 { grid-template-columns: 1fr; } }
+  @media(min-width:420px) and (max-width:620px){ .grid3 { grid-template-columns: 1fr 1fr; } }
+  .why-card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: 12px; padding: 16px; }
+  .why-card.accent { border-top: 3px solid #1D9E75; }
+  .why-card.accent-blue { border-top: 3px solid #185FA5; }
+  .icon-circle { width: 38px; height: 38px; border-radius: 10px; background: #E1F5EE; display: flex; align-items: center; justify-content: center; margin-bottom: 12px; }
+  .icon-circle.blue { background: #E6F1FB; }
+  .icon-circle svg { width: 18px; height: 18px; stroke: #1D9E75; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+  .icon-circle.blue svg { stroke: #185FA5; }
+  .why-title { font-size: 14px; font-weight: 500; color: #185FA5; margin: 0 0 6px; line-height: 1.4; }
+  .why-body { font-size: 13px; color: var(--color-text-secondary); line-height: 1.65; margin: 0; }
+  .why-body strong { color: var(--color-text-primary); font-weight: 500; }
+  .stat-pill { display: inline-block; background: #E1F5EE; color: #0F6E56; font-size: 11px; font-weight: 500; border-radius: 10px; padding: 3px 9px; margin-top: 8px; }
+  .divider { height: 0.5px; background: var(--color-border-tertiary); margin: 28px 0; }
+  .diff-box { background: var(--color-background-secondary); border-radius: 12px; padding: 14px 16px; margin-top: 16px; }
+  .diff-title { font-size: 13px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 10px; }
+  .diff-row { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+  @media(max-width:500px){ .diff-row { grid-template-columns: 1fr; } }
+  .diff-card { background: var(--color-background-primary); border-radius: 8px; padding: 10px 12px; border: 0.5px solid var(--color-border-tertiary); }
+  .diff-page { font-size: 10px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px; }
+  .diff-page.h { color: #185FA5; } .diff-page.a { color: #1D9E75; }
+  .diff-angle { font-size: 13px; color: var(--color-text-primary); font-weight: 500; margin: 0 0 3px; }
+  .diff-why { font-size: 12px; color: var(--color-text-secondary); margin: 0; line-height: 1.5; }
+</style>
+
+<div style="padding: 1.5rem 0.5rem 0;">
+
+  <!-- PROBLEM -->
+  <div class="problem-bar"><strong>The problem with your current setup:</strong> Both the Home page and About page show "Why Choose Flexo Physiotherapy?" with nearly identical cards — Home-Based Care, Personalised Plans, Certified Experts, Advanced Methods, Affordable Rates, Patient-Centered appear on both. Visitors who go from Home → About will read the same thing twice. This wastes valuable page space and makes both sections feel generic.</div>
+
+  <!-- HOME PAGE REWRITE -->
+  <div class="page-label home-label">Home page — rewritten "Why Choose" section</div>
+  <div class="sec-title">Why Patients Choose <em>Flexo Over a Clinic</em></div>
+  <p class="sec-sub">We're not just convenient — we're clinically better for many conditions. Here's what makes home-based physiotherapy at Flexo different from a clinic visit.</p>
+
+  <div class="grid3">
+    <div class="why-card accent">
+      <div class="icon-circle">
+        <svg viewBox="0 0 24 24"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      </div>
+      <div class="why-title">Treatment in your own environment</div>
+      <p class="why-body">Recovery happens faster when you're comfortable. We treat you where you actually live — your bed, your chair, your stairs — so rehab exercises translate directly to your daily life.</p>
+      <span class="stat-pill">No travel · No waiting room</span>
+    </div>
+
+    <div class="why-card">
+      <div class="icon-circle blue">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <div class="why-title">100% of Dr. Bhanu's attention — every session</div>
+      <p class="why-body">No junior staff, no shared waiting, no rushed 20-minute slot. Every session is one-on-one with Dr. Bhanu — fully focused on your condition from start to finish.</p>
+      <span class="stat-pill">1-on-1 dedicated care</span>
+    </div>
+
+    <div class="why-card">
+      <div class="icon-circle">
+        <svg viewBox="0 0 24 24"><path d="M22 11.08V12a10 10 0 11-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      </div>
+      <div class="why-title">120+ surgeries avoided through physio</div>
+      <p class="why-body">Many patients were told they needed surgery. With targeted physiotherapy, they recovered fully — without going under the knife. <strong>Physio first, surgery as last resort.</strong></p>
+      <span class="stat-pill">120+ surgeries avoided</span>
+    </div>
+
+    <div class="why-card accent-blue">
+      <div class="icon-circle blue">
+        <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <div class="why-title">Progress tracked session by session</div>
+      <p class="why-body">We don't guess — we monitor. Every session, Dr. Bhanu records your progress, adjusts the treatment plan, and ensures you're moving in the right direction at the right pace.</p>
+      <span class="stat-pill">Faster results, proven approach</span>
+    </div>
+
+    <div class="why-card">
+      <div class="icon-circle">
+        <svg viewBox="0 0 24 24"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6"/></svg>
+      </div>
+      <div class="why-title">Transparent pricing, no hidden charges</div>
+      <p class="why-body">What we quote is what you pay. No surprise charges, no facility fees, no consumables billed separately. Every package is clearly priced before your first session.</p>
+      <span class="stat-pill">Affordable · Honest pricing</span>
+    </div>
+
+    <div class="why-card">
+      <div class="icon-circle blue">
+        <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+      </div>
+      <div class="why-title">4.9★ rated by 160+ real patients</div>
+      <p class="why-body">Our Google rating isn't from one or two patients — 160+ people across Kukatpally, Miyapur, and Kondapur have rated us highly recommended. Real results, real reviews.</p>
+      <span class="stat-pill">4.9★ · 160+ reviews</span>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <!-- ABOUT PAGE REWRITE -->
+  <div class="page-label about-label">About page — rewritten "Why Choose" section</div>
+  <div class="sec-title">What Makes Flexo <em>Different</em></div>
+  <p class="sec-sub">Six years ago Dr. Bhanu started Flexo with one belief — patients deserve better than rushed clinic appointments. Here's how that belief shaped everything we do.</p>
+
+  <div class="grid3">
+    <div class="why-card accent">
+      <div class="icon-circle">
+        <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+      </div>
+      <div class="why-title">Born from a passion for patient convenience</div>
+      <p class="why-body">Dr. Bhanu didn't open a clinic — he came to patients. Flexo was built around one question: "Why should a patient in pain travel to get better?" Every decision since has been guided by that.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="icon-circle blue">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+      </div>
+      <div class="why-title">BPT + MPT qualified with 6 advanced certifications</div>
+      <p class="why-body">Dry Needling, Kinesio Taping, Cupping, IASTM, Chiropractic, Manual Therapy — Dr. Bhanu brings clinic-grade specialist skills directly to your home. No compromise on quality.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="icon-circle">
+        <svg viewBox="0 0 24 24"><path d="M3 3h18v18H3zM3 9h18M9 21V9"/></svg>
+      </div>
+      <div class="why-title">Long-term recovery, not just pain relief</div>
+      <p class="why-body">We don't just reduce pain and discharge you. We identify the root cause, fix it structurally, and teach you how to stay pain-free — reducing the chance of the problem ever returning.</p>
+    </div>
+
+    <div class="why-card accent-blue">
+      <div class="icon-circle blue">
+        <svg viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+      </div>
+      <div class="why-title">Every patient gets a personalised treatment plan</div>
+      <p class="why-body">No generic exercise sheets. Every plan is built around your exact diagnosis, your daily routine, your lifestyle — and reviewed every session so it evolves as you improve.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="icon-circle">
+        <svg viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 0h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 14.92z"/></svg>
+      </div>
+      <div class="why-title">Quick response, flexible scheduling</div>
+      <p class="why-body">WhatsApp or call — we respond fast. Sessions are scheduled around your life, not our clinic hours. Morning, evening, or weekend — we fit into your routine, not the other way around.</p>
+    </div>
+
+    <div class="why-card">
+      <div class="icon-circle blue">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/></svg>
+      </div>
+      <div class="why-title">Serving Hyderabad for 6+ years</div>
+      <p class="why-body">Kukatpally, Miyapur, Kondapur, Nizampet, KPHB, Madhapur and nearby — 1,000+ patients trust Flexo as Hyderabad's most recommended home physiotherapy service.</p>
+    </div>
+  </div>
+
+  <!-- DIFFERENCE SUMMARY -->
+  <div class="diff-box">
+    <div class="diff-title">How the two sections now differ — at a glance</div>
+    <div class="diff-row">
+      <div class="diff-card">
+        <div class="diff-page h">Home page angle</div>
+        <div class="diff-angle">Flexo vs. a clinic — why home is better</div>
+        <div class="diff-why">Focuses on the practical advantages of home physio: no travel, full attention, surgeries avoided, transparent pricing. Converts first-time visitors.</div>
+      </div>
+      <div class="diff-card">
+        <div class="diff-page a">About page angle</div>
+        <div class="diff-angle">What makes Flexo different — the philosophy</div>
+        <div class="diff-why">Focuses on Dr. Bhanu's values, qualifications, and approach. Builds trust and emotional connection for visitors who want to know the person behind the service.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
