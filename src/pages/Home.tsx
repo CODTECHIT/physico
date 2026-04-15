@@ -255,7 +255,7 @@ const Home = () => {
         {/* ── Main Content Grid ── */}
         <motion.div
           style={{ y: heroContentY }}
-          className="max-w-[1400px] w-full mx-auto responsive-padding flex-1 flex flex-col lg:flex-row items-center gap-10 lg:gap-16 pt-36 sm:pt-44 lg:pt-32 pb-10 lg:pb-16"
+          className="max-w-[1400px] w-full mx-auto responsive-padding flex-1 flex flex-col lg:flex-row items-center gap-10 lg:gap-16 pt-36 sm:pt-44 lg:pt-32 pb-8 lg:pb-12"
         >
           {/* LEFT  text column */}
           <motion.div
@@ -404,14 +404,14 @@ const Home = () => {
 
         {/* ── TRUST BAR  floating on dark base ── */}
         <div className="relative z-30 bg-white/5 backdrop-blur-xl border-t border-white/10">
-          <div className="max-w-[1400px] mx-auto responsive-padding py-5 lg:py-7">
+          <div className="max-w-[1400px] mx-auto responsive-padding py-4 lg:py-6">
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-0 lg:divide-x lg:divide-white/10">
               {[
                 { title: "Certified Doctors", desc: "BPT / MPT", icon: <UserCheck className="w-4 h-4 lg:w-5 lg:h-5" /> },
                 { title: "3600+ Sessions", desc: "Hyderabad", icon: <Activity className="w-4 h-4 lg:w-5 lg:h-5" /> },
                 { title: "1000+ Patients", desc: "Treated", icon: <HomeIcon className="w-4 h-4 lg:w-5 lg:h-5" /> },
                 { title: "120+ Surgeries", desc: "Avoided", icon: <ShieldCheck className="w-4 h-4 lg:w-5 lg:h-5" /> },
-                { title: "Avoid Surgery", desc: "Start Recovery", icon: <Star className="w-4 h-4 lg:w-5 lg:h-5 fill-accent text-accent" /> },
+                { title: "160+ Post Surgery", desc: "Recovered Through Rehab", icon: <Star className="w-4 h-4 lg:w-5 lg:h-5 fill-accent text-accent" /> },
                 { title: "6+ Years", desc: "Experience", icon: <Award className="w-4 h-4 lg:w-5 lg:h-5" /> },
               ].map((item, idx) => (
                 <motion.div
@@ -610,7 +610,7 @@ const Home = () => {
           </div>
 
           {/* Secondary Services Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-[1400px] mx-auto border-t border-primary/10 pt-10 lg:pt-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-[1400px] mx-auto border-t border-primary/10 pt-8 lg:pt-12">
             {additionalServices.map((service, idx) => (
               <div
                 key={idx}
@@ -701,7 +701,7 @@ const Home = () => {
       </section>
 
       {/* WHY CHOOSE US (IMPORTANT FOR CONVERSION) */}
-      <section className="py-10 lg:py-16 bg-surface relative overflow-hidden">
+      <section className="py-6 lg:py-8 bg-surface relative overflow-hidden">
         {/* Large background text with Parallax */}
         <motion.div
           style={{ y: watermarkY }}
@@ -804,8 +804,8 @@ const Home = () => {
       </section>
 
       {/* TESTIMONIALS MARQUEE (New Position - Social Proof) */}
-      <section className="py-10 lg:py-16 bg-white overflow-hidden">
-        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 mb-10 lg:mb-16">
+      <section className="py-6 lg:py-10 bg-white overflow-hidden">
+        <div className="max-w-[1400px] mx-auto px-6 lg:px-12 mb-4 lg:mb-8">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
@@ -844,7 +844,7 @@ const Home = () => {
         </div>
 
         {/* Infinite Marquee Wrapper */}
-        <div className="relative flex overflow-x-hidden pb-12">
+        <div className="relative flex overflow-x-hidden pb-8">
           <motion.div
             className="flex whitespace-normal gap-6 lg:gap-10 py-4 px-6"
             animate={{ x: ["0%", "-50%"] }}
@@ -908,7 +908,7 @@ const Home = () => {
       </section>
 
       {/* SERVICE AREA - Redesigned with Map Cards */}
-      <section className="py-10 lg:py-16 bg-white relative overflow-hidden border-t border-primary/5">
+      <section className="py-6 lg:py-8 bg-white relative overflow-hidden border-t border-primary/5">
         {/* Map Background Pattern */}
         <div className="absolute inset-0 opacity-[0.03]">
           <svg
@@ -939,7 +939,7 @@ const Home = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="text-center mb-10 lg:mb-14"
+            className="text-center mb-6 lg:mb-10"
           >
             <span className="inline-block px-4 py-1.5 bg-accent/10 rounded-full text-accent font-bold uppercase tracking-[0.2em] text-[10px] mb-4">
               Service Areas
@@ -957,17 +957,17 @@ const Home = () => {
           </motion.div>
 
           {/* Location Cards with Pulse Effect */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 lg:gap-3 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 lg:gap-3 mb-6">
             {[
               { name: "Madhapur", radius: "5 KM", highlight: true },
               { name: "KPHB", radius: "4 KM", highlight: false },
-              { name: "Nanakramguda", radius: "2 KM", highlight: true },
-              { name: "Lingampally", radius: "3 KM", highlight: false },
-              { name: "Hydernagar", radius: "5 KM", highlight: true },
+              { name: "Nanakramguda", radius: "5 KM", highlight: true },
+              { name: "Lingampally", radius: "5 KM", highlight: false },
+              { name: "Hydernagar", radius: "2 KM", highlight: true },
               { name: "Vivekananda Nagar", radius: "4 KM", highlight: false },
               { name: "Vasantha Nagar", radius: "3 KM", highlight: true },
-              { name: "Bachupally", radius: "5 KM", highlight: false },
-              { name: "Hafeezpet", radius: "4 KM", highlight: true },
+              { name: "Bachupally", radius: " KM", highlight: false },
+              { name: "Hafeezpet", radius: "2 KM", highlight: true },
               { name: "Pragathi Nagar", radius: "5 KM", highlight: false },
             ].map((area, idx) => (
               <motion.div
@@ -1020,7 +1020,6 @@ const Home = () => {
               </div>
             </div>
             <div className="flex flex-col sm:flex-row items-center gap-6 lg:gap-8">
-              <div className="flex items-center gap-3 py-2 px-4 bg-primary/5 rounded-full text-primary"></div>
               <a
                 href={`tel:+91${CONTACT_PHONE_DISPLAY?.replace(/\s/g, "")}`}
                 className="flex items-center gap-3 px-8 py-4 bg-accent text-white font-bold rounded-full hover:bg-accent/90 transition-all shadow-lg shadow-accent/20 hover:scale-105 active:scale-95"
@@ -1034,9 +1033,9 @@ const Home = () => {
       </section>
 
       {/* STRONG CTA (DON’T BE WEAK HERE) */}
-      <section className="py-10 lg:py-16 bg-secondary relative overflow-hidden">
+      <section className="py-4 lg:py-6 bg-secondary relative overflow-hidden">
         <div className="absolute inset-0 bg-accent/5 mask-editorial-1 -z-10" />
-        <div className="max-w-7xl mx-auto px-6 text-center space-y-8 lg:space-y-10">
+        <div className="max-w-7xl mx-auto px-6 text-center space-y-4 lg:space-y-6">
           <h2 className="text-3xl lg:text-7xl font-serif font-bold text-primary leading-tight">
             Start Your <br />
             <span className="text-accent italic font-normal">
