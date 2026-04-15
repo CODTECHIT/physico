@@ -57,7 +57,7 @@ const Navbar = () => {
             <img
               src="/logo-square.png"
               alt={BRAND_NAME}
-              className="hidden lg:block h-8 xl:h-10 w-auto object-contain group-hover:opacity-80 transition-opacity"
+              className="hidden lg:block h-7 xl:h-9 w-auto object-contain group-hover:opacity-80 transition-opacity"
               loading="eager"
               decoding="async"
             />
@@ -65,7 +65,7 @@ const Navbar = () => {
             <img
               src="/logo-square.png"
               alt={BRAND_NAME}
-              className="lg:hidden h-12 w-auto object-contain group-hover:opacity-80 transition-opacity rounded-lg"
+              className="lg:hidden h-11 w-auto object-contain group-hover:opacity-80 transition-opacity rounded-lg"
               loading="eager"
               decoding="async"
             />
@@ -74,7 +74,7 @@ const Navbar = () => {
             <span className="block whitespace-nowrap text-[clamp(0.85rem,4vw,1.1rem)] font-serif font-bold leading-[1.05] tracking-[-0.04em] text-primary transition-opacity group-hover:opacity-80 min-[390px]:text-[clamp(1rem,4.4vw,1.2rem)] lg:text-xl xl:text-2xl">
               FLEXO <span className="text-accent italic">PHYSIOTHERAPY</span>
             </span>
-            <span className="mt-1 block font-sans text-[6px] font-bold tracking-[0.14em] text-accent min-[360px]:text-[7px] lg:mt-1.5 lg:text-[9px] lg:tracking-[0.22em] xl:text-[10px]">
+            <span className="mt-1 block font-sans text-[7px] font-bold tracking-[0.14em] text-accent min-[360px]:text-[8px] lg:mt-1.5 lg:text-[10px] lg:tracking-[0.22em] xl:text-[11px]">
               Mobility Flexibility Stability
             </span>
           </div>
