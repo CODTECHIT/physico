@@ -29,7 +29,7 @@ const About = () => {
   return (
     <div className="bg-white">
       {/* 1. HERO HEADER */}
-      <section className="pt-24 pb-8 lg:pt-40 lg:pb-12 relative overflow-hidden min-h-[40vh] lg:h-[55vh] flex items-center">
+      <section className="pt-8 pb-6 lg:pt-12 lg:pb-8 relative overflow-hidden min-h-[30vh] lg:min-h-[45vh] flex items-center">
         {/* Background Image with Parallax Overlay */}
         <motion.div
           style={{ y: heroBgY }}
@@ -77,7 +77,7 @@ const About = () => {
       </section>
 
       {/* 2. MISSION & SPECIALIZATION */}
-      <section className="py-10 lg:py-16 overflow-hidden">
+      <section className="py-6 lg:py-10 overflow-hidden">
         <div className="max-w-[1400px] mx-auto responsive-padding">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-center">
             <div className="space-y-8 lg:space-y-10 focus-ring">
@@ -142,7 +142,7 @@ const About = () => {
       </section>
 
       {/* 3. MEET THE SPECIALIST */}
-      <section className="py-12 lg:py-16 overflow-hidden bg-gradient-to-br from-white via-surface/30 to-white relative">
+      <section className="py-6 lg:py-10 overflow-hidden bg-gradient-to-br from-white via-surface/30 to-white relative">
         {/* Premium decorative elements */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
@@ -295,7 +295,7 @@ const About = () => {
       </section>
 
       {/* 5. WHY CHOOSE US */}
-      <section className="py-10 lg:py-16 bg-surface relative overflow-hidden">
+      <section className="py-6 lg:py-10 bg-surface relative overflow-hidden">
         <motion.div
           style={{ y: watermarkY }}
           className="absolute top-20 left-1/2 -translate-x-1/2 text-[20vw] font-serif font-bold text-primary/5 select-none pointer-events-none whitespace-nowrap uppercase"
@@ -401,7 +401,7 @@ const About = () => {
       </section>
 
       {/* 6. CTA & LOCATIONS */}
-      <section className="py-8 lg:py-12 bg-white text-center relative overflow-hidden">
+      <section className="py-6 lg:py-10 bg-white text-center relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 space-y-8 lg:space-y-12 relative z-10">
           <h2 className="editorial-heading text-primary leading-tight">
             Start Your <br />
@@ -437,26 +437,6 @@ const About = () => {
                 <PhoneCall className="w-4 h-4 text-accent" />
                 {CONTACT_PHONE_DISPLAY}
               </a>
-            </div>
-          </div>
-
-          <div className="pt-10 border-t border-primary/10">
-            <h4 className="text-[9px] uppercase tracking-[0.4em] font-bold text-muted mb-6">
-              Our Principal Locations
-            </h4>
-            <div className="flex flex-col md:flex-row justify-center gap-6 lg:gap-12">
-              <div className="flex items-center space-x-3 bg-surface/50 p-4 rounded-xl border border-primary/5">
-                <MapPin className="text-accent w-5 h-5" />
-                <span className="text-primary font-bold tracking-wider uppercase text-[10px] lg:text-xs">
-                  Miyapur, Hyderabad 500049
-                </span>
-              </div>
-              <div className="flex items-center space-x-3 bg-surface/50 p-4 rounded-xl border border-primary/5">
-                <MapPin className="text-accent w-5 h-5" />
-                <span className="text-primary font-bold tracking-wider uppercase text-[10px] lg:text-xs">
-                  Kukatpally, Hyderabad 500085
-                </span>
-              </div>
             </div>
           </div>
         </div>

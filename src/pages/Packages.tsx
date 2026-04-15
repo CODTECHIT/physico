@@ -142,7 +142,7 @@ const Packages = () => {
   return (
     <div className="bg-white selection:bg-accent selection:text-white font-sans">
       {/* HERO SECTION */}
-      <section className="pt-24 pb-12 lg:pt-40 lg:pb-16 relative overflow-hidden flex items-center">
+      <section className="pt-12 pb-6 lg:pt-20 lg:pb-8 relative overflow-hidden flex items-center">
         <motion.div
           style={{ y: heroBgY }}
           className="absolute inset-0 -z-10 h-[120%]"
@@ -183,7 +183,7 @@ const Packages = () => {
       </section>
 
       {/* PRICING NOTE */}
-      <section className="pb-8 bg-white">
+      <section className="pb-4 bg-white">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <p className="text-dark/50 text-xs lg:text-sm font-medium leading-relaxed max-w-2xl mx-auto">
             <span className="font-bold text-accent uppercase tracking-wider mr-2">Note:</span>
@@ -195,7 +195,7 @@ const Packages = () => {
       </section>
 
       {/* PACKAGES GRID */}
-      <section className="py-16 lg:py-24 bg-white relative">
+      <section className="py-6 lg:py-10 bg-white relative">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10 items-stretch">
             {packages.map((pkg, idx) => (
@@ -320,7 +320,7 @@ const Packages = () => {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="py-20 lg:py-32 bg-surface/30">
+      <section className="py-8 lg:py-12 bg-surface/30">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl lg:text-5xl font-serif font-bold text-primary">
@@ -355,7 +355,7 @@ const Packages = () => {
       </section>
 
       {/* FAQ SECTION */}
-      <section className="py-24 bg-white">
+      <section className="py-10 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="flex items-center gap-4 mb-12">
             <div className="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center shrink-0">
@@ -391,49 +391,40 @@ const Packages = () => {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-24 lg:py-32 bg-white relative overflow-hidden">
+      <section className="py-8 lg:py-12 bg-white relative overflow-hidden">
         <div className="max-w-5xl mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
             viewport={{ once: true }}
-            className="bg-[#0F6E56] rounded-[3rem] p-10 lg:p-20 text-center text-white shadow-2xl relative overflow-hidden"
+            className="bg-[#0F6E56] rounded-2xl lg:rounded-3xl p-6 lg:p-10 text-center text-white"
           >
-            {/* Background pattern */}
-            <div className="absolute top-0 right-0 -mr-20 -mt-20 w-64 h-64 bg-white/5 rounded-full blur-3xl" />
-            <div className="absolute bottom-0 left-0 -ml-20 -mb-20 w-64 h-64 bg-accent/20 rounded-full blur-3xl" />
-
-            <div className="max-w-2xl mx-auto space-y-8 relative z-10">
-              <h2 className="text-3xl lg:text-5xl font-serif font-bold leading-tight">
-                Not sure which package <br />
-                <span className="italic font-normal text-white/90">suits you?</span>
+            <div className="max-w-xl mx-auto space-y-4">
+              <h2 className="text-xl lg:text-2xl font-serif font-bold">
+                Not sure which package suits you?
               </h2>
-              <p className="text-white/80 text-base lg:text-xl font-medium leading-relaxed">
-                WhatsApp Dr. Bhanu with your condition  he'll guide you to the right plan before any commitment.
+              <p className="text-white/80 text-sm font-medium">
+                WhatsApp Dr. Bhanu with your condition - he'll guide you to the right plan.
               </p>
 
-              <div className="flex flex-col sm:flex-row items-center justify-center gap-6 pt-4">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
                 <a
                   href={`${CONTACT_WHATSAPP_LINK}?text=${encodeURIComponent(`Hi ${BRAND_NAME}, I'd like to consult about the best package for my recovery.`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto"
+                  className="text-sm font-bold bg-white text-[#0F6E56] px-6 py-2.5 rounded-full hover:bg-white/90 transition-colors"
                 >
-                  <Button className="w-full bg-white text-[#0F6E56] hover:bg-white/90 rounded-full py-4 px-10 font-bold shadow-xl border-none">
-                    WhatsApp Us Now
-                  </Button>
+                  WhatsApp Us Now
                 </a>
                 <a
                   href="tel:+919502808581"
-                  className="w-full sm:w-auto"
+                  className="text-sm font-semibold text-white/90 hover:text-white transition-colors"
                 >
-                  <Button variant="outline" className="w-full border-white/50 text-white hover:bg-white/10 rounded-full py-4 px-10 font-bold">
-                    Call +91 95028 08581
-                  </Button>
+                  Call +91 95028 08581
                 </a>
               </div>
 
-              <div className="pt-8 text-white/50 text-[10px] font-bold uppercase tracking-[0.3em]">
+              <div className="text-white/40 text-[10px] font-medium pt-2">
                 No booking fees • Assessment-based pricing • No hidden charges
               </div>
             </div>

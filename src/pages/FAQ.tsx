@@ -112,7 +112,7 @@ const FAQ = () => {
   return (
     <div className="bg-white">
       {/* HERO HEADER */}
-      <section className="pt-24 pb-10 lg:pt-36 lg:pb-12 relative overflow-hidden min-h-[35vh] lg:min-h-[45vh] flex items-center">
+      <section className="pt-8 pb-6 lg:pt-12 lg:pb-8 relative overflow-hidden min-h-[25vh] lg:min-h-[35vh] flex items-center">
         <motion.div
           style={{ y: heroBgY }}
           className="absolute inset-0 -z-10 h-[120%]"
@@ -155,18 +155,18 @@ const FAQ = () => {
       </section>
 
       {/* FAQ CONTENT */}
-      <section className="py-8 lg:py-12 bg-white relative overflow-hidden">
+      <section className="py-6 lg:py-10 bg-white relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 lg:px-12">
           {faqCategories.map((category, categoryIdx) => (
-            <motion.div
-              key={categoryIdx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: categoryIdx * 0.1 }}
-              className="mb-10 lg:mb-16"
-            >
-              <div className="text-center mb-8 lg:mb-12">
+              <motion.div
+                key={categoryIdx}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: categoryIdx * 0.1 }}
+                className="mb-8 lg:mb-12"
+              >
+              <div className="text-center mb-6 lg:mb-10">
                 <h2 className="text-xl lg:text-3xl font-serif font-bold text-primary">
                   {category.title}
                 </h2>
@@ -222,7 +222,7 @@ const FAQ = () => {
       </section>
 
       {/* CONTACT CTA */}
-      <section className="py-8 lg:py-10 bg-primary/[0.02] relative overflow-hidden">
+      <section className="py-6 lg:py-8 bg-primary/[0.02] relative overflow-hidden">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] -z-10 pointer-events-none">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,186,155,0.03)_0,transparent_70%)]" />
         </div>

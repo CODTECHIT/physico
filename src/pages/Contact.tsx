@@ -54,7 +54,7 @@ const Contact = () => {
     <div className="bg-white">
 
       {/* 1. HERO HEADER */}
-      <section className="pt-28 pb-8 lg:pt-44 lg:pb-12 relative overflow-hidden min-h-[40vh] lg:h-[60vh] flex items-center">
+      <section className="pt-12 pb-6 lg:pt-16 lg:pb-8 relative overflow-hidden min-h-[30vh] lg:min-h-[50vh] flex items-center">
         {/* Background Image with Parallax Overlay */}
         <motion.div
           style={{ y: heroBgY }}
@@ -94,7 +94,7 @@ const Contact = () => {
       </section>
 
       {/* 2. CONTACT CONTENT */}
-      <section className="py-6 lg:py-10 relative overflow-hidden">
+      <section className="py-4 lg:py-8 relative overflow-hidden">
         {/* Large background text with Parallax */}
         <motion.div
           style={{ y: watermarkY }}
@@ -249,12 +249,15 @@ const Contact = () => {
                             onChange={handleInputChange}
                             className="w-full bg-surface/50 border border-primary/5 rounded-xl lg:rounded-2xl px-5 py-3 lg:py-3.5 focus:outline-none focus:border-accent focus:bg-white transition-all font-medium text-primary appearance-none cursor-pointer text-sm"
                           >
-                            <option>Orthopedic physiotherapy</option>
-                            <option>Neurological rehab</option>
-                            <option>Post-surgical recovery</option>
-                            <option>Geriatric care</option>
-                            <option>Chiropractic care</option>
-                            <option>Cupping & dry needling</option>
+                            <option>Neuro Rehabilitation</option>
+                            <option>Orthopedic Rehabilitation</option>
+                            <option>Sports Rehabilitation</option>
+                            <option>Chiropractic Care</option>
+                            <option>Geriatric Physiotherapy</option>
+                            <option>Dry Needling Therapy</option>
+                            <option>Cupping Therapy</option>
+                            <option>IASTM Therapy</option>
+                            <option>Kinesio Taping</option>
                           </select>
                           <div className="absolute right-4 top-1/2 -translate-y-1/2 pointer-events-none text-accent">
                             <ChevronDown className="w-3.5 h-3.5 lg:w-4 lg:h-4" />
@@ -301,17 +304,7 @@ const Contact = () => {
         </div>
       </section>
 
-      {/* 3. MINIMAL MAP PLACEHOLDER */}
-      <section className="h-[300px] lg:h-[400px] bg-surface flex items-center justify-center relative overflow-hidden group">
-        <div className="absolute inset-0 bg-[radial-gradient(#2563EB_1px,transparent_1px)] [background-size:48px_48px] opacity-20" />
-        <div className="text-center relative z-10 space-y-4 lg:space-y-6">
-          <div className="w-16 h-16 lg:w-20 lg:h-20 bg-white rounded-full flex items-center justify-center mx-auto shadow-xl group-hover:scale-110 transition-transform duration-700">
-            <MapPin className="text-accent w-8 h-8 lg:w-10 lg:h-10" />
-          </div>
-          <h4 className="text-2xl lg:text-3xl font-serif font-bold text-primary">Hyderabad Service Hub</h4>
-          <p className="text-muted text-[8px] lg:text-[10px] uppercase tracking-[0.3em] font-bold">Kukatpally • Miyapur • Kondapur • Gachibowli</p>
-        </div>
-      </section>
+
 
     </div>
   );

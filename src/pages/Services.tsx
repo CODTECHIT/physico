@@ -175,7 +175,7 @@ const Services = () => {
     <div className="bg-white">
 
       {/* 1. HERO HEADER */}
-      <section className="pt-28 pb-10 lg:pt-44 lg:pb-14 relative overflow-hidden min-h-[45vh] lg:h-[65vh] flex items-center">
+      <section className="pt-8 pb-6 lg:pt-12 lg:pb-8 relative overflow-hidden min-h-[30vh] lg:min-h-[50vh] flex items-center">
         {/* Background Image with Parallax Overlay */}
         <motion.div
           style={{ y: heroBgY }}
@@ -213,7 +213,7 @@ const Services = () => {
       </section>
 
       {/* 2. SERVICES GRID */}
-      <section className="py-12 lg:py-16 bg-white relative overflow-hidden">
+      <section className="py-6 lg:py-10 bg-white relative overflow-hidden">
         {/* Large background text with Parallax */}
         <motion.div
           style={{ y: watermarkY }}
@@ -223,7 +223,7 @@ const Services = () => {
         </motion.div>
 
         <div className="max-w-[1650px] mx-auto responsive-padding relative z-10">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 lg:gap-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-12">
             {allServices.map((service, idx) => (
               <motion.div
                 key={service.id}
