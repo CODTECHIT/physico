@@ -15,7 +15,6 @@ import {
   Activity,
   FileCheck,
   Award,
-  Accessibility,
 } from "lucide-react";
 import Button from "../components/Button";
 import TreatmentTicker from "../components/TreatmentTicker";

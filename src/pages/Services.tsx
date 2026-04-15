@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Brain, Dumbbell, Target, Zap, ArrowRight, CheckCircle2, Activity, Accessibility, Syringe, Bandage, PersonStanding } from 'lucide-react';
+import { Brain, Dumbbell, Target, ArrowRight, CheckCircle2, Activity, Accessibility, Syringe, Bandage } from 'lucide-react';
 import Button from '../components/Button';
 import { Link } from 'react-router-dom';
 import { BRAND_NAME } from '../constants';
