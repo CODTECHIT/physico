@@ -411,7 +411,7 @@ const Home = () => {
                 { title: "3600+ Sessions", desc: "Hyderabad", icon: <Activity className="w-4 h-4 lg:w-5 lg:h-5" /> },
                 { title: "1000+ Patients", desc: "Treated", icon: <HomeIcon className="w-4 h-4 lg:w-5 lg:h-5" /> },
                 { title: "120+ Surgeries", desc: "Avoided", icon: <ShieldCheck className="w-4 h-4 lg:w-5 lg:h-5" /> },
-                { title: "4.9 Google Rating", desc: "160+ Reviews", icon: <Star className="w-4 h-4 lg:w-5 lg:h-5 fill-accent text-accent" /> },
+                { title: "Avoid Surgery", desc: "Start Recovery", icon: <Star className="w-4 h-4 lg:w-5 lg:h-5 fill-accent text-accent" /> },
                 { title: "6+ Years", desc: "Experience", icon: <Award className="w-4 h-4 lg:w-5 lg:h-5" /> },
               ].map((item, idx) => (
                 <motion.div
@@ -957,7 +957,7 @@ const Home = () => {
           </motion.div>
 
           {/* Location Cards with Pulse Effect */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 lg:gap-6 mb-12">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 lg:gap-3 mb-8">
             {[
               { name: "Madhapur", radius: "5 KM", highlight: true },
               { name: "KPHB", radius: "4 KM", highlight: false },
@@ -976,23 +976,23 @@ const Home = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: idx * 0.05 }}
-                className={`relative p-5 lg:p-6 rounded-2xl transition-all duration-310 group ${area.highlight
-                  ? "bg-accent text-white shadow-xl shadow-accent/20"
+                className={`relative p-3 lg:p-4 rounded-xl transition-all duration-310 group ${area.highlight
+                  ? "bg-accent text-white shadow-lg shadow-accent/20"
                   : "bg-surface text-primary hover:bg-primary/5 border border-primary/5"
                   }`}
               >
                 {area.highlight && (
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-accent rounded-full flex items-center justify-center animate-pulse border-2 border-white">
-                    <MapPin className="w-3 h-3 text-white" />
+                  <div className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-accent rounded-full flex items-center justify-center animate-pulse border-2 border-white">
+                    <MapPin className="w-2.5 h-2.5 text-white" />
                   </div>
                 )}
-                <h3 className="text-base lg:text-lg font-serif font-bold mb-1">
+                <h3 className="text-sm lg:text-base font-serif font-bold mb-0.5">
                   {area.name}
                 </h3>
                 <p
-                  className={`text-xs font-bold ${area.highlight ? "text-white/80" : "text-primary/60"}`}
+                  className={`text-[10px] font-bold ${area.highlight ? "text-white/80" : "text-primary/60"}`}
                 >
-                  ~{area.radius} from center
+                  ~{area.radius}
                 </p>
               </motion.div>
             ))}
