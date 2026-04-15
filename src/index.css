@@ -20,7 +20,7 @@
   --spacing-section: clamp(40px, 6vw, 100px);
   --spacing-section-mobile: 32px;
 
-  --editorial-display: clamp(1.8rem, 5vw, 3.8rem);
+  --editorial-display: clamp(1.5rem, 4vw, 3rem);
   --editorial-heading: clamp(1.4rem, 3.5vw, 2.6rem);
   --editorial-body: clamp(0.85rem, 1.1vw, 1.05rem);
 
@@ -110,7 +110,7 @@
   }
 
   .section-spacing {
-    @apply py-10 sm:py-12 lg:py-20;
+    @apply py-4 sm:py-6 lg:py-10;
   }
 
   .floating-element {

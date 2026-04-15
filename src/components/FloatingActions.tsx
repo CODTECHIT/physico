@@ -8,7 +8,7 @@ const FloatingActions = () => {
   const phoneUrl = `tel:+91${phoneNumber}`;
 
   return (
-    <div className="pointer-events-none fixed right-0 bottom-24 z-[9999] flex justify-end px-0 md:top-1/2 md:bottom-auto md:-translate-y-1/2">
+    <div className="pointer-events-none fixed right-0 bottom-16 z-[9999] flex justify-end px-0 md:top-1/2 md:bottom-auto md:-translate-y-1/2">
       <motion.div 
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 1 }}

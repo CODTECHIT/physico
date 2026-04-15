@@ -195,7 +195,7 @@ const Packages = () => {
       </section>
 
       {/* PACKAGES GRID */}
-      <section className="py-6 lg:py-10 bg-white relative">
+      <section className="py-4 lg:py-10 bg-white relative">
         <div className="max-w-7xl mx-auto px-6 lg:px-12">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10 items-stretch">
             {packages.map((pkg, idx) => (
@@ -320,7 +320,7 @@ const Packages = () => {
       </section>
 
       {/* HOW IT WORKS */}
-      <section className="py-8 lg:py-12 bg-surface/30">
+      <section className="py-4 lg:py-12 bg-surface/30">
         <div className="max-w-6xl mx-auto px-6">
           <div className="text-center mb-16 space-y-4">
             <h2 className="text-3xl lg:text-5xl font-serif font-bold text-primary">
@@ -355,7 +355,7 @@ const Packages = () => {
       </section>
 
       {/* FAQ SECTION */}
-      <section className="py-10 bg-white">
+      <section className="py-4 lg:py-10 bg-white">
         <div className="max-w-4xl mx-auto px-6">
           <div className="flex items-center gap-4 mb-12">
             <div className="w-12 h-12 bg-accent/10 rounded-2xl flex items-center justify-center shrink-0">
@@ -391,7 +391,7 @@ const Packages = () => {
       </section>
 
       {/* FINAL CTA */}
-      <section className="py-8 lg:py-12 bg-white relative overflow-hidden">
+      <section className="py-4 lg:py-12 bg-white relative overflow-hidden">
         <div className="max-w-5xl mx-auto px-6 relative z-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}

@@ -77,7 +77,7 @@ const About = () => {
       </section>
 
       {/* 2. MISSION & SPECIALIZATION */}
-      <section className="py-6 lg:py-10 overflow-hidden">
+      <section className="py-4 lg:py-10 overflow-hidden">
         <div className="max-w-[1400px] mx-auto responsive-padding">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-center">
             <div className="space-y-8 lg:space-y-10 focus-ring">
@@ -142,7 +142,7 @@ const About = () => {
       </section>
 
       {/* 3. MEET THE SPECIALIST */}
-      <section className="py-6 lg:py-10 overflow-hidden bg-gradient-to-br from-white via-surface/30 to-white relative">
+      <section className="py-4 lg:py-10 overflow-hidden bg-gradient-to-br from-white via-surface/30 to-white relative">
         {/* Premium decorative elements */}
         <div className="absolute top-0 right-0 w-64 h-64 bg-accent/5 rounded-full blur-3xl" />
         <div className="absolute bottom-0 left-0 w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
@@ -295,7 +295,7 @@ const About = () => {
       </section>
 
       {/* 5. WHY CHOOSE US */}
-      <section className="py-6 lg:py-10 bg-surface relative overflow-hidden">
+      <section className="py-4 lg:py-10 bg-surface relative overflow-hidden">
         <motion.div
           style={{ y: watermarkY }}
           className="absolute top-20 left-1/2 -translate-x-1/2 text-[20vw] font-serif font-bold text-primary/5 select-none pointer-events-none whitespace-nowrap uppercase"
@@ -401,7 +401,7 @@ const About = () => {
       </section>
 
       {/* 6. CTA & LOCATIONS */}
-      <section className="py-6 lg:py-10 bg-white text-center relative overflow-hidden">
+      <section className="py-4 lg:py-10 bg-white text-center relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 space-y-8 lg:space-y-12 relative z-10">
           <h2 className="editorial-heading text-primary leading-tight">
             Start Your <br />

@@ -32,7 +32,7 @@ const ConditionDetail = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* 1. HERO SECTION */}
-      <section className="relative pt-36 lg:pt-52 pb-16 overflow-hidden">
+      <section className="relative pt-24 lg:pt-36 pb-12 overflow-hidden">
         {/* Parallax Background */}
         <div className="absolute inset-0 -z-10">
           <img 
@@ -68,10 +68,10 @@ const ConditionDetail = () => {
                 <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
                 <span className="text-accent font-bold uppercase tracking-[0.2em] text-[10px]">{condition.category} Specialist</span>
               </div>
-              <h1 className="editorial-heading text-primary leading-tight mb-8">
+              <h1 className="editorial-heading text-primary leading-tight mb-4">
                 {condition.title} <span className="text-accent italic font-normal">Care</span>
               </h1>
-              <p className="text-xl text-dark/80 font-medium leading-relaxed mb-10">
+              <p className="text-xl text-dark/80 font-medium leading-relaxed mb-6">
                 {condition.description}
               </p>
               
@@ -208,7 +208,7 @@ const ConditionDetail = () => {
       {/* 3. GOAL & COMMITMENT */}
       <section className="section-spacing">
         <div className="max-w-[1400px] mx-auto responsive-padding">
-          <div className="bg-primary p-8 lg:p-24 rounded-[3rem] lg:rounded-[4rem] relative overflow-hidden group">
+          <div className="bg-primary p-6 lg:p-16 rounded-[3rem] lg:rounded-[4rem] relative overflow-hidden group">
             <div className="absolute top-0 right-0 w-96 h-96 bg-accent/20 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
             <div className="absolute bottom-0 left-0 w-96 h-96 bg-white/5 rounded-full blur-[100px] translate-y-1/2 -translate-x-1/2" />
             

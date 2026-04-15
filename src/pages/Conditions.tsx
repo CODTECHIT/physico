@@ -104,7 +104,7 @@ const Conditions = () => {
       </section>
 
       {/* 2. CLINICAL PROCESS METHODOLOGY */}
-      <section className="py-6 lg:py-10 bg-white relative overflow-hidden">
+      <section className="py-4 lg:py-10 bg-white relative overflow-hidden">
         {/* Subtle background element */}
         <div className="absolute top-0 right-0 w-1/2 h-full bg-accent/2 opacity-50 -skew-x-12 translate-x-1/2" />
 
@@ -183,7 +183,7 @@ const Conditions = () => {
       </section>
 
       {/* 3. ADVANCED TECHNIQUES SECTION */}
-      <section className="py-6 lg:py-10 bg-primary/[0.02] relative overflow-hidden">
+      <section className="py-4 lg:py-10 bg-primary/[0.02] relative overflow-hidden">
         {/* Background Decorative Element */}
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] -z-10 pointer-events-none">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(0,186,155,0.03)_0,transparent_70%)]" />
@@ -359,7 +359,7 @@ const Conditions = () => {
       </section>
 
       {/* 4. CONDITIONS WE TREAT AT HOME */}
-      <section className="py-6 lg:py-10 bg-white relative overflow-hidden">
+      <section className="py-4 lg:py-10 bg-white relative overflow-hidden">
         <div className="max-w-[1400px] mx-auto responsive-padding relative z-10">
           <div className="text-center mb-12">
             <div className="inline-flex items-center justify-center space-x-3 mb-4">
@@ -415,7 +415,7 @@ const Conditions = () => {
       </section>
 
       {/* 5. CTA SECTION */}
-      <section className="py-6 lg:py-10 bg-white relative overflow-hidden">
+      <section className="py-4 lg:py-10 bg-white relative overflow-hidden">
         <div className="max-w-5xl mx-auto responsive-padding relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 30 }}

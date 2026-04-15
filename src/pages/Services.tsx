@@ -213,7 +213,7 @@ const Services = () => {
       </section>
 
       {/* 2. SERVICES GRID */}
-      <section className="py-6 lg:py-10 bg-white relative overflow-hidden">
+      <section className="py-4 lg:py-10 bg-white relative overflow-hidden">
         {/* Large background text with Parallax */}
         <motion.div
           style={{ y: watermarkY }}

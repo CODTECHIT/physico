@@ -155,7 +155,7 @@ const FAQ = () => {
       </section>
 
       {/* FAQ CONTENT */}
-      <section className="py-6 lg:py-10 bg-white relative overflow-hidden">
+      <section className="py-4 lg:py-10 bg-white relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 lg:px-12">
           {faqCategories.map((category, categoryIdx) => (
               <motion.div

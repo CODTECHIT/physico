@@ -701,7 +701,7 @@ const Home = () => {
       </section>
 
       {/* WHY CHOOSE US (IMPORTANT FOR CONVERSION) */}
-      <section className="py-6 lg:py-8 bg-surface relative overflow-hidden">
+      <section className="py-4 lg:py-8 bg-surface relative overflow-hidden">
         {/* Large background text with Parallax */}
         <motion.div
           style={{ y: watermarkY }}
@@ -804,7 +804,7 @@ const Home = () => {
       </section>
 
       {/* TESTIMONIALS MARQUEE (New Position - Social Proof) */}
-      <section className="py-6 lg:py-10 bg-white overflow-hidden">
+      <section className="py-4 lg:py-10 bg-white overflow-hidden">
         <div className="max-w-[1400px] mx-auto px-6 lg:px-12 mb-4 lg:mb-8">
           <div className="flex flex-col lg:flex-row lg:items-end justify-between gap-6">
             <div className="space-y-4">

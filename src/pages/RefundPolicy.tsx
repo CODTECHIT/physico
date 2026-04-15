@@ -50,7 +50,7 @@ const RefundPolicy = () => {
   return (
     <div className="bg-white">
       {/* HERO HEADER */}
-      <section className="pt-20 pb-4 lg:pt-28 lg:pb-8 relative overflow-hidden min-h-[30vh] lg:h-[35vh] flex items-center">
+      <section className="pt-20 pb-4 lg:pt-28 lg:pb-8 relative overflow-hidden min-h-[30vh] lg:min-h-[35vh] flex items-center">
         <motion.div
           style={{ y: heroBgY }}
           className="absolute inset-0 -z-10 h-[120%]"
