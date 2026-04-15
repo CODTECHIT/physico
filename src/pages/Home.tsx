@@ -410,8 +410,8 @@ const Home = () => {
                 { title: "Certified Doctors", desc: "BPT / MPT", icon: <UserCheck className="w-4 h-4 lg:w-5 lg:h-5" /> },
                 { title: "3600+ Sessions", desc: "Hyderabad", icon: <Activity className="w-4 h-4 lg:w-5 lg:h-5" /> },
                 { title: "1000+ Patients", desc: "Treated", icon: <HomeIcon className="w-4 h-4 lg:w-5 lg:h-5" /> },
-                { title: "120+ Surgeries", desc: "Avoided", icon: <ShieldCheck className="w-4 h-4 lg:w-5 lg:h-5" /> },
-                { title: "160+ Post Surgery", desc: "Recovered Through Rehab", icon: <Star className="w-4 h-4 lg:w-5 lg:h-5 fill-accent text-accent" /> },
+                { title: "120+ Surgeries", desc: "Avoided Through Rehab", icon: <ShieldCheck className="w-4 h-4 lg:w-5 lg:h-5" /> },
+                { title: "160+ Post Surgery", desc: "Recoveries Through Rehab", icon: <Star className="w-4 h-4 lg:w-5 lg:h-5 fill-accent text-accent" /> },
                 { title: "6+ Years", desc: "Experience", icon: <Award className="w-4 h-4 lg:w-5 lg:h-5" /> },
               ].map((item, idx) => (
                 <motion.div
