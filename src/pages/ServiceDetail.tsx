@@ -1,6 +1,6 @@
 import { useParams, Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { CheckCircle2, ArrowRight, Dumbbell, Bone, Brain, HeartPulse, Zap, Activity } from 'lucide-react';
+import { CheckCircle2, ArrowRight, Dumbbell, Brain, HeartPulse, Zap, Activity, Accessibility, Syringe, Bandage, Target } from 'lucide-react';
 import Button from '../components/Button';
 import { CONTACT_WHATSAPP_LINK, BRAND_NAME } from '../constants';
 
@@ -52,7 +52,7 @@ const servicesData = {
   'orthopedic': {
     title: 'Orthopedic Rehabilitation',
     desc: 'Whether it\'s joint pain, post-surgery stiffness, or a musculoskeletal injury, recovery should happen at your pace, in your own home. Our orthopedic physiotherapy combines manual therapy, targeted exercises, and advanced modalities to eliminate pain at the root cause, not just the symptoms.',
-    icon: <Bone className="w-12 h-12" />,
+    icon: <Activity className="w-12 h-12" />,
     img: '/images/treatments/back_pain_treatment-opt.webp',
     conditions: [
       'Back Pain Treatment',
@@ -98,7 +98,7 @@ const servicesData = {
   'chiropractic': {
     title: 'Chiropractic Care',
     desc: 'Most pain originates from spinal misalignment and joint dysfunction, not just muscle tightness. Dr. Bhanu\'s chiropractic expertise, combined with physiotherapy, delivers precise spinal and joint corrections at your home for lasting relief without dependency on medication.',
-    icon: <Activity className="w-12 h-12" />,
+    icon: <Accessibility className="w-12 h-12" />,
     img: '/images/treatments/chiropractic_adjustment-opt.webp',
     conditions: [
       'Spinal Joint Restrictions',
@@ -121,7 +121,7 @@ const servicesData = {
   'geriatric': {
     title: 'Geriatric Physiotherapy',
     desc: 'Ageing should not mean losing independence. Our geriatric physiotherapy brings gentle, evidence-based care to elderly patients at home, improving balance, preventing falls, building strength, and supporting a healthy, active lifestyle in the comfort of familiar surroundings.',
-    icon: <Activity className="w-12 h-12" />,
+    icon: <Accessibility className="w-12 h-12" />,
     img: '/images/treatments/geriatric_physiotherapy_home.png',
     conditions: [
       'Age-Related Strength Decline',
@@ -144,7 +144,7 @@ const servicesData = {
   'dry-needling': {
     title: 'Dry Needling Therapy',
     desc: 'Stubborn muscle pain that doesn\'t respond to massage or rest is often caused by myofascial trigger points. Dr. Bhanu\'s certified dry needling precisely targets these knots to deactivate them, restore normal muscle function, and provide fast, lasting relief, all at your home.',
-    icon: <Zap className="w-12 h-12" />,
+    icon: <Syringe className="w-12 h-12" />,
     img: '/images/treatments/dry_needling_therapy.png',
     conditions: [
       'Myofascial Trigger Points',
@@ -167,7 +167,7 @@ const servicesData = {
   'cupping': {
     title: 'Cupping Therapy',
     desc: 'Cupping therapy uses controlled negative pressure to lift and release tight fascia, improve blood circulation, and accelerate tissue healing, an ancient technique now backed by modern clinical evidence. Ideal as a standalone treatment or combined with physiotherapy for faster recovery.',
-    icon: <Zap className="w-12 h-12" />,
+    icon: <Bandage className="w-12 h-12" />,
     img: '/images/treatments/cupping_therapy_session.png',
     conditions: [
       'Poor Circulation & Tissue Congestion',
@@ -190,7 +190,7 @@ const servicesData = {
   'iastm': {
     title: 'IASTM Therapy',
     desc: 'IASTM (Instrument Assisted Soft Tissue Mobilisation) uses specially designed tools to detect and break down scar tissue, adhesions, and fascial restrictions that limit movement and cause pain, restoring smooth, pain-free function in ways that hands alone cannot achieve.',
-    icon: <Zap className="w-12 h-12" />,
+    icon: <Target className="w-12 h-12" />,
     img: '/images/treatments/iastm_therapy_tool.png',
     conditions: [
       'Post-Injury Scar Tissue',
@@ -236,7 +236,7 @@ const servicesData = {
   'back-pain': {
     title: 'Back Pain Treatment',
     desc: `Back pain is one of the most common complaints today but not all back pain is serious, and most cases do not require surgery. While conditions like spondylitis or disc issues are often blamed, the reality is that many people experience back pain due to muscle weakness, poor posture, limited hip mobility, pelvic imbalance, or sedentary lifestyle habits. At ${BRAND_NAME}, we believe in identifying the true root cause of your pain rather than just treating symptoms. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you receive professional, one-on-one care tailored to your condition and lifestyle. Don't rush into medications or surgery. The right physiotherapy can make all the difference. Call now to book your home physiotherapy session.`,
-    icon: <Bone className="w-12 h-12" />,
+    icon: <Activity className="w-12 h-12" />,
     img: '/images/treatments/back_pain_treatment.png',
     conditions: [
       'Muscle Weakness & Core Instability',
@@ -259,7 +259,7 @@ const servicesData = {
   'neck-pain': {
     title: 'Neck Pain Treatment',
     desc: `Neck pain often starts subtly stiffness while turning your head, discomfort after long phone use, or a dull ache by the end of the day. Over time, it can progress into persistent pain, headaches, or even radiating symptoms into the shoulders and arms. While many assume it's due to cervical spondylosis or disc issues, a large number of cases are actually linked to forward head posture, tight neck and shoulder muscles, weak deep cervical stabilizers, and reduced mobility in the upper spine. Daily habits like prolonged screen time and poor sleeping positions further aggravate the problem. At ${BRAND_NAME}, we take an evidence-based and individualized approach to neck pain management. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you receive focused, one-on-one care in the comfort of your home. Address the cause, not just the symptoms. Book your session today and restore comfortable, pain-free movement.`,
-    icon: <Bone className="w-12 h-12" />,
+    icon: <Activity className="w-12 h-12" />,
     img: '/images/treatments/neck_pain_treatment.png',
     conditions: [
       'Forward head posture & tech neck',
@@ -282,7 +282,7 @@ const servicesData = {
   'shoulder-pain': {
     title: 'Shoulder Pain Treatment',
     desc: `Shoulder pain can make even simple movements like reaching overhead, combing your hair, or lifting objects difficult and painful. It often develops gradually and, if ignored, can significantly restrict daily activities. Common shoulder conditions include adhesive capsulitis (frozen shoulder), rotator cuff injuries, tendonitis, and scapular instability. While these may sound serious, many cases are effectively managed with the right physiotherapy approach without the need for injections or surgery. In most individuals, shoulder pain is influenced by joint stiffness, muscle imbalance, poor scapular control, repetitive strain, or improper movement patterns. Addressing these factors early is key to preventing long-term restriction. At ${BRAND_NAME}, we follow a structured and evidence-based rehabilitation approach tailored to your specific condition. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you receive expert care at your convenience. Don't let shoulder pain limit your movement early physiotherapy makes recovery faster and easier. Call now to book your home physiotherapy session.`,
-    icon: <Bone className="w-12 h-12" />,
+    icon: <Activity className="w-12 h-12" />,
     img: '/images/treatments/shoulder_pain_rehab.png',
     conditions: [
       'Frozen shoulder & adhesive capsulitis',
@@ -305,7 +305,7 @@ const servicesData = {
   'plantar-fasciitis': {
     title: 'Plantar Fasciitis Treatment',
     desc: `Sharp heel pain when you take your first steps in the morning? Discomfort after standing for long hours? These are classic signs of plantar fasciitis a condition caused by irritation of the thick band of tissue (plantar fascia) that supports your foot arch. Unlike general foot pain, plantar fasciitis is often linked to increased stress on the heel due to poor foot mechanics, tight calf muscles, prolonged standing, improper footwear, or sudden changes in activity levels. Ignoring these factors can lead to persistent pain with every step. At ${BRAND_NAME}, we approach plantar fasciitis with a targeted and progressive rehabilitation strategy focused on relieving stress from the plantar fascia. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you get expert care right at your home. Take the pressure off your heel the right treatment makes every step easier. Book your session today and get back to pain-free walking.`,
-    icon: <Bone className="w-12 h-12" />,
+    icon: <Activity className="w-12 h-12" />,
     img: '/images/treatments/back_pain_treatment.png',
     conditions: [
       'Heel pain & morning stiffness',
@@ -419,7 +419,7 @@ const ServiceDetail = () => {
     <div className="bg-white">
 
       {/* 1. CLINICAL HEADER */}
-      <section className="pt-36 pb-8 lg:pt-56 lg:pb-16 relative overflow-hidden min-h-[50vh] lg:h-[70vh] flex items-center">
+      <section className="pt-24 pb-6 lg:pt-36 lg:pb-10 relative overflow-hidden min-h-[50vh] lg:min-h-[70vh] flex items-center">
         {/* Background Image with Parallax Overlay */}
         <motion.div
           style={{ y: heroBgY }}
@@ -573,7 +573,7 @@ const ServiceDetail = () => {
       </section>
 
       {/* 3. RELATED SERVICES / CTA */}
-      <section className="py-12 lg:py-16 bg-surface/50 relative overflow-hidden">
+      <section className="py-8 lg:py-10 bg-surface/50 relative overflow-hidden">
         <div className="max-w-4xl mx-auto px-6 text-center space-y-10 relative z-10">
           <h2 className="editorial-heading text-primary leading-tight">
             Not sure which <br className="hidden md:block" />

@@ -6,10 +6,10 @@ import {
   MapPin,
   ArrowRight,
   PhoneCall,
-  Bone,
   Zap,
   Activity,
   FileCheck,
+  Target,
 } from "lucide-react";
 import Button from "../components/Button";
 import {
@@ -239,7 +239,7 @@ const About = () => {
                     icon: <ShieldCheck className="w-4 h-4" />,
                     text: "Kinesio Taping",
                   },
-                  { icon: <Bone className="w-4 h-4" />, text: "IASTM" },
+                  { icon: <Target className="w-4 h-4" />, text: "IASTM" },
                   {
                     icon: <Activity className="w-4 h-4" />,
                     text: "Manual Therapy",

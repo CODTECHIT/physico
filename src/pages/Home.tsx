@@ -10,12 +10,12 @@ import {
   UserCheck,
   Quote,
   Star,
-  Bone,
   Brain,
   Dumbbell,
   Activity,
   FileCheck,
   Award,
+  Accessibility,
 } from "lucide-react";
 import Button from "../components/Button";
 import TreatmentTicker from "../components/TreatmentTicker";
@@ -41,7 +41,7 @@ const Home = () => {
       slug: "orthopedic",
       title: "Orthopedic Rehabilitation",
       desc: "Recovery for joint pain, post-surgery stiffness, and musculoskeletal injuries delivered at your home.",
-      icon: <Bone className="w-6 h-6" />,
+      icon: <Activity className="w-6 h-6" />,
       img: "/images/treatments/back_pain_treatment-opt.webp",
       color: "primary",
     },

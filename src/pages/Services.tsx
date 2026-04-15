@@ -1,5 +1,5 @@
 import { motion, useScroll, useTransform } from 'framer-motion';
-import { Bone, Brain, Dumbbell, Target, Zap, ArrowRight, CheckCircle2, Activity } from 'lucide-react';
+import { Brain, Dumbbell, Target, Zap, ArrowRight, CheckCircle2, Activity, Accessibility, Syringe, Bandage, PersonStanding } from 'lucide-react';
 import Button from '../components/Button';
 import { Link } from 'react-router-dom';
 import { BRAND_NAME } from '../constants';
@@ -45,7 +45,7 @@ const Services = () => {
       focus: 'Reduce pain & restore movement',
       outcome: 'Patients with knee pain, frozen shoulder & post-surgical stiffness typically recover full function in 8–12 sessions.',
       idealFor: 'Post-surgery patients, knee & hip pain, office workers with chronic back or neck pain.',
-      icon: <Bone className="w-8 h-8" />,
+      icon: <Activity className="w-8 h-8" />,
       img: '/images/treatments/back_pain_treatment-opt.webp'
     },
     {
@@ -80,7 +80,7 @@ const Services = () => {
       focus: 'Restore joint mobility & optimise spinal function',
       outcome: 'Patients with chronic back and neck pain report significant relief after just 3–5 chiropractic sessions.',
       idealFor: 'Chronic back & neck pain, poor posture, desk workers, spinal stiffness patients.',
-      icon: <Activity className="w-8 h-8" />,
+      icon: <Accessibility className="w-8 h-8" />,
       img: '/images/treatments/chiropractic_adjustment-opt.webp'
     },
     {
@@ -97,7 +97,7 @@ const Services = () => {
       focus: 'Stay active & independent',
       outcome: 'Regular geriatric physio significantly reduces fall risk and helps elderly patients maintain independence longer.',
       idealFor: 'Elderly adults (60+), post-fall recovery, age-related joint pain, mobility decline.',
-      icon: <Activity className="w-8 h-8" />,
+      icon: <Accessibility className="w-8 h-8" />,
       img: '/images/treatments/geriatric_physiotherapy_home.png'
     },
     {
@@ -114,7 +114,7 @@ const Services = () => {
       focus: 'Release trigger points & restore muscle function',
       outcome: 'Patients with chronic muscle pain and tightness often experience significant relief within 2–4 sessions.',
       idealFor: 'Chronic muscle pain, neck & shoulder tightness, trigger points, headache from muscle tension.',
-      icon: <Zap className="w-8 h-8" />,
+      icon: <Syringe className="w-8 h-8" />,
       img: '/images/treatments/dry_needling_therapy.png'
     },
     {
@@ -131,7 +131,7 @@ const Services = () => {
       focus: 'Improve tissue mobility & muscle relaxation',
       outcome: 'Best results seen when combined with manual therapy, most patients report reduced stiffness and improved range of motion within 3–5 sessions.',
       idealFor: 'Muscle tightness, back stiffness, sports recovery, chronic pain with poor circulation.',
-      icon: <Zap className="w-8 h-8" />,
+      icon: <Bandage className="w-8 h-8" />,
       img: '/images/treatments/cupping_therapy_session.png'
     },
     {
@@ -148,7 +148,7 @@ const Services = () => {
       focus: 'Restore tissue health & movement quality',
       outcome: 'Particularly effective for post-surgical scar tissue and chronic tendon issues  results visible within 4–6 sessions.',
       idealFor: 'Post-surgery scar tissue, tendon pain, restricted movement, chronic soft tissue injuries.',
-      icon: <Zap className="w-8 h-8" />,
+      icon: <Target className="w-8 h-8" />,
       img: '/images/treatments/iastm_therapy_tool.png'
     },
     {
@@ -165,7 +165,7 @@ const Services = () => {
       focus: 'Support muscles & accelerate recovery',
       outcome: 'When combined with physiotherapy, Kinesio taping reduces recovery time and helps maintain treatment gains between sessions.',
       idealFor: 'Sports injuries, muscle strains, joint instability, swelling management, post-exercise recovery.',
-      icon: <Zap className="w-8 h-8" />,
+      icon: <Bandage className="w-8 h-8" />,
       img: '/images/treatments/Flexophysio New Website Images (3).jpg.jpeg'
     }
   ];
