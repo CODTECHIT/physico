@@ -1,6 +1,7 @@
 import { lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Layout from './components/Layout';
+import Analytics from './components/Analytics';
 
 // Optimized Route-based Code Splitting
 const Home = lazy(() => import('./pages/Home'));
@@ -10,6 +11,7 @@ const Contact = lazy(() => import('./pages/Contact'));
 const ServiceDetail = lazy(() => import('./pages/ServiceDetail'));
 const Conditions = lazy(() => import('./pages/Conditions'));
 const ConditionDetail = lazy(() => import('./pages/ConditionDetail'));
+const LocationLanding = lazy(() => import('./pages/LocationLanding'));
 const PrivacyPolicy = lazy(() => import('./pages/PrivacyPolicy'));
 const TermsAndConditions = lazy(() => import('./pages/TermsAndConditions'));
 const RefundPolicy = lazy(() => import('./pages/RefundPolicy'));
@@ -27,6 +29,7 @@ const PageLoader = () => (
 function App() {
   return (
     <Router>
+      <Analytics />
       <Layout>
         <Suspense fallback={<PageLoader />}>
           <Routes>
@@ -36,6 +39,7 @@ function App() {
             <Route path="/service/:id" element={<ServiceDetail />} />
             <Route path="/treatment" element={<Conditions />} />
             <Route path="/treatment/:slug" element={<ConditionDetail />} />
+            <Route path="/physiotherapy-:location" element={<LocationLanding />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-and-conditions" element={<TermsAndConditions />} />

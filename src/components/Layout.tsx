@@ -3,6 +3,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import ScrollToTop from "./ScrollToTop";
 import FloatingActions from "./FloatingActions";
+import SEO from "./SEO";
 import { motion } from "framer-motion";
 import { useLocation } from "react-router-dom";
 
@@ -15,6 +16,7 @@ const Layout = ({ children }: LayoutProps) => {
 
   return (
     <div className="flex flex-col min-h-screen">
+      <SEO canonical={location.pathname} />
       <ScrollToTop />
       <Navbar />
       <FloatingActions />

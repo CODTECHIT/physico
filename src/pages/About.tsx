@@ -12,6 +12,7 @@ import {
   Target,
 } from "lucide-react";
 import Button from "../components/Button";
+import SEO from "../components/SEO";
 import {
   CONTACT_PHONE_DISPLAY,
   CONTACT_WHATSAPP_LINK,
@@ -28,6 +29,10 @@ const About = () => {
 
   return (
     <div className="bg-white">
+      <SEO 
+        title={`About ${BRAND_NAME} | Expert Physiotherapy at Home`}
+        description={`Learn more about ${BRAND_NAME}, our mission, and why we are the preferred choice for home visit physiotherapy in Hyderabad.`}
+      />
       {/* 1. HERO HEADER */}
       <section className="pt-8 pb-6 lg:pt-12 lg:pb-8 relative overflow-hidden min-h-[30vh] lg:min-h-[45vh] flex items-center">
         {/* Background Image with Parallax Overlay */}
@@ -36,12 +41,12 @@ const About = () => {
           className="absolute inset-0 -z-10 h-[120%]"
         >
           <img
-            src="https://images.unsplash.com/photo-1576091160550-217359f4ecf8?auto=format&fit=crop&q=80&w=2000"
-            alt="Clinical Excellence Background"
-            className="w-full h-full object-cover"
-            loading="eager"
-            decoding="async"
-          />
+              src="https://images.unsplash.com/photo-1576091160550-217359f4ecf8?auto=format&fit=crop&q=80&w=2000"
+              alt="Professional physiotherapy clinic environment for expert home care in Hyderabad"
+              className="w-full h-full object-cover"
+              loading="eager"
+              decoding="async"
+            />
           <div className="absolute inset-0 bg-white/90 lg:bg-white/85" />
         </motion.div>
 

@@ -2,9 +2,10 @@ import { useParams, Link } from 'react-router-dom';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { CheckCircle2, ArrowRight, Dumbbell, Brain, HeartPulse, Zap, Activity, Accessibility, Syringe, Bandage, Target } from 'lucide-react';
 import Button from '../components/Button';
+import SEO from '../components/SEO';
 import { CONTACT_WHATSAPP_LINK, BRAND_NAME } from '../constants';
 
-const servicesData = {
+const servicesData: Record<string, any> = {
   'cardio': {
     title: 'Cardio-Respiratory Care',
     desc: 'Professional Cardio-Respiratory Physiotherapy at Home in Kukatpally & Miyapur. Our team brings specialized heart and lung rehabilitation to your doorstep across Hyderabad’s leading neighborhoods. Whether you\'re recovering from surgery or managing chronic conditions, our certified physiotherapists deliver personalized care for optimal recovery and comfort.',
@@ -411,12 +412,46 @@ const ServiceDetail = () => {
   const service = servicesData[id as keyof typeof servicesData] || servicesData['orthopedic'];
   const { scrollY } = useScroll();
 
+  // SEO Schema
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": service.title,
+    "description": service.desc,
+    "provider": {
+      "@type": "MedicalBusiness",
+      "name": BRAND_NAME,
+      "url": "https://www.flexophysio.com/"
+    },
+    "areaServed": [
+      { "@type": "City", "name": "Hyderabad" },
+      { "@type": "AdministrativeArea", "name": "Kukatpally" },
+      { "@type": "AdministrativeArea", "name": "Miyapur" }
+    ],
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": service.title,
+      "itemListElement": service.conditions.map((condition: string) => ({
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": condition
+        }
+      }))
+    }
+  };
+
   // Parallax transforms
   const heroBgY = useTransform(scrollY, [0, 500], [0, 150]);
   const watermarkY = useTransform(scrollY, [0, 2000], [0, 300]);
 
   return (
     <div className="bg-white">
+      <SEO 
+        title={`${service.title} at Home in Hyderabad`}
+        description={service.desc.substring(0, 160)}
+        schema={serviceSchema}
+      />
 
       {/* 1. CLINICAL HEADER */}
       <section className="pt-24 pb-6 lg:pt-36 lg:pb-10 relative overflow-hidden min-h-[50vh] lg:min-h-[70vh] flex items-center">
@@ -427,7 +462,7 @@ const ServiceDetail = () => {
         >
           <img
             src={service.img}
-            alt={`${BRAND_NAME} Service Detail Background`}
+            alt={`${service.title} Home Visit Physiotherapy Hyderabad - ${BRAND_NAME}`}
             className="w-full h-full object-cover opacity-20 lg:opacity-30"
             loading="lazy"
             decoding="async"
@@ -486,7 +521,7 @@ const ServiceDetail = () => {
                   <h2 className="editorial-heading text-primary leading-tight">Treatments <span className="text-accent italic font-normal">Offered</span></h2>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 lg:gap-6">
-                  {service.conditions.map((item, i) => {
+                  {service.conditions.map((item: string, i: number) => {
                     const slug = conditionSlugMap[item];
                     const content = (
                       <div className="flex items-center gap-3 lg:gap-4 group/item bg-white p-4 lg:p-5 rounded-2xl border border-primary/5 hover:border-accent/20 hover:shadow-lg transition-all duration-500">
@@ -514,7 +549,7 @@ const ServiceDetail = () => {
                   <h2 className="editorial-heading text-primary leading-tight">Our <span className="text-accent italic font-normal">Approach</span></h2>
                 </div>
                 <div className="space-y-6">
-                  {service.features.map((feat, i) => (
+                  {service.features.map((feat: string, i: number) => (
                     <div key={i} className="flex gap-6 group items-center">
                       <div className="w-12 h-12 rounded-xl bg-accent/10 flex items-center justify-center text-accent font-serif font-bold text-xl group-hover:bg-accent group-hover:text-white transition-all duration-300 shadow-sm">
                         0{i + 1}

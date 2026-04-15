@@ -240,7 +240,7 @@ const Services = () => {
                 >
                   <img
                     src={service.img}
-                    alt={service.title}
+                    alt={`${service.title} home visit physiotherapy in Hyderabad`}
                     className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-110"
                     loading="lazy"
                     decoding="async"

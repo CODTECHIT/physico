@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+
+# Allow AI bots for better GEO/AIO performance
+User-agent: GPTBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+Sitemap: https://www.flexophysio.com/sitemap.xml

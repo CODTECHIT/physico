@@ -15,10 +15,16 @@ import {
   Activity,
   FileCheck,
   Award,
-  HeartPulse,
+  Accessibility,
 } from "lucide-react";
 import Button from "../components/Button";
+import SEO from "../components/SEO";
 import TreatmentTicker from "../components/TreatmentTicker";
+import {
+  getOrganizationSchema,
+  getLocalBusinessSchema,
+  getWebsiteSchema,
+} from "../lib/seo-schemas";
 import {
   CONTACT_PHONE_DISPLAY,
   CONTACT_WHATSAPP_LINK,
@@ -28,6 +34,16 @@ import {
 
 const Home = () => {
   const { scrollY } = useScroll();
+
+  // SEO Schema
+  const homeSchema = {
+    "@context": "https://schema.org",
+    "@graph": [
+      getOrganizationSchema(),
+      getLocalBusinessSchema(),
+      getWebsiteSchema(),
+    ],
+  };
 
   // Parallax transforms
   const heroBgY = useTransform(scrollY, [0, 500], [0, 150]);
@@ -232,6 +248,11 @@ const Home = () => {
 
   return (
     <div className="overflow-x-hidden">
+      <SEO 
+        title="Best Home Visit Physiotherapy in Hyderabad"
+        description="Get expert physiotherapy at home in Hyderabad (Kukatpally, Miyapur, Gachibowli). Specialized in Orthopedic, Neuro & Stroke Rehab. Book a home visit today!"
+        schema={homeSchema}
+      />
       {/* 1. HERO  FULL-BLEED CINEMATIC */}
       <section className="relative min-h-screen flex flex-col justify-between overflow-hidden">
 
@@ -239,7 +260,7 @@ const Home = () => {
         <motion.div style={{ y: heroBgY }} className="absolute inset-0 -z-10 h-[115%]">
           <img
             src="/bg.webp"
-            alt="Physiotherapy Clinical Background"
+            alt="Expert Home Visit Physiotherapy in Hyderabad - Flexo Physio"
             className="w-full h-full object-cover"
             loading="eager"
             decoding="async"
@@ -273,7 +294,7 @@ const Home = () => {
             >
               <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse" />
               <span className="text-accent font-sans font-bold uppercase tracking-[0.22em] text-[9px] sm:text-[10px] lg:text-[11px]">
-                Expert Physiotherapy at Home · Hyderabad
+                #1 Rated Physiotherapy at Home in Hyderabad
               </span>
             </motion.div>
 
@@ -285,7 +306,7 @@ const Home = () => {
               className="font-serif font-bold text-white leading-[1.05] tracking-[-0.04em]"
               style={{ fontSize: "clamp(2.2rem, 5.5vw, 4.2rem)" }}
             >
-              Physiotherapy at Home for{" "}
+              Expert Physiotherapy at Home for{" "}
               <br className="hidden sm:block" />
               <span
                 className="italic font-normal"
@@ -296,7 +317,7 @@ const Home = () => {
                   backgroundClip: "text",
                 }}
               >
-                Pain Relief, Recovery, and Mobility.
+                Fast Recovery and Mobility.
               </span>
             </motion.h1>
 
@@ -308,8 +329,7 @@ const Home = () => {
               className="text-white/70 font-sans font-medium leading-relaxed max-w-[550px]"
               style={{ fontSize: "clamp(0.9rem, 1.5vw, 1.15rem)" }}
             >
-              Expert physiotherapy at home for pain relief, injury recovery, and
-              post-surgery rehab delivered with personalized care.
+              Professional, evidence-based physiotherapy delivered to your doorstep in Kukatpally, Miyapur, Kondapur, and Gachibowli. Recover from pain and surgery without the commute.
             </motion.p>
 
             {/* CTAs */}
@@ -367,7 +387,7 @@ const Home = () => {
             <div className="relative z-10 overflow-hidden rounded-[2rem] lg:rounded-[2.5rem] shadow-2xl border border-white/10">
               <img
                 src="/images/treatments/hero_physio_interaction_retry-opt.webp"
-                alt="Personalized Home Physiotherapy Session"
+                alt="Expert Physiotherapist providing home visit treatment in Hyderabad"
                 className="w-full h-full object-cover aspect-[4/5] lg:aspect-[4/5]"
                 loading="eager"
                 decoding="async"
@@ -411,7 +431,7 @@ const Home = () => {
                 { title: "3600+ Sessions", desc: "Hyderabad", icon: <Activity className="w-4 h-4 lg:w-5 lg:h-5" /> },
                 { title: "1000+ Patients", desc: "Treated", icon: <HomeIcon className="w-4 h-4 lg:w-5 lg:h-5" /> },
                 { title: "120+ Surgeries", desc: "Avoided Through Rehab", icon: <ShieldCheck className="w-4 h-4 lg:w-5 lg:h-5" /> },
-                { title: "160+ Post Surgery", desc: "Recoveries Through Rehab", icon: <HeartPulse className="w-4 h-4 lg:w-5 lg:h-5" /> },
+                { title: "160+ Post Surgery", desc: "Recoveries Through Rehab", icon: <Accessibility className="w-4 h-4 lg:w-5 lg:h-5" /> },
                 { title: "6+ Years", desc: "Experience", icon: <Award className="w-4 h-4 lg:w-5 lg:h-5" /> },
               ].map((item, idx) => (
                 <motion.div
@@ -440,6 +460,13 @@ const Home = () => {
         <div className="max-w-[1400px] mx-auto responsive-padding">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="space-y-5 lg:space-y-6">
+              <div className="inline-flex items-center space-x-3 bg-accent/5 px-4 py-2 rounded-full border-l-4 border-accent">
+                <div className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
+                <span className="text-[9px] font-bold text-primary uppercase tracking-widest">
+                  Chief Specialist
+                </span>
+              </div>
+
               <div className="flex items-center space-x-3">
                 <span className="w-8 h-[2px] bg-accent" />
                 <span className="text-accent font-sans font-bold uppercase tracking-[0.2em] text-[10px]">
@@ -481,16 +508,6 @@ const Home = () => {
                     loading="lazy"
                     decoding="async"
                   />
-
-                  {/* Floating Specialist Badge - Always Visible */}
-                  <div className="absolute top-6 right-6 bg-white/95 backdrop-blur-md px-4 py-2 shadow-lg border-l-4 border-accent z-20 rounded-r-lg">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
-                      <span className="text-[9px] font-bold text-primary uppercase tracking-widest">
-                        Chief Specialist
-                      </span>
-                    </div>
-                  </div>
                 </div>
 
                 {/* Floating Experience Badge - Always Visible */}

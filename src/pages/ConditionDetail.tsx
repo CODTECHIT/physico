@@ -14,12 +14,13 @@ import {
   Users
 } from 'lucide-react';
 import { conditionsData } from '../data/conditionsData';
-import { CONTACT_PHONE_DISPLAY, CONTACT_WHATSAPP_LINK } from '../constants';
+import { CONTACT_PHONE_DISPLAY, CONTACT_WHATSAPP_LINK, BRAND_NAME } from '../constants';
 import Button from '../components/Button';
+import SEO from '../components/SEO';
 
 const ConditionDetail = () => {
   const { slug } = useParams<{ slug: string }>();
-  const condition = slug ? conditionsData[slug] : null;
+  const condition = (slug && conditionsData[slug as keyof typeof conditionsData]) ? conditionsData[slug as keyof typeof conditionsData] : null;
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -29,8 +30,29 @@ const ConditionDetail = () => {
     return <Navigate to="/treatment" replace />;
   }
 
+  // SEO Schema
+  const conditionSchema = {
+    "@context": "https://schema.org",
+    "@type": "MedicalCondition",
+    "name": condition.title,
+    "description": condition.description,
+    "possibleTreatment": {
+      "@type": "MedicalTherapy",
+      "name": "Physiotherapy",
+      "provider": {
+        "@type": "MedicalBusiness",
+        "name": BRAND_NAME
+      }
+    }
+  };
+
   return (
     <div className="bg-white min-h-screen">
+      <SEO 
+        title={`${condition.title} Treatment at Home in Hyderabad`}
+        description={`Get expert home visit physiotherapy for ${condition.title} in Hyderabad. Specialized care for fast recovery and pain relief. Book your session today!`}
+        schema={conditionSchema}
+      />
       {/* 1. HERO SECTION */}
       <section className="relative pt-24 lg:pt-36 pb-12 overflow-hidden">
         {/* Parallax Background */}

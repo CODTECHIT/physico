@@ -25,7 +25,7 @@ const Footer = () => {
       <div className="absolute top-0 right-0 w-1/3 h-1/3 bg-accent/5 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2" />
 
       <div className="max-w-7xl mx-auto px-5 sm:px-6 md:px-12 relative z-10">
-        <div className="grid grid-cols-2 gap-5 sm:gap-6 lg:grid-cols-4 lg:gap-8">
+        <div className="grid grid-cols-2 gap-5 sm:gap-6 lg:grid-cols-5 lg:gap-8">
           {/* Brand Column */}
           <div className="col-span-2 space-y-5 rounded-3xl border border-white/10 bg-white/[0.03] p-5 lg:col-span-1 lg:space-y-8 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0">
             <Link to="/" className="inline-block group">
@@ -86,6 +86,33 @@ const Footer = () => {
                 </a>
               ))}
             </div>
+          </div>
+
+          {/* Service Areas */}
+          <div className="space-y-5 rounded-3xl border border-white/10 bg-white/[0.03] p-5 lg:space-y-8 lg:rounded-none lg:border-0 lg:bg-transparent lg:p-0">
+            <h4 className="text-base lg:text-lg font-serif font-bold tracking-tight border-b border-secondary/20 pb-2 inline-block pr-8">
+              Service Areas
+            </h4>
+            <ul className="grid grid-cols-1 gap-3 lg:gap-4">
+              {[
+                { name: "Kukatpally", path: "/physiotherapy-kukatpally" },
+                { name: "Miyapur", path: "/physiotherapy-miyapur" },
+                { name: "Gachibowli", path: "/physiotherapy-gachibowli" },
+                { name: "Kondapur", path: "/physiotherapy-kondapur" },
+                { name: "Hitech City", path: "/physiotherapy-hitech-city" },
+                { name: "Hyderabad", path: "/physiotherapy-hyderabad" },
+              ].map((item) => (
+                <li key={item.path}>
+                  <Link
+                    to={item.path}
+                    className="text-secondary/70 text-xs lg:text-sm hover:text-accent transition-all duration-300 hover:translate-x-1 inline-flex items-center gap-2 group/link"
+                  >
+                    <span className="w-1.5 h-1.5 rounded-full bg-accent/20 group-hover/link:bg-accent transition-colors" />
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
 
           {/* Quick Links */}

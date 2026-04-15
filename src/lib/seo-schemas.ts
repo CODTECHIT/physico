@@ -1,0 +1,79 @@
+import { BRAND_NAME, CONTACT_PHONE_DISPLAY } from '../constants';
+
+export const getOrganizationSchema = () => ({
+  "@type": "Organization",
+  "@id": "https://www.flexophysio.com/#organization",
+  "name": BRAND_NAME,
+  "url": "https://www.flexophysio.com/",
+  "logo": {
+    "@type": "ImageObject",
+    "url": "https://www.flexophysio.com/logo-square.png",
+    "width": "512",
+    "height": "512"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "telephone": CONTACT_PHONE_DISPLAY,
+    "contactType": "customer service",
+    "areaServed": "IN",
+    "availableLanguage": ["English", "Telugu", "Hindi"]
+  }
+});
+
+export const getLocalBusinessSchema = () => ({
+  "@type": "MedicalBusiness",
+  "@id": "https://www.flexophysio.com/#localbusiness",
+  "name": `${BRAND_NAME} - Home Visit Physiotherapy`,
+  "image": "https://www.flexophysio.com/hero-interaction.jpg",
+  "url": "https://www.flexophysio.com/",
+  "telephone": "+919502808581",
+  "priceRange": "₹₹",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Kukatpally, Miyapur",
+    "addressLocality": "Hyderabad",
+    "addressRegion": "Telangana",
+    "postalCode": "500072",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 17.4948,
+    "longitude": 78.3996
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ],
+    "opens": "07:00",
+    "closes": "21:00"
+  },
+  "areaServed": [
+    { "@type": "City", "name": "Hyderabad" },
+    { "@type": "AdministrativeArea", "name": "Kukatpally" },
+    { "@type": "AdministrativeArea", "name": "Miyapur" },
+    { "@type": "AdministrativeArea", "name": "Kondapur" },
+    { "@type": "AdministrativeArea", "name": "Gachibowli" },
+    { "@type": "AdministrativeArea", "name": "Hitech City" }
+  ]
+});
+
+export const getWebsiteSchema = () => ({
+  "@type": "WebSite",
+  "@id": "https://www.flexophysio.com/#website",
+  "url": "https://www.flexophysio.com/",
+  "name": BRAND_NAME,
+  "publisher": { "@id": "https://www.flexophysio.com/#organization" },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://www.flexophysio.com/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+});

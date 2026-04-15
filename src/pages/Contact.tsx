@@ -14,6 +14,7 @@ import {
   ChevronDown
 } from 'lucide-react';
 import Button from '../components/Button';
+import SEO from '../components/SEO';
 import { CONTACT_PHONE_DISPLAY, CONTACT_WHATSAPP_LINK, SERVICE_AREAS, INSTAGRAM_LINK, FACEBOOK_LINK, YOUTUBE_LINK, LINKEDIN_LINK, BRAND_NAME } from '../constants';
 
 const Contact = () => {
@@ -52,6 +53,10 @@ const Contact = () => {
 
   return (
     <div className="bg-white">
+      <SEO 
+        title={`Contact ${BRAND_NAME} | Book Your Home Visit`}
+        description={`Contact ${BRAND_NAME} to book your home visit physiotherapy in Hyderabad. We serve Kukatpally, Miyapur, Gachibowli, and more.`}
+      />
 
       {/* 1. HERO HEADER */}
       <section className="pt-12 pb-6 lg:pt-16 lg:pb-8 relative overflow-hidden min-h-[30vh] lg:min-h-[50vh] flex items-center">
