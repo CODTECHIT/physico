@@ -265,11 +265,12 @@ const About = () => {
               </div>
 
               {/* Achievements */}
-              <div className="flex flex-wrap gap-4 pt-4">
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-3 lg:gap-4 pt-4">
                 {[
                   { value: "1000+", label: "Patients Treated" },
                   { value: "3600+", label: "Sessions" },
-                  { value: "4.9★", label: "Google Reviews" },
+                  { value: "120+", label: "Surgeries Avoided" },
+                  { value: "160+", label: "Recoveries through Rehab" },
                 ].map((stat, idx) => (
                   <div
                     key={idx}

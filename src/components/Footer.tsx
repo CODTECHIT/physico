@@ -95,21 +95,19 @@ const Footer = () => {
             </h4>
             <ul className="grid grid-cols-1 gap-3 lg:gap-4">
               {[
-                { name: "Kukatpally", path: "/physiotherapy-kukatpally" },
-                { name: "Miyapur", path: "/physiotherapy-miyapur" },
-                { name: "Gachibowli", path: "/physiotherapy-gachibowli" },
-                { name: "Kondapur", path: "/physiotherapy-kondapur" },
-                { name: "Hitech City", path: "/physiotherapy-hitech-city" },
-                { name: "Hyderabad", path: "/physiotherapy-hyderabad" },
-              ].map((item) => (
-                <li key={item.path}>
-                  <Link
-                    to={item.path}
-                    className="text-secondary/70 text-xs lg:text-sm hover:text-accent transition-all duration-300 hover:translate-x-1 inline-flex items-center gap-2 group/link"
-                  >
-                    <span className="w-1.5 h-1.5 rounded-full bg-accent/20 group-hover/link:bg-accent transition-colors" />
-                    {item.name}
-                  </Link>
+                "Kukatpally",
+                "Miyapur",
+                "Gachibowli",
+                "Kondapur",
+                "Hitech City",
+                "Hyderabad",
+                "Nizampet",
+              ].map((name) => (
+                <li key={name}>
+                  <div className="text-secondary/60 hover:text-accent text-[10px] lg:text-xs uppercase tracking-widest transition-colors flex items-center group cursor-default">
+                    <span className="w-0 group-hover:w-3 h-[1px] bg-accent transition-all mr-0 group-hover:mr-2" />
+                    {name}
+                  </div>
                 </li>
               ))}
             </ul>

@@ -460,19 +460,6 @@ const Home = () => {
         <div className="max-w-[1400px] mx-auto responsive-padding">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="space-y-5 lg:space-y-6">
-              <div className="inline-flex items-center space-x-3 bg-accent/5 px-4 py-2 rounded-full border-l-4 border-accent">
-                <div className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
-                <span className="text-[9px] font-bold text-primary uppercase tracking-widest">
-                  Chief Specialist
-                </span>
-              </div>
-
-              <div className="flex items-center space-x-3">
-                <span className="w-8 h-[2px] bg-accent" />
-                <span className="text-accent font-sans font-bold uppercase tracking-[0.2em] text-[10px]">
-                  Patient Education & Guided Recovery Approach
-                </span>
-              </div>
               <h2 className="editorial-heading text-primary leading-tight">
                 We Don't Just Treat Your Pain <br className="hidden md:block" />
                 <span className="text-accent italic font-normal">
@@ -500,7 +487,7 @@ const Home = () => {
                 className="relative z-10"
               >
                 {/* Main Image with Clinical Border - No Cropping */}
-                <div className="aspect-[4/5] rounded-[2.5rem] lg:rounded-[4rem] overflow-hidden shadow-2xl border-4 lg:border-8 border-white bg-white">
+                <div className="aspect-[4/5] rounded-[2.5rem] lg:rounded-[4rem] overflow-hidden shadow-2xl border-4 lg:border-8 border-white bg-white relative">
                   <img
                     src="/founder.png"
                     alt="Dr. Bhanu Kumar Vemula, Chief Physiotherapist"
@@ -508,6 +495,19 @@ const Home = () => {
                     loading="lazy"
                     decoding="async"
                   />
+
+                  {/* Chief Specialist Badge - Adjusted to Top Right Corner */}
+                  <div className="absolute top-0 right-0 z-20">
+                    <motion.div 
+                      initial={{ opacity: 0 }}
+                      whileInView={{ opacity: 1 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: 0.5, duration: 0.8 }}
+                      className="bg-accent/90 backdrop-blur-md px-3 py-1.5 rounded-bl-[1.5rem] border-l border-b border-white/20 shadow-xl"
+                    >
+                      <span className="text-[10px] font-bold text-white uppercase tracking-widest">Chief Specialist</span>
+                    </motion.div>
+                  </div>
                 </div>
 
                 {/* Floating Experience Badge - Always Visible */}
