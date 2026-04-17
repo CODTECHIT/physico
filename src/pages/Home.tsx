@@ -462,11 +462,23 @@ const Home = () => {
                   We Help You Understand It.
                 </span>
               </h2>
-              <p className="text-base lg:text-lg text-dark font-medium leading-relaxed opacity-90 text-justify px-2 lg:px-4">
-                At {BRAND_NAME}, healing goes beyond the clinic. We believe that an informed patient is an empowered one. Through our guided recovery approach, we take the time to educate you about your condition, movement patterns, and the "why" behind every exercise and treatment.
-                From your very first session, you'll receive a personalized home exercise program designed to keep your recovery on track even when you're not with us. Because real healing happens 24 hours a day, not just during your appointment.
-                Your body has the ability to heal. We just help you understand how.
-              </p>
+              <div className="bg-surface/30 p-6 lg:p-10 rounded-2xl lg:rounded-[3rem] border border-accent/10 shadow-sm relative overflow-hidden group transition-all duration-500 hover:shadow-md">
+                {/* Subtle decorative background element */}
+                <div className="absolute -top-10 -right-10 w-32 h-32 bg-accent/5 rounded-full blur-3xl transition-all duration-700 group-hover:bg-accent/10" />
+                <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-primary/5 rounded-full blur-3xl" />
+                
+                <div className="text-base lg:text-lg text-dark font-medium leading-relaxed opacity-90 text-justify relative z-10 space-y-4">
+                  <p>
+                    At {BRAND_NAME}, healing goes beyond the clinic. We believe that an informed patient is an empowered one. Through our guided recovery approach, we take the time to educate you about your condition, movement patterns, and the "why" behind every exercise and treatment.
+                  </p>
+                  <p>
+                    From your very first session, you'll receive a personalized home exercise program designed to keep your recovery on track even when you're not with us. Because real healing happens 24 hours a day, not just during your appointment.
+                  </p>
+                  <p>
+                    Your body has the ability to heal. We just help you understand how.
+                  </p>
+                </div>
+              </div>
             </div>
 
             <div className="relative max-w-sm mx-auto lg:ml-auto lg:mr-0">
