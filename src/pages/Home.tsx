@@ -462,7 +462,7 @@ const Home = () => {
                   We Help You Understand It.
                 </span>
               </h2>
-              <p className="text-base lg:text-lg text-dark font-medium leading-relaxed opacity-90 text-justify">
+              <p className="text-base lg:text-lg text-dark font-medium leading-relaxed opacity-90 text-justify px-2 lg:px-4">
                 At {BRAND_NAME}, healing goes beyond the clinic. We believe that an informed patient is an empowered one. Through our guided recovery approach, we take the time to educate you about your condition, movement patterns, and the "why" behind every exercise and treatment.
                 From your very first session, you'll receive a personalized home exercise program designed to keep your recovery on track even when you're not with us. Because real healing happens 24 hours a day, not just during your appointment.
                 Your body has the ability to heal. We just help you understand how.
