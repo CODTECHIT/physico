@@ -456,9 +456,9 @@ const Home = () => {
                   Patient Education & Guided Recovery Approach
                 </span>
               </div>
-              <h2 className="editorial-heading text-primary leading-tight">
-                We Don't Just Treat Your Pain <br />
-                <span className="text-accent italic font-normal">
+              <h2 className="text-[1.75rem] sm:text-3xl lg:text-4xl xl:text-[2.6rem] font-serif font-bold text-primary leading-[1.15] lg:leading-tight">
+                We Don't Just Treat Your Pain{" "}
+                <span className="text-accent italic font-normal block sm:inline mt-1 sm:mt-0">
                   We Help You Understand It.
                 </span>
               </h2>
@@ -512,9 +512,9 @@ const Home = () => {
                       whileInView={{ opacity: 1, x: 0, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.5, duration: 0.8 }}
-                      className="bg-accent/95 backdrop-blur-md pl-5 pr-10 pt-4 pb-2.5 rounded-bl-[2.5rem] border-l border-b border-white/20 shadow-2xl"
+                      className="bg-accent/95 backdrop-blur-md px-6 py-3 rounded-bl-[2rem] border-l border-b border-white/20 shadow-xl"
                     >
-                      <span className="text-[10px] font-bold text-white uppercase tracking-wider">Chief Specialist</span>
+                      <span className="text-[10px] font-bold text-white uppercase tracking-widest whitespace-nowrap">Chief Specialist</span>
                     </motion.div>
                   </div>
                 </div>
