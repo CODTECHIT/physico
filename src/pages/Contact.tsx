@@ -15,7 +15,7 @@ import {
 } from 'lucide-react';
 import Button from '../components/Button';
 import SEO from '../components/SEO';
-import { CONTACT_PHONE_DISPLAY, CONTACT_WHATSAPP_LINK, SERVICE_AREAS, INSTAGRAM_LINK, FACEBOOK_LINK, YOUTUBE_LINK, LINKEDIN_LINK, BRAND_NAME } from '../constants';
+import { CONTACT_PHONE_DISPLAY, CONTACT_WHATSAPP_LINK, SERVICE_AREAS, INSTAGRAM_LINK, FACEBOOK_LINK, YOUTUBE_LINK, LINKEDIN_LINK, BRAND_NAME, CONTACT_EMAIL } from '../constants';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -121,7 +121,7 @@ const Contact = () => {
               <div className="space-y-3 lg:space-y-4">
                 {[
                   { icon: <PhoneCall className="w-5 h-5 lg:w-6 lg:h-6" />, label: 'Direct Support', value: CONTACT_PHONE_DISPLAY, sub: 'Available Mon-Sat, 8am to 8pm' },
-                  { icon: <Mail className="w-5 h-5 lg:w-6 lg:h-6" />, label: 'Clinical Inquiries', value: 'care@flexophysio.com', sub: 'Expect a reply within 12 hours' },
+                  { icon: <Mail className="w-5 h-5 lg:w-6 lg:h-6" />, label: 'Clinical Inquiries', value: CONTACT_EMAIL, sub: 'Expect a reply within 12 hours' },
                   { icon: <MapPin className="w-5 h-5 lg:w-6 lg:h-6" />, label: 'Service Areas', value: 'Hyderabad, India', sub: SERVICE_AREAS.split(',').slice(0, 4).join(', ') }
                 ].map((item, i) => (
                   <div key={i} className="group relative bg-surface/30 p-6 lg:p-8 rounded-2xl lg:rounded-[2.5rem] border border-primary/5 hover:border-accent/20 hover:bg-white hover:shadow-xl transition-all duration-500">

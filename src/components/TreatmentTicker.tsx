@@ -1,7 +1,12 @@
 import { memo, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-const treatments = ["Orthopedic", "Neuro", "Sports", "Cardio"];
+const treatments = [
+  "Neuro Physiotherapy",
+  "Orthopedic Physiotherapy",
+  "Sports Physiotherapy",
+  "Cardiac Physiotherapy",
+];
 
 const TreatmentTicker = memo(function TreatmentTicker() {
   const [treatmentIndex, setTreatmentIndex] = useState(0);
@@ -15,7 +20,7 @@ const TreatmentTicker = memo(function TreatmentTicker() {
   }, []);
 
   return (
-    <span className="inline-block min-w-[120px] text-left">
+    <span className="inline-block w-full md:w-auto md:min-w-[550px] text-center md:text-left">
       <AnimatePresence mode="wait">
         <motion.span
           key={treatments[treatmentIndex]}

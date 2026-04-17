@@ -27,7 +27,7 @@ const Conditions = () => {
           className="absolute inset-0 -z-10 h-[120%]"
         >
           <img
-            src="/images/treatments/back_pain_treatment-opt.webp"
+            src="/images/treatments/orthopedic_rehab_new.jpg"
             alt={`${BRAND_NAME} Conditions Background`}
             className="w-full h-full object-cover"
             loading="lazy"

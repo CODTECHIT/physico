@@ -28,7 +28,7 @@ const Services = () => {
       outcome: 'Most patients show measurable improvement in mobility and daily function within 10-15 sessions.',
       idealFor: "Stroke survivors, paralysis patients, Parkinson's patients, children with neuro conditions.",
       icon: <Brain className="w-8 h-8" />,
-      img: '/images/treatments/stroke_rehab_session-opt.webp'
+      img: '/images/treatments/neuro_rehab_new.jpg'
     },
     {
       id: '02',
@@ -46,7 +46,7 @@ const Services = () => {
       outcome: 'Patients with knee pain, frozen shoulder & post-surgical stiffness typically recover full function in 8–12 sessions.',
       idealFor: 'Post-surgery patients, knee & hip pain, office workers with chronic back or neck pain.',
       icon: <Activity className="w-8 h-8" />,
-      img: '/images/treatments/back_pain_treatment-opt.webp'
+      img: '/images/treatments/orthopedic_rehab_new.jpg'
     },
     {
       id: '03',
@@ -64,7 +64,7 @@ const Services = () => {
       outcome: 'Athletes return to training significantly faster with structured home-based sports rehab compared to rest alone.',
       idealFor: 'Athletes, gym-goers, runners, cricket & football players, and anyone with a sports-related injury.',
       icon: <Dumbbell className="w-8 h-8" />,
-      img: '/images/treatments/acl_rehab_exercise-opt.webp'
+      img: '/images/treatments/sports_rehab_new.jpg'
     },
     {
       id: '04',

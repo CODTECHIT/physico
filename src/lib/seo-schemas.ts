@@ -1,4 +1,4 @@
-import { BRAND_NAME, CONTACT_PHONE_DISPLAY } from '../constants';
+import { BRAND_NAME, CONTACT_PHONE_DISPLAY, CONTACT_EMAIL } from '../constants';
 
 export const getOrganizationSchema = () => ({
   "@type": "Organization",
@@ -14,6 +14,7 @@ export const getOrganizationSchema = () => ({
   "contactPoint": {
     "@type": "ContactPoint",
     "telephone": CONTACT_PHONE_DISPLAY,
+    "email": CONTACT_EMAIL,
     "contactType": "customer service",
     "areaServed": "IN",
     "availableLanguage": ["English", "Telugu", "Hindi"]
@@ -27,6 +28,7 @@ export const getLocalBusinessSchema = () => ({
   "image": "https://www.flexophysio.com/hero-interaction.jpg",
   "url": "https://www.flexophysio.com/",
   "telephone": "+919502808581",
+  "email": CONTACT_EMAIL,
   "priceRange": "₹₹",
   "address": {
     "@type": "PostalAddress",

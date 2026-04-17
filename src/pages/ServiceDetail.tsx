@@ -31,7 +31,7 @@ const servicesData: Record<string, any> = {
     title: 'Neuro Rehabilitation',
     desc: 'Stroke, paralysis, and neurological conditions require specialist hands-on care, not just exercises. Dr. Bhanu delivers evidence-based neuro rehab directly at your home in Kukatpally, Miyapur, Kondapur and nearby areas, helping patients regain movement, balance, and daily independence.',
     icon: <Brain className="w-12 h-12" />,
-    img: '/images/treatments/stroke_rehab_session-opt.webp',
+    img: '/images/treatments/neuro_rehab_new.jpg',
     conditions: [
       'Stroke Rehabilitation',
       "Parkinson's Disease Rehabilitation",
@@ -54,7 +54,7 @@ const servicesData: Record<string, any> = {
     title: 'Orthopedic Rehabilitation',
     desc: 'Whether it\'s joint pain, post-surgery stiffness, or a musculoskeletal injury, recovery should happen at your pace, in your own home. Our orthopedic physiotherapy combines manual therapy, targeted exercises, and advanced modalities to eliminate pain at the root cause, not just the symptoms.',
     icon: <Activity className="w-12 h-12" />,
-    img: '/images/treatments/back_pain_treatment-opt.webp',
+    img: '/images/treatments/orthopedic_rehab_new.jpg',
     conditions: [
       'Back Pain Treatment',
       'Neck Pain Treatment',
@@ -77,7 +77,7 @@ const servicesData: Record<string, any> = {
     title: 'Sports Rehabilitation',
     desc: 'Sports injuries demand fast, precise recovery so you can return to peak performance without re-injury. From ligament tears to muscle strains, our sports physio program combines injury-specific treatment with functional training, designed around your sport and your body.',
     icon: <Dumbbell className="w-12 h-12" />,
-    img: '/images/treatments/acl_rehab_exercise-opt.webp',
+    img: '/images/treatments/sports_rehab_new.jpg',
     conditions: [
       'Tennis Elbow Treatment',
       "Golfer's Elbow Treatment",
@@ -261,7 +261,7 @@ const servicesData: Record<string, any> = {
     title: 'Neck Pain Treatment',
     desc: `Neck pain often starts subtly stiffness while turning your head, discomfort after long phone use, or a dull ache by the end of the day. Over time, it can progress into persistent pain, headaches, or even radiating symptoms into the shoulders and arms. While many assume it's due to cervical spondylosis or disc issues, a large number of cases are actually linked to forward head posture, tight neck and shoulder muscles, weak deep cervical stabilizers, and reduced mobility in the upper spine. Daily habits like prolonged screen time and poor sleeping positions further aggravate the problem. At ${BRAND_NAME}, we take an evidence-based and individualized approach to neck pain management. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you receive focused, one-on-one care in the comfort of your home. Address the cause, not just the symptoms. Book your session today and restore comfortable, pain-free movement.`,
     icon: <Activity className="w-12 h-12" />,
-    img: '/images/treatments/neck_pain_treatment.png',
+    img: '/images/treatments/neck_pain_new.jpg',
     conditions: [
       'Forward head posture & tech neck',
       'Tight neck & shoulder muscles',

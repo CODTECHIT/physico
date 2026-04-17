@@ -1,4 +1,5 @@
-import { useScroll, useTransform, motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { useScroll, useTransform, useSpring, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
   ArrowRight,
@@ -34,6 +35,21 @@ import {
 
 const Home = () => {
   const { scrollY } = useScroll();
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth < 768);
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  // Smooth scroll value to prevent jittery/stuck parallax
+  const scrollYSpring = useSpring(scrollY, {
+    stiffness: 100,
+    damping: 30,
+    restDelta: 0.001
+  });
 
   // SEO Schema
   const homeSchema = {
@@ -45,11 +61,11 @@ const Home = () => {
     ],
   };
 
-  // Parallax transforms
-  const heroBgY = useTransform(scrollY, [0, 500], [0, 150]);
-  const heroContentY = useTransform(scrollY, [0, 500], [0, -50]);
-  const interactionImgY = useTransform(scrollY, [0, 500], [0, 50]);
-  const watermarkY = useTransform(scrollY, [0, 3000], [0, 400]);
+  // Parallax transforms - disabled on mobile for better performance
+  const heroBgY = useTransform(scrollYSpring, [0, 500], [0, isMobile ? 0 : 150]);
+  const heroContentY = useTransform(scrollYSpring, [0, 500], [0, isMobile ? 0 : -50]);
+  const interactionImgY = useTransform(scrollYSpring, [0, 500], [0, isMobile ? 0 : 50]);
+  const watermarkY = useTransform(scrollYSpring, [0, 3000], [0, isMobile ? 0 : 400]);
 
   const specialties = [
     {
@@ -58,7 +74,7 @@ const Home = () => {
       title: "Orthopedic Rehabilitation",
       desc: "Recovery for joint pain, post-surgery stiffness, and musculoskeletal injuries delivered at your home.",
       icon: <Activity className="w-6 h-6" />,
-      img: "/images/treatments/back_pain_treatment-opt.webp",
+      img: "/images/treatments/orthopedic_rehab_new.jpg",
       color: "primary",
     },
     {
@@ -67,7 +83,7 @@ const Home = () => {
       title: "Neuro Rehabilitation",
       desc: "Specialist hands-on care for stroke recovery, paralysis, and neurological conditions in Kukatpally and Miyapur.",
       icon: <Brain className="w-6 h-6" />,
-      img: "/images/treatments/stroke_rehab_session-opt.webp",
+      img: "/images/treatments/neuro_rehab_new.jpg",
       color: "dark",
     },
     {
@@ -76,7 +92,7 @@ const Home = () => {
       title: "Sports Rehabilitation",
       desc: "Fast, precise recovery from ligament tears and muscle strains to return you to peak performance.",
       icon: <Dumbbell className="w-6 h-6" />,
-      img: "/images/treatments/acl_rehab_exercise-opt.webp",
+      img: "/images/treatments/sports_rehab_new.jpg",
       color: "accent",
     },
   ];
@@ -207,12 +223,12 @@ const Home = () => {
     {
       title: "Back Pain",
       slug: "back-pain",
-      img: "/images/treatments/back_pain_treatment-opt.webp",
+      img: "/images/treatments/orthopedic_rehab_new.jpg",
     },
     {
       title: "Neck Pain",
       slug: "neck-pain",
-      img: "/images/treatments/neck_pain_treatment-opt.webp",
+      img: "/images/treatments/neck_pain_new.jpg",
     },
     {
       title: "Shoulder Pain",
@@ -222,7 +238,7 @@ const Home = () => {
     {
       title: "Stroke Recovery",
       slug: "stroke-rehabilitation",
-      img: "/images/treatments/stroke_rehab_session-opt.webp",
+      img: "/images/treatments/neuro_rehab_new.jpg",
     },
     {
       title: "Parkinson’s Care",
@@ -232,7 +248,7 @@ const Home = () => {
     {
       title: "ACL Rehabilitation",
       slug: "acl-rehabilitation",
-      img: "/images/treatments/acl_rehab_exercise-opt.webp",
+      img: "/images/treatments/sports_rehab_new.jpg",
     },
     {
       title: "Tennis Elbow",
@@ -255,10 +271,13 @@ const Home = () => {
         schema={homeSchema}
       />
       {/* 1. HERO  FULL-BLEED CINEMATIC */}
-      <section className="relative min-h-screen flex flex-col justify-between overflow-hidden">
+      <section className="relative min-h-screen lg:min-h-[100dvh] flex flex-col justify-between overflow-hidden">
 
         {/* ── Background: photo + layered dark gradient ── */}
-        <motion.div style={{ y: heroBgY }} className="absolute inset-0 -z-10 h-[115%]">
+        <motion.div
+          style={{ y: heroBgY, willChange: "transform", z: 0 }}
+          className="absolute inset-0 -z-10 h-[115%] pointer-events-none"
+        >
           <img
             src="/bg.webp"
             alt="Expert Home Visit Physiotherapy in Hyderabad - Flexo Physio"
@@ -342,7 +361,7 @@ const Home = () => {
 
               <a
                 href={`tel:${CONTACT_PHONE_DISPLAY?.replace(/\s/g, "")}`}
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm px-7 py-4 text-white font-semibold text-sm tracking-wide hover:bg-white/10 hover:border-white/40 transition-all duration-300 whitespace-nowrap"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-md px-7 py-4 text-white font-semibold text-sm tracking-wide hover:bg-white/10 hover:border-white/40 transition-all duration-300 whitespace-nowrap"
               >
                 📞 {CONTACT_PHONE_DISPLAY}
               </a>
@@ -413,15 +432,15 @@ const Home = () => {
         </motion.div>
 
         {/* ── TRUST BAR  floating on dark base ── */}
-        <div className="relative z-30 bg-white/5 backdrop-blur-xl border-t border-white/10">
+        <div className="relative z-30 bg-white/10 backdrop-blur-none md:backdrop-blur-lg border-t border-white/10">
           <div className="max-w-[1400px] mx-auto responsive-padding py-4 lg:py-6">
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-0 lg:divide-x lg:divide-white/10">
               {[
                 { title: "Certified Doctors", desc: "BPT / MPT", icon: <UserCheck className="w-4 h-4 lg:w-5 lg:h-5" /> },
                 { title: "3600+ Sessions", desc: "Hyderabad", icon: <Activity className="w-4 h-4 lg:w-5 lg:h-5" /> },
                 { title: "1000+ Patients", desc: "Treated", icon: <HomeIcon className="w-4 h-4 lg:w-5 lg:h-5" /> },
-                { title: "120+ Surgeries", desc: "Avoided Through Rehab", icon: <ShieldCheck className="w-4 h-4 lg:w-5 lg:h-5" /> },
-                { title: "160+ Post Surgery", desc: "Recoveries Through Rehab", icon: <Accessibility className="w-4 h-4 lg:w-5 lg:h-5" /> },
+                { title: "110+ Surgeries", desc: "Avoided Through Rehab", icon: <ShieldCheck className="w-4 h-4 lg:w-5 lg:h-5" /> },
+                { title: "140+ Post Surgery", desc: "Recoveries Through Rehab", icon: <Accessibility className="w-4 h-4 lg:w-5 lg:h-5" /> },
                 { title: "6+ Years", desc: "Experience", icon: <Award className="w-4 h-4 lg:w-5 lg:h-5" /> },
               ].map((item, idx) => (
                 <motion.div
@@ -466,7 +485,7 @@ const Home = () => {
                 {/* Subtle decorative background element */}
                 <div className="absolute -top-10 -right-10 w-32 h-32 bg-accent/5 rounded-full blur-3xl transition-all duration-700 group-hover:bg-accent/10" />
                 <div className="absolute -bottom-10 -left-10 w-32 h-32 bg-primary/5 rounded-full blur-3xl" />
-                
+
                 <div className="text-base lg:text-lg text-dark font-medium leading-relaxed opacity-90 text-justify relative z-10 space-y-4">
                   <p>
                     At {BRAND_NAME}, healing goes beyond the clinic. We believe that an informed patient is an empowered one. Through our guided recovery approach, we take the time to educate you about your condition, movement patterns, and the "why" behind every exercise and treatment.
@@ -496,7 +515,7 @@ const Home = () => {
                 {/* Main Image with Clinical Border - No Cropping */}
                 <div className="aspect-[4/5] rounded-[2.5rem] lg:rounded-[4rem] overflow-hidden shadow-2xl border-4 lg:border-8 border-white bg-white relative">
                   <img
-                    src="/founder.png"
+                    src="/founder.jpg"
                     alt="Dr. Bhanu Kumar Vemula, Chief Physiotherapist"
                     className="w-full h-full object-contain"
                     loading="lazy"
@@ -577,9 +596,8 @@ const Home = () => {
               <span className="text-accent font-sans font-bold uppercase tracking-[0.3em] text-[10px] mb-2 block">
                 Our Expertise
               </span>
-              <h2 className="editorial-heading text-primary leading-tight">
-                Comprehensive <br className="hidden md:block" />
-                <span className="italic text-accent">Home</span> Treatment.
+              <h2 className="text-[1.8rem] sm:text-3xl lg:text-[2.8rem] xl:text-[3rem] font-serif font-bold text-primary leading-tight">
+                Comprehensive <span className="italic text-accent">Home</span> Treatment.
               </h2>
             </div>
             <div className="lg:col-span-4 lg:text-right">
@@ -659,13 +677,13 @@ const Home = () => {
       {/* SPECIALIZED TREATMENTS (Conditions We Treat) - Redesigned as Marquee */}
       <section className="section-spacing bg-surface/50 overflow-hidden">
         <div className="max-w-7xl mx-auto responsive-padding mb-8 lg:mb-12 text-center lg:text-left">
-          <div className="flex items-center space-x-3 mb-3 lg:mb-4 justify-center lg:justify-start">
-            <span className="w-8 h-[2px] bg-accent" />
+          <div className="flex items-center space-x-3 mb-4 justify-center lg:justify-start">
+            <span className="w-12 h-[2px] bg-accent" />
             <span className="text-accent font-sans font-bold uppercase tracking-[0.2em] text-[10px]">
               Specialized Conditions
             </span>
           </div>
-          <h2 className="editorial-heading text-primary leading-tight flex flex-wrap justify-center lg:justify-start items-center gap-x-3">
+          <h2 className="text-[1.8rem] sm:text-3xl lg:text-[2.8rem] xl:text-[3rem] font-serif font-bold text-primary leading-tight flex flex-wrap justify-center lg:justify-start items-center gap-x-3">
             <span>Treatments We</span>
             <span className="text-accent italic font-normal">Offer</span>
             <TreatmentTicker />
@@ -741,7 +759,7 @@ const Home = () => {
             <span className="text-accent font-sans font-bold uppercase tracking-[0.3em] text-[10px] block mb-3">
               The Advantage
             </span>
-            <h2 className="editorial-heading text-primary leading-tight">
+            <h2 className="text-[1.8rem] sm:text-3xl lg:text-[2.8rem] xl:text-[3rem] font-serif font-bold text-primary leading-tight">
               Why Patients Choose{" "}
               <span className="italic font-normal text-accent">
                 Flexo Over a Clinic

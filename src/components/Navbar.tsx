@@ -65,16 +65,16 @@ const Navbar = () => {
             <img
               src="/logo-square.png"
               alt={BRAND_NAME}
-              className="lg:hidden h-11 w-auto object-contain group-hover:opacity-80 transition-opacity rounded-lg"
+              className="lg:hidden h-14 w-auto object-contain group-hover:opacity-80 transition-opacity rounded-lg"
               loading="eager"
               decoding="async"
             />
           </div>
-          <div className="min-w-0 overflow-hidden border-l border-primary/10 pl-2.5 py-1 xl:pl-4">
-            <span className="block whitespace-nowrap text-[clamp(0.75rem,2.5vw,0.9rem)] font-serif font-bold leading-[1.05] tracking-[-0.04em] text-primary transition-opacity group-hover:opacity-80 min-[390px]:text-[clamp(0.85rem,3vw,1rem)] lg:text-base xl:text-2xl">
+          <div className="min-w-0 overflow-hidden border-l border-primary/10 pl-2 py-0.5 xl:pl-4">
+            <span className="block whitespace-nowrap text-[clamp(0.8rem,4.2vw,1.1rem)] font-serif font-bold leading-[1.05] tracking-tighter text-primary transition-opacity group-hover:opacity-80 lg:text-base lg:tracking-normal xl:text-2xl">
               FLEXO <span className="text-accent italic">PHYSIOTHERAPY</span>
             </span>
-            <span className="mt-1 block font-sans text-[7px] font-bold tracking-[0.14em] text-accent min-[360px]:text-[8px] lg:mt-1.5 lg:text-[10px] lg:tracking-[0.22em] xl:text-[11px]">
+            <span className="mt-0.5 block font-sans text-[6px] font-bold tracking-[0.1em] text-accent min-[360px]:text-[7px] lg:mt-1.5 lg:text-[10px] lg:tracking-[0.22em] xl:text-[11px]">
               Mobility Flexibility Stability
             </span>
           </div>
@@ -185,30 +185,30 @@ const Navbar = () => {
         )}
       >
         {/* Mobile Menu Header */}
-        <div className="flex items-center justify-between gap-3 px-5 py-5 border-b border-primary/5 bg-white shadow-sm shrink-0 sm:px-6 sm:py-6">
+        <div className="flex items-center justify-between gap-2 px-4 py-5 border-b border-primary/5 bg-white shadow-sm shrink-0 sm:px-6 sm:py-6">
           <div className="flex min-w-0 items-center gap-2">
             <img
               src="/logo-square.png"
-              className="h-12 w-auto rounded-lg"
+              className="h-8 w-auto rounded-lg sm:h-12"
               alt="Logo"
               loading="eager"
               decoding="async"
             />
             <div className="min-w-0 overflow-hidden border-l border-primary/10 pl-2 py-0.5">
-              <span className="block whitespace-nowrap font-serif text-lg font-bold tracking-tighter text-primary sm:text-2xl">
+              <span className="block whitespace-nowrap font-serif text-[clamp(0.95rem,4.5vw,1.35rem)] font-bold tracking-tighter text-primary sm:text-2xl">
                 FLEXO <span className="text-accent italic">PHYSIOTHERAPY</span>
               </span>
-              <span className="block font-sans text-[6px] font-bold text-accent">
+              <span className="block font-sans text-[6px] font-bold text-accent sm:text-[8px]">
                 Mobility Flexibility Stability
               </span>
             </div>
           </div>
           <button
-            className="text-primary p-2.5 focus:outline-none active:scale-90 bg-primary/5 rounded-full hover:bg-accent/10 hover:text-accent transition-all"
+            className="text-primary p-2 focus:outline-none active:scale-90 bg-primary/5 rounded-full hover:bg-accent/10 hover:text-accent transition-all shrink-0"
             onClick={() => setIsOpen(false)}
             aria-label="Close Menu"
           >
-            <X size={28} />
+            <X size={24} className="sm:size-7" />
           </button>
         </div>
 

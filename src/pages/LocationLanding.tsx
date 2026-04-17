@@ -51,12 +51,78 @@ const locationData: Record<string, any> = {
     title: 'Best Home Physiotherapy Services in Kondapur',
     description: 'Top-rated home visit physiotherapy in Kondapur. Specialized neuro and orthopedic rehabilitation for all age groups.',
     keywords: 'physiotherapy in Kondapur, home visit physiotherapist Kondapur'
+  },
+  'madhapur': {
+    name: 'Madhapur',
+    title: 'Physiotherapy at Home in Madhapur',
+    description: 'Expert home visit physiotherapy services in Madhapur. Specialized care for IT professionals and elderly patients.',
+    keywords: 'physiotherapy in Madhapur, home visit physiotherapist Madhapur'
+  },
+  'kphb': {
+    name: 'KPHB',
+    title: 'Expert Home Physiotherapy in KPHB',
+    description: 'Quality physiotherapy at your doorstep in KPHB Colony. Specialized in orthopedic and neuro rehabilitation.',
+    keywords: 'physiotherapy in KPHB, home visit physiotherapist KPHB'
+  },
+  'pragathi-nagar': {
+    name: 'Pragathi Nagar',
+    title: 'Home Visit Physiotherapy in Pragathi Nagar',
+    description: 'Professional physiotherapy services in Pragathi Nagar. Specialized treatment for back pain and sports injuries.',
+    keywords: 'physiotherapy in Pragathi Nagar, home visit physiotherapist Pragathi Nagar'
+  },
+  'nizampet': {
+    name: 'Nizampet',
+    title: 'Physiotherapy at Home in Nizampet',
+    description: 'Expert home visit physiotherapy in Nizampet. We provide specialized care for geriatric and post-surgical patients.',
+    keywords: 'physiotherapy in Nizampet, home visit physiotherapist Nizampet'
+  },
+  'hafeezpet': {
+    name: 'Hafeezpet',
+    title: 'Expert Home Physiotherapy in Hafeezpet',
+    description: 'Get world-class physiotherapy at home in Hafeezpet. Specialized neuro and sports injury rehabilitation.',
+    keywords: 'physiotherapy in Hafeezpet, home visit physiotherapist Hafeezpet'
+  },
+  'nanakramguda': {
+    name: 'Nanakramguda',
+    title: 'Physiotherapy at Home in Nanakramguda',
+    description: 'Convenient home visit physiotherapy in Nanakramguda. Professional care for back pain and orthopedic issues.',
+    keywords: 'physiotherapy in Nanakramguda, home visit physiotherapist Nanakramguda'
+  },
+  'lingampally': {
+    name: 'Lingampally',
+    title: 'Home Physiotherapy Services in Lingampally',
+    description: 'Top-rated physiotherapy at your doorstep in Lingampally. Expert care for stroke recovery and pain management.',
+    keywords: 'physiotherapy in Lingampally, home visit physiotherapist Lingampally'
+  },
+  'hydernagar': {
+    name: 'Hydernagar',
+    title: 'Expert Home Physiotherapy in Hydernagar',
+    description: 'Quality physiotherapy services in Hydernagar. Specialized in geriatric and orthopedic rehabilitation.',
+    keywords: 'physiotherapy in Hydernagar, home visit physiotherapist Hydernagar'
+  },
+  'bachupally': {
+    name: 'Bachupally',
+    title: 'Physiotherapy at Home in Bachupally',
+    description: 'Professional home visit physiotherapy in Bachupally. Expert treatment for sports injuries and neuro conditions.',
+    keywords: 'physiotherapy in Bachupally, home visit physiotherapist Bachupally'
+  },
+  'vivekananda-nagar': {
+    name: 'Vivekananda Nagar',
+    title: 'Expert Home Physiotherapy in Vivekananda Nagar',
+    description: 'Expert home visit physiotherapy services in Vivekananda Nagar. Specialized care for orthopedic and neuro conditions.',
+    keywords: 'physiotherapy in Vivekananda Nagar, home visit physiotherapist Vivekananda Nagar'
+  },
+  'vasantha-nagar': {
+    name: 'Vasantha Nagar',
+    title: 'Professional Home Physiotherapy in Vasantha Nagar',
+    description: 'Top-rated home visit physiotherapy in Vasantha Nagar. Specialized in sports injury rehab and pain management.',
+    keywords: 'physiotherapy in Vasantha Nagar, home visit physiotherapist Vasantha Nagar'
   }
 };
 
 const LocationLanding = () => {
   const { location } = useParams<{ location: string }>();
-  const data = location ? locationData[location.toLowerCase()] : locationData['hyderabad'];
+  const data = (location && locationData[location.toLowerCase()]) || locationData['hyderabad'];
   
   if (!data) return <div>Location not found</div>;
 

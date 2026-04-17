@@ -29,7 +29,7 @@ const About = () => {
 
   return (
     <div className="bg-white">
-      <SEO 
+      <SEO
         title={`About ${BRAND_NAME} | Expert Physiotherapy at Home`}
         description={`Learn more about ${BRAND_NAME}, our mission, and why we are the preferred choice for home visit physiotherapy in Hyderabad.`}
       />
@@ -41,12 +41,12 @@ const About = () => {
           className="absolute inset-0 -z-10 h-[120%]"
         >
           <img
-              src="https://images.unsplash.com/photo-1576091160550-217359f4ecf8?auto=format&fit=crop&q=80&w=2000"
-              alt="Professional physiotherapy clinic environment for expert home care in Hyderabad"
-              className="w-full h-full object-cover"
-              loading="eager"
-              decoding="async"
-            />
+            src="https://images.unsplash.com/photo-1576091160550-217359f4ecf8?auto=format&fit=crop&q=80&w=2000"
+            alt="Professional physiotherapy clinic environment for expert home care in Hyderabad"
+            className="w-full h-full object-cover"
+            loading="eager"
+            decoding="async"
+          />
           <div className="absolute inset-0 bg-white/90 lg:bg-white/85" />
         </motion.div>
 
@@ -163,7 +163,7 @@ const About = () => {
               <div className="relative p-2 lg:p-4 border-[4px] lg:border-[10px] border-primary rounded-[2.5rem] lg:rounded-[5rem] shadow-xl overflow-visible max-w-sm mx-auto">
                 <div className="aspect-[4/5] rounded-[2rem] lg:rounded-[4rem] overflow-hidden bg-white">
                   <img
-                    src="/founder.avif"
+                    src="/founder.jpg"
                     alt="Dr. Bhanu Vemula - Founder & Consultant Physiotherapist"
                     className="w-full h-full object-contain"
                     loading="lazy"
@@ -269,8 +269,8 @@ const About = () => {
                 {[
                   { value: "1000+", label: "Patients Treated" },
                   { value: "3600+", label: "Sessions" },
-                  { value: "120+", label: "Surgeries Avoided" },
-                  { value: "160+", label: "Recoveries through Rehab" },
+                  { value: "110+", label: "Surgeries Avoided" },
+                  { value: "140+", label: "Recoveries through Rehab" },
                 ].map((stat, idx) => (
                   <div
                     key={idx}
