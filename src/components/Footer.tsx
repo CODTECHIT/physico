@@ -4,7 +4,6 @@ import {
   Phone,
   Instagram,
   Facebook,
-  Clock,
   Youtube,
   Linkedin,
   Mail,
