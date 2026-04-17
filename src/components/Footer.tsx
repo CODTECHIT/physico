@@ -147,11 +147,12 @@ const Footer = () => {
             </h4>
             <ul className="space-y-3 lg:space-y-4">
               {[
-                { name: "Orthopedic", path: "/service/orthopedic" },
-                { name: "Neurological", path: "/service/neurological" },
-                { name: "Sports rehab", path: "/service/sports" },
-                { name: "Geriatric", path: "/service/geriatric" },
-                { name: "Post-surgical", path: "/service/orthopedic" },
+                { name: "Orthopedic Physiotherapy", path: "/service/orthopedic" },
+                { name: "Neuro Physiotherapy", path: "/service/neurological" },
+                { name: "Stroke Rehab at Home", path: "/service/stroke-rehabilitation" },
+                { name: "Sports Rehab at Home", path: "/service/sports" },
+                { name: "Geriatric Physiotherapy", path: "/service/geriatric" },
+                { name: "Post-Surgical Rehab", path: "/service/orthopedic" },
               ].map((service) => (
                 <li key={service.name}>
                   <Link

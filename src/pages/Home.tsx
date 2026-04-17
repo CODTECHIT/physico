@@ -248,9 +248,10 @@ const Home = () => {
 
   return (
     <div className="overflow-x-hidden">
-      <SEO 
+      <SEO
         title="Best Home Visit Physiotherapy in Hyderabad"
-        description="Get expert physiotherapy at home in Hyderabad (Kukatpally, Miyapur, Gachibowli). Specialized in Orthopedic, Neuro & Stroke Rehab. Book a home visit today!"
+        description="Expert home visit physiotherapy in Hyderabad for back pain, post-surgery rehab, stroke recovery, and knee pain. Certified BPT/MPT physiotherapist home visits in Kukatpally, Miyapur, Kondapur, and Gachibowli. Book a home visit today!"
+        keywords="physiotherapy at home Hyderabad, home physiotherapist near me, back pain treatment at home, post surgery rehab at home, stroke rehabilitation at home, knee pain physiotherapy home, neuro physiotherapy at home, sports physiotherapist home visit, certified physiotherapist home visit, geriatric physiotherapy home, BPT MPT physiotherapist home, pain relief physiotherapy home, physiotherapy Kukatpally home, physiotherapy Miyapur home visit, physiotherapy Kondapur Gachibowli"
         schema={homeSchema}
       />
       {/* 1. HERO  FULL-BLEED CINEMATIC */}
@@ -276,7 +277,7 @@ const Home = () => {
         {/* ── Main Content Grid ── */}
         <motion.div
           style={{ y: heroContentY }}
-          className="max-w-[1400px] w-full mx-auto responsive-padding flex-1 flex flex-col lg:flex-row items-center gap-10 lg:gap-16 pt-36 sm:pt-44 lg:pt-32 pb-8 lg:pb-12"
+          className="max-w-[1400px] w-full mx-auto responsive-padding flex-1 flex flex-col lg:flex-row items-center gap-10 lg:gap-16 pt-20 sm:pt-24 lg:pt-16 pb-8 lg:pb-12"
         >
           {/* LEFT  text column */}
           <motion.div
@@ -285,18 +286,7 @@ const Home = () => {
             transition={{ duration: 0.9, ease: "easeOut" }}
             className="flex-1 space-y-6 lg:space-y-8 relative z-20"
           >
-            {/* Eyebrow badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.2, duration: 0.6 }}
-              className="inline-flex items-center gap-2.5"
-            >
-              <span className="flex h-2 w-2 rounded-full bg-accent animate-pulse" />
-              <span className="text-accent font-sans font-bold uppercase tracking-[0.22em] text-[9px] sm:text-[10px] lg:text-[11px]">
-                #1 Rated Physiotherapy at Home in Hyderabad
-              </span>
-            </motion.div>
+
 
             {/* Headline */}
             <motion.h1
@@ -304,7 +294,7 @@ const Home = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.35, duration: 0.8, ease: "easeOut" }}
               className="font-serif font-bold text-white leading-[1.05] tracking-[-0.04em]"
-              style={{ fontSize: "clamp(2.2rem, 5.5vw, 4.2rem)" }}
+              style={{ fontSize: "clamp(2rem, 5vw, 4.2rem)" }}
             >
               Expert Physiotherapy at Home for{" "}
               <br className="hidden sm:block" />
@@ -329,7 +319,7 @@ const Home = () => {
               className="text-white/70 font-sans font-medium leading-relaxed max-w-[550px]"
               style={{ fontSize: "clamp(0.9rem, 1.5vw, 1.15rem)" }}
             >
-              Professional, evidence-based physiotherapy delivered to your doorstep in Kukatpally, Miyapur, Kondapur, and Gachibowli. Recover from pain and surgery without the commute.
+              Hyderabad's trusted home physiotherapist for back pain, post-surgery rehab, stroke recovery, and knee pain delivering one-on-one expert care to your doorstep so you recover faster without leaving home.
             </motion.p>
 
             {/* CTAs */}
@@ -460,17 +450,22 @@ const Home = () => {
         <div className="max-w-[1400px] mx-auto responsive-padding">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
             <div className="space-y-5 lg:space-y-6">
+              <div className="flex items-center space-x-3 mb-2">
+                <span className="w-8 h-[2px] bg-accent" />
+                <span className="text-accent font-sans font-bold uppercase tracking-[0.2em] text-[10px]">
+                  Patient Education & Guided Recovery Approach
+                </span>
+              </div>
               <h2 className="editorial-heading text-primary leading-tight">
-                We Don't Just Treat Your Pain <br className="hidden md:block" />
+                We Don't Just Treat Your Pain <br />
                 <span className="text-accent italic font-normal">
                   We Help You Understand It.
                 </span>
               </h2>
-              <p className="text-base lg:text-lg text-dark font-medium leading-relaxed opacity-90">
-                At {BRAND_NAME}, we follow a guided recovery approach where
-                patients are educated about their condition, movement patterns,
-                and home exercise program to ensure better understanding and
-                faster recovery.
+              <p className="text-base lg:text-lg text-dark font-medium leading-relaxed opacity-90 text-justify">
+                At {BRAND_NAME}, healing goes beyond the clinic. We believe that an informed patient is an empowered one. Through our guided recovery approach, we take the time to educate you about your condition, movement patterns, and the "why" behind every exercise and treatment.
+                From your very first session, you'll receive a personalized home exercise program designed to keep your recovery on track even when you're not with us. Because real healing happens 24 hours a day, not just during your appointment.
+                Your body has the ability to heal. We just help you understand how.
               </p>
             </div>
 
@@ -496,16 +491,18 @@ const Home = () => {
                     decoding="async"
                   />
 
-                  {/* Chief Specialist Badge - Adjusted to Top Right Corner */}
+                  {/* Chief Specialist Badge - Adjusted to Floating Position to avoid clipping */}
+                  {/* Chief Specialist Badge - Repositioned to the side to clear the head */}
+                  {/* Chief Specialist Badge - Back to Corner with safe padding */}
                   <div className="absolute top-0 right-0 z-20">
-                    <motion.div 
-                      initial={{ opacity: 0 }}
-                      whileInView={{ opacity: 1 }}
+                    <motion.div
+                      initial={{ opacity: 0, x: 20, y: -20 }}
+                      whileInView={{ opacity: 1, x: 0, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: 0.5, duration: 0.8 }}
-                      className="bg-accent/90 backdrop-blur-md px-3 py-1.5 rounded-bl-[1.5rem] border-l border-b border-white/20 shadow-xl"
+                      className="bg-accent/95 backdrop-blur-md pl-5 pr-10 pt-4 pb-2.5 rounded-bl-[2.5rem] border-l border-b border-white/20 shadow-2xl"
                     >
-                      <span className="text-[10px] font-bold text-white uppercase tracking-widest">Chief Specialist</span>
+                      <span className="text-[10px] font-bold text-white uppercase tracking-wider">Chief Specialist</span>
                     </motion.div>
                   </div>
                 </div>

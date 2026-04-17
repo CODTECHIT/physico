@@ -11,6 +11,7 @@ interface SEOProps {
   twitterHandle?: string;
   schema?: object;
   noindex?: boolean;
+  keywords?: string;
 }
 
 const SEO: React.FC<SEOProps> = ({
@@ -22,6 +23,7 @@ const SEO: React.FC<SEOProps> = ({
   twitterHandle = '@flexophysio',
   schema,
   noindex = false,
+  keywords,
 }) => {
   const siteName = BRAND_NAME;
   const fullTitle = title ? `${title} | ${siteName}` : siteName;
@@ -34,6 +36,7 @@ const SEO: React.FC<SEOProps> = ({
       {/* Basic Metadata */}
       <title>{fullTitle}</title>
       <meta name="description" content={metaDescription} />
+      {keywords && <meta name="keywords" content={keywords} />}
       <link rel="canonical" href={url} />
       {noindex && <meta name="robots" content="noindex, nofollow" />}
 

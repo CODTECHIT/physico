@@ -62,6 +62,15 @@ export const getLocalBusinessSchema = () => ({
     { "@type": "AdministrativeArea", "name": "Kondapur" },
     { "@type": "AdministrativeArea", "name": "Gachibowli" },
     { "@type": "AdministrativeArea", "name": "Hitech City" }
+  ],
+  "knowsAbout": [
+    "Physiotherapy at home",
+    "Stroke Rehabilitation",
+    "Back Pain Treatment",
+    "Post Surgery Rehab",
+    "Neurological Physiotherapy",
+    "Knee Pain Physiotherapy",
+    "Orthopedic Rehabilitation"
   ]
 });
 

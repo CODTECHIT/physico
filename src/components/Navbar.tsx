@@ -57,7 +57,7 @@ const Navbar = () => {
             <img
               src="/logo-square.png"
               alt={BRAND_NAME}
-              className="hidden lg:block h-7 xl:h-9 w-auto object-contain group-hover:opacity-80 transition-opacity"
+              className="hidden lg:block h-6 xl:h-9 w-auto object-contain group-hover:opacity-80 transition-opacity"
               loading="eager"
               decoding="async"
             />
@@ -71,7 +71,7 @@ const Navbar = () => {
             />
           </div>
           <div className="min-w-0 overflow-hidden border-l border-primary/10 pl-2.5 py-1 xl:pl-4">
-            <span className="block whitespace-nowrap text-[clamp(0.85rem,4vw,1.1rem)] font-serif font-bold leading-[1.05] tracking-[-0.04em] text-primary transition-opacity group-hover:opacity-80 min-[390px]:text-[clamp(1rem,4.4vw,1.2rem)] lg:text-xl xl:text-2xl">
+            <span className="block whitespace-nowrap text-[clamp(0.75rem,2.5vw,0.9rem)] font-serif font-bold leading-[1.05] tracking-[-0.04em] text-primary transition-opacity group-hover:opacity-80 min-[390px]:text-[clamp(0.85rem,3vw,1rem)] lg:text-base xl:text-2xl">
               FLEXO <span className="text-accent italic">PHYSIOTHERAPY</span>
             </span>
             <span className="mt-1 block font-sans text-[7px] font-bold tracking-[0.14em] text-accent min-[360px]:text-[8px] lg:mt-1.5 lg:text-[10px] lg:tracking-[0.22em] xl:text-[11px]">
@@ -81,7 +81,7 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Links */}
-        <div className="hidden lg:flex items-center space-x-4 lg:space-x-5 xl:space-x-8">
+        <div className="hidden lg:flex items-center space-x-2 xl:space-x-8">
           {navLinks.map((link) => (
             <div key={link.name} className="relative group/nav-item py-4">
               <Link
@@ -144,7 +144,7 @@ const Navbar = () => {
           ))}
           <Button
             variant="secondary"
-            className="ml-2 xl:ml-4 rounded-full px-5 lg:px-6 xl:px-8 py-3 xl:py-3.5 bg-accent hover:bg-accent/90 border-none shadow-lg shadow-accent/20 transition-all duration-500 transform hover:-translate-y-0.5 hover:scale-[1.02] active:scale-[0.98] text-[10px] xl:text-[11px] font-bold tracking-[0.12em] uppercase whitespace-nowrap"
+            className="ml-2 xl:ml-4 rounded-full px-4 xl:px-8 py-2.5 xl:py-3.5 bg-accent hover:bg-accent/90 border-none shadow-lg shadow-accent/20 transition-all duration-500 transform hover:-translate-y-0.5 hover:scale-[1.02] active:scale-[0.98] text-[9px] xl:text-[11px] font-bold tracking-[0.12em] uppercase whitespace-nowrap"
             onClick={() =>
               window.open(
                 `${CONTACT_WHATSAPP_LINK}?text=${encodeURIComponent(`Hi ${BRAND_NAME}, I would like to book an appointment.`)}`,
