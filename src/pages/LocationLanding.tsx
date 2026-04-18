@@ -121,8 +121,15 @@ const locationData: Record<string, any> = {
 };
 
 const LocationLanding = () => {
-  const { location } = useParams<{ location: string }>();
-  const data = (location && locationData[location.toLowerCase()]) || locationData['hyderabad'];
+  const { location: paramLocation } = useParams<{ location: string }>();
+  
+  // Extract location from URL path if param is missing (e.g. /physiotherapy-hitech-city)
+  const path = window.location.pathname;
+  const derivedLocation = path.includes('physiotherapy-') 
+    ? path.split('physiotherapy-')[1].toLowerCase() 
+    : paramLocation;
+
+  const data = (derivedLocation && locationData[derivedLocation]) || locationData['hyderabad'];
   
   if (!data) return <div>Location not found</div>;
 

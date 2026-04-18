@@ -39,7 +39,23 @@ function App() {
             <Route path="/service/:id" element={<ServiceDetail />} />
             <Route path="/treatment" element={<Conditions />} />
             <Route path="/treatment/:slug" element={<ConditionDetail />} />
-            <Route path="/physiotherapy-:location" element={<LocationLanding />} />
+            <Route path="/physiotherapy-hyderabad" element={<LocationLanding />} />
+            <Route path="/physiotherapy-kukatpally" element={<LocationLanding />} />
+            <Route path="/physiotherapy-miyapur" element={<LocationLanding />} />
+            <Route path="/physiotherapy-gachibowli" element={<LocationLanding />} />
+            <Route path="/physiotherapy-hitech-city" element={<LocationLanding />} />
+            <Route path="/physiotherapy-kondapur" element={<LocationLanding />} />
+            <Route path="/physiotherapy-madhapur" element={<LocationLanding />} />
+            <Route path="/physiotherapy-kphb" element={<LocationLanding />} />
+            <Route path="/physiotherapy-pragathi-nagar" element={<LocationLanding />} />
+            <Route path="/physiotherapy-nizampet" element={<LocationLanding />} />
+            <Route path="/physiotherapy-hafeezpet" element={<LocationLanding />} />
+            <Route path="/physiotherapy-nanakramguda" element={<LocationLanding />} />
+            <Route path="/physiotherapy-lingampally" element={<LocationLanding />} />
+            <Route path="/physiotherapy-hydernagar" element={<LocationLanding />} />
+            <Route path="/physiotherapy-bachupally" element={<LocationLanding />} />
+            <Route path="/physiotherapy-vivekananda-nagar" element={<LocationLanding />} />
+            <Route path="/physiotherapy-vasantha-nagar" element={<LocationLanding />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-and-conditions" element={<TermsAndConditions />} />
