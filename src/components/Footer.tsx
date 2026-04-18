@@ -207,7 +207,7 @@ const Footer = () => {
 
         <div className="mt-12 lg:mt-16 pt-6 lg:pt-8 border-t border-secondary/10 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <p className="text-secondary/40 text-[8px] lg:text-[10px] uppercase tracking-widest text-center md:text-left">
-            © 2026 {BRAND_NAME.toUpperCase()}. ALL RIGHTS RESERVED.
+            © 2026 {BRAND_NAME.toUpperCase()}. ALL RIGHTS RESERVED. | DESIGNED BY <a href="https://codtechitsolutions.com/" target="_blank" rel="noopener noreferrer" className="hover:text-accent transition-colors">CODTECH IT SOLUTIONS</a>
           </p>
           <div className="flex space-x-6 lg:space-x-8">
             <Link
