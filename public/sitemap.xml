@@ -1,47 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Core Pages -->
-  <url><loc>https://www.flexophysio.com/</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
-  <url><loc>https://www.flexophysio.com/about</loc><lastmod>2024-03-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.flexophysio.com/services</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.flexophysio.com/treatment</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.flexophysio.com/packages</loc><lastmod>2024-03-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.flexophysio.com/faq</loc><lastmod>2024-03-15</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
-  <url><loc>https://www.flexophysio.com/contact</loc><lastmod>2024-03-15</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.flexophysio.com/about</loc><lastmod>2026-04-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/services</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.flexophysio.com/treatment</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.flexophysio.com/packages</loc><lastmod>2026-04-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/faq</loc><lastmod>2026-04-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.flexophysio.com/contact</loc><lastmod>2026-04-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/privacy-policy</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.flexophysio.com/terms-and-conditions</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.flexophysio.com/refund-policy</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
 
   <!-- Location Landing Pages -->
-  <url><loc>https://www.flexophysio.com/physiotherapy-hyderabad</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.flexophysio.com/physiotherapy-kukatpally</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.flexophysio.com/physiotherapy-miyapur</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.flexophysio.com/physiotherapy-gachibowli</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.flexophysio.com/physiotherapy-kondapur</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
-  <url><loc>https://www.flexophysio.com/physiotherapy-hitech-city</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.flexophysio.com/physiotherapy-hyderabad</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.flexophysio.com/physiotherapy-kukatpally</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.flexophysio.com/physiotherapy-miyapur</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.flexophysio.com/physiotherapy-gachibowli</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.flexophysio.com/physiotherapy-kondapur</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.flexophysio.com/physiotherapy-hitech-city</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.flexophysio.com/physiotherapy-madhapur</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.flexophysio.com/physiotherapy-kphb</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.flexophysio.com/physiotherapy-pragathi-nagar</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.flexophysio.com/physiotherapy-nizampet</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.flexophysio.com/physiotherapy-hafeezpet</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.flexophysio.com/physiotherapy-nanakramguda</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.flexophysio.com/physiotherapy-lingampally</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.flexophysio.com/physiotherapy-hydernagar</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.flexophysio.com/physiotherapy-bachupally</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.flexophysio.com/physiotherapy-vivekananda-nagar</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.flexophysio.com/physiotherapy-vasantha-nagar</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 
   <!-- Service Detail Pages -->
-  <url><loc>https://www.flexophysio.com/service/orthopedic</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.flexophysio.com/service/neurological</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.flexophysio.com/service/sports</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.flexophysio.com/service/chiropractic</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.flexophysio.com/service/geriatric</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.flexophysio.com/service/cardio</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.flexophysio.com/service/dry-needling</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.flexophysio.com/service/cupping</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</priority><priority>0.8</priority></url>
-  <url><loc>https://www.flexophysio.com/service/iastm</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</priority><priority>0.8</priority></url>
-  <url><loc>https://www.flexophysio.com/service/kinesio-taping</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</priority><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/service/orthopedic</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/service/neurological</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/service/sports</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/service/chiropractic</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/service/geriatric</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/service/cardio</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/service/dry-needling</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/service/cupping</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/service/iastm</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/service/kinesio-taping</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 
   <!-- Condition Detail Pages -->
-  <url><loc>https://www.flexophysio.com/treatment/back-pain</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.flexophysio.com/treatment/neck-pain</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.flexophysio.com/treatment/shoulder-pain</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.flexophysio.com/treatment/hip-knee-arthritis</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.flexophysio.com/treatment/plantar-fasciitis</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.flexophysio.com/treatment/tennis-elbow</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.flexophysio.com/treatment/acl-rehabilitation</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.flexophysio.com/treatment/ankle-sprain</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.flexophysio.com/treatment/rotator-cuff-injury</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.flexophysio.com/treatment/runners-knee</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.flexophysio.com/treatment/stroke-rehabilitation</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.flexophysio.com/treatment/parkinsons-disease</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.flexophysio.com/treatment/spinal-cord-injury</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
-  <url><loc>https://www.flexophysio.com/treatment/cerebral-palsy</loc><lastmod>2024-03-15</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/treatment/back-pain</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/treatment/neck-pain</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/treatment/shoulder-pain</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/treatment/hip-knee-arthritis</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/treatment/plantar-fasciitis</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/treatment/tennis-elbow</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/treatment/acl-rehabilitation</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/treatment/ankle-sprain</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/treatment/rotator-cuff-injury</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/treatment/runners-knee</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/treatment/stroke-rehabilitation</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/treatment/parkinsons-disease</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/treatment/spinal-cord-injury</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/treatment/cerebral-palsy</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/treatment/facial-palsy</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/treatment/dry-needling</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/treatment/cupping-therapy</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/treatment/iastm</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/treatment/chiropractic-care</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/treatment/geriatric-physiotherapy</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
 </urlset>

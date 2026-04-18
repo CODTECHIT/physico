@@ -52,6 +52,7 @@ const ConditionDetail = () => {
         title={`${condition.title} Treatment at Home in Hyderabad`}
         description={`Get expert home visit physiotherapy for ${condition.title} in Hyderabad. Specialized care for fast recovery and pain relief. Book your session today!`}
         schema={conditionSchema}
+        keywords={condition.keywords}
         breadcrumbs={[
           { name: "Home", item: "/" },
           { name: "Treatments", item: "/treatment" },
