@@ -65,13 +65,13 @@ const Navbar = () => {
             <img
               src="/logo-square.png"
               alt={BRAND_NAME}
-              className="lg:hidden h-14 w-auto object-contain group-hover:opacity-80 transition-opacity rounded-lg"
+              className="lg:hidden h-11 w-auto object-contain group-hover:opacity-80 transition-opacity rounded-lg"
               loading="eager"
               decoding="async"
             />
           </div>
-          <div className="min-w-0 overflow-hidden border-l border-primary/10 pl-2 py-0.5 xl:pl-4">
-            <span className="block whitespace-nowrap text-[clamp(0.8rem,4.2vw,1.1rem)] font-serif font-bold leading-[1.05] tracking-tighter text-primary transition-opacity group-hover:opacity-80 lg:text-base lg:tracking-normal xl:text-2xl">
+          <div className="min-w-0 border-l border-primary/10 pl-1.5 py-0.5 xl:pl-4">
+            <span className="block whitespace-nowrap text-[clamp(0.75rem,4vw,1.1rem)] font-serif font-bold leading-[1.05] tracking-[-0.01em] text-primary transition-opacity group-hover:opacity-80 lg:text-base lg:tracking-normal xl:text-2xl">
               FLEXO <span className="text-accent italic">PHYSIOTHERAPY</span>
             </span>
             <span className="mt-0.5 block font-sans text-[6px] font-bold tracking-[0.1em] text-accent min-[360px]:text-[7px] lg:mt-1.5 lg:text-[10px] lg:tracking-[0.22em] xl:text-[11px]">
@@ -194,8 +194,8 @@ const Navbar = () => {
               loading="eager"
               decoding="async"
             />
-            <div className="min-w-0 overflow-hidden border-l border-primary/10 pl-2 py-0.5">
-              <span className="block whitespace-nowrap font-serif text-[clamp(0.95rem,4.5vw,1.35rem)] font-bold tracking-tighter text-primary sm:text-2xl">
+            <div className="min-w-0 border-l border-primary/10 pl-2 py-0.5">
+              <span className="block whitespace-nowrap font-serif text-[clamp(0.9rem,4vw,1.35rem)] font-bold tracking-tight text-primary sm:text-2xl">
                 FLEXO <span className="text-accent italic">PHYSIOTHERAPY</span>
               </span>
               <span className="block font-sans text-[6px] font-bold text-accent sm:text-[8px]">

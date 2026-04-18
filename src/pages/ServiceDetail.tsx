@@ -238,7 +238,7 @@ const servicesData: Record<string, any> = {
     title: 'Back Pain Treatment',
     desc: `Back pain is one of the most common complaints today but not all back pain is serious, and most cases do not require surgery. While conditions like spondylitis or disc issues are often blamed, the reality is that many people experience back pain due to muscle weakness, poor posture, limited hip mobility, pelvic imbalance, or sedentary lifestyle habits. At ${BRAND_NAME}, we believe in identifying the true root cause of your pain rather than just treating symptoms. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you receive professional, one-on-one care tailored to your condition and lifestyle. Don't rush into medications or surgery. The right physiotherapy can make all the difference. Call now to book your home physiotherapy session.`,
     icon: <Activity className="w-12 h-12" />,
-    img: '/images/treatments/back_pain_treatment.png',
+    img: '/images/treatments/Flexophysio New Website Images (1).jpg.jpeg',
     conditions: [
       'Muscle Weakness & Core Instability',
       'Poor Posture & Movement Patterns',
@@ -261,7 +261,7 @@ const servicesData: Record<string, any> = {
     title: 'Neck Pain Treatment',
     desc: `Neck pain often starts subtly stiffness while turning your head, discomfort after long phone use, or a dull ache by the end of the day. Over time, it can progress into persistent pain, headaches, or even radiating symptoms into the shoulders and arms. While many assume it's due to cervical spondylosis or disc issues, a large number of cases are actually linked to forward head posture, tight neck and shoulder muscles, weak deep cervical stabilizers, and reduced mobility in the upper spine. Daily habits like prolonged screen time and poor sleeping positions further aggravate the problem. At ${BRAND_NAME}, we take an evidence-based and individualized approach to neck pain management. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you receive focused, one-on-one care in the comfort of your home. Address the cause, not just the symptoms. Book your session today and restore comfortable, pain-free movement.`,
     icon: <Activity className="w-12 h-12" />,
-    img: '/images/treatments/neck_pain_new.jpg',
+    img: '/images/treatments/neck_pain_treatment-opt.webp',
     conditions: [
       'Forward head posture & tech neck',
       'Tight neck & shoulder muscles',
@@ -307,7 +307,7 @@ const servicesData: Record<string, any> = {
     title: 'Plantar Fasciitis Treatment',
     desc: `Sharp heel pain when you take your first steps in the morning? Discomfort after standing for long hours? These are classic signs of plantar fasciitis a condition caused by irritation of the thick band of tissue (plantar fascia) that supports your foot arch. Unlike general foot pain, plantar fasciitis is often linked to increased stress on the heel due to poor foot mechanics, tight calf muscles, prolonged standing, improper footwear, or sudden changes in activity levels. Ignoring these factors can lead to persistent pain with every step. At ${BRAND_NAME}, we approach plantar fasciitis with a targeted and progressive rehabilitation strategy focused on relieving stress from the plantar fascia. With ${BRAND_NAME} Home Visit Service in Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas, you get expert care right at your home. Take the pressure off your heel the right treatment makes every step easier. Book your session today and get back to pain-free walking.`,
     icon: <Activity className="w-12 h-12" />,
-    img: '/images/treatments/back_pain_treatment.png',
+    img: '/images/treatments/Flexophysio New Website Images (1).jpg.jpeg',
     conditions: [
       'Heel pain & morning stiffness',
       'Plantar fascia irritation',

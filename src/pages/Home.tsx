@@ -29,7 +29,6 @@ import {
 import {
   CONTACT_PHONE_DISPLAY,
   CONTACT_WHATSAPP_LINK,
-  SERVICE_AREAS,
   BRAND_NAME,
 } from "../constants";
 
@@ -223,12 +222,12 @@ const Home = () => {
     {
       title: "Back Pain",
       slug: "back-pain",
-      img: "/images/treatments/orthopedic_rehab_new.jpg",
+      img: "/images/treatments/Flexophysio New Website Images (1).jpg.jpeg",
     },
     {
       title: "Neck Pain",
       slug: "neck-pain",
-      img: "/images/treatments/neck_pain_new.jpg",
+      img: "/images/treatments/neck_pain_treatment-opt.webp",
     },
     {
       title: "Shoulder Pain",
@@ -376,7 +375,7 @@ const Home = () => {
             >
               <MapPin className="text-accent/70 w-3.5 h-3.5 shrink-0" />
               <span className="text-white/50 text-[10px] lg:text-xs font-medium tracking-wide">
-                {SERVICE_AREAS}
+                Kukatpally, Miyapur, Kondapur, Gachibowli and Nizampet
               </span>
             </motion.div>
           </motion.div>
