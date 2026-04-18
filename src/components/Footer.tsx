@@ -12,6 +12,8 @@ import {
   CONTACT_PHONE_DISPLAY,
   CONTACT_EMAIL,
   SERVICE_AREAS,
+  SERVICE_AREAS_LINKS,
+  CONDITIONS_LINKS,
   INSTAGRAM_LINK,
   FACEBOOK_LINK,
   YOUTUBE_LINK,
@@ -93,18 +95,14 @@ const Footer = () => {
           <div className="space-y-6">
             <h4 className="text-xl font-serif font-bold tracking-tight mb-6 uppercase tracking-[0.1em]">Conditions</h4>
             <ul className="space-y-4">
-              {[
-                "Back & Neck Pain",
-                "Knee & Joint Pain",
-                "Stroke Rehabilitation",
-                "Sports Injuries",
-                "Post-Surgical Recovery",
-                "Sciatica Issues",
-                "Frozen Shoulder",
-                "Arthritis Care"
-              ].map((item) => (
-                <li key={item} className="text-secondary/60 text-xs uppercase tracking-widest transition-colors hover:text-accent">
-                  {item}
+              {CONDITIONS_LINKS.map((item) => (
+                <li key={item.name}>
+                  <Link 
+                    to={`/treatment/${item.slug}`}
+                    className="text-secondary/60 text-xs uppercase tracking-widest transition-colors hover:text-accent block"
+                  >
+                    {item.name}
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -162,13 +160,23 @@ const Footer = () => {
           <div className="space-y-6">
             <h4 className="text-xl font-serif font-bold tracking-tight mb-6 uppercase tracking-[0.1em]">Service Areas</h4>
             <ul className="space-y-4">
-              {SERVICE_AREAS.split(",").slice(0, 6).map((name) => (
-                <li key={name} className="text-secondary/60 text-xs uppercase tracking-widest">
-                  {name.trim()}
+              {SERVICE_AREAS_LINKS.slice(0, 6).map((area) => (
+                <li key={area.name}>
+                  <Link 
+                    to={area.path}
+                    className="text-secondary/60 text-xs uppercase tracking-widest hover:text-accent transition-colors block"
+                  >
+                    {area.name}
+                  </Link>
                 </li>
               ))}
-              <li className="text-accent text-xs uppercase tracking-[0.2em] font-medium pt-2 italic">
-                and more...
+              <li className="pt-2 italic">
+                <Link 
+                  to="/physiotherapy-hyderabad"
+                  className="text-accent text-xs uppercase tracking-[0.2em] font-medium hover:underline"
+                >
+                  and more...
+                </Link>
               </li>
             </ul>
           </div>

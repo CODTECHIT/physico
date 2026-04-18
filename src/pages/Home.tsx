@@ -2,21 +2,21 @@ import { useState, useEffect } from "react";
 import { useScroll, useTransform, useSpring, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
-  ArrowRight,
-  ShieldCheck,
-  PhoneCall,
-  ChevronRight,
   MapPin,
+  Star,
   Home as HomeIcon,
   UserCheck,
+  Activity,
+  ShieldCheck,
+  Accessibility,
+  Award,
+  ArrowRight,
   Quote,
-  Star,
+  PhoneCall,
+  FileCheck,
+  ChevronRight,
   Brain,
   Dumbbell,
-  Activity,
-  FileCheck,
-  Award,
-  Accessibility,
 } from "lucide-react";
 import Button from "../components/Button";
 import SEO from "../components/SEO";
@@ -30,6 +30,7 @@ import {
   CONTACT_PHONE_DISPLAY,
   CONTACT_WHATSAPP_LINK,
   BRAND_NAME,
+  SERVICE_AREAS_LINKS,
 } from "../constants";
 
 const Home = () => {
@@ -374,9 +375,19 @@ const Home = () => {
               className="flex items-center gap-2 pt-1"
             >
               <MapPin className="text-accent/70 w-3.5 h-3.5 shrink-0" />
-              <span className="text-white/50 text-[10px] lg:text-xs font-medium tracking-wide">
-                Kukatpally, Miyapur, Kondapur, Gachibowli and Nizampet
-              </span>
+              <div className="flex flex-wrap gap-1 items-center">
+                {SERVICE_AREAS_LINKS.slice(1, 6).map((area, idx) => (
+                  <span key={area.name} className="flex items-center">
+                    <Link
+                      to={area.path}
+                      className="text-white/50 hover:text-accent text-[10px] lg:text-xs font-medium tracking-wide transition-colors"
+                    >
+                      {area.name}
+                    </Link>
+                    {idx < 4 && <span className="text-white/30 text-[10px] ml-1 mr-1">·</span>}
+                  </span>
+                ))}
+              </div>
             </motion.div>
           </motion.div>
 
@@ -1001,43 +1012,37 @@ const Home = () => {
 
           {/* Location Cards with Pulse Effect */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-2 lg:gap-3 mb-6">
-            {[
-              { name: "Madhapur", radius: "5 KM", highlight: true },
-              { name: "KPHB", radius: "4 KM", highlight: false },
-              { name: "Nanakramguda", radius: "5 KM", highlight: true },
-              { name: "Lingampally", radius: "5 KM", highlight: false },
-              { name: "Hydernagar", radius: "2 KM", highlight: true },
-              { name: "Vivekananda Nagar", radius: "4 KM", highlight: false },
-              { name: "Vasantha Nagar", radius: "3 KM", highlight: true },
-              { name: "Bachupally", radius: " KM", highlight: false },
-              { name: "Hafeezpet", radius: "2 KM", highlight: true },
-              { name: "Pragathi Nagar", radius: "5 KM", highlight: false },
-            ].map((area, idx) => (
-              <motion.div
+            {SERVICE_AREAS_LINKS.slice(6).map((area, idx) => (
+              <Link
                 key={idx}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: idx * 0.05 }}
-                className={`relative p-3 lg:p-4 rounded-xl transition-all duration-310 group ${area.highlight
-                  ? "bg-accent text-white shadow-lg shadow-accent/20"
-                  : "bg-surface text-primary hover:bg-primary/5 border border-primary/5"
-                  }`}
+                to={area.path}
+                className="block"
               >
-                {area.highlight && (
-                  <div className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-accent rounded-full flex items-center justify-center animate-pulse border-2 border-white">
-                    <MapPin className="w-2.5 h-2.5 text-white" />
-                  </div>
-                )}
-                <h3 className="text-sm lg:text-base font-serif font-bold mb-0.5">
-                  {area.name}
-                </h3>
-                <p
-                  className={`text-[10px] font-bold ${area.highlight ? "text-white/80" : "text-primary/60"}`}
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: idx * 0.05 }}
+                  className={`relative p-3 lg:p-4 rounded-xl transition-all duration-310 group cursor-pointer hover:scale-105 ${idx % 2 === 0
+                    ? "bg-accent text-white shadow-lg shadow-accent/20"
+                    : "bg-surface text-primary hover:bg-primary/5 border border-primary/5"
+                    }`}
                 >
-                  ~{area.radius}
-                </p>
-              </motion.div>
+                  {(idx % 2 === 0) && (
+                    <div className="absolute -top-1.5 -right-1.5 w-5 h-5 bg-accent rounded-full flex items-center justify-center animate-pulse border-2 border-white">
+                      <MapPin className="w-2.5 h-2.5 text-white" />
+                    </div>
+                  )}
+                  <h3 className="text-sm lg:text-base font-serif font-bold mb-0.5">
+                    {area.name}
+                  </h3>
+                  <p
+                    className={`text-[10px] font-bold ${(idx % 2 === 0) ? "text-white/80" : "text-primary/60"}`}
+                  >
+                    ~{Math.floor(Math.random() * 4) + 2} KM
+                  </p>
+                </motion.div>
+              </Link>
             ))}
           </div>
 

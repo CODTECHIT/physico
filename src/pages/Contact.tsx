@@ -15,7 +15,19 @@ import {
 } from 'lucide-react';
 import Button from '../components/Button';
 import SEO from '../components/SEO';
-import { CONTACT_PHONE_DISPLAY, CONTACT_WHATSAPP_LINK, SERVICE_AREAS, INSTAGRAM_LINK, FACEBOOK_LINK, YOUTUBE_LINK, LINKEDIN_LINK, BRAND_NAME, CONTACT_EMAIL } from '../constants';
+import { Link } from 'react-router-dom';
+import { 
+  CONTACT_PHONE_DISPLAY, 
+  CONTACT_WHATSAPP_LINK, 
+  SERVICE_AREAS, 
+  SERVICE_AREAS_LINKS,
+  INSTAGRAM_LINK, 
+  FACEBOOK_LINK, 
+  YOUTUBE_LINK, 
+  LINKEDIN_LINK, 
+  BRAND_NAME, 
+  CONTACT_EMAIL 
+} from '../constants';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -132,7 +144,21 @@ const Contact = () => {
                       <div className="space-y-1">
                         <span className="block text-[8px] lg:text-[9px] uppercase tracking-[0.3em] font-bold text-accent">{item.label}</span>
                         <p className="text-lg lg:text-2xl font-serif font-bold text-primary">{item.value}</p>
-                        <p className="text-dark text-[10px] lg:text-[11px] font-bold uppercase tracking-widest opacity-60 leading-relaxed">{item.sub}</p>
+                        {item.label === 'Service Areas' ? (
+                          <div className="flex flex-wrap gap-x-2 gap-y-1 mt-1">
+                            {SERVICE_AREAS_LINKS.slice(0, 5).map((area, idx) => (
+                              <Link 
+                                key={area.name} 
+                                to={area.path}
+                                className="text-accent hover:underline text-[10px] lg:text-[11px] font-bold uppercase tracking-widest"
+                              >
+                                {area.name}{idx < 4 ? ',' : ''}
+                              </Link>
+                            ))}
+                          </div>
+                        ) : (
+                          <p className="text-dark text-[10px] lg:text-[11px] font-bold uppercase tracking-widest opacity-60 leading-relaxed">{item.sub}</p>
+                        )}
                       </div>
                     </div>
                   </div>
