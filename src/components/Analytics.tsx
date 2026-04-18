@@ -10,20 +10,18 @@ const Analytics = () => {
   return (
     <Helmet>
       {/* Google Search Console Verification */}
-      {/* <meta name="google-site-verification" content="YOUR_GSC_VERIFICATION_ID" /> */}
+      <meta name="google-site-verification" content="google54481e8d22699be4" />
 
       {/* Google Analytics 4 (GA4) */}
-      {/* 
-      <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+      <script async src="https://www.googletagmanager.com/gtag/js?id=G-RJYX6435Q7"></script>
       <script>
         {`
           window.dataLayer = window.dataLayer || [];
           function gtag(){dataLayer.push(arguments);}
           gtag('js', new Date());
-          gtag('config', 'G-XXXXXXXXXX');
+          gtag('config', 'G-RJYX6435Q7');
         `}
       </script>
-      */}
 
       {/* Meta Pixel (Facebook Pixel) */}
       {/* 
