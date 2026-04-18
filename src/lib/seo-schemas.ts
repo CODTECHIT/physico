@@ -18,8 +18,14 @@ export const getOrganizationSchema = () => ({
     "contactType": "customer service",
     "areaServed": "IN",
     "availableLanguage": ["English", "Telugu", "Hindi"]
-  }
+  },
+  "sameAs": [
+    "https://www.instagram.com/flexophysio/",
+    "https://www.facebook.com/flexophysio",
+    "https://twitter.com/flexophysio"
+  ]
 });
+
 
 export const getLocalBusinessSchema = () => ({
   "@type": "MedicalBusiness",
@@ -88,3 +94,26 @@ export const getWebsiteSchema = () => ({
     "query-input": "required name=search_term_string"
   }
 });
+
+export const getFAQSchema = (faqs: { q: string, a: string }[]) => ({
+  "@type": "FAQPage",
+  "mainEntity": faqs.map(faq => ({
+    "@type": "Question",
+    "name": faq.q,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.a
+    }
+  }))
+});
+
+export const getMedicalConditionSchema = (name: string, description: string, specialty: string) => ({
+  "@type": "MedicalCondition",
+  "name": name,
+  "description": description,
+  "relevantSpecialty": {
+    "@type": "MedicalSpecialty",
+    "name": specialty
+  }
+});
+

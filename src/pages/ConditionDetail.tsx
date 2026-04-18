@@ -52,6 +52,11 @@ const ConditionDetail = () => {
         title={`${condition.title} Treatment at Home in Hyderabad`}
         description={`Get expert home visit physiotherapy for ${condition.title} in Hyderabad. Specialized care for fast recovery and pain relief. Book your session today!`}
         schema={conditionSchema}
+        breadcrumbs={[
+          { name: "Home", item: "/" },
+          { name: "Treatments", item: "/treatment" },
+          { name: condition.title, item: `/treatment/${slug}` }
+        ]}
       />
       {/* 1. HERO SECTION */}
       <section className="relative pt-24 lg:pt-36 pb-12 overflow-hidden">

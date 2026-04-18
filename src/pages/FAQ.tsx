@@ -2,6 +2,9 @@ import { useState } from 'react';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { HelpCircle, ChevronDown } from 'lucide-react';
 import { BRAND_NAME } from '../constants';
+import SEO from '../components/SEO';
+import { getFAQSchema } from '../lib/seo-schemas';
+
 
 const faqCategories = [
   {
@@ -109,9 +112,19 @@ const FAQ = () => {
     }));
   };
 
+  const allFaqs = faqCategories.flatMap(cat => cat.questions);
+  const faqSchema = getFAQSchema(allFaqs);
+
   return (
     <div className="bg-white">
+      <SEO 
+        title="Frequently Asked Questions"
+        description="Find answers to common questions about home physiotherapy in Hyderabad, treatment procedures, booking, and more."
+        canonical="/faq"
+        schema={faqSchema}
+      />
       {/* HERO HEADER */}
+
       <section className="pt-8 pb-6 lg:pt-12 lg:pb-8 relative overflow-hidden min-h-[25vh] lg:min-h-[35vh] flex items-center">
         <motion.div
           style={{ y: heroBgY }}

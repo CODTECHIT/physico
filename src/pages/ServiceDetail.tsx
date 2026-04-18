@@ -463,6 +463,11 @@ const ServiceDetail = () => {
         title={`${service.title} at Home in Hyderabad`}
         description={service.desc.substring(0, 160)}
         schema={serviceSchema}
+        breadcrumbs={[
+          { name: "Home", item: "/" },
+          { name: "Services", item: "/services" },
+          { name: service.title, item: `/service/${id}` }
+        ]}
       />
 
       {/* 1. CLINICAL HEADER */}
