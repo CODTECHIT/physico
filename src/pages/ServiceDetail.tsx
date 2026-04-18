@@ -5,7 +5,19 @@ import Button from '../components/Button';
 import SEO from '../components/SEO';
 import { CONTACT_WHATSAPP_LINK, BRAND_NAME } from '../constants';
 
-const servicesData: Record<string, any> = {
+interface ServiceData {
+  title: string;
+  desc: string;
+  icon: React.ReactNode;
+  img: string;
+  conditions: string[];
+  features: string[];
+  focus: string;
+  outcome?: string;
+  idealFor?: string;
+}
+
+const servicesData: Record<string, ServiceData> = {
   'cardio': {
     title: 'Cardio-Respiratory Care',
     desc: 'Professional Cardio-Respiratory Physiotherapy at Home in Kukatpally & Miyapur. Our team brings specialized heart and lung rehabilitation to your doorstep across Hyderabad’s leading neighborhoods. Whether you\'re recovering from surgery or managing chronic conditions, our certified physiotherapists deliver personalized care for optimal recovery and comfort.',
