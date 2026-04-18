@@ -46,9 +46,9 @@ export const conditionsData: Record<string, Condition> = {
     slug: "back-pain",
     category: "Orthopedic",
     title: "Back Pain",
-    fullTitle: "Back Pain Treatment at Home — Flexo Physiotherapy, Hyderabad",
+    fullTitle: "Back Pain Treatment at Home   Flexo Physiotherapy, Hyderabad",
     description:
-      "Back pain is one of the most searched health problems in Hyderabad — and one of the most misunderstood. Most patients are told it's a disc issue or spondylitis, but the real cause is often muscle weakness, poor posture, hip stiffness, or sedentary habits. Surgery is rarely the first answer. At Flexo Physiotherapy, our home visit physiotherapists in Kukatpally, Miyapur, Kondapur, and Gachibowli perform a detailed clinical assessment to find the exact root cause of your back pain — not just treat the symptoms.",
+      "Back pain is one of the most searched health problems in Hyderabad   and one of the most misunderstood. Most patients are told it's a disc issue or spondylitis, but the real cause is often muscle weakness, poor posture, hip stiffness, or sedentary habits. Surgery is rarely the first answer. At Flexo Physiotherapy, our home visit physiotherapists in Kukatpally, Miyapur, Kondapur, and Gachibowli perform a detailed clinical assessment to find the exact root cause of your back pain   not just treat the symptoms.",
     assessmentPoints: [
       "Core and back muscle strength and endurance",
       "Hip joint mobility, flexibility, and pelvic alignment",
@@ -62,7 +62,7 @@ export const conditionsData: Record<string, Condition> = {
       "Stretching and mobility training for the hip and lumbar spine",
       "Functional movement training for daily activities",
     ],
-    goal: "Our goal: reduce pain, restore movement, prevent recurrence — all at your home in Hyderabad.",
+    goal: "Our goal: reduce pain, restore movement, prevent recurrence   all at your home in Hyderabad.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Bone, { className: "w-8 h-8" }),
     img: IMAGES.back_pain,
@@ -73,9 +73,9 @@ export const conditionsData: Record<string, Condition> = {
     slug: "neck-pain",
     category: "Orthopedic",
     title: "Neck Pain",
-    fullTitle: "Neck Pain Treatment at Home — Flexo Physiotherapy, Hyderabad",
+    fullTitle: "Neck Pain Treatment at Home   Flexo Physiotherapy, Hyderabad",
     description:
-      "Neck pain and cervical stiffness are increasingly common — especially among desk workers, mobile phone users, and anyone with long screen hours. Most neck pain is not due to serious structural damage. It is driven by forward head posture, weak deep neck muscles, tight upper traps, and reduced thoracic mobility. At Flexo Physiotherapy, our home visit physiotherapists in Hyderabad identify the true cause and correct it.",
+      "Neck pain and cervical stiffness are increasingly common   especially among desk workers, mobile phone users, and anyone with long screen hours. Most neck pain is not due to serious structural damage. It is driven by forward head posture, weak deep neck muscles, tight upper traps, and reduced thoracic mobility. At Flexo Physiotherapy, our home visit physiotherapists in Hyderabad identify the true cause and correct it.",
     assessmentPoints: [
       "Deep cervical muscle strength and motor control",
       "Upper back (thoracic) mobility and posture",
@@ -89,7 +89,7 @@ export const conditionsData: Record<string, Condition> = {
       "Postural correction and ergonomic guidance for daily life",
       "Functional retraining to prevent recurrence",
     ],
-    goal: "We address the cause, not just the symptoms — delivering focused, one-on-one care at your home in Kukatpally, Miyapur, Kondapur, and nearby areas.",
+    goal: "We address the cause, not just the symptoms   delivering focused, one-on-one care at your home in Kukatpally, Miyapur, Kondapur, and nearby areas.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Bone, { className: "w-8 h-8" }),
     img: IMAGES.neck_pain,
@@ -100,9 +100,9 @@ export const conditionsData: Record<string, Condition> = {
     slug: "shoulder-pain",
     category: "Orthopedic",
     title: "Shoulder Pain",
-    fullTitle: "Shoulder Pain & Frozen Shoulder Treatment at Home — Flexo Physiotherapy, Hyderabad",
+    fullTitle: "Shoulder Pain & Frozen Shoulder Treatment at Home   Flexo Physiotherapy, Hyderabad",
     description:
-      "Shoulder pain — whether it's a frozen shoulder (adhesive capsulitis), rotator cuff injury, tendonitis, or scapular instability — can make reaching, lifting, or even sleeping painful. Many patients assume surgery is the only option, but most cases respond well to targeted physiotherapy. At Flexo Physiotherapy, our home visit physiotherapists in Hyderabad deliver a structured, evidence-based shoulder rehabilitation program — without you needing to travel to a clinic during the most painful phase of your recovery.",
+      "Shoulder pain   whether it's a frozen shoulder (adhesive capsulitis), rotator cuff injury, tendonitis, or scapular instability   can make reaching, lifting, or even sleeping painful. Many patients assume surgery is the only option, but most cases respond well to targeted physiotherapy. At Flexo Physiotherapy, our home visit physiotherapists in Hyderabad deliver a structured, evidence-based shoulder rehabilitation program   without you needing to travel to a clinic during the most painful phase of your recovery.",
     assessmentPoints: [
       "Shoulder joint mobility and capsular tightness",
       "Rotator cuff strength and activation quality",
@@ -116,7 +116,7 @@ export const conditionsData: Record<string, Condition> = {
       "Movement correction and functional retraining",
       "Safe, guided return to daily and overhead activities",
     ],
-    goal: "Our aim is to restore pain-free shoulder movement, rebuild strength, and help you regain full function — at your home in Kukatpally, Miyapur, Kondapur, and Gachibowli.",
+    goal: "Our aim is to restore pain-free shoulder movement, rebuild strength, and help you regain full function   at your home in Kukatpally, Miyapur, Kondapur, and Gachibowli.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Bone, { className: "w-8 h-8" }),
     img: IMAGES.shoulder_pain,
@@ -127,9 +127,9 @@ export const conditionsData: Record<string, Condition> = {
     slug: "hip-knee-arthritis",
     category: "Orthopedic",
     title: "Hip & Knee Arthritis",
-    fullTitle: "Knee Pain & Hip Arthritis Treatment at Home — Flexo Physiotherapy, Hyderabad",
+    fullTitle: "Knee Pain & Hip Arthritis Treatment at Home   Flexo Physiotherapy, Hyderabad",
     description:
-      "Knee and hip arthritis can gradually rob you of your ability to walk comfortably, climb stairs, or live independently. Osteoarthritis is the most common cause — but pain is often worsened not by the arthritis itself, but by the weak muscles around the joint that fail to support it. At Flexo Physiotherapy, we use movement-based, evidence-driven rehabilitation to reduce pain, improve joint function, and help patients stay active and independent — without rushing to surgery.",
+      "Knee and hip arthritis can gradually rob you of your ability to walk comfortably, climb stairs, or live independently. Osteoarthritis is the most common cause   but pain is often worsened not by the arthritis itself, but by the weak muscles around the joint that fail to support it. At Flexo Physiotherapy, we use movement-based, evidence-driven rehabilitation to reduce pain, improve joint function, and help patients stay active and independent   without rushing to surgery.",
     assessmentPoints: [
       "Joint mobility, stiffness, and swelling status",
       "Muscle strength around the knee, hip, and thigh",
@@ -143,7 +143,7 @@ export const conditionsData: Record<string, Condition> = {
       "Gait training and balance improvement",
       "Activity modification guidance for safe daily movement",
     ],
-    goal: "Our goal: reduce pain, restore joint function, delay or avoid surgery — all delivered at your home in Hyderabad.",
+    goal: "Our goal: reduce pain, restore joint function, delay or avoid surgery   all delivered at your home in Hyderabad.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Bone, { className: "w-8 h-8" }),
     img: IMAGES.back_pain, // Fallback
@@ -154,9 +154,9 @@ export const conditionsData: Record<string, Condition> = {
     slug: "plantar-fasciitis",
     category: "Orthopedic",
     title: "Plantar Fasciitis",
-    fullTitle: "Plantar Fasciitis (Heel Pain) Treatment at Home — Flexo Physiotherapy, Hyderabad",
+    fullTitle: "Plantar Fasciitis (Heel Pain) Treatment at Home   Flexo Physiotherapy, Hyderabad",
     description:
-      "Sharp heel pain when you take your first steps in the morning — or after standing for long periods — is the hallmark of plantar fasciitis. It's caused by excessive stress on the thick band of tissue supporting your foot arch, and it rarely resolves on its own without targeted rehabilitation. At Flexo Physiotherapy, our home visit physiotherapists in Hyderabad target the true cause of your heel pain — poor foot mechanics, tight calf muscles, and improper load distribution — rather than just managing symptoms.",
+      "Sharp heel pain when you take your first steps in the morning   or after standing for long periods   is the hallmark of plantar fasciitis. It's caused by excessive stress on the thick band of tissue supporting your foot arch, and it rarely resolves on its own without targeted rehabilitation. At Flexo Physiotherapy, our home visit physiotherapists in Hyderabad target the true cause of your heel pain   poor foot mechanics, tight calf muscles, and improper load distribution   rather than just managing symptoms.",
     assessmentPoints: [
       "Foot arch mechanics and weight distribution under the heel",
       "Calf and Achilles tendon tightness",
@@ -171,7 +171,7 @@ export const conditionsData: Record<string, Condition> = {
       "Manual therapy for pain relief and tissue recovery",
       "Footwear guidance and activity modification",
     ],
-    goal: "Our goal: reduce heel pain, rebuild foot support, and help you walk comfortably — at your home in Kukatpally, Miyapur, Kondapur, and Gachibowli.",
+    goal: "Our goal: reduce heel pain, rebuild foot support, and help you walk comfortably   at your home in Kukatpally, Miyapur, Kondapur, and Gachibowli.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Bone, { className: "w-8 h-8" }),
     img: IMAGES.back_pain, // Fallback
@@ -182,9 +182,9 @@ export const conditionsData: Record<string, Condition> = {
     slug: "tennis-elbow",
     category: "Sports",
     title: "Tennis Elbow",
-    fullTitle: "Tennis Elbow Treatment at Home — Flexo Physiotherapy, Hyderabad",
+    fullTitle: "Tennis Elbow Treatment at Home   Flexo Physiotherapy, Hyderabad",
     description:
-      "Tennis elbow (lateral epicondylitis) is not just a sports injury — it's common in anyone doing repetitive arm movements like typing, lifting, or using tools. The pain on the outer elbow during gripping activities is caused by micro-tears in the forearm extensor tendons, not just muscle tightness. At Flexo Physiotherapy, we focus on tendon load management and progressive rehabilitation — not just pain relief. Our home visit physiotherapists in Hyderabad design condition-specific programs that get you back to full strength.",
+      "Tennis elbow (lateral epicondylitis) is not just a sports injury   it's common in anyone doing repetitive arm movements like typing, lifting, or using tools. The pain on the outer elbow during gripping activities is caused by micro-tears in the forearm extensor tendons, not just muscle tightness. At Flexo Physiotherapy, we focus on tendon load management and progressive rehabilitation   not just pain relief. Our home visit physiotherapists in Hyderabad design condition-specific programs that get you back to full strength.",
     assessmentPoints: [
       "Pain location and provocation during gripping tasks",
       "Forearm muscle strength, endurance, and load tolerance",
@@ -198,7 +198,7 @@ export const conditionsData: Record<string, Condition> = {
       "Activity modification to prevent re-aggravation",
       "Elbow support guidance and return-to-work planning",
     ],
-    goal: "Our goal: reduce pain, restore strength, and return you to full activity — delivered at your home in Kukatpally, Miyapur, Kondapur, and nearby Hyderabad areas.",
+    goal: "Our goal: reduce pain, restore strength, and return you to full activity   delivered at your home in Kukatpally, Miyapur, Kondapur, and nearby Hyderabad areas.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Dumbbell, { className: "w-8 h-8" }),
     img: IMAGES.tennis_elbow,
@@ -209,9 +209,9 @@ export const conditionsData: Record<string, Condition> = {
     slug: "acl-rehabilitation",
     category: "Sports",
     title: "ACL Rehabilitation",
-    fullTitle: "ACL Reconstruction Rehabilitation at Home — Flexo Physiotherapy, Hyderabad",
+    fullTitle: "ACL Reconstruction Rehabilitation at Home   Flexo Physiotherapy, Hyderabad",
     description:
-      "ACL reconstruction recovery is not just about the surgery — it's about what happens in the weeks and months after. Without structured, phase-wise rehabilitation, patients experience muscle loss, persistent stiffness, and reduced confidence in the knee that can set back recovery by months. At Flexo Physiotherapy, our home visit physiotherapists in Hyderabad deliver a goal-oriented, progressive ACL rehabilitation program designed to match each stage of your healing — safely, consistently, and at your convenience.",
+      "ACL reconstruction recovery is not just about the surgery   it's about what happens in the weeks and months after. Without structured, phase-wise rehabilitation, patients experience muscle loss, persistent stiffness, and reduced confidence in the knee that can set back recovery by months. At Flexo Physiotherapy, our home visit physiotherapists in Hyderabad deliver a goal-oriented, progressive ACL rehabilitation program designed to match each stage of your healing   safely, consistently, and at your convenience.",
     assessmentPoints: [
       "Current knee range of motion and swelling",
       "Quadriceps, hamstring, and hip muscle strength",
@@ -225,7 +225,7 @@ export const conditionsData: Record<string, Condition> = {
       "Functional movement and daily activity retraining",
       "Gradual return-to-sport or activity guidance",
     ],
-    goal: "Rehabilitation defines your outcome after ACL surgery. Do it the right way — book your home session today.",
+    goal: "Rehabilitation defines your outcome after ACL surgery. Do it the right way   book your home session today.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Dumbbell, { className: "w-8 h-8" }),
     img: IMAGES.acl_rehab,
@@ -236,9 +236,9 @@ export const conditionsData: Record<string, Condition> = {
     slug: "ankle-sprain",
     category: "Sports",
     title: "Ankle Sprain",
-    fullTitle: "Ankle Sprain & Ligament Injury Rehabilitation — Flexo Physiotherapy, Hyderabad",
+    fullTitle: "Ankle Sprain & Ligament Injury Rehabilitation   Flexo Physiotherapy, Hyderabad",
     description:
-      "Ankle sprains require focused restoration of ligament healing, neuromuscular control, and joint stability to prevent chronic instability. At Flexo Physiotherapy, we go beyond basic exercises with a structured rehabilitation program focused on ligament healing, neuromuscular control, and proprioceptive re-education — delivered at your home across Hyderabad.",
+      "Ankle sprains require focused restoration of ligament healing, neuromuscular control, and joint stability to prevent chronic instability. At Flexo Physiotherapy, we go beyond basic exercises with a structured rehabilitation program focused on ligament healing, neuromuscular control, and proprioceptive re-education   delivered at your home across Hyderabad.",
     assessmentPoints: [
       "Ligament integrity and current swelling status",
       "Range of motion and joint stiffness",
@@ -252,7 +252,7 @@ export const conditionsData: Record<string, Condition> = {
       "Dynamic stability drills to prevent re-injury",
       "Sport or activity-specific retraining",
     ],
-    goal: "We emphasise proprioceptive re-education — the most neglected but critical part of ankle recovery — at your home in Kukatpally, Miyapur, Kondapur, and nearby Hyderabad areas.",
+    goal: "We emphasise proprioceptive re-education   the most neglected but critical part of ankle recovery   at your home in Kukatpally, Miyapur, Kondapur, and nearby Hyderabad areas.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Dumbbell, { className: "w-8 h-8" }),
     img: IMAGES.ankle_sprain,
@@ -263,9 +263,9 @@ export const conditionsData: Record<string, Condition> = {
     slug: "rotator-cuff-injury",
     category: "Sports",
     title: "Rotator Cuff Injury",
-    fullTitle: "Rotator Cuff Injury Rehabilitation at Home — Flexo Physiotherapy, Hyderabad",
+    fullTitle: "Rotator Cuff Injury Rehabilitation at Home   Flexo Physiotherapy, Hyderabad",
     description:
-      "Rotator cuff injuries — whether from repetitive overhead work, sports, or age-related degeneration — cause pain during arm movements, weakness, and difficulty sleeping on the affected shoulder. At Flexo Physiotherapy, we address the entire shoulder complex — not just the tendon — using a progressive loading strategy that promotes healing and restores full shoulder function.",
+      "Rotator cuff injuries   whether from repetitive overhead work, sports, or age-related degeneration   cause pain during arm movements, weakness, and difficulty sleeping on the affected shoulder. At Flexo Physiotherapy, we address the entire shoulder complex   not just the tendon   using a progressive loading strategy that promotes healing and restores full shoulder function.",
     assessmentPoints: [
       "Rotator cuff strength and activation patterns",
       "Scapular positioning, control, and movement coordination",
@@ -279,7 +279,7 @@ export const conditionsData: Record<string, Condition> = {
       "Movement pattern correction to prevent shoulder impingement",
       "Gradual return to overhead and functional activities",
     ],
-    goal: "Home physiotherapy ensures consistent technique supervision and better adherence — key factors in shoulder recovery — at your home across Hyderabad.",
+    goal: "Home physiotherapy ensures consistent technique supervision and better adherence   key factors in shoulder recovery   at your home across Hyderabad.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & surrounding areas",
     icon: React.createElement(Dumbbell, { className: "w-8 h-8" }),
     img: IMAGES.rotator_cuff,
@@ -290,9 +290,9 @@ export const conditionsData: Record<string, Condition> = {
     slug: "runners-knee",
     category: "Sports",
     title: "Runner's Knee",
-    fullTitle: "Patellofemoral Pain (Runner's Knee) Treatment at Home — Flexo Physiotherapy, Hyderabad",
+    fullTitle: "Patellofemoral Pain (Runner's Knee) Treatment at Home   Flexo Physiotherapy, Hyderabad",
     description:
-      "Runner's Knee (Patellofemoral Pain Syndrome) causes pain around or behind the kneecap during stair climbing, squatting, running, or prolonged sitting. It's not a single structure problem: it reflects poor force distribution across the entire knee joint. At Flexo Physiotherapy, we use a biomechanical correction approach — looking at how the entire lower limb works together — to fix the root cause of your knee pain.",
+      "Runner's Knee (Patellofemoral Pain Syndrome) causes pain around or behind the kneecap during stair climbing, squatting, running, or prolonged sitting. It's not a single structure problem: it reflects poor force distribution across the entire knee joint. At Flexo Physiotherapy, we use a biomechanical correction approach   looking at how the entire lower limb works together   to fix the root cause of your knee pain.",
     assessmentPoints: [
       "Kneecap tracking and lower limb alignment during movement",
       "Quadriceps (VMO) and hip abductor muscle strength",
@@ -306,7 +306,7 @@ export const conditionsData: Record<string, Condition> = {
       "Taping techniques to reduce kneecap stress during recovery",
       "Activity modification without requiring complete rest",
     ],
-    goal: "We focus on long-term biomechanical correction, not temporary relief — helping you move pain-free at your home in Kukatpally, Miyapur, Kondapur, and Gachibowli.",
+    goal: "We focus on long-term biomechanical correction, not temporary relief   helping you move pain-free at your home in Kukatpally, Miyapur, Kondapur, and Gachibowli.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Dumbbell, { className: "w-8 h-8" }),
     img: IMAGES.runners_knee,
@@ -317,9 +317,9 @@ export const conditionsData: Record<string, Condition> = {
     slug: "stroke-rehabilitation",
     category: "Neuro",
     title: "Stroke Rehabilitation",
-    fullTitle: "Stroke Rehabilitation (Hemiplegia) at Home — Flexo Physiotherapy, Hyderabad",
+    fullTitle: "Stroke Rehabilitation (Hemiplegia) at Home   Flexo Physiotherapy, Hyderabad",
     description:
-      "A stroke can disrupt movement, speech, balance, and independence — often affecting one side of the body. Recovery requires structured neurorehabilitation that retrains the brain and body to work together again. At Flexo Physiotherapy, our home visit neuro physiotherapists in Hyderabad deliver evidence-based stroke rehabilitation tailored to each patient's stage of recovery — without the fatigue and risk of traveling to a clinic.",
+      "A stroke can disrupt movement, speech, balance, and independence   often affecting one side of the body. Recovery requires structured neurorehabilitation that retrains the brain and body to work together again. At Flexo Physiotherapy, our home visit neuro physiotherapists in Hyderabad deliver evidence-based stroke rehabilitation tailored to each patient's stage of recovery   without the fatigue and risk of traveling to a clinic.",
     assessmentPoints: [
       "Muscle tone, spasticity, and voluntary movement control",
       "Postural alignment and sitting or standing balance",
@@ -333,7 +333,7 @@ export const conditionsData: Record<string, Condition> = {
       "Balance and coordination exercises for fall prevention",
       "Functional retraining for transfers and self-care independence",
     ],
-    goal: "We emphasise neuroplasticity-driven recovery — every session contributes to meaningful functional improvement — at your home in Kukatpally, Miyapur, Kondapur, and nearby Hyderabad areas.",
+    goal: "We emphasise neuroplasticity-driven recovery   every session contributes to meaningful functional improvement   at your home in Kukatpally, Miyapur, Kondapur, and nearby Hyderabad areas.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Brain, { className: "w-8 h-8" }),
     img: IMAGES.stroke_rehab,
@@ -344,11 +344,11 @@ export const conditionsData: Record<string, Condition> = {
     slug: "parkinsons-disease",
     category: "Neuro",
     title: "Parkinson's Disease",
-    fullTitle: "Parkinson's Disease Rehabilitation at Home — Flexo Physiotherapy, Hyderabad",
+    fullTitle: "Parkinson's Disease Rehabilitation at Home   Flexo Physiotherapy, Hyderabad",
     description:
-      "Parkinson's Disease is a progressive neurological condition causing slowness, rigidity, tremors, and postural instability. Early and consistent physiotherapy is one of the most effective ways to maintain mobility, slow functional decline, and improve quality of life. At Flexo Physiotherapy, we follow research-backed Parkinson's rehabilitation protocols — including amplitude-based training and cueing strategies — delivered safely at your home in Hyderabad.",
+      "Parkinson's Disease is a progressive neurological condition causing slowness, rigidity, tremors, and postural instability. Early and consistent physiotherapy is one of the most effective ways to maintain mobility, slow functional decline, and improve quality of life. At Flexo Physiotherapy, we follow research-backed Parkinson's rehabilitation protocols   including amplitude-based training and cueing strategies   delivered safely at your home in Hyderabad.",
     assessmentPoints: [
-      "Gait analysis — step length, cadence, and freezing episodes",
+      "Gait analysis   step length, cadence, and freezing episodes",
       "Postural alignment and balance control",
       "Flexibility and movement initiation",
       "Functional mobility and fall risk evaluation",
@@ -360,7 +360,7 @@ export const conditionsData: Record<string, Condition> = {
       "Balance and fall-prevention training",
       "Functional mobility drills tailored to daily activities",
     ],
-    goal: "Each program is adapted to disease progression and patient response — delivered at your home in Kukatpally, Miyapur, Kondapur, and Gachibowli, minimising fall risk and fatigue from travel.",
+    goal: "Each program is adapted to disease progression and patient response   delivered at your home in Kukatpally, Miyapur, Kondapur, and Gachibowli, minimising fall risk and fatigue from travel.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & surrounding areas",
     icon: React.createElement(Brain, { className: "w-8 h-8" }),
     img: IMAGES.parkinsons,
@@ -371,9 +371,9 @@ export const conditionsData: Record<string, Condition> = {
     slug: "spinal-cord-injury",
     category: "Neuro",
     title: "Spinal Cord Injury",
-    fullTitle: "Spinal Cord Injury (SCI) Rehabilitation at Home — Flexo Physiotherapy, Hyderabad",
+    fullTitle: "Spinal Cord Injury (SCI) Rehabilitation at Home   Flexo Physiotherapy, Hyderabad",
     description:
-      "Spinal cord injuries can lead to partial or complete loss of movement and sensation, requiring a highly personalised rehabilitation approach focused on maximising independence, preventing complications, and improving quality of life. The right home physiotherapy can make a profound difference. At Flexo Physiotherapy, our home visit physiotherapists in Hyderabad provide comprehensive SCI rehabilitation — structured around your neurological level, recovery goals, and daily living environment.",
+      "Spinal cord injuries can lead to partial or complete loss of movement and sensation, requiring a highly personalised rehabilitation approach focused on maximising independence, preventing complications, and improving quality of life. The right home physiotherapy can make a profound difference. At Flexo Physiotherapy, our home visit physiotherapists in Hyderabad provide comprehensive SCI rehabilitation   structured around your neurological level, recovery goals, and daily living environment.",
     assessmentPoints: [
       "Muscle strength grading and sensory evaluation",
       "Trunk control and postural stability",
@@ -388,7 +388,7 @@ export const conditionsData: Record<string, Condition> = {
       "Wheelchair mobility and functional independence training",
       "Patient and caregiver education for safe home management",
     ],
-    goal: "Home physiotherapy is especially valuable for SCI — therapy integrates directly into the patient's living space, making training more practical and improving long-term independence across Kukatpally, Miyapur, Kondapur, and nearby areas.",
+    goal: "Home physiotherapy is especially valuable for SCI   therapy integrates directly into the patient's living space, making training more practical and improving long-term independence across Kukatpally, Miyapur, Kondapur, and nearby areas.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Brain, { className: "w-8 h-8" }),
     img: IMAGES.spinal_cord,
@@ -399,9 +399,9 @@ export const conditionsData: Record<string, Condition> = {
     slug: "cerebral-palsy",
     category: "Neuro",
     title: "Cerebral Palsy",
-    fullTitle: "Cerebral Palsy Rehabilitation (Paediatric Neuro) at Home — Flexo Physiotherapy, Hyderabad",
+    fullTitle: "Cerebral Palsy Rehabilitation (Paediatric Neuro) at Home   Flexo Physiotherapy, Hyderabad",
     description:
-      "Cerebral palsy affects a child's ability to control movement, posture, and coordination. Early, structured physiotherapy intervention plays a critical role in supporting motor development, improving functional skills, and enhancing a child's independence and quality of life. At Flexo Physiotherapy, we provide evidence-based, child-centred neurodevelopmental therapy tailored to each child's specific needs — delivered at home in Hyderabad, where children feel comfortable and parents can be actively involved.",
+      "Cerebral palsy affects a child's ability to control movement, posture, and coordination. Early, structured physiotherapy intervention plays a critical role in supporting motor development, improving functional skills, and enhancing a child's independence and quality of life. At Flexo Physiotherapy, we provide evidence-based, child-centred neurodevelopmental therapy tailored to each child's specific needs   delivered at home in Hyderabad, where children feel comfortable and parents can be actively involved.",
     assessmentPoints: [
       "Motor milestone achievement and developmental progress",
       "Muscle tone, posture, and balance",
@@ -416,7 +416,7 @@ export const conditionsData: Record<string, Condition> = {
       "Play-based functional training to encourage active participation",
       "Parent education and home exercise program guidance",
     ],
-    goal: "Sessions are engaging, interactive, and goal-driven — designed for a familiar home environment across Kukatpally, Miyapur, Kondapur, and nearby Hyderabad areas.",
+    goal: "Sessions are engaging, interactive, and goal-driven   designed for a familiar home environment across Kukatpally, Miyapur, Kondapur, and nearby Hyderabad areas.",
     serviceArea: "Hyderabad, Kukatpally, Miyapur, Kondapur & nearby areas",
     icon: React.createElement(Brain, { className: "w-8 h-8" }),
     img: IMAGES.stroke_rehab, // Cerebral Palsy fallback
@@ -427,9 +427,9 @@ export const conditionsData: Record<string, Condition> = {
     slug: "facial-palsy",
     category: "Neuro",
     title: "Facial Palsy",
-    fullTitle: "Facial Palsy (Bell's Palsy) Treatment at Home — Flexo Physiotherapy, Hyderabad",
+    fullTitle: "Facial Palsy (Bell's Palsy) Treatment at Home   Flexo Physiotherapy, Hyderabad",
     description:
-      "Facial palsy — most commonly Bell's Palsy — causes sudden weakness or paralysis of the facial muscles, affecting expressions, eye closure, speech, and symmetry. Timely physiotherapy intervention is essential for optimal recovery and prevention of long-term complications like synkinesis. At Flexo Physiotherapy, our home visit physiotherapists in Hyderabad use a precise, evidence-based facial rehabilitation approach — providing privacy, comfort, and consistent care without the need for clinic travel.",
+      "Facial palsy   most commonly Bell's Palsy   causes sudden weakness or paralysis of the facial muscles, affecting expressions, eye closure, speech, and symmetry. Timely physiotherapy intervention is essential for optimal recovery and prevention of long-term complications like synkinesis. At Flexo Physiotherapy, our home visit physiotherapists in Hyderabad use a precise, evidence-based facial rehabilitation approach   providing privacy, comfort, and consistent care without the need for clinic travel.",
     assessmentPoints: [
       "Degree of facial muscle weakness and symmetry",
       "Voluntary muscle activation and control",
@@ -443,7 +443,7 @@ export const conditionsData: Record<string, Condition> = {
       "Soft tissue techniques to reduce stiffness and improve circulation",
       "Synkinesis prevention and management strategies",
     ],
-    goal: "Programs are progressed gradually for coordinated, symmetrical recovery — delivered at your home in Kukatpally, Miyapur, Kondapur, and nearby Hyderabad areas.",
+    goal: "Programs are progressed gradually for coordinated, symmetrical recovery   delivered at your home in Kukatpally, Miyapur, Kondapur, and nearby Hyderabad areas.",
     serviceArea: "Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas",
     icon: React.createElement(Brain, { className: "w-8 h-8" }),
     img: IMAGES.facial_palsy,
@@ -454,9 +454,9 @@ export const conditionsData: Record<string, Condition> = {
     slug: "dry-needling",
     category: "Specialized",
     title: "Dry Needling",
-    fullTitle: "Dry Needling Therapy at Home — Flexo Physiotherapy, Hyderabad",
+    fullTitle: "Dry Needling Therapy at Home   Flexo Physiotherapy, Hyderabad",
     description:
-      "Stubborn muscle pain that doesn't respond to massage, stretching, or rest is often caused by myofascial trigger points — hyper-irritable spots within muscles that cause localised pain, referred pain, and restricted movement. They develop from overuse, poor posture, muscle imbalance, or prolonged static positions. At Flexo Physiotherapy, Dr. Bhanu's certified dry needling precisely targets and deactivates these trigger points to restore normal muscle function — delivered safely at your home across Hyderabad.",
+      "Stubborn muscle pain that doesn't respond to massage, stretching, or rest is often caused by myofascial trigger points   hyper-irritable spots within muscles that cause localised pain, referred pain, and restricted movement. They develop from overuse, poor posture, muscle imbalance, or prolonged static positions. At Flexo Physiotherapy, Dr. Bhanu's certified dry needling precisely targets and deactivates these trigger points to restore normal muscle function   delivered safely at your home across Hyderabad.",
     assessmentPoints: [
       "Detailed palpation and movement assessment to identify trigger points",
       "Movement restriction assessment",
@@ -481,9 +481,9 @@ export const conditionsData: Record<string, Condition> = {
     slug: "cupping-therapy",
     category: "Specialized",
     title: "Cupping Therapy",
-    fullTitle: "Cupping Therapy at Home — Flexo Physiotherapy, Hyderabad",
+    fullTitle: "Cupping Therapy at Home   Flexo Physiotherapy, Hyderabad",
     description:
-      "Persistent muscle stiffness, poor tissue mobility, and restricted recovery are often linked to fascial tightness and poor circulation in the affected tissues. Cupping therapy uses controlled negative pressure to lift and release tight fascia, improve blood flow, and accelerate tissue healing. At Flexo Physiotherapy, cupping is applied with clinical precision as a supportive tool within structured rehabilitation — not as a standalone alternative therapy.",
+      "Persistent muscle stiffness, poor tissue mobility, and restricted recovery are often linked to fascial tightness and poor circulation in the affected tissues. Cupping therapy uses controlled negative pressure to lift and release tight fascia, improve blood flow, and accelerate tissue healing. At Flexo Physiotherapy, cupping is applied with clinical precision as a supportive tool within structured rehabilitation   not as a standalone alternative therapy.",
     assessmentPoints: [
       "Tissue restriction and movement limitation assessment",
       "Movement limitations and stiffness",
@@ -507,9 +507,9 @@ export const conditionsData: Record<string, Condition> = {
     slug: "iastm",
     category: "Specialized",
     title: "IASTM",
-    fullTitle: "IASTM Therapy at Home — Flexo Physiotherapy, Hyderabad",
+    fullTitle: "IASTM Therapy at Home   Flexo Physiotherapy, Hyderabad",
     description:
-      "Soft tissue restrictions — caused by injury, repetitive strain, post-surgical scarring, or prolonged inactivity — create adhesions within muscles and fascia that limit movement, reduce flexibility, and cause persistent pain. These restrictions often can't be fully addressed by hands alone. At Flexo Physiotherapy, we use IASTM (Instrument Assisted Soft Tissue Mobilisation) with specially designed tools to detect and treat these restrictions with precision — delivered at your home across Hyderabad.",
+      "Soft tissue restrictions   caused by injury, repetitive strain, post-surgical scarring, or prolonged inactivity   create adhesions within muscles and fascia that limit movement, reduce flexibility, and cause persistent pain. These restrictions often can't be fully addressed by hands alone. At Flexo Physiotherapy, we use IASTM (Instrument Assisted Soft Tissue Mobilisation) with specially designed tools to detect and treat these restrictions with precision   delivered at your home across Hyderabad.",
     assessmentPoints: [
       "Areas of tissue stiffness, fibrosis, and adhesions",
       "Movement limitations linked to soft tissue restriction",
@@ -532,9 +532,9 @@ export const conditionsData: Record<string, Condition> = {
     slug: "chiropractic-care",
     category: "Specialized",
     title: "Chiropractic Care",
-    fullTitle: "Chiropractic Care at Home — Flexo Physiotherapy, Hyderabad",
+    fullTitle: "Chiropractic Care at Home   Flexo Physiotherapy, Hyderabad",
     description:
-      "Spinal pain and stiffness are often not just due to muscle strain — they can be caused by joint restrictions, spinal misalignment, and altered biomechanics that develop from prolonged sitting, poor posture, or previous injuries. At Flexo Physiotherapy, Dr. Bhanu's chiropractic expertise is combined with physiotherapy-based rehabilitation — delivering a complete, lasting approach to spinal health at your home in Hyderabad.",
+      "Spinal pain and stiffness are often not just due to muscle strain   they can be caused by joint restrictions, spinal misalignment, and altered biomechanics that develop from prolonged sitting, poor posture, or previous injuries. At Flexo Physiotherapy, Dr. Bhanu's chiropractic expertise is combined with physiotherapy-based rehabilitation   delivering a complete, lasting approach to spinal health at your home in Hyderabad.",
     assessmentPoints: [
       "Spinal alignment and segmental mobility evaluation",
       "Postural analysis and dysfunctional movement patterns",
@@ -548,7 +548,7 @@ export const conditionsData: Record<string, Condition> = {
       "Postural correction strategies for sitting, standing, and sleeping",
       "Corrective exercises for long-term spinal stability",
     ],
-    goal: "We emphasise a combined chiropractic and physiotherapy approach for lasting results — not just temporary relief. Home sessions offer added safety during acute pain phases across Kukatpally, Miyapur, Kondapur, and Gachibowli.",
+    goal: "We emphasise a combined chiropractic and physiotherapy approach for lasting results   not just temporary relief. Home sessions offer added safety during acute pain phases across Kukatpally, Miyapur, Kondapur, and Gachibowli.",
     serviceArea: "Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas",
     icon: React.createElement(Target, { className: "w-8 h-8" }),
     img: IMAGES.chiropractic,
@@ -559,9 +559,9 @@ export const conditionsData: Record<string, Condition> = {
     slug: "geriatric-physiotherapy",
     category: "Specialized",
     title: "Geriatric Physiotherapy",
-    fullTitle: "Geriatric Physiotherapy at Home — Flexo Physiotherapy, Hyderabad",
+    fullTitle: "Geriatric Physiotherapy at Home   Flexo Physiotherapy, Hyderabad",
     description:
-      "Ageing naturally brings reduced muscle strength, joint stiffness, balance decline, and slower mobility — but these changes don't have to mean loss of independence. Consistent, targeted physiotherapy can significantly improve mobility, reduce fall risk, and restore confidence in older adults. At Flexo Physiotherapy, we provide evidence-based geriatric rehabilitation specifically designed for older adults — delivered at home in Hyderabad, where elderly patients are safest, most comfortable, and most likely to improve consistently.",
+      "Ageing naturally brings reduced muscle strength, joint stiffness, balance decline, and slower mobility   but these changes don't have to mean loss of independence. Consistent, targeted physiotherapy can significantly improve mobility, reduce fall risk, and restore confidence in older adults. At Flexo Physiotherapy, we provide evidence-based geriatric rehabilitation specifically designed for older adults   delivered at home in Hyderabad, where elderly patients are safest, most comfortable, and most likely to improve consistently.",
     assessmentPoints: [
       "Muscle strength, joint mobility, and flexibility",
       "Balance assessment and fall risk evaluation",
@@ -576,7 +576,7 @@ export const conditionsData: Record<string, Condition> = {
       "Breathing and endurance training for overall physical fitness",
       "Caregiver education for safe home assistance",
     ],
-    goal: "We focus on safe, gradual progression — compassionate one-on-one care that helps elderly patients stay active and independent at their home in Kukatpally, Miyapur, Kondapur, and Gachibowli.",
+    goal: "We focus on safe, gradual progression   compassionate one-on-one care that helps elderly patients stay active and independent at their home in Kukatpally, Miyapur, Kondapur, and Gachibowli.",
     serviceArea: "Hyderabad, Miyapur, Kukatpally, Kondapur & nearby areas",
     icon: React.createElement(Users, { className: "w-8 h-8" }),
     img: GERIATRIC_IMAGE,

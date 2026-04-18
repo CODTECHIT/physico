@@ -1,11 +1,11 @@
 import { useParams, Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { 
-  MapPin, 
-  PhoneCall, 
-  ShieldCheck, 
-  Clock, 
-  ChevronRight, 
+import {
+  MapPin,
+  PhoneCall,
+  ShieldCheck,
+  Clock,
+  ChevronRight,
   Star,
   Activity,
   Brain,
@@ -15,7 +15,14 @@ import SEO from '../components/SEO';
 import Button from '../components/Button';
 import { BRAND_NAME, CONTACT_WHATSAPP_LINK } from '../constants';
 
-const locationData: Record<string, any> = {
+interface LocationInfo {
+  name: string;
+  title: string;
+  description: string;
+  keywords: string;
+}
+
+const locationData: Record<string, LocationInfo> = {
   'hyderabad': {
     name: 'Hyderabad',
     title: 'Physiotherapy at Home in Hyderabad',
@@ -122,22 +129,22 @@ const locationData: Record<string, any> = {
 
 const LocationLanding = () => {
   const { location: paramLocation } = useParams<{ location: string }>();
-  
+
   // Extract location from URL path if param is missing (e.g. /physiotherapy-hitech-city)
   const path = window.location.pathname;
-  const derivedLocation = path.includes('physiotherapy-') 
-    ? path.split('physiotherapy-')[1].toLowerCase() 
+  const derivedLocation = path.includes('physiotherapy-')
+    ? path.split('physiotherapy-')[1].toLowerCase()
     : paramLocation;
 
   const data = (derivedLocation && locationData[derivedLocation]) || locationData['hyderabad'];
-  
+
   if (!data) return <div>Location not found</div>;
 
   const bookingLink = `${CONTACT_WHATSAPP_LINK}?text=${encodeURIComponent(`Hi ${BRAND_NAME}, I am looking for a physiotherapy session at home in ${data.name}.`)}`;
 
   return (
     <div className="bg-white">
-      <SEO 
+      <SEO
         title={data.title}
         description={data.description}
         canonical={`/physiotherapy-${location}`}
@@ -148,7 +155,7 @@ const LocationLanding = () => {
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-0 right-0 w-96 h-96 bg-accent blur-[120px] rounded-full" />
         </div>
-        
+
         <div className="max-w-7xl mx-auto px-4 relative z-10 text-center">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
@@ -158,8 +165,8 @@ const LocationLanding = () => {
             <MapPin className="w-4 h-4 text-accent" />
             <span className="text-white text-xs font-bold uppercase tracking-widest">Serving {data.name} & Nearby Areas</span>
           </motion.div>
-          
-          <motion.h1 
+
+          <motion.h1
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.1 }}
@@ -167,17 +174,17 @@ const LocationLanding = () => {
           >
             {data.title}
           </motion.h1>
-          
-          <motion.p 
+
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.2 }}
             className="text-lg text-white/80 max-w-2xl mx-auto mb-10"
           >
-            Recover faster with personalized, evidence-based physiotherapy sessions delivered right to your home in {data.name}. No traffic, no waiting—just expert care.
+            Recover faster with personalized, evidence-based physiotherapy sessions delivered right to your home in {data.name}. No traffic, no waiting just expert care.
           </motion.p>
-          
-          <motion.div 
+
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -200,7 +207,7 @@ const LocationLanding = () => {
             <h2 className="text-3xl md:text-4xl font-serif font-bold text-primary mb-4">Why Choose Flexo Physio in {data.name}?</h2>
             <p className="text-gray-600 max-w-2xl mx-auto">We bring clinical excellence to your doorstep, ensuring you receive the highest quality care in the comfort of your home.</p>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { icon: <Clock className="w-8 h-8 text-accent" />, title: 'Flexible Scheduling', desc: 'Book sessions that fit your busy lifestyle, available 7 days a week.' },
@@ -229,7 +236,7 @@ const LocationLanding = () => {
               View All Services <ChevronRight className="w-4 h-4" />
             </Link>
           </div>
-          
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
               { icon: <Activity className="w-6 h-6" />, title: 'Orthopedic Rehab', desc: 'Expert care for joint pain, fractures, and post-surgery recovery.' },
@@ -275,7 +282,7 @@ const LocationLanding = () => {
         <div className="max-w-7xl mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-5xl font-serif font-bold text-white mb-8">Ready to Start Your Recovery in {data.name}?</h2>
           <div className="flex flex-col sm:flex-row justify-center gap-6">
-            <a 
+            <a
               href={bookingLink}
               target="_blank"
               rel="noopener noreferrer"
@@ -283,7 +290,7 @@ const LocationLanding = () => {
             >
               Book Your Appointment
             </a>
-            <a 
+            <a
               href="tel:+919502808581"
               className="flex items-center justify-center gap-3 text-white font-bold text-lg"
             >
