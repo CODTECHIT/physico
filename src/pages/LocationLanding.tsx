@@ -147,7 +147,7 @@ const LocationLanding = () => {
       <SEO
         title={data.title}
         description={data.description}
-        canonical={`/physiotherapy-${location}`}
+        canonical={`/physiotherapy-${derivedLocation}`}
       />
 
       {/* Hero Section */}

@@ -1,4 +1,20 @@
 {
+  "redirects": [
+    { "source": "/service-page/chiropractic", "destination": "/service/chiropractic", "permanent": true },
+    { "source": "/service-page/dry-needling", "destination": "/service/dry-needling", "permanent": true },
+    { "source": "/service-page/in-person-consultation", "destination": "/contact", "permanent": true },
+    { "source": "/testimonials", "destination": "/", "permanent": true },
+    { "source": "/booking", "destination": "/contact", "permanent": true },
+    { "source": "/ourservices", "destination": "/services", "permanent": true },
+    { "source": "/chiropractic", "destination": "/service/chiropractic", "permanent": true },
+    { "source": "/orthopedicrehab", "destination": "/service/orthopedic", "permanent": true },
+    { "source": "/sportsrehabilitation", "destination": "/service/sports", "permanent": true },
+    { "source": "/neurorehabilitation", "destination": "/service/neurological", "permanent": true },
+    { "source": "/about-us", "destination": "/about", "permanent": true },
+    { "source": "/dryneedling-cupping", "destination": "/service/dry-needling", "permanent": true },
+    { "source": "/cardio-respiratorycare", "destination": "/service/cardio", "permanent": true },
+    { "source": "/terms-conditions", "destination": "/terms-and-conditions", "permanent": true }
+  ],
   "rewrites": [
     {
       "source": "/(.*)",
