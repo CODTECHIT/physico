@@ -21,8 +21,9 @@ export const getOrganizationSchema = () => ({
   },
   "sameAs": [
     "https://www.instagram.com/flexophysio/",
-    "https://www.facebook.com/flexophysio",
-    "https://twitter.com/flexophysio"
+    "https://www.facebook.com/profile.php?id=61558257033162",
+    "https://youtube.com/@flexophysio?si=MvZIOK9pu_WvVAIa",
+    "https://www.linkedin.com/in/dr-bhanukumar-vemula-pt-6a250b242"
   ]
 });
 
@@ -38,10 +39,10 @@ export const getLocalBusinessSchema = () => ({
   "priceRange": "₹₹",
   "address": {
     "@type": "PostalAddress",
-    "streetAddress": "Kukatpally, Miyapur",
+    "streetAddress": "Flat No: G-1, 1st Floor, Rangam Nilayam, Laxminagar, Miyapur",
     "addressLocality": "Hyderabad",
     "addressRegion": "Telangana",
-    "postalCode": "500072",
+    "postalCode": "500049",
     "addressCountry": "IN"
   },
   "geo": {
@@ -69,7 +70,18 @@ export const getLocalBusinessSchema = () => ({
     { "@type": "AdministrativeArea", "name": "Miyapur" },
     { "@type": "AdministrativeArea", "name": "Kondapur" },
     { "@type": "AdministrativeArea", "name": "Gachibowli" },
-    { "@type": "AdministrativeArea", "name": "Hitech City" }
+    { "@type": "AdministrativeArea", "name": "Hitech City" },
+    { "@type": "AdministrativeArea", "name": "Madhapur" },
+    { "@type": "AdministrativeArea", "name": "KPHB" },
+    { "@type": "AdministrativeArea", "name": "Pragathi Nagar" },
+    { "@type": "AdministrativeArea", "name": "Nizampet" },
+    { "@type": "AdministrativeArea", "name": "Hafeezpet" },
+    { "@type": "AdministrativeArea", "name": "Nanakramguda" },
+    { "@type": "AdministrativeArea", "name": "Lingampally" },
+    { "@type": "AdministrativeArea", "name": "Hydernagar" },
+    { "@type": "AdministrativeArea", "name": "Bachupally" },
+    { "@type": "AdministrativeArea", "name": "Vivekananda Nagar" },
+    { "@type": "AdministrativeArea", "name": "Vasantha Nagar" }
   ],
   "knowsAbout": [
     "Physiotherapy at home",
@@ -78,7 +90,10 @@ export const getLocalBusinessSchema = () => ({
     "Post Surgery Rehab",
     "Neurological Physiotherapy",
     "Knee Pain Physiotherapy",
-    "Orthopedic Rehabilitation"
+    "Orthopedic Rehabilitation",
+    "Chiropractic Care",
+    "Dry Needling",
+    "Cupping Therapy"
   ]
 });
 
