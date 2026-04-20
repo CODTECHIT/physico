@@ -156,28 +156,22 @@ const Footer = () => {
           </div>
 
           {/* Row 2, Col 3: Service Areas */}
-          <div className="space-y-6">
-            <h4 className="text-xl font-serif font-bold tracking-tight mb-6 uppercase tracking-[0.1em]">Service Areas</h4>
-            <ul className="space-y-4">
-              {SERVICE_AREAS_LINKS.slice(0, 6).map((area) => (
-                <li key={area.name}>
-                  <Link 
-                    to={area.path}
-                    className="text-secondary/60 text-xs uppercase tracking-widest hover:text-accent transition-colors block"
-                  >
-                    {area.name}
-                  </Link>
-                </li>
-              ))}
-              <li className="pt-2 italic">
+          <div className="space-y-6 lg:col-span-2">
+            <h4 className="text-xl font-serif font-bold tracking-tight mb-6 uppercase tracking-[0.1em]">Areas We Serve</h4>
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-x-4 gap-y-3">
+              {SERVICE_AREAS_LINKS.map((area) => (
                 <Link 
-                  to="/physiotherapy-hyderabad"
-                  className="text-accent text-xs uppercase tracking-[0.2em] font-medium hover:underline"
+                  key={area.name}
+                  to={area.path}
+                  className="text-secondary/60 text-[10px] lg:text-xs uppercase tracking-widest hover:text-accent transition-colors block"
                 >
-                  and more...
+                  {area.name}
                 </Link>
-              </li>
-            </ul>
+              ))}
+            </div>
+            <p className="text-secondary/40 text-[9px] italic mt-4 uppercase tracking-[0.1em]">
+              Providing quality home visit physiotherapy across greater Hyderabad.
+            </p>
           </div>
 
           {/* Row 2, Col 4: Contact */}
