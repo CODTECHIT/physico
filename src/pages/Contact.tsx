@@ -17,6 +17,7 @@ import Button from '../components/Button';
 import SEO from '../components/SEO';
 import { Link } from 'react-router-dom';
 import { 
+  CONTACT_PHONE,
   CONTACT_PHONE_DISPLAY, 
   CONTACT_WHATSAPP_LINK, 
   SERVICE_AREAS, 
@@ -132,9 +133,9 @@ const Contact = () => {
 
               <div className="space-y-3 lg:space-y-4">
                 {[
-                  { icon: <PhoneCall className="w-5 h-5 lg:w-6 lg:h-6" />, label: 'Direct Support', value: CONTACT_PHONE_DISPLAY, sub: 'Available Mon-Sat, 8am to 8pm' },
-                  { icon: <Mail className="w-5 h-5 lg:w-6 lg:h-6" />, label: 'Clinical Inquiries', value: CONTACT_EMAIL, sub: 'Expect a reply within 12 hours' },
-                  { icon: <MapPin className="w-5 h-5 lg:w-6 lg:h-6" />, label: 'Service Areas', value: 'Hyderabad, India', sub: SERVICE_AREAS.split(',').slice(0, 4).join(', ') }
+                  { icon: <PhoneCall className="w-5 h-5 lg:w-6 lg:h-6" />, label: 'Direct Support', value: CONTACT_PHONE_DISPLAY, type: 'phone', sub: 'Available Mon-Sat, 8am to 8pm' },
+                  { icon: <Mail className="w-5 h-5 lg:w-6 lg:h-6" />, label: 'Clinical Inquiries', value: CONTACT_EMAIL, type: 'email', sub: 'Expect a reply within 12 hours' },
+                  { icon: <MapPin className="w-5 h-5 lg:w-6 lg:h-6" />, label: 'Service Areas', value: 'Hyderabad, India', type: 'text', sub: SERVICE_AREAS.split(',').slice(0, 4).join(', ') }
                 ].map((item, i) => (
                   <div key={i} className="group relative bg-surface/30 p-6 lg:p-8 rounded-2xl lg:rounded-[2.5rem] border border-primary/5 hover:border-accent/20 hover:bg-white hover:shadow-xl transition-all duration-500">
                     <div className="flex gap-4 lg:gap-6 items-start">
@@ -143,7 +144,24 @@ const Contact = () => {
                       </div>
                       <div className="space-y-1">
                         <span className="block text-[8px] lg:text-[9px] uppercase tracking-[0.3em] font-bold text-accent">{item.label}</span>
-                        <p className="text-lg lg:text-2xl font-serif font-bold text-primary">{item.value}</p>
+                        {item.type === 'phone' ? (
+                          <a 
+                            href={`tel:+91${CONTACT_PHONE}`}
+                            onClick={() => (window as any).trackPhoneClick?.()}
+                            className="hover:text-accent transition-colors"
+                          >
+                            <p className="text-lg lg:text-2xl font-serif font-bold text-primary">{item.value}</p>
+                          </a>
+                        ) : item.type === 'email' ? (
+                          <a 
+                            href={`mailto:${item.value}`}
+                            className="hover:text-accent transition-colors"
+                          >
+                            <p className="text-lg lg:text-2xl font-serif font-bold text-primary">{item.value}</p>
+                          </a>
+                        ) : (
+                          <p className="text-lg lg:text-2xl font-serif font-bold text-primary">{item.value}</p>
+                        )}
                         {item.label === 'Service Areas' ? (
                           <div className="flex flex-wrap gap-x-2 gap-y-1 mt-1">
                             {SERVICE_AREAS_LINKS.slice(0, 5).map((area, idx) => (

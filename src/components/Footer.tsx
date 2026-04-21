@@ -9,6 +9,7 @@ import {
   Mail,
 } from "lucide-react";
 import {
+  CONTACT_PHONE,
   CONTACT_PHONE_DISPLAY,
   CONTACT_EMAIL,
   SERVICE_AREAS_LINKS,
@@ -188,9 +189,13 @@ const Footer = () => {
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-accent shrink-0" />
-                <p className="text-secondary/70 text-sm font-medium">
+                <a 
+                  href={`tel:+91${CONTACT_PHONE}`}
+                  onClick={() => (window as any).trackPhoneClick?.()}
+                  className="text-secondary/70 text-sm font-medium hover:text-accent transition-colors"
+                >
                   {CONTACT_PHONE_DISPLAY}
-                </p>
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-accent shrink-0" />

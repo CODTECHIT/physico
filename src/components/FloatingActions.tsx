@@ -18,6 +18,7 @@ const FloatingActions = () => {
         {/* Phone Button */}
         <a 
           href={phoneUrl}
+          onClick={() => (window as any).trackPhoneClick?.()}
           className="group relative flex h-12 w-12 items-center justify-center rounded-full bg-[#0B3D36] text-white shadow-lg transition-all duration-300 hover:bg-accent hover:scale-110"
           title="Call Us"
         >

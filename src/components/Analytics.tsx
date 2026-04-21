@@ -13,18 +13,23 @@ const Analytics = () => {
       <script>
         {`
           function trackWhatsAppClick() {
-            // Track in GA4
             if (typeof gtag === 'function') {
               gtag('event', 'whatsapp_click', {
                 'event_category': 'conversion',
                 'event_label': 'book_home_visit'
               });
             }
-            // Track in Meta Pixel
             if (typeof fbq === 'function') {
               fbq('track', 'Contact');
             }
-            console.log('WhatsApp Click Tracked');
+          }
+
+          function trackPhoneClick() {
+            if (typeof gtag === 'function') {
+              gtag('event', 'conversion', {
+                'send_to': 'AW-17998716052/75PxCMK3t4QcEJS5uoZD'
+              });
+            }
           }
         `}
       </script>

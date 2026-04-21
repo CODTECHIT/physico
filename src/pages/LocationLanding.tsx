@@ -292,6 +292,7 @@ const LocationLanding = () => {
             </a>
             <a
               href="tel:+919502808581"
+              onClick={() => (window as any).trackPhoneClick?.()}
               className="flex items-center justify-center gap-3 text-white font-bold text-lg"
             >
               <PhoneCall className="w-6 h-6" />
