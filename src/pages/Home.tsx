@@ -361,7 +361,7 @@ const Home = () => {
 
               <a
                 href={`tel:${CONTACT_PHONE_DISPLAY?.replace(/\s/g, "")}`}
-                onClick={() => (window as any).trackPhoneClick?.()}
+                onClick={() => window.trackPhoneClick?.()}
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-white/20 bg-white/5 backdrop-blur-md px-7 py-4 text-white font-semibold text-sm tracking-wide hover:bg-white/10 hover:border-white/40 transition-all duration-300 whitespace-nowrap"
               >
                 📞 {CONTACT_PHONE_DISPLAY}
@@ -1040,7 +1040,7 @@ const Home = () => {
                   <p
                     className={`text-[10px] font-bold ${(idx % 2 === 0) ? "text-white/80" : "text-primary/60"}`}
                   >
-                    ~{Math.floor(Math.random() * 4) + 2} KM
+                    ~{(idx % 3) + 2} KM
                   </p>
                 </motion.div>
               </Link>

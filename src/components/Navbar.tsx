@@ -161,7 +161,7 @@ const Navbar = () => {
         <div className="flex shrink-0 items-center gap-1.5 lg:hidden">
           <a
             href="tel:+919502808581"
-            onClick={() => (window as any).trackPhoneClick?.()}
+            onClick={() => window.trackPhoneClick?.()}
             className="rounded-full border border-accent/10 p-1.5 text-accent transition-all hover:bg-accent/5 active:scale-90 min-[360px]:p-2"
           >
             <PhoneCall size={16} />

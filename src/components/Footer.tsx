@@ -191,7 +191,7 @@ const Footer = () => {
                 <Phone className="w-5 h-5 text-accent shrink-0" />
                 <a 
                   href={`tel:+91${CONTACT_PHONE}`}
-                  onClick={() => (window as any).trackPhoneClick?.()}
+                  onClick={() => window.trackPhoneClick?.()}
                   className="text-secondary/70 text-sm font-medium hover:text-accent transition-colors"
                 >
                   {CONTACT_PHONE_DISPLAY}

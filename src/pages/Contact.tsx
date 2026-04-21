@@ -147,7 +147,7 @@ const Contact = () => {
                         {item.type === 'phone' ? (
                           <a 
                             href={`tel:+91${CONTACT_PHONE}`}
-                            onClick={() => (window as any).trackPhoneClick?.()}
+                            onClick={() => window.trackPhoneClick?.()}
                             className="hover:text-accent transition-colors"
                           >
                             <p className="text-lg lg:text-2xl font-serif font-bold text-primary">{item.value}</p>
