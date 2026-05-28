@@ -13,119 +13,9 @@ import {
 } from 'lucide-react';
 import SEO from '../components/SEO';
 import Button from '../components/Button';
-import { BRAND_NAME, CONTACT_WHATSAPP_LINK } from '../constants';
+import { BRAND_NAME, CONTACT_WHATSAPP_LINK, CONTACT_PHONE_DISPLAY } from '../constants';
 
-interface LocationInfo {
-  name: string;
-  title: string;
-  description: string;
-  keywords: string;
-}
-
-const locationData: Record<string, LocationInfo> = {
-  'hyderabad': {
-    name: 'Hyderabad',
-    title: 'Physiotherapy at Home in Hyderabad',
-    description: 'Expert home visit physiotherapy services across Hyderabad. Specialized care for orthopedic, neuro, and sports injuries.',
-    keywords: 'physiotherapy at home Hyderabad, home visit physiotherapist Hyderabad'
-  },
-  'kukatpally': {
-    name: 'Kukatpally',
-    title: 'Expert Physiotherapy at Home in Kukatpally',
-    description: 'Looking for the best physiotherapist in Kukatpally? We provide professional home visit physiotherapy for fast recovery and pain relief.',
-    keywords: 'physiotherapy in Kukatpally, home visit physiotherapist Kukatpally'
-  },
-  'miyapur': {
-    name: 'Miyapur',
-    title: 'Professional Home Physiotherapy in Miyapur',
-    description: 'Expert physiotherapy services at your doorstep in Miyapur. Specialized in stroke rehab, back pain, and post-surgery recovery.',
-    keywords: 'physiotherapy in Miyapur, home visit physiotherapist Miyapur'
-  },
-  'gachibowli': {
-    name: 'Gachibowli',
-    title: 'Home Visit Physiotherapy in Gachibowli',
-    description: 'Get world-class physiotherapy at home in Gachibowli. Specialized sports injury rehab and orthopedic care for IT professionals.',
-    keywords: 'physiotherapy in Gachibowli, home visit physiotherapist Gachibowli'
-  },
-  'hitech-city': {
-    name: 'Hitech City',
-    title: 'Physiotherapy at Home in Hitech City, Hyderabad',
-    description: 'Convenient home visit physiotherapy in Hitech City. Expert care for neck pain, shoulder pain, and ergonomic issues.',
-    keywords: 'physiotherapy in Hitech City, home visit physiotherapist Hitech City'
-  },
-  'kondapur': {
-    name: 'Kondapur',
-    title: 'Best Home Physiotherapy Services in Kondapur',
-    description: 'Top-rated home visit physiotherapy in Kondapur. Specialized neuro and orthopedic rehabilitation for all age groups.',
-    keywords: 'physiotherapy in Kondapur, home visit physiotherapist Kondapur'
-  },
-  'madhapur': {
-    name: 'Madhapur',
-    title: 'Physiotherapy at Home in Madhapur',
-    description: 'Expert home visit physiotherapy services in Madhapur. Specialized care for IT professionals and elderly patients.',
-    keywords: 'physiotherapy in Madhapur, home visit physiotherapist Madhapur'
-  },
-  'kphb': {
-    name: 'KPHB',
-    title: 'Expert Home Physiotherapy in KPHB',
-    description: 'Quality physiotherapy at your doorstep in KPHB Colony. Specialized in orthopedic and neuro rehabilitation.',
-    keywords: 'physiotherapy in KPHB, home visit physiotherapist KPHB'
-  },
-  'pragathi-nagar': {
-    name: 'Pragathi Nagar',
-    title: 'Home Visit Physiotherapy in Pragathi Nagar',
-    description: 'Professional physiotherapy services in Pragathi Nagar. Specialized treatment for back pain and sports injuries.',
-    keywords: 'physiotherapy in Pragathi Nagar, home visit physiotherapist Pragathi Nagar'
-  },
-  'nizampet': {
-    name: 'Nizampet',
-    title: 'Physiotherapy at Home in Nizampet',
-    description: 'Expert home visit physiotherapy in Nizampet. We provide specialized care for geriatric and post-surgical patients.',
-    keywords: 'physiotherapy in Nizampet, home visit physiotherapist Nizampet'
-  },
-  'hafeezpet': {
-    name: 'Hafeezpet',
-    title: 'Expert Home Physiotherapy in Hafeezpet',
-    description: 'Get world-class physiotherapy at home in Hafeezpet. Specialized neuro and sports injury rehabilitation.',
-    keywords: 'physiotherapy in Hafeezpet, home visit physiotherapist Hafeezpet'
-  },
-  'nanakramguda': {
-    name: 'Nanakramguda',
-    title: 'Physiotherapy at Home in Nanakramguda',
-    description: 'Convenient home visit physiotherapy in Nanakramguda. Professional care for back pain and orthopedic issues.',
-    keywords: 'physiotherapy in Nanakramguda, home visit physiotherapist Nanakramguda'
-  },
-  'lingampally': {
-    name: 'Lingampally',
-    title: 'Home Physiotherapy Services in Lingampally',
-    description: 'Top-rated physiotherapy at your doorstep in Lingampally. Expert care for stroke recovery and pain management.',
-    keywords: 'physiotherapy in Lingampally, home visit physiotherapist Lingampally'
-  },
-  'hydernagar': {
-    name: 'Hydernagar',
-    title: 'Expert Home Physiotherapy in Hydernagar',
-    description: 'Quality physiotherapy services in Hydernagar. Specialized in geriatric and orthopedic rehabilitation.',
-    keywords: 'physiotherapy in Hydernagar, home visit physiotherapist Hydernagar'
-  },
-  'bachupally': {
-    name: 'Bachupally',
-    title: 'Physiotherapy at Home in Bachupally',
-    description: 'Professional home visit physiotherapy in Bachupally. Expert treatment for sports injuries and neuro conditions.',
-    keywords: 'physiotherapy in Bachupally, home visit physiotherapist Bachupally'
-  },
-  'vivekananda-nagar': {
-    name: 'Vivekananda Nagar',
-    title: 'Expert Home Physiotherapy in Vivekananda Nagar',
-    description: 'Expert home visit physiotherapy services in Vivekananda Nagar. Specialized care for orthopedic and neuro conditions.',
-    keywords: 'physiotherapy in Vivekananda Nagar, home visit physiotherapist Vivekananda Nagar'
-  },
-  'vasantha-nagar': {
-    name: 'Vasantha Nagar',
-    title: 'Professional Home Physiotherapy in Vasantha Nagar',
-    description: 'Top-rated home visit physiotherapy in Vasantha Nagar. Specialized in sports injury rehab and pain management.',
-    keywords: 'physiotherapy in Vasantha Nagar, home visit physiotherapist Vasantha Nagar'
-  }
-};
+import { locationData } from '../data/locationData';
 
 const LocationLanding = () => {
   const { location: paramLocation } = useParams<{ location: string }>();
@@ -145,9 +35,10 @@ const LocationLanding = () => {
   return (
     <div className="bg-white">
       <SEO
-        title={data.title}
+        title={`${data.title} - Near Me`}
         description={data.description}
         canonical={`/physiotherapy-${derivedLocation}`}
+        keywords={`${data.keywords}, physiotherapist near me, home visit physiotherapy near me, best physiotherapy near me`}
       />
 
       {/* Hero Section */}
@@ -172,7 +63,7 @@ const LocationLanding = () => {
             transition={{ delay: 0.1 }}
             className="text-4xl md:text-6xl font-serif font-bold text-white mb-6"
           >
-            {data.title}
+            {data.title} Near You
           </motion.h1>
 
           <motion.p
@@ -190,7 +81,12 @@ const LocationLanding = () => {
             transition={{ delay: 0.3 }}
             className="flex flex-col sm:flex-row justify-center gap-4"
           >
-            <a href={bookingLink} target="_blank" rel="noopener noreferrer">
+            <a 
+              href={bookingLink} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              onClick={() => (window as any).gtag && (window as any).gtag('event', 'whatsapp_booking_click', { location: data.name })}
+            >
               <Button size="lg" className="w-full sm:w-auto">Book Home Visit Now</Button>
             </a>
             <Link to="/contact">
@@ -286,17 +182,18 @@ const LocationLanding = () => {
               href={bookingLink}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => (window as any).gtag && (window as any).gtag('event', 'whatsapp_booking_click', { location: data.name })}
               className="bg-white text-accent px-10 py-4 rounded-full font-bold text-lg hover:bg-gray-100 transition-colors shadow-xl"
             >
               Book Your Appointment
             </a>
             <a
-              href="tel:+919502808581"
-              onClick={() => window.trackPhoneClick?.()}
+              href={`tel:+91${CONTACT_PHONE_DISPLAY.replace(/\s+/g, "")}`}
+              onClick={() => (window as any).gtag && (window as any).gtag('event', 'click_to_call', { location: data.name })}
               className="flex items-center justify-center gap-3 text-white font-bold text-lg"
             >
               <PhoneCall className="w-6 h-6" />
-              Call +91 95028 08581
+              Call {CONTACT_PHONE_DISPLAY}
             </a>
           </div>
         </div>

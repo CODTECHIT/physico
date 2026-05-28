@@ -18,6 +18,8 @@ const RefundPolicy = lazy(() => import('./pages/RefundPolicy'));
 const FAQ = lazy(() => import('./pages/FAQ'));
 const Packages = lazy(() => import('./pages/Packages'));
 const NotFound = lazy(() => import('./pages/NotFound'));
+const BlogList = lazy(() => import('./pages/BlogList'));
+const BlogPost = lazy(() => import('./pages/BlogPost'));
 
 // Initial Loading State
 const PageLoader = () => (
@@ -62,6 +64,8 @@ function App() {
             <Route path="/refund-policy" element={<RefundPolicy />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/packages" element={<Packages />} />
+            <Route path="/blog" element={<BlogList />} />
+            <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Suspense>

@@ -41,6 +41,8 @@ const Contact = () => {
     condition: ''
   });
 
+  const [hasStartedForm, setHasStartedForm] = useState(false);
+
   const { scrollY } = useScroll();
 
   // Parallax transforms
@@ -50,6 +52,14 @@ const Contact = () => {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
 
+    // Trigger GA4 Form Submit event
+    if (typeof window !== 'undefined' && (window as any).gtag) {
+      (window as any).gtag('event', 'form_submit', {
+        form_id: 'contact_form',
+        form_name: 'Initial Assessment Request'
+      });
+    }
+
     const message = `*New Assessment Request from Website*%0A%0A*Name:* ${formData.fullName}%0A*Phone:* ${formData.phone}%0A*Location:* ${formData.location}%0A*Gender:* ${formData.gender}%0A*Age:* ${formData.age}%0A*Service:* ${formData.service}%0A*Condition:* ${formData.condition}`;
 
     const whatsappUrl = `${CONTACT_WHATSAPP_LINK}?text=${message}`;
@@ -58,6 +68,18 @@ const Contact = () => {
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
+    
+    // Trigger GA4 Form Start event only once
+    if (!hasStartedForm) {
+      if (typeof window !== 'undefined' && (window as any).gtag) {
+        (window as any).gtag('event', 'form_start', {
+          form_id: 'contact_form',
+          form_name: 'Initial Assessment Request'
+        });
+      }
+      setHasStartedForm(true);
+    }
+
     setFormData(prev => ({
       ...prev,
       [name]: value
@@ -69,6 +91,25 @@ const Contact = () => {
       <SEO 
         title={`Contact ${BRAND_NAME} | Book Your Home Visit`}
         description={`Contact ${BRAND_NAME} to book your home visit physiotherapy in Hyderabad. We serve Kukatpally, Miyapur, Gachibowli, and more.`}
+        schema={{
+          "@context": "https://schema.org",
+          "@type": "Physician",
+          "name": BRAND_NAME,
+          "url": "https://www.flexophysio.com",
+          "telephone": CONTACT_PHONE,
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Hyderabad",
+            "addressRegion": "Telangana",
+            "addressCountry": "IN"
+          },
+          "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+            "opens": "08:00",
+            "closes": "20:00"
+          }
+        }}
       />
 
       {/* 1. HERO HEADER */}

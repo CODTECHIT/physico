@@ -15,6 +15,7 @@ export interface Condition {
   icon: React.ReactNode;
   img: string;
   keywords?: string;
+  faqs?: { q: string; a: string }[];
 }
 
 const GERIATRIC_IMAGE = "/images/treatments/geriatric_physiotherapy_home.png";
@@ -365,6 +366,24 @@ export const conditionsData: Record<string, Condition> = {
     icon: React.createElement(Brain, { className: "w-8 h-8" }),
     img: IMAGES.parkinsons,
     keywords: "Parkinson's disease physiotherapy at home Hyderabad, home physiotherapist for Parkinson's Kukatpally, Parkinson's rehab home visit Hyderabad, gait training Parkinson's home physiotherapy, neuro physiotherapy for Parkinson's Miyapur",
+    faqs: [
+      {
+        q: "Why is home physiotherapy recommended for Parkinson's Disease?",
+        a: "Traveling to a clinic can be exhausting and increases the risk of falls for Parkinson's patients. Home physiotherapy provides a safe, familiar environment, which is crucial for reducing anxiety and freezing episodes during gait training."
+      },
+      {
+        q: "Can physiotherapy stop the progression of Parkinson's?",
+        a: "While physiotherapy cannot stop the neurological progression, evidence-based neurorehabilitation (like amplitude-based training) can significantly slow functional decline, improve walking speed, and delay the loss of independence."
+      },
+      {
+        q: "What is 'freezing of gait' and can therapy help?",
+        a: "Freezing of gait is a common symptom where the patient suddenly feels their feet are stuck to the floor. Our physiotherapists teach specific visual and auditory cueing strategies to help patients overcome freezing episodes safely."
+      },
+      {
+        q: "How many sessions are typically required?",
+        a: "Parkinson's requires ongoing management. We usually begin with 2-3 sessions per week to establish a routine and teach specific techniques, then transition to a maintenance program supervised periodically."
+      }
+    ]
   },
   "spinal-cord-injury": {
     id: "spinal-cord-injury",

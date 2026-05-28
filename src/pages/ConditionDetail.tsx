@@ -11,7 +11,10 @@ import {
   MapPin,
   Calendar,
   Activity,
-  Users
+  Users,
+  PlayCircle,
+  HelpCircle,
+  UserCheck
 } from 'lucide-react';
 import { conditionsData } from '../data/conditionsData';
 import { CONTACT_PHONE_DISPLAY, CONTACT_WHATSAPP_LINK, BRAND_NAME } from '../constants';
@@ -52,7 +55,7 @@ const ConditionDetail = () => {
         title={`${condition.title} Treatment at Home in Hyderabad`}
         description={`Get expert home visit physiotherapy for ${condition.title} in Hyderabad. Specialized care for fast recovery and pain relief. Book your session today!`}
         schema={conditionSchema}
-        keywords={condition.keywords}
+        keywords={`${condition.keywords}, physiotherapist near me, home visit physiotherapy near me, best physiotherapy near me`}
         breadcrumbs={[
           { name: "Home", item: "/" },
           { name: "Treatments", item: "/treatment" },
@@ -103,17 +106,36 @@ const ConditionDetail = () => {
                 {condition.description}
               </p>
               
-              <div className="flex flex-wrap gap-4">
-                <a href={CONTACT_WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+              <div className="flex flex-wrap gap-4 mt-8">
+                <a 
+                  href={CONTACT_WHATSAPP_LINK} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  onClick={() => (window as any).gtag && (window as any).gtag('event', 'whatsapp_booking_click', { condition: condition.title })}
+                >
                   <Button size="lg" className="rounded-none px-8 bg-primary hover:bg-primary/90 text-white group shadow-xl whitespace-nowrap">
                     Book Home Visit <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-1 transition-transform" />
                   </Button>
                 </a>
-                <a href={`tel:${CONTACT_PHONE_DISPLAY}`}>
+                <a 
+                  href={`tel:${CONTACT_PHONE_DISPLAY}`}
+                  onClick={() => (window as any).gtag && (window as any).gtag('event', 'click_to_call', { condition: condition.title })}
+                >
                   <Button variant="outline" size="lg" className="rounded-none px-8 border-primary text-primary hover:bg-primary/5">
                     Call specialist
                   </Button>
                 </a>
+              </div>
+              
+              {/* E-E-A-T Medical Accuracy Badge */}
+              <div className="mt-8 flex items-center gap-3 p-4 bg-gray-50 border border-gray-100 rounded-2xl max-w-md">
+                <div className="w-10 h-10 rounded-full bg-green-100 flex items-center justify-center shrink-0">
+                  <ShieldCheck className="w-5 h-5 text-green-600" />
+                </div>
+                <div>
+                  <p className="text-xs font-bold text-gray-900 uppercase tracking-wider">Medical Accuracy Checked</p>
+                  <p className="text-xs text-gray-500 font-medium mt-0.5">Clinical protocols reviewed by Dr. Bhanu Vemula, MPT</p>
+                </div>
               </div>
             </motion.div>
 
@@ -251,7 +273,12 @@ const ConditionDetail = () => {
                   Quality Home-Based Care in {condition.serviceArea}
                 </p>
                 <div className="pt-8">
-                  <a href={CONTACT_WHATSAPP_LINK} target="_blank" rel="noopener noreferrer">
+                  <a 
+                    href={CONTACT_WHATSAPP_LINK} 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    onClick={() => (window as any).gtag && (window as any).gtag('event', 'whatsapp_booking_click', { condition: condition.title })}
+                  >
                     <Button size="lg" className="rounded-none px-12 bg-white text-primary hover:bg-white/90 border-none font-bold shadow-2xl">
                       Consult with a specialist
                     </Button>
@@ -262,6 +289,62 @@ const ConditionDetail = () => {
           </div>
         </div>
       </section>
+
+      {/* E-E-A-T: CLINICIAN BIO & VIDEO SECTION */}
+      <section className="section-spacing bg-white">
+        <div className="max-w-[1400px] mx-auto responsive-padding">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Bio */}
+            <div className="space-y-6">
+              <div className="inline-flex items-center gap-2 px-4 py-2 bg-primary/5 rounded-full border border-primary/10">
+                <UserCheck className="w-4 h-4 text-primary" />
+                <span className="text-primary font-bold uppercase tracking-widest text-[10px]">Expert Care</span>
+              </div>
+              <h2 className="editorial-heading text-primary">
+                Meet Your <span className="text-accent italic font-normal">Specialist</span>
+              </h2>
+              <p className="text-dark/70 text-lg font-medium leading-relaxed">
+                Dr. Bhanu Vemula is a leading home-visit physiotherapist in Hyderabad with over 6+ years of clinical experience. He specializes in providing highly personalized, evidence-based rehabilitation directly to your home.
+              </p>
+              <Link to="/about" className="inline-flex items-center gap-2 text-accent font-bold hover:underline transition-all">
+                Read Full Profile <ArrowRight className="w-4 h-4" />
+              </Link>
+            </div>
+            {/* Video Placeholder */}
+            <div className="relative aspect-video bg-gray-100 rounded-3xl overflow-hidden border border-gray-200 shadow-inner group flex flex-col items-center justify-center text-center p-8">
+              <PlayCircle className="w-16 h-16 text-primary/20 mb-4 group-hover:scale-110 transition-transform duration-300" />
+              <h4 className="text-xl font-bold text-gray-800 mb-2">Therapist Introduction Video</h4>
+              <p className="text-gray-500 text-sm font-medium">Watch Dr. Bhanu explain the recovery process for {condition.title}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ SECTION */}
+      {condition.faqs && condition.faqs.length > 0 && (
+        <section className="section-spacing bg-surface/30">
+          <div className="max-w-4xl mx-auto responsive-padding">
+            <div className="text-center mb-12">
+              <div className="inline-flex items-center justify-center gap-2 mb-4">
+                <HelpCircle className="w-5 h-5 text-accent" />
+                <span className="text-accent font-bold uppercase tracking-[0.2em] text-[10px]">Patient Queries</span>
+              </div>
+              <h2 className="editorial-heading text-primary">
+                Frequently Asked <span className="text-accent italic font-normal">Questions</span>
+              </h2>
+            </div>
+            
+            <div className="space-y-4">
+              {condition.faqs.map((faq, idx) => (
+                <div key={idx} className="bg-white p-6 md:p-8 rounded-2xl shadow-sm border border-primary/5">
+                  <h3 className="text-lg md:text-xl font-bold text-primary mb-3 leading-snug">{faq.q}</h3>
+                  <p className="text-dark/70 font-medium leading-relaxed">{faq.a}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* 4. CLINICAL PHILOSOPHY STATS */}
       <section className="section-spacing border-t border-primary/5">
