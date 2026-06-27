@@ -4,8 +4,6 @@ import {
   MapPin,
   CheckCircle2,
   PhoneCall,
-  Activity,
-  Brain,
   ShieldCheck,
   Clock
 } from "lucide-react";

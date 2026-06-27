@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import SEO from "../components/SEO";
 import Button from "../components/Button";
-import { BRAND_NAME, CONTACT_PHONE_DISPLAY, CONTACT_WHATSAPP_LINK } from "../constants";
+import { CONTACT_PHONE_DISPLAY, CONTACT_WHATSAPP_LINK } from "../constants";
 import { getPhysicianSchema } from "../lib/seo-schemas";
 
 const DoctorProfile = () => {
