@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 import { BRAND_NAME, CONTACT_WHATSAPP_LINK } from "../constants";
 import Button from "../components/Button";
+import SEO from "../components/SEO";
 
 const packages = [
   {
@@ -141,6 +142,12 @@ const Packages = () => {
 
   return (
     <div className="bg-white selection:bg-accent selection:text-white font-sans">
+      <SEO
+        title="Home Physiotherapy Charges & Packages in Hyderabad"
+        description="View transparent session rates and affordable physiotherapy home visit packages for stroke rehab, orthopedic care, and chiropractic treatment in Hyderabad."
+        canonical="/packages"
+        keywords="home physiotherapy cost Hyderabad, physiotherapy home visit cost Hyderabad, physiotherapy packages Hyderabad"
+      />
       {/* HERO SECTION */}
       <section className="pt-12 pb-6 lg:pt-20 lg:pb-8 relative overflow-hidden flex items-center">
         <motion.div

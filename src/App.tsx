@@ -20,6 +20,9 @@ const Packages = lazy(() => import('./pages/Packages'));
 const NotFound = lazy(() => import('./pages/NotFound'));
 const BlogList = lazy(() => import('./pages/BlogList'));
 const BlogPost = lazy(() => import('./pages/BlogPost'));
+const DoctorProfile = lazy(() => import('./pages/DoctorProfile'));
+const PhysiotherapyMiyapur = lazy(() => import('./pages/PhysiotherapyMiyapur'));
+const PhysiotherapyMadeenaguda = lazy(() => import('./pages/PhysiotherapyMadeenaguda'));
 
 // Initial Loading State
 const PageLoader = () => (
@@ -58,6 +61,13 @@ function App() {
             <Route path="/physiotherapy-bachupally" element={<LocationLanding />} />
             <Route path="/physiotherapy-vivekananda-nagar" element={<LocationLanding />} />
             <Route path="/physiotherapy-vasantha-nagar" element={<LocationLanding />} />
+            <Route path="/physiotherapy-madeenaguda" element={<LocationLanding />} />
+            <Route path="/physiotherapy-manikonda" element={<LocationLanding />} />
+            <Route path="/physiotherapy-jubilee-hills" element={<LocationLanding />} />
+            <Route path="/physiotherapy-banjara-hills" element={<LocationLanding />} />
+            <Route path="/dr-bhanukumar-vemula" element={<DoctorProfile />} />
+            <Route path="/physiotherapy-home-visit-miyapur" element={<PhysiotherapyMiyapur />} />
+            <Route path="/physiotherapy-home-visit-madeenaguda" element={<PhysiotherapyMadeenaguda />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms-and-conditions" element={<TermsAndConditions />} />

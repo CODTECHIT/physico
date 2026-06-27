@@ -52,8 +52,8 @@ const ConditionDetail = () => {
   return (
     <div className="bg-white min-h-screen">
       <SEO 
-        title={`${condition.title} Treatment at Home in Hyderabad`}
-        description={`Get expert home visit physiotherapy for ${condition.title} in Hyderabad. Specialized care for fast recovery and pain relief. Book your session today!`}
+        title={condition.fullTitle}
+        description={`Get expert home visit physiotherapy for ${condition.title} in Kukatpally, Miyapur, Kondapur, Gachibowli, and surrounding Hyderabad areas. Book a session with ${BRAND_NAME} today!`}
         schema={conditionSchema}
         keywords={`${condition.keywords}, physiotherapist near me, home visit physiotherapy near me, best physiotherapy near me`}
         breadcrumbs={[

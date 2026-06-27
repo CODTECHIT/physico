@@ -115,6 +115,7 @@ const Footer = () => {
               {[
                 { name: "Home", path: "/" },
                 { name: "About Us", path: "/about" },
+                { name: "Dr. Bhanu PT", path: "/dr-bhanukumar-vemula" },
                 { name: "Services", path: "/services" },
                 { name: "Treatment", path: "/treatment" },
                 { name: "Packages", path: "/packages" },

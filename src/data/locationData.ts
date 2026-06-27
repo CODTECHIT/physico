@@ -125,5 +125,11 @@ export const locationData: Record<string, LocationInfo> = {
     title: 'Best Home Physiotherapy Services in Banjara Hills',
     description: 'Expert home visit physiotherapy in Banjara Hills. We provide specialized care for geriatric, orthopedic, and neuro conditions.',
     keywords: 'physiotherapy in Banjara Hills, home visit physiotherapist Banjara Hills, physiotherapy at home near me'
+  },
+  'madeenaguda': {
+    name: 'Madeenaguda',
+    title: 'Professional Physiotherapy at Home in Madeenaguda',
+    description: 'Get certified home visit physiotherapy services in Madeenaguda, Hyderabad. Specialized care for back pain, stroke recovery, and joint pain.',
+    keywords: 'physiotherapy in Madeenaguda, home visit physiotherapist Madeenaguda, physiotherapy at home near me'
   }
 };

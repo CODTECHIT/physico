@@ -2,7 +2,7 @@ export const CONTACT_PHONE = '9502808581';
 export const CONTACT_PHONE_DISPLAY = '+91 95028 08581';
 export const CONTACT_WHATSAPP_LINK = `https://wa.me/91${CONTACT_PHONE}`;
 export const BRAND_NAME = 'Flexo Physiotherapy';
-export const SERVICE_AREAS = 'Hyderabad, Kukatpally, Miyapur, Kondapur, Gachibowli, Hitech City, Madhapur, KPHB, Pragathi Nagar, Nizampet, Hafeezpet, Nanakramguda, Lingampally, Hydernagar, Bachupally, Vivekananda Nagar, Vasantha Nagar';
+export const SERVICE_AREAS = 'Hyderabad, Kukatpally, Miyapur, Kondapur, Gachibowli, Hitech City, Madhapur, KPHB, Pragathi Nagar, Nizampet, Hafeezpet, Nanakramguda, Lingampally, Hydernagar, Bachupally, Vivekananda Nagar, Vasantha Nagar, Madeenaguda, Manikonda, Jubilee Hills, Banjara Hills';
 
 export const SERVICE_AREAS_LINKS = [
   { name: 'Hyderabad', path: '/physiotherapy-hyderabad' },
@@ -22,6 +22,10 @@ export const SERVICE_AREAS_LINKS = [
   { name: 'Bachupally', path: '/physiotherapy-bachupally' },
   { name: 'Vivekananda Nagar', path: '/physiotherapy-vivekananda-nagar' },
   { name: 'Vasantha Nagar', path: '/physiotherapy-vasantha-nagar' },
+  { name: 'Madeenaguda', path: '/physiotherapy-madeenaguda' },
+  { name: 'Manikonda', path: '/physiotherapy-manikonda' },
+  { name: 'Jubilee Hills', path: '/physiotherapy-jubilee-hills' },
+  { name: 'Banjara Hills', path: '/physiotherapy-banjara-hills' },
 ];
 
 export const CONDITIONS_LINKS = [

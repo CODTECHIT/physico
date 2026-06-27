@@ -3,6 +3,7 @@ import { Brain, Dumbbell, Target, ArrowRight, CheckCircle2, Activity, Accessibil
 import Button from '../components/Button';
 import { Link } from 'react-router-dom';
 import { BRAND_NAME } from '../constants';
+import SEO from '../components/SEO';
 
 const Services = () => {
   const { scrollY } = useScroll();
@@ -173,6 +174,12 @@ const Services = () => {
 
   return (
     <div className="bg-white">
+      <SEO
+        title="Home Visit Physiotherapy & Chiropractic Services in Hyderabad"
+        description="Explore our specialized home visit therapy services in Hyderabad, including orthopedic rehab, neurological rehab, chiropractic care, and dry needling."
+        canonical="/services"
+        keywords="home visit physiotherapy services, home chiropractor Hyderabad, dry needling home visit"
+      />
 
       {/* 1. HERO HEADER */}
       <section className="pt-8 pb-6 lg:pt-12 lg:pb-8 relative overflow-hidden min-h-[30vh] lg:min-h-[50vh] flex items-center">

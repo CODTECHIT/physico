@@ -118,8 +118,8 @@ const FAQ = () => {
   return (
     <div className="bg-white">
       <SEO 
-        title="Frequently Asked Questions"
-        description="Find answers to common questions about home physiotherapy in Hyderabad, treatment procedures, booking, and more."
+        title="Home Physiotherapy FAQs - Kukatpally & Miyapur"
+        description="Find answers to common questions about home physiotherapy rates, session durations, and treatment procedures in Kukatpally, Miyapur, and Hyderabad."
         canonical="/faq"
         schema={faqSchema}
       />

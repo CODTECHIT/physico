@@ -10,6 +10,7 @@ import {
 } from "lucide-react";
 import { BRAND_NAME } from "../constants";
 import Button from "../components/Button";
+import SEO from "../components/SEO";
 
 const Conditions = () => {
   const { scrollY } = useScroll();
@@ -19,6 +20,12 @@ const Conditions = () => {
 
   return (
     <div className="bg-white">
+      <SEO
+        title="Conditions Treated - Home Visit Physiotherapy Hyderabad"
+        description="Discover the wide range of musculoskeletal, neurological, and geriatric conditions treated at your home in Kukatpally, Miyapur, and Hyderabad."
+        canonical="/treatment"
+        keywords="physiotherapy conditions treated, home visit physiotherapist Hyderabad, back pain therapy home visit"
+      />
       {/* 1. CLINICAL HEADER */}
       <section className="pt-16 pb-6 lg:pt-24 lg:pb-8 relative overflow-hidden text-center min-h-[50vh] lg:min-h-[70vh] flex items-center">
         {/* Background Image with Parallax Overlay */}

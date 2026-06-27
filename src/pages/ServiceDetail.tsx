@@ -7,6 +7,7 @@ import { CONTACT_WHATSAPP_LINK, BRAND_NAME } from '../constants';
 
 interface ServiceData {
   title: string;
+  metaTitle?: string;
   desc: string;
   icon: React.ReactNode;
   img: string;
@@ -41,6 +42,7 @@ const servicesData: Record<string, ServiceData> = {
   },
   'neurological': {
     title: 'Neuro Rehabilitation',
+    metaTitle: 'Neuro Rehabilitation at Home in Kukatpally | Flexophysio',
     desc: 'Stroke, paralysis, and neurological conditions require specialist hands-on care, not just exercises. Dr. Bhanu delivers evidence-based neuro rehab directly at your home in Kukatpally, Miyapur, Kondapur and nearby areas, helping patients regain movement, balance, and daily independence.',
     icon: <Brain className="w-12 h-12" />,
     img: '/images/treatments/neuro_rehab_new.jpg',
@@ -64,6 +66,7 @@ const servicesData: Record<string, ServiceData> = {
   },
   'orthopedic': {
     title: 'Orthopedic Rehabilitation',
+    metaTitle: 'Orthopedic Rehab at Home in Kukatpally | Flexophysio',
     desc: 'Whether it\'s joint pain, post-surgery stiffness, or a musculoskeletal injury, recovery should happen at your pace, in your own home. Our orthopedic physiotherapy combines manual therapy, targeted exercises, and advanced modalities to eliminate pain at the root cause, not just the symptoms.',
     icon: <Activity className="w-12 h-12" />,
     img: '/images/treatments/orthopedic_rehab_new.jpg',
@@ -460,9 +463,10 @@ const ServiceDetail = () => {
   return (
     <div className="bg-white">
       <SEO 
-        title={`${service.title} at Home in Hyderabad`}
-        description={service.desc.substring(0, 160)}
+        title={service.metaTitle || `${service.title} at Home in Kukatpally & Miyapur`}
+        description={`Get expert home visit ${service.title.toLowerCase()} services in Kukatpally, Miyapur, Kondapur, and Gachibowli, Hyderabad. Hands-on professional care for faster recovery.`}
         schema={serviceSchema}
+        keywords={`${service.title} home visit, home visit physiotherapy Kukatpally Miyapur`}
         breadcrumbs={[
           { name: "Home", item: "/" },
           { name: "Services", item: "/services" },

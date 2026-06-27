@@ -34,6 +34,79 @@
     <!-- Preload critical font to reduce LCP -->
     <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Outfit:wght@400;500;600;700;800&display=swap" />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Playfair+Display:ital,wght@0,700;1,700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Local Business Structured Data -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "Flexo Physiotherapy & Chiropractic Home Visit Service",
+        "image": "https://www.flexophysio.com/logo-square.png",
+        "@id": "https://www.flexophysio.com/#medicalbusiness",
+        "url": "https://www.flexophysio.com",
+        "telephone": "+91 95028 08581",
+        "priceRange": "₹₹",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Plot 33, Flat 102, Near Hydernagar, NRSA Colony Main Road, Kukatpally",
+          "addressLocality": "Hyderabad",
+          "addressRegion": "Telangana",
+          "postalCode": "500072",
+          "addressCountry": "IN"
+        },
+        "geo": {
+          "@type": "GeoCoordinates",
+          "latitude": 17.4933,
+          "longitude": 78.3848
+        },
+        "openingHoursSpecification": {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "07:00",
+          "closes": "21:00"
+        },
+        "areaServed": [
+          {
+            "@type": "AdministrativeArea",
+            "name": "Kukatpally"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Miyapur"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Madeenaguda"
+          },
+          {
+            "@type": "AdministrativeArea",
+            "name": "Hydernagar"
+          },
+          {
+            "@type": "City",
+            "name": "Hyderabad"
+          }
+        ],
+        "medicalSpecialty": [
+          {
+            "@type": "MedicalSpecialty",
+            "name": "Physiotherapy"
+          },
+          {
+            "@type": "MedicalSpecialty",
+            "name": "Chiropractic"
+          }
+        ]
+      }
+    </script>
   </head>
   <body>
     <div id="root"></div>

@@ -20,7 +20,7 @@ const BlogList: React.FC = () => {
       <SEO 
         title="Physiotherapy Blog & Health Resources | Flexo Physiotherapy"
         description="Read the latest articles on physiotherapy, knee pain, home visits, and rehabilitation from the experts at Flexo Physiotherapy Hyderabad."
-        canonical="https://www.flexophysio.com/blog"
+        canonical="/blog"
       />
       
       <div className="min-h-screen bg-white relative overflow-hidden pt-28 pb-24">

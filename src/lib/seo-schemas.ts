@@ -94,7 +94,14 @@ export const getLocalBusinessSchema = () => ({
     "Chiropractic Care",
     "Dry Needling",
     "Cupping Therapy"
-  ]
+  ],
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "137",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
 });
 
 export const getWebsiteSchema = () => ({
@@ -129,6 +136,57 @@ export const getMedicalConditionSchema = (name: string, description: string, spe
   "relevantSpecialty": {
     "@type": "MedicalSpecialty",
     "name": specialty
+  }
+});
+
+export const getPhysicianSchema = () => ({
+  "@type": "Physician",
+  "@id": "https://www.flexophysio.com/#physician",
+  "name": "Dr. BhanuKumar Vemula",
+  "image": "https://www.flexophysio.com/founder.jpg",
+  "medicalSpecialty": ["PhysicalTherapy", "OccupationalTherapy"],
+  "telephone": "+919502808581",
+  "email": CONTACT_EMAIL,
+  "url": "https://www.flexophysio.com/dr-bhanukumar-vemula",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Flat No: G-1, 1st Floor, Rangam Nilayam, Laxminagar, Miyapur",
+    "addressLocality": "Hyderabad",
+    "addressRegion": "Telangana",
+    "postalCode": "500049",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 17.4948,
+    "longitude": 78.3996
+  },
+  "knowsAbout": [
+    "Physiotherapy",
+    "Chiropractic care",
+    "Dry Needling",
+    "Myofascial Cupping",
+    "IASTM",
+    "Kinesio Taping",
+    "Stroke Rehabilitation",
+    "Orthopedic Rehabilitation",
+    "Geriatric Physiotherapy"
+  ],
+  "memberOf": {
+    "@type": "MedicalOrganization",
+    "name": "Telangana State Physiotherapy Board (TSPMB)"
+  },
+  "identifier": {
+    "@type": "PropertyValue",
+    "name": "TSPMB Registration Number",
+    "value": "C-13470"
+  },
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "4.9",
+    "reviewCount": "137",
+    "bestRating": "5",
+    "worstRating": "1"
   }
 });
 

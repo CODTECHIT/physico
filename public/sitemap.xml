@@ -8,6 +8,7 @@
   <url><loc>https://www.flexophysio.com/packages</loc><lastmod>2026-04-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.flexophysio.com/faq</loc><lastmod>2026-04-18</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url>
   <url><loc>https://www.flexophysio.com/contact</loc><lastmod>2026-04-18</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/dr-bhanukumar-vemula</loc><lastmod>2026-06-27</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.flexophysio.com/privacy-policy</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://www.flexophysio.com/terms-and-conditions</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
   <url><loc>https://www.flexophysio.com/refund-policy</loc><lastmod>2026-04-18</lastmod><changefreq>yearly</changefreq><priority>0.3</priority></url>
@@ -30,6 +31,10 @@
   <url><loc>https://www.flexophysio.com/physiotherapy-bachupally</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.flexophysio.com/physiotherapy-vivekananda-nagar</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
   <url><loc>https://www.flexophysio.com/physiotherapy-vasantha-nagar</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.flexophysio.com/physiotherapy-madeenaguda</loc><lastmod>2026-06-27</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.flexophysio.com/physiotherapy-manikonda</loc><lastmod>2026-06-27</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.flexophysio.com/physiotherapy-jubilee-hills</loc><lastmod>2026-06-27</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.flexophysio.com/physiotherapy-banjara-hills</loc><lastmod>2026-06-27</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 
   <!-- Service Detail Pages -->
   <url><loc>https://www.flexophysio.com/service/orthopedic</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
@@ -64,4 +69,6 @@
   <url><loc>https://www.flexophysio.com/treatment/iastm</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.flexophysio.com/treatment/chiropractic-care</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
   <url><loc>https://www.flexophysio.com/treatment/geriatric-physiotherapy</loc><lastmod>2026-04-18</lastmod><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.flexophysio.com/physiotherapy-home-visit-miyapur</loc><lastmod>2026-06-27</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.flexophysio.com/physiotherapy-home-visit-madeenaguda</loc><lastmod>2026-06-27</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>
 </urlset>

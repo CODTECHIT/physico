@@ -30,7 +30,9 @@ const SEO: React.FC<SEOProps> = ({
 }) => {
 
   const siteName = BRAND_NAME;
-  const fullTitle = title ? `${title} | ${siteName}` : siteName;
+  const fullTitle = title 
+    ? (title.includes(siteName) || title.includes("Flexo") ? title : `${title} | ${siteName}`) 
+    : siteName;
   const defaultDescription = "Expert home visit physiotherapy in Hyderabad. Specializing in Orthopedic, Neurological, and Post-Surgical rehabilitation at your doorstep.";
   const metaDescription = description || defaultDescription;
   const url = canonical ? `https://www.flexophysio.com${canonical}` : 'https://www.flexophysio.com/';

@@ -1,4 +1,5 @@
 import { motion, useScroll, useTransform } from "framer-motion";
+import { Link } from "react-router-dom";
 import {
   Award,
   Heart,
@@ -30,8 +31,9 @@ const About = () => {
   return (
     <div className="bg-white">
       <SEO
-        title={`About ${BRAND_NAME} | Expert Physiotherapy at Home`}
-        description={`Learn more about ${BRAND_NAME}, our mission, and why we are the preferred choice for home visit physiotherapy in Hyderabad.`}
+        title="About Flexo Physiotherapy - Home Visit in Kukatpally | Flexophysio"
+        description={`Learn more about ${BRAND_NAME}, our mission, and why we are the preferred choice for home visit physiotherapy and chiropractic care in Kukatpally, Miyapur, and Hyderabad.`}
+        canonical="/about"
       />
       {/* 1. HERO HEADER */}
       <section className="pt-8 pb-6 lg:pt-12 lg:pb-8 relative overflow-hidden min-h-[30vh] lg:min-h-[45vh] flex items-center">
@@ -215,7 +217,7 @@ const About = () => {
               </div>
 
               {/* Premium Bio */}
-              <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-primary/5 shadow-lg">
+              <div className="bg-white/60 backdrop-blur-sm rounded-2xl p-6 lg:p-8 border border-primary/5 shadow-lg space-y-4">
                 <p className="text-dark font-medium leading-relaxed text-base lg:text-lg">
                   <span className="text-accent font-bold">
                     Dr. Bhanu Vemula
@@ -229,6 +231,15 @@ const About = () => {
                   advanced clinical knowledge with hands-on expertise to provide
                   highly personalized treatment.
                 </p>
+                <div className="pt-2">
+                  <Link 
+                    to="/dr-bhanukumar-vemula" 
+                    className="inline-flex items-center gap-2 text-accent hover:text-primary font-bold text-sm transition-colors group"
+                  >
+                    View Professional Credentials & TSPMB Registration
+                    <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                  </Link>
+                </div>
               </div>
 
               {/* Expertise Cards */}

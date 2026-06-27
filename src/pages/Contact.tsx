@@ -89,8 +89,9 @@ const Contact = () => {
   return (
     <div className="bg-white">
       <SEO 
-        title={`Contact ${BRAND_NAME} | Book Your Home Visit`}
-        description={`Contact ${BRAND_NAME} to book your home visit physiotherapy in Hyderabad. We serve Kukatpally, Miyapur, Gachibowli, and more.`}
+        title="Book Home Visit Physiotherapist in Kukatpally & Miyapur"
+        description={`Contact ${BRAND_NAME} to book your home visit physiotherapy in Hyderabad. Experienced physiotherapist for home visits in Kukatpally, Miyapur, Gachibowli, and surrounding areas.`}
+        canonical="/contact"
         schema={{
           "@context": "https://schema.org",
           "@type": "Physician",
