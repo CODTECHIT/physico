@@ -382,14 +382,27 @@ const Conditions = () => {
           <div className="grid grid-cols-3 md:grid-cols-3 gap-2 lg:gap-6">
             {[
               { title: "Back & Neck Pain", slug: "back-pain" },
-              { title: "Knee Pain & Arthritis", slug: "hip-knee-arthritis" },
-              { title: "Stroke & Paralysis Rehab", slug: "stroke-rehabilitation" },
-              { title: "Sports Injuries", slug: "acl-rehabilitation" },
+              { title: "Knee & Joint Arthritis", slug: "hip-knee-arthritis" },
+              { title: "Stroke & Paralysis", slug: "stroke-rehabilitation" },
+              { title: "Sports Injuries (ACL)", slug: "acl-rehabilitation" },
               { title: "Post-Surgical Recovery", slug: "acl-rehabilitation" },
-              { title: "Joint Disorders", slug: "hip-knee-arthritis" },
+              { title: "Sciatica & Disc Issues", slug: "back-pain" },
               { title: "Frozen Shoulder", slug: "shoulder-pain" },
-              { title: "Sciatica & Disc Problems", slug: "back-pain" },
-              { title: "Elderly & Geriatric Care", slug: "geriatric-physiotherapy" }
+              { title: "Elderly & Geriatric Care", slug: "geriatric-physiotherapy" },
+              { title: "Neck Pain & Spondylosis", slug: "neck-pain" },
+              { title: "Plantar Fasciitis", slug: "plantar-fasciitis" },
+              { title: "Tennis Elbow", slug: "tennis-elbow" },
+              { title: "Ankle Sprain", slug: "ankle-sprain" },
+              { title: "Rotator Cuff Injury", slug: "rotator-cuff-injury" },
+              { title: "Runner's Knee", slug: "runners-knee" },
+              { title: "Parkinson's Disease", slug: "parkinsons-disease" },
+              { title: "Spinal Cord Injury", slug: "spinal-cord-injury" },
+              { title: "Cerebral Palsy", slug: "cerebral-palsy" },
+              { title: "Facial Palsy", slug: "facial-palsy" },
+              { title: "Dry Needling Therapy", slug: "dry-needling" },
+              { title: "Cupping Therapy", slug: "cupping-therapy" },
+              { title: "IASTM Therapy", slug: "iastm" },
+              { title: "Chiropractic Care", slug: "chiropractic-care" }
             ].map((item, idx) => (
               <motion.div
                 key={idx}

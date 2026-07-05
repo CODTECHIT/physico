@@ -26,6 +26,8 @@ export const SERVICE_AREAS_LINKS = [
   { name: 'Manikonda', path: '/physiotherapy-manikonda' },
   { name: 'Jubilee Hills', path: '/physiotherapy-jubilee-hills' },
   { name: 'Banjara Hills', path: '/physiotherapy-banjara-hills' },
+  { name: 'Miyapur (Home)', path: '/physiotherapy-home-visit-miyapur' },
+  { name: 'Madeenaguda (Home)', path: '/physiotherapy-home-visit-madeenaguda' },
 ];
 
 export const CONDITIONS_LINKS = [

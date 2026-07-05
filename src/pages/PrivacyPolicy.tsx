@@ -5,61 +5,64 @@ import { BRAND_NAME } from '../constants';
 const sections = [
   {
     title: '1. Information We Collect',
+    text: 'At Flexo Physiotherapy, we collect various types of information to provide you with the best possible home-based care. We are committed to transparency in our data collection practices.',
     items: [
-      'Personal Identification: Name, phone number, email address',
-      'Location Details: Address for home visit services',
-      'Health Information: Medical history, diagnosis, reports (if shared)',
-      'Service Data: Appointment details, treatment records, progress notes',
-      'Communication Records: Calls, WhatsApp messages, emails',
+      'Personal Identification: Name, phone number, email address, date of birth, and emergency contacts.',
+      'Location Details: Full residential address and any specific directions required for our physiotherapists to conduct home visit services safely and punctually.',
+      'Health Information: Detailed medical history, current symptoms, clinical diagnosis, physician referral notes, MRI/X-ray reports, and ongoing medication records (if shared by you).',
+      'Service Data: Comprehensive appointment details, treatment records, clinical progress notes, and billing history.',
+      'Communication Records: Logs of phone calls, WhatsApp messages, emails, and any other correspondence between you and our clinical or administrative team.',
     ],
   },
   {
     title: '2. Purpose of Data Usage',
+    text: 'The information we collect is strictly utilized to enhance the quality of your healthcare experience and ensure operational efficiency. We do not use your medical data for any unrelated commercial purposes.',
     items: [
-      'Delivering physiotherapy treatment at home',
-      'Creating personalized rehabilitation plans',
-      'Monitoring recovery and clinical progress',
-      'Appointment scheduling and follow-ups',
-      'Internal service improvement and quality assurance',
+      'Delivering personalized, evidence-based physiotherapy treatment directly at your home.',
+      'Creating, monitoring, and adjusting customized rehabilitation and exercise plans based on your clinical progress.',
+      'Facilitating seamless appointment scheduling, reminders, and essential follow-up communications.',
+      'Processing payments and maintaining accurate billing records.',
+      'Internal service improvement, clinical audits, and quality assurance to maintain the highest standards of care.',
     ],
   },
   {
     title: '3. Medical Confidentiality & Ethics',
-    text: 'All patient data is handled with strict confidentiality, in line with professional physiotherapy ethics. Your medical information will never be disclosed without consent unless legally required.',
+    text: 'All patient data is handled with strict confidentiality, in full compliance with professional physiotherapy ethics and healthcare privacy standards. Your medical information, treatment plans, and recovery progress will never be disclosed to unauthorized third parties without your explicit, written consent, unless legally required by a court of law or regulatory body.',
   },
   {
     title: '4. Data Security Measures',
+    text: 'We implement robust security protocols to protect your sensitive personal and medical data against unauthorized access, alteration, disclosure, or destruction.',
     items: [
-      'Restricted access to patient data',
-      'Secure digital storage practices',
-      'Confidential handling by authorized personnel only',
+      'Restricted, role-based access to patient data, ensuring only your assigned physiotherapist and essential administrative staff can view your records.',
+      'Secure, encrypted digital storage practices for all electronic health records.',
+      'Strict physical security measures for any paper-based records, which are kept in locked, confidential filing systems.',
     ],
   },
   {
     title: '5. Third-Party Disclosure',
-    text: 'We do not sell or share your personal data. Data may be shared only with licensed professionals involved in your care, or when required by law or regulatory authorities.',
+    text: 'We strictly adhere to a policy of non-disclosure. We do not sell, trade, or otherwise transfer your personally identifiable information to outside parties for marketing or advertising purposes. Data may be shared exclusively with other licensed healthcare professionals directly involved in your multidisciplinary care (such as your referring orthopedic surgeon or physician), or when formally required by law enforcement or regulatory authorities.',
   },
   {
     title: '6. Website Tracking & Cookies',
+    intro: 'Our website may use cookies, web beacons, and similar analytics tools to improve your browsing experience. These tools collect non-identifiable, aggregated data.',
     items: [
-      'User experience',
-      'Website performance',
-      'Service optimization',
+      'User experience enhancement by remembering your preferences and settings.',
+      'Website performance monitoring to ensure fast load times and reliable access.',
+      'Service optimization by analyzing which pages and treatments our visitors find most relevant.',
     ],
-    intro: 'Our website may use cookies or analytics tools to improve:',
   },
   {
     title: '7. Patient Rights',
+    intro: 'You retain full rights and control over your personal data. At any time, you may request:',
     items: [
-      'Access to your data',
-      'Correction of inaccurate information',
-      'Deletion of non-essential data (subject to legal obligations)',
+      'Full access to a copy of your clinical records and personal data.',
+      'Correction of any inaccurate, incomplete, or outdated information in our systems.',
+      'Deletion of non-essential personal data, subject to our legal and regulatory obligations to retain medical records for a stipulated period.',
     ],
-    intro: 'You may request:',
   },
   {
     title: '8. Policy Updates',
-    text: 'This Privacy Policy may be updated periodically. Continued use of our services implies acceptance of updates.',
+    text: 'This Privacy Policy may be updated periodically to reflect changes in our clinical practices, operational procedures, or legal obligations. We encourage you to review this page occasionally. Continued use of our home physiotherapy services implies your informed acceptance of any updates.',
   },
 ];
 

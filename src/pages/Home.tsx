@@ -32,6 +32,7 @@ import {
   BRAND_NAME,
   SERVICE_AREAS_LINKS,
 } from "../constants";
+import { blogPosts } from "../data/blogData";
 
 const Home = () => {
   const { scrollY } = useScroll();
@@ -1078,6 +1079,50 @@ const Home = () => {
               </a>
             </div>
           </motion.div>
+        </div>
+      </section>
+
+      {/* LATEST FROM OUR BLOG */}
+      <section className="py-12 lg:py-16 bg-white overflow-hidden">
+        <div className="max-w-[1400px] mx-auto responsive-padding">
+          <div className="flex flex-col lg:flex-row items-center justify-between mb-8 lg:mb-12 gap-4">
+            <div>
+              <span className="text-accent font-sans font-bold uppercase tracking-[0.3em] text-[10px] mb-2 block">
+                Health Resources
+              </span>
+              <h2 className="text-3xl lg:text-5xl font-serif font-bold text-primary">
+                Latest from our <span className="text-accent italic font-normal">Blog</span>
+              </h2>
+            </div>
+            <Link to="/blog">
+              <Button variant="outline" className="rounded-full px-8">
+                View All Articles
+              </Button>
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+            {blogPosts.slice(0, 3).map((post) => (
+              <Link key={post.id} to={`/blog/${post.slug}`} className="group flex flex-col bg-surface rounded-2xl overflow-hidden border border-primary/5 hover:shadow-xl transition-all duration-300">
+                {post.featuredImage && (
+                  <div className="w-full h-48 overflow-hidden">
+                    <img src={post.featuredImage} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" loading="lazy" />
+                  </div>
+                )}
+                <div className="p-6 flex flex-col flex-grow">
+                  <span className="text-accent text-[10px] font-bold uppercase tracking-widest mb-2 block">{post.category}</span>
+                  <h3 className="text-xl font-serif font-bold text-primary leading-snug mb-3 group-hover:text-accent transition-colors">
+                    {post.title}
+                  </h3>
+                  <p className="text-dark/80 text-sm leading-relaxed mb-4 flex-grow">
+                    {post.excerpt}
+                  </p>
+                  <span className="text-accent text-xs font-bold uppercase tracking-widest flex items-center mt-auto">
+                    Read Article <ChevronRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
+                  </span>
+                </div>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 

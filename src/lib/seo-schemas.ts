@@ -1,6 +1,7 @@
 import { BRAND_NAME, CONTACT_PHONE_DISPLAY, CONTACT_EMAIL } from '../constants';
 
 export const getOrganizationSchema = () => ({
+  "@context": "https://schema.org",
   "@type": "Organization",
   "@id": "https://www.flexophysio.com/#organization",
   "name": BRAND_NAME,
@@ -29,6 +30,7 @@ export const getOrganizationSchema = () => ({
 
 
 export const getLocalBusinessSchema = () => ({
+  "@context": "https://schema.org",
   "@type": "MedicalBusiness",
   "@id": "https://www.flexophysio.com/#localbusiness",
   "name": `${BRAND_NAME} - Home Visit Physiotherapy`,
@@ -65,23 +67,23 @@ export const getLocalBusinessSchema = () => ({
     "closes": "21:00"
   },
   "areaServed": [
-    { "@type": "City", "name": "Hyderabad" },
-    { "@type": "AdministrativeArea", "name": "Kukatpally" },
-    { "@type": "AdministrativeArea", "name": "Miyapur" },
-    { "@type": "AdministrativeArea", "name": "Kondapur" },
-    { "@type": "AdministrativeArea", "name": "Gachibowli" },
-    { "@type": "AdministrativeArea", "name": "Hitech City" },
-    { "@type": "AdministrativeArea", "name": "Madhapur" },
-    { "@type": "AdministrativeArea", "name": "KPHB" },
-    { "@type": "AdministrativeArea", "name": "Pragathi Nagar" },
-    { "@type": "AdministrativeArea", "name": "Nizampet" },
-    { "@type": "AdministrativeArea", "name": "Hafeezpet" },
-    { "@type": "AdministrativeArea", "name": "Nanakramguda" },
-    { "@type": "AdministrativeArea", "name": "Lingampally" },
-    { "@type": "AdministrativeArea", "name": "Hydernagar" },
-    { "@type": "AdministrativeArea", "name": "Bachupally" },
-    { "@type": "AdministrativeArea", "name": "Vivekananda Nagar" },
-    { "@type": "AdministrativeArea", "name": "Vasantha Nagar" }
+    "Hyderabad",
+    "Kukatpally",
+    "Miyapur",
+    "Kondapur",
+    "Gachibowli",
+    "Hitech City",
+    "Madhapur",
+    "KPHB",
+    "Pragathi Nagar",
+    "Nizampet",
+    "Hafeezpet",
+    "Nanakramguda",
+    "Lingampally",
+    "Hydernagar",
+    "Bachupally",
+    "Vivekananda Nagar",
+    "Vasantha Nagar"
   ],
   "knowsAbout": [
     "Physiotherapy at home",
@@ -105,6 +107,7 @@ export const getLocalBusinessSchema = () => ({
 });
 
 export const getWebsiteSchema = () => ({
+  "@context": "https://schema.org",
   "@type": "WebSite",
   "@id": "https://www.flexophysio.com/#website",
   "url": "https://www.flexophysio.com/",
@@ -118,6 +121,7 @@ export const getWebsiteSchema = () => ({
 });
 
 export const getFAQSchema = (faqs: { q: string, a: string }[]) => ({
+  "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": faqs.map(faq => ({
     "@type": "Question",
@@ -130,16 +134,15 @@ export const getFAQSchema = (faqs: { q: string, a: string }[]) => ({
 });
 
 export const getMedicalConditionSchema = (name: string, description: string, specialty: string) => ({
+  "@context": "https://schema.org",
   "@type": "MedicalCondition",
   "name": name,
   "description": description,
-  "relevantSpecialty": {
-    "@type": "MedicalSpecialty",
-    "name": specialty
-  }
+  "relevantSpecialty": specialty
 });
 
 export const getPhysicianSchema = () => ({
+  "@context": "https://schema.org",
   "@type": "Physician",
   "@id": "https://www.flexophysio.com/#physician",
   "name": "Dr. BhanuKumar Vemula",

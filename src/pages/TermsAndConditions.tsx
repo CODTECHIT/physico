@@ -5,59 +5,64 @@ import { BRAND_NAME } from '../constants';
 const sections = [
   {
     title: '1. Scope of Services',
-    text: 'Flexo Physiotherapy provides professional home-based physiotherapy and rehabilitation services within designated service areas near Miyapur, Hyderabad.',
+    text: 'Flexo Physiotherapy provides professional, home-based physiotherapy and rehabilitation services within designated service areas in and around Hyderabad (including Miyapur, Kukatpally, Gachibowli, and surrounding regions). By scheduling an appointment, you agree that our physiotherapists will provide treatment at your designated residential location in accordance with these terms.',
   },
   {
     title: '2. Clinical Disclaimer',
-    text: 'Physiotherapy is a supportive and rehabilitative treatment, not a substitute for emergency or medical care. Outcomes vary based on individual condition, severity, and compliance. Results may vary depending on individual condition and adherence to treatment.',
+    text: 'Physiotherapy is a supportive and rehabilitative treatment, not a substitute for emergency medical care, surgical intervention, or primary physician care. Outcomes vary significantly based on the individual’s clinical condition, severity of the injury, age, and strict compliance with the prescribed treatment plan.',
     items: [
-      'Physiotherapy is a supportive and rehabilitative treatment, not a substitute for emergency or medical care',
-      'Outcomes vary based on individual condition, severity, and compliance',
-      'Results may vary depending on individual condition and adherence to treatment',
+      'In case of medical emergencies (e.g., severe chest pain, sudden paralysis), please contact a hospital immediately.',
+      'Our physiotherapists will conduct an initial assessment, but you must disclose your full medical history.',
+      'Results are highly dependent on the patient’s active participation in prescribed exercises outside of our scheduled sessions.',
     ],
   },
   {
     title: '3. Appointments & Availability',
+    text: 'We strive to provide timely and punctual services; however, as a home-visit service, travel times can occasionally be affected by unforeseen circumstances.',
     items: [
-      'All sessions are pre-scheduled',
-      'Patients must be available at the confirmed time',
-      'Minor delays may occur due to travel or unavoidable circumstances',
+      'All treatment sessions are pre-scheduled through our official booking channels.',
+      'Patients must ensure they are available at the confirmed time to avoid session cancellations.',
+      'Minor delays (up to 30 minutes) may occur due to traffic or weather conditions. We will inform you proactively in such cases.',
     ],
   },
   {
     title: '4. Patient Responsibilities',
-    intro: 'Patients agree to:',
+    intro: 'To ensure a safe and effective treatment process, patients explicitly agree to:',
     items: [
-      'Provide accurate medical history',
-      'Inform about any pain/discomfort during sessions',
-      'Follow prescribed exercises and precautions',
-      'Maintain a safe and suitable environment for treatment',
+      'Provide complete and accurate medical history, including past surgeries, current medications, and known allergies.',
+      'Inform the attending physiotherapist immediately about any unusual pain, discomfort, or adverse reactions during or after the session.',
+      'Follow all prescribed home exercise programs and activity restrictions strictly.',
+      'Maintain a safe, clean, and well-lit environment for the physiotherapist to conduct the treatment safely.',
+      'Ensure a responsible adult is present during the treatment of minors (under 18 years of age).',
     ],
   },
   {
     title: '5. Payment Terms',
+    text: 'To maintain transparency, our pricing is communicated clearly before the commencement of any treatment plan.',
     items: [
-      'Fees must be paid as per agreed session/package plan',
-      'Advance payment may be required',
-      'Prices are subject to revision without prior notice',
+      'Fees must be paid as per the mutually agreed per-session rate or package plan.',
+      'Advance payment or a partial deposit may be required to confirm bookings for comprehensive packages.',
+      'We accept online payments, UPI, and bank transfers. Cash payments are accepted only with prior approval.',
+      'Prices are subject to revision without prior notice, though ongoing package prices remain fixed once purchased.',
     ],
   },
   {
     title: '6. Service Area Limitation',
-    text: 'Services are provided within Miyapur and nearby areas within approximately 5 km radius.',
+    text: 'While we aim to cover a broad radius across Hyderabad, our core services are primarily focused within a 15-20 km radius of our central base in Miyapur. Requests outside this designated service area may incur additional travel charges or may be declined based on therapist availability.',
   },
   {
     title: '7. Limitation of Liability',
-    intro: 'Flexo Physiotherapy shall not be held responsible for:',
+    intro: 'Flexo Physiotherapy and its licensed practitioners shall not be held legally or financially responsible for:',
     items: [
-      'Complications arising from pre-existing conditions',
-      'Lack of adherence to treatment protocols',
-      'External medical conditions beyond physiotherapy scope',
+      'Complications or deteriorations arising from undisclosed pre-existing medical conditions.',
+      'Lack of expected improvement due to the patient’s failure to adhere to treatment protocols and home exercises.',
+      'Any external medical conditions, acute illnesses, or injuries that fall beyond the scope of physiotherapy.',
+      'Accidental property damage that may occur during the normal course of providing treatment, provided the therapist exercised reasonable care.',
     ],
   },
   {
     title: '8. Intellectual Property',
-    text: 'All website content (text, branding, visuals) belongs to Flexo Physiotherapy and cannot be reproduced without permission.',
+    text: 'All content on the Flexo Physiotherapy website, including but not limited to text, branding, logos, clinical graphics, and visual layouts, is the exclusive intellectual property of Flexo Physiotherapy. It may not be reproduced, copied, distributed, or used for commercial purposes without our explicit written permission.',
   },
 ];
 

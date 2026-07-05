@@ -6,40 +6,48 @@ const sections = [
   {
     title: '1. Appointment Cancellation',
     items: [
-      'Cancellations must be made minimum 6 hours prior',
-      'Late cancellations may be chargeable',
+      'Cancellations must be communicated at least 6 hours prior to the scheduled home visit to avoid any inconvenience to our therapists and other patients.',
+      'Late cancellations (within 6 hours of the appointment) may incur a cancellation fee equivalent to 50% of the session charge.',
+      'To cancel an appointment, please contact us directly via phone call or our official WhatsApp number.',
     ],
   },
   {
     title: '2. Rescheduling Policy',
     items: [
-      'Rescheduling is allowed based on availability',
-      'Emergency situations will be considered on case-to-case basis',
+      'Patients may request to reschedule an appointment up to 4 hours before the scheduled time without any penalty.',
+      'Rescheduling requests are strictly subject to the availability of the physiotherapist.',
+      'In genuine emergency situations (e.g., sudden severe illness or hospitalization), late rescheduling may be considered without penalty on a case-by-case basis.',
     ],
   },
   {
     title: '3. Refund Policy',
-    intro: 'All payments are non-refundable by default. Refunds, if any, are granted only under exceptional and justified circumstances. Decision rests solely with Flexo Physiotherapy management.',
+    intro: 'Because we provide a service rather than a physical product, our standard policy dictates that all payments made for completed physiotherapy sessions are strictly non-refundable. However, we strive for patient satisfaction and will review specific scenarios as outlined below:',
+    items: [
+      'If you accidentally made a duplicate payment due to a technical glitch, the duplicate amount will be refunded in full within 5-7 business days.',
+      'If you have paid in advance for a single session and cancel with appropriate notice (more than 6 hours prior), you may request a refund, minus any transaction processing fees.',
+      'Any decisions regarding refunds rest solely with the management of Flexo Physiotherapy.',
+    ],
   },
   {
     title: '4. Session Packages',
     items: [
-      'Packages are non-transferable',
-      'Must be utilized within validity period',
-      'Unused sessions are non-refundable',
+      'Discounted treatment packages (e.g., 5, 10, or 15 sessions) are non-transferable to other individuals unless specifically approved by management.',
+      'Packages must be fully utilized within their stated validity period (typically 3 to 6 months depending on the package type).',
+      'Unused sessions within an expired package are non-refundable and will lapse.',
+      'If a patient relocates outside our service area mid-package, partial refunds for unused sessions may be considered on a pro-rata basis.',
     ],
   },
   {
-    title: '5. Missed Appointments',
-    text: 'If the patient is unavailable at scheduled time, session may be considered completed.',
+    title: '5. Missed Appointments ("No-Shows")',
+    text: 'If our physiotherapist arrives at the designated home location at the scheduled time, and the patient is unavailable or refuses treatment without prior notice, the session will be considered completed. The full session fee will be charged, and for package holders, one session will be deducted from their balance.',
   },
   {
     title: '6. Therapist Cancellation',
-    text: 'If a therapist cancels, session will be rescheduled without additional charges.',
+    text: 'In the rare event that a physiotherapist is unable to attend a scheduled session due to illness, vehicle breakdown, or other unforeseen emergencies, we will notify you as soon as possible. The session will be rescheduled to the earliest convenient date without any additional charges.',
   },
   {
     title: '7. Clinical Outcome Disclaimer',
-    text: 'Results may vary depending on individual condition and adherence to treatment.',
+    text: 'Please note that we do not offer refunds based on clinical outcomes. Physiotherapy requires time, patience, and active participation. Because physiological responses vary from person to person, we cannot guarantee specific healing timeframes or absolute recovery, and dissatisfaction with the pace of recovery is not grounds for a refund.',
   },
 ];
 

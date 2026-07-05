@@ -168,6 +168,23 @@ const Services = () => {
       idealFor: 'Sports injuries, muscle strains, joint instability, swelling management, post-exercise recovery.',
       icon: <Bandage className="w-8 h-8" />,
       img: '/images/treatments/Flexophysio New Website Images (3).jpg.jpeg'
+    },
+    {
+      id: '10',
+      slug: 'cardio',
+      title: 'Cardio-Respiratory Care',
+      desc: 'Expert chest physiotherapy to clear secretions, improve lung volume, and boost respiratory efficiency. Ideal for post-COVID recovery, COPD, asthma, and post-surgical respiratory care at home.',
+      features: [
+        'Postural Drainage & Percussion',
+        'Breathing Exercises & Retraining',
+        'Incentive Spirometry Guidance',
+        'Exercise Tolerance Building'
+      ],
+      focus: 'Improve lung capacity & clear airways',
+      outcome: 'Patients typically experience improved breathing ease and higher oxygen saturation levels within 3-5 sessions.',
+      idealFor: 'COPD, asthma, bronchitis, post-COVID recovery, post-surgical chest care.',
+      icon: <Activity className="w-8 h-8" />,
+      img: '/images/treatments/Flexophysio New Website Images (3).jpg.jpeg'
     }
   ];
 
