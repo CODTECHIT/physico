@@ -17,10 +17,7 @@ import { CONTACT_PHONE_DISPLAY, CONTACT_WHATSAPP_LINK } from "../constants";
 import { getPhysicianSchema } from "../lib/seo-schemas";
 
 const DoctorProfile = () => {
-  const schema = {
-    "@context": "https://schema.org",
-    ...getPhysicianSchema()
-  };
+  const schema = getPhysicianSchema();
 
   const bookingLink = `${CONTACT_WHATSAPP_LINK}?text=${encodeURIComponent(`Hi Dr. Bhanu, I am looking to consult you for a home visit physiotherapy session.`)}`;
 
