@@ -147,9 +147,9 @@ const DoctorProfile = () => {
 
               <p className="text-dark/80 text-base lg:text-lg leading-relaxed font-medium">
                 Dr. BhanuKumar Vemula, PT, is the founder and clinical lead of Flexo Physiotherapy.
-                With a passion for delivering clinical-grade rehabilitation to patients in their home environment, 
-                he has pioneered personalized home visit healthcare across Hyderabad. By bypassing the limitations of 
-                rushed clinic appointments, he focuses on detailed root-cause diagnoses, posture adjustments, 
+                With a passion for delivering clinical-grade rehabilitation to patients in their home environment,
+                he has pioneered personalized home visit healthcare across Hyderabad. By bypassing the limitations of
+                rushed clinic appointments, he focuses on detailed root-cause diagnoses, posture adjustments,
                 and progressive movement recovery.
               </p>
 
@@ -293,7 +293,7 @@ const DoctorProfile = () => {
         <div className="max-w-4xl mx-auto px-6 text-center space-y-6">
           <h3 className="text-2xl lg:text-3xl font-serif font-bold text-primary">Schedule a Home Visit Session with Dr. Bhanu</h3>
           <p className="text-sm text-muted font-medium max-w-2xl mx-auto">
-            Available for consultations and sessions in Kukatpally, Miyapur, Kondapur, and Gachibowli. 
+            Available for consultations and sessions in Kukatpally, Miyapur, Kondapur, and Gachibowli.
             All assessments are personalized, and clinical equipment is carried directly to your location.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
